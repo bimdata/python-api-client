@@ -1370,7 +1370,7 @@ class BcfApi(object):
         )
         self.download_bcf_export_xlsx_endpoint = _Endpoint(
             settings={
-                'response_type': (BcfProject,),
+                'response_type': (file_type,),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -1385,6 +1385,8 @@ class BcfApi(object):
             params_map={
                 'all': [
                     'id',
+                    'format',
+                    'topics',
                 ],
                 'required': [
                     'id',
@@ -1404,12 +1406,20 @@ class BcfApi(object):
                 'openapi_types': {
                     'id':
                         (int,),
+                    'format':
+                        (str,),
+                    'topics':
+                        (str,),
                 },
                 'attribute_map': {
                     'id': 'id',
+                    'format': 'format',
+                    'topics': 'topics',
                 },
                 'location_map': {
                     'id': 'path',
+                    'format': 'query',
+                    'topics': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -5940,6 +5950,8 @@ class BcfApi(object):
             id (int): A unique integer value identifying this project.
 
         Keyword Args:
+            format (str): topic format to export, comma separated. Default = standard. [optional]
+            topics (str): topic guids to export, comma separated. Default = all. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -5968,7 +5980,7 @@ class BcfApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            BcfProject
+            file_type
                 If the method is called asynchronously, returns the request
                 thread.
         """

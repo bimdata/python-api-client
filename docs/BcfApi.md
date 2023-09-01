@@ -2457,7 +2457,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **download_bcf_export_xlsx**
-> BcfProject download_bcf_export_xlsx(id)
+> file_type download_bcf_export_xlsx(id)
 
 Export project's topics in excel format
 
@@ -2474,7 +2474,6 @@ This is not a standard route. Export project's topics in excel format  Required 
 import time
 import bimdata_api_client
 from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.bcf_project import BcfProject
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -2516,11 +2515,22 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this project.
+    format = "format_example" # str | topic format to export, comma separated. Default = standard (optional)
+    topics = "topics_example" # str | topic guids to export, comma separated. Default = all (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Export project's topics in excel format
         api_response = api_instance.download_bcf_export_xlsx(id)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->download_bcf_export_xlsx: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Export project's topics in excel format
+        api_response = api_instance.download_bcf_export_xlsx(id, format=format, topics=topics)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->download_bcf_export_xlsx: %s\n" % e)
@@ -2532,10 +2542,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this project. |
+ **format** | **str**| topic format to export, comma separated. Default &#x3D; standard | [optional]
+ **topics** | **str**| topic guids to export, comma separated. Default &#x3D; all | [optional]
 
 ### Return type
 
-[**BcfProject**](BcfProject.md)
+**file_type**
 
 ### Authorization
 
@@ -2551,7 +2563,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
+**200** | bcf Excel file |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
 **404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
