@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v9.18.2 (2023-09-06)
+### Fix
+* Add document history count (#681)
+
+* add document history count
+
+* typo fixe ([`a2f63e3`](https://github.com/bimdata/python-api-client/commit/a2f63e3ce5f5f74e4424ed7f8d33540a322ac5e3))
+
 ## v9.18.1 (2023-09-01)
 ### Fix
 * Fix bcf excel export documentation ([`4054f7c`](https://github.com/bimdata/python-api-client/commit/4054f7c0aba4a707528736a9dee98c2c14933727))
