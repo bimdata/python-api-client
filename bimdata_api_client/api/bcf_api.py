@@ -1386,6 +1386,7 @@ class BcfApi(object):
                 'all': [
                     'id',
                     'format',
+                    'locale',
                     'topics',
                 ],
                 'required': [
@@ -1394,6 +1395,7 @@ class BcfApi(object):
                 'nullable': [
                 ],
                 'enum': [
+                    'locale',
                 ],
                 'validation': [
                 ]
@@ -1402,11 +1404,18 @@ class BcfApi(object):
                 'validations': {
                 },
                 'allowed_values': {
+                    ('locale',): {
+
+                        "EN": "en",
+                        "FR": "fr"
+                    },
                 },
                 'openapi_types': {
                     'id':
                         (int,),
                     'format':
+                        (str,),
+                    'locale':
                         (str,),
                     'topics':
                         (str,),
@@ -1414,11 +1423,13 @@ class BcfApi(object):
                 'attribute_map': {
                     'id': 'id',
                     'format': 'format',
+                    'locale': 'locale',
                     'topics': 'topics',
                 },
                 'location_map': {
                     'id': 'path',
                     'format': 'query',
+                    'locale': 'query',
                     'topics': 'query',
                 },
                 'collection_format_map': {
@@ -5951,6 +5962,7 @@ class BcfApi(object):
 
         Keyword Args:
             format (str): topic format to export, comma separated. Default = standard. [optional]
+            locale (str): Locale of the exported file. Available locales are 'en' and 'fr'. If set locale is not supported, 'en' will be used. [optional]
             topics (str): topic guids to export, comma separated. Default = all. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.

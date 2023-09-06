@@ -2516,6 +2516,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this project.
     format = "format_example" # str | topic format to export, comma separated. Default = standard (optional)
+    locale = "en" # str | Locale of the exported file. Available locales are 'en' and 'fr'. If set locale is not supported, 'en' will be used (optional)
     topics = "topics_example" # str | topic guids to export, comma separated. Default = all (optional)
 
     # example passing only required values which don't have defaults set
@@ -2530,7 +2531,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Export project's topics in excel format
-        api_response = api_instance.download_bcf_export_xlsx(id, format=format, topics=topics)
+        api_response = api_instance.download_bcf_export_xlsx(id, format=format, locale=locale, topics=topics)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->download_bcf_export_xlsx: %s\n" % e)
@@ -2543,6 +2544,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this project. |
  **format** | **str**| topic format to export, comma separated. Default &#x3D; standard | [optional]
+ **locale** | **str**| Locale of the exported file. Available locales are &#39;en&#39; and &#39;fr&#39;. If set locale is not supported, &#39;en&#39; will be used | [optional]
  **topics** | **str**| topic guids to export, comma separated. Default &#x3D; all | [optional]
 
 ### Return type
