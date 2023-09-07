@@ -41,6 +41,7 @@ bimdata_api_client/model/components_parent_request.py
 bimdata_api_client/model/create_building_by_name_request.py
 bimdata_api_client/model/create_model_request.py
 bimdata_api_client/model/create_multi_page_model_request.py
+bimdata_api_client/model/create_user_request.py
 bimdata_api_client/model/detailed_extensions.py
 bimdata_api_client/model/direction.py
 bimdata_api_client/model/direction_request.py
@@ -120,7 +121,6 @@ bimdata_api_client/model/patched_pin_request.py
 bimdata_api_client/model/patched_positioning_plan_request.py
 bimdata_api_client/model/patched_priority_request.py
 bimdata_api_client/model/patched_processor_handler_request.py
-bimdata_api_client/model/patched_project_access_token_request.py
 bimdata_api_client/model/patched_project_request.py
 bimdata_api_client/model/patched_property_definition_request.py
 bimdata_api_client/model/patched_property_request.py
@@ -198,6 +198,7 @@ bimdata_api_client/model/raw_system_request.py
 bimdata_api_client/model/raw_unit.py
 bimdata_api_client/model/raw_unit_request.py
 bimdata_api_client/model/recursive_folder_children.py
+bimdata_api_client/model/select_user_request.py
 bimdata_api_client/model/self_bcf_user.py
 bimdata_api_client/model/self_user.py
 bimdata_api_client/model/short_user.py
@@ -281,6 +282,7 @@ docs/ComponentsParentRequest.md
 docs/CreateBuildingByNameRequest.md
 docs/CreateModelRequest.md
 docs/CreateMultiPageModelRequest.md
+docs/CreateUserRequest.md
 docs/DetailedExtensions.md
 docs/Direction.md
 docs/DirectionRequest.md
@@ -362,7 +364,6 @@ docs/PatchedPinRequest.md
 docs/PatchedPositioningPlanRequest.md
 docs/PatchedPriorityRequest.md
 docs/PatchedProcessorHandlerRequest.md
-docs/PatchedProjectAccessTokenRequest.md
 docs/PatchedProjectRequest.md
 docs/PatchedPropertyDefinitionRequest.md
 docs/PatchedPropertyRequest.md
@@ -440,6 +441,7 @@ docs/RawSystemRequest.md
 docs/RawUnit.md
 docs/RawUnitRequest.md
 docs/RecursiveFolderChildren.md
+docs/SelectUserRequest.md
 docs/SelfBcfUser.md
 docs/SelfUser.md
 docs/ShortUser.md
@@ -526,6 +528,7 @@ test/test_components_parent_request.py
 test/test_create_building_by_name_request.py
 test/test_create_model_request.py
 test/test_create_multi_page_model_request.py
+test/test_create_user_request.py
 test/test_detailed_extensions.py
 test/test_direction.py
 test/test_direction_request.py
@@ -607,7 +610,6 @@ test/test_patched_pin_request.py
 test/test_patched_positioning_plan_request.py
 test/test_patched_priority_request.py
 test/test_patched_processor_handler_request.py
-test/test_patched_project_access_token_request.py
 test/test_patched_project_request.py
 test/test_patched_property_definition_request.py
 test/test_patched_property_request.py
@@ -685,6 +687,7 @@ test/test_raw_system_request.py
 test/test_raw_unit.py
 test/test_raw_unit_request.py
 test/test_recursive_folder_children.py
+test/test_select_user_request.py
 test/test_self_bcf_user.py
 test/test_self_user.py
 test/test_short_user.py

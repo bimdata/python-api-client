@@ -45,7 +45,6 @@ from bimdata_api_client.model.patched_document_request import PatchedDocumentReq
 from bimdata_api_client.model.patched_folder_without_children_request import PatchedFolderWithoutChildrenRequest
 from bimdata_api_client.model.patched_group_folder_request import PatchedGroupFolderRequest
 from bimdata_api_client.model.patched_group_request import PatchedGroupRequest
-from bimdata_api_client.model.patched_project_access_token_request import PatchedProjectAccessTokenRequest
 from bimdata_api_client.model.patched_project_request import PatchedProjectRequest
 from bimdata_api_client.model.patched_tag_request import PatchedTagRequest
 from bimdata_api_client.model.patched_user_cloud_update_request import PatchedUserCloudUpdateRequest
@@ -6790,80 +6789,6 @@ class CollaborationApi(object):
             },
             api_client=api_client
         )
-        self.update_project_access_token_endpoint = _Endpoint(
-            settings={
-                'response_type': (ProjectAccessToken,),
-                'auth': [
-                    'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
-                    'Bearer'
-                ],
-                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/access-token/{token}',
-                'operation_id': 'update_project_access_token',
-                'http_method': 'PATCH',
-                'servers': None,
-            },
-            params_map={
-                'all': [
-                    'cloud_pk',
-                    'project_pk',
-                    'token',
-                    'patched_project_access_token_request',
-                ],
-                'required': [
-                    'cloud_pk',
-                    'project_pk',
-                    'token',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
-            },
-            root_map={
-                'validations': {
-                },
-                'allowed_values': {
-                },
-                'openapi_types': {
-                    'cloud_pk':
-                        (int,),
-                    'project_pk':
-                        (int,),
-                    'token':
-                        (str,),
-                    'patched_project_access_token_request':
-                        (PatchedProjectAccessTokenRequest,),
-                },
-                'attribute_map': {
-                    'cloud_pk': 'cloud_pk',
-                    'project_pk': 'project_pk',
-                    'token': 'token',
-                },
-                'location_map': {
-                    'cloud_pk': 'path',
-                    'project_pk': 'path',
-                    'token': 'path',
-                    'patched_project_access_token_request': 'body',
-                },
-                'collection_format_map': {
-                }
-            },
-            headers_map={
-                'accept': [
-                    'application/json'
-                ],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
-            },
-            api_client=api_client
-        )
         self.update_project_user_endpoint = _Endpoint(
             settings={
                 'response_type': (UserProject,),
@@ -8373,7 +8298,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'POINT_CLOUD', 'OBJ', 'DWG', 'IFC', 'DXF', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'OBJ', 'DWG', 'IFC', 'GLTF', 'DXF', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -15917,93 +15842,6 @@ class CollaborationApi(object):
         kwargs['id'] = \
             id
         return self.update_project_endpoint.call_with_http_info(**kwargs)
-
-    def update_project_access_token(
-        self,
-        cloud_pk,
-        project_pk,
-        token,
-        **kwargs
-    ):
-        """Update some fields of a token  # noqa: E501
-
-        You can update the expiration date field  Required scopes: org:manage  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.update_project_access_token(cloud_pk, project_pk, token, async_req=True)
-        >>> result = thread.get()
-
-        Args:
-            cloud_pk (int): A unique integer value identifying this cloud.
-            project_pk (int): A unique integer value identifying this project.
-            token (str):
-
-        Keyword Args:
-            patched_project_access_token_request (PatchedProjectAccessTokenRequest): [optional]
-            _return_http_data_only (bool): response data without head status
-                code and headers. Default is True.
-            _preload_content (bool): if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            _request_timeout (int/float/tuple): timeout setting for this request. If
-                one number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            _check_input_type (bool): specifies if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            _check_return_type (bool): specifies if type checking
-                should be done one the data received from the server.
-                Default is True.
-            _spec_property_naming (bool): True if the variable names in the input data
-                are serialized names, as specified in the OpenAPI document.
-                False if the variable names in the input data
-                are pythonic names, e.g. snake case (default)
-            _content_type (str/None): force body content-type.
-                Default is None and content-type will be predicted by allowed
-                content-types and body.
-            _host_index (int/None): specifies the index of the server
-                that we want to use.
-                Default is read from the configuration.
-            async_req (bool): execute request asynchronously
-
-        Returns:
-            ProjectAccessToken
-                If the method is called asynchronously, returns the request
-                thread.
-        """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_spec_property_naming'] = kwargs.get(
-            '_spec_property_naming', False
-        )
-        kwargs['_content_type'] = kwargs.get(
-            '_content_type')
-        kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['cloud_pk'] = \
-            cloud_pk
-        kwargs['project_pk'] = \
-            project_pk
-        kwargs['token'] = \
-            token
-        return self.update_project_access_token_endpoint.call_with_http_info(**kwargs)
 
     def update_project_user(
         self,

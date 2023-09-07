@@ -325,7 +325,6 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**update_manage_group**](docs/CollaborationApi.md#update_manage_group) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Update some fields of a group
 *CollaborationApi* | [**update_preview_file**](docs/CollaborationApi.md#update_preview_file) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id}/preview-file | Update preview of the document
 *CollaborationApi* | [**update_project**](docs/CollaborationApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | Update some fields of a project
-*CollaborationApi* | [**update_project_access_token**](docs/CollaborationApi.md#update_project_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Update some fields of a token
 *CollaborationApi* | [**update_project_user**](docs/CollaborationApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Change the user role in the cloud
 *CollaborationApi* | [**update_tag**](docs/CollaborationApi.md#update_tag) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/tag/{id} | Update some fields of the tag
 *CollaborationApi* | [**update_validation**](docs/CollaborationApi.md#update_validation) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id} | Update the validator of validation
@@ -626,6 +625,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**update_zone**](docs/ModelApi.md#update_zone) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{id} | Update some fields of a zone
 *ModelApi* | [**update_zone_space**](docs/ModelApi.md#update_zone_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/{id} | Update some fields of a space
 *SsoApi* | [**accept_invitation**](docs/SsoApi.md#accept_invitation) | **POST** /identity-provider/invitation/{id}/accept | Accept an invitation
+*SsoApi* | [**create_user**](docs/SsoApi.md#create_user) | **POST** /identity-provider/user | Create a user
 *SsoApi* | [**delete_user**](docs/SsoApi.md#delete_user) | **DELETE** /identity-provider/user | Delete user from BIMData
 *SsoApi* | [**deny_invitation**](docs/SsoApi.md#deny_invitation) | **POST** /identity-provider/invitation/{id}/deny | Deny an invitation
 *SsoApi* | [**get_invitation**](docs/SsoApi.md#get_invitation) | **GET** /identity-provider/invitation/{id} | Retrieve an invitation
@@ -666,6 +666,7 @@ Class | Method | HTTP request | Description
  - [CreateBuildingByNameRequest](docs/CreateBuildingByNameRequest.md)
  - [CreateModelRequest](docs/CreateModelRequest.md)
  - [CreateMultiPageModelRequest](docs/CreateMultiPageModelRequest.md)
+ - [CreateUserRequest](docs/CreateUserRequest.md)
  - [DetailedExtensions](docs/DetailedExtensions.md)
  - [Direction](docs/Direction.md)
  - [DirectionRequest](docs/DirectionRequest.md)
@@ -745,7 +746,6 @@ Class | Method | HTTP request | Description
  - [PatchedPositioningPlanRequest](docs/PatchedPositioningPlanRequest.md)
  - [PatchedPriorityRequest](docs/PatchedPriorityRequest.md)
  - [PatchedProcessorHandlerRequest](docs/PatchedProcessorHandlerRequest.md)
- - [PatchedProjectAccessTokenRequest](docs/PatchedProjectAccessTokenRequest.md)
  - [PatchedProjectRequest](docs/PatchedProjectRequest.md)
  - [PatchedPropertyDefinitionRequest](docs/PatchedPropertyDefinitionRequest.md)
  - [PatchedPropertyRequest](docs/PatchedPropertyRequest.md)
@@ -823,6 +823,7 @@ Class | Method | HTTP request | Description
  - [RawUnit](docs/RawUnit.md)
  - [RawUnitRequest](docs/RawUnitRequest.md)
  - [RecursiveFolderChildren](docs/RecursiveFolderChildren.md)
+ - [SelectUserRequest](docs/SelectUserRequest.md)
  - [SelfBcfUser](docs/SelfBcfUser.md)
  - [SelfUser](docs/SelfUser.md)
  - [ShortUser](docs/ShortUser.md)

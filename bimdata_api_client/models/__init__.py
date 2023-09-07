@@ -35,6 +35,7 @@ from bimdata_api_client.model.components_parent_request import ComponentsParentR
 from bimdata_api_client.model.create_building_by_name_request import CreateBuildingByNameRequest
 from bimdata_api_client.model.create_model_request import CreateModelRequest
 from bimdata_api_client.model.create_multi_page_model_request import CreateMultiPageModelRequest
+from bimdata_api_client.model.create_user_request import CreateUserRequest
 from bimdata_api_client.model.detailed_extensions import DetailedExtensions
 from bimdata_api_client.model.direction import Direction
 from bimdata_api_client.model.direction_request import DirectionRequest
@@ -114,7 +115,6 @@ from bimdata_api_client.model.patched_pin_request import PatchedPinRequest
 from bimdata_api_client.model.patched_positioning_plan_request import PatchedPositioningPlanRequest
 from bimdata_api_client.model.patched_priority_request import PatchedPriorityRequest
 from bimdata_api_client.model.patched_processor_handler_request import PatchedProcessorHandlerRequest
-from bimdata_api_client.model.patched_project_access_token_request import PatchedProjectAccessTokenRequest
 from bimdata_api_client.model.patched_project_request import PatchedProjectRequest
 from bimdata_api_client.model.patched_property_definition_request import PatchedPropertyDefinitionRequest
 from bimdata_api_client.model.patched_property_request import PatchedPropertyRequest
@@ -192,6 +192,7 @@ from bimdata_api_client.model.raw_system_request import RawSystemRequest
 from bimdata_api_client.model.raw_unit import RawUnit
 from bimdata_api_client.model.raw_unit_request import RawUnitRequest
 from bimdata_api_client.model.recursive_folder_children import RecursiveFolderChildren
+from bimdata_api_client.model.select_user_request import SelectUserRequest
 from bimdata_api_client.model.self_bcf_user import SelfBcfUser
 from bimdata_api_client.model.self_user import SelfUser
 from bimdata_api_client.model.short_user import ShortUser

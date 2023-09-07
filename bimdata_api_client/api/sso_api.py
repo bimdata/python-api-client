@@ -22,7 +22,10 @@ from bimdata_api_client.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
+from bimdata_api_client.model.create_user_request import CreateUserRequest
 from bimdata_api_client.model.invitation import Invitation
+from bimdata_api_client.model.select_user_request import SelectUserRequest
+from bimdata_api_client.model.short_user import ShortUser
 
 
 class SsoApi(object):
@@ -88,6 +91,63 @@ class SsoApi(object):
             },
             api_client=api_client
         )
+        self.create_user_endpoint = _Endpoint(
+            settings={
+                'response_type': (ShortUser,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/identity-provider/user',
+                'operation_id': 'create_user',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'create_user_request',
+                ],
+                'required': [
+                    'create_user_request',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'create_user_request':
+                        (CreateUserRequest,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'create_user_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
         self.delete_user_endpoint = _Endpoint(
             settings={
                 'response_type': None,
@@ -104,8 +164,11 @@ class SsoApi(object):
             },
             params_map={
                 'all': [
+                    'select_user_request',
                 ],
-                'required': [],
+                'required': [
+                    'select_user_request',
+                ],
                 'nullable': [
                 ],
                 'enum': [
@@ -119,17 +182,24 @@ class SsoApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
+                    'select_user_request':
+                        (SelectUserRequest,),
                 },
                 'attribute_map': {
                 },
                 'location_map': {
+                    'select_user_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -377,8 +447,87 @@ class SsoApi(object):
             id
         return self.accept_invitation_endpoint.call_with_http_info(**kwargs)
 
+    def create_user(
+        self,
+        create_user_request,
+        **kwargs
+    ):
+        """Create a user  # noqa: E501
+
+        Create a user, linked to the provider. This route is only useful when used with `ProjetAccessToken`s  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.create_user(create_user_request, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            create_user_request (CreateUserRequest):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            ShortUser
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['create_user_request'] = \
+            create_user_request
+        return self.create_user_endpoint.call_with_http_info(**kwargs)
+
     def delete_user(
         self,
+        select_user_request,
         **kwargs
     ):
         """Delete user from BIMData  # noqa: E501
@@ -387,9 +536,11 @@ class SsoApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_user(async_req=True)
+        >>> thread = api.delete_user(select_user_request, async_req=True)
         >>> result = thread.get()
 
+        Args:
+            select_user_request (SelectUserRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -448,6 +599,8 @@ class SsoApi(object):
         kwargs['_content_type'] = kwargs.get(
             '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['select_user_request'] = \
+            select_user_request
         return self.delete_user_endpoint.call_with_http_info(**kwargs)
 
     def deny_invitation(

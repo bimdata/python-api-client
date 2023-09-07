@@ -13,11 +13,11 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.patched_project_access_token_request import PatchedProjectAccessTokenRequest
+from bimdata_api_client.model.select_user_request import SelectUserRequest
 
 
-class TestPatchedProjectAccessTokenRequest(unittest.TestCase):
-    """PatchedProjectAccessTokenRequest unit test stubs"""
+class TestSelectUserRequest(unittest.TestCase):
+    """SelectUserRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +25,10 @@ class TestPatchedProjectAccessTokenRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testPatchedProjectAccessTokenRequest(self):
-        """Test PatchedProjectAccessTokenRequest"""
+    def testSelectUserRequest(self):
+        """Test SelectUserRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = PatchedProjectAccessTokenRequest()  # noqa: E501
+        # model = SelectUserRequest()  # noqa: E501
         pass
 
 

@@ -738,13 +738,6 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
-    def test_update_project_access_token(self):
-        """Test case for update_project_access_token
-
-        Update some fields of a token  # noqa: E501
-        """
-        pass
-
     def test_update_project_user(self):
         """Test case for update_project_user
 

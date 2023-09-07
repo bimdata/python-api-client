@@ -69,6 +69,9 @@ class ProjectAccessTokenRequest(ModelNormal):
     }
 
     validations = {
+        ('email_impersonation',): {
+            'min_length': 1,
+        },
     }
 
     @cached_property
@@ -94,6 +97,7 @@ class ProjectAccessTokenRequest(ModelNormal):
         return {
             'scopes': ([str],),  # noqa: E501
             'expires_at': (datetime,),  # noqa: E501
+            'email_impersonation': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -104,6 +108,7 @@ class ProjectAccessTokenRequest(ModelNormal):
     attribute_map = {
         'scopes': 'scopes',  # noqa: E501
         'expires_at': 'expires_at',  # noqa: E501
+        'email_impersonation': 'email_impersonation',  # noqa: E501
     }
 
     read_only_vars = {
@@ -151,6 +156,7 @@ class ProjectAccessTokenRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             expires_at (datetime): [optional]  # noqa: E501
+            email_impersonation (str, none_type):          If the request is made from an SSO application, you can link the token to a user.         All calls made with the token will populate created_by fields with the user.         If the user don't have access to some data, the token won't have access.         . [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -237,6 +243,7 @@ class ProjectAccessTokenRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             expires_at (datetime): [optional]  # noqa: E501
+            email_impersonation (str, none_type):          If the request is made from an SSO application, you can link the token to a user.         All calls made with the token will populate created_by fields with the user.         If the user don't have access to some data, the token won't have access.         . [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -31,6 +31,13 @@ class TestSsoApi(unittest.TestCase):
         """
         pass
 
+    def test_create_user(self):
+        """Test case for create_user
+
+        Create a user  # noqa: E501
+        """
+        pass
+
     def test_delete_user(self):
         """Test case for delete_user
 
