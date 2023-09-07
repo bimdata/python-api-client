@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **ifc_id** | **int, none_type** | DEPRECATED: Use &#39;model_id&#39; instead. | [readonly] 
 **head_id** | **int, none_type** | Document id of head version | [readonly] 
 **is_head_version** | **bool** | Document is a head of version or is owned by another document | [readonly] 
+**history_count** | **int, none_type** | Number of previous versions | [readonly] 
 **user_permission** | **int** | Aggregate of group user permissions and folder default permission | [readonly] 
 **office_preview** | **str, none_type** | Office files will be converted as pdf to provide a web preview. Supported extensions are .ppt, .pptx, .odp, .xls, .xlsx, .ods, .doc, .docx, .odt | [readonly] 
 **parent_id** | **int, none_type** |  | [optional] 

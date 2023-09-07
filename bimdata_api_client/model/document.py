@@ -131,6 +131,7 @@ class Document(ModelNormal):
             'ifc_id': (int, none_type,),  # noqa: E501
             'head_id': (int, none_type,),  # noqa: E501
             'is_head_version': (bool,),  # noqa: E501
+            'history_count': (int, none_type,),  # noqa: E501
             'user_permission': (int,),  # noqa: E501
             'office_preview': (str, none_type,),  # noqa: E501
             'parent_id': (int, none_type,),  # noqa: E501
@@ -159,6 +160,7 @@ class Document(ModelNormal):
         'ifc_id': 'ifc_id',  # noqa: E501
         'head_id': 'head_id',  # noqa: E501
         'is_head_version': 'is_head_version',  # noqa: E501
+        'history_count': 'history_count',  # noqa: E501
         'user_permission': 'user_permission',  # noqa: E501
         'office_preview': 'office_preview',  # noqa: E501
         'parent_id': 'parent_id',  # noqa: E501
@@ -180,6 +182,7 @@ class Document(ModelNormal):
         'ifc_id',  # noqa: E501
         'head_id',  # noqa: E501
         'is_head_version',  # noqa: E501
+        'history_count',  # noqa: E501
         'user_permission',  # noqa: E501
         'office_preview',  # noqa: E501
     }
@@ -188,7 +191,7 @@ class Document(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, created_by, project, name, file, size, tags, visas, created_at, updated_at, model_id, model_type, ifc_id, head_id, is_head_version, user_permission, office_preview, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, created_by, project, name, file, size, tags, visas, created_at, updated_at, model_id, model_type, ifc_id, head_id, is_head_version, history_count, user_permission, office_preview, *args, **kwargs):  # noqa: E501
         """Document - a model defined in OpenAPI
 
         Args:
@@ -207,6 +210,7 @@ class Document(ModelNormal):
             ifc_id (int, none_type): DEPRECATED: Use 'model_id' instead.
             head_id (int, none_type): Document id of head version
             is_head_version (bool): Document is a head of version or is owned by another document
+            history_count (int, none_type): Number of previous versions
             user_permission (int): Aggregate of group user permissions and folder default permission
             office_preview (str, none_type): Office files will be converted as pdf to provide a web preview. Supported extensions are .ppt, .pptx, .odp, .xls, .xlsx, .ods, .doc, .docx, .odt
 
@@ -286,6 +290,7 @@ class Document(ModelNormal):
         self.ifc_id = ifc_id
         self.head_id = head_id
         self.is_head_version = is_head_version
+        self.history_count = history_count
         self.user_permission = user_permission
         self.office_preview = office_preview
         for var_name, var_value in kwargs.items():
