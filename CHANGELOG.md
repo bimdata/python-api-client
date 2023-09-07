@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v9.19.0 (2023-09-07)
+### Feature
+* Add SSO create user route(#674)
+
+* create-user route
+
+* email_impersonation in project access token ([`93f86a5`](https://github.com/bimdata/python-api-client/commit/93f86a5d04193e0c6361d9cfee461f4091d59416))
+
 ## v9.18.2 (2023-09-06)
 ### Fix
 * Add document history count (#681)
