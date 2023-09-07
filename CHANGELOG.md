@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.19.1 (2023-09-07)
+### Fix
+* Add history_count to document serialization and prefetch stuff ([`261a2e6`](https://github.com/bimdata/python-api-client/commit/261a2e6cf557e73cfd2d3f993fbff37866f396e5))
+
 ## v9.19.0 (2023-09-07)
 ### Feature
 * Add SSO create user route(#674)
