@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.20.0 (2023-09-14)
+### Feature
+* Order in zones and spacezones ([`2b6e416`](https://github.com/bimdata/python-api-client/commit/2b6e4160fb3010d6cb2aed943172483e2e551118))
+
 ## v9.19.1 (2023-09-07)
 ### Fix
 * Add history_count to document serialization and prefetch stuff ([`261a2e6`](https://github.com/bimdata/python-api-client/commit/261a2e6cf557e73cfd2d3f993fbff37866f396e5))
