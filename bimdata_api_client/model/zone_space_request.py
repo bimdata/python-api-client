@@ -69,6 +69,9 @@ class ZoneSpaceRequest(ModelNormal):
         ('longname',): {
             'max_length': 255,
         },
+        ('order',): {
+            'inclusive_minimum': 0,
+        },
     }
 
     @cached_property
@@ -95,6 +98,7 @@ class ZoneSpaceRequest(ModelNormal):
             'uuid': (str,),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'longname': (str, none_type,),  # noqa: E501
+            'order': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -106,6 +110,7 @@ class ZoneSpaceRequest(ModelNormal):
         'uuid': 'uuid',  # noqa: E501
         'name': 'name',  # noqa: E501
         'longname': 'longname',  # noqa: E501
+        'order': 'order',  # noqa: E501
     }
 
     read_only_vars = {
@@ -154,6 +159,7 @@ class ZoneSpaceRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             name (str, none_type): [optional]  # noqa: E501
             longname (str, none_type): [optional]  # noqa: E501
+            order (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -241,6 +247,7 @@ class ZoneSpaceRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             name (str, none_type): [optional]  # noqa: E501
             longname (str, none_type): [optional]  # noqa: E501
+            order (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

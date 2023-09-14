@@ -31,8 +31,8 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from bimdata_api_client.model.space import Space
-    globals()['Space'] = Space
+    from bimdata_api_client.model.zone_space import ZoneSpace
+    globals()['ZoneSpace'] = ZoneSpace
 
 
 class Zone(ModelNormal):
@@ -72,6 +72,9 @@ class Zone(ModelNormal):
         ('color',): {
             'max_length': 8,
         },
+        ('order',): {
+            'inclusive_minimum': 0,
+        },
     }
 
     @cached_property
@@ -104,8 +107,9 @@ class Zone(ModelNormal):
             'name': (str, none_type,),  # noqa: E501
             'zones': ([Zone],),  # noqa: E501
             'parent_id': (int,),  # noqa: E501
-            'spaces': ([Space],),  # noqa: E501
+            'spaces': ([ZoneSpace],),  # noqa: E501
             'color': (str, none_type,),  # noqa: E501
+            'order': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -123,6 +127,7 @@ class Zone(ModelNormal):
         'parent_id': 'parent_id',  # noqa: E501
         'spaces': 'spaces',  # noqa: E501
         'color': 'color',  # noqa: E501
+        'order': 'order',  # noqa: E501
     }
 
     read_only_vars = {
@@ -178,8 +183,9 @@ class Zone(ModelNormal):
             name (str, none_type): [optional]  # noqa: E501
             zones ([Zone]): [optional]  # noqa: E501
             parent_id (int): [optional]  # noqa: E501
-            spaces ([Space]): [optional]  # noqa: E501
+            spaces ([ZoneSpace]): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
+            order (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -269,8 +275,9 @@ class Zone(ModelNormal):
             name (str, none_type): [optional]  # noqa: E501
             zones ([Zone]): [optional]  # noqa: E501
             parent_id (int): [optional]  # noqa: E501
-            spaces ([Space]): [optional]  # noqa: E501
+            spaces ([ZoneSpace]): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
+            order (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -4997,20 +4997,15 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             zones=[],
             parent_id=1,
             spaces=[
-                SpaceRequest(
+                ZoneSpaceRequest(
                     name="name_example",
                     longname="longname_example",
                     uuid="uuid_example",
-                    geometry=[
-                        GeometryPointRequest(
-                            x=3.14,
-                            y=3.14,
-                            z=3.14,
-                        ),
-                    ],
+                    order=0,
                 ),
             ],
             color="color_example",
+            order=0,
         ),
     ] # [ZoneRequest] | 
     color = "color_example" # str |  (optional)
@@ -5139,6 +5134,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         name="name_example",
         longname="longname_example",
         uuid="uuid_example",
+        order=0,
     ) # ZoneSpaceRequest | 
 
     # example passing only required values which don't have defaults set
@@ -17308,38 +17304,28 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 zones=[],
                 parent_id=1,
                 spaces=[
-                    SpaceRequest(
+                    ZoneSpaceRequest(
                         name="name_example",
                         longname="longname_example",
                         uuid="uuid_example",
-                        geometry=[
-                            GeometryPointRequest(
-                                x=3.14,
-                                y=3.14,
-                                z=3.14,
-                            ),
-                        ],
+                        order=0,
                     ),
                 ],
                 color="color_example",
+                order=0,
             ),
         ],
         parent_id=1,
         spaces=[
-            SpaceRequest(
+            ZoneSpaceRequest(
                 name="name_example",
                 longname="longname_example",
                 uuid="uuid_example",
-                geometry=[
-                    GeometryPointRequest(
-                        x=3.14,
-                        y=3.14,
-                        z=3.14,
-                    ),
-                ],
+                order=0,
             ),
         ],
         color="color_example",
+        order=0,
     ) # PatchedZoneRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -17467,6 +17453,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         name="name_example",
         longname="longname_example",
         uuid="uuid_example",
+        order=0,
     ) # PatchedZoneSpaceRequest |  (optional)
 
     # example passing only required values which don't have defaults set

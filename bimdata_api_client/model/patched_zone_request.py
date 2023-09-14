@@ -31,10 +31,10 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from bimdata_api_client.model.space_request import SpaceRequest
     from bimdata_api_client.model.zone_request import ZoneRequest
-    globals()['SpaceRequest'] = SpaceRequest
+    from bimdata_api_client.model.zone_space_request import ZoneSpaceRequest
     globals()['ZoneRequest'] = ZoneRequest
+    globals()['ZoneSpaceRequest'] = ZoneSpaceRequest
 
 
 class PatchedZoneRequest(ModelNormal):
@@ -75,6 +75,9 @@ class PatchedZoneRequest(ModelNormal):
         ('color',): {
             'max_length': 8,
         },
+        ('order',): {
+            'inclusive_minimum': 0,
+        },
     }
 
     @cached_property
@@ -104,8 +107,9 @@ class PatchedZoneRequest(ModelNormal):
             'uuid': (str,),  # noqa: E501
             'zones': ([ZoneRequest],),  # noqa: E501
             'parent_id': (int,),  # noqa: E501
-            'spaces': ([SpaceRequest],),  # noqa: E501
+            'spaces': ([ZoneSpaceRequest],),  # noqa: E501
             'color': (str, none_type,),  # noqa: E501
+            'order': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -120,6 +124,7 @@ class PatchedZoneRequest(ModelNormal):
         'parent_id': 'parent_id',  # noqa: E501
         'spaces': 'spaces',  # noqa: E501
         'color': 'color',  # noqa: E501
+        'order': 'order',  # noqa: E501
     }
 
     read_only_vars = {
@@ -167,8 +172,9 @@ class PatchedZoneRequest(ModelNormal):
             uuid (str): [optional]  # noqa: E501
             zones ([ZoneRequest]): [optional]  # noqa: E501
             parent_id (int): [optional]  # noqa: E501
-            spaces ([SpaceRequest]): [optional]  # noqa: E501
+            spaces ([ZoneSpaceRequest]): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
+            order (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -254,8 +260,9 @@ class PatchedZoneRequest(ModelNormal):
             uuid (str): [optional]  # noqa: E501
             zones ([ZoneRequest]): [optional]  # noqa: E501
             parent_id (int): [optional]  # noqa: E501
-            spaces ([SpaceRequest]): [optional]  # noqa: E501
+            spaces ([ZoneSpaceRequest]): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
+            order (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -13,8 +13,8 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.space_request import SpaceRequest
-globals()['SpaceRequest'] = SpaceRequest
+from bimdata_api_client.model.zone_space_request import ZoneSpaceRequest
+globals()['ZoneSpaceRequest'] = ZoneSpaceRequest
 from bimdata_api_client.model.zone_request import ZoneRequest
 
 

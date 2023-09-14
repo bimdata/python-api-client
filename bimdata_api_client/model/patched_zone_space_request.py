@@ -69,6 +69,9 @@ class PatchedZoneSpaceRequest(ModelNormal):
             'max_length': 512,
             'min_length': 1,
         },
+        ('order',): {
+            'inclusive_minimum': 0,
+        },
     }
 
     @cached_property
@@ -95,6 +98,7 @@ class PatchedZoneSpaceRequest(ModelNormal):
             'name': (str, none_type,),  # noqa: E501
             'longname': (str, none_type,),  # noqa: E501
             'uuid': (str,),  # noqa: E501
+            'order': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -106,6 +110,7 @@ class PatchedZoneSpaceRequest(ModelNormal):
         'name': 'name',  # noqa: E501
         'longname': 'longname',  # noqa: E501
         'uuid': 'uuid',  # noqa: E501
+        'order': 'order',  # noqa: E501
     }
 
     read_only_vars = {
@@ -152,6 +157,7 @@ class PatchedZoneSpaceRequest(ModelNormal):
             name (str, none_type): [optional]  # noqa: E501
             longname (str, none_type): [optional]  # noqa: E501
             uuid (str): [optional]  # noqa: E501
+            order (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -236,6 +242,7 @@ class PatchedZoneSpaceRequest(ModelNormal):
             name (str, none_type): [optional]  # noqa: E501
             longname (str, none_type): [optional]  # noqa: E501
             uuid (str): [optional]  # noqa: E501
+            order (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

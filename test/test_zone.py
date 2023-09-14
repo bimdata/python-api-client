@@ -13,8 +13,8 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.space import Space
-globals()['Space'] = Space
+from bimdata_api_client.model.zone_space import ZoneSpace
+globals()['ZoneSpace'] = ZoneSpace
 from bimdata_api_client.model.zone import Zone
 
 
