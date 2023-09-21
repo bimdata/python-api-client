@@ -88,6 +88,7 @@ class ProjectFolderTree(ModelNormal):
         """
         lazy_import()
         return {
+            'id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'folders': ([FolderTree],),  # noqa: E501
         }
@@ -98,6 +99,7 @@ class ProjectFolderTree(ModelNormal):
 
 
     attribute_map = {
+        'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'folders': 'folders',  # noqa: E501
     }
@@ -109,10 +111,11 @@ class ProjectFolderTree(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, name, folders, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, name, folders, *args, **kwargs):  # noqa: E501
         """ProjectFolderTree - a model defined in OpenAPI
 
         Args:
+            id (int):
             name (str):
             folders ([FolderTree]):
 
@@ -174,6 +177,7 @@ class ProjectFolderTree(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.id = id
         self.name = name
         self.folders = folders
         for var_name, var_value in kwargs.items():
@@ -196,10 +200,11 @@ class ProjectFolderTree(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, name, folders, *args, **kwargs):  # noqa: E501
+    def __init__(self, id, name, folders, *args, **kwargs):  # noqa: E501
         """ProjectFolderTree - a model defined in OpenAPI
 
         Args:
+            id (int):
             name (str):
             folders ([FolderTree]):
 
@@ -259,6 +264,7 @@ class ProjectFolderTree(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.id = id
         self.name = name
         self.folders = folders
         for var_name, var_value in kwargs.items():

@@ -1526,7 +1526,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'IFC', 'GLTF', 'POINT_CLOUD', 'DWG', 'OBJ', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'DXF', 'IFC', 'GLTF', 'OBJ', 'POINT_CLOUD', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -2112,7 +2112,7 @@ Name | Type | Description  | Notes
 
 Create a tag
 
-Create a tag  Required scopes: org:manage
+Create a tag  Required scopes: document:write
 
 ### Example
 
@@ -3856,7 +3856,7 @@ void (empty response body)
 
 Delete the tag
 
-Delete the tag  Required scopes: org:manage
+Delete the tag  Required scopes: document:write
 
 ### Example
 
@@ -7965,7 +7965,7 @@ This endpoint does not need any parameter.
 
 Retrieve a tag
 
-Retrieve a tag in the project  Required scopes: org:manage
+Retrieve a tag in the project  Required scopes: document:read
 
 ### Example
 
@@ -8072,7 +8072,7 @@ Name | Type | Description  | Notes
 
 Retrieve all tags
 
-Retrieve all tags in the project  Required scopes: org:manage
+Retrieve all tags in the project  Required scopes: document:read
 
 ### Example
 
@@ -11362,7 +11362,7 @@ Name | Type | Description  | Notes
 
 Update some fields of the tag
 
-Update some fields of the tag  Required scopes: org:manage
+Update some fields of the tag  Required scopes: document:write
 
 ### Example
 

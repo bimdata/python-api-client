@@ -8298,7 +8298,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'IFC', 'GLTF', 'POINT_CLOUD', 'DWG', 'OBJ', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'DXF', 'IFC', 'GLTF', 'OBJ', 'POINT_CLOUD', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -8733,7 +8733,7 @@ class CollaborationApi(object):
     ):
         """Create a tag  # noqa: E501
 
-        Create a tag  Required scopes: org:manage  # noqa: E501
+        Create a tag  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -10115,7 +10115,7 @@ class CollaborationApi(object):
     ):
         """Delete the tag  # noqa: E501
 
-        Delete the tag  Required scopes: org:manage  # noqa: E501
+        Delete the tag  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -13342,7 +13342,7 @@ class CollaborationApi(object):
     ):
         """Retrieve a tag  # noqa: E501
 
-        Retrieve a tag in the project  Required scopes: org:manage  # noqa: E501
+        Retrieve a tag in the project  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -13427,7 +13427,7 @@ class CollaborationApi(object):
     ):
         """Retrieve all tags  # noqa: E501
 
-        Retrieve all tags in the project  Required scopes: org:manage  # noqa: E501
+        Retrieve all tags in the project  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -15939,7 +15939,7 @@ class CollaborationApi(object):
     ):
         """Update some fields of the tag  # noqa: E501
 
-        Update some fields of the tag  Required scopes: org:manage  # noqa: E501
+        Update some fields of the tag  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
