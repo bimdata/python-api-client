@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.20.1 (2023-09-21)
+### Fix
+* Add id project to serializer getProjectFolderTreeSerializers ([`fbe126b`](https://github.com/bimdata/python-api-client/commit/fbe126ba7320faa09ead023384a7e8b41c5e7a0b))
+
 ## v9.20.0 (2023-09-14)
 ### Feature
 * Order in zones and spacezones ([`2b6e416`](https://github.com/bimdata/python-api-client/commit/2b6e4160fb3010d6cb2aed943172483e2e551118))
