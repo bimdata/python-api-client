@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.21.0 (2023-09-25)
+### Feature
+* Add routes to manage zone_space relations ([#690](https://github.com/bimdata/python-api-client/issues/690)) ([`68bc812`](https://github.com/bimdata/python-api-client/commit/68bc81277d1ba297a771ca9fcc2eae6c078c6f34))
+
 ## v9.20.2 (2023-09-25)
 ### Fix
 * Zone: parent_id field may be null ([`3aec51b`](https://github.com/bimdata/python-api-client/commit/3aec51b2eac56ab36976e05211e1b13ea09ef96a))
