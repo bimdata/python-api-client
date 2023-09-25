@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.20.2 (2023-09-25)
+### Fix
+* Zone: parent_id field may be null ([`3aec51b`](https://github.com/bimdata/python-api-client/commit/3aec51b2eac56ab36976e05211e1b13ea09ef96a))
+
 ## v9.20.1 (2023-09-21)
 ### Fix
 * Add id project to serializer getProjectFolderTreeSerializers ([`fbe126b`](https://github.com/bimdata/python-api-client/commit/fbe126ba7320faa09ead023384a7e8b41c5e7a0b))
