@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **updated_at** | **datetime** |  | [readonly] 
 **name** | **str, none_type** |  | [optional] 
 **zones** | [**[Zone]**](Zone.md) |  | [optional] 
-**parent_id** | **int** |  | [optional] 
+**parent_id** | **int, none_type** |  | [optional] 
 **spaces** | [**[ZoneSpace]**](ZoneSpace.md) |  | [optional] 
 **color** | **str, none_type** |  | [optional] 
 **order** | **int** |  | [optional] 

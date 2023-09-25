@@ -104,7 +104,7 @@ class ZoneRequest(ModelNormal):
             'uuid': (str,),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'zones': ([ZoneRequest],),  # noqa: E501
-            'parent_id': (int,),  # noqa: E501
+            'parent_id': (int, none_type,),  # noqa: E501
             'spaces': ([ZoneSpaceRequest],),  # noqa: E501
             'color': (str, none_type,),  # noqa: E501
             'order': (int,),  # noqa: E501
@@ -171,7 +171,7 @@ class ZoneRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             name (str, none_type): [optional]  # noqa: E501
             zones ([ZoneRequest]): [optional]  # noqa: E501
-            parent_id (int): [optional]  # noqa: E501
+            parent_id (int, none_type): [optional]  # noqa: E501
             spaces ([ZoneSpaceRequest]): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
             order (int): [optional]  # noqa: E501
@@ -262,7 +262,7 @@ class ZoneRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             name (str, none_type): [optional]  # noqa: E501
             zones ([ZoneRequest]): [optional]  # noqa: E501
-            parent_id (int): [optional]  # noqa: E501
+            parent_id (int, none_type): [optional]  # noqa: E501
             spaces ([ZoneSpaceRequest]): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
             order (int): [optional]  # noqa: E501

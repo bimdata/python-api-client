@@ -106,7 +106,7 @@ class PatchedZoneRequest(ModelNormal):
             'name': (str, none_type,),  # noqa: E501
             'uuid': (str,),  # noqa: E501
             'zones': ([ZoneRequest],),  # noqa: E501
-            'parent_id': (int,),  # noqa: E501
+            'parent_id': (int, none_type,),  # noqa: E501
             'spaces': ([ZoneSpaceRequest],),  # noqa: E501
             'color': (str, none_type,),  # noqa: E501
             'order': (int,),  # noqa: E501
@@ -171,7 +171,7 @@ class PatchedZoneRequest(ModelNormal):
             name (str, none_type): [optional]  # noqa: E501
             uuid (str): [optional]  # noqa: E501
             zones ([ZoneRequest]): [optional]  # noqa: E501
-            parent_id (int): [optional]  # noqa: E501
+            parent_id (int, none_type): [optional]  # noqa: E501
             spaces ([ZoneSpaceRequest]): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
             order (int): [optional]  # noqa: E501
@@ -259,7 +259,7 @@ class PatchedZoneRequest(ModelNormal):
             name (str, none_type): [optional]  # noqa: E501
             uuid (str): [optional]  # noqa: E501
             zones ([ZoneRequest]): [optional]  # noqa: E501
-            parent_id (int): [optional]  # noqa: E501
+            parent_id (int, none_type): [optional]  # noqa: E501
             spaces ([ZoneSpaceRequest]): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
             order (int): [optional]  # noqa: E501
