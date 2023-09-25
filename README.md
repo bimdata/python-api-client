@@ -331,6 +331,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**update_visa**](docs/CollaborationApi.md#update_visa) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id} | Update some fields of a visa
 *CollaborationApi* | [**update_visa_comment**](docs/CollaborationApi.md#update_visa_comment) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment/{id} | Update some fields of a comment
 *IfcApi* | [**add_ifc_errors_deprecated**](docs/IfcApi.md#add_ifc_errors_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/errors | Add errors to model
+*IfcApi* | [**add_zone_space_deprecated**](docs/IfcApi.md#add_zone_space_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/add | Add a space to a zone
 *IfcApi* | [**bulk_delete_ifc_classifications_deprecated**](docs/IfcApi.md#bulk_delete_ifc_classifications_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/list_destroy | Remove all classifications from model&#39;s elements
 *IfcApi* | [**bulk_delete_ifc_properties_deprecated**](docs/IfcApi.md#bulk_delete_ifc_properties_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/bulk_destroy | Delete many Property of a model
 *IfcApi* | [**bulk_delete_ifc_property_definitions_deprecated**](docs/IfcApi.md#bulk_delete_ifc_property_definitions_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/bulk_destroy | Delete many PropertyDefinitions of a model
@@ -386,7 +387,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**delete_storey_plan_deprecated**](docs/IfcApi.md#delete_storey_plan_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_uuid}/plan/{id} | Delete the relation between a 2d model and a storey
 *IfcApi* | [**delete_system_deprecated**](docs/IfcApi.md#delete_system_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Delete a system of a model
 *IfcApi* | [**delete_zone_deprecated**](docs/IfcApi.md#delete_zone_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Delete a zone of a model
-*IfcApi* | [**delete_zone_space_deprecated**](docs/IfcApi.md#delete_zone_space_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Delete a space of a zone
+*IfcApi* | [**delete_zone_space_deprecated**](docs/IfcApi.md#delete_zone_space_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Delete the relation between a space and a zone
 *IfcApi* | [**export_ifc_deprecated**](docs/IfcApi.md#export_ifc_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/export | Export IFC
 *IfcApi* | [**full_update_element_deprecated**](docs/IfcApi.md#full_update_element_deprecated) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Update all fields of an element
 *IfcApi* | [**get_access_token_deprecated**](docs/IfcApi.md#get_access_token_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Retrieve one token created for this model
@@ -478,6 +479,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**update_zone_deprecated**](docs/IfcApi.md#update_zone_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Update some fields of a zone
 *IfcApi* | [**update_zone_space_deprecated**](docs/IfcApi.md#update_zone_space_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Update some fields of a space
 *ModelApi* | [**add_model_errors**](docs/ModelApi.md#add_model_errors) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/errors | Add errors to model
+*ModelApi* | [**add_zone_space**](docs/ModelApi.md#add_zone_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/add | Add a space to a zone
 *ModelApi* | [**bulk_delete_model_classifications**](docs/ModelApi.md#bulk_delete_model_classifications) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/list_destroy | Remove all classifications from model&#39;s elements
 *ModelApi* | [**bulk_delete_model_properties**](docs/ModelApi.md#bulk_delete_model_properties) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/bulk_destroy | Delete many Property of a model
 *ModelApi* | [**bulk_delete_model_property_definitions**](docs/ModelApi.md#bulk_delete_model_property_definitions) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/bulk_destroy | Delete many PropertyDefinitions of a model
@@ -533,7 +535,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**delete_storey_plan**](docs/ModelApi.md#delete_storey_plan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/{id} | Delete the relation between a 2d model and a storey
 *ModelApi* | [**delete_system**](docs/ModelApi.md#delete_system) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system/{uuid} | Delete a system of a model
 *ModelApi* | [**delete_zone**](docs/ModelApi.md#delete_zone) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{id} | Delete a zone of a model
-*ModelApi* | [**delete_zone_space**](docs/ModelApi.md#delete_zone_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/{id} | Delete a space of a zone
+*ModelApi* | [**delete_zone_space**](docs/ModelApi.md#delete_zone_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/{id} | Delete the relation between a space and a zone
 *ModelApi* | [**export_ifc**](docs/ModelApi.md#export_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/export | Export IFC
 *ModelApi* | [**full_update_element**](docs/ModelApi.md#full_update_element) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Update all fields of an element
 *ModelApi* | [**get_access_token**](docs/ModelApi.md#get_access_token) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token} | Retrieve one token created for this model
@@ -875,6 +877,7 @@ Class | Method | HTTP request | Description
  - [Zone](docs/Zone.md)
  - [ZoneRequest](docs/ZoneRequest.md)
  - [ZoneSpace](docs/ZoneSpace.md)
+ - [ZoneSpaceRelationRequest](docs/ZoneSpaceRelationRequest.md)
  - [ZoneSpaceRequest](docs/ZoneSpaceRequest.md)
 
 

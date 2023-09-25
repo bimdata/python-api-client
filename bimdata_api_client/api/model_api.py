@@ -87,6 +87,7 @@ from bimdata_api_client.model.xkt_file import XktFile
 from bimdata_api_client.model.zone import Zone
 from bimdata_api_client.model.zone_request import ZoneRequest
 from bimdata_api_client.model.zone_space import ZoneSpace
+from bimdata_api_client.model.zone_space_relation_request import ZoneSpaceRelationRequest
 from bimdata_api_client.model.zone_space_request import ZoneSpaceRequest
 
 
@@ -159,6 +160,87 @@ class ModelApi(object):
                     'id': 'path',
                     'project_pk': 'path',
                     'model_errors_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
+        self.add_zone_space_endpoint = _Endpoint(
+            settings={
+                'response_type': (ZoneSpace,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/add',
+                'operation_id': 'add_zone_space',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'model_pk',
+                    'project_pk',
+                    'zone_pk',
+                    'zone_space_relation_request',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'model_pk',
+                    'project_pk',
+                    'zone_pk',
+                    'zone_space_relation_request',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'model_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'zone_pk':
+                        (int,),
+                    'zone_space_relation_request':
+                        (ZoneSpaceRelationRequest,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'model_pk': 'model_pk',
+                    'project_pk': 'project_pk',
+                    'zone_pk': 'zone_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'model_pk': 'path',
+                    'project_pk': 'path',
+                    'zone_pk': 'path',
+                    'zone_space_relation_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -11382,6 +11464,100 @@ class ModelApi(object):
             project_pk
         return self.add_model_errors_endpoint.call_with_http_info(**kwargs)
 
+    def add_zone_space(
+        self,
+        cloud_pk,
+        model_pk,
+        project_pk,
+        zone_pk,
+        zone_space_relation_request,
+        **kwargs
+    ):
+        """Add a space to a zone  # noqa: E501
+
+        Add a space to a zone. The IFC file will not be updated. The created space will be accessible over the API and when exporting an IFC file  Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.add_zone_space(cloud_pk, model_pk, project_pk, zone_pk, zone_space_relation_request, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            model_pk (int): A unique integer value identifying this model.
+            project_pk (int): A unique integer value identifying this project.
+            zone_pk (int): A unique integer value identifying this zone.
+            zone_space_relation_request (ZoneSpaceRelationRequest):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            ZoneSpace
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['model_pk'] = \
+            model_pk
+        kwargs['project_pk'] = \
+            project_pk
+        kwargs['zone_pk'] = \
+            zone_pk
+        kwargs['zone_space_relation_request'] = \
+            zone_space_relation_request
+        return self.add_zone_space_endpoint.call_with_http_info(**kwargs)
+
     def bulk_delete_model_classifications(
         self,
         cloud_pk,
@@ -16399,9 +16575,9 @@ class ModelApi(object):
         zone_pk,
         **kwargs
     ):
-        """Delete a space of a zone  # noqa: E501
+        """Delete the relation between a space and a zone  # noqa: E501
 
-        The IFC file will not be updated. The remaining spaces are available in API and will be available when exporting an IFC file  Required scopes: ifc:write, model:write  # noqa: E501
+        Delete the relation between a space and a zone. The IFC file will not be updated. The remaining spaces are available in API and will be available when exporting an IFC file  Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

@@ -250,6 +250,7 @@ bimdata_api_client/model/xkt_file.py
 bimdata_api_client/model/zone.py
 bimdata_api_client/model/zone_request.py
 bimdata_api_client/model/zone_space.py
+bimdata_api_client/model/zone_space_relation_request.py
 bimdata_api_client/model/zone_space_request.py
 bimdata_api_client/model_utils.py
 bimdata_api_client/models/__init__.py
@@ -495,6 +496,7 @@ docs/XktFile.md
 docs/Zone.md
 docs/ZoneRequest.md
 docs/ZoneSpace.md
+docs/ZoneSpaceRelationRequest.md
 docs/ZoneSpaceRequest.md
 git_push.sh
 requirements.txt
@@ -741,4 +743,5 @@ test/test_xkt_file.py
 test/test_zone.py
 test/test_zone_request.py
 test/test_zone_space.py
+test/test_zone_space_relation_request.py
 test/test_zone_space_request.py

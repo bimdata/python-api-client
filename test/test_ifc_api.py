@@ -31,6 +31,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_add_zone_space_deprecated(self):
+        """Test case for add_zone_space_deprecated
+
+        Add a space to a zone  # noqa: E501
+        """
+        pass
+
     def test_bulk_delete_ifc_classifications_deprecated(self):
         """Test case for bulk_delete_ifc_classifications_deprecated
 
@@ -419,7 +426,7 @@ class TestIfcApi(unittest.TestCase):
     def test_delete_zone_space_deprecated(self):
         """Test case for delete_zone_space_deprecated
 
-        Delete a space of a zone  # noqa: E501
+        Delete the relation between a space and a zone  # noqa: E501
         """
         pass
 

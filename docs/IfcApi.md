@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_ifc_errors_deprecated**](IfcApi.md#add_ifc_errors_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/errors | Add errors to model
+[**add_zone_space_deprecated**](IfcApi.md#add_zone_space_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/add | Add a space to a zone
 [**bulk_delete_ifc_classifications_deprecated**](IfcApi.md#bulk_delete_ifc_classifications_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/list_destroy | Remove all classifications from model&#39;s elements
 [**bulk_delete_ifc_properties_deprecated**](IfcApi.md#bulk_delete_ifc_properties_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/bulk_destroy | Delete many Property of a model
 [**bulk_delete_ifc_property_definitions_deprecated**](IfcApi.md#bulk_delete_ifc_property_definitions_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/bulk_destroy | Delete many PropertyDefinitions of a model
@@ -60,7 +61,7 @@ Method | HTTP request | Description
 [**delete_storey_plan_deprecated**](IfcApi.md#delete_storey_plan_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_uuid}/plan/{id} | Delete the relation between a 2d model and a storey
 [**delete_system_deprecated**](IfcApi.md#delete_system_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Delete a system of a model
 [**delete_zone_deprecated**](IfcApi.md#delete_zone_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Delete a zone of a model
-[**delete_zone_space_deprecated**](IfcApi.md#delete_zone_space_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Delete a space of a zone
+[**delete_zone_space_deprecated**](IfcApi.md#delete_zone_space_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Delete the relation between a space and a zone
 [**export_ifc_deprecated**](IfcApi.md#export_ifc_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/export | Export IFC
 [**full_update_element_deprecated**](IfcApi.md#full_update_element_deprecated) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Update all fields of an element
 [**get_access_token_deprecated**](IfcApi.md#get_access_token_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Retrieve one token created for this model
@@ -272,6 +273,122 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_zone_space_deprecated**
+> ZoneSpace add_zone_space_deprecated(cloud_pk, ifc_pk, project_pk, zone_pk, zone_space_relation_request)
+
+Add a space to a zone
+
+Add a space to a zone. The IFC file will not be updated. The created space will be accessible over the API and when exporting an IFC file  Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import ifc_api
+from bimdata_api_client.model.zone_space_relation_request import ZoneSpaceRelationRequest
+from bimdata_api_client.model.zone_space import ZoneSpace
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ifc_api.IfcApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    ifc_pk = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | A unique integer value identifying this project.
+    zone_pk = 1 # int | A unique integer value identifying this zone.
+    zone_space_relation_request = ZoneSpaceRelationRequest(
+        id=1,
+        order=0,
+    ) # ZoneSpaceRelationRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Add a space to a zone
+        api_response = api_instance.add_zone_space_deprecated(cloud_pk, ifc_pk, project_pk, zone_pk, zone_space_relation_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling IfcApi->add_zone_space_deprecated: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **ifc_pk** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+ **zone_pk** | **int**| A unique integer value identifying this zone. |
+ **zone_space_relation_request** | [**ZoneSpaceRelationRequest**](ZoneSpaceRelationRequest.md)|  |
+
+### Return type
+
+[**ZoneSpace**](ZoneSpace.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
@@ -6915,9 +7032,9 @@ void (empty response body)
 # **delete_zone_space_deprecated**
 > delete_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk)
 
-Delete a space of a zone
+Delete the relation between a space and a zone
 
-The IFC file will not be updated. The remaining spaces are available in API and will be available when exporting an IFC file  Required scopes: ifc:write, model:write
+Delete the relation between a space and a zone. The IFC file will not be updated. The remaining spaces are available in API and will be available when exporting an IFC file  Required scopes: ifc:write, model:write
 
 ### Example
 
@@ -6978,7 +7095,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        # Delete a space of a zone
+        # Delete the relation between a space and a zone
         api_instance.delete_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling IfcApi->delete_zone_space_deprecated: %s\n" % e)

@@ -31,6 +31,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_add_zone_space(self):
+        """Test case for add_zone_space
+
+        Add a space to a zone  # noqa: E501
+        """
+        pass
+
     def test_bulk_delete_model_classifications(self):
         """Test case for bulk_delete_model_classifications
 
@@ -419,7 +426,7 @@ class TestModelApi(unittest.TestCase):
     def test_delete_zone_space(self):
         """Test case for delete_zone_space
 
-        Delete a space of a zone  # noqa: E501
+        Delete the relation between a space and a zone  # noqa: E501
         """
         pass
 

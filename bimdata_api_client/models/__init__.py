@@ -244,4 +244,5 @@ from bimdata_api_client.model.xkt_file import XktFile
 from bimdata_api_client.model.zone import Zone
 from bimdata_api_client.model.zone_request import ZoneRequest
 from bimdata_api_client.model.zone_space import ZoneSpace
+from bimdata_api_client.model.zone_space_relation_request import ZoneSpaceRelationRequest
 from bimdata_api_client.model.zone_space_request import ZoneSpaceRequest
