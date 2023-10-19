@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.21.1 (2023-10-19)
+### Fix
+* Add geometry to ZoneSpace ([`4832e71`](https://github.com/bimdata/python-api-client/commit/4832e7169cae8ec549053fb17a58a6866c69ca98))
+
 ## v9.21.0 (2023-09-25)
 ### Feature
 * Add routes to manage zone_space relations ([#690](https://github.com/bimdata/python-api-client/issues/690)) ([`68bc812`](https://github.com/bimdata/python-api-client/commit/68bc81277d1ba297a771ca9fcc2eae6c078c6f34))
