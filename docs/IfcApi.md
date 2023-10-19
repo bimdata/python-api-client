@@ -5118,6 +5118,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                     name="name_example",
                     longname="longname_example",
                     uuid="uuid_example",
+                    geometry=[
+                        GeometryPointRequest(
+                            x=3.14,
+                            y=3.14,
+                            z=3.14,
+                        ),
+                    ],
                     order=0,
                 ),
             ],
@@ -5251,6 +5258,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         name="name_example",
         longname="longname_example",
         uuid="uuid_example",
+        geometry=[
+            GeometryPointRequest(
+                x=3.14,
+                y=3.14,
+                z=3.14,
+            ),
+        ],
         order=0,
     ) # ZoneSpaceRequest | 
 
@@ -17395,6 +17409,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                         name="name_example",
                         longname="longname_example",
                         uuid="uuid_example",
+                        geometry=[
+                            GeometryPointRequest(
+                                x=3.14,
+                                y=3.14,
+                                z=3.14,
+                            ),
+                        ],
                         order=0,
                     ),
                 ],
@@ -17408,6 +17429,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 name="name_example",
                 longname="longname_example",
                 uuid="uuid_example",
+                geometry=[
+                    GeometryPointRequest(
+                        x=3.14,
+                        y=3.14,
+                        z=3.14,
+                    ),
+                ],
                 order=0,
             ),
         ],
@@ -17540,6 +17568,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         name="name_example",
         longname="longname_example",
         uuid="uuid_example",
+        geometry=[
+            GeometryPointRequest(
+                x=3.14,
+                y=3.14,
+                z=3.14,
+            ),
+        ],
         order=0,
     ) # PatchedZoneSpaceRequest |  (optional)
 

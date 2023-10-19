@@ -7279,7 +7279,7 @@ class CollaborationApi(object):
     ):
         """Accept a validation  # noqa: E501
 
-        Accept a validation  Required scopes: document:write  # noqa: E501
+        Accept a validation  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -7880,7 +7880,7 @@ class CollaborationApi(object):
     ):
         """Close a visa of a document  # noqa: E501
 
-        Close a visa of a document  Required scopes: document:write  # noqa: E501
+        Close a visa of a document  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -8298,7 +8298,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'OBJ', 'IFC', 'GLTF', 'DXF', 'POINT_CLOUD', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'IFC', 'GLTF', 'POINT_CLOUD', 'DXF', 'OBJ', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -8821,7 +8821,7 @@ class CollaborationApi(object):
     ):
         """Add a validation to a visa  # noqa: E501
 
-        Add a validation to a visa  Required scopes: document:write  # noqa: E501
+        Add a validation to a visa  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -8913,7 +8913,7 @@ class CollaborationApi(object):
     ):
         """Create a visa  # noqa: E501
 
-        Create a visa  Required scopes: document:write  # noqa: E501
+        Create a visa  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -9001,7 +9001,7 @@ class CollaborationApi(object):
     ):
         """Add a comment  # noqa: E501
 
-        Add a comment  Required scopes: document:write  # noqa: E501
+        Add a comment  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -10203,7 +10203,7 @@ class CollaborationApi(object):
     ):
         """Remove a validation  # noqa: E501
 
-        Remove a validation  Required scopes: document:write  # noqa: E501
+        Remove a validation  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -10296,7 +10296,7 @@ class CollaborationApi(object):
     ):
         """Remove a visa  # noqa: E501
 
-        Remove a visa  Required scopes: document:write  # noqa: E501
+        Remove a visa  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -10387,7 +10387,7 @@ class CollaborationApi(object):
     ):
         """Remove a comment  # noqa: E501
 
-        Remove a comment  Required scopes: document:write  # noqa: E501
+        Remove a comment  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -10559,7 +10559,7 @@ class CollaborationApi(object):
     ):
         """Deny a validation  # noqa: E501
 
-        Deny a validation  Required scopes: document:write  # noqa: E501
+        Deny a validation  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -14808,7 +14808,7 @@ class CollaborationApi(object):
     ):
         """Pause a visa of a document  # noqa: E501
 
-        Pause a visa of a document  Required scopes: document:write  # noqa: E501
+        Pause a visa of a document  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -14899,7 +14899,7 @@ class CollaborationApi(object):
     ):
         """Reset a validation  # noqa: E501
 
-        Reset a validation if the validation has been accepted or rejected  Required scopes: document:write  # noqa: E501
+        Reset a validation if the validation has been accepted or rejected  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -14992,7 +14992,7 @@ class CollaborationApi(object):
     ):
         """Resume a visa of a document  # noqa: E501
 
-        Resume a visa of a document after a pause  Required scopes: document:write  # noqa: E501
+        Resume a visa of a document after a pause  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -16028,7 +16028,7 @@ class CollaborationApi(object):
     ):
         """Update the validator of validation  # noqa: E501
 
-        Update the validator of validation. This route is only useful for an App  Required scopes: document:write  # noqa: E501
+        Update the validator of validation. This route is only useful for an App  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -16122,7 +16122,7 @@ class CollaborationApi(object):
     ):
         """Update some fields of a visa  # noqa: E501
 
-        Update some fields of a visa  Required scopes: document:write  # noqa: E501
+        Update some fields of a visa  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -16214,7 +16214,7 @@ class CollaborationApi(object):
     ):
         """Update some fields of a comment  # noqa: E501
 
-        Update some fields of a comment  Required scopes: document:write  # noqa: E501
+        Update some fields of a comment  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

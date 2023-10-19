@@ -220,7 +220,7 @@ void (empty response body)
 
 Accept a validation
 
-Accept a validation  Required scopes: document:write
+Accept a validation  Required scopes: document:read
 
 ### Example
 
@@ -972,7 +972,7 @@ Name | Type | Description  | Notes
 
 Close a visa of a document
 
-Close a visa of a document  Required scopes: document:write
+Close a visa of a document  Required scopes: document:read
 
 ### Example
 
@@ -1526,7 +1526,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'OBJ', 'IFC', 'GLTF', 'DXF', 'POINT_CLOUD', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'IFC', 'GLTF', 'POINT_CLOUD', 'DXF', 'OBJ', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -2224,7 +2224,7 @@ Name | Type | Description  | Notes
 
 Add a validation to a visa
 
-Add a validation to a visa  Required scopes: document:write
+Add a validation to a visa  Required scopes: document:read
 
 ### Example
 
@@ -2339,7 +2339,7 @@ Name | Type | Description  | Notes
 
 Create a visa
 
-Create a visa  Required scopes: document:write
+Create a visa  Required scopes: document:read
 
 ### Example
 
@@ -2463,7 +2463,7 @@ Name | Type | Description  | Notes
 
 Add a comment
 
-Add a comment  Required scopes: document:write
+Add a comment  Required scopes: document:read
 
 ### Example
 
@@ -3962,7 +3962,7 @@ void (empty response body)
 
 Remove a validation
 
-Remove a validation  Required scopes: document:write
+Remove a validation  Required scopes: document:read
 
 ### Example
 
@@ -4072,7 +4072,7 @@ void (empty response body)
 
 Remove a visa
 
-Remove a visa  Required scopes: document:write
+Remove a visa  Required scopes: document:read
 
 ### Example
 
@@ -4180,7 +4180,7 @@ void (empty response body)
 
 Remove a comment
 
-Remove a comment  Required scopes: document:write
+Remove a comment  Required scopes: document:read
 
 ### Example
 
@@ -4392,7 +4392,7 @@ void (empty response body)
 
 Deny a validation
 
-Deny a validation  Required scopes: document:write
+Deny a validation  Required scopes: document:read
 
 ### Example
 
@@ -9805,7 +9805,7 @@ Name | Type | Description  | Notes
 
 Pause a visa of a document
 
-Pause a visa of a document  Required scopes: document:write
+Pause a visa of a document  Required scopes: document:read
 
 ### Example
 
@@ -9913,7 +9913,7 @@ void (empty response body)
 
 Reset a validation
 
-Reset a validation if the validation has been accepted or rejected  Required scopes: document:write
+Reset a validation if the validation has been accepted or rejected  Required scopes: document:read
 
 ### Example
 
@@ -10023,7 +10023,7 @@ void (empty response body)
 
 Resume a visa of a document
 
-Resume a visa of a document after a pause  Required scopes: document:write
+Resume a visa of a document after a pause  Required scopes: document:read
 
 ### Example
 
@@ -11485,7 +11485,7 @@ Name | Type | Description  | Notes
 
 Update the validator of validation
 
-Update the validator of validation. This route is only useful for an App  Required scopes: document:write
+Update the validator of validation. This route is only useful for an App  Required scopes: document:read
 
 ### Example
 
@@ -11611,7 +11611,7 @@ Name | Type | Description  | Notes
 
 Update some fields of a visa
 
-Update some fields of a visa  Required scopes: document:write
+Update some fields of a visa  Required scopes: document:read
 
 ### Example
 
@@ -11737,7 +11737,7 @@ Name | Type | Description  | Notes
 
 Update some fields of a comment
 
-Update some fields of a comment  Required scopes: document:write
+Update some fields of a comment  Required scopes: document:read
 
 ### Example
 

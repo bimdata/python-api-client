@@ -454,7 +454,7 @@ class SsoApi(object):
     ):
         """Create a user  # noqa: E501
 
-        Create a user, linked to the provider. This route is only useful when used with `ProjetAccessToken`s  # noqa: E501
+        Create a user, linked to the provider. This route is only useful when used with `ProjetAccessToken`s. If user already exists, it responds with a 200 instead of a 201  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

@@ -13,6 +13,8 @@ import sys
 import unittest
 
 import bimdata_api_client
+from bimdata_api_client.model.geometry_point_request import GeometryPointRequest
+globals()['GeometryPointRequest'] = GeometryPointRequest
 from bimdata_api_client.model.patched_zone_space_request import PatchedZoneSpaceRequest
 
 

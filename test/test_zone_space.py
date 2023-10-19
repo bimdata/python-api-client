@@ -13,6 +13,8 @@ import sys
 import unittest
 
 import bimdata_api_client
+from bimdata_api_client.model.geometry_point import GeometryPoint
+globals()['GeometryPoint'] = GeometryPoint
 from bimdata_api_client.model.zone_space import ZoneSpace
 
 

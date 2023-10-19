@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **updated_at** | **datetime** |  | [readonly] 
 **name** | **str, none_type** |  | [optional] 
 **longname** | **str, none_type** |  | [optional] 
+**geometry** | [**[GeometryPoint], none_type**](GeometryPoint.md) |  | [optional] 
 **order** | **int** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

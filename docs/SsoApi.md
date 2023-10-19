@@ -119,7 +119,7 @@ void (empty response body)
 
 Create a user
 
-Create a user, linked to the provider. This route is only useful when used with `ProjetAccessToken`s
+Create a user, linked to the provider. This route is only useful when used with `ProjetAccessToken`s. If user already exists, it responds with a 200 instead of a 201
 
 ### Example
 
@@ -215,6 +215,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**200** |  |  -  |
 **201** |  |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
