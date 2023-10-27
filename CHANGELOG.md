@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v9.22.0 (2023-10-27)
+### Feature
+* Add viewpoint models field (#702)
+
+*  add viewpoint models field
+
+* fix typos ([`6f3768c`](https://github.com/bimdata/python-api-client/commit/6f3768c3c8512cb0c4ebd5836220a6e59f1adb65))
+
 ## v9.21.1 (2023-10-19)
 ### Fix
 * Add geometry to ZoneSpace ([`4832e71`](https://github.com/bimdata/python-api-client/commit/4832e7169cae8ec549053fb17a58a6866c69ca98))
