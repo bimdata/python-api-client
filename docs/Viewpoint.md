@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **snapshot** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **components** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **pins** | [**[Pin], none_type**](Pin.md) | Non standard field. Pins (or markers/annotations) are points of interest. When creating a Viewpoint you can create pins with the fields &#x60;pins&#x60;, but you can&#39;t edit pins through here. You must use dedicated pin routes. | [optional] 
+**models** | **[int]** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

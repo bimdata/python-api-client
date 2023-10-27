@@ -900,6 +900,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                     ),
                 ],
                 temp_id=1,
+                models=[
+                    1,
+                ],
             ),
         ],
         project=1,
@@ -1330,6 +1333,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             ),
         ],
         temp_id=1,
+        models=[
+            1,
+        ],
     ) # ViewpointRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -2964,6 +2970,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                     ),
                 ],
                 temp_id=1,
+                models=[
+                    1,
+                ],
             ),
         ],
         project=1,
@@ -3400,6 +3409,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             ),
         ],
         temp_id=1,
+        models=[
+            1,
+        ],
     ) # ViewpointRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -7179,6 +7191,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                     ),
                 ],
                 temp_id=1,
+                models=[
+                    1,
+                ],
             ),
         ],
         project=1,
@@ -7632,6 +7647,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             ),
         ],
         temp_id=1,
+        models=[
+            1,
+        ],
     ) # PatchedViewpointRequest |  (optional)
 
     # example passing only required values which don't have defaults set

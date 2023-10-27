@@ -122,6 +122,7 @@ class ViewpointRequest(ModelNormal):
             'components': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'pins': ([PinRequest], none_type,),  # noqa: E501
             'temp_id': (int, none_type,),  # noqa: E501
+            'models': ([int],),  # noqa: E501
         }
 
     @cached_property
@@ -142,6 +143,7 @@ class ViewpointRequest(ModelNormal):
         'components': 'components',  # noqa: E501
         'pins': 'pins',  # noqa: E501
         'temp_id': 'temp_id',  # noqa: E501
+        'models': 'models',  # noqa: E501
     }
 
     read_only_vars = {
@@ -197,6 +199,7 @@ class ViewpointRequest(ModelNormal):
             components (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             pins ([PinRequest], none_type): Non standard field. Pins (or markers/annotations) are points of interest. When creating a Viewpoint you can create pins with the fields `pins`, but you can't edit pins through here. You must use dedicated pin routes.. [optional]  # noqa: E501
             temp_id (int, none_type): Only used when using POST on the full-topic route to bind viewpoint with comment. [optional]  # noqa: E501
+            models ([int]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -290,6 +293,7 @@ class ViewpointRequest(ModelNormal):
             components (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             pins ([PinRequest], none_type): Non standard field. Pins (or markers/annotations) are points of interest. When creating a Viewpoint you can create pins with the fields `pins`, but you can't edit pins through here. You must use dedicated pin routes.. [optional]  # noqa: E501
             temp_id (int, none_type): Only used when using POST on the full-topic route to bind viewpoint with comment. [optional]  # noqa: E501
+            models ([int]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

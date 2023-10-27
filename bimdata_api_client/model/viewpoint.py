@@ -121,6 +121,7 @@ class Viewpoint(ModelNormal):
             'snapshot': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'components': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'pins': ([Pin], none_type,),  # noqa: E501
+            'models': ([int],),  # noqa: E501
         }
 
     @cached_property
@@ -140,6 +141,7 @@ class Viewpoint(ModelNormal):
         'snapshot': 'snapshot',  # noqa: E501
         'components': 'components',  # noqa: E501
         'pins': 'pins',  # noqa: E501
+        'models': 'models',  # noqa: E501
     }
 
     read_only_vars = {
@@ -194,6 +196,7 @@ class Viewpoint(ModelNormal):
             snapshot (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             components (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             pins ([Pin], none_type): Non standard field. Pins (or markers/annotations) are points of interest. When creating a Viewpoint you can create pins with the fields `pins`, but you can't edit pins through here. You must use dedicated pin routes.. [optional]  # noqa: E501
+            models ([int]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -286,6 +289,7 @@ class Viewpoint(ModelNormal):
             snapshot (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             components (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             pins ([Pin], none_type): Non standard field. Pins (or markers/annotations) are points of interest. When creating a Viewpoint you can create pins with the fields `pins`, but you can't edit pins through here. You must use dedicated pin routes.. [optional]  # noqa: E501
+            models ([int]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
