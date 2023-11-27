@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v9.22.2 (2023-11-27)
+### Fix
+* Restore viewpoint patch (#706)
+
+* restore viewpoint patch
+
+* use ModelViewSet ([`c2d241f`](https://github.com/bimdata/python-api-client/commit/c2d241f23c68d4ea0e534d3cc5aca6fb990690a2))
+
 ## v9.22.1 (2023-11-27)
 ### Fix
 * Forbid to non admin to create topic properties (#705)
