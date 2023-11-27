@@ -2,6 +2,24 @@
 
 <!--next-version-placeholder-->
 
+## v9.22.1 (2023-11-27)
+### Fix
+* Forbid to non admin to create topic properties (#705)
+
+* forbid to non admin to create topic properties
+
+* remvoe prints
+
+* users and guests can only edit their own BCFs
+
+* remove PUT viewpoint route
+
+* fix import
+
+* code optimization
+
+* remove dead code ([`792e47f`](https://github.com/bimdata/python-api-client/commit/792e47f4406fc1c1008f5fe6f44dae5b9bd88f6e))
+
 ## v9.22.0 (2023-10-27)
 ### Feature
 * Add viewpoint models field (#702)
