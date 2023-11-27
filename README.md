@@ -75,7 +75,6 @@ from bimdata_api_client.model.patched_stage_request import PatchedStageRequest
 from bimdata_api_client.model.patched_topic_request import PatchedTopicRequest
 from bimdata_api_client.model.patched_topic_status_request import PatchedTopicStatusRequest
 from bimdata_api_client.model.patched_topic_type_request import PatchedTopicTypeRequest
-from bimdata_api_client.model.patched_viewpoint_request import PatchedViewpointRequest
 from bimdata_api_client.model.pin import Pin
 from bimdata_api_client.model.pin_request import PinRequest
 from bimdata_api_client.model.priority import Priority
@@ -186,7 +185,6 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**full_update_full_topic**](docs/BcfApi.md#full_update_full_topic) | **PUT** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Update all fields of a topic
 *BcfApi* | [**full_update_pin**](docs/BcfApi.md#full_update_pin) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid} | Update all fields of a Pin
 *BcfApi* | [**full_update_topic**](docs/BcfApi.md#full_update_topic) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Update all fields of a topic
-*BcfApi* | [**full_update_viewpoint**](docs/BcfApi.md#full_update_viewpoint) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Update all fields of a Viewpoint
 *BcfApi* | [**get_auth**](docs/BcfApi.md#get_auth) | **GET** /bcf/2.1/auth | Retrieve Authentication Information
 *BcfApi* | [**get_bcf_project**](docs/BcfApi.md#get_bcf_project) | **GET** /bcf/2.1/projects/{id} | Retrieve a BCF project
 *BcfApi* | [**get_bcf_projects**](docs/BcfApi.md#get_bcf_projects) | **GET** /bcf/2.1/projects | Retrieve all BCF projects
@@ -222,7 +220,6 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**update_full_topic**](docs/BcfApi.md#update_full_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Update some fields of a topic
 *BcfApi* | [**update_pin**](docs/BcfApi.md#update_pin) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid} | Update some fields of a Pin
 *BcfApi* | [**update_topic**](docs/BcfApi.md#update_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Update some fields of a topic
-*BcfApi* | [**update_viewpoint**](docs/BcfApi.md#update_viewpoint) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Update some fields of a Viewpoint
 *CollaborationApi* | [**accept_user_invitation**](docs/CollaborationApi.md#accept_user_invitation) | **POST** /user/invitations/{id}/accept | Accept an invitation
 *CollaborationApi* | [**accept_validation**](docs/CollaborationApi.md#accept_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}/accept | Accept a validation
 *CollaborationApi* | [**add_document_tag**](docs/CollaborationApi.md#add_document_tag) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/tag | Add a tag to a document
@@ -763,7 +760,6 @@ Class | Method | HTTP request | Description
  - [PatchedUnitRequest](docs/PatchedUnitRequest.md)
  - [PatchedUserCloudUpdateRequest](docs/PatchedUserCloudUpdateRequest.md)
  - [PatchedUserProjectUpdateRequest](docs/PatchedUserProjectUpdateRequest.md)
- - [PatchedViewpointRequest](docs/PatchedViewpointRequest.md)
  - [PatchedVisaCommentRequest](docs/PatchedVisaCommentRequest.md)
  - [PatchedVisaRequest](docs/PatchedVisaRequest.md)
  - [PatchedVisaValidationRequest](docs/PatchedVisaValidationRequest.md)

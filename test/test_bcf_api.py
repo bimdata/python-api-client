@@ -206,13 +206,6 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
-    def test_full_update_viewpoint(self):
-        """Test case for full_update_viewpoint
-
-        Update all fields of a Viewpoint  # noqa: E501
-        """
-        pass
-
     def test_get_auth(self):
         """Test case for get_auth
 
@@ -455,13 +448,6 @@ class TestBcfApi(unittest.TestCase):
         """Test case for update_topic
 
         Update some fields of a topic  # noqa: E501
-        """
-        pass
-
-    def test_update_viewpoint(self):
-        """Test case for update_viewpoint
-
-        Update some fields of a Viewpoint  # noqa: E501
         """
         pass
 

@@ -136,7 +136,6 @@ bimdata_api_client/model/patched_topic_type_request.py
 bimdata_api_client/model/patched_unit_request.py
 bimdata_api_client/model/patched_user_cloud_update_request.py
 bimdata_api_client/model/patched_user_project_update_request.py
-bimdata_api_client/model/patched_viewpoint_request.py
 bimdata_api_client/model/patched_visa_comment_request.py
 bimdata_api_client/model/patched_visa_request.py
 bimdata_api_client/model/patched_visa_validation_request.py
@@ -380,7 +379,6 @@ docs/PatchedTopicTypeRequest.md
 docs/PatchedUnitRequest.md
 docs/PatchedUserCloudUpdateRequest.md
 docs/PatchedUserProjectUpdateRequest.md
-docs/PatchedViewpointRequest.md
 docs/PatchedVisaCommentRequest.md
 docs/PatchedVisaRequest.md
 docs/PatchedVisaValidationRequest.md
@@ -627,7 +625,6 @@ test/test_patched_topic_type_request.py
 test/test_patched_unit_request.py
 test/test_patched_user_cloud_update_request.py
 test/test_patched_user_project_update_request.py
-test/test_patched_viewpoint_request.py
 test/test_patched_visa_comment_request.py
 test/test_patched_visa_request.py
 test/test_patched_visa_validation_request.py
