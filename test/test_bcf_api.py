@@ -451,6 +451,13 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_update_viewpoint(self):
+        """Test case for update_viewpoint
+
+        Update some fields of a Viewpoint  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
