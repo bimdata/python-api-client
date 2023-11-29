@@ -13,6 +13,8 @@ import sys
 import unittest
 
 import bimdata_api_client
+from bimdata_api_client.model.user import User
+globals()['User'] = User
 from bimdata_api_client.model.check_project_access import CheckProjectAccess
 
 
