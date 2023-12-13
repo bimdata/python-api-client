@@ -56,6 +56,7 @@ Method | HTTP request | Description
 [**get_document_histories**](CollaborationApi.md#get_document_histories) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history | Retrieve all document histories
 [**get_documents**](CollaborationApi.md#get_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document | Retrieve all documents
 [**get_folder**](CollaborationApi.md#get_folder) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Retrieve a folder
+[**get_folder_documents**](CollaborationApi.md#get_folder_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/document | Get all documents of a folder
 [**get_folder_project_users**](CollaborationApi.md#get_folder_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/user | Retrieve all users in a project with the permission on the folder
 [**get_folders**](CollaborationApi.md#get_folders) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder | Retrieve all folders
 [**get_group**](CollaborationApi.md#get_group) | **GET** /cloud/{cloud_pk}/project/{project_pk}/me/group/{id} | Retrieve a group
@@ -67,6 +68,7 @@ Method | HTTP request | Description
 [**get_project_access_tokens**](CollaborationApi.md#get_project_access_tokens) | **GET** /cloud/{cloud_pk}/project/{project_pk}/access-token | Retrieve all tokens created for this project
 [**get_project_creator_visas**](CollaborationApi.md#get_project_creator_visas) | **GET** /cloud/{cloud_pk}/project/{project_pk}/me/visa/creator | List visas created by user
 [**get_project_dms_tree**](CollaborationApi.md#get_project_dms_tree) | **GET** /cloud/{cloud_pk}/project/{id}/dms-tree | Retrieve the complete DMS tree
+[**get_project_folder_tree**](CollaborationApi.md#get_project_folder_tree) | **GET** /cloud/{cloud_pk}/project/{id}/folder-trees | Retrieve folder tree of the project
 [**get_project_folder_tree_serializers**](CollaborationApi.md#get_project_folder_tree_serializers) | **GET** /cloud/{cloud_pk}/project/folder-trees | Retrieve folder tree for all projects
 [**get_project_invitations**](CollaborationApi.md#get_project_invitations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/invitation | Retrieve all pending invitations in the project
 [**get_project_size**](CollaborationApi.md#get_project_size) | **GET** /cloud/{cloud_pk}/project/{id}/size | Get size of all model files in the project
@@ -216,7 +218,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **accept_validation**
-> accept_validation(cloud_pk, document_pk, id, project_pk, visa_pk)
+> VisaAttachment accept_validation(cloud_pk, document_pk, id, project_pk, visa_pk)
 
 Accept a validation
 
@@ -233,6 +235,7 @@ Accept a validation  Required scopes: document:read
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.visa_attachment import VisaAttachment
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -278,11 +281,22 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this visa validation.
     project_pk = 1 # int | A unique integer value identifying this project.
     visa_pk = 1 # int | A unique integer value identifying this visa.
+    attachment = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Accept a validation
-        api_instance.accept_validation(cloud_pk, document_pk, id, project_pk, visa_pk)
+        api_response = api_instance.accept_validation(cloud_pk, document_pk, id, project_pk, visa_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->accept_validation: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Accept a validation
+        api_response = api_instance.accept_validation(cloud_pk, document_pk, id, project_pk, visa_pk, attachment=attachment)
+        pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->accept_validation: %s\n" % e)
 ```
@@ -297,10 +311,11 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this visa validation. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **visa_pk** | **int**| A unique integer value identifying this visa. |
+ **attachment** | **file_type, none_type**|  | [optional]
 
 ### Return type
 
-void (empty response body)
+[**VisaAttachment**](VisaAttachment.md)
 
 ### Authorization
 
@@ -308,15 +323,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**204** | No response body |  -  |
+**200** |  |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
@@ -1526,7 +1541,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'IFC', 'OBJ', 'POINT_CLOUD', 'GLTF', 'DWG', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'POINT_CLOUD', 'DWG', 'OBJ', 'GLTF', 'IFC', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -4388,7 +4403,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deny_validation**
-> deny_validation(cloud_pk, document_pk, id, project_pk, visa_pk)
+> VisaAttachment deny_validation(cloud_pk, document_pk, id, project_pk, visa_pk)
 
 Deny a validation
 
@@ -4405,6 +4420,7 @@ Deny a validation  Required scopes: document:read
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.visa_attachment import VisaAttachment
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -4450,11 +4466,22 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this visa validation.
     project_pk = 1 # int | A unique integer value identifying this project.
     visa_pk = 1 # int | A unique integer value identifying this visa.
+    attachment = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Deny a validation
-        api_instance.deny_validation(cloud_pk, document_pk, id, project_pk, visa_pk)
+        api_response = api_instance.deny_validation(cloud_pk, document_pk, id, project_pk, visa_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->deny_validation: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Deny a validation
+        api_response = api_instance.deny_validation(cloud_pk, document_pk, id, project_pk, visa_pk, attachment=attachment)
+        pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->deny_validation: %s\n" % e)
 ```
@@ -4469,10 +4496,11 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this visa validation. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **visa_pk** | **int**| A unique integer value identifying this visa. |
+ **attachment** | **file_type, none_type**|  | [optional]
 
 ### Return type
 
-void (empty response body)
+[**VisaAttachment**](VisaAttachment.md)
 
 ### Authorization
 
@@ -4480,15 +4508,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**204** | No response body |  -  |
+**200** |  |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
@@ -5556,7 +5584,7 @@ Name | Type | Description  | Notes
 
 Retrieve all documents
 
-Retrieve all documents in the project  Required scopes: document:read
+Retrieve all documents in the project. Filters are case insentive  Required scopes: document:read
 
 ### Example
 
@@ -5612,11 +5640,46 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = collaboration_api.CollaborationApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     project_pk = 1 # int | A unique integer value identifying this project.
+    created_after = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
+    created_before = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
+    creator_email = "creator_email_example" # str |  (optional)
+    description = "description_example" # str |  (optional)
+    description__contains = "description__contains_example" # str |  (optional)
+    description__endswith = "description__endswith_example" # str |  (optional)
+    description__startswith = "description__startswith_example" # str |  (optional)
+    file_name = "file_name_example" # str |  (optional)
+    file_name__contains = "file_name__contains_example" # str |  (optional)
+    file_name__endswith = "file_name__endswith_example" # str |  (optional)
+    file_name__startswith = "file_name__startswith_example" # str |  (optional)
+    name = "name_example" # str |  (optional)
+    name__contains = "name__contains_example" # str |  (optional)
+    name__endswith = "name__endswith_example" # str |  (optional)
+    name__startswith = "name__startswith_example" # str |  (optional)
+    size_max = 0 # int, none_type | Size of the file. (optional)
+    size_min = 0 # int, none_type | Size of the file. (optional)
+    tags = [
+        "tags_example",
+    ] # [str] | Multiple values may be separated by commas. (optional)
+    visa__creator_email = "visa__creator_email_example" # str |  (optional)
+    visa__deadline_after = dateutil_parser('1970-01-01').date() # date |  (optional)
+    visa__deadline_before = dateutil_parser('1970-01-01').date() # date |  (optional)
+    visa__status = "C" # str | * `O` - opened * `P` - paused * `C` - closed (optional)
+    visa__validation_status = "visa__validation_status_example" # str |  (optional)
+    visa__validator_email = "visa__validator_email_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Retrieve all documents
         api_response = api_instance.get_documents(cloud_pk, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->get_documents: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Retrieve all documents
+        api_response = api_instance.get_documents(cloud_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, size_max=size_max, size_min=size_min, tags=tags, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__status=visa__status, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->get_documents: %s\n" % e)
@@ -5629,6 +5692,30 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **created_after** | **datetime**|  | [optional]
+ **created_before** | **datetime**|  | [optional]
+ **creator_email** | **str**|  | [optional]
+ **description** | **str**|  | [optional]
+ **description__contains** | **str**|  | [optional]
+ **description__endswith** | **str**|  | [optional]
+ **description__startswith** | **str**|  | [optional]
+ **file_name** | **str**|  | [optional]
+ **file_name__contains** | **str**|  | [optional]
+ **file_name__endswith** | **str**|  | [optional]
+ **file_name__startswith** | **str**|  | [optional]
+ **name** | **str**|  | [optional]
+ **name__contains** | **str**|  | [optional]
+ **name__endswith** | **str**|  | [optional]
+ **name__startswith** | **str**|  | [optional]
+ **size_max** | **int, none_type**| Size of the file. | [optional]
+ **size_min** | **int, none_type**| Size of the file. | [optional]
+ **tags** | **[str]**| Multiple values may be separated by commas. | [optional]
+ **visa__creator_email** | **str**|  | [optional]
+ **visa__deadline_after** | **date**|  | [optional]
+ **visa__deadline_before** | **date**|  | [optional]
+ **visa__status** | **str**| * &#x60;O&#x60; - opened * &#x60;P&#x60; - paused * &#x60;C&#x60; - closed | [optional]
+ **visa__validation_status** | **str**|  | [optional]
+ **visa__validator_email** | **str**|  | [optional]
 
 ### Return type
 
@@ -5758,6 +5845,171 @@ Name | Type | Description  | Notes
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
 **404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_folder_documents**
+> [Document] get_folder_documents(cloud_pk, folder_pk, project_pk)
+
+Get all documents of a folder
+
+Get all documents of a folder  Required scopes: document:read
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.document import Document
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | 
+    folder_pk = 1 # int | 
+    project_pk = 1 # int | 
+    created_after = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
+    created_before = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
+    creator_email = "creator_email_example" # str |  (optional)
+    description = "description_example" # str |  (optional)
+    description__contains = "description__contains_example" # str |  (optional)
+    description__endswith = "description__endswith_example" # str |  (optional)
+    description__startswith = "description__startswith_example" # str |  (optional)
+    file_name = "file_name_example" # str |  (optional)
+    file_name__contains = "file_name__contains_example" # str |  (optional)
+    file_name__endswith = "file_name__endswith_example" # str |  (optional)
+    file_name__startswith = "file_name__startswith_example" # str |  (optional)
+    name = "name_example" # str |  (optional)
+    name__contains = "name__contains_example" # str |  (optional)
+    name__endswith = "name__endswith_example" # str |  (optional)
+    name__startswith = "name__startswith_example" # str |  (optional)
+    size_max = 0 # int, none_type | Size of the file. (optional)
+    size_min = 0 # int, none_type | Size of the file. (optional)
+    tags = [
+        "tags_example",
+    ] # [str] | Multiple values may be separated by commas. (optional)
+    visa__creator_email = "visa__creator_email_example" # str |  (optional)
+    visa__deadline_after = dateutil_parser('1970-01-01').date() # date |  (optional)
+    visa__deadline_before = dateutil_parser('1970-01-01').date() # date |  (optional)
+    visa__status = "C" # str | * `O` - opened * `P` - paused * `C` - closed (optional)
+    visa__validation_status = "visa__validation_status_example" # str |  (optional)
+    visa__validator_email = "visa__validator_email_example" # str |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Get all documents of a folder
+        api_response = api_instance.get_folder_documents(cloud_pk, folder_pk, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->get_folder_documents: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get all documents of a folder
+        api_response = api_instance.get_folder_documents(cloud_pk, folder_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, size_max=size_max, size_min=size_min, tags=tags, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__status=visa__status, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->get_folder_documents: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**|  |
+ **folder_pk** | **int**|  |
+ **project_pk** | **int**|  |
+ **created_after** | **datetime**|  | [optional]
+ **created_before** | **datetime**|  | [optional]
+ **creator_email** | **str**|  | [optional]
+ **description** | **str**|  | [optional]
+ **description__contains** | **str**|  | [optional]
+ **description__endswith** | **str**|  | [optional]
+ **description__startswith** | **str**|  | [optional]
+ **file_name** | **str**|  | [optional]
+ **file_name__contains** | **str**|  | [optional]
+ **file_name__endswith** | **str**|  | [optional]
+ **file_name__startswith** | **str**|  | [optional]
+ **name** | **str**|  | [optional]
+ **name__contains** | **str**|  | [optional]
+ **name__endswith** | **str**|  | [optional]
+ **name__startswith** | **str**|  | [optional]
+ **size_max** | **int, none_type**| Size of the file. | [optional]
+ **size_min** | **int, none_type**| Size of the file. | [optional]
+ **tags** | **[str]**| Multiple values may be separated by commas. | [optional]
+ **visa__creator_email** | **str**|  | [optional]
+ **visa__deadline_after** | **date**|  | [optional]
+ **visa__deadline_before** | **date**|  | [optional]
+ **visa__status** | **str**| * &#x60;O&#x60; - opened * &#x60;P&#x60; - paused * &#x60;C&#x60; - closed | [optional]
+ **visa__validation_status** | **str**|  | [optional]
+ **visa__validator_email** | **str**|  | [optional]
+
+### Return type
+
+[**[Document]**](Document.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
 **500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -6896,6 +7148,111 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Folder**](Folder.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_project_folder_tree**
+> ProjectFolderTree get_project_folder_tree(cloud_pk, id)
+
+Retrieve folder tree of the project
+
+Retrieve folder tree of the project
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.project_folder_tree import ProjectFolderTree
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | 
+    id = 1 # int | A unique integer value identifying this project.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Retrieve folder tree of the project
+        api_response = api_instance.get_project_folder_tree(cloud_pk, id)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_folder_tree: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**|  |
+ **id** | **int**| A unique integer value identifying this project. |
+
+### Return type
+
+[**ProjectFolderTree**](ProjectFolderTree.md)
 
 ### Authorization
 
@@ -9913,7 +10270,7 @@ void (empty response body)
 
 Reset a validation
 
-Reset a validation if the validation has been accepted or rejected  Required scopes: document:read
+Reset a validation if the validation has been accepted or rejected. The attachment will be removed  Required scopes: document:read
 
 ### Example
 

@@ -233,6 +233,7 @@ from bimdata_api_client.model.view_setup_hints_request import ViewSetupHintsRequ
 from bimdata_api_client.model.viewpoint import Viewpoint
 from bimdata_api_client.model.viewpoint_request import ViewpointRequest
 from bimdata_api_client.model.visa import Visa
+from bimdata_api_client.model.visa_attachment import VisaAttachment
 from bimdata_api_client.model.visa_comment import VisaComment
 from bimdata_api_client.model.visa_comment_request import VisaCommentRequest
 from bimdata_api_client.model.visa_request import VisaRequest

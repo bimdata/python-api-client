@@ -82,8 +82,9 @@ class FolderTree(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'children': ([FolderTree],),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
+            'children': ([FolderTree],),  # noqa: E501
         }
 
     @cached_property
@@ -92,8 +93,9 @@ class FolderTree(ModelNormal):
 
 
     attribute_map = {
-        'children': 'children',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
+        'children': 'children',  # noqa: E501
     }
 
     read_only_vars = {
@@ -103,12 +105,13 @@ class FolderTree(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, children, name, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, name, children, *args, **kwargs):  # noqa: E501
         """FolderTree - a model defined in OpenAPI
 
         Args:
-            children ([FolderTree]):
+            id (int):
             name (str):
+            children ([FolderTree]):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -168,8 +171,9 @@ class FolderTree(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.children = children
+        self.id = id
         self.name = name
+        self.children = children
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -190,12 +194,13 @@ class FolderTree(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, children, name, *args, **kwargs):  # noqa: E501
+    def __init__(self, id, name, children, *args, **kwargs):  # noqa: E501
         """FolderTree - a model defined in OpenAPI
 
         Args:
-            children ([FolderTree]):
+            id (int):
             name (str):
+            children ([FolderTree]):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -253,8 +258,9 @@ class FolderTree(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.children = children
+        self.id = id
         self.name = name
+        self.children = children
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

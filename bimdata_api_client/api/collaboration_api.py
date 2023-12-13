@@ -72,6 +72,7 @@ from bimdata_api_client.model.user_invitation import UserInvitation
 from bimdata_api_client.model.user_project import UserProject
 from bimdata_api_client.model.user_project_id_request import UserProjectIdRequest
 from bimdata_api_client.model.visa import Visa
+from bimdata_api_client.model.visa_attachment import VisaAttachment
 from bimdata_api_client.model.visa_comment import VisaComment
 from bimdata_api_client.model.visa_comment_request import VisaCommentRequest
 from bimdata_api_client.model.visa_request import VisaRequest
@@ -145,7 +146,7 @@ class CollaborationApi(object):
         )
         self.accept_validation_endpoint = _Endpoint(
             settings={
-                'response_type': None,
+                'response_type': (VisaAttachment,),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -164,6 +165,7 @@ class CollaborationApi(object):
                     'id',
                     'project_pk',
                     'visa_pk',
+                    'attachment',
                 ],
                 'required': [
                     'cloud_pk',
@@ -173,6 +175,7 @@ class CollaborationApi(object):
                     'visa_pk',
                 ],
                 'nullable': [
+                    'attachment',
                 ],
                 'enum': [
                 ],
@@ -195,6 +198,8 @@ class CollaborationApi(object):
                         (int,),
                     'visa_pk':
                         (int,),
+                    'attachment':
+                        (file_type, none_type,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -202,6 +207,7 @@ class CollaborationApi(object):
                     'id': 'id',
                     'project_pk': 'project_pk',
                     'visa_pk': 'visa_pk',
+                    'attachment': 'attachment',
                 },
                 'location_map': {
                     'cloud_pk': 'path',
@@ -209,13 +215,19 @@ class CollaborationApi(object):
                     'id': 'path',
                     'project_pk': 'path',
                     'visa_pk': 'path',
+                    'attachment': 'form',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
-                'accept': [],
-                'content_type': [],
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'multipart/form-data',
+                    'application/x-www-form-urlencoded'
+                ]
             },
             api_client=api_client
         )
@@ -2727,7 +2739,7 @@ class CollaborationApi(object):
         )
         self.deny_validation_endpoint = _Endpoint(
             settings={
-                'response_type': None,
+                'response_type': (VisaAttachment,),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -2746,6 +2758,7 @@ class CollaborationApi(object):
                     'id',
                     'project_pk',
                     'visa_pk',
+                    'attachment',
                 ],
                 'required': [
                     'cloud_pk',
@@ -2755,6 +2768,7 @@ class CollaborationApi(object):
                     'visa_pk',
                 ],
                 'nullable': [
+                    'attachment',
                 ],
                 'enum': [
                 ],
@@ -2777,6 +2791,8 @@ class CollaborationApi(object):
                         (int,),
                     'visa_pk':
                         (int,),
+                    'attachment':
+                        (file_type, none_type,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -2784,6 +2800,7 @@ class CollaborationApi(object):
                     'id': 'id',
                     'project_pk': 'project_pk',
                     'visa_pk': 'visa_pk',
+                    'attachment': 'attachment',
                 },
                 'location_map': {
                     'cloud_pk': 'path',
@@ -2791,13 +2808,19 @@ class CollaborationApi(object):
                     'id': 'path',
                     'project_pk': 'path',
                     'visa_pk': 'path',
+                    'attachment': 'form',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
-                'accept': [],
-                'content_type': [],
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'multipart/form-data',
+                    'application/x-www-form-urlencoded'
+                ]
             },
             api_client=api_client
         )
@@ -3420,38 +3443,180 @@ class CollaborationApi(object):
                 'all': [
                     'cloud_pk',
                     'project_pk',
+                    'created_after',
+                    'created_before',
+                    'creator_email',
+                    'description',
+                    'description__contains',
+                    'description__endswith',
+                    'description__startswith',
+                    'file_name',
+                    'file_name__contains',
+                    'file_name__endswith',
+                    'file_name__startswith',
+                    'name',
+                    'name__contains',
+                    'name__endswith',
+                    'name__startswith',
+                    'size_max',
+                    'size_min',
+                    'tags',
+                    'visa__creator_email',
+                    'visa__deadline_after',
+                    'visa__deadline_before',
+                    'visa__status',
+                    'visa__validation_status',
+                    'visa__validator_email',
                 ],
                 'required': [
                     'cloud_pk',
                     'project_pk',
                 ],
                 'nullable': [
+                    'size_max',
+                    'size_min',
                 ],
                 'enum': [
+                    'visa__status',
                 ],
                 'validation': [
+                    'size_max',
+                    'size_min',
                 ]
             },
             root_map={
                 'validations': {
+                    ('size_max',): {
+
+                        'inclusive_maximum': 9223372036854775807,
+                        'inclusive_minimum': 0,
+                    },
+                    ('size_min',): {
+
+                        'inclusive_maximum': 9223372036854775807,
+                        'inclusive_minimum': 0,
+                    },
                 },
                 'allowed_values': {
+                    ('visa__status',): {
+
+                        "C": "C",
+                        "O": "O",
+                        "P": "P"
+                    },
                 },
                 'openapi_types': {
                     'cloud_pk':
                         (int,),
                     'project_pk':
                         (int,),
+                    'created_after':
+                        (datetime,),
+                    'created_before':
+                        (datetime,),
+                    'creator_email':
+                        (str,),
+                    'description':
+                        (str,),
+                    'description__contains':
+                        (str,),
+                    'description__endswith':
+                        (str,),
+                    'description__startswith':
+                        (str,),
+                    'file_name':
+                        (str,),
+                    'file_name__contains':
+                        (str,),
+                    'file_name__endswith':
+                        (str,),
+                    'file_name__startswith':
+                        (str,),
+                    'name':
+                        (str,),
+                    'name__contains':
+                        (str,),
+                    'name__endswith':
+                        (str,),
+                    'name__startswith':
+                        (str,),
+                    'size_max':
+                        (int, none_type,),
+                    'size_min':
+                        (int, none_type,),
+                    'tags':
+                        ([str],),
+                    'visa__creator_email':
+                        (str,),
+                    'visa__deadline_after':
+                        (date,),
+                    'visa__deadline_before':
+                        (date,),
+                    'visa__status':
+                        (str,),
+                    'visa__validation_status':
+                        (str,),
+                    'visa__validator_email':
+                        (str,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
                     'project_pk': 'project_pk',
+                    'created_after': 'created_after',
+                    'created_before': 'created_before',
+                    'creator_email': 'creator_email',
+                    'description': 'description',
+                    'description__contains': 'description__contains',
+                    'description__endswith': 'description__endswith',
+                    'description__startswith': 'description__startswith',
+                    'file_name': 'file_name',
+                    'file_name__contains': 'file_name__contains',
+                    'file_name__endswith': 'file_name__endswith',
+                    'file_name__startswith': 'file_name__startswith',
+                    'name': 'name',
+                    'name__contains': 'name__contains',
+                    'name__endswith': 'name__endswith',
+                    'name__startswith': 'name__startswith',
+                    'size_max': 'size_max',
+                    'size_min': 'size_min',
+                    'tags': 'tags',
+                    'visa__creator_email': 'visa__creator_email',
+                    'visa__deadline_after': 'visa__deadline_after',
+                    'visa__deadline_before': 'visa__deadline_before',
+                    'visa__status': 'visa__status',
+                    'visa__validation_status': 'visa__validation_status',
+                    'visa__validator_email': 'visa__validator_email',
                 },
                 'location_map': {
                     'cloud_pk': 'path',
                     'project_pk': 'path',
+                    'created_after': 'query',
+                    'created_before': 'query',
+                    'creator_email': 'query',
+                    'description': 'query',
+                    'description__contains': 'query',
+                    'description__endswith': 'query',
+                    'description__startswith': 'query',
+                    'file_name': 'query',
+                    'file_name__contains': 'query',
+                    'file_name__endswith': 'query',
+                    'file_name__startswith': 'query',
+                    'name': 'query',
+                    'name__contains': 'query',
+                    'name__endswith': 'query',
+                    'name__startswith': 'query',
+                    'size_max': 'query',
+                    'size_min': 'query',
+                    'tags': 'query',
+                    'visa__creator_email': 'query',
+                    'visa__deadline_after': 'query',
+                    'visa__deadline_before': 'query',
+                    'visa__status': 'query',
+                    'visa__validation_status': 'query',
+                    'visa__validator_email': 'query',
                 },
                 'collection_format_map': {
+                    'tags': 'csv',
                 }
             },
             headers_map={
@@ -3518,6 +3683,214 @@ class CollaborationApi(object):
                     'project_pk': 'path',
                 },
                 'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.get_folder_documents_endpoint = _Endpoint(
+            settings={
+                'response_type': ([Document],),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/document',
+                'operation_id': 'get_folder_documents',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'folder_pk',
+                    'project_pk',
+                    'created_after',
+                    'created_before',
+                    'creator_email',
+                    'description',
+                    'description__contains',
+                    'description__endswith',
+                    'description__startswith',
+                    'file_name',
+                    'file_name__contains',
+                    'file_name__endswith',
+                    'file_name__startswith',
+                    'name',
+                    'name__contains',
+                    'name__endswith',
+                    'name__startswith',
+                    'size_max',
+                    'size_min',
+                    'tags',
+                    'visa__creator_email',
+                    'visa__deadline_after',
+                    'visa__deadline_before',
+                    'visa__status',
+                    'visa__validation_status',
+                    'visa__validator_email',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'folder_pk',
+                    'project_pk',
+                ],
+                'nullable': [
+                    'size_max',
+                    'size_min',
+                ],
+                'enum': [
+                    'visa__status',
+                ],
+                'validation': [
+                    'size_max',
+                    'size_min',
+                ]
+            },
+            root_map={
+                'validations': {
+                    ('size_max',): {
+
+                        'inclusive_maximum': 9223372036854775807,
+                        'inclusive_minimum': 0,
+                    },
+                    ('size_min',): {
+
+                        'inclusive_maximum': 9223372036854775807,
+                        'inclusive_minimum': 0,
+                    },
+                },
+                'allowed_values': {
+                    ('visa__status',): {
+
+                        "C": "C",
+                        "O": "O",
+                        "P": "P"
+                    },
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'folder_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'created_after':
+                        (datetime,),
+                    'created_before':
+                        (datetime,),
+                    'creator_email':
+                        (str,),
+                    'description':
+                        (str,),
+                    'description__contains':
+                        (str,),
+                    'description__endswith':
+                        (str,),
+                    'description__startswith':
+                        (str,),
+                    'file_name':
+                        (str,),
+                    'file_name__contains':
+                        (str,),
+                    'file_name__endswith':
+                        (str,),
+                    'file_name__startswith':
+                        (str,),
+                    'name':
+                        (str,),
+                    'name__contains':
+                        (str,),
+                    'name__endswith':
+                        (str,),
+                    'name__startswith':
+                        (str,),
+                    'size_max':
+                        (int, none_type,),
+                    'size_min':
+                        (int, none_type,),
+                    'tags':
+                        ([str],),
+                    'visa__creator_email':
+                        (str,),
+                    'visa__deadline_after':
+                        (date,),
+                    'visa__deadline_before':
+                        (date,),
+                    'visa__status':
+                        (str,),
+                    'visa__validation_status':
+                        (str,),
+                    'visa__validator_email':
+                        (str,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'folder_pk': 'folder_pk',
+                    'project_pk': 'project_pk',
+                    'created_after': 'created_after',
+                    'created_before': 'created_before',
+                    'creator_email': 'creator_email',
+                    'description': 'description',
+                    'description__contains': 'description__contains',
+                    'description__endswith': 'description__endswith',
+                    'description__startswith': 'description__startswith',
+                    'file_name': 'file_name',
+                    'file_name__contains': 'file_name__contains',
+                    'file_name__endswith': 'file_name__endswith',
+                    'file_name__startswith': 'file_name__startswith',
+                    'name': 'name',
+                    'name__contains': 'name__contains',
+                    'name__endswith': 'name__endswith',
+                    'name__startswith': 'name__startswith',
+                    'size_max': 'size_max',
+                    'size_min': 'size_min',
+                    'tags': 'tags',
+                    'visa__creator_email': 'visa__creator_email',
+                    'visa__deadline_after': 'visa__deadline_after',
+                    'visa__deadline_before': 'visa__deadline_before',
+                    'visa__status': 'visa__status',
+                    'visa__validation_status': 'visa__validation_status',
+                    'visa__validator_email': 'visa__validator_email',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'folder_pk': 'path',
+                    'project_pk': 'path',
+                    'created_after': 'query',
+                    'created_before': 'query',
+                    'creator_email': 'query',
+                    'description': 'query',
+                    'description__contains': 'query',
+                    'description__endswith': 'query',
+                    'description__startswith': 'query',
+                    'file_name': 'query',
+                    'file_name__contains': 'query',
+                    'file_name__endswith': 'query',
+                    'file_name__startswith': 'query',
+                    'name': 'query',
+                    'name__contains': 'query',
+                    'name__endswith': 'query',
+                    'name__startswith': 'query',
+                    'size_max': 'query',
+                    'size_min': 'query',
+                    'tags': 'query',
+                    'visa__creator_email': 'query',
+                    'visa__deadline_after': 'query',
+                    'visa__deadline_before': 'query',
+                    'visa__status': 'query',
+                    'visa__validation_status': 'query',
+                    'visa__validator_email': 'query',
+                },
+                'collection_format_map': {
+                    'tags': 'csv',
                 }
             },
             headers_map={
@@ -4163,6 +4536,66 @@ class CollaborationApi(object):
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{id}/dms-tree',
                 'operation_id': 'get_project_dms_tree',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.get_project_folder_tree_endpoint = _Endpoint(
+            settings={
+                'response_type': (ProjectFolderTree,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{id}/folder-trees',
+                'operation_id': 'get_project_folder_tree',
                 'http_method': 'GET',
                 'servers': None,
             },
@@ -7294,6 +7727,7 @@ class CollaborationApi(object):
             visa_pk (int): A unique integer value identifying this visa.
 
         Keyword Args:
+            attachment (file_type, none_type): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7322,7 +7756,7 @@ class CollaborationApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            None
+            VisaAttachment
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -8298,7 +8732,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'IFC', 'OBJ', 'POINT_CLOUD', 'GLTF', 'DWG', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'POINT_CLOUD', 'DWG', 'OBJ', 'GLTF', 'IFC', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -10574,6 +11008,7 @@ class CollaborationApi(object):
             visa_pk (int): A unique integer value identifying this visa.
 
         Keyword Args:
+            attachment (file_type, none_type): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -10602,7 +11037,7 @@ class CollaborationApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            None
+            VisaAttachment
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -11461,7 +11896,7 @@ class CollaborationApi(object):
     ):
         """Retrieve all documents  # noqa: E501
 
-        Retrieve all documents in the project  Required scopes: document:read  # noqa: E501
+        Retrieve all documents in the project. Filters are case insentive  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -11473,6 +11908,30 @@ class CollaborationApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
+            created_after (datetime): [optional]
+            created_before (datetime): [optional]
+            creator_email (str): [optional]
+            description (str): [optional]
+            description__contains (str): [optional]
+            description__endswith (str): [optional]
+            description__startswith (str): [optional]
+            file_name (str): [optional]
+            file_name__contains (str): [optional]
+            file_name__endswith (str): [optional]
+            file_name__startswith (str): [optional]
+            name (str): [optional]
+            name__contains (str): [optional]
+            name__endswith (str): [optional]
+            name__startswith (str): [optional]
+            size_max (int, none_type): Size of the file.. [optional]
+            size_min (int, none_type): Size of the file.. [optional]
+            tags ([str]): Multiple values may be separated by commas.. [optional]
+            visa__creator_email (str): [optional]
+            visa__deadline_after (date): [optional]
+            visa__deadline_before (date): [optional]
+            visa__status (str): * `O` - opened * `P` - paused * `C` - closed. [optional]
+            visa__validation_status (str): [optional]
+            visa__validator_email (str): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -11620,6 +12079,116 @@ class CollaborationApi(object):
         kwargs['project_pk'] = \
             project_pk
         return self.get_folder_endpoint.call_with_http_info(**kwargs)
+
+    def get_folder_documents(
+        self,
+        cloud_pk,
+        folder_pk,
+        project_pk,
+        **kwargs
+    ):
+        """Get all documents of a folder  # noqa: E501
+
+        Get all documents of a folder  Required scopes: document:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_folder_documents(cloud_pk, folder_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int):
+            folder_pk (int):
+            project_pk (int):
+
+        Keyword Args:
+            created_after (datetime): [optional]
+            created_before (datetime): [optional]
+            creator_email (str): [optional]
+            description (str): [optional]
+            description__contains (str): [optional]
+            description__endswith (str): [optional]
+            description__startswith (str): [optional]
+            file_name (str): [optional]
+            file_name__contains (str): [optional]
+            file_name__endswith (str): [optional]
+            file_name__startswith (str): [optional]
+            name (str): [optional]
+            name__contains (str): [optional]
+            name__endswith (str): [optional]
+            name__startswith (str): [optional]
+            size_max (int, none_type): Size of the file.. [optional]
+            size_min (int, none_type): Size of the file.. [optional]
+            tags ([str]): Multiple values may be separated by commas.. [optional]
+            visa__creator_email (str): [optional]
+            visa__deadline_after (date): [optional]
+            visa__deadline_before (date): [optional]
+            visa__status (str): * `O` - opened * `P` - paused * `C` - closed. [optional]
+            visa__validation_status (str): [optional]
+            visa__validator_email (str): [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [Document]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['folder_pk'] = \
+            folder_pk
+        kwargs['project_pk'] = \
+            project_pk
+        return self.get_folder_documents_endpoint.call_with_http_info(**kwargs)
 
     def get_folder_project_users(
         self,
@@ -12538,6 +13107,88 @@ class CollaborationApi(object):
         kwargs['id'] = \
             id
         return self.get_project_dms_tree_endpoint.call_with_http_info(**kwargs)
+
+    def get_project_folder_tree(
+        self,
+        cloud_pk,
+        id,
+        **kwargs
+    ):
+        """Retrieve folder tree of the project  # noqa: E501
+
+        Retrieve folder tree of the project  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_project_folder_tree(cloud_pk, id, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int):
+            id (int): A unique integer value identifying this project.
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            ProjectFolderTree
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        return self.get_project_folder_tree_endpoint.call_with_http_info(**kwargs)
 
     def get_project_folder_tree_serializers(
         self,
@@ -14899,7 +15550,7 @@ class CollaborationApi(object):
     ):
         """Reset a validation  # noqa: E501
 
-        Reset a validation if the validation has been accepted or rejected  Required scopes: document:read  # noqa: E501
+        Reset a validation if the validation has been accepted or rejected. The attachment will be removed  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

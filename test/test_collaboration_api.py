@@ -388,6 +388,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_get_folder_documents(self):
+        """Test case for get_folder_documents
+
+        Get all documents of a folder  # noqa: E501
+        """
+        pass
+
     def test_get_folder_project_users(self):
         """Test case for get_folder_project_users
 
@@ -462,6 +469,13 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for get_project_dms_tree
 
         Retrieve the complete DMS tree  # noqa: E501
+        """
+        pass
+
+    def test_get_project_folder_tree(self):
+        """Test case for get_project_folder_tree
+
+        Retrieve folder tree of the project  # noqa: E501
         """
         pass
 

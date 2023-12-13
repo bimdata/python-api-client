@@ -274,6 +274,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_document_histories**](docs/CollaborationApi.md#get_document_histories) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history | Retrieve all document histories
 *CollaborationApi* | [**get_documents**](docs/CollaborationApi.md#get_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document | Retrieve all documents
 *CollaborationApi* | [**get_folder**](docs/CollaborationApi.md#get_folder) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Retrieve a folder
+*CollaborationApi* | [**get_folder_documents**](docs/CollaborationApi.md#get_folder_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/document | Get all documents of a folder
 *CollaborationApi* | [**get_folder_project_users**](docs/CollaborationApi.md#get_folder_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/user | Retrieve all users in a project with the permission on the folder
 *CollaborationApi* | [**get_folders**](docs/CollaborationApi.md#get_folders) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder | Retrieve all folders
 *CollaborationApi* | [**get_group**](docs/CollaborationApi.md#get_group) | **GET** /cloud/{cloud_pk}/project/{project_pk}/me/group/{id} | Retrieve a group
@@ -285,6 +286,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_project_access_tokens**](docs/CollaborationApi.md#get_project_access_tokens) | **GET** /cloud/{cloud_pk}/project/{project_pk}/access-token | Retrieve all tokens created for this project
 *CollaborationApi* | [**get_project_creator_visas**](docs/CollaborationApi.md#get_project_creator_visas) | **GET** /cloud/{cloud_pk}/project/{project_pk}/me/visa/creator | List visas created by user
 *CollaborationApi* | [**get_project_dms_tree**](docs/CollaborationApi.md#get_project_dms_tree) | **GET** /cloud/{cloud_pk}/project/{id}/dms-tree | Retrieve the complete DMS tree
+*CollaborationApi* | [**get_project_folder_tree**](docs/CollaborationApi.md#get_project_folder_tree) | **GET** /cloud/{cloud_pk}/project/{id}/folder-trees | Retrieve folder tree of the project
 *CollaborationApi* | [**get_project_folder_tree_serializers**](docs/CollaborationApi.md#get_project_folder_tree_serializers) | **GET** /cloud/{cloud_pk}/project/folder-trees | Retrieve folder tree for all projects
 *CollaborationApi* | [**get_project_invitations**](docs/CollaborationApi.md#get_project_invitations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/invitation | Retrieve all pending invitations in the project
 *CollaborationApi* | [**get_project_size**](docs/CollaborationApi.md#get_project_size) | **GET** /cloud/{cloud_pk}/project/{id}/size | Get size of all model files in the project
@@ -875,6 +877,7 @@ Class | Method | HTTP request | Description
  - [Viewpoint](docs/Viewpoint.md)
  - [ViewpointRequest](docs/ViewpointRequest.md)
  - [Visa](docs/Visa.md)
+ - [VisaAttachment](docs/VisaAttachment.md)
  - [VisaComment](docs/VisaComment.md)
  - [VisaCommentRequest](docs/VisaCommentRequest.md)
  - [VisaRequest](docs/VisaRequest.md)

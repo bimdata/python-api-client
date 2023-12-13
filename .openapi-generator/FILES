@@ -239,6 +239,7 @@ bimdata_api_client/model/view_setup_hints_request.py
 bimdata_api_client/model/viewpoint.py
 bimdata_api_client/model/viewpoint_request.py
 bimdata_api_client/model/visa.py
+bimdata_api_client/model/visa_attachment.py
 bimdata_api_client/model/visa_comment.py
 bimdata_api_client/model/visa_comment_request.py
 bimdata_api_client/model/visa_request.py
@@ -487,6 +488,7 @@ docs/ViewSetupHintsRequest.md
 docs/Viewpoint.md
 docs/ViewpointRequest.md
 docs/Visa.md
+docs/VisaAttachment.md
 docs/VisaComment.md
 docs/VisaCommentRequest.md
 docs/VisaRequest.md
@@ -737,6 +739,7 @@ test/test_view_setup_hints_request.py
 test/test_viewpoint.py
 test/test_viewpoint_request.py
 test/test_visa.py
+test/test_visa_attachment.py
 test/test_visa_comment.py
 test/test_visa_comment_request.py
 test/test_visa_request.py
