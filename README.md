@@ -348,6 +348,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**create_building_plan_deprecated**](docs/IfcApi.md#create_building_plan_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{building_uuid}/plan/add | Create a relation between a 2d model and a building
 *IfcApi* | [**create_classification_element_relations_deprecated**](docs/IfcApi.md#create_classification_element_relations_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | Create association between existing classification and existing element
 *IfcApi* | [**create_classifications_of_element_deprecated**](docs/IfcApi.md#create_classifications_of_element_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification | Create one or many classifications to an element
+*IfcApi* | [**create_drawing_deprecated**](docs/IfcApi.md#create_drawing_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/drawing | Create a drawing in the model
 *IfcApi* | [**create_element_deprecated**](docs/IfcApi.md#create_element_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element | Create an element in the model
 *IfcApi* | [**create_element_property_set_deprecated**](docs/IfcApi.md#create_element_property_set_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset | Create a PropertySets to an element
 *IfcApi* | [**create_element_property_set_property_definition_deprecated**](docs/IfcApi.md#create_element_property_set_property_definition_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition | Create a Definition to a Property
@@ -373,6 +374,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**delete_access_token_deprecated**](docs/IfcApi.md#delete_access_token_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Delete a token
 *IfcApi* | [**delete_building_deprecated**](docs/IfcApi.md#delete_building_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{uuid} | Delete a building of a model
 *IfcApi* | [**delete_building_plan_deprecated**](docs/IfcApi.md#delete_building_plan_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{building_uuid}/plan/{id} | Delete the relation between a 2d model and a building
+*IfcApi* | [**delete_drawing_deprecated**](docs/IfcApi.md#delete_drawing_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/drawing/{id} | Delete a drawing of a model
 *IfcApi* | [**delete_element_deprecated**](docs/IfcApi.md#delete_element_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Delete an element of a model
 *IfcApi* | [**delete_ifc_deprecated**](docs/IfcApi.md#delete_ifc_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id} | Delete a model
 *IfcApi* | [**delete_ifc_property_definition_deprecated**](docs/IfcApi.md#delete_ifc_property_definition_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/{id} | Delete a PropertyDefinitions of a model
@@ -396,6 +398,8 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**get_buildings_deprecated**](docs/IfcApi.md#get_buildings_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building | Retrieve all buildings of a model
 *IfcApi* | [**get_classifications_of_element_deprecated**](docs/IfcApi.md#get_classifications_of_element_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification | Retrieve all classifications of an element
 *IfcApi* | [**get_documents_of_element_deprecated**](docs/IfcApi.md#get_documents_of_element_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents | Retrieve all documents of an element
+*IfcApi* | [**get_drawing_deprecated**](docs/IfcApi.md#get_drawing_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/drawing/{id} | Retrieve a drawing of a model
+*IfcApi* | [**get_drawings_deprecated**](docs/IfcApi.md#get_drawings_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/drawing | Retrieve all drawings of a model
 *IfcApi* | [**get_element_deprecated**](docs/IfcApi.md#get_element_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Retrieve an element of a model
 *IfcApi* | [**get_element_linked_documents_deprecated**](docs/IfcApi.md#get_element_linked_documents_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/documents | Retrieve all documents linked to any element
 *IfcApi* | [**get_element_property_set_deprecated**](docs/IfcApi.md#get_element_property_set_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{id} | Retrieve a PropertySet of an element
@@ -458,6 +462,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**update_access_token_deprecated**](docs/IfcApi.md#update_access_token_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Update some fields of a token
 *IfcApi* | [**update_building_deprecated**](docs/IfcApi.md#update_building_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{uuid} | Update some fields of a building
 *IfcApi* | [**update_building_plan_positioning_deprecated**](docs/IfcApi.md#update_building_plan_positioning_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{building_uuid}/plan/{id}/positioning | Update the postioning of the plan in the building
+*IfcApi* | [**update_drawing_deprecated**](docs/IfcApi.md#update_drawing_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/drawing/{id} | Update some fields of a drawing
 *IfcApi* | [**update_element_deprecated**](docs/IfcApi.md#update_element_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Update some fields of an element
 *IfcApi* | [**update_element_property_set_property_deprecated**](docs/IfcApi.md#update_element_property_set_property_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Update a property from an element
 *IfcApi* | [**update_ifc_deprecated**](docs/IfcApi.md#update_ifc_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id} | Update some fields of a model
@@ -496,6 +501,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**create_building_plan**](docs/ModelApi.md#create_building_plan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/add | Create a relation between a 2d model and a building
 *ModelApi* | [**create_classification_element_relations**](docs/ModelApi.md#create_classification_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification-element | Create association between existing classification and existing element
 *ModelApi* | [**create_classifications_of_element**](docs/ModelApi.md#create_classifications_of_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/classification | Create one or many classifications to an element
+*ModelApi* | [**create_drawing**](docs/ModelApi.md#create_drawing) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing | Create a drawing in the model
 *ModelApi* | [**create_element**](docs/ModelApi.md#create_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element | Create an element in the model
 *ModelApi* | [**create_element_property_set**](docs/ModelApi.md#create_element_property_set) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset | Create a PropertySets to an element
 *ModelApi* | [**create_element_property_set_property**](docs/ModelApi.md#create_element_property_set_property) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property | Create a property to a PropertySet
@@ -521,6 +527,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**delete_access_token**](docs/ModelApi.md#delete_access_token) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token} | Delete a token
 *ModelApi* | [**delete_building**](docs/ModelApi.md#delete_building) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{uuid} | Delete a building of a model
 *ModelApi* | [**delete_building_plan**](docs/ModelApi.md#delete_building_plan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/{id} | Delete the relation between a 2d model and a building
+*ModelApi* | [**delete_drawing**](docs/ModelApi.md#delete_drawing) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id} | Delete a drawing of a model
 *ModelApi* | [**delete_element**](docs/ModelApi.md#delete_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Delete an element of a model
 *ModelApi* | [**delete_layer**](docs/ModelApi.md#delete_layer) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Delete a layer of a model
 *ModelApi* | [**delete_model**](docs/ModelApi.md#delete_model) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id} | Delete a model
@@ -544,6 +551,8 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**get_buildings**](docs/ModelApi.md#get_buildings) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building | Retrieve all buildings of a model
 *ModelApi* | [**get_classifications_of_element**](docs/ModelApi.md#get_classifications_of_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/classification | Retrieve all classifications of an element
 *ModelApi* | [**get_documents_of_element**](docs/ModelApi.md#get_documents_of_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/documents | Retrieve all documents of an element
+*ModelApi* | [**get_drawing**](docs/ModelApi.md#get_drawing) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id} | Retrieve a drawing of a model
+*ModelApi* | [**get_drawings**](docs/ModelApi.md#get_drawings) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing | Retrieve all drawings of a model
 *ModelApi* | [**get_element**](docs/ModelApi.md#get_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Retrieve an element of a model
 *ModelApi* | [**get_element_linked_documents**](docs/ModelApi.md#get_element_linked_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/documents | Retrieve all documents linked to any element
 *ModelApi* | [**get_element_property_set**](docs/ModelApi.md#get_element_property_set) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{id} | Retrieve a PropertySet of an element
@@ -606,6 +615,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**update_access_token**](docs/ModelApi.md#update_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token} | Update some fields of a token
 *ModelApi* | [**update_building**](docs/ModelApi.md#update_building) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{uuid} | Update some fields of a building
 *ModelApi* | [**update_building_plan_positioning**](docs/ModelApi.md#update_building_plan_positioning) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/{id}/positioning | Update the postioning of the plan in the building
+*ModelApi* | [**update_drawing**](docs/ModelApi.md#update_drawing) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id} | Update some fields of a drawing
 *ModelApi* | [**update_element**](docs/ModelApi.md#update_element) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Update some fields of an element
 *ModelApi* | [**update_element_property_set_property**](docs/ModelApi.md#update_element_property_set_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Update a property from an element
 *ModelApi* | [**update_layer**](docs/ModelApi.md#update_layer) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Update some fields of a layer
@@ -674,6 +684,8 @@ Class | Method | HTTP request | Description
  - [Document](docs/Document.md)
  - [DocumentPreviewFile](docs/DocumentPreviewFile.md)
  - [DocumentWithElementList](docs/DocumentWithElementList.md)
+ - [Drawing](docs/Drawing.md)
+ - [DrawingRequest](docs/DrawingRequest.md)
  - [Element](docs/Element.md)
  - [ElementClassificationRelation](docs/ElementClassificationRelation.md)
  - [ElementClassificationRelationRequest](docs/ElementClassificationRelationRequest.md)
@@ -734,6 +746,7 @@ Class | Method | HTTP request | Description
  - [PatchedCloudRequest](docs/PatchedCloudRequest.md)
  - [PatchedCommentRequest](docs/PatchedCommentRequest.md)
  - [PatchedDocumentRequest](docs/PatchedDocumentRequest.md)
+ - [PatchedDrawingRequest](docs/PatchedDrawingRequest.md)
  - [PatchedElementRequest](docs/PatchedElementRequest.md)
  - [PatchedFolderWithoutChildrenRequest](docs/PatchedFolderWithoutChildrenRequest.md)
  - [PatchedFullTopicRequest](docs/PatchedFullTopicRequest.md)

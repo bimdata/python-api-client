@@ -48,6 +48,8 @@ bimdata_api_client/model/direction_request.py
 bimdata_api_client/model/document.py
 bimdata_api_client/model/document_preview_file.py
 bimdata_api_client/model/document_with_element_list.py
+bimdata_api_client/model/drawing.py
+bimdata_api_client/model/drawing_request.py
 bimdata_api_client/model/element.py
 bimdata_api_client/model/element_classification_relation.py
 bimdata_api_client/model/element_classification_relation_request.py
@@ -108,6 +110,7 @@ bimdata_api_client/model/patched_classification_request.py
 bimdata_api_client/model/patched_cloud_request.py
 bimdata_api_client/model/patched_comment_request.py
 bimdata_api_client/model/patched_document_request.py
+bimdata_api_client/model/patched_drawing_request.py
 bimdata_api_client/model/patched_element_request.py
 bimdata_api_client/model/patched_folder_without_children_request.py
 bimdata_api_client/model/patched_full_topic_request.py
@@ -290,6 +293,8 @@ docs/DirectionRequest.md
 docs/Document.md
 docs/DocumentPreviewFile.md
 docs/DocumentWithElementList.md
+docs/Drawing.md
+docs/DrawingRequest.md
 docs/Element.md
 docs/ElementClassificationRelation.md
 docs/ElementClassificationRelationRequest.md
@@ -352,6 +357,7 @@ docs/PatchedClassificationRequest.md
 docs/PatchedCloudRequest.md
 docs/PatchedCommentRequest.md
 docs/PatchedDocumentRequest.md
+docs/PatchedDrawingRequest.md
 docs/PatchedElementRequest.md
 docs/PatchedFolderWithoutChildrenRequest.md
 docs/PatchedFullTopicRequest.md
@@ -537,6 +543,8 @@ test/test_direction_request.py
 test/test_document.py
 test/test_document_preview_file.py
 test/test_document_with_element_list.py
+test/test_drawing.py
+test/test_drawing_request.py
 test/test_element.py
 test/test_element_classification_relation.py
 test/test_element_classification_relation_request.py
@@ -599,6 +607,7 @@ test/test_patched_classification_request.py
 test/test_patched_cloud_request.py
 test/test_patched_comment_request.py
 test/test_patched_document_request.py
+test/test_patched_drawing_request.py
 test/test_patched_element_request.py
 test/test_patched_folder_without_children_request.py
 test/test_patched_full_topic_request.py

@@ -157,6 +157,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_create_drawing(self):
+        """Test case for create_drawing
+
+        Create a drawing in the model  # noqa: E501
+        """
+        pass
+
     def test_create_element(self):
         """Test case for create_element
 
@@ -332,6 +339,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_drawing(self):
+        """Test case for delete_drawing
+
+        Delete a drawing of a model  # noqa: E501
+        """
+        pass
+
     def test_delete_element(self):
         """Test case for delete_element
 
@@ -490,6 +504,20 @@ class TestModelApi(unittest.TestCase):
         """Test case for get_documents_of_element
 
         Retrieve all documents of an element  # noqa: E501
+        """
+        pass
+
+    def test_get_drawing(self):
+        """Test case for get_drawing
+
+        Retrieve a drawing of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_drawings(self):
+        """Test case for get_drawings
+
+        Retrieve all drawings of a model  # noqa: E501
         """
         pass
 
@@ -924,6 +952,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for update_building_plan_positioning
 
         Update the postioning of the plan in the building  # noqa: E501
+        """
+        pass
+
+    def test_update_drawing(self):
+        """Test case for update_drawing
+
+        Update some fields of a drawing  # noqa: E501
         """
         pass
 

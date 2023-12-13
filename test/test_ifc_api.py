@@ -157,6 +157,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_create_drawing_deprecated(self):
+        """Test case for create_drawing_deprecated
+
+        Create a drawing in the model  # noqa: E501
+        """
+        pass
+
     def test_create_element_deprecated(self):
         """Test case for create_element_deprecated
 
@@ -332,6 +339,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_drawing_deprecated(self):
+        """Test case for delete_drawing_deprecated
+
+        Delete a drawing of a model  # noqa: E501
+        """
+        pass
+
     def test_delete_element_deprecated(self):
         """Test case for delete_element_deprecated
 
@@ -490,6 +504,20 @@ class TestIfcApi(unittest.TestCase):
         """Test case for get_documents_of_element_deprecated
 
         Retrieve all documents of an element  # noqa: E501
+        """
+        pass
+
+    def test_get_drawing_deprecated(self):
+        """Test case for get_drawing_deprecated
+
+        Retrieve a drawing of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_drawings_deprecated(self):
+        """Test case for get_drawings_deprecated
+
+        Retrieve all drawings of a model  # noqa: E501
         """
         pass
 
@@ -924,6 +952,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for update_building_plan_positioning_deprecated
 
         Update the postioning of the plan in the building  # noqa: E501
+        """
+        pass
+
+    def test_update_drawing_deprecated(self):
+        """Test case for update_drawing_deprecated
+
+        Update some fields of a drawing  # noqa: E501
         """
         pass
 
