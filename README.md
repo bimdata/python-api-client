@@ -796,7 +796,6 @@ Class | Method | HTTP request | Description
  - [Project](docs/Project.md)
  - [ProjectAccessToken](docs/ProjectAccessToken.md)
  - [ProjectAccessTokenRequest](docs/ProjectAccessTokenRequest.md)
- - [ProjectFolderTree](docs/ProjectFolderTree.md)
  - [ProjectImportRequest](docs/ProjectImportRequest.md)
  - [ProjectInvitation](docs/ProjectInvitation.md)
  - [ProjectInvitationRequest](docs/ProjectInvitationRequest.md)

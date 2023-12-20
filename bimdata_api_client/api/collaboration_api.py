@@ -32,6 +32,7 @@ from bimdata_api_client.model.cloud_request import CloudRequest
 from bimdata_api_client.model.document import Document
 from bimdata_api_client.model.document_preview_file import DocumentPreviewFile
 from bimdata_api_client.model.folder import Folder
+from bimdata_api_client.model.folder_tree import FolderTree
 from bimdata_api_client.model.folder_user_project import FolderUserProject
 from bimdata_api_client.model.folder_without_children import FolderWithoutChildren
 from bimdata_api_client.model.folder_without_children_request import FolderWithoutChildrenRequest
@@ -55,7 +56,6 @@ from bimdata_api_client.model.patched_visa_validation_request import PatchedVisa
 from bimdata_api_client.model.project import Project
 from bimdata_api_client.model.project_access_token import ProjectAccessToken
 from bimdata_api_client.model.project_access_token_request import ProjectAccessTokenRequest
-from bimdata_api_client.model.project_folder_tree import ProjectFolderTree
 from bimdata_api_client.model.project_import_request import ProjectImportRequest
 from bimdata_api_client.model.project_invitation import ProjectInvitation
 from bimdata_api_client.model.project_invitation_request import ProjectInvitationRequest
@@ -4587,7 +4587,7 @@ class CollaborationApi(object):
         )
         self.get_project_folder_tree_endpoint = _Endpoint(
             settings={
-                'response_type': ([ProjectFolderTree],),
+                'response_type': ([FolderTree],),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -8678,7 +8678,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'OBJ', 'POINT_CLOUD', 'IFC', 'GLTF', 'DWG', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'DWG', 'IFC', 'GLTF', 'POINT_CLOUD', 'OBJ', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -13102,7 +13102,7 @@ class CollaborationApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            [ProjectFolderTree]
+            [FolderTree]
                 If the method is called asynchronously, returns the request
                 thread.
         """

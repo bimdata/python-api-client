@@ -1540,7 +1540,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'OBJ', 'POINT_CLOUD', 'IFC', 'GLTF', 'DWG', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'DWG', 'IFC', 'GLTF', 'POINT_CLOUD', 'OBJ', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -7171,7 +7171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project_folder_tree**
-> [ProjectFolderTree] get_project_folder_tree(cloud_pk, id)
+> [FolderTree] get_project_folder_tree(cloud_pk, id)
 
 Retrieve folder tree of the project
 
@@ -7188,7 +7188,7 @@ Retrieve folder tree of the project
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
-from bimdata_api_client.model.project_folder_tree import ProjectFolderTree
+from bimdata_api_client.model.folder_tree import FolderTree
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -7251,7 +7251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ProjectFolderTree]**](ProjectFolderTree.md)
+[**[FolderTree]**](FolderTree.md)
 
 ### Authorization
 

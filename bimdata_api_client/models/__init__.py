@@ -153,7 +153,6 @@ from bimdata_api_client.model.processor_handler import ProcessorHandler
 from bimdata_api_client.model.project import Project
 from bimdata_api_client.model.project_access_token import ProjectAccessToken
 from bimdata_api_client.model.project_access_token_request import ProjectAccessTokenRequest
-from bimdata_api_client.model.project_folder_tree import ProjectFolderTree
 from bimdata_api_client.model.project_import_request import ProjectImportRequest
 from bimdata_api_client.model.project_invitation import ProjectInvitation
 from bimdata_api_client.model.project_invitation_request import ProjectInvitationRequest
