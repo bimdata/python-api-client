@@ -479,13 +479,6 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
-    def test_get_project_folder_tree_serializers(self):
-        """Test case for get_project_folder_tree_serializers
-
-        Retrieve folder tree for all projects  # noqa: E501
-        """
-        pass
-
     def test_get_project_invitations(self):
         """Test case for get_project_invitations
 
