@@ -423,6 +423,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_get_logs(self):
+        """Test case for get_logs
+
+        Retrieve all logs of the project  # noqa: E501
+        """
+        pass
+
     def test_get_manage_group(self):
         """Test case for get_manage_group
 

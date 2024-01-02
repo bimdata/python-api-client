@@ -279,6 +279,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_folders**](docs/CollaborationApi.md#get_folders) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder | Retrieve all folders
 *CollaborationApi* | [**get_group**](docs/CollaborationApi.md#get_group) | **GET** /cloud/{cloud_pk}/project/{project_pk}/me/group/{id} | Retrieve a group
 *CollaborationApi* | [**get_groups**](docs/CollaborationApi.md#get_groups) | **GET** /cloud/{cloud_pk}/project/{project_pk}/me/group | Retrieve all groups
+*CollaborationApi* | [**get_logs**](docs/CollaborationApi.md#get_logs) | **GET** /cloud/{cloud_pk}/project/{project_pk}/logs | Retrieve all logs of the project
 *CollaborationApi* | [**get_manage_group**](docs/CollaborationApi.md#get_manage_group) | **GET** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Retrieve a group
 *CollaborationApi* | [**get_manage_groups**](docs/CollaborationApi.md#get_manage_groups) | **GET** /cloud/{cloud_pk}/project/{project_pk}/group | Retrieve all groups
 *CollaborationApi* | [**get_project**](docs/CollaborationApi.md#get_project) | **GET** /cloud/{cloud_pk}/project/{id} | Retrieve a project
@@ -723,6 +724,7 @@ Class | Method | HTTP request | Description
  - [LayerRequest](docs/LayerRequest.md)
  - [Line](docs/Line.md)
  - [LineRequest](docs/LineRequest.md)
+ - [LogEntry](docs/LogEntry.md)
  - [MarketplaceAppImage](docs/MarketplaceAppImage.md)
  - [MarketplaceAppLight](docs/MarketplaceAppLight.md)
  - [MarketplaceAppLightRequest](docs/MarketplaceAppLightRequest.md)
