@@ -98,6 +98,7 @@ class PatchedFolderWithoutChildrenRequest(ModelNormal):
             'parent_id': (int, none_type,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'default_permission': (int,),  # noqa: E501
+            'propagate': (bool,),  # noqa: E501
         }
 
     @cached_property
@@ -109,6 +110,7 @@ class PatchedFolderWithoutChildrenRequest(ModelNormal):
         'parent_id': 'parent_id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'default_permission': 'default_permission',  # noqa: E501
+        'propagate': 'propagate',  # noqa: E501
     }
 
     read_only_vars = {
@@ -155,6 +157,7 @@ class PatchedFolderWithoutChildrenRequest(ModelNormal):
             parent_id (int, none_type): [optional]  # noqa: E501
             name (str): Name of the folder. [optional]  # noqa: E501
             default_permission (int): Permission for a Folder  * `1` - denied * `50` - read_only * `100` - read_write. [optional]  # noqa: E501
+            propagate (bool): [optional] if omitted the server will use the default value of False  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -239,6 +242,7 @@ class PatchedFolderWithoutChildrenRequest(ModelNormal):
             parent_id (int, none_type): [optional]  # noqa: E501
             name (str): Name of the folder. [optional]  # noqa: E501
             default_permission (int): Permission for a Folder  * `1` - denied * `50` - read_only * `100` - read_write. [optional]  # noqa: E501
+            propagate (bool): [optional] if omitted the server will use the default value of False  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

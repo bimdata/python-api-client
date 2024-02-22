@@ -110,6 +110,7 @@ class Zone(ModelNormal):
             'spaces': ([ZoneSpace],),  # noqa: E501
             'color': (str, none_type,),  # noqa: E501
             'order': (int,),  # noqa: E501
+            'storey_uuid': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -128,6 +129,7 @@ class Zone(ModelNormal):
         'spaces': 'spaces',  # noqa: E501
         'color': 'color',  # noqa: E501
         'order': 'order',  # noqa: E501
+        'storey_uuid': 'storey_uuid',  # noqa: E501
     }
 
     read_only_vars = {
@@ -186,6 +188,7 @@ class Zone(ModelNormal):
             spaces ([ZoneSpace]): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
             order (int): [optional]  # noqa: E501
+            storey_uuid (str, none_type): IFC element or element type UUID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -278,6 +281,7 @@ class Zone(ModelNormal):
             spaces ([ZoneSpace]): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
             order (int): [optional]  # noqa: E501
+            storey_uuid (str, none_type): IFC element or element type UUID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

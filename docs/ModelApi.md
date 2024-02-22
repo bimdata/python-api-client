@@ -5248,6 +5248,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             ],
             color="color_example",
             order=0,
+            storey_uuid="storey_uuid_example",
         ),
     ] # [ZoneRequest] | 
     color = "color_example" # str |  (optional)
@@ -18016,6 +18017,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 ],
                 color="color_example",
                 order=0,
+                storey_uuid="storey_uuid_example",
             ),
         ],
         parent_id=1,
@@ -18036,6 +18038,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         ],
         color="color_example",
         order=0,
+        storey_uuid="storey_uuid_example",
     ) # PatchedZoneRequest |  (optional)
 
     # example passing only required values which don't have defaults set

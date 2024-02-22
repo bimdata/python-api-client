@@ -78,6 +78,9 @@ class PatchedZoneRequest(ModelNormal):
         ('order',): {
             'inclusive_minimum': 0,
         },
+        ('storey_uuid',): {
+            'min_length': 1,
+        },
     }
 
     @cached_property
@@ -110,6 +113,7 @@ class PatchedZoneRequest(ModelNormal):
             'spaces': ([ZoneSpaceRequest],),  # noqa: E501
             'color': (str, none_type,),  # noqa: E501
             'order': (int,),  # noqa: E501
+            'storey_uuid': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -125,6 +129,7 @@ class PatchedZoneRequest(ModelNormal):
         'spaces': 'spaces',  # noqa: E501
         'color': 'color',  # noqa: E501
         'order': 'order',  # noqa: E501
+        'storey_uuid': 'storey_uuid',  # noqa: E501
     }
 
     read_only_vars = {
@@ -175,6 +180,7 @@ class PatchedZoneRequest(ModelNormal):
             spaces ([ZoneSpaceRequest]): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
             order (int): [optional]  # noqa: E501
+            storey_uuid (str, none_type): IFC element or element type UUID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -263,6 +269,7 @@ class PatchedZoneRequest(ModelNormal):
             spaces ([ZoneSpaceRequest]): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
             order (int): [optional]  # noqa: E501
+            storey_uuid (str, none_type): IFC element or element type UUID. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

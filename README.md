@@ -878,6 +878,7 @@ Class | Method | HTTP request | Description
  - [ViewpointRequest](docs/ViewpointRequest.md)
  - [Visa](docs/Visa.md)
  - [VisaAttachment](docs/VisaAttachment.md)
+ - [VisaAttachmentRequest](docs/VisaAttachmentRequest.md)
  - [VisaComment](docs/VisaComment.md)
  - [VisaCommentRequest](docs/VisaCommentRequest.md)
  - [VisaRequest](docs/VisaRequest.md)

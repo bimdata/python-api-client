@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
+ - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded, application/json
  - **Accept**: application/json
 
 
@@ -1482,8 +1482,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this project.
     write_folder_request = [
         WriteFolderRequest(
-            parent_id=1,
             name="name_example",
+            parent_id=1,
             default_permission=1,
             children=[
                 WriteFolderRequest(),
@@ -1541,7 +1541,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'GLTF', 'POINT_CLOUD', 'DWG', 'OBJ', 'IFC', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'POINT_CLOUD', 'OBJ', 'IFC', 'DXF', 'GLTF', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -1734,6 +1734,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         parent_id=1,
         name="name_example",
         default_permission=1,
+        propagate=False,
     ) # FolderWithoutChildrenRequest | 
 
     # example passing only required values which don't have defaults set
@@ -4508,7 +4509,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
+ - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded, application/json
  - **Accept**: application/json
 
 
@@ -11044,6 +11045,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         parent_id=1,
         name="name_example",
         default_permission=1,
+        propagate=False,
     ) # PatchedFolderWithoutChildrenRequest |  (optional)
 
     # example passing only required values which don't have defaults set
