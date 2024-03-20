@@ -83,6 +83,7 @@ class PatchedVisaValidationRequest(ModelNormal):
         """
         return {
             'validator_id': (int,),  # noqa: E501
+            'attachment': (file_type, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -92,6 +93,7 @@ class PatchedVisaValidationRequest(ModelNormal):
 
     attribute_map = {
         'validator_id': 'validator_id',  # noqa: E501
+        'attachment': 'attachment',  # noqa: E501
     }
 
     read_only_vars = {
@@ -136,6 +138,7 @@ class PatchedVisaValidationRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             validator_id (int): This is the userproject_id. [optional]  # noqa: E501
+            attachment (file_type, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -218,6 +221,7 @@ class PatchedVisaValidationRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             validator_id (int): This is the userproject_id. [optional]  # noqa: E501
+            attachment (file_type, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

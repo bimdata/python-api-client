@@ -1482,9 +1482,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this project.
     write_folder_request = [
         WriteFolderRequest(
-            parent_id=1,
-            name="name_example",
             default_permission=1,
+            name="name_example",
+            parent_id=1,
             children=[
                 WriteFolderRequest(),
             ],
@@ -1541,7 +1541,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'GLTF', 'DXF', 'IFC', 'POINT_CLOUD', 'DWG', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'OBJ', 'DWG', 'POINT_CLOUD', 'DXF', 'IFC', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -2301,6 +2301,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     visa_pk = 1 # int | A unique integer value identifying this visa.
     visa_validation_request = VisaValidationRequest(
         validator_id=1,
+        attachment=open('/path/to/file', 'rb'),
     ) # VisaValidationRequest | 
 
     # example passing only required values which don't have defaults set
@@ -11907,6 +11908,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     visa_pk = 1 # int | A unique integer value identifying this visa.
     patched_visa_validation_request = PatchedVisaValidationRequest(
         validator_id=1,
+        attachment=open('/path/to/file', 'rb'),
     ) # PatchedVisaValidationRequest |  (optional)
 
     # example passing only required values which don't have defaults set

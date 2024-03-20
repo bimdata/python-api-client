@@ -100,6 +100,7 @@ class VisaValidation(ModelNormal):
             'has_commented': (bool,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
+            'attachment': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -115,6 +116,7 @@ class VisaValidation(ModelNormal):
         'has_commented': 'has_commented',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
+        'attachment': 'attachment',  # noqa: E501
     }
 
     read_only_vars = {
@@ -174,6 +176,7 @@ class VisaValidation(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            attachment (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -262,6 +265,7 @@ class VisaValidation(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            attachment (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

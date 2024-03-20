@@ -83,6 +83,7 @@ class VisaValidationRequest(ModelNormal):
         """
         return {
             'validator_id': (int,),  # noqa: E501
+            'attachment': (file_type, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -92,6 +93,7 @@ class VisaValidationRequest(ModelNormal):
 
     attribute_map = {
         'validator_id': 'validator_id',  # noqa: E501
+        'attachment': 'attachment',  # noqa: E501
     }
 
     read_only_vars = {
@@ -138,6 +140,7 @@ class VisaValidationRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            attachment (file_type, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -223,6 +226,7 @@ class VisaValidationRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            attachment (file_type, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
