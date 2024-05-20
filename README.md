@@ -309,7 +309,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_visas**](docs/CollaborationApi.md#get_visas) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa | List all visas of a document
 *CollaborationApi* | [**import_from_project**](docs/CollaborationApi.md#import_from_project) | **POST** /cloud/{cloud_pk}/project/{id}/import_from | Import data from a project
 *CollaborationApi* | [**import_manage_group**](docs/CollaborationApi.md#import_manage_group) | **POST** /cloud/{cloud_pk}/project/{project_pk}/group/import | Import a group from another project
-*CollaborationApi* | [**invite_cloud_user**](docs/CollaborationApi.md#invite_cloud_user) | **POST** /cloud/{cloud_pk}/invitation | Invite a cloud administrator
+*CollaborationApi* | [**invite_cloud_user**](docs/CollaborationApi.md#invite_cloud_user) | **POST** /cloud/{cloud_pk}/invitation | Invite a cloud member
 *CollaborationApi* | [**invite_project_user**](docs/CollaborationApi.md#invite_project_user) | **POST** /cloud/{cloud_pk}/project/{project_pk}/invitation | Invite a project member
 *CollaborationApi* | [**leave_project**](docs/CollaborationApi.md#leave_project) | **POST** /cloud/{cloud_pk}/project/{id}/leave | Leave the project
 *CollaborationApi* | [**leave_version_document_history**](docs/CollaborationApi.md#leave_version_document_history) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history/{id}/leave | Leave the history version
@@ -758,7 +758,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: implicit
-- **Authorization URL**: http://fakeurl.bimdata.io/realms/bimdata/protocol/openid-connect/auth
+- **Authorization URL**: http://fakeurl.bimdata.example/realms/bimdata/protocol/openid-connect/auth
 - **Scopes**: N/A
 
 

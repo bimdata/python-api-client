@@ -60,6 +60,11 @@ class CloudInvitation(ModelNormal):
             '100': 100,
             '50': 50,
         },
+        ('project_role',): {
+            '100': 100,
+            '50': 50,
+            '25': 25,
+        },
     }
 
     validations = {
@@ -96,6 +101,8 @@ class CloudInvitation(ModelNormal):
             'email': (str,),  # noqa: E501
             'redirect_uri': (str,),  # noqa: E501
             'role': (int,),  # noqa: E501
+            'project_role': (int,),  # noqa: E501
+            'in_all_projects': (bool,),  # noqa: E501
         }
 
     @cached_property
@@ -108,25 +115,25 @@ class CloudInvitation(ModelNormal):
         'email': 'email',  # noqa: E501
         'redirect_uri': 'redirect_uri',  # noqa: E501
         'role': 'role',  # noqa: E501
+        'project_role': 'project_role',  # noqa: E501
+        'in_all_projects': 'in_all_projects',  # noqa: E501
     }
 
     read_only_vars = {
         'id',  # noqa: E501
-        'role',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, email, redirect_uri, role, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, email, redirect_uri, *args, **kwargs):  # noqa: E501
         """CloudInvitation - a model defined in OpenAPI
 
         Args:
             id (int):
             email (str): email of the user to invite
             redirect_uri (str): User will be redirected to this uri when they accept the invitation
-            role (int): * `100` - admin * `50` - user
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -159,6 +166,9 @@ class CloudInvitation(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            role (int): * `100` - admin * `50` - user. [optional] if omitted the server will use the default value of 100  # noqa: E501
+            project_role (int): * `100` - admin * `50` - user * `25` - guest. [optional]  # noqa: E501
+            in_all_projects (bool): When inviting non-admin cloud user, specify if the user will be invited in all existing projects. project_role needs to be specified.. [optional] if omitted the server will use the default value of False  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -189,7 +199,6 @@ class CloudInvitation(ModelNormal):
         self.id = id
         self.email = email
         self.redirect_uri = redirect_uri
-        self.role = role
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -215,6 +224,7 @@ class CloudInvitation(ModelNormal):
 
             email (str): email of the user to invite
             redirect_uri (str): User will be redirected to this uri when they accept the invitation
+
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
                                 will be type checked and a TypeError will be
@@ -246,6 +256,9 @@ class CloudInvitation(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            role (int): * `100` - admin * `50` - user. [optional] if omitted the server will use the default value of 100  # noqa: E501
+            project_role (int): * `100` - admin * `50` - user * `25` - guest. [optional]  # noqa: E501
+            in_all_projects (bool): When inviting non-admin cloud user, specify if the user will be invited in all existing projects. project_role needs to be specified.. [optional] if omitted the server will use the default value of False  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

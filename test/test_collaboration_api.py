@@ -636,7 +636,7 @@ class TestCollaborationApi(unittest.TestCase):
     def test_invite_cloud_user(self):
         """Test case for invite_cloud_user
 
-        Invite a cloud administrator  # noqa: E501
+        Invite a cloud member  # noqa: E501
         """
         pass
 

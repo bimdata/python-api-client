@@ -8741,7 +8741,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'OBJ', 'DWG', 'POINT_CLOUD', 'DXF', 'IFC', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'OBJ', 'POINT_CLOUD', 'DXF', 'DWG', 'GLTF', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -15038,9 +15038,9 @@ class CollaborationApi(object):
         cloud_invitation_request,
         **kwargs
     ):
-        """Invite a cloud administrator  # noqa: E501
+        """Invite a cloud member  # noqa: E501
 
-        Invite cloud administrators only. To invite in a project, see inviteProjectUser. You can't invite a user already in the cloud. Create multiple invitations of the same email in the same cloud will generate multiple invitation emails but not multiple invitation object  Required scopes: org:manage  # noqa: E501
+        Invite a cloud member. To invite in a project, see inviteProjectUser. You can't invite a user already in the cloud. Create multiple invitations of the same email in the same cloud will generate multiple invitation emails but not multiple invitation object  Required scopes: org:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
