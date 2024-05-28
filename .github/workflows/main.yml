@@ -21,6 +21,7 @@ jobs:
           python setup.py sdist
           twine check dist/*
 
+  # taken from https://python-semantic-release.readthedocs.io/en/latest/migrating_from_v7.html
   release:
     runs-on: self-hosted
     needs: test
@@ -29,26 +30,19 @@ jobs:
       refs/heads/main'
       , github.ref)
     concurrency: release
+    permissions:
+      id-token: write
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Python Semantic Release
+        id: release
+        uses: python-semantic-release/python-semantic-release@v9.7.3
         with:
-          python-version: 3.11
-      - name: Install ci requirements
-        run: pip install -r ci-requirements.txt
-      - name: Release
-        run: |
-          git config --global user.email "infra@bimdata.io"
-          git config --global user.name "GA"
-          PYTHONPATH=$PWD python setup.py sdist
-          PYTHONPATH=$PWD semantic-release version
-          PYTHONPATH=$PWD twine upload --non-interactive dist/*
-          PYTHONPATH=$PWD semantic-release publish
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        # NOTE: DO NOT wrap the conditional in ${{ }} as it will always evaluate to true.
+        # See https://github.com/actions/runner/issues/1173
+        if: steps.release.outputs.released == 'true'

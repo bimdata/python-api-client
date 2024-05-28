@@ -1,2 +1,0 @@
-python-semantic-release==8.3.0
-twine==5.1.0
