@@ -2,6 +2,13 @@
 
 
 
+## v10.1.0 (2024-06-20)
+
+### Feature
+
+* MINOR: remove bcf project id in response ([`0d32ce4`](https://github.com/bimdata/python-api-client/commit/0d32ce4f80873c50d8a1d4125a4770fb8eefd3b7))
+
+
 ## v10.0.0 (2024-05-30)
 
 ### Breaking
