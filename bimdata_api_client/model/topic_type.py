@@ -87,7 +87,6 @@ class TopicType(ModelNormal):
         return {
             'id': (int,),  # noqa: E501
             'topic_type': (str,),  # noqa: E501
-            'project': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -98,7 +97,6 @@ class TopicType(ModelNormal):
     attribute_map = {
         'id': 'id',  # noqa: E501
         'topic_type': 'topic_type',  # noqa: E501
-        'project': 'project',  # noqa: E501
     }
 
     read_only_vars = {
@@ -147,7 +145,6 @@ class TopicType(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            project (int): This field is automatically provided by the route, you don't need to provide it in the body. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,7 +230,6 @@ class TopicType(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            project (int): This field is automatically provided by the route, you don't need to provide it in the body. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

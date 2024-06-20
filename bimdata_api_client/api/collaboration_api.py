@@ -3457,6 +3457,7 @@ class CollaborationApi(object):
                     'file_name__contains',
                     'file_name__endswith',
                     'file_name__startswith',
+                    'has__visa',
                     'name',
                     'name__contains',
                     'name__endswith',
@@ -3467,7 +3468,10 @@ class CollaborationApi(object):
                     'visa__creator_email',
                     'visa__deadline_after',
                     'visa__deadline_before',
+                    'visa__past__deadline',
+                    'visa__past__deadline__strict',
                     'visa__status',
+                    'visa__status__strict',
                     'visa__validation_status',
                     'visa__validator_email',
                 ],
@@ -3481,6 +3485,7 @@ class CollaborationApi(object):
                 ],
                 'enum': [
                     'visa__status',
+                    'visa__status__strict',
                 ],
                 'validation': [
                     'size_max',
@@ -3502,6 +3507,12 @@ class CollaborationApi(object):
                 },
                 'allowed_values': {
                     ('visa__status',): {
+
+                        "C": "C",
+                        "O": "O",
+                        "P": "P"
+                    },
+                    ('visa__status__strict',): {
 
                         "C": "C",
                         "O": "O",
@@ -3535,6 +3546,8 @@ class CollaborationApi(object):
                         (str,),
                     'file_name__startswith':
                         (str,),
+                    'has__visa':
+                        (bool,),
                     'name':
                         (str,),
                     'name__contains':
@@ -3555,7 +3568,13 @@ class CollaborationApi(object):
                         (date,),
                     'visa__deadline_before':
                         (date,),
+                    'visa__past__deadline':
+                        (bool,),
+                    'visa__past__deadline__strict':
+                        (bool,),
                     'visa__status':
+                        (str,),
+                    'visa__status__strict':
                         (str,),
                     'visa__validation_status':
                         (str,),
@@ -3576,6 +3595,7 @@ class CollaborationApi(object):
                     'file_name__contains': 'file_name__contains',
                     'file_name__endswith': 'file_name__endswith',
                     'file_name__startswith': 'file_name__startswith',
+                    'has__visa': 'has__visa',
                     'name': 'name',
                     'name__contains': 'name__contains',
                     'name__endswith': 'name__endswith',
@@ -3586,7 +3606,10 @@ class CollaborationApi(object):
                     'visa__creator_email': 'visa__creator_email',
                     'visa__deadline_after': 'visa__deadline_after',
                     'visa__deadline_before': 'visa__deadline_before',
+                    'visa__past__deadline': 'visa__past__deadline',
+                    'visa__past__deadline__strict': 'visa__past__deadline__strict',
                     'visa__status': 'visa__status',
+                    'visa__status__strict': 'visa__status__strict',
                     'visa__validation_status': 'visa__validation_status',
                     'visa__validator_email': 'visa__validator_email',
                 },
@@ -3604,6 +3627,7 @@ class CollaborationApi(object):
                     'file_name__contains': 'query',
                     'file_name__endswith': 'query',
                     'file_name__startswith': 'query',
+                    'has__visa': 'query',
                     'name': 'query',
                     'name__contains': 'query',
                     'name__endswith': 'query',
@@ -3614,7 +3638,10 @@ class CollaborationApi(object):
                     'visa__creator_email': 'query',
                     'visa__deadline_after': 'query',
                     'visa__deadline_before': 'query',
+                    'visa__past__deadline': 'query',
+                    'visa__past__deadline__strict': 'query',
                     'visa__status': 'query',
+                    'visa__status__strict': 'query',
                     'visa__validation_status': 'query',
                     'visa__validator_email': 'query',
                 },
@@ -3726,6 +3753,7 @@ class CollaborationApi(object):
                     'file_name__contains',
                     'file_name__endswith',
                     'file_name__startswith',
+                    'has__visa',
                     'name',
                     'name__contains',
                     'name__endswith',
@@ -3736,7 +3764,10 @@ class CollaborationApi(object):
                     'visa__creator_email',
                     'visa__deadline_after',
                     'visa__deadline_before',
+                    'visa__past__deadline',
+                    'visa__past__deadline__strict',
                     'visa__status',
+                    'visa__status__strict',
                     'visa__validation_status',
                     'visa__validator_email',
                 ],
@@ -3751,6 +3782,7 @@ class CollaborationApi(object):
                 ],
                 'enum': [
                     'visa__status',
+                    'visa__status__strict',
                 ],
                 'validation': [
                     'size_max',
@@ -3772,6 +3804,12 @@ class CollaborationApi(object):
                 },
                 'allowed_values': {
                     ('visa__status',): {
+
+                        "C": "C",
+                        "O": "O",
+                        "P": "P"
+                    },
+                    ('visa__status__strict',): {
 
                         "C": "C",
                         "O": "O",
@@ -3807,6 +3845,8 @@ class CollaborationApi(object):
                         (str,),
                     'file_name__startswith':
                         (str,),
+                    'has__visa':
+                        (bool,),
                     'name':
                         (str,),
                     'name__contains':
@@ -3827,7 +3867,13 @@ class CollaborationApi(object):
                         (date,),
                     'visa__deadline_before':
                         (date,),
+                    'visa__past__deadline':
+                        (bool,),
+                    'visa__past__deadline__strict':
+                        (bool,),
                     'visa__status':
+                        (str,),
+                    'visa__status__strict':
                         (str,),
                     'visa__validation_status':
                         (str,),
@@ -3849,6 +3895,7 @@ class CollaborationApi(object):
                     'file_name__contains': 'file_name__contains',
                     'file_name__endswith': 'file_name__endswith',
                     'file_name__startswith': 'file_name__startswith',
+                    'has__visa': 'has__visa',
                     'name': 'name',
                     'name__contains': 'name__contains',
                     'name__endswith': 'name__endswith',
@@ -3859,7 +3906,10 @@ class CollaborationApi(object):
                     'visa__creator_email': 'visa__creator_email',
                     'visa__deadline_after': 'visa__deadline_after',
                     'visa__deadline_before': 'visa__deadline_before',
+                    'visa__past__deadline': 'visa__past__deadline',
+                    'visa__past__deadline__strict': 'visa__past__deadline__strict',
                     'visa__status': 'visa__status',
+                    'visa__status__strict': 'visa__status__strict',
                     'visa__validation_status': 'visa__validation_status',
                     'visa__validator_email': 'visa__validator_email',
                 },
@@ -3878,6 +3928,7 @@ class CollaborationApi(object):
                     'file_name__contains': 'query',
                     'file_name__endswith': 'query',
                     'file_name__startswith': 'query',
+                    'has__visa': 'query',
                     'name': 'query',
                     'name__contains': 'query',
                     'name__endswith': 'query',
@@ -3888,7 +3939,10 @@ class CollaborationApi(object):
                     'visa__creator_email': 'query',
                     'visa__deadline_after': 'query',
                     'visa__deadline_before': 'query',
+                    'visa__past__deadline': 'query',
+                    'visa__past__deadline__strict': 'query',
                     'visa__status': 'query',
+                    'visa__status__strict': 'query',
                     'visa__validation_status': 'query',
                     'visa__validator_email': 'query',
                 },
@@ -4546,6 +4600,11 @@ class CollaborationApi(object):
                 'all': [
                     'cloud_pk',
                     'project_pk',
+                    'deadline_after',
+                    'deadline_before',
+                    'has__past_deadline',
+                    'status',
+                    'validation_status',
                 ],
                 'required': [
                     'cloud_pk',
@@ -4554,6 +4613,7 @@ class CollaborationApi(object):
                 'nullable': [
                 ],
                 'enum': [
+                    'status',
                 ],
                 'validation': [
                 ]
@@ -4562,20 +4622,46 @@ class CollaborationApi(object):
                 'validations': {
                 },
                 'allowed_values': {
+                    ('status',): {
+
+                        "C": "C",
+                        "O": "O",
+                        "P": "P"
+                    },
                 },
                 'openapi_types': {
                     'cloud_pk':
                         (int,),
                     'project_pk':
                         (int,),
+                    'deadline_after':
+                        (date,),
+                    'deadline_before':
+                        (date,),
+                    'has__past_deadline':
+                        (bool,),
+                    'status':
+                        (str,),
+                    'validation_status':
+                        (str,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
                     'project_pk': 'project_pk',
+                    'deadline_after': 'deadline_after',
+                    'deadline_before': 'deadline_before',
+                    'has__past_deadline': 'has__past_deadline',
+                    'status': 'status',
+                    'validation_status': 'validation_status',
                 },
                 'location_map': {
                     'cloud_pk': 'path',
                     'project_pk': 'path',
+                    'deadline_after': 'query',
+                    'deadline_before': 'query',
+                    'has__past_deadline': 'query',
+                    'status': 'query',
+                    'validation_status': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -5040,6 +5126,11 @@ class CollaborationApi(object):
                 'all': [
                     'cloud_pk',
                     'project_pk',
+                    'deadline_after',
+                    'deadline_before',
+                    'has__past_deadline',
+                    'status',
+                    'validation_status',
                 ],
                 'required': [
                     'cloud_pk',
@@ -5048,6 +5139,7 @@ class CollaborationApi(object):
                 'nullable': [
                 ],
                 'enum': [
+                    'status',
                 ],
                 'validation': [
                 ]
@@ -5056,20 +5148,46 @@ class CollaborationApi(object):
                 'validations': {
                 },
                 'allowed_values': {
+                    ('status',): {
+
+                        "C": "C",
+                        "O": "O",
+                        "P": "P"
+                    },
                 },
                 'openapi_types': {
                     'cloud_pk':
                         (int,),
                     'project_pk':
                         (int,),
+                    'deadline_after':
+                        (date,),
+                    'deadline_before':
+                        (date,),
+                    'has__past_deadline':
+                        (bool,),
+                    'status':
+                        (str,),
+                    'validation_status':
+                        (str,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
                     'project_pk': 'project_pk',
+                    'deadline_after': 'deadline_after',
+                    'deadline_before': 'deadline_before',
+                    'has__past_deadline': 'has__past_deadline',
+                    'status': 'status',
+                    'validation_status': 'validation_status',
                 },
                 'location_map': {
                     'cloud_pk': 'path',
                     'project_pk': 'path',
+                    'deadline_after': 'query',
+                    'deadline_before': 'query',
+                    'has__past_deadline': 'query',
+                    'status': 'query',
+                    'validation_status': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -8741,7 +8859,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'POINT_CLOUD', 'DWG', 'IFC', 'DXF', 'GLTF', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'POINT_CLOUD', 'DXF', 'DWG', 'GLTF', 'OBJ', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -11928,6 +12046,7 @@ class CollaborationApi(object):
             file_name__contains (str): [optional]
             file_name__endswith (str): [optional]
             file_name__startswith (str): [optional]
+            has__visa (bool): [optional]
             name (str): [optional]
             name__contains (str): [optional]
             name__endswith (str): [optional]
@@ -11938,7 +12057,10 @@ class CollaborationApi(object):
             visa__creator_email (str): [optional]
             visa__deadline_after (date): [optional]
             visa__deadline_before (date): [optional]
-            visa__status (str): * `O` - opened * `P` - paused * `C` - closed. [optional]
+            visa__past__deadline (bool): if True, Get documents that have at least one visa opened with a deadline in past. [optional]
+            visa__past__deadline__strict (bool): if True, Get documents that *only* have visa opened with a deadline in past. [optional]
+            visa__status (str): Get documents that have at least one visa in the requested status  * `O` - opened * `P` - paused * `C` - closed. [optional]
+            visa__status__strict (str): Get documents that *exclusively* have visa in the requested status  * `O` - opened * `P` - paused * `C` - closed. [optional]
             visa__validation_status (str): [optional]
             visa__validator_email (str): [optional]
             _return_http_data_only (bool): response data without head status
@@ -12122,6 +12244,7 @@ class CollaborationApi(object):
             file_name__contains (str): [optional]
             file_name__endswith (str): [optional]
             file_name__startswith (str): [optional]
+            has__visa (bool): [optional]
             name (str): [optional]
             name__contains (str): [optional]
             name__endswith (str): [optional]
@@ -12132,7 +12255,10 @@ class CollaborationApi(object):
             visa__creator_email (str): [optional]
             visa__deadline_after (date): [optional]
             visa__deadline_before (date): [optional]
-            visa__status (str): * `O` - opened * `P` - paused * `C` - closed. [optional]
+            visa__past__deadline (bool): if True, Get documents that have at least one visa opened with a deadline in past. [optional]
+            visa__past__deadline__strict (bool): if True, Get documents that *only* have visa opened with a deadline in past. [optional]
+            visa__status (str): Get documents that have at least one visa in the requested status  * `O` - opened * `P` - paused * `C` - closed. [optional]
+            visa__status__strict (str): Get documents that *exclusively* have visa in the requested status  * `O` - opened * `P` - paused * `C` - closed. [optional]
             visa__validation_status (str): [optional]
             visa__validator_email (str): [optional]
             _return_http_data_only (bool): response data without head status
@@ -13055,6 +13181,11 @@ class CollaborationApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
+            deadline_after (date): [optional]
+            deadline_before (date): [optional]
+            has__past_deadline (bool): [optional]
+            status (str): * `O` - opened * `P` - paused * `C` - closed. [optional]
+            validation_status (str): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -13711,6 +13842,11 @@ class CollaborationApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
+            deadline_after (date): [optional]
+            deadline_before (date): [optional]
+            has__past_deadline (bool): [optional]
+            status (str): * `O` - opened * `P` - paused * `C` - closed. [optional]
+            validation_status (str): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

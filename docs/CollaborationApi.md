@@ -1482,9 +1482,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this project.
     write_folder_request = [
         WriteFolderRequest(
+            parent_id=1,
             name="name_example",
             default_permission=1,
-            parent_id=1,
             children=[
                 WriteFolderRequest(),
             ],
@@ -1541,7 +1541,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'POINT_CLOUD', 'DWG', 'IFC', 'DXF', 'GLTF', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'POINT_CLOUD', 'DXF', 'DWG', 'GLTF', 'OBJ', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -5653,6 +5653,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     file_name__contains = "file_name__contains_example" # str |  (optional)
     file_name__endswith = "file_name__endswith_example" # str |  (optional)
     file_name__startswith = "file_name__startswith_example" # str |  (optional)
+    has__visa = True # bool |  (optional)
     name = "name_example" # str |  (optional)
     name__contains = "name__contains_example" # str |  (optional)
     name__endswith = "name__endswith_example" # str |  (optional)
@@ -5665,7 +5666,10 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     visa__creator_email = "visa__creator_email_example" # str |  (optional)
     visa__deadline_after = dateutil_parser('1970-01-01').date() # date |  (optional)
     visa__deadline_before = dateutil_parser('1970-01-01').date() # date |  (optional)
-    visa__status = "C" # str | * `O` - opened * `P` - paused * `C` - closed (optional)
+    visa__past__deadline = True # bool | if True, Get documents that have at least one visa opened with a deadline in past (optional)
+    visa__past__deadline__strict = True # bool | if True, Get documents that *only* have visa opened with a deadline in past (optional)
+    visa__status = "C" # str | Get documents that have at least one visa in the requested status  * `O` - opened * `P` - paused * `C` - closed (optional)
+    visa__status__strict = "C" # str | Get documents that *exclusively* have visa in the requested status  * `O` - opened * `P` - paused * `C` - closed (optional)
     visa__validation_status = "visa__validation_status_example" # str |  (optional)
     visa__validator_email = "visa__validator_email_example" # str |  (optional)
 
@@ -5681,7 +5685,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Retrieve all documents
-        api_response = api_instance.get_documents(cloud_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, size_max=size_max, size_min=size_min, tags=tags, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__status=visa__status, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
+        api_response = api_instance.get_documents(cloud_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, has__visa=has__visa, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, size_max=size_max, size_min=size_min, tags=tags, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->get_documents: %s\n" % e)
@@ -5705,6 +5709,7 @@ Name | Type | Description  | Notes
  **file_name__contains** | **str**|  | [optional]
  **file_name__endswith** | **str**|  | [optional]
  **file_name__startswith** | **str**|  | [optional]
+ **has__visa** | **bool**|  | [optional]
  **name** | **str**|  | [optional]
  **name__contains** | **str**|  | [optional]
  **name__endswith** | **str**|  | [optional]
@@ -5715,7 +5720,10 @@ Name | Type | Description  | Notes
  **visa__creator_email** | **str**|  | [optional]
  **visa__deadline_after** | **date**|  | [optional]
  **visa__deadline_before** | **date**|  | [optional]
- **visa__status** | **str**| * &#x60;O&#x60; - opened * &#x60;P&#x60; - paused * &#x60;C&#x60; - closed | [optional]
+ **visa__past__deadline** | **bool**| if True, Get documents that have at least one visa opened with a deadline in past | [optional]
+ **visa__past__deadline__strict** | **bool**| if True, Get documents that *only* have visa opened with a deadline in past | [optional]
+ **visa__status** | **str**| Get documents that have at least one visa in the requested status  * &#x60;O&#x60; - opened * &#x60;P&#x60; - paused * &#x60;C&#x60; - closed | [optional]
+ **visa__status__strict** | **str**| Get documents that *exclusively* have visa in the requested status  * &#x60;O&#x60; - opened * &#x60;P&#x60; - paused * &#x60;C&#x60; - closed | [optional]
  **visa__validation_status** | **str**|  | [optional]
  **visa__validator_email** | **str**|  | [optional]
 
@@ -5924,6 +5932,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     file_name__contains = "file_name__contains_example" # str |  (optional)
     file_name__endswith = "file_name__endswith_example" # str |  (optional)
     file_name__startswith = "file_name__startswith_example" # str |  (optional)
+    has__visa = True # bool |  (optional)
     name = "name_example" # str |  (optional)
     name__contains = "name__contains_example" # str |  (optional)
     name__endswith = "name__endswith_example" # str |  (optional)
@@ -5936,7 +5945,10 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     visa__creator_email = "visa__creator_email_example" # str |  (optional)
     visa__deadline_after = dateutil_parser('1970-01-01').date() # date |  (optional)
     visa__deadline_before = dateutil_parser('1970-01-01').date() # date |  (optional)
-    visa__status = "C" # str | * `O` - opened * `P` - paused * `C` - closed (optional)
+    visa__past__deadline = True # bool | if True, Get documents that have at least one visa opened with a deadline in past (optional)
+    visa__past__deadline__strict = True # bool | if True, Get documents that *only* have visa opened with a deadline in past (optional)
+    visa__status = "C" # str | Get documents that have at least one visa in the requested status  * `O` - opened * `P` - paused * `C` - closed (optional)
+    visa__status__strict = "C" # str | Get documents that *exclusively* have visa in the requested status  * `O` - opened * `P` - paused * `C` - closed (optional)
     visa__validation_status = "visa__validation_status_example" # str |  (optional)
     visa__validator_email = "visa__validator_email_example" # str |  (optional)
 
@@ -5952,7 +5964,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Get all documents of a folder
-        api_response = api_instance.get_folder_documents(cloud_pk, folder_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, size_max=size_max, size_min=size_min, tags=tags, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__status=visa__status, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
+        api_response = api_instance.get_folder_documents(cloud_pk, folder_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, has__visa=has__visa, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, size_max=size_max, size_min=size_min, tags=tags, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->get_folder_documents: %s\n" % e)
@@ -5977,6 +5989,7 @@ Name | Type | Description  | Notes
  **file_name__contains** | **str**|  | [optional]
  **file_name__endswith** | **str**|  | [optional]
  **file_name__startswith** | **str**|  | [optional]
+ **has__visa** | **bool**|  | [optional]
  **name** | **str**|  | [optional]
  **name__contains** | **str**|  | [optional]
  **name__endswith** | **str**|  | [optional]
@@ -5987,7 +6000,10 @@ Name | Type | Description  | Notes
  **visa__creator_email** | **str**|  | [optional]
  **visa__deadline_after** | **date**|  | [optional]
  **visa__deadline_before** | **date**|  | [optional]
- **visa__status** | **str**| * &#x60;O&#x60; - opened * &#x60;P&#x60; - paused * &#x60;C&#x60; - closed | [optional]
+ **visa__past__deadline** | **bool**| if True, Get documents that have at least one visa opened with a deadline in past | [optional]
+ **visa__past__deadline__strict** | **bool**| if True, Get documents that *only* have visa opened with a deadline in past | [optional]
+ **visa__status** | **str**| Get documents that have at least one visa in the requested status  * &#x60;O&#x60; - opened * &#x60;P&#x60; - paused * &#x60;C&#x60; - closed | [optional]
+ **visa__status__strict** | **str**| Get documents that *exclusively* have visa in the requested status  * &#x60;O&#x60; - opened * &#x60;P&#x60; - paused * &#x60;C&#x60; - closed | [optional]
  **visa__validation_status** | **str**|  | [optional]
  **visa__validator_email** | **str**|  | [optional]
 
@@ -7129,11 +7145,25 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = collaboration_api.CollaborationApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     project_pk = 1 # int | A unique integer value identifying this project.
+    deadline_after = dateutil_parser('1970-01-01').date() # date |  (optional)
+    deadline_before = dateutil_parser('1970-01-01').date() # date |  (optional)
+    has__past_deadline = True # bool |  (optional)
+    status = "C" # str | * `O` - opened * `P` - paused * `C` - closed (optional)
+    validation_status = "validation_status_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # List visas created by user
         api_response = api_instance.get_project_creator_visas(cloud_pk, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_creator_visas: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # List visas created by user
+        api_response = api_instance.get_project_creator_visas(cloud_pk, project_pk, deadline_after=deadline_after, deadline_before=deadline_before, has__past_deadline=has__past_deadline, status=status, validation_status=validation_status)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->get_project_creator_visas: %s\n" % e)
@@ -7146,6 +7176,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **deadline_after** | **date**|  | [optional]
+ **deadline_before** | **date**|  | [optional]
+ **has__past_deadline** | **bool**|  | [optional]
+ **status** | **str**| * &#x60;O&#x60; - opened * &#x60;P&#x60; - paused * &#x60;C&#x60; - closed | [optional]
+ **validation_status** | **str**|  | [optional]
 
 ### Return type
 
@@ -7979,11 +8014,25 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = collaboration_api.CollaborationApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     project_pk = 1 # int | A unique integer value identifying this project.
+    deadline_after = dateutil_parser('1970-01-01').date() # date |  (optional)
+    deadline_before = dateutil_parser('1970-01-01').date() # date |  (optional)
+    has__past_deadline = True # bool |  (optional)
+    status = "C" # str | * `O` - opened * `P` - paused * `C` - closed (optional)
+    validation_status = "validation_status_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # List visas where user is a validator
         api_response = api_instance.get_project_validator_visas(cloud_pk, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_validator_visas: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # List visas where user is a validator
+        api_response = api_instance.get_project_validator_visas(cloud_pk, project_pk, deadline_after=deadline_after, deadline_before=deadline_before, has__past_deadline=has__past_deadline, status=status, validation_status=validation_status)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->get_project_validator_visas: %s\n" % e)
@@ -7996,6 +8045,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **deadline_after** | **date**|  | [optional]
+ **deadline_before** | **date**|  | [optional]
+ **has__past_deadline** | **bool**|  | [optional]
+ **status** | **str**| * &#x60;O&#x60; - opened * &#x60;P&#x60; - paused * &#x60;C&#x60; - closed | [optional]
+ **validation_status** | **str**|  | [optional]
 
 ### Return type
 
