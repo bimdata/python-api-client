@@ -2,6 +2,19 @@
 
 
 
+## v10.2.0 (2024-07-04)
+
+### Feature
+
+* MINOR: Add bcf bimdata_viewer_layout (#759)
+
+* Add bcf bimdata_layout
+
+* Rename into bimdata_viewer_layout
+
+* Fix test... ([`e6e043b`](https://github.com/bimdata/python-api-client/commit/e6e043ba5e7e82aaacd5c77ceb1bbdb524ec8d65))
+
+
 ## v10.1.0 (2024-06-20)
 
 ### Feature
