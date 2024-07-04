@@ -128,6 +128,7 @@ class FullTopic(ModelNormal):
             'due_date': (datetime, none_type,),  # noqa: E501
             'comments': ([Comment],),  # noqa: E501
             'viewpoints': ([Viewpoint],),  # noqa: E501
+            'bimdata_viewer_layout': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -158,6 +159,7 @@ class FullTopic(ModelNormal):
         'due_date': 'due_date',  # noqa: E501
         'comments': 'comments',  # noqa: E501
         'viewpoints': 'viewpoints',  # noqa: E501
+        'bimdata_viewer_layout': 'bimdata_viewer_layout',  # noqa: E501
     }
 
     read_only_vars = {
@@ -226,6 +228,7 @@ class FullTopic(ModelNormal):
             due_date (datetime, none_type): [optional]  # noqa: E501
             comments ([Comment]): [optional]  # noqa: E501
             viewpoints ([Viewpoint]): [optional]  # noqa: E501
+            bimdata_viewer_layout ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type): Non standard field. JSON describing bimdataViewerLayout.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -332,6 +335,7 @@ class FullTopic(ModelNormal):
             due_date (datetime, none_type): [optional]  # noqa: E501
             comments ([Comment]): [optional]  # noqa: E501
             viewpoints ([Viewpoint]): [optional]  # noqa: E501
+            bimdata_viewer_layout ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type): Non standard field. JSON describing bimdataViewerLayout.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
