@@ -61,9 +61,11 @@ class CheckProjectAccess(ModelNormal):
 
     allowed_values = {
         ('user_role',): {
-            '100': 100,
-            '50': 50,
-            '25': 25,
+            'None': None,
+            '100': "100",
+            '50': "50",
+            '25': "25",
+            'NULL': "null",
         },
     }
 
@@ -98,8 +100,8 @@ class CheckProjectAccess(ModelNormal):
             'has_admin_permission': (bool,),  # noqa: E501
             'token_scopes': ([str],),  # noqa: E501
             'usable_scopes': ([str],),  # noqa: E501
-            'user_role': (int,),  # noqa: E501
-            'user': (User,),  # noqa: E501
+            'user_role': (int, none_type,),  # noqa: E501
+            'user': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -165,8 +167,8 @@ class CheckProjectAccess(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            user_role (int): * `100` - admin * `50` - user * `25` - guest. [optional]  # noqa: E501
-            user (User): [optional]  # noqa: E501
+            user_role (int, none_type): * `100` - admin * `50` - user * `25` - guest. [optional]  # noqa: E501
+            user (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -260,8 +262,8 @@ class CheckProjectAccess(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            user_role (int): * `100` - admin * `50` - user * `25` - guest. [optional]  # noqa: E501
-            user (User): [optional]  # noqa: E501
+            user_role (int, none_type): * `100` - admin * `50` - user * `25` - guest. [optional]  # noqa: E501
+            user (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
