@@ -2,6 +2,13 @@
 
 
 
+## v10.2.1 (2024-07-30)
+
+### Fix
+
+* PATCH: fix project-access-token nullable fields ([`7277533`](https://github.com/bimdata/python-api-client/commit/7277533e82734d36c02bf1f043c66a1cc9f1d427))
+
+
 ## v10.2.0 (2024-07-04)
 
 ### Feature
