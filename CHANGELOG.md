@@ -2,6 +2,13 @@
 
 
 
+## v10.2.2 (2024-07-30)
+
+### Fix
+
+* PATCH: Update ci-requirements.txt ([`83e0968`](https://github.com/bimdata/python-api-client/commit/83e0968df4a62af918209ac628a5fd2f3c8028f2))
+
+
 ## v10.2.1 (2024-07-30)
 
 ### Fix
