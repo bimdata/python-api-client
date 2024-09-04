@@ -2,6 +2,21 @@
 
 
 
+## v10.3.0 (2024-09-04)
+
+### Feature
+
+* MINOR: serialize basic document data in /me/visa responses (#769)
+
+* MINOR: serialize basic document data in /me/visa responses
+
+* fix minor mistakes
+
+* fix parent_id in doc
+
+* fix prefetch ([`d145d94`](https://github.com/bimdata/python-api-client/commit/d145d9441ac934aaccb5163bfbf0a63f6218f7f9))
+
+
 ## v10.2.2 (2024-07-30)
 
 ### Fix
