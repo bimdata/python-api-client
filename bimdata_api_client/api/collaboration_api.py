@@ -79,6 +79,7 @@ from bimdata_api_client.model.visa_comment_request import VisaCommentRequest
 from bimdata_api_client.model.visa_request import VisaRequest
 from bimdata_api_client.model.visa_validation import VisaValidation
 from bimdata_api_client.model.visa_validation_request import VisaValidationRequest
+from bimdata_api_client.model.visa_with_document import VisaWithDocument
 from bimdata_api_client.model.write_folder_request import WriteFolderRequest
 
 
@@ -4584,7 +4585,7 @@ class CollaborationApi(object):
         )
         self.get_project_creator_visas_endpoint = _Endpoint(
             settings={
-                'response_type': ([Visa],),
+                'response_type': ([VisaWithDocument],),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -5110,7 +5111,7 @@ class CollaborationApi(object):
         )
         self.get_project_validator_visas_endpoint = _Endpoint(
             settings={
-                'response_type': ([Visa],),
+                'response_type': ([VisaWithDocument],),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -8859,7 +8860,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'DWG', 'OBJ', 'DXF', 'POINT_CLOUD', 'IFC', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'POINT_CLOUD', 'GLTF', 'DWG', 'IFC', 'OBJ', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -13214,7 +13215,7 @@ class CollaborationApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            [Visa]
+            [VisaWithDocument]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -13875,7 +13876,7 @@ class CollaborationApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            [Visa]
+            [VisaWithDocument]
                 If the method is called asynchronously, returns the request
                 thread.
         """

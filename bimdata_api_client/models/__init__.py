@@ -78,6 +78,7 @@ from bimdata_api_client.model.layer import Layer
 from bimdata_api_client.model.layer_element import LayerElement
 from bimdata_api_client.model.layer_element_request import LayerElementRequest
 from bimdata_api_client.model.layer_request import LayerRequest
+from bimdata_api_client.model.light_document import LightDocument
 from bimdata_api_client.model.line import Line
 from bimdata_api_client.model.line_request import LineRequest
 from bimdata_api_client.model.log_entry import LogEntry
@@ -240,6 +241,7 @@ from bimdata_api_client.model.visa_comment_request import VisaCommentRequest
 from bimdata_api_client.model.visa_request import VisaRequest
 from bimdata_api_client.model.visa_validation import VisaValidation
 from bimdata_api_client.model.visa_validation_request import VisaValidationRequest
+from bimdata_api_client.model.visa_with_document import VisaWithDocument
 from bimdata_api_client.model.visibility import Visibility
 from bimdata_api_client.model.visibility_request import VisibilityRequest
 from bimdata_api_client.model.web_hook import WebHook

@@ -1482,8 +1482,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this project.
     write_folder_request = [
         WriteFolderRequest(
-            default_permission=1,
             name="name_example",
+            default_permission=1,
             parent_id=1,
             children=[
                 WriteFolderRequest(),
@@ -1541,7 +1541,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'DWG', 'OBJ', 'DXF', 'POINT_CLOUD', 'IFC', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'POINT_CLOUD', 'GLTF', 'DWG', 'IFC', 'OBJ', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -7085,7 +7085,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project_creator_visas**
-> [Visa] get_project_creator_visas(cloud_pk, project_pk)
+> [VisaWithDocument] get_project_creator_visas(cloud_pk, project_pk)
 
 List visas created by user
 
@@ -7102,7 +7102,7 @@ List visas created by user in a project  Required scopes: document:read
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
-from bimdata_api_client.model.visa import Visa
+from bimdata_api_client.model.visa_with_document import VisaWithDocument
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -7184,7 +7184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Visa]**](Visa.md)
+[**[VisaWithDocument]**](VisaWithDocument.md)
 
 ### Authorization
 
@@ -7954,7 +7954,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project_validator_visas**
-> [Visa] get_project_validator_visas(cloud_pk, project_pk)
+> [VisaWithDocument] get_project_validator_visas(cloud_pk, project_pk)
 
 List visas where user is a validator
 
@@ -7971,7 +7971,7 @@ List visas where user is a validator in a project  Required scopes: document:rea
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
-from bimdata_api_client.model.visa import Visa
+from bimdata_api_client.model.visa_with_document import VisaWithDocument
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -8053,7 +8053,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Visa]**](Visa.md)
+[**[VisaWithDocument]**](VisaWithDocument.md)
 
 ### Authorization
 
