@@ -2,6 +2,19 @@
 
 
 
+## v10.4.0 (2024-09-09)
+
+### Feature
+
+* MINOR: Bimdata elevation (#770)
+
+* add BIMData Elevation to storey
+
+* add update storey elevation
+
+* fix typo in comment ([`2f61155`](https://github.com/bimdata/python-api-client/commit/2f61155c2c71ceda62ace5b83979fec3c806521d))
+
+
 ## v10.3.0 (2024-09-04)
 
 ### Feature
