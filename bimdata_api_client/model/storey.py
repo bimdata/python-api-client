@@ -89,7 +89,7 @@ class Storey(ModelNormal):
         lazy_import()
         return {
             'uuid': (str,),  # noqa: E501
-            'name': (str,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
             'bimdata_elevation': (float, none_type,),  # noqa: E501
             'plans': ([ModelWithPositioningPlan],),  # noqa: E501
             'plans_unreachable_count': (int,),  # noqa: E501
@@ -125,7 +125,7 @@ class Storey(ModelNormal):
 
         Args:
             uuid (str): IFC element or element type UUID
-            name (str): Name of the storey
+            name (str, none_type): Name of the storey
             bimdata_elevation (float, none_type): Elevation computed by BIMData on storey's objects geometries.
             plans ([ModelWithPositioningPlan]):
             plans_unreachable_count (int):
