@@ -2,6 +2,13 @@
 
 
 
+## v10.4.2 (2024-09-09)
+
+### Fix
+
+* PATCH: bimdata_elevation response can be null ([`a367be3`](https://github.com/bimdata/python-api-client/commit/a367be3cc9df3248b5ef631872c4d37a8a285f03))
+
+
 ## v10.4.1 (2024-09-09)
 
 ### Fix
