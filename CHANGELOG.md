@@ -2,6 +2,13 @@
 
 
 
+## v10.4.3 (2024-09-09)
+
+### Fix
+
+* PATCH: fix storey name open api ([`1ec7339`](https://github.com/bimdata/python-api-client/commit/1ec733927e2e879c678c7e24b609c7ec19f0368c))
+
+
 ## v10.4.2 (2024-09-09)
 
 ### Fix
