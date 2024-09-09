@@ -2,6 +2,13 @@
 
 
 
+## v10.4.1 (2024-09-09)
+
+### Fix
+
+* PATCH: fix bimdata_elevation open api field type ([`8ee2be6`](https://github.com/bimdata/python-api-client/commit/8ee2be67d59b7ed18c83da89c02a0d4b2801fb8d))
+
+
 ## v10.4.0 (2024-09-09)
 
 ### Feature
