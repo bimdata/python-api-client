@@ -90,7 +90,7 @@ class Building(ModelNormal):
         return {
             'uuid': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
-            'bimdata_elevation': (float,),  # noqa: E501
+            'bimdata_elevation': (float, none_type,),  # noqa: E501
             'plans': ([ModelWithPositioningPlan],),  # noqa: E501
             'plans_unreachable_count': (int,),  # noqa: E501
         }
@@ -126,7 +126,7 @@ class Building(ModelNormal):
         Args:
             uuid (str): IFC element or element type UUID
             name (str): Name of the building
-            bimdata_elevation (float): Elevation computed by BIMData on storey's objects geometries.
+            bimdata_elevation (float, none_type): Elevation computed by BIMData on storey's objects geometries.
             plans ([ModelWithPositioningPlan]):
             plans_unreachable_count (int):
 
