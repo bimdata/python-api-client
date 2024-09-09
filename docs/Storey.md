@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **str** | IFC element or element type UUID | [readonly] 
 **name** | **str** | Name of the storey | [readonly] 
+**bimdata_elevation** | **str** | Elevation computed by BIMData on storey&#39;s objects geometries. | [readonly] 
 **plans** | [**[ModelWithPositioningPlan]**](ModelWithPositioningPlan.md) |  | [readonly] 
 **plans_unreachable_count** | **int** |  | [readonly] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

@@ -90,6 +90,7 @@ class Building(ModelNormal):
         return {
             'uuid': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
+            'bimdata_elevation': (str,),  # noqa: E501
             'plans': ([ModelWithPositioningPlan],),  # noqa: E501
             'plans_unreachable_count': (int,),  # noqa: E501
         }
@@ -102,6 +103,7 @@ class Building(ModelNormal):
     attribute_map = {
         'uuid': 'uuid',  # noqa: E501
         'name': 'name',  # noqa: E501
+        'bimdata_elevation': 'bimdata_elevation',  # noqa: E501
         'plans': 'plans',  # noqa: E501
         'plans_unreachable_count': 'plans_unreachable_count',  # noqa: E501
     }
@@ -109,6 +111,7 @@ class Building(ModelNormal):
     read_only_vars = {
         'uuid',  # noqa: E501
         'name',  # noqa: E501
+        'bimdata_elevation',  # noqa: E501
         'plans',  # noqa: E501
         'plans_unreachable_count',  # noqa: E501
     }
@@ -117,12 +120,13 @@ class Building(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, uuid, name, plans, plans_unreachable_count, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, uuid, name, bimdata_elevation, plans, plans_unreachable_count, *args, **kwargs):  # noqa: E501
         """Building - a model defined in OpenAPI
 
         Args:
             uuid (str): IFC element or element type UUID
             name (str): Name of the building
+            bimdata_elevation (str): Elevation computed by BIMData on storey's objects geometries.
             plans ([ModelWithPositioningPlan]):
             plans_unreachable_count (int):
 
@@ -186,6 +190,7 @@ class Building(ModelNormal):
 
         self.uuid = uuid
         self.name = name
+        self.bimdata_elevation = bimdata_elevation
         self.plans = plans
         self.plans_unreachable_count = plans_unreachable_count
         for var_name, var_value in kwargs.items():

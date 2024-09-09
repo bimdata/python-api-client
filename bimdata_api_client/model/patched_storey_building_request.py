@@ -86,6 +86,7 @@ class PatchedStoreyBuildingRequest(ModelNormal):
         """
         return {
             'name': (str,),  # noqa: E501
+            'bimdata_elevation': (float,),  # noqa: E501
         }
 
     @cached_property
@@ -95,6 +96,7 @@ class PatchedStoreyBuildingRequest(ModelNormal):
 
     attribute_map = {
         'name': 'name',  # noqa: E501
+        'bimdata_elevation': 'bimdata_elevation',  # noqa: E501
     }
 
     read_only_vars = {
@@ -139,6 +141,7 @@ class PatchedStoreyBuildingRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             name (str): [optional]  # noqa: E501
+            bimdata_elevation (float): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -221,6 +224,7 @@ class PatchedStoreyBuildingRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             name (str): [optional]  # noqa: E501
+            bimdata_elevation (float): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

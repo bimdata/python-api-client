@@ -15371,6 +15371,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     uuid = "uuid_example" # str | 
     patched_storey_building_request = PatchedStoreyBuildingRequest(
         name="name_example",
+        bimdata_elevation=3.14,
     ) # PatchedStoreyBuildingRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -17609,6 +17610,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     uuid = "uuid_example" # str | 
     patched_storey_building_request = PatchedStoreyBuildingRequest(
         name="name_example",
+        bimdata_elevation=3.14,
     ) # PatchedStoreyBuildingRequest |  (optional)
 
     # example passing only required values which don't have defaults set
