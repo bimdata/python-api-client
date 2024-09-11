@@ -2536,6 +2536,144 @@ class ModelApi(object):
             },
             api_client=api_client
         )
+        self.create_photosphere_endpoint = _Endpoint(
+            settings={
+                'response_type': (Model,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/create-photosphere',
+                'operation_id': 'create_photosphere',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'project_pk',
+                    'create_model_request',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'project_pk',
+                    'create_model_request',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'create_model_request':
+                        (CreateModelRequest,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'project_pk': 'path',
+                    'create_model_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
+        self.create_photosphere_building_endpoint = _Endpoint(
+            settings={
+                'response_type': (Model,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/create-photosphere-building',
+                'operation_id': 'create_photosphere_building',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'project_pk',
+                    'create_building_by_name_request',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'project_pk',
+                    'create_building_by_name_request',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'create_building_by_name_request':
+                        (CreateBuildingByNameRequest,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'project_pk': 'path',
+                    'create_building_by_name_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
         self.create_property_set_endpoint = _Endpoint(
             settings={
                 'response_type': ([PropertySet],),
@@ -7449,6 +7587,8 @@ class ModelApi(object):
                         "METABUILDING": "METABUILDING",
                         "OBJ": "OBJ",
                         "PDF": "PDF",
+                        "PHOTOSPHERE": "PHOTOSPHERE",
+                        "PHOTOSPHERE_BUILDING": "PHOTOSPHERE_BUILDING",
                         "PNG": "PNG",
                         "POINT_CLOUD": "POINT_CLOUD"
                     },
@@ -14583,6 +14723,178 @@ class ModelApi(object):
             create_multi_page_model_request
         return self.create_multi_page_model_endpoint.call_with_http_info(**kwargs)
 
+    def create_photosphere(
+        self,
+        cloud_pk,
+        project_pk,
+        create_model_request,
+        **kwargs
+    ):
+        """Create a photopshere model from an image file  # noqa: E501
+
+        Create a photosphere model to be used in BIMData services  Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.create_photosphere(cloud_pk, project_pk, create_model_request, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int):
+            project_pk (int):
+            create_model_request (CreateModelRequest):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            Model
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['project_pk'] = \
+            project_pk
+        kwargs['create_model_request'] = \
+            create_model_request
+        return self.create_photosphere_endpoint.call_with_http_info(**kwargs)
+
+    def create_photosphere_building(
+        self,
+        cloud_pk,
+        project_pk,
+        create_building_by_name_request,
+        **kwargs
+    ):
+        """Create an empty Photosphere Building Model  # noqa: E501
+
+        Create an empty Photosphere Building Model  Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.create_photosphere_building(cloud_pk, project_pk, create_building_by_name_request, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int):
+            project_pk (int):
+            create_building_by_name_request (CreateBuildingByNameRequest):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            Model
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['project_pk'] = \
+            project_pk
+        kwargs['create_building_by_name_request'] = \
+            create_building_by_name_request
+        return self.create_photosphere_building_endpoint.call_with_http_info(**kwargs)
+
     def create_property_set(
         self,
         cloud_pk,
@@ -20592,7 +20904,7 @@ class ModelApi(object):
         Keyword Args:
             source (str): * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]
             status ([str]): * `C` - completed * `D` - deleted * `P` - pending * `W` - waiting * `I` - in process * `E` - errored * `X` - won't fix. [optional]
-            type ([str]): * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `METABUILDING` - METABUILDING. [optional]
+            type ([str]): * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `METABUILDING` - METABUILDING * `PHOTOSPHERE` - PHOTOSPHERE * `PHOTOSPHERE_BUILDING` - PHOTOSPHERE_BUILDING. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

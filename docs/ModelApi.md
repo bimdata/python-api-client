@@ -35,6 +35,8 @@ Method | HTTP request | Description
 [**create_model_property_definition**](ModelApi.md#create_model_property_definition) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition | Create a PropertyDefinition on the model
 [**create_model_unit**](ModelApi.md#create_model_unit) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit | Create a Unit on a model
 [**create_multi_page_model**](ModelApi.md#create_multi_page_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/create-multipage-model | Create a multi page model
+[**create_photosphere**](ModelApi.md#create_photosphere) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-photosphere | Create a photopshere model from an image file
+[**create_photosphere_building**](ModelApi.md#create_photosphere_building) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-photosphere-building | Create an empty Photosphere Building Model
 [**create_property_set**](ModelApi.md#create_property_set) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset | Create one or many PropertySet
 [**create_property_set_element_relations**](ModelApi.md#create_property_set_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset-element | Create association between PropertySet and element
 [**create_raw_elements**](ModelApi.md#create_raw_elements) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/raw | Create elements in an optimized format
@@ -4004,6 +4006,228 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**|  |
  **create_multi_page_model_request** | [**CreateMultiPageModelRequest**](CreateMultiPageModelRequest.md)|  |
+
+### Return type
+
+[**Model**](Model.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_photosphere**
+> Model create_photosphere(cloud_pk, project_pk, create_model_request)
+
+Create a photopshere model from an image file
+
+Create a photosphere model to be used in BIMData services  Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import model_api
+from bimdata_api_client.model.create_model_request import CreateModelRequest
+from bimdata_api_client.model.model import Model
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | 
+    project_pk = 1 # int | 
+    create_model_request = CreateModelRequest(
+        document_id=1,
+    ) # CreateModelRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create a photopshere model from an image file
+        api_response = api_instance.create_photosphere(cloud_pk, project_pk, create_model_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->create_photosphere: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**|  |
+ **project_pk** | **int**|  |
+ **create_model_request** | [**CreateModelRequest**](CreateModelRequest.md)|  |
+
+### Return type
+
+[**Model**](Model.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_photosphere_building**
+> Model create_photosphere_building(cloud_pk, project_pk, create_building_by_name_request)
+
+Create an empty Photosphere Building Model
+
+Create an empty Photosphere Building Model  Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import model_api
+from bimdata_api_client.model.create_building_by_name_request import CreateBuildingByNameRequest
+from bimdata_api_client.model.model import Model
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | 
+    project_pk = 1 # int | 
+    create_building_by_name_request = CreateBuildingByNameRequest(
+        name="name_example",
+    ) # CreateBuildingByNameRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create an empty Photosphere Building Model
+        api_response = api_instance.create_photosphere_building(cloud_pk, project_pk, create_building_by_name_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->create_photosphere_building: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**|  |
+ **project_pk** | **int**|  |
+ **create_building_by_name_request** | [**CreateBuildingByNameRequest**](CreateBuildingByNameRequest.md)|  |
 
 ### Return type
 
@@ -11577,7 +11801,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     ] # [str] | * `C` - completed * `D` - deleted * `P` - pending * `W` - waiting * `I` - in process * `E` - errored * `X` - won't fix (optional)
     type = [
         "DWG",
-    ] # [str] | * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `METABUILDING` - METABUILDING (optional)
+    ] # [str] | * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `METABUILDING` - METABUILDING * `PHOTOSPHERE` - PHOTOSPHERE * `PHOTOSPHERE_BUILDING` - PHOTOSPHERE_BUILDING (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -11606,7 +11830,7 @@ Name | Type | Description  | Notes
  **project_pk** | **int**|  |
  **source** | **str**| * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED | [optional]
  **status** | **[str]**| * &#x60;C&#x60; - completed * &#x60;D&#x60; - deleted * &#x60;P&#x60; - pending * &#x60;W&#x60; - waiting * &#x60;I&#x60; - in process * &#x60;E&#x60; - errored * &#x60;X&#x60; - won&#39;t fix | [optional]
- **type** | **[str]**| * &#x60;IFC&#x60; - IFC * &#x60;DWG&#x60; - DWG * &#x60;DXF&#x60; - DXF * &#x60;GLTF&#x60; - GLTF * &#x60;PDF&#x60; - PDF * &#x60;JPEG&#x60; - JPEG * &#x60;PNG&#x60; - PNG * &#x60;OBJ&#x60; - OBJ * &#x60;POINT_CLOUD&#x60; - POINT_CLOUD * &#x60;METABUILDING&#x60; - METABUILDING | [optional]
+ **type** | **[str]**| * &#x60;IFC&#x60; - IFC * &#x60;DWG&#x60; - DWG * &#x60;DXF&#x60; - DXF * &#x60;GLTF&#x60; - GLTF * &#x60;PDF&#x60; - PDF * &#x60;JPEG&#x60; - JPEG * &#x60;PNG&#x60; - PNG * &#x60;OBJ&#x60; - OBJ * &#x60;POINT_CLOUD&#x60; - POINT_CLOUD * &#x60;METABUILDING&#x60; - METABUILDING * &#x60;PHOTOSPHERE&#x60; - PHOTOSPHERE * &#x60;PHOTOSPHERE_BUILDING&#x60; - PHOTOSPHERE_BUILDING | [optional]
 
 ### Return type
 

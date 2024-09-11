@@ -75,6 +75,8 @@ class ModelSerializerWithoutChildren(ModelNormal):
             'OBJ': "OBJ",
             'POINT_CLOUD': "POINT_CLOUD",
             'METABUILDING': "METABUILDING",
+            'PHOTOSPHERE': "PHOTOSPHERE",
+            'PHOTOSPHERE_BUILDING': "PHOTOSPHERE_BUILDING",
         },
         ('source',): {
             'UPLOAD': "UPLOAD",
@@ -227,7 +229,7 @@ class ModelSerializerWithoutChildren(ModelNormal):
 
         Args:
             id (int):
-            type (str): * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `METABUILDING` - METABUILDING
+            type (str): * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `METABUILDING` - METABUILDING * `PHOTOSPHERE` - PHOTOSPHERE * `PHOTOSPHERE_BUILDING` - PHOTOSPHERE_BUILDING
             creator (bool, date, datetime, dict, float, int, list, str, none_type):
             status (str):
             created_at (datetime):

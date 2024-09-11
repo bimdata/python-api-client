@@ -362,6 +362,8 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**create_model_property_definition**](docs/ModelApi.md#create_model_property_definition) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition | Create a PropertyDefinition on the model
 *ModelApi* | [**create_model_unit**](docs/ModelApi.md#create_model_unit) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit | Create a Unit on a model
 *ModelApi* | [**create_multi_page_model**](docs/ModelApi.md#create_multi_page_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/create-multipage-model | Create a multi page model
+*ModelApi* | [**create_photosphere**](docs/ModelApi.md#create_photosphere) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-photosphere | Create a photopshere model from an image file
+*ModelApi* | [**create_photosphere_building**](docs/ModelApi.md#create_photosphere_building) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-photosphere-building | Create an empty Photosphere Building Model
 *ModelApi* | [**create_property_set**](docs/ModelApi.md#create_property_set) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset | Create one or many PropertySet
 *ModelApi* | [**create_property_set_element_relations**](docs/ModelApi.md#create_property_set_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset-element | Create association between PropertySet and element
 *ModelApi* | [**create_raw_elements**](docs/ModelApi.md#create_raw_elements) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/raw | Create elements in an optimized format

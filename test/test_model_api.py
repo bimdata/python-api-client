@@ -241,6 +241,20 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_create_photosphere(self):
+        """Test case for create_photosphere
+
+        Create a photopshere model from an image file  # noqa: E501
+        """
+        pass
+
+    def test_create_photosphere_building(self):
+        """Test case for create_photosphere_building
+
+        Create an empty Photosphere Building Model  # noqa: E501
+        """
+        pass
+
     def test_create_property_set(self):
         """Test case for create_property_set
 
