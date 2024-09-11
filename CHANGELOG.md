@@ -2,6 +2,23 @@
 
 
 
+## v10.5.0 (2024-09-11)
+
+### Feature
+
+* MINOR: Feature: Photosphere Model (#758)
+
+* MINOR: feat(photosphere): add PHOTOSPHERE model type
+
+* MINOR: feat(photosphere): add create-photosphere route
+
+* MINOR: feat: add create-photospĥere-building route
+
+* fix: IsMetaBuilding perm classes + little opti in create-photosphere route
+
+* fix(ifc): merge 2 migrations into 1 ([`3add6a0`](https://github.com/bimdata/python-api-client/commit/3add6a0633832dcab2db9d9a33baadb7d29945dd))
+
+
 ## v10.4.3 (2024-09-09)
 
 ### Fix
