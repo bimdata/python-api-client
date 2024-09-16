@@ -2,6 +2,13 @@
 
 
 
+## v10.6.0 (2024-09-16)
+
+### Feature
+
+* MINOR: remove smart_data from get_size routes ([`250dc2c`](https://github.com/bimdata/python-api-client/commit/250dc2c6409f9bc59cddf88b121cb7c8946e333a))
+
+
 ## v10.5.0 (2024-09-11)
 
 ### Feature
