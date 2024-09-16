@@ -83,7 +83,6 @@ class ProjectSize(ModelNormal):
         """
         return {
             'total_size': (int, none_type,),  # noqa: E501
-            'smart_data_size': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -93,24 +92,21 @@ class ProjectSize(ModelNormal):
 
     attribute_map = {
         'total_size': 'total_size',  # noqa: E501
-        'smart_data_size': 'smart_data_size',  # noqa: E501
     }
 
     read_only_vars = {
         'total_size',  # noqa: E501
-        'smart_data_size',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, total_size, smart_data_size, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, total_size, *args, **kwargs):  # noqa: E501
         """ProjectSize - a model defined in OpenAPI
 
         Args:
             total_size (int, none_type):
-            smart_data_size (int, none_type):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -171,7 +167,6 @@ class ProjectSize(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.total_size = total_size
-        self.smart_data_size = smart_data_size
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

@@ -93,13 +93,9 @@ class Size(ModelNormal):
             'managed_by': (str,),  # noqa: E501
             'role': (int,),  # noqa: E501
             'total_size': (int, none_type,),  # noqa: E501
-            'smart_data_size': (int, none_type,),  # noqa: E501
             'total_size_available': (int, none_type,),  # noqa: E501
-            'smart_data_size_available': (int, none_type,),  # noqa: E501
             'remaining_total_size': (int, none_type,),  # noqa: E501
-            'remaining_smart_data_size': (int, none_type,),  # noqa: E501
             'remaining_total_size_percent': (int, none_type,),  # noqa: E501
-            'remaining_smart_data_size_percent': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -111,44 +107,32 @@ class Size(ModelNormal):
         'managed_by': 'managed_by',  # noqa: E501
         'role': 'role',  # noqa: E501
         'total_size': 'total_size',  # noqa: E501
-        'smart_data_size': 'smart_data_size',  # noqa: E501
         'total_size_available': 'total_size_available',  # noqa: E501
-        'smart_data_size_available': 'smart_data_size_available',  # noqa: E501
         'remaining_total_size': 'remaining_total_size',  # noqa: E501
-        'remaining_smart_data_size': 'remaining_smart_data_size',  # noqa: E501
         'remaining_total_size_percent': 'remaining_total_size_percent',  # noqa: E501
-        'remaining_smart_data_size_percent': 'remaining_smart_data_size_percent',  # noqa: E501
     }
 
     read_only_vars = {
         'total_size',  # noqa: E501
-        'smart_data_size',  # noqa: E501
         'total_size_available',  # noqa: E501
-        'smart_data_size_available',  # noqa: E501
         'remaining_total_size',  # noqa: E501
-        'remaining_smart_data_size',  # noqa: E501
         'remaining_total_size_percent',  # noqa: E501
-        'remaining_smart_data_size_percent',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, managed_by, role, total_size, smart_data_size, total_size_available, smart_data_size_available, remaining_total_size, remaining_smart_data_size, remaining_total_size_percent, remaining_smart_data_size_percent, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, managed_by, role, total_size, total_size_available, remaining_total_size, remaining_total_size_percent, *args, **kwargs):  # noqa: E501
         """Size - a model defined in OpenAPI
 
         Args:
             managed_by (str): * `BIMDATA_PLATFORM` - BIMDATA_PLATFORM * `ORGANIZATION` - ORGANIZATION
             role (int): * `100` - admin * `50` - user
             total_size (int, none_type):
-            smart_data_size (int, none_type):
             total_size_available (int, none_type):
-            smart_data_size_available (int, none_type):
             remaining_total_size (int, none_type):
-            remaining_smart_data_size (int, none_type):
             remaining_total_size_percent (int, none_type):
-            remaining_smart_data_size_percent (int, none_type):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -211,13 +195,9 @@ class Size(ModelNormal):
         self.managed_by = managed_by
         self.role = role
         self.total_size = total_size
-        self.smart_data_size = smart_data_size
         self.total_size_available = total_size_available
-        self.smart_data_size_available = smart_data_size_available
         self.remaining_total_size = remaining_total_size
-        self.remaining_smart_data_size = remaining_smart_data_size
         self.remaining_total_size_percent = remaining_total_size_percent
-        self.remaining_smart_data_size_percent = remaining_smart_data_size_percent
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
