@@ -2,6 +2,21 @@
 
 
 
+## v10.7.0 (2024-09-16)
+
+### Feature
+
+* MINOR: Bcf odata (#772)
+
+* implement odata filters
+
+* add orderby
+
+* factorize
+
+* replace test domains with bimdata.test ([`34ee7c9`](https://github.com/bimdata/python-api-client/commit/34ee7c9d3104f9f3a0a6363b40f38b778f900666))
+
+
 ## v10.6.0 (2024-09-16)
 
 ### Feature
