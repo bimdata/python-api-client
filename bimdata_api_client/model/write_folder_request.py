@@ -96,8 +96,8 @@ class WriteFolderRequest(ModelNormal):
         """
         return {
             'name': (str,),  # noqa: E501
-            'parent_id': (int, none_type,),  # noqa: E501
             'default_permission': (int,),  # noqa: E501
+            'parent_id': (int, none_type,),  # noqa: E501
             'children': ([WriteFolderRequest], none_type,),  # noqa: E501
         }
 
@@ -108,8 +108,8 @@ class WriteFolderRequest(ModelNormal):
 
     attribute_map = {
         'name': 'name',  # noqa: E501
-        'parent_id': 'parent_id',  # noqa: E501
         'default_permission': 'default_permission',  # noqa: E501
+        'parent_id': 'parent_id',  # noqa: E501
         'children': 'children',  # noqa: E501
     }
 
@@ -157,8 +157,8 @@ class WriteFolderRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            parent_id (int, none_type): [optional]  # noqa: E501
             default_permission (int): Permission for a Folder  * `1` - denied * `50` - read_only * `100` - read_write. [optional]  # noqa: E501
+            parent_id (int, none_type): [optional]  # noqa: E501
             children ([WriteFolderRequest], none_type): [optional]  # noqa: E501
         """
 
@@ -245,8 +245,8 @@ class WriteFolderRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            parent_id (int, none_type): [optional]  # noqa: E501
             default_permission (int): Permission for a Folder  * `1` - denied * `50` - read_only * `100` - read_write. [optional]  # noqa: E501
+            parent_id (int, none_type): [optional]  # noqa: E501
             children ([WriteFolderRequest], none_type): [optional]  # noqa: E501
         """
 

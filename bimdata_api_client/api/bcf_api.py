@@ -2107,6 +2107,8 @@ class BcfApi(object):
                 'all': [
                     'projects_pk',
                     'topics_guid',
+                    'filter',
+                    'orderby',
                 ],
                 'required': [
                     'projects_pk',
@@ -2129,14 +2131,22 @@ class BcfApi(object):
                         (int,),
                     'topics_guid':
                         (str,),
+                    'filter':
+                        (str,),
+                    'orderby':
+                        (str,),
                 },
                 'attribute_map': {
                     'projects_pk': 'projects_pk',
                     'topics_guid': 'topics_guid',
+                    'filter': '$filter',
+                    'orderby': '$orderby',
                 },
                 'location_map': {
                     'projects_pk': 'path',
                     'topics_guid': 'path',
+                    'filter': 'query',
+                    'orderby': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -2344,6 +2354,8 @@ class BcfApi(object):
             params_map={
                 'all': [
                     'projects_pk',
+                    'filter',
+                    'orderby',
                     'format',
                     'ifcs',
                     'img_format',
@@ -2372,6 +2384,10 @@ class BcfApi(object):
                 'openapi_types': {
                     'projects_pk':
                         (int,),
+                    'filter':
+                        (str,),
+                    'orderby':
+                        (str,),
                     'format':
                         (str,),
                     'ifcs':
@@ -2383,6 +2399,8 @@ class BcfApi(object):
                 },
                 'attribute_map': {
                     'projects_pk': 'projects_pk',
+                    'filter': '$filter',
+                    'orderby': '$orderby',
                     'format': 'format',
                     'ifcs': 'ifcs',
                     'img_format': 'img_format',
@@ -2390,6 +2408,8 @@ class BcfApi(object):
                 },
                 'location_map': {
                     'projects_pk': 'path',
+                    'filter': 'query',
+                    'orderby': 'query',
                     'format': 'query',
                     'ifcs': 'query',
                     'img_format': 'query',
@@ -2907,6 +2927,8 @@ class BcfApi(object):
             params_map={
                 'all': [
                     'projects_pk',
+                    'filter',
+                    'orderby',
                     'format',
                     'ifcs',
                     'models',
@@ -2929,6 +2951,10 @@ class BcfApi(object):
                 'openapi_types': {
                     'projects_pk':
                         (int,),
+                    'filter':
+                        (str,),
+                    'orderby':
+                        (str,),
                     'format':
                         (str,),
                     'ifcs':
@@ -2938,12 +2964,16 @@ class BcfApi(object):
                 },
                 'attribute_map': {
                     'projects_pk': 'projects_pk',
+                    'filter': '$filter',
+                    'orderby': '$orderby',
                     'format': 'format',
                     'ifcs': 'ifcs',
                     'models': 'models',
                 },
                 'location_map': {
                     'projects_pk': 'path',
+                    'filter': 'query',
+                    'orderby': 'query',
                     'format': 'query',
                     'ifcs': 'query',
                     'models': 'query',
@@ -6792,6 +6822,8 @@ class BcfApi(object):
             topics_guid (str):
 
         Keyword Args:
+            filter (str): OData filters as defined in BCF spec. [optional]
+            orderby (str): OData orderby as defined in BCF spec. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7111,6 +7143,8 @@ class BcfApi(object):
             projects_pk (int):
 
         Keyword Args:
+            filter (str): OData filters as defined in BCF spec. [optional]
+            orderby (str): OData orderby as defined in BCF spec. [optional]
             format (str): [optional]
             ifcs ([int]): [optional]
             img_format (str): All snapshot_data will be returned as url instead of base64. [optional] if omitted the server will use the default value of "url"
@@ -7786,6 +7820,8 @@ class BcfApi(object):
             projects_pk (int):
 
         Keyword Args:
+            filter (str): OData filters as defined in BCF spec. [optional]
+            orderby (str): OData orderby as defined in BCF spec. [optional]
             format (str): [optional]
             ifcs ([int]): [optional]
             models ([int]): [optional]

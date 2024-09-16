@@ -3878,11 +3878,22 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | A unique integer value identifying this project.
     topics_guid = "topics_guid_example" # str | 
+    filter = "$filter_example" # str | OData filters as defined in BCF spec (optional)
+    orderby = "$orderby_example" # str | OData orderby as defined in BCF spec (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Retrieve all comments
         api_response = api_instance.get_comments(projects_pk, topics_guid)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->get_comments: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Retrieve all comments
+        api_response = api_instance.get_comments(projects_pk, topics_guid, filter=filter, orderby=orderby)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->get_comments: %s\n" % e)
@@ -3895,6 +3906,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **int**| A unique integer value identifying this project. |
  **topics_guid** | **str**|  |
+ **filter** | **str**| OData filters as defined in BCF spec | [optional]
+ **orderby** | **str**| OData orderby as defined in BCF spec | [optional]
 
 ### Return type
 
@@ -4303,6 +4316,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
+    filter = "$filter_example" # str | OData filters as defined in BCF spec (optional)
+    orderby = "$orderby_example" # str | OData orderby as defined in BCF spec (optional)
     format = "format_example" # str |  (optional)
     ifcs = [
         1,
@@ -4324,7 +4339,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Retrieve all full topics
-        api_response = api_instance.get_full_topics(projects_pk, format=format, ifcs=ifcs, img_format=img_format, models=models)
+        api_response = api_instance.get_full_topics(projects_pk, filter=filter, orderby=orderby, format=format, ifcs=ifcs, img_format=img_format, models=models)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->get_full_topics: %s\n" % e)
@@ -4336,6 +4351,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **int**|  |
+ **filter** | **str**| OData filters as defined in BCF spec | [optional]
+ **orderby** | **str**| OData orderby as defined in BCF spec | [optional]
  **format** | **str**|  | [optional]
  **ifcs** | **[int]**|  | [optional]
  **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] if omitted the server will use the default value of "url"
@@ -5208,6 +5225,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
+    filter = "$filter_example" # str | OData filters as defined in BCF spec (optional)
+    orderby = "$orderby_example" # str | OData orderby as defined in BCF spec (optional)
     format = "format_example" # str |  (optional)
     ifcs = [
         1,
@@ -5228,7 +5247,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Retrieve all topics
-        api_response = api_instance.get_topics(projects_pk, format=format, ifcs=ifcs, models=models)
+        api_response = api_instance.get_topics(projects_pk, filter=filter, orderby=orderby, format=format, ifcs=ifcs, models=models)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->get_topics: %s\n" % e)
@@ -5240,6 +5259,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **int**|  |
+ **filter** | **str**| OData filters as defined in BCF spec | [optional]
+ **orderby** | **str**| OData orderby as defined in BCF spec | [optional]
  **format** | **str**|  | [optional]
  **ifcs** | **[int]**|  | [optional]
  **models** | **[int]**|  | [optional]
