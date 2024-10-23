@@ -2,6 +2,13 @@
 
 
 
+## v10.8.0 (2024-10-23)
+
+### Feature
+
+* MINOR: add model layout_name for DWG models (#780) ([`e2b806e`](https://github.com/bimdata/python-api-client/commit/e2b806e68bcc0c1d6b9bcbf565e3988057981ff2))
+
+
 ## v10.7.0 (2024-09-16)
 
 ### Feature
