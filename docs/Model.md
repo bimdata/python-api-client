@@ -35,6 +35,7 @@ Name | Type | Description | Notes
 **version** | **str, none_type** | This field is only for information. Updating it won&#39;t impact the export. | [optional] 
 **north_vector** | **[[float]], none_type** | This field is only for information. Updating it won&#39;t impact the export. | [optional] 
 **recommanded_2d_angle** | **float, none_type** | This is the angle in clockwise degree to apply on the 2D to optimise the horizontality of objects. This field is only for information. Updating it won&#39;t impact the export. | [optional] 
+**layout_name** | **str, none_type** | The name of the DWG layout (only set when type&#x3D;&#x3D;DWG) | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

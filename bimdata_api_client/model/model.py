@@ -102,6 +102,9 @@ class Model(ModelNormal):
         ('north_vector',): {
             'max_items': 2,
         },
+        ('layout_name',): {
+            'max_length': 256,
+        },
     }
 
     @cached_property
@@ -158,6 +161,7 @@ class Model(ModelNormal):
             'version': (str, none_type,),  # noqa: E501
             'north_vector': ([[float]], none_type,),  # noqa: E501
             'recommanded_2d_angle': (float, none_type,),  # noqa: E501
+            'layout_name': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -197,6 +201,7 @@ class Model(ModelNormal):
         'version': 'version',  # noqa: E501
         'north_vector': 'north_vector',  # noqa: E501
         'recommanded_2d_angle': 'recommanded_2d_angle',  # noqa: E501
+        'layout_name': 'layout_name',  # noqa: E501
     }
 
     read_only_vars = {
@@ -296,6 +301,7 @@ class Model(ModelNormal):
             version (str, none_type): This field is only for information. Updating it won't impact the export.. [optional]  # noqa: E501
             north_vector ([[float]], none_type): This field is only for information. Updating it won't impact the export.. [optional]  # noqa: E501
             recommanded_2d_angle (float, none_type): This is the angle in clockwise degree to apply on the 2D to optimise the horizontality of objects. This field is only for information. Updating it won't impact the export.. [optional]  # noqa: E501
+            layout_name (str, none_type): The name of the DWG layout (only set when type==DWG). [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -408,6 +414,7 @@ class Model(ModelNormal):
             version (str, none_type): This field is only for information. Updating it won't impact the export.. [optional]  # noqa: E501
             north_vector ([[float]], none_type): This field is only for information. Updating it won't impact the export.. [optional]  # noqa: E501
             recommanded_2d_angle (float, none_type): This is the angle in clockwise degree to apply on the 2D to optimise the horizontality of objects. This field is only for information. Updating it won't impact the export.. [optional]  # noqa: E501
+            layout_name (str, none_type): The name of the DWG layout (only set when type==DWG). [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -3986,6 +3986,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         map_files=[
             open('/path/to/file', 'rb'),
         ],
+        layout_names=[
+            "layout_names_example",
+        ],
     ) # CreateMultiPageModelRequest | 
 
     # example passing only required values which don't have defaults set
@@ -16431,6 +16434,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             ],
         ],
         recommanded_2d_angle=3.14,
+        layout_name="layout_name_example",
     ) # PatchedModelRequest |  (optional)
 
     # example passing only required values which don't have defaults set
