@@ -94,7 +94,6 @@ class PatchedProjectRequest(ModelNormal):
             'name': (str,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
             'status': (str,),  # noqa: E501
-            'parent_id': (int, none_type,),  # noqa: E501
             'main_model_id': (int, none_type,),  # noqa: E501
         }
 
@@ -108,7 +107,6 @@ class PatchedProjectRequest(ModelNormal):
         'name': 'name',  # noqa: E501
         'description': 'description',  # noqa: E501
         'status': 'status',  # noqa: E501
-        'parent_id': 'parent_id',  # noqa: E501
         'main_model_id': 'main_model_id',  # noqa: E501
     }
 
@@ -157,7 +155,6 @@ class PatchedProjectRequest(ModelNormal):
             name (str): Name of the project. [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             status (str): * `A` - active * `D` - deleted. [optional]  # noqa: E501
-            parent_id (int, none_type): [optional]  # noqa: E501
             main_model_id (int, none_type): [optional]  # noqa: E501
         """
 
@@ -244,7 +241,6 @@ class PatchedProjectRequest(ModelNormal):
             name (str): Name of the project. [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             status (str): * `A` - active * `D` - deleted. [optional]  # noqa: E501
-            parent_id (int, none_type): [optional]  # noqa: E501
             main_model_id (int, none_type): [optional]  # noqa: E501
         """
 

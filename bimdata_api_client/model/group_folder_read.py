@@ -95,7 +95,7 @@ class GroupFolderRead(ModelNormal):
         """
         lazy_import()
         return {
-            'group': (Group,),  # noqa: E501
+            'group': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'permission': (int, none_type,),  # noqa: E501
         }
 
@@ -110,6 +110,7 @@ class GroupFolderRead(ModelNormal):
     }
 
     read_only_vars = {
+        'group',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -120,7 +121,7 @@ class GroupFolderRead(ModelNormal):
         """GroupFolderRead - a model defined in OpenAPI
 
         Args:
-            group (Group):
+            group (bool, date, datetime, dict, float, int, list, str, none_type):
             permission (int, none_type): * `1` - denied * `50` - read_only * `100` - read_write
 
         Keyword Args:
@@ -203,11 +204,9 @@ class GroupFolderRead(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, group, permission, *args, **kwargs):  # noqa: E501
+    def __init__(self, permission, *args, **kwargs):  # noqa: E501
         """GroupFolderRead - a model defined in OpenAPI
 
-        Args:
-            group (Group):
             permission (int, none_type): * `1` - denied * `50` - read_only * `100` - read_write
 
         Keyword Args:
@@ -266,7 +265,6 @@ class GroupFolderRead(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.group = group
         self.permission = permission
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \

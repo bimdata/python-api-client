@@ -500,13 +500,6 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
-    def test_get_project_sub_tree(self):
-        """Test case for get_project_sub_tree
-
-        Retrieve the complete projects tree of the cloud  # noqa: E501
-        """
-        pass
-
     def test_get_project_tree(self):
         """Test case for get_project_tree
 

@@ -290,7 +290,6 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_project_folder_tree**](docs/CollaborationApi.md#get_project_folder_tree) | **GET** /cloud/{cloud_pk}/project/{id}/folder-tree | Retrieve folder tree of the project
 *CollaborationApi* | [**get_project_invitations**](docs/CollaborationApi.md#get_project_invitations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/invitation | Retrieve all pending invitations in the project
 *CollaborationApi* | [**get_project_size**](docs/CollaborationApi.md#get_project_size) | **GET** /cloud/{cloud_pk}/project/{id}/size | Get size of all model files in the project
-*CollaborationApi* | [**get_project_sub_tree**](docs/CollaborationApi.md#get_project_sub_tree) | **GET** /cloud/{cloud_pk}/project/subtree | Retrieve the complete projects tree of the cloud
 *CollaborationApi* | [**get_project_tree**](docs/CollaborationApi.md#get_project_tree) | **GET** /cloud/{cloud_pk}/project/{id}/tree | Retrieve the complete DMS tree
 *CollaborationApi* | [**get_project_users**](docs/CollaborationApi.md#get_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user | Retrieve all users in a project, or a list with a filter by email
 *CollaborationApi* | [**get_project_validator_visas**](docs/CollaborationApi.md#get_project_validator_visas) | **GET** /cloud/{cloud_pk}/project/{project_pk}/me/visa/validator | List visas where user is a validator

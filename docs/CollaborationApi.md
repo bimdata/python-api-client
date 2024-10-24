@@ -72,7 +72,6 @@ Method | HTTP request | Description
 [**get_project_folder_tree**](CollaborationApi.md#get_project_folder_tree) | **GET** /cloud/{cloud_pk}/project/{id}/folder-tree | Retrieve folder tree of the project
 [**get_project_invitations**](CollaborationApi.md#get_project_invitations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/invitation | Retrieve all pending invitations in the project
 [**get_project_size**](CollaborationApi.md#get_project_size) | **GET** /cloud/{cloud_pk}/project/{id}/size | Get size of all model files in the project
-[**get_project_sub_tree**](CollaborationApi.md#get_project_sub_tree) | **GET** /cloud/{cloud_pk}/project/subtree | Retrieve the complete projects tree of the cloud
 [**get_project_tree**](CollaborationApi.md#get_project_tree) | **GET** /cloud/{cloud_pk}/project/{id}/tree | Retrieve the complete DMS tree
 [**get_project_users**](CollaborationApi.md#get_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user | Retrieve all users in a project, or a list with a filter by email
 [**get_project_validator_visas**](CollaborationApi.md#get_project_validator_visas) | **GET** /cloud/{cloud_pk}/project/{project_pk}/me/visa/validator | List visas where user is a validator
@@ -1482,8 +1481,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this project.
     write_folder_request = [
         WriteFolderRequest(
-            name="name_example",
             default_permission=1,
+            name="name_example",
             parent_id=1,
             children=[
                 WriteFolderRequest(),
@@ -1541,7 +1540,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'IFC', 'GLTF', 'OBJ', 'DXF', 'POINT_CLOUD', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'DXF', 'IFC', 'POINT_CLOUD', 'GLTF', 'DWG', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -1960,7 +1959,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         name="name_example",
         description="description_example",
         status="A",
-        parent_id=1,
         main_model_id=1,
     ) # ProjectRequest | 
 
@@ -7625,108 +7623,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_project_sub_tree**
-> [ProjectWithChildren] get_project_sub_tree(cloud_pk)
-
-Retrieve the complete projects tree of the cloud
-
-Retrieve the complete projects tree of the cloud
-
-### Example
-
-* Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
-* Api Key Authentication (Bearer):
-
-```python
-import time
-import bimdata_api_client
-from bimdata_api_client.api import collaboration_api
-from bimdata_api_client.model.project_with_children import ProjectWithChildren
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: ApiKey
-configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure API key authorization: Bearer
-configuration.api_key['Bearer'] = 'YOUR_API_KEY'
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Bearer'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = collaboration_api.CollaborationApi(api_client)
-    cloud_pk = 1 # int | 
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Retrieve the complete projects tree of the cloud
-        api_response = api_instance.get_project_sub_tree(cloud_pk)
-        pprint(api_response)
-    except bimdata_api_client.ApiException as e:
-        print("Exception when calling CollaborationApi->get_project_sub_tree: %s\n" % e)
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **int**|  |
-
-### Return type
-
-[**[ProjectWithChildren]**](ProjectWithChildren.md)
-
-### Authorization
-
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **get_project_tree**
 > Folder get_project_tree(cloud_pk, id)
 
@@ -11595,7 +11491,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         name="name_example",
         description="description_example",
         status="A",
-        parent_id=1,
         main_model_id=1,
     ) # PatchedProjectRequest |  (optional)
 

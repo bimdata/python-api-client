@@ -99,7 +99,6 @@ class ProjectWithChildren(ModelNormal):
             'logo': (str, none_type,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
             'status': (str,),  # noqa: E501
-            'parent_id': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -118,7 +117,6 @@ class ProjectWithChildren(ModelNormal):
         'logo': 'logo',  # noqa: E501
         'description': 'description',  # noqa: E501
         'status': 'status',  # noqa: E501
-        'parent_id': 'parent_id',  # noqa: E501
     }
 
     read_only_vars = {
@@ -180,7 +178,6 @@ class ProjectWithChildren(ModelNormal):
             logo (str, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             status (str): * `A` - active * `D` - deleted. [optional]  # noqa: E501
-            parent_id (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -273,7 +270,6 @@ class ProjectWithChildren(ModelNormal):
             logo (str, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             status (str): * `A` - active * `D` - deleted. [optional]  # noqa: E501
-            parent_id (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
