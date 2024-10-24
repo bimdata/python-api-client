@@ -2,6 +2,13 @@
 
 
 
+## v10.9.0 (2024-10-24)
+
+### Feature
+
+* MINOR: remove sub projects (#782) ([`640445c`](https://github.com/bimdata/python-api-client/commit/640445c300a0cb1823c3378191645bbb1ad852e6))
+
+
 ## v10.8.0 (2024-10-23)
 
 ### Feature
