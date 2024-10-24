@@ -2,6 +2,13 @@
 
 
 
+## v10.9.1 (2024-10-24)
+
+### Fix
+
+* PATCH: fix swagger with project children ([`f6ec7a8`](https://github.com/bimdata/python-api-client/commit/f6ec7a8583be703eb018ed22686b2da69bd88a8c))
+
+
 ## v10.9.0 (2024-10-24)
 
 ### Feature
