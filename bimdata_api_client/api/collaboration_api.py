@@ -62,7 +62,6 @@ from bimdata_api_client.model.project_invitation import ProjectInvitation
 from bimdata_api_client.model.project_invitation_request import ProjectInvitationRequest
 from bimdata_api_client.model.project_request import ProjectRequest
 from bimdata_api_client.model.project_size import ProjectSize
-from bimdata_api_client.model.project_with_children import ProjectWithChildren
 from bimdata_api_client.model.self_user import SelfUser
 from bimdata_api_client.model.size import Size
 from bimdata_api_client.model.tag import Tag
@@ -4399,7 +4398,7 @@ class CollaborationApi(object):
         )
         self.get_project_endpoint = _Endpoint(
             settings={
-                'response_type': (ProjectWithChildren,),
+                'response_type': (Project,),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -8806,7 +8805,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'DXF', 'IFC', 'POINT_CLOUD', 'GLTF', 'DWG', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'GLTF', 'OBJ', 'IFC', 'DWG', 'DXF', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -12906,7 +12905,7 @@ class CollaborationApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            ProjectWithChildren
+            Project
                 If the method is called asynchronously, returns the request
                 thread.
         """

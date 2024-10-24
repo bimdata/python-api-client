@@ -653,7 +653,6 @@ Class | Method | HTTP request | Description
  - [ProjectRequest](docs/ProjectRequest.md)
  - [ProjectRole](docs/ProjectRole.md)
  - [ProjectSize](docs/ProjectSize.md)
- - [ProjectWithChildren](docs/ProjectWithChildren.md)
  - [PropertyDefinition](docs/PropertyDefinition.md)
  - [PropertyDefinitionRequest](docs/PropertyDefinitionRequest.md)
  - [PropertyRequest](docs/PropertyRequest.md)

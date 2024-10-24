@@ -1482,8 +1482,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     write_folder_request = [
         WriteFolderRequest(
             default_permission=1,
-            name="name_example",
             parent_id=1,
+            name="name_example",
             children=[
                 WriteFolderRequest(),
             ],
@@ -1540,7 +1540,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'DXF', 'IFC', 'POINT_CLOUD', 'GLTF', 'DWG', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'GLTF', 'OBJ', 'IFC', 'DWG', 'DXF', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -6767,7 +6767,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project**
-> ProjectWithChildren get_project(cloud_pk, id)
+> Project get_project(cloud_pk, id)
 
 Retrieve a project
 
@@ -6784,7 +6784,7 @@ Retrieve a project
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
-from bimdata_api_client.model.project_with_children import ProjectWithChildren
+from bimdata_api_client.model.project import Project
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -6847,7 +6847,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProjectWithChildren**](ProjectWithChildren.md)
+[**Project**](Project.md)
 
 ### Authorization
 

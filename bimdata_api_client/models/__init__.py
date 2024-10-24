@@ -161,7 +161,6 @@ from bimdata_api_client.model.project_invitation_request import ProjectInvitatio
 from bimdata_api_client.model.project_request import ProjectRequest
 from bimdata_api_client.model.project_role import ProjectRole
 from bimdata_api_client.model.project_size import ProjectSize
-from bimdata_api_client.model.project_with_children import ProjectWithChildren
 from bimdata_api_client.model.property_definition import PropertyDefinition
 from bimdata_api_client.model.property_definition_request import PropertyDefinitionRequest
 from bimdata_api_client.model.property_request import PropertyRequest
