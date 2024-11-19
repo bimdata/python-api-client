@@ -1481,9 +1481,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this project.
     write_folder_request = [
         WriteFolderRequest(
+            name="name_example",
             default_permission=1,
             parent_id=1,
-            name="name_example",
             children=[
                 WriteFolderRequest(),
             ],
@@ -1540,7 +1540,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'GLTF', 'OBJ', 'IFC', 'DWG', 'DXF', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'OBJ', 'IFC', 'GLTF', 'DXF', 'POINT_CLOUD', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -1604,6 +1604,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     model_source = "UPLOAD" # str | Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED (optional)
     ifc_source = "UPLOAD" # str | DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED (optional)
     successor_of = 1 # int | Old document version to replace. Only for create (optional)
+    process_hint = "PHOTOSPHERE" # str | Provide a info about the document in order to customize the way it is processed.  * `PHOTOSPHERE` - PHOTOSPHERE (optional) if omitted the server will use the default value of "PHOTOSPHERE"
 
     # example passing only required values which don't have defaults set
     try:
@@ -1617,7 +1618,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Create a document
-        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent_id=parent_id, file_name=file_name, description=description, model_source=model_source, ifc_source=ifc_source, successor_of=successor_of)
+        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent_id=parent_id, file_name=file_name, description=description, model_source=model_source, ifc_source=ifc_source, successor_of=successor_of, process_hint=process_hint)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->create_document: %s\n" % e)
@@ -1638,6 +1639,7 @@ Name | Type | Description  | Notes
  **model_source** | **str**| Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED | [optional]
  **ifc_source** | **str**| DEPRECATED: Use &#39;model_source&#39; instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED | [optional]
  **successor_of** | **int**| Old document version to replace. Only for create | [optional]
+ **process_hint** | **str**| Provide a info about the document in order to customize the way it is processed.  * &#x60;PHOTOSPHERE&#x60; - PHOTOSPHERE | [optional] if omitted the server will use the default value of "PHOTOSPHERE"
 
 ### Return type
 
@@ -10875,6 +10877,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         model_source="UPLOAD",
         ifc_source="UPLOAD",
         successor_of=1,
+        process_hint="PHOTOSPHERE",
     ) # PatchedDocumentRequest |  (optional)
 
     # example passing only required values which don't have defaults set

@@ -962,6 +962,7 @@ class CollaborationApi(object):
                     'model_source',
                     'ifc_source',
                     'successor_of',
+                    'process_hint',
                 ],
                 'required': [
                     'cloud_pk',
@@ -976,6 +977,7 @@ class CollaborationApi(object):
                 'enum': [
                     'model_source',
                     'ifc_source',
+                    'process_hint',
                 ],
                 'validation': [
                     'name',
@@ -1010,6 +1012,10 @@ class CollaborationApi(object):
                         "EXPORT": "EXPORT",
                         "OPTIMIZED": "OPTIMIZED"
                     },
+                    ('process_hint',): {
+
+                        "PHOTOSPHERE": "PHOTOSPHERE"
+                    },
                 },
                 'openapi_types': {
                     'cloud_pk':
@@ -1032,6 +1038,8 @@ class CollaborationApi(object):
                         (str,),
                     'successor_of':
                         (int,),
+                    'process_hint':
+                        (str,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -1044,6 +1052,7 @@ class CollaborationApi(object):
                     'model_source': 'model_source',
                     'ifc_source': 'ifc_source',
                     'successor_of': 'successor_of',
+                    'process_hint': 'process_hint',
                 },
                 'location_map': {
                     'cloud_pk': 'path',
@@ -1056,6 +1065,7 @@ class CollaborationApi(object):
                     'model_source': 'form',
                     'ifc_source': 'form',
                     'successor_of': 'form',
+                    'process_hint': 'form',
                 },
                 'collection_format_map': {
                 }
@@ -8805,7 +8815,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'GLTF', 'OBJ', 'IFC', 'DWG', 'DXF', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'OBJ', 'IFC', 'GLTF', 'DXF', 'POINT_CLOUD', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -8825,6 +8835,7 @@ class CollaborationApi(object):
             model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]
             ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]
             successor_of (int): Old document version to replace. Only for create. [optional]
+            process_hint (str): Provide a info about the document in order to customize the way it is processed.  * `PHOTOSPHERE` - PHOTOSPHERE. [optional] if omitted the server will use the default value of "PHOTOSPHERE"
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

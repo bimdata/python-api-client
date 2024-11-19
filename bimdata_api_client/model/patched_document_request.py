@@ -70,6 +70,9 @@ class PatchedDocumentRequest(ModelNormal):
             'EXPORT': "EXPORT",
             'OPTIMIZED': "OPTIMIZED",
         },
+        ('process_hint',): {
+            'PHOTOSPHERE': "PHOTOSPHERE",
+        },
     }
 
     validations = {
@@ -112,6 +115,7 @@ class PatchedDocumentRequest(ModelNormal):
             'model_source': (str,),  # noqa: E501
             'ifc_source': (str,),  # noqa: E501
             'successor_of': (int,),  # noqa: E501
+            'process_hint': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -128,6 +132,7 @@ class PatchedDocumentRequest(ModelNormal):
         'model_source': 'model_source',  # noqa: E501
         'ifc_source': 'ifc_source',  # noqa: E501
         'successor_of': 'successor_of',  # noqa: E501
+        'process_hint': 'process_hint',  # noqa: E501
     }
 
     read_only_vars = {
@@ -179,6 +184,7 @@ class PatchedDocumentRequest(ModelNormal):
             model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]  # noqa: E501
             ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]  # noqa: E501
             successor_of (int): Old document version to replace. Only for create. [optional]  # noqa: E501
+            process_hint (str): Provide a info about the document in order to customize the way it is processed.  * `PHOTOSPHERE` - PHOTOSPHERE. [optional] if omitted the server will use the default value of "PHOTOSPHERE"  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -268,6 +274,7 @@ class PatchedDocumentRequest(ModelNormal):
             model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]  # noqa: E501
             ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]  # noqa: E501
             successor_of (int): Old document version to replace. Only for create. [optional]  # noqa: E501
+            process_hint (str): Provide a info about the document in order to customize the way it is processed.  * `PHOTOSPHERE` - PHOTOSPHERE. [optional] if omitted the server will use the default value of "PHOTOSPHERE"  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -13347,7 +13347,7 @@ class ModelApi(object):
     ):
         """Create a relation between a 2d model and a building  # noqa: E501
 
-        Create a relation between a 2d model and a building. The model type must be one of : ('DWG', 'DXF', 'PDF', 'JPEG', 'PNG')  Required scopes: ifc:write, model:write  # noqa: E501
+        Create a relation between a 2d model and a building. The model type must be one of : ('DWG', 'DXF', 'PDF', 'JPEG', 'PNG', 'PHOTOSPHERE')  Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -15356,7 +15356,7 @@ class ModelApi(object):
     ):
         """Create a relation between a 2d model and a storey  # noqa: E501
 
-        Create a relation between a 2d model and a storey. The model type must be one of : ('DWG', 'DXF', 'PDF', 'JPEG', 'PNG')  Required scopes: ifc:write, model:write  # noqa: E501
+        Create a relation between a 2d model and a storey. The model type must be one of : ('DWG', 'DXF', 'PDF', 'JPEG', 'PNG', 'PHOTOSPHERE')  Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
