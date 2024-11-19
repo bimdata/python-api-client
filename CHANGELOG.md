@@ -2,6 +2,17 @@
 
 
 
+## v10.9.2 (2024-11-19)
+
+### Fix
+
+* PATCH: fix(storey): allow to add photosphere as storey plan + fix process_hint on createDocument (#790)
+
+* fix(storey): allow to add photosphere as storey plan
+
+* fix(storey): create STOREY_CHILD_TYPES list + add &#39;process_hint&#39; to Docuemnt serializer fields ([`556b744`](https://github.com/bimdata/python-api-client/commit/556b74415c6ab771fb6a09bc314a5f3764d6b9de))
+
+
 ## v10.9.1 (2024-10-24)
 
 ### Fix
