@@ -21,7 +21,6 @@ prerelease = false
 
 [semantic_release.changelog]
 template_dir = "templates"
-changelog_file = "CHANGELOG.md"
 exclude_commit_patterns = []
 
 [semantic_release.changelog.environment]
