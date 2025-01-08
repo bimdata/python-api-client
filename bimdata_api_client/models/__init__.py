@@ -91,6 +91,8 @@ from bimdata_api_client.model.material_list_component_request import MaterialLis
 from bimdata_api_client.model.material_option import MaterialOption
 from bimdata_api_client.model.material_request import MaterialRequest
 from bimdata_api_client.model.model import Model
+from bimdata_api_client.model.model_document import ModelDocument
+from bimdata_api_client.model.model_document_request import ModelDocumentRequest
 from bimdata_api_client.model.model_errors import ModelErrors
 from bimdata_api_client.model.model_errors_request import ModelErrorsRequest
 from bimdata_api_client.model.model_files import ModelFiles

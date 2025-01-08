@@ -96,6 +96,8 @@ bimdata_api_client/model/material_list_component_request.py
 bimdata_api_client/model/material_option.py
 bimdata_api_client/model/material_request.py
 bimdata_api_client/model/model.py
+bimdata_api_client/model/model_document.py
+bimdata_api_client/model/model_document_request.py
 bimdata_api_client/model/model_errors.py
 bimdata_api_client/model/model_errors_request.py
 bimdata_api_client/model/model_files.py
@@ -345,6 +347,8 @@ docs/MaterialOption.md
 docs/MaterialRequest.md
 docs/Model.md
 docs/ModelApi.md
+docs/ModelDocument.md
+docs/ModelDocumentRequest.md
 docs/ModelErrors.md
 docs/ModelErrorsRequest.md
 docs/ModelFiles.md
@@ -597,6 +601,8 @@ test/test_material_option.py
 test/test_material_request.py
 test/test_model.py
 test/test_model_api.py
+test/test_model_document.py
+test/test_model_document_request.py
 test/test_model_errors.py
 test/test_model_errors_request.py
 test/test_model_files.py

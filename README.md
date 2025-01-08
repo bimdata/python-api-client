@@ -583,6 +583,8 @@ Class | Method | HTTP request | Description
  - [MaterialOption](docs/MaterialOption.md)
  - [MaterialRequest](docs/MaterialRequest.md)
  - [Model](docs/Model.md)
+ - [ModelDocument](docs/ModelDocument.md)
+ - [ModelDocumentRequest](docs/ModelDocumentRequest.md)
  - [ModelErrors](docs/ModelErrors.md)
  - [ModelErrorsRequest](docs/ModelErrorsRequest.md)
  - [ModelFiles](docs/ModelFiles.md)
