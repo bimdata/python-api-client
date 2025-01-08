@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.10.0 (2025-01-08)
+
+### Feature
+
+- Minor: remove some document fields in model.document serialization
+  ([`feb0558`](https://github.com/bimdata/python-api-client/commit/feb05588959dc9ee5c3468019c8681673841fc82))
+
+* improve storey performances
+
+* add comments
+
+
 ## v10.9.3 (2024-11-19)
 
 ### Fix
