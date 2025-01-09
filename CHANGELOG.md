@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.10.2 (2025-01-09)
+
+### Fix
+
+- Patch: PEP 625
+  ([`a607ff0`](https://github.com/bimdata/python-api-client/commit/a607ff0522f3323b18cdb5618fcbde9cd4a65916))
+
+
 ## v10.10.1 (2025-01-09)
 
 ### Fix
