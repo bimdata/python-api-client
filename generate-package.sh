@@ -34,7 +34,7 @@ java \
   -o $OUTPUT \
   --additional-properties \
 packageName=bimdata_api_client,\
-projectName=bimdata-api-client,\
+projectName=bimdata_api_client,\
 packageUrl=https://github.com/bimdata/python-api-client
 
 exit 0
