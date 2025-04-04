@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.project_import_request import ProjectImportRequest
+import bimdata-api-client
+from bimdata-api-client.model.project_import_request import ProjectImportRequest
 
 
 class TestProjectImportRequest(unittest.TestCase):

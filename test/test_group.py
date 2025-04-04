@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.user_project import UserProject
+import bimdata-api-client
+from bimdata-api-client.model.user_project import UserProject
 globals()['UserProject'] = UserProject
-from bimdata_api_client.model.group import Group
+from bimdata-api-client.model.group import Group
 
 
 class TestGroup(unittest.TestCase):

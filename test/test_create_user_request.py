@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.create_user_request import CreateUserRequest
+import bimdata-api-client
+from bimdata-api-client.model.create_user_request import CreateUserRequest
 
 
 class TestCreateUserRequest(unittest.TestCase):

@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.xkt_file import XktFile
+import bimdata-api-client
+from bimdata-api-client.model.xkt_file import XktFile
 
 
 class TestXktFile(unittest.TestCase):

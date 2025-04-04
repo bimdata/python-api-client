@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.patched_ifc_access_token_request import PatchedIfcAccessTokenRequest
+import bimdata-api-client
+from bimdata-api-client.model.patched_ifc_access_token_request import PatchedIfcAccessTokenRequest
 
 
 class TestPatchedIfcAccessTokenRequest(unittest.TestCase):

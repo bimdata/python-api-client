@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.select_user_request import SelectUserRequest
+import bimdata-api-client
+from bimdata-api-client.model.select_user_request import SelectUserRequest
 
 
 class TestSelectUserRequest(unittest.TestCase):

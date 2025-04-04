@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.direction import Direction
+import bimdata-api-client
+from bimdata-api-client.model.direction import Direction
 
 
 class TestDirection(unittest.TestCase):

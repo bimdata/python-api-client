@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.direction_request import DirectionRequest
-from bimdata_api_client.model.point_request import PointRequest
+import bimdata-api-client
+from bimdata-api-client.model.direction_request import DirectionRequest
+from bimdata-api-client.model.point_request import PointRequest
 globals()['DirectionRequest'] = DirectionRequest
 globals()['PointRequest'] = PointRequest
-from bimdata_api_client.model.clipping_plane_request import ClippingPlaneRequest
+from bimdata-api-client.model.clipping_plane_request import ClippingPlaneRequest
 
 
 class TestClippingPlaneRequest(unittest.TestCase):

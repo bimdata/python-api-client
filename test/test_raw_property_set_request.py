@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.raw_property_request import RawPropertyRequest
+import bimdata-api-client
+from bimdata-api-client.model.raw_property_request import RawPropertyRequest
 globals()['RawPropertyRequest'] = RawPropertyRequest
-from bimdata_api_client.model.raw_property_set_request import RawPropertySetRequest
+from bimdata-api-client.model.raw_property_set_request import RawPropertySetRequest
 
 
 class TestRawPropertySetRequest(unittest.TestCase):

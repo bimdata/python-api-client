@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.material_request import MaterialRequest
+import bimdata-api-client
+from bimdata-api-client.model.material_request import MaterialRequest
 globals()['MaterialRequest'] = MaterialRequest
-from bimdata_api_client.model.material_list_component_request import MaterialListComponentRequest
+from bimdata-api-client.model.material_list_component_request import MaterialListComponentRequest
 
 
 class TestMaterialListComponentRequest(unittest.TestCase):

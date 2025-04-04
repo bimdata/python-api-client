@@ -11,8 +11,8 @@
 
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.api.webhook_api import WebhookApi  # noqa: E501
+import bimdata-api-client
+from bimdata-api-client.api.webhook_api import WebhookApi  # noqa: E501
 
 
 class TestWebhookApi(unittest.TestCase):

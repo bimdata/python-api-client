@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.classification import Classification
+import bimdata-api-client
+from bimdata-api-client.model.classification import Classification
 
 
 class TestClassification(unittest.TestCase):

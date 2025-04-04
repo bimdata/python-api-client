@@ -11,8 +11,8 @@
 
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.api.model_api import ModelApi  # noqa: E501
+import bimdata-api-client
+from bimdata-api-client.api.model_api import ModelApi  # noqa: E501
 
 
 class TestModelApi(unittest.TestCase):

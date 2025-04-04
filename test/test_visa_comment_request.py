@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.visa_comment_request import VisaCommentRequest
+import bimdata-api-client
+from bimdata-api-client.model.visa_comment_request import VisaCommentRequest
 
 
 class TestVisaCommentRequest(unittest.TestCase):

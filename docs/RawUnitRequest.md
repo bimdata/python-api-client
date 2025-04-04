@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **name** | **str, none_type** |  | [optional] 
 **unit_type** | **str, none_type** |  | [optional] 
 **prefix** | **str, none_type** |  | [optional] 
-**elements** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** |  | [optional] 
+**elements** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **conversion_factor** | **float, none_type** |  | [optional] 
 **dimensions** | **[float], none_type** |  | [optional] 
 **conversion_baseunit_index** | **int, none_type** |  | [optional] 

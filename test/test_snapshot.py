@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.snapshot import Snapshot
+import bimdata-api-client
+from bimdata-api-client.model.snapshot import Snapshot
 
 
 class TestSnapshot(unittest.TestCase):

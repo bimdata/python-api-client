@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.organization_request import OrganizationRequest
+import bimdata-api-client
+from bimdata-api-client.model.organization_request import OrganizationRequest
 
 
 class TestOrganizationRequest(unittest.TestCase):

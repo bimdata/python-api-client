@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.point_request import PointRequest
+import bimdata-api-client
+from bimdata-api-client.model.point_request import PointRequest
 globals()['PointRequest'] = PointRequest
-from bimdata_api_client.model.line_request import LineRequest
+from bimdata-api-client.model.line_request import LineRequest
 
 
 class TestLineRequest(unittest.TestCase):

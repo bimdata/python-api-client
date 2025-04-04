@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.group_folder_read import GroupFolderRead
-from bimdata_api_client.model.recursive_folder_children import RecursiveFolderChildren
-from bimdata_api_client.model.short_user import ShortUser
+import bimdata-api-client
+from bimdata-api-client.model.group_folder_read import GroupFolderRead
+from bimdata-api-client.model.recursive_folder_children import RecursiveFolderChildren
+from bimdata-api-client.model.short_user import ShortUser
 globals()['GroupFolderRead'] = GroupFolderRead
 globals()['RecursiveFolderChildren'] = RecursiveFolderChildren
 globals()['ShortUser'] = ShortUser
-from bimdata_api_client.model.folder import Folder
+from bimdata-api-client.model.folder import Folder
 
 
 class TestFolder(unittest.TestCase):

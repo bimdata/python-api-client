@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.cloud_role import CloudRole
-from bimdata_api_client.model.organization import Organization
-from bimdata_api_client.model.project_role import ProjectRole
+import bimdata-api-client
+from bimdata-api-client.model.cloud_role import CloudRole
+from bimdata-api-client.model.organization import Organization
+from bimdata-api-client.model.project_role import ProjectRole
 globals()['CloudRole'] = CloudRole
 globals()['Organization'] = Organization
 globals()['ProjectRole'] = ProjectRole
-from bimdata_api_client.model.self_user import SelfUser
+from bimdata-api-client.model.self_user import SelfUser
 
 
 class TestSelfUser(unittest.TestCase):

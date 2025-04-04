@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.feature import Feature
+import bimdata-api-client
+from bimdata-api-client.model.feature import Feature
 
 
 class TestFeature(unittest.TestCase):

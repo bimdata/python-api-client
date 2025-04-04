@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.ifc_optimize_request import IfcOptimizeRequest
+import bimdata-api-client
+from bimdata-api-client.model.ifc_optimize_request import IfcOptimizeRequest
 
 
 class TestIfcOptimizeRequest(unittest.TestCase):

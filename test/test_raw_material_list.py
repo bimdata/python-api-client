@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.raw_material import RawMaterial
-from bimdata_api_client.model.raw_material_list_components import RawMaterialListComponents
-from bimdata_api_client.model.raw_material_options import RawMaterialOptions
+import bimdata-api-client
+from bimdata-api-client.model.raw_material import RawMaterial
+from bimdata-api-client.model.raw_material_list_components import RawMaterialListComponents
+from bimdata-api-client.model.raw_material_options import RawMaterialOptions
 globals()['RawMaterial'] = RawMaterial
 globals()['RawMaterialListComponents'] = RawMaterialListComponents
 globals()['RawMaterialOptions'] = RawMaterialOptions
-from bimdata_api_client.model.raw_material_list import RawMaterialList
+from bimdata-api-client.model.raw_material_list import RawMaterialList
 
 
 class TestRawMaterialList(unittest.TestCase):

@@ -11,8 +11,8 @@
 
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.api.collaboration_api import CollaborationApi  # noqa: E501
+import bimdata-api-client
+from bimdata-api-client.api.collaboration_api import CollaborationApi  # noqa: E501
 
 
 class TestCollaborationApi(unittest.TestCase):

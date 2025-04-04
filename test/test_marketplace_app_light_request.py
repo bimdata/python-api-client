@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.marketplace_app_light_request import MarketplaceAppLightRequest
+import bimdata-api-client
+from bimdata-api-client.model.marketplace_app_light_request import MarketplaceAppLightRequest
 
 
 class TestMarketplaceAppLightRequest(unittest.TestCase):

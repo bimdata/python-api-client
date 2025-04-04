@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.element_property_set_relation_request import ElementPropertySetRelationRequest
+import bimdata-api-client
+from bimdata-api-client.model.element_property_set_relation_request import ElementPropertySetRelationRequest
 
 
 class TestElementPropertySetRelationRequest(unittest.TestCase):

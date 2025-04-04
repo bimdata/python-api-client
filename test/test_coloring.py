@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.component import Component
+import bimdata-api-client
+from bimdata-api-client.model.component import Component
 globals()['Component'] = Component
-from bimdata_api_client.model.coloring import Coloring
+from bimdata-api-client.model.coloring import Coloring
 
 
 class TestColoring(unittest.TestCase):

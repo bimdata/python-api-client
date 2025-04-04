@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.light_document import LightDocument
+import bimdata-api-client
+from bimdata-api-client.model.light_document import LightDocument
 
 
 class TestLightDocument(unittest.TestCase):

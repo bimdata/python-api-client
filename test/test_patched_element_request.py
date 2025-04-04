@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.classification_request import ClassificationRequest
-from bimdata_api_client.model.layer_element_request import LayerElementRequest
-from bimdata_api_client.model.property_set_request import PropertySetRequest
+import bimdata-api-client
+from bimdata-api-client.model.classification_request import ClassificationRequest
+from bimdata-api-client.model.layer_element_request import LayerElementRequest
+from bimdata-api-client.model.property_set_request import PropertySetRequest
 globals()['ClassificationRequest'] = ClassificationRequest
 globals()['LayerElementRequest'] = LayerElementRequest
 globals()['PropertySetRequest'] = PropertySetRequest
-from bimdata_api_client.model.patched_element_request import PatchedElementRequest
+from bimdata-api-client.model.patched_element_request import PatchedElementRequest
 
 
 class TestPatchedElementRequest(unittest.TestCase):

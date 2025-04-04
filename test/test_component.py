@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.component import Component
+import bimdata-api-client
+from bimdata-api-client.model.component import Component
 
 
 class TestComponent(unittest.TestCase):

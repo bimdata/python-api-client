@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.property_request import PropertyRequest
+import bimdata-api-client
+from bimdata-api-client.model.property_request import PropertyRequest
 globals()['PropertyRequest'] = PropertyRequest
-from bimdata_api_client.model.patched_property_set_request import PatchedPropertySetRequest
+from bimdata-api-client.model.patched_property_set_request import PatchedPropertySetRequest
 
 
 class TestPatchedPropertySetRequest(unittest.TestCase):

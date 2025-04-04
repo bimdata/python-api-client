@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **comments** | [**[CommentRequest]**](CommentRequest.md) |  | [optional] 
 **viewpoints** | [**[ViewpointRequest]**](ViewpointRequest.md) |  | [optional] 
 **project** | **int** |  | [optional] 
-**bimdata_viewer_layout** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** | Non standard field. JSON describing bimdataViewerLayout. | [optional] 
+**bimdata_viewer_layout** | **bool, date, datetime, dict, float, int, list, str, none_type** | Non standard field. JSON describing bimdataViewerLayout. | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

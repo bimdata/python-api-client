@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.zone_request import ZoneRequest
-from bimdata_api_client.model.zone_space_request import ZoneSpaceRequest
-globals()['ZoneRequest'] = ZoneRequest
+import bimdata-api-client
+from bimdata-api-client.model.zone import Zone
+from bimdata-api-client.model.zone_space_request import ZoneSpaceRequest
+globals()['Zone'] = Zone
 globals()['ZoneSpaceRequest'] = ZoneSpaceRequest
-from bimdata_api_client.model.patched_zone_request import PatchedZoneRequest
+from bimdata-api-client.model.patched_zone_request import PatchedZoneRequest
 
 
 class TestPatchedZoneRequest(unittest.TestCase):

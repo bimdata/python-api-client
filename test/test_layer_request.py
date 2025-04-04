@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.layer_request import LayerRequest
+import bimdata-api-client
+from bimdata-api-client.model.layer_request import LayerRequest
 
 
 class TestLayerRequest(unittest.TestCase):

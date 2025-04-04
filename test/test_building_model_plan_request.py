@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.building_model_plan_request import BuildingModelPlanRequest
+import bimdata-api-client
+from bimdata-api-client.model.building_model_plan_request import BuildingModelPlanRequest
 
 
 class TestBuildingModelPlanRequest(unittest.TestCase):

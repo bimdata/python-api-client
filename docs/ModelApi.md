@@ -1,4 +1,4 @@
-# bimdata_api_client.ModelApi
+# bimdata-api-client.ModelApi
 
 All URIs are relative to *http://localhost*
 
@@ -177,14 +177,14 @@ Model errors are warnings and errors during model process. They alert about miss
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.model_errors import ModelErrors
-from bimdata_api_client.model.model_errors_request import ModelErrorsRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.model_errors_request import ModelErrorsRequest
+from bimdata-api-client.model.model_errors import ModelErrors
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -200,13 +200,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -218,7 +218,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -238,7 +238,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Add errors to model
         api_response = api_instance.add_model_errors(cloud_pk, id, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->add_model_errors: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -247,7 +247,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Add errors to model
         api_response = api_instance.add_model_errors(cloud_pk, id, project_pk, model_errors_request=model_errors_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->add_model_errors: %s\n" % e)
 ```
 
@@ -304,14 +304,14 @@ Add a space to a zone. The IFC file will not be updated. The created space will 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.zone_space_relation_request import ZoneSpaceRelationRequest
-from bimdata_api_client.model.zone_space import ZoneSpace
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.zone_space import ZoneSpace
+from bimdata-api-client.model.zone_space_relation_request import ZoneSpaceRelationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -327,13 +327,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -345,7 +345,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -362,7 +362,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Add a space to a zone
         api_response = api_instance.add_zone_space(cloud_pk, model_pk, project_pk, zone_pk, zone_space_relation_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->add_zone_space: %s\n" % e)
 ```
 
@@ -420,13 +420,13 @@ Delete relation between filtered classifications (eg. /classifications?name=unte
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.classification_request import ClassificationRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.classification_request import ClassificationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -442,13 +442,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -460,7 +460,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -476,7 +476,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Remove all classifications from model's elements
         api_instance.bulk_delete_model_classifications(cloud_pk, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->bulk_delete_model_classifications: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -484,7 +484,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Remove all classifications from model's elements
         api_instance.bulk_delete_model_classifications(cloud_pk, model_pk, project_pk, classification_request=classification_request)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->bulk_delete_model_classifications: %s\n" % e)
 ```
 
@@ -541,12 +541,12 @@ Delete many Property of a model
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -562,13 +562,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -580,7 +580,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -594,7 +594,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete many Property of a model
         api_instance.bulk_delete_model_properties(cloud_pk, model_pk, project_pk, request_body)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->bulk_delete_model_properties: %s\n" % e)
 ```
 
@@ -651,12 +651,12 @@ Delete many PropertyDefinitions of a model
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -672,13 +672,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -690,7 +690,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -704,7 +704,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete many PropertyDefinitions of a model
         api_instance.bulk_delete_model_property_definitions(cloud_pk, model_pk, project_pk, request_body)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->bulk_delete_model_property_definitions: %s\n" % e)
 ```
 
@@ -761,12 +761,12 @@ Delete many Units of a model
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -782,13 +782,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -800,7 +800,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -814,7 +814,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete many Units of a model
         api_instance.bulk_delete_model_units(cloud_pk, model_pk, project_pk, request_body)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->bulk_delete_model_units: %s\n" % e)
 ```
 
@@ -871,12 +871,12 @@ Delete many PropertySet of a model
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -892,13 +892,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -910,7 +910,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -924,7 +924,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete many PropertySet of a model
         api_instance.bulk_delete_property_set(cloud_pk, model_pk, project_pk, request_body)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->bulk_delete_property_set: %s\n" % e)
 ```
 
@@ -981,14 +981,14 @@ Update many elements at once (only changing fields may be defined)
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.element_request import ElementRequest
-from bimdata_api_client.model.element import Element
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.element_request import ElementRequest
+from bimdata-api-client.model.element import Element
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1004,13 +1004,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1022,7 +1022,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -1045,9 +1045,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                             type="type_example",
                             value_type="value_type_example",
                         ),
-                        value={
-                            "key": None,
-                        },
+                        value=None,
                     ),
                 ],
             ),
@@ -1065,9 +1063,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                                 type="type_example",
                                 value_type="value_type_example",
                             ),
-                            value={
-                                "key": None,
-                            },
+                            value=None,
                         ),
                     ],
                 ),
@@ -1097,7 +1093,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update many elements at once (only changing fields may be defined)
         api_response = api_instance.bulk_full_update_elements(cloud_pk, model_pk, project_pk, element_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->bulk_full_update_elements: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1106,7 +1102,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update many elements at once (only changing fields may be defined)
         api_response = api_instance.bulk_full_update_elements(cloud_pk, model_pk, project_pk, element_request, classification=classification, classification__notation=classification__notation, type=type)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->bulk_full_update_elements: %s\n" % e)
 ```
 
@@ -1166,14 +1162,14 @@ Update some fields of many properties of a model
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_request import PropertyRequest
-from bimdata_api_client.model.model_property import ModelProperty
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_request import PropertyRequest
+from bimdata-api-client.model.model_property import ModelProperty
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1189,13 +1185,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1207,7 +1203,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -1222,9 +1218,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 type="type_example",
                 value_type="value_type_example",
             ),
-            value={
-                "key": None,
-            },
+            value=None,
         ),
     ] # [PropertyRequest] | 
 
@@ -1233,7 +1227,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of many properties of a model
         api_response = api_instance.bulk_full_update_model_property(cloud_pk, model_pk, project_pk, property_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->bulk_full_update_model_property: %s\n" % e)
 ```
 
@@ -1266,7 +1260,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
-**400** | All updates failed: list of errors |  -  |
+**400** | All updates failed: a list of errors |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
 **404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
@@ -1290,12 +1284,12 @@ Remove many classifications from an element
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1311,13 +1305,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1329,7 +1323,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -1344,7 +1338,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Remove many classifications from an element
         api_instance.bulk_remove_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk, request_body)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->bulk_remove_classifications_of_element: %s\n" % e)
 ```
 
@@ -1402,12 +1396,12 @@ Remove many documents from an element
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1423,13 +1417,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1441,7 +1435,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -1456,7 +1450,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Remove many documents from an element
         api_instance.bulk_remove_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, request_body)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->bulk_remove_documents_of_element: %s\n" % e)
 ```
 
@@ -1514,12 +1508,12 @@ Remove the classifications from all elements
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1535,13 +1529,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1553,7 +1547,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -1568,7 +1562,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Remove the classifications from all elements
         api_instance.bulk_remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, request_body)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->bulk_remove_elements_from_classification: %s\n" % e)
 ```
 
@@ -1626,14 +1620,14 @@ Update many elements at once (all field must be defined)
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.element_request import ElementRequest
-from bimdata_api_client.model.element import Element
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.element_request import ElementRequest
+from bimdata-api-client.model.element import Element
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1649,13 +1643,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1667,7 +1661,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -1690,9 +1684,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                             type="type_example",
                             value_type="value_type_example",
                         ),
-                        value={
-                            "key": None,
-                        },
+                        value=None,
                     ),
                 ],
             ),
@@ -1710,9 +1702,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                                 type="type_example",
                                 value_type="value_type_example",
                             ),
-                            value={
-                                "key": None,
-                            },
+                            value=None,
                         ),
                     ],
                 ),
@@ -1742,7 +1732,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update many elements at once (all field must be defined)
         api_response = api_instance.bulk_update_elements(cloud_pk, model_pk, project_pk, element_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->bulk_update_elements: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1751,7 +1741,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update many elements at once (all field must be defined)
         api_response = api_instance.bulk_update_elements(cloud_pk, model_pk, project_pk, element_request, classification=classification, classification__notation=classification__notation, type=type)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->bulk_update_elements: %s\n" % e)
 ```
 
@@ -1811,14 +1801,14 @@ Update all fields of many properties of a model
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_request import PropertyRequest
-from bimdata_api_client.model.model_property import ModelProperty
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_request import PropertyRequest
+from bimdata-api-client.model.model_property import ModelProperty
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1834,13 +1824,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1852,7 +1842,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -1867,9 +1857,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 type="type_example",
                 value_type="value_type_example",
             ),
-            value={
-                "key": None,
-            },
+            value=None,
         ),
     ] # [PropertyRequest] | 
 
@@ -1878,7 +1866,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update all fields of many properties of a model
         api_response = api_instance.bulk_update_model_property(cloud_pk, model_pk, project_pk, property_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->bulk_update_model_property: %s\n" % e)
 ```
 
@@ -1911,7 +1899,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
-**400** | All updates failed: list of errors |  -  |
+**400** | All updates failed: a list of errors |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
 **404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
@@ -1935,14 +1923,14 @@ DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, m
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.ifc_access_token import IfcAccessToken
-from bimdata_api_client.model.ifc_access_token_request import IfcAccessTokenRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.ifc_access_token_request import IfcAccessTokenRequest
+from bimdata-api-client.model.ifc_access_token import IfcAccessToken
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1958,13 +1946,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1976,7 +1964,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -1992,7 +1980,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a token for this model
         api_response = api_instance.create_access_token(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_access_token: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2001,7 +1989,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a token for this model
         api_response = api_instance.create_access_token(cloud_pk, model_pk, project_pk, ifc_access_token_request=ifc_access_token_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_access_token: %s\n" % e)
 ```
 
@@ -2058,14 +2046,14 @@ Create a building of a model.  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.building import Building
-from bimdata_api_client.model.storey_building_request import StoreyBuildingRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.storey_building_request import StoreyBuildingRequest
+from bimdata-api-client.model.building import Building
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2081,13 +2069,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2099,7 +2087,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -2114,7 +2102,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a building of a model
         api_response = api_instance.create_building(cloud_pk, model_pk, project_pk, storey_building_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_building: %s\n" % e)
 ```
 
@@ -2171,14 +2159,14 @@ Create a relation between a 2d model and a building. The model type must be one 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.building import Building
-from bimdata_api_client.model.building_model_plan_request import BuildingModelPlanRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.building import Building
+from bimdata-api-client.model.building_model_plan_request import BuildingModelPlanRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2194,13 +2182,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2212,7 +2200,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     building_uuid = "building_uuid_example" # str | 
@@ -2228,7 +2216,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a relation between a 2d model and a building
         api_response = api_instance.create_building_plan(building_uuid, cloud_pk, model_pk, project_pk, building_model_plan_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_building_plan: %s\n" % e)
 ```
 
@@ -2286,13 +2274,13 @@ Create association between existing classification and existing element  Require
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.element_classification_relation_request import ElementClassificationRelationRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.element_classification_relation_request import ElementClassificationRelationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2308,13 +2296,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2326,7 +2314,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -2343,7 +2331,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Create association between existing classification and existing element
         api_instance.create_classification_element_relations(cloud_pk, model_pk, project_pk, element_classification_relation_request)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_classification_element_relations: %s\n" % e)
 ```
 
@@ -2401,14 +2389,14 @@ Create one or many classifications to an element
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.classification import Classification
-from bimdata_api_client.model.classification_request import ClassificationRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.classification import Classification
+from bimdata-api-client.model.classification_request import ClassificationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2424,13 +2412,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2442,7 +2430,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -2462,7 +2450,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create one or many classifications to an element
         api_response = api_instance.create_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk, classification_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_classifications_of_element: %s\n" % e)
 ```
 
@@ -2520,14 +2508,14 @@ Create a drawing in the model  Required scopes: model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.drawing_request import DrawingRequest
-from bimdata_api_client.model.drawing import Drawing
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.drawing_request import DrawingRequest
+from bimdata-api-client.model.drawing import Drawing
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2543,13 +2531,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2561,7 +2549,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -2576,7 +2564,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a drawing in the model
         api_response = api_instance.create_drawing(cloud_pk, model_pk, project_pk, drawing_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_drawing: %s\n" % e)
 ```
 
@@ -2633,14 +2621,14 @@ Create an element in the model
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.element_request import ElementRequest
-from bimdata_api_client.model.element import Element
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.element_request import ElementRequest
+from bimdata-api-client.model.element import Element
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2656,13 +2644,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2674,7 +2662,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -2697,9 +2685,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                             type="type_example",
                             value_type="value_type_example",
                         ),
-                        value={
-                            "key": None,
-                        },
+                        value=None,
                     ),
                 ],
             ),
@@ -2717,9 +2703,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                                 type="type_example",
                                 value_type="value_type_example",
                             ),
-                            value={
-                                "key": None,
-                            },
+                            value=None,
                         ),
                     ],
                 ),
@@ -2749,7 +2733,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create an element in the model
         api_response = api_instance.create_element(cloud_pk, model_pk, project_pk, element_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_element: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2758,7 +2742,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create an element in the model
         api_response = api_instance.create_element(cloud_pk, model_pk, project_pk, element_request, classification=classification, classification__notation=classification__notation, type=type)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_element: %s\n" % e)
 ```
 
@@ -2818,14 +2802,14 @@ Create a PropertySets that will be automatically linked to the element  Required
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_set import PropertySet
-from bimdata_api_client.model.property_set_request import PropertySetRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_set_request import PropertySetRequest
+from bimdata-api-client.model.property_set import PropertySet
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2841,13 +2825,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2859,7 +2843,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -2879,9 +2863,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                     type="type_example",
                     value_type="value_type_example",
                 ),
-                value={
-                    "key": None,
-                },
+                value=None,
             ),
         ],
     ) # PropertySetRequest |  (optional)
@@ -2891,7 +2873,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a PropertySets to an element
         api_response = api_instance.create_element_property_set(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_element_property_set: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2900,7 +2882,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a PropertySets to an element
         api_response = api_instance.create_element_property_set(cloud_pk, element_uuid, model_pk, project_pk, property_set_request=property_set_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_element_property_set: %s\n" % e)
 ```
 
@@ -2958,14 +2940,14 @@ Create a property to a PropertySet  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_request import PropertyRequest
-from bimdata_api_client.model.model_property import ModelProperty
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_request import PropertyRequest
+from bimdata-api-client.model.model_property import ModelProperty
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2981,13 +2963,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2999,7 +2981,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -3015,9 +2997,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             type="type_example",
             value_type="value_type_example",
         ),
-        value={
-            "key": None,
-        },
+        value=None,
     ) # PropertyRequest | 
 
     # example passing only required values which don't have defaults set
@@ -3025,7 +3005,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a property to a PropertySet
         api_response = api_instance.create_element_property_set_property(cloud_pk, element_uuid, model_pk, project_pk, propertyset_pk, property_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_element_property_set_property: %s\n" % e)
 ```
 
@@ -3084,14 +3064,14 @@ Create a Definition to a Property  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_definition import PropertyDefinition
-from bimdata_api_client.model.property_definition_request import PropertyDefinitionRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_definition_request import PropertyDefinitionRequest
+from bimdata-api-client.model.property_definition import PropertyDefinition
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3107,13 +3087,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3125,7 +3105,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -3147,7 +3127,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a Definition to a Property
         api_response = api_instance.create_element_property_set_property_definition(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertyset_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_element_property_set_property_definition: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -3156,7 +3136,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a Definition to a Property
         api_response = api_instance.create_element_property_set_property_definition(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertyset_pk, property_definition_request=property_definition_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_element_property_set_property_definition: %s\n" % e)
 ```
 
@@ -3216,14 +3196,14 @@ Create a Unit to a Definition  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.unit_request import UnitRequest
-from bimdata_api_client.model.unit import Unit
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.unit_request import UnitRequest
+from bimdata-api-client.model.unit import Unit
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3239,13 +3219,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3257,7 +3237,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -3276,10 +3256,20 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             3.14,
         ],
         conversion_factor=3.14,
-        conversion_baseunit=UnitRequest(),
-        elements={
-            "key": None,
-        },
+        conversion_baseunit=Unit(
+            type="type_example",
+            name="name_example",
+            unit_type="unit_type_example",
+            prefix="prefix_example",
+            dimensions=[
+                3.14,
+            ],
+            conversion_factor=3.14,
+            conversion_baseunit=Unit(),
+            elements=None,
+            is_default=True,
+        ),
+        elements=None,
         is_default=True,
     ) # UnitRequest | 
 
@@ -3288,7 +3278,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a Unit to a Definition
         api_response = api_instance.create_element_property_set_property_definition_unit(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, unit_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_element_property_set_property_definition_unit: %s\n" % e)
 ```
 
@@ -3349,14 +3339,14 @@ The IFC file will not be updated. The created layer will be accessible over the 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.layer_request import LayerRequest
-from bimdata_api_client.model.layer import Layer
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.layer import Layer
+from bimdata-api-client.model.layer_request import LayerRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3372,13 +3362,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3390,7 +3380,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -3410,7 +3400,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a layer in the model
         api_response = api_instance.create_layer(cloud_pk, model_pk, project_pk, layer_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_layer: %s\n" % e)
 ```
 
@@ -3467,14 +3457,14 @@ Create an empty 3D Model to be used in BIMData services  Required scopes: ifc:wr
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.create_building_by_name_request import CreateBuildingByNameRequest
-from bimdata_api_client.model.model import Model
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.model import Model
+from bimdata-api-client.model.create_building_by_name_request import CreateBuildingByNameRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3490,13 +3480,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3508,7 +3498,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -3522,7 +3512,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create an empty 3D Model
         api_response = api_instance.create_meta_building(cloud_pk, project_pk, create_building_by_name_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_meta_building: %s\n" % e)
 ```
 
@@ -3578,14 +3568,14 @@ Make a PDF or Image file a Model to be used in BIMData services. If a model alre
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.create_model_request import CreateModelRequest
-from bimdata_api_client.model.model import Model
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.create_model_request import CreateModelRequest
+from bimdata-api-client.model.model import Model
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3601,13 +3591,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3619,7 +3609,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -3633,7 +3623,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Make a PDF or Image file a Model
         api_response = api_instance.create_model(cloud_pk, project_pk, create_model_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_model: %s\n" % e)
 ```
 
@@ -3689,14 +3679,14 @@ Create a PropertyDefinition on the model
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_definition import PropertyDefinition
-from bimdata_api_client.model.property_definition_request import PropertyDefinitionRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_definition_request import PropertyDefinitionRequest
+from bimdata-api-client.model.property_definition import PropertyDefinition
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3712,13 +3702,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3730,7 +3720,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -3751,7 +3741,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a PropertyDefinition on the model
         api_response = api_instance.create_model_property_definition(cloud_pk, model_pk, project_pk, property_definition_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_model_property_definition: %s\n" % e)
 ```
 
@@ -3808,14 +3798,14 @@ Create a Unit on a model
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.unit_request import UnitRequest
-from bimdata_api_client.model.unit import Unit
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.unit_request import UnitRequest
+from bimdata-api-client.model.unit import Unit
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3831,13 +3821,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3849,7 +3839,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -3865,10 +3855,20 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 3.14,
             ],
             conversion_factor=3.14,
-            conversion_baseunit=UnitRequest(),
-            elements={
-                "key": None,
-            },
+            conversion_baseunit=Unit(
+                type="type_example",
+                name="name_example",
+                unit_type="unit_type_example",
+                prefix="prefix_example",
+                dimensions=[
+                    3.14,
+                ],
+                conversion_factor=3.14,
+                conversion_baseunit=Unit(),
+                elements=None,
+                is_default=True,
+            ),
+            elements=None,
             is_default=True,
         ),
     ] # [UnitRequest] | 
@@ -3878,7 +3878,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a Unit on a model
         api_response = api_instance.create_model_unit(cloud_pk, model_pk, project_pk, unit_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_model_unit: %s\n" % e)
 ```
 
@@ -3935,14 +3935,14 @@ Create a multi page model  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.create_multi_page_model_request import CreateMultiPageModelRequest
-from bimdata_api_client.model.model import Model
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.model import Model
+from bimdata-api-client.model.create_multi_page_model_request import CreateMultiPageModelRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3958,13 +3958,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3976,7 +3976,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -3996,7 +3996,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a multi page model
         api_response = api_instance.create_multi_page_model(cloud_pk, id, project_pk, create_multi_page_model_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_multi_page_model: %s\n" % e)
 ```
 
@@ -4053,14 +4053,14 @@ Create a photosphere model to be used in BIMData services  Required scopes: ifc:
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.create_model_request import CreateModelRequest
-from bimdata_api_client.model.model import Model
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.create_model_request import CreateModelRequest
+from bimdata-api-client.model.model import Model
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4076,13 +4076,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4094,7 +4094,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -4108,7 +4108,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a photopshere model from an image file
         api_response = api_instance.create_photosphere(cloud_pk, project_pk, create_model_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_photosphere: %s\n" % e)
 ```
 
@@ -4164,14 +4164,14 @@ Create an empty Photosphere Building Model  Required scopes: ifc:write, model:wr
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.create_building_by_name_request import CreateBuildingByNameRequest
-from bimdata_api_client.model.model import Model
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.model import Model
+from bimdata-api-client.model.create_building_by_name_request import CreateBuildingByNameRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4187,13 +4187,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4205,7 +4205,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -4219,7 +4219,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create an empty Photosphere Building Model
         api_response = api_instance.create_photosphere_building(cloud_pk, project_pk, create_building_by_name_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_photosphere_building: %s\n" % e)
 ```
 
@@ -4275,14 +4275,14 @@ Create one or many PropertySet
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_set import PropertySet
-from bimdata_api_client.model.property_set_request import PropertySetRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_set_request import PropertySetRequest
+from bimdata-api-client.model.property_set import PropertySet
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4298,13 +4298,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4316,7 +4316,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -4336,9 +4336,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                         type="type_example",
                         value_type="value_type_example",
                     ),
-                    value={
-                        "key": None,
-                    },
+                    value=None,
                 ),
             ],
         ),
@@ -4349,7 +4347,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create one or many PropertySet
         api_response = api_instance.create_property_set(cloud_pk, model_pk, project_pk, property_set_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_property_set: %s\n" % e)
 ```
 
@@ -4406,13 +4404,13 @@ Create association between PropertySet and element  Required scopes: ifc:write, 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.element_property_set_relation_request import ElementPropertySetRelationRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.element_property_set_relation_request import ElementPropertySetRelationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4428,13 +4426,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4446,7 +4444,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -4463,7 +4461,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Create association between PropertySet and element
         api_instance.create_property_set_element_relations(cloud_pk, model_pk, project_pk, element_property_set_relation_request)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_property_set_element_relations: %s\n" % e)
 ```
 
@@ -4520,13 +4518,13 @@ Create many elements in an optimized format to reduce JSON size and avoid reduda
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.raw_elements_request import RawElementsRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.raw_elements_request import RawElementsRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4542,13 +4540,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4560,7 +4558,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -4573,9 +4571,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 type="type_example",
                 unit_type="unit_type_example",
                 prefix="prefix_example",
-                elements={
-                    "key": None,
-                },
+                elements=None,
                 conversion_factor=3.14,
                 dimensions=[
                     3.14,
@@ -4600,9 +4596,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 type="type_example",
                 properties=[
                     RawPropertyRequest(
-                        value={
-                            "key": None,
-                        },
+                        value=None,
                         def_id=1,
                     ),
                 ],
@@ -4659,7 +4653,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Create elements in an optimized format
         api_instance.create_raw_elements(cloud_pk, model_pk, project_pk, raw_elements_request)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_raw_elements: %s\n" % e)
 ```
 
@@ -4716,14 +4710,14 @@ Create a space in the model
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.space import Space
-from bimdata_api_client.model.space_request import SpaceRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.space import Space
+from bimdata-api-client.model.space_request import SpaceRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4739,13 +4733,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4757,7 +4751,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -4783,7 +4777,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a space in the model
         api_response = api_instance.create_space(cloud_pk, model_pk, project_pk, space_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_space: %s\n" % e)
 ```
 
@@ -4840,14 +4834,14 @@ Create a storey of a model.  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.storey import Storey
-from bimdata_api_client.model.storey_building_request import StoreyBuildingRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.storey_building_request import StoreyBuildingRequest
+from bimdata-api-client.model.storey import Storey
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4863,13 +4857,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4881,7 +4875,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -4896,7 +4890,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a storey of a model
         api_response = api_instance.create_storey(cloud_pk, model_pk, project_pk, storey_building_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_storey: %s\n" % e)
 ```
 
@@ -4953,14 +4947,14 @@ Create a relation between a 2d model and a storey. The model type must be one of
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.storey_model_plan_request import StoreyModelPlanRequest
-from bimdata_api_client.model.storey import Storey
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.storey import Storey
+from bimdata-api-client.model.storey_model_plan_request import StoreyModelPlanRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4976,13 +4970,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4994,7 +4988,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -5010,7 +5004,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a relation between a 2d model and a storey
         api_response = api_instance.create_storey_plan(cloud_pk, model_pk, project_pk, storey_uuid, storey_model_plan_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_storey_plan: %s\n" % e)
 ```
 
@@ -5068,14 +5062,14 @@ The IFC file will not be updated. The created system will be accessible over the
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.system_request import SystemRequest
-from bimdata_api_client.model.system import System
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.system_request import SystemRequest
+from bimdata-api-client.model.system import System
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5091,13 +5085,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5109,7 +5103,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -5130,7 +5124,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a system in the model
         api_response = api_instance.create_system(cloud_pk, model_pk, project_pk, system_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_system: %s\n" % e)
 ```
 
@@ -5187,12 +5181,12 @@ This route is internaly used by BIMData, you probably don't want to use it  Requ
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5208,13 +5202,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5226,7 +5220,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -5237,7 +5231,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Create the tileset of the model and upload all files
         api_instance.create_tileset(cloud_pk, id, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_tileset: %s\n" % e)
 ```
 
@@ -5293,13 +5287,13 @@ This route does not accept JSON, only files as x-www-form-urlencoded  Required s
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.xkt_file import XktFile
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.xkt_file import XktFile
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5315,13 +5309,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5333,7 +5327,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -5347,7 +5341,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create an xkt file for the model. Overrides existing file with same version
         api_response = api_instance.create_xkt_file(cloud_pk, id, project_pk, version, file)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_xkt_file: %s\n" % e)
 ```
 
@@ -5405,14 +5399,14 @@ Create a zone in the model
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.zone_request import ZoneRequest
-from bimdata_api_client.model.zone import Zone
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.zone import Zone
+from bimdata-api-client.model.zone_request import ZoneRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5428,13 +5422,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5446,7 +5440,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -5456,7 +5450,32 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         ZoneRequest(
             name="name_example",
             uuid="uuid_example",
-            zones=[],
+            zones=[
+                Zone(
+                    name="name_example",
+                    uuid="uuid_example",
+                    zones=[],
+                    parent_id=1,
+                    spaces=[
+                        ZoneSpace(
+                            name="name_example",
+                            longname="longname_example",
+                            uuid="uuid_example",
+                            geometry=[
+                                GeometryPoint(
+                                    x=3.14,
+                                    y=3.14,
+                                    z=3.14,
+                                ),
+                            ],
+                            order=0,
+                        ),
+                    ],
+                    color="color_example",
+                    order=0,
+                    storey_uuid="storey_uuid_example",
+                ),
+            ],
             parent_id=1,
             spaces=[
                 ZoneSpaceRequest(
@@ -5485,7 +5504,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a zone in the model
         api_response = api_instance.create_zone(cloud_pk, model_pk, project_pk, zone_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_zone: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -5494,7 +5513,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a zone in the model
         api_response = api_instance.create_zone(cloud_pk, model_pk, project_pk, zone_request, color=color)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_zone: %s\n" % e)
 ```
 
@@ -5552,14 +5571,14 @@ The IFC file will not be updated. The created space will be accessible over the 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.zone_space_request import ZoneSpaceRequest
-from bimdata_api_client.model.zone_space import ZoneSpace
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.zone_space_request import ZoneSpaceRequest
+from bimdata-api-client.model.zone_space import ZoneSpace
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5575,13 +5594,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5593,7 +5612,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -5619,7 +5638,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a space in a zone
         api_response = api_instance.create_zone_space(cloud_pk, model_pk, project_pk, zone_pk, zone_space_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_zone_space: %s\n" % e)
 ```
 
@@ -5677,12 +5696,12 @@ DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, m
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5698,13 +5717,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5716,7 +5735,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -5728,7 +5747,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a token
         api_instance.delete_access_token(cloud_pk, model_pk, project_pk, token)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_access_token: %s\n" % e)
 ```
 
@@ -5785,12 +5804,12 @@ Delete a building of a model  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5806,13 +5825,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5824,7 +5843,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -5836,7 +5855,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a building of a model
         api_instance.delete_building(cloud_pk, model_pk, project_pk, uuid)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_building: %s\n" % e)
 ```
 
@@ -5893,12 +5912,12 @@ Delete the relation between a 2d model and a building  Required scopes: ifc:writ
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5914,13 +5933,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5932,7 +5951,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     building_uuid = "building_uuid_example" # str | 
@@ -5945,7 +5964,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete the relation between a 2d model and a building
         api_instance.delete_building_plan(building_uuid, cloud_pk, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_building_plan: %s\n" % e)
 ```
 
@@ -6003,12 +6022,12 @@ Delete a drawing of a model  Required scopes: model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6024,13 +6043,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6042,7 +6061,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -6054,7 +6073,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a drawing of a model
         api_instance.delete_drawing(cloud_pk, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_drawing: %s\n" % e)
 ```
 
@@ -6111,12 +6130,12 @@ The IFC file will not be updated. The remaining elements are available in API an
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6132,13 +6151,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6150,7 +6169,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -6162,7 +6181,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete an element of a model
         api_instance.delete_element(cloud_pk, model_pk, project_pk, uuid)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_element: %s\n" % e)
 ```
 
@@ -6219,12 +6238,12 @@ The IFC file will not be updated. The remaining layers are available in API and 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6240,13 +6259,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6258,7 +6277,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -6270,7 +6289,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a layer of a model
         api_instance.delete_layer(cloud_pk, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_layer: %s\n" % e)
 ```
 
@@ -6327,12 +6346,12 @@ It will also delete the related document  Required scopes: ifc:write, model:writ
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6348,13 +6367,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6366,7 +6385,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -6377,7 +6396,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a model
         api_instance.delete_model(cloud_pk, id, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_model: %s\n" % e)
 ```
 
@@ -6433,12 +6452,12 @@ Delete a Property of a model  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6454,13 +6473,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6472,7 +6491,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -6484,7 +6503,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Property of a model
         api_instance.delete_model_property(cloud_pk, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_model_property: %s\n" % e)
 ```
 
@@ -6541,12 +6560,12 @@ Delete a PropertyDefinitions of a model  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6562,13 +6581,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6580,7 +6599,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -6592,7 +6611,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a PropertyDefinitions of a model
         api_instance.delete_model_property_definition(cloud_pk, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_model_property_definition: %s\n" % e)
 ```
 
@@ -6649,12 +6668,12 @@ Delete a Unit of a model  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6670,13 +6689,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6688,7 +6707,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -6700,7 +6719,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Unit of a model
         api_instance.delete_model_unit(cloud_pk, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_model_unit: %s\n" % e)
 ```
 
@@ -6757,12 +6776,12 @@ Delete the Model without deleting the related document  Required scopes: ifc:wri
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6778,13 +6797,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6796,7 +6815,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -6807,7 +6826,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete the Model without deleting the related document
         api_instance.delete_model_without_doc(cloud_pk, id, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_model_without_doc: %s\n" % e)
 ```
 
@@ -6863,12 +6882,12 @@ Delete a PropertySet of a model  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6884,13 +6903,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6902,7 +6921,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -6914,7 +6933,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a PropertySet of a model
         api_instance.delete_property_set(cloud_pk, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_property_set: %s\n" % e)
 ```
 
@@ -6971,12 +6990,12 @@ It will not delete related zones. The IFC file will not be updated. The remainin
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6992,13 +7011,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -7010,7 +7029,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -7022,7 +7041,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a space
         api_instance.delete_space(cloud_pk, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_space: %s\n" % e)
 ```
 
@@ -7079,12 +7098,12 @@ Delete a storey of a model  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -7100,13 +7119,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -7118,7 +7137,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -7130,7 +7149,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a storey of a model
         api_instance.delete_storey(cloud_pk, model_pk, project_pk, uuid)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_storey: %s\n" % e)
 ```
 
@@ -7187,12 +7206,12 @@ Delete the relation between a 2d model and a storey  Required scopes: ifc:write,
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -7208,13 +7227,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -7226,7 +7245,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -7239,7 +7258,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete the relation between a 2d model and a storey
         api_instance.delete_storey_plan(cloud_pk, id, model_pk, project_pk, storey_uuid)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_storey_plan: %s\n" % e)
 ```
 
@@ -7297,12 +7316,12 @@ The IFC file will not be updated. The remaining systems are available in API and
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -7318,13 +7337,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -7336,7 +7355,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -7348,7 +7367,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a system of a model
         api_instance.delete_system(cloud_pk, model_pk, project_pk, uuid)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_system: %s\n" % e)
 ```
 
@@ -7405,12 +7424,12 @@ The IFC file will not be updated. The remaining zones are available in API and w
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -7426,13 +7445,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -7444,7 +7463,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -7456,7 +7475,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a zone of a model
         api_instance.delete_zone(cloud_pk, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_zone: %s\n" % e)
 ```
 
@@ -7513,12 +7532,12 @@ Delete the relation between a space and a zone. The IFC file will not be updated
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -7534,13 +7553,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -7552,7 +7571,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -7565,7 +7584,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete the relation between a space and a zone
         api_instance.delete_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->delete_zone_space: %s\n" % e)
 ```
 
@@ -7623,13 +7642,13 @@ Only works for IFC files. Export IFC as requested in parameters. When the export
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.ifc_export_request import IfcExportRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.ifc_export_request import IfcExportRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -7645,13 +7664,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -7663,7 +7682,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -7688,7 +7707,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Export IFC
         api_instance.export_ifc(cloud_pk, id, project_pk, ifc_export_request)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->export_ifc: %s\n" % e)
 ```
 
@@ -7745,14 +7764,14 @@ Update all fields of an element. The IFC file will not be updated. The created e
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.element_request import ElementRequest
-from bimdata_api_client.model.element import Element
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.element_request import ElementRequest
+from bimdata-api-client.model.element import Element
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -7768,13 +7787,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -7786,7 +7805,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -7809,9 +7828,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                         type="type_example",
                         value_type="value_type_example",
                     ),
-                    value={
-                        "key": None,
-                    },
+                    value=None,
                 ),
             ],
         ),
@@ -7829,9 +7846,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                             type="type_example",
                             value_type="value_type_example",
                         ),
-                        value={
-                            "key": None,
-                        },
+                        value=None,
                     ),
                 ],
             ),
@@ -7857,7 +7872,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update all fields of an element
         api_response = api_instance.full_update_element(cloud_pk, model_pk, project_pk, uuid, element_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->full_update_element: %s\n" % e)
 ```
 
@@ -7915,13 +7930,13 @@ DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, m
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.ifc_access_token import IfcAccessToken
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.ifc_access_token import IfcAccessToken
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -7937,13 +7952,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -7955,7 +7970,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -7968,7 +7983,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve one token created for this model
         api_response = api_instance.get_access_token(cloud_pk, model_pk, project_pk, token)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_access_token: %s\n" % e)
 ```
 
@@ -8024,13 +8039,13 @@ DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, m
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.ifc_access_token import IfcAccessToken
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.ifc_access_token import IfcAccessToken
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -8046,13 +8061,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -8064,7 +8079,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -8076,7 +8091,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all tokens created for this model
         api_response = api_instance.get_access_tokens(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_access_tokens: %s\n" % e)
 ```
 
@@ -8130,13 +8145,13 @@ Retrieve a building of a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.building import Building
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.building import Building
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -8152,13 +8167,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -8170,7 +8185,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -8183,7 +8198,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a building of a model
         api_response = api_instance.get_building(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_building: %s\n" % e)
 ```
 
@@ -8239,13 +8254,13 @@ Retrieve the postioning of the plan in the building  Required scopes: ifc:read, 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.positioning_plan import PositioningPlan
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.positioning_plan import PositioningPlan
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -8261,13 +8276,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -8279,7 +8294,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     building_uuid = "building_uuid_example" # str | 
@@ -8293,7 +8308,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve the postioning of the plan in the building
         api_response = api_instance.get_building_plan_positioning(building_uuid, cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_building_plan_positioning: %s\n" % e)
 ```
 
@@ -8350,13 +8365,13 @@ Retrieve all buildings of a model.  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.building import Building
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.building import Building
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -8372,13 +8387,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -8390,7 +8405,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -8402,7 +8417,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all buildings of a model
         api_response = api_instance.get_buildings(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_buildings: %s\n" % e)
 ```
 
@@ -8456,13 +8471,13 @@ Retrieve all classifications of an element  Required scopes: ifc:read, model:rea
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.classification import Classification
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.classification import Classification
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -8478,13 +8493,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -8496,7 +8511,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -8509,7 +8524,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all classifications of an element
         api_response = api_instance.get_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_classifications_of_element: %s\n" % e)
 ```
 
@@ -8564,13 +8579,13 @@ Retrieve all documents of an element  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.document import Document
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.document import Document
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -8586,13 +8601,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -8604,7 +8619,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -8617,7 +8632,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all documents of an element
         api_response = api_instance.get_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_documents_of_element: %s\n" % e)
 ```
 
@@ -8672,13 +8687,13 @@ Retrieve a drawing of a model  Required scopes: model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.drawing import Drawing
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.drawing import Drawing
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -8694,13 +8709,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -8712,7 +8727,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -8725,7 +8740,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a drawing of a model
         api_response = api_instance.get_drawing(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_drawing: %s\n" % e)
 ```
 
@@ -8781,13 +8796,13 @@ Retrieve all drawings of a model.  Required scopes: model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.drawing import Drawing
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.drawing import Drawing
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -8803,13 +8818,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -8821,7 +8836,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -8833,7 +8848,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all drawings of a model
         api_response = api_instance.get_drawings(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_drawings: %s\n" % e)
 ```
 
@@ -8887,13 +8902,13 @@ Retrieve an element of a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.element import Element
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.element import Element
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -8909,13 +8924,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -8927,7 +8942,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -8940,7 +8955,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve an element of a model
         api_response = api_instance.get_element(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_element: %s\n" % e)
 ```
 
@@ -8996,13 +9011,13 @@ Retrieve all documents linked to any element with the list of uuids  Required sc
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.document_with_element_list import DocumentWithElementList
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.document_with_element_list import DocumentWithElementList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -9018,13 +9033,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -9036,7 +9051,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -9051,7 +9066,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all documents linked to any element
         api_response = api_instance.get_element_linked_documents(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_element_linked_documents: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -9060,7 +9075,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all documents linked to any element
         api_response = api_instance.get_element_linked_documents(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, type=type)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_element_linked_documents: %s\n" % e)
 ```
 
@@ -9117,13 +9132,13 @@ Retrieve a PropertySet of an element  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_set import PropertySet
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_set import PropertySet
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -9139,13 +9154,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -9157,7 +9172,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -9171,7 +9186,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a PropertySet of an element
         api_response = api_instance.get_element_property_set(cloud_pk, element_uuid, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_element_property_set: %s\n" % e)
 ```
 
@@ -9228,13 +9243,13 @@ Retrieve all Properties of a PropertySet  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.model_property import ModelProperty
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.model_property import ModelProperty
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -9250,13 +9265,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -9268,7 +9283,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -9282,7 +9297,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all Properties of a PropertySet
         api_response = api_instance.get_element_property_set_properties(cloud_pk, element_uuid, model_pk, project_pk, propertyset_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_element_property_set_properties: %s\n" % e)
 ```
 
@@ -9338,13 +9353,13 @@ Retrieve a Property of a PropertySet  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.model_property import ModelProperty
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.model_property import ModelProperty
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -9360,13 +9375,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -9378,7 +9393,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -9393,7 +9408,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a Property of a PropertySet
         api_response = api_instance.get_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_element_property_set_property: %s\n" % e)
 ```
 
@@ -9451,13 +9466,13 @@ Retrieve a Definition of a Property  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_definition import PropertyDefinition
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_definition import PropertyDefinition
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -9473,13 +9488,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -9491,7 +9506,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -9507,7 +9522,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a Definition of a Property
         api_response = api_instance.get_element_property_set_property_definition(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertyset_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_element_property_set_property_definition: %s\n" % e)
 ```
 
@@ -9566,13 +9581,13 @@ Retrieve a Unit of a Definition  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.unit import Unit
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.unit import Unit
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -9588,13 +9603,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -9606,7 +9621,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -9623,7 +9638,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a Unit of a Definition
         api_response = api_instance.get_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_element_property_set_property_definition_unit: %s\n" % e)
 ```
 
@@ -9683,13 +9698,13 @@ Retrieve all Units of a Definition  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.unit import Unit
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.unit import Unit
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -9705,13 +9720,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -9723,7 +9738,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -9739,7 +9754,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all Units of a Definition
         api_response = api_instance.get_element_property_set_property_definition_units(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_element_property_set_property_definition_units: %s\n" % e)
 ```
 
@@ -9797,13 +9812,13 @@ Retrieve all Definitions of a PropertySet  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_definition import PropertyDefinition
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_definition import PropertyDefinition
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -9819,13 +9834,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -9837,7 +9852,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -9852,7 +9867,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all Definitions of a PropertySet
         api_response = api_instance.get_element_property_set_property_definitions(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertyset_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_element_property_set_property_definitions: %s\n" % e)
 ```
 
@@ -9909,13 +9924,13 @@ Retrieve all PropertySets of an element  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_set import PropertySet
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_set import PropertySet
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -9931,13 +9946,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -9949,7 +9964,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -9962,7 +9977,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all PropertySets of an element
         api_response = api_instance.get_element_property_sets(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_element_property_sets: %s\n" % e)
 ```
 
@@ -10017,13 +10032,13 @@ Retrieve all elements of a model. If not filtered, the json may be very large. T
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.element import Element
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.element import Element
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -10039,13 +10054,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -10057,7 +10072,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -10072,7 +10087,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all elements of a model
         api_response = api_instance.get_elements(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_elements: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -10081,7 +10096,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all elements of a model
         api_response = api_instance.get_elements(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, type=type)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_elements: %s\n" % e)
 ```
 
@@ -10138,13 +10153,13 @@ Retrieve all elements with the classification  Required scopes: ifc:read, model:
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.element import Element
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.element import Element
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -10160,13 +10175,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -10178,7 +10193,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -10191,7 +10206,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all elements with the classification
         api_response = api_instance.get_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_elements_from_classification: %s\n" % e)
 ```
 
@@ -10246,13 +10261,13 @@ Retrieve a layer of a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.layer import Layer
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.layer import Layer
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -10268,13 +10283,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -10286,7 +10301,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -10299,7 +10314,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a layer of a model
         api_response = api_instance.get_layer(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_layer: %s\n" % e)
 ```
 
@@ -10355,13 +10370,13 @@ Retrieve all layers of a model.  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.layer import Layer
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.layer import Layer
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -10377,13 +10392,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -10395,7 +10410,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -10407,7 +10422,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all layers of a model
         api_response = api_instance.get_layers(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_layers: %s\n" % e)
 ```
 
@@ -10461,13 +10476,13 @@ Retrieve a material of a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.material import Material
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.material import Material
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -10483,13 +10498,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -10501,7 +10516,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -10515,7 +10530,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a material of a model
         api_response = api_instance.get_material(cloud_pk, element_uuid, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_material: %s\n" % e)
 ```
 
@@ -10572,13 +10587,13 @@ Retrieve all materials of a model.  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.material import Material
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.material import Material
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -10594,13 +10609,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -10612,7 +10627,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -10625,7 +10640,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all materials of a model
         api_response = api_instance.get_materials(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_materials: %s\n" % e)
 ```
 
@@ -10680,13 +10695,13 @@ Retrieve one model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.model import Model
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.model import Model
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -10702,13 +10717,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -10720,7 +10735,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -10732,7 +10747,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve one model
         api_response = api_instance.get_model(cloud_pk, id, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_model: %s\n" % e)
 ```
 
@@ -10787,13 +10802,13 @@ Retrieve all classifications in a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.classification import Classification
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.classification import Classification
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -10809,13 +10824,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -10827,7 +10842,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -10839,7 +10854,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all classifications in a model
         api_response = api_instance.get_model_classifications(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_model_classifications: %s\n" % e)
 ```
 
@@ -10893,13 +10908,13 @@ Retrieve a material of a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.material import Material
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.material import Material
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -10915,13 +10930,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -10933,7 +10948,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -10946,7 +10961,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a material of a model
         api_response = api_instance.get_model_material(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_model_material: %s\n" % e)
 ```
 
@@ -11002,13 +11017,13 @@ Retrieve all materials of a model.  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.material import Material
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.material import Material
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -11024,13 +11039,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -11042,7 +11057,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -11054,7 +11069,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all materials of a model
         api_response = api_instance.get_model_materials(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_model_materials: %s\n" % e)
 ```
 
@@ -11108,13 +11123,13 @@ Retrieve all PropertySets of a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.model_property import ModelProperty
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.model_property import ModelProperty
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -11130,13 +11145,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -11148,7 +11163,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -11160,7 +11175,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all Properties of a model
         api_response = api_instance.get_model_properties(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_model_properties: %s\n" % e)
 ```
 
@@ -11214,13 +11229,13 @@ Retrieve a Property of a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.model_property import ModelProperty
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.model_property import ModelProperty
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -11236,13 +11251,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -11254,7 +11269,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -11267,7 +11282,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a Property of a model
         api_response = api_instance.get_model_property(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_model_property: %s\n" % e)
 ```
 
@@ -11323,13 +11338,13 @@ Retrieve a PropertyDefinition of a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_definition import PropertyDefinition
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_definition import PropertyDefinition
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -11345,13 +11360,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -11363,7 +11378,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -11376,7 +11391,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a PropertyDefinition of a model
         api_response = api_instance.get_model_property_definition(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_model_property_definition: %s\n" % e)
 ```
 
@@ -11432,13 +11447,13 @@ Retrieve all PropertyDefinitions of a model  Required scopes: ifc:read, model:re
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_definition import PropertyDefinition
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_definition import PropertyDefinition
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -11454,13 +11469,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -11472,7 +11487,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -11484,7 +11499,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all PropertyDefinitions of a model
         api_response = api_instance.get_model_property_definitions(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_model_property_definitions: %s\n" % e)
 ```
 
@@ -11538,13 +11553,13 @@ Retrieve a Unit of a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.unit import Unit
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.unit import Unit
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -11560,13 +11575,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -11578,7 +11593,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -11591,7 +11606,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a Unit of a model
         api_response = api_instance.get_model_unit(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_model_unit: %s\n" % e)
 ```
 
@@ -11647,13 +11662,13 @@ Retrieve all Units of a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.unit import Unit
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.unit import Unit
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -11669,13 +11684,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -11687,7 +11702,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -11699,7 +11714,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all Units of a model
         api_response = api_instance.get_model_units(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_model_units: %s\n" % e)
 ```
 
@@ -11753,13 +11768,13 @@ Retrieve all models. The field `type` allows you to discriminate which kind of m
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.model import Model
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.model import Model
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -11775,13 +11790,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -11793,7 +11808,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -11811,7 +11826,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all models
         api_response = api_instance.get_models(cloud_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_models: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -11820,7 +11835,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all models
         api_response = api_instance.get_models(cloud_pk, project_pk, source=source, status=status, type=type)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_models: %s\n" % e)
 ```
 
@@ -11876,13 +11891,13 @@ Retrieve a processor handler  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.processor_handler import ProcessorHandler
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.processor_handler import ProcessorHandler
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -11898,13 +11913,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -11916,7 +11931,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -11929,7 +11944,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a processor handler
         api_response = api_instance.get_processor_handler(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_processor_handler: %s\n" % e)
 ```
 
@@ -11985,13 +12000,13 @@ Get all processor handlers  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.processor_handler import ProcessorHandler
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.processor_handler import ProcessorHandler
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -12007,13 +12022,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -12025,7 +12040,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -12037,7 +12052,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Get all processor handlers
         api_response = api_instance.get_processor_handlers(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_processor_handlers: %s\n" % e)
 ```
 
@@ -12091,13 +12106,13 @@ Retrieve a PropertySet of a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_set import PropertySet
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_set import PropertySet
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -12113,13 +12128,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -12131,7 +12146,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -12144,7 +12159,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a PropertySet of a model
         api_response = api_instance.get_property_set(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_property_set: %s\n" % e)
 ```
 
@@ -12200,13 +12215,13 @@ Retrieve all PropertySets of a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_set import PropertySet
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_set import PropertySet
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -12222,13 +12237,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -12240,7 +12255,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -12252,7 +12267,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all PropertySets of a model
         api_response = api_instance.get_property_sets(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_property_sets: %s\n" % e)
 ```
 
@@ -12306,13 +12321,13 @@ Instead of a nested representation, this route respond with a flat structure and
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.raw_elements import RawElements
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.raw_elements import RawElements
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -12328,13 +12343,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -12346,7 +12361,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -12361,7 +12376,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all elements in a optimized format
         api_response = api_instance.get_raw_elements(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_raw_elements: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -12370,7 +12385,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all elements in a optimized format
         api_response = api_instance.get_raw_elements(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, type=type)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_raw_elements: %s\n" % e)
 ```
 
@@ -12428,13 +12443,13 @@ Retrieve an element of a model with a simple value representation  Required scop
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.simple_element import SimpleElement
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.simple_element import SimpleElement
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -12450,13 +12465,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -12468,7 +12483,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -12481,7 +12496,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve an element of a model with a simple value representation
         api_response = api_instance.get_simple_element(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_simple_element: %s\n" % e)
 ```
 
@@ -12537,13 +12552,13 @@ Retrieve all elements of a model with a simple value representation  Required sc
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.simple_element import SimpleElement
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.simple_element import SimpleElement
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -12559,13 +12574,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -12577,7 +12592,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -12592,7 +12607,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all elements of a model with a simple value representation
         api_response = api_instance.get_simple_elements(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_simple_elements: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -12601,7 +12616,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all elements of a model with a simple value representation
         api_response = api_instance.get_simple_elements(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, type=type)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_simple_elements: %s\n" % e)
 ```
 
@@ -12659,13 +12674,13 @@ Retrieve one space of the model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.space import Space
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.space import Space
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -12681,13 +12696,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -12699,7 +12714,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -12712,7 +12727,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve one space of the model
         api_response = api_instance.get_space(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_space: %s\n" % e)
 ```
 
@@ -12768,13 +12783,13 @@ Retrieve all spaces of the model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.space import Space
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.space import Space
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -12790,13 +12805,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -12808,7 +12823,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -12820,7 +12835,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all spaces of the model
         api_response = api_instance.get_spaces(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_spaces: %s\n" % e)
 ```
 
@@ -12874,13 +12889,13 @@ Retrieve a storey of a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.storey import Storey
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.storey import Storey
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -12896,13 +12911,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -12914,7 +12929,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -12927,7 +12942,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a storey of a model
         api_response = api_instance.get_storey(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_storey: %s\n" % e)
 ```
 
@@ -12983,13 +12998,13 @@ Retrieve the postioning of the plan in the storey  Required scopes: ifc:read, mo
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.positioning_plan import PositioningPlan
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.positioning_plan import PositioningPlan
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -13005,13 +13020,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -13023,7 +13038,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -13037,7 +13052,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve the postioning of the plan in the storey
         api_response = api_instance.get_storey_plan_positioning(cloud_pk, id, model_pk, project_pk, storey_uuid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_storey_plan_positioning: %s\n" % e)
 ```
 
@@ -13094,13 +13109,13 @@ Retrieve all storeys of a model.  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.storey import Storey
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.storey import Storey
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -13116,13 +13131,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -13134,7 +13149,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -13146,7 +13161,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all storeys of a model
         api_response = api_instance.get_storeys(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_storeys: %s\n" % e)
 ```
 
@@ -13200,13 +13215,13 @@ Retrieve a system of a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.system import System
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.system import System
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -13222,13 +13237,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -13240,7 +13255,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -13253,7 +13268,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a system of a model
         api_response = api_instance.get_system(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_system: %s\n" % e)
 ```
 
@@ -13309,13 +13324,13 @@ Retrieve all systems of a model.  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.system import System
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.system import System
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -13331,13 +13346,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -13349,7 +13364,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -13361,7 +13376,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all systems of a model
         api_response = api_instance.get_systems(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_systems: %s\n" % e)
 ```
 
@@ -13415,12 +13430,12 @@ This is only availble if the model is a POINT_CLOUD  Required scopes: ifc:read, 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -13436,13 +13451,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -13454,7 +13469,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -13466,7 +13481,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Retrieve the tileset of the model
         api_instance.get_tileset(cloud_pk, id, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_tileset: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -13474,7 +13489,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Retrieve the tileset of the model
         api_instance.get_tileset(cloud_pk, id, project_pk, tile_format=tile_format)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_tileset: %s\n" % e)
 ```
 
@@ -13530,13 +13545,13 @@ Retrieve one zone of a model  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.zone import Zone
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.zone import Zone
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -13552,13 +13567,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -13570,7 +13585,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -13583,7 +13598,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve one zone of a model
         api_response = api_instance.get_zone(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_zone: %s\n" % e)
 ```
 
@@ -13639,13 +13654,13 @@ Retrieve one space of a zone  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.zone_space import ZoneSpace
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.zone_space import ZoneSpace
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -13661,13 +13676,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -13679,7 +13694,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -13693,7 +13708,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve one space of a zone
         api_response = api_instance.get_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_zone_space: %s\n" % e)
 ```
 
@@ -13750,13 +13765,13 @@ Retrieve all spaces of a zone  Required scopes: ifc:read, model:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.zone_space import ZoneSpace
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.zone_space import ZoneSpace
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -13772,13 +13787,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -13790,7 +13805,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -13803,7 +13818,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all spaces of a zone
         api_response = api_instance.get_zone_spaces(cloud_pk, model_pk, project_pk, zone_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_zone_spaces: %s\n" % e)
 ```
 
@@ -13858,13 +13873,13 @@ Retrieve parent zones of a model. Children zones we'll be in the 'zones' field  
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.zone import Zone
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.zone import Zone
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -13880,13 +13895,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -13898,7 +13913,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -13911,7 +13926,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve zones of a model
         api_response = api_instance.get_zones(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_zones: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -13920,7 +13935,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve zones of a model
         api_response = api_instance.get_zones(cloud_pk, model_pk, project_pk, color=color)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->get_zones: %s\n" % e)
 ```
 
@@ -13975,13 +13990,13 @@ Link one or many documents to an element
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.document import Document
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.document import Document
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -13997,13 +14012,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -14015,7 +14030,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -14031,7 +14046,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Link one or many documents to an element
         api_response = api_instance.link_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, request_body)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->link_documents_of_element: %s\n" % e)
 ```
 
@@ -14089,13 +14104,13 @@ List all associations between classifications and elements  Required scopes: ifc
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.element_classification_relation import ElementClassificationRelation
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.element_classification_relation import ElementClassificationRelation
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -14111,13 +14126,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -14129,7 +14144,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -14141,7 +14156,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # List all associations between classifications and elements
         api_response = api_instance.list_classification_element_relations(cloud_pk, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->list_classification_element_relations: %s\n" % e)
 ```
 
@@ -14195,13 +14210,13 @@ Only works for IFC files. Merge IFC files. The merged IFC file will be put in th
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.ifc_merge_request import IfcMergeRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.ifc_merge_request import IfcMergeRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -14217,13 +14232,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -14235,7 +14250,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -14252,7 +14267,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Merge IFC files
         api_instance.merge_ifcs(cloud_pk, project_pk, ifc_merge_request)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->merge_ifcs: %s\n" % e)
 ```
 
@@ -14308,13 +14323,13 @@ Only works for IFC files. Optimize the IFC. A new optimized IFC file will be put
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.ifc_optimize_request import IfcOptimizeRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.ifc_optimize_request import IfcOptimizeRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -14330,13 +14345,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -14348,7 +14363,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -14362,7 +14377,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Optimize the IFC
         api_instance.optimize_ifc(cloud_pk, id, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->optimize_ifc: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -14370,7 +14385,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Optimize the IFC
         api_instance.optimize_ifc(cloud_pk, id, project_pk, ifc_optimize_request=ifc_optimize_request)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->optimize_ifc: %s\n" % e)
 ```
 
@@ -14427,12 +14442,12 @@ Remove all property sets from element. Property Sets will not be deleted, just d
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -14448,13 +14463,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -14466,7 +14481,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -14478,7 +14493,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Remove all property sets from element
         api_instance.remove_all_element_property_set(cloud_pk, element_uuid, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->remove_all_element_property_set: %s\n" % e)
 ```
 
@@ -14535,12 +14550,12 @@ The classification will not be deleted  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -14556,13 +14571,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -14574,7 +14589,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -14587,7 +14602,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Remove a classification from an element
         api_instance.remove_classification_of_element(cloud_pk, element_uuid, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->remove_classification_of_element: %s\n" % e)
 ```
 
@@ -14645,12 +14660,12 @@ The document will not be deleted  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -14666,13 +14681,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -14684,7 +14699,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -14697,7 +14712,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Remove a documents from an element
         api_instance.remove_document_of_element(cloud_pk, element_uuid, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->remove_document_of_element: %s\n" % e)
 ```
 
@@ -14755,12 +14770,12 @@ Delete the relation between the element and the property set. Does not delete an
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -14776,13 +14791,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -14794,7 +14809,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -14807,7 +14822,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Remove a PropertySet from an element
         api_instance.remove_element_property_set(cloud_pk, element_uuid, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->remove_element_property_set: %s\n" % e)
 ```
 
@@ -14865,12 +14880,12 @@ Remove a property from a PropertySet  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -14886,13 +14901,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -14904,7 +14919,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -14918,7 +14933,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Remove a property from a PropertySet
         api_instance.remove_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->remove_element_property_set_property: %s\n" % e)
 ```
 
@@ -14977,12 +14992,12 @@ Delete a Definition to a Property  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -14998,13 +15013,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -15016,7 +15031,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -15031,7 +15046,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Definition to a Property
         api_instance.remove_element_property_set_property_definition(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertyset_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->remove_element_property_set_property_definition: %s\n" % e)
 ```
 
@@ -15091,12 +15106,12 @@ Remove a Unit from a Definition  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -15112,13 +15127,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -15130,7 +15145,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -15146,7 +15161,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Remove a Unit from a Definition
         api_instance.remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->remove_element_property_set_property_definition_unit: %s\n" % e)
 ```
 
@@ -15207,12 +15222,12 @@ Remove the classification from all elements. No element nor classification will 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -15228,13 +15243,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -15246,7 +15261,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -15259,7 +15274,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Remove the classification from all elements
         api_instance.remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, uuid)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->remove_elements_from_classification: %s\n" % e)
 ```
 
@@ -15317,12 +15332,12 @@ Reprocess the model. All data that are not in the original model files will be l
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
+import bimdata-api-client
+from bimdata-api-client.api import model_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -15338,13 +15353,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -15356,7 +15371,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -15367,7 +15382,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Reprocess Model file
         api_instance.reprocess_model(cloud_pk, id, project_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->reprocess_model: %s\n" % e)
 ```
 
@@ -15423,14 +15438,14 @@ DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, m
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.ifc_access_token import IfcAccessToken
-from bimdata_api_client.model.patched_ifc_access_token_request import PatchedIfcAccessTokenRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.patched_ifc_access_token_request import PatchedIfcAccessTokenRequest
+from bimdata-api-client.model.ifc_access_token import IfcAccessToken
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -15446,13 +15461,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -15464,7 +15479,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -15481,7 +15496,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a token
         api_response = api_instance.update_access_token(cloud_pk, model_pk, project_pk, token)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_access_token: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -15490,7 +15505,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a token
         api_response = api_instance.update_access_token(cloud_pk, model_pk, project_pk, token, patched_ifc_access_token_request=patched_ifc_access_token_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_access_token: %s\n" % e)
 ```
 
@@ -15548,14 +15563,14 @@ Update some fields of a building  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.building import Building
-from bimdata_api_client.model.patched_storey_building_request import PatchedStoreyBuildingRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.building import Building
+from bimdata-api-client.model.patched_storey_building_request import PatchedStoreyBuildingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -15571,13 +15586,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -15589,7 +15604,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -15606,7 +15621,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a building
         api_response = api_instance.update_building(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_building: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -15615,7 +15630,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a building
         api_response = api_instance.update_building(cloud_pk, model_pk, project_pk, uuid, patched_storey_building_request=patched_storey_building_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_building: %s\n" % e)
 ```
 
@@ -15673,14 +15688,14 @@ Update the postioning of the plan in the building  Required scopes: ifc:write, m
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.patched_positioning_plan_request import PatchedPositioningPlanRequest
-from bimdata_api_client.model.positioning_plan import PositioningPlan
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.positioning_plan import PositioningPlan
+from bimdata-api-client.model.patched_positioning_plan_request import PatchedPositioningPlanRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -15696,13 +15711,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -15714,7 +15729,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     building_uuid = "building_uuid_example" # str | 
@@ -15735,7 +15750,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update the postioning of the plan in the building
         api_response = api_instance.update_building_plan_positioning(building_uuid, cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_building_plan_positioning: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -15744,7 +15759,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update the postioning of the plan in the building
         api_response = api_instance.update_building_plan_positioning(building_uuid, cloud_pk, id, model_pk, project_pk, patched_positioning_plan_request=patched_positioning_plan_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_building_plan_positioning: %s\n" % e)
 ```
 
@@ -15803,14 +15818,14 @@ Update some fields of a drawing  Required scopes: model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.drawing import Drawing
-from bimdata_api_client.model.patched_drawing_request import PatchedDrawingRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.patched_drawing_request import PatchedDrawingRequest
+from bimdata-api-client.model.drawing import Drawing
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -15826,13 +15841,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -15844,7 +15859,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -15860,7 +15875,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a drawing
         api_response = api_instance.update_drawing(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_drawing: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -15869,7 +15884,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a drawing
         api_response = api_instance.update_drawing(cloud_pk, id, model_pk, project_pk, patched_drawing_request=patched_drawing_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_drawing: %s\n" % e)
 ```
 
@@ -15927,14 +15942,14 @@ Update some fields of an element. The IFC file will not be updated. The created 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.patched_element_request import PatchedElementRequest
-from bimdata_api_client.model.element import Element
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.element import Element
+from bimdata-api-client.model.patched_element_request import PatchedElementRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -15950,13 +15965,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -15968,7 +15983,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -15991,9 +16006,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                         type="type_example",
                         value_type="value_type_example",
                     ),
-                    value={
-                        "key": None,
-                    },
+                    value=None,
                 ),
             ],
         ),
@@ -16011,9 +16024,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                             type="type_example",
                             value_type="value_type_example",
                         ),
-                        value={
-                            "key": None,
-                        },
+                        value=None,
                     ),
                 ],
             ),
@@ -16039,7 +16050,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of an element
         api_response = api_instance.update_element(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_element: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -16048,7 +16059,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of an element
         api_response = api_instance.update_element(cloud_pk, model_pk, project_pk, uuid, patched_element_request=patched_element_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_element: %s\n" % e)
 ```
 
@@ -16106,14 +16117,14 @@ Update a property value from an element. If the element is the only one to have 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.patched_property_request import PatchedPropertyRequest
-from bimdata_api_client.model.model_property import ModelProperty
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.model_property import ModelProperty
+from bimdata-api-client.model.patched_property_request import PatchedPropertyRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -16129,13 +16140,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -16147,7 +16158,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -16164,9 +16175,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             type="type_example",
             value_type="value_type_example",
         ),
-        value={
-            "key": None,
-        },
+        value=None,
     ) # PatchedPropertyRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -16174,7 +16183,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update a property from an element
         api_response = api_instance.update_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_element_property_set_property: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -16183,7 +16192,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update a property from an element
         api_response = api_instance.update_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk, patched_property_request=patched_property_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_element_property_set_property: %s\n" % e)
 ```
 
@@ -16243,14 +16252,14 @@ Update some fields of a layer. The IFC file will not be updated. The created lay
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.patched_layer_request import PatchedLayerRequest
-from bimdata_api_client.model.layer import Layer
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.patched_layer_request import PatchedLayerRequest
+from bimdata-api-client.model.layer import Layer
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -16266,13 +16275,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -16284,7 +16293,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -16305,7 +16314,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a layer
         api_response = api_instance.update_layer(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_layer: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -16314,7 +16323,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a layer
         api_response = api_instance.update_layer(cloud_pk, id, model_pk, project_pk, patched_layer_request=patched_layer_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_layer: %s\n" % e)
 ```
 
@@ -16372,14 +16381,14 @@ Update some fields of a model  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.patched_model_request import PatchedModelRequest
-from bimdata_api_client.model.model import Model
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.model import Model
+from bimdata-api-client.model.patched_model_request import PatchedModelRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -16395,13 +16404,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -16413,7 +16422,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -16442,7 +16451,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a model
         api_response = api_instance.update_model(cloud_pk, id, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_model: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -16451,7 +16460,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a model
         api_response = api_instance.update_model(cloud_pk, id, project_pk, patched_model_request=patched_model_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_model: %s\n" % e)
 ```
 
@@ -16508,13 +16517,13 @@ This route does not accept JSON, only files as x-www-form-urlencoded  Required s
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.model_files import ModelFiles
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.model_files import ModelFiles
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -16530,13 +16539,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -16548,7 +16557,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
@@ -16567,7 +16576,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update models file (gltf, svg, structure, etc)
         api_response = api_instance.update_model_files(cloud_pk, id, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_model_files: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -16576,7 +16585,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update models file (gltf, svg, structure, etc)
         api_response = api_instance.update_model_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, preview_file=preview_file, xkt_file=xkt_file, binary_2d_file=binary_2d_file)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_model_files: %s\n" % e)
 ```
 
@@ -16639,14 +16648,14 @@ Update some fields of a Property  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.patched_property_request import PatchedPropertyRequest
-from bimdata_api_client.model.model_property import ModelProperty
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.model_property import ModelProperty
+from bimdata-api-client.model.patched_property_request import PatchedPropertyRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -16662,13 +16671,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -16680,7 +16689,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -16695,9 +16704,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             type="type_example",
             value_type="value_type_example",
         ),
-        value={
-            "key": None,
-        },
+        value=None,
     ) # PatchedPropertyRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -16705,7 +16712,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a Property
         api_response = api_instance.update_model_property(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_model_property: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -16714,7 +16721,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a Property
         api_response = api_instance.update_model_property(cloud_pk, id, model_pk, project_pk, patched_property_request=patched_property_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_model_property: %s\n" % e)
 ```
 
@@ -16772,14 +16779,14 @@ Update some fields of many PropertyDefinitions of a model  Required scopes: ifc:
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_definition import PropertyDefinition
-from bimdata_api_client.model.patched_property_definition_request import PatchedPropertyDefinitionRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.property_definition import PropertyDefinition
+from bimdata-api-client.model.patched_property_definition_request import PatchedPropertyDefinitionRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -16795,13 +16802,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -16813,7 +16820,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -16833,7 +16840,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of many PropertyDefinitions of a model
         api_response = api_instance.update_model_property_definition(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_model_property_definition: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -16842,7 +16849,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of many PropertyDefinitions of a model
         api_response = api_instance.update_model_property_definition(cloud_pk, id, model_pk, project_pk, patched_property_definition_request=patched_property_definition_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_model_property_definition: %s\n" % e)
 ```
 
@@ -16900,14 +16907,14 @@ Update some fields of a Unit of a model  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.unit import Unit
-from bimdata_api_client.model.patched_unit_request import PatchedUnitRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.unit import Unit
+from bimdata-api-client.model.patched_unit_request import PatchedUnitRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -16923,13 +16930,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -16941,7 +16948,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -16957,7 +16964,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             3.14,
         ],
         conversion_factor=3.14,
-        conversion_baseunit=UnitRequest(
+        conversion_baseunit=Unit(
             type="type_example",
             name="name_example",
             unit_type="unit_type_example",
@@ -16966,15 +16973,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 3.14,
             ],
             conversion_factor=3.14,
-            conversion_baseunit=UnitRequest(),
-            elements={
-                "key": None,
-            },
+            conversion_baseunit=Unit(),
+            elements=None,
             is_default=True,
         ),
-        elements={
-            "key": None,
-        },
+        elements=None,
         is_default=True,
     ) # PatchedUnitRequest |  (optional)
 
@@ -16983,7 +16986,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a Unit of a model
         api_response = api_instance.update_model_unit(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_model_unit: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -16992,7 +16995,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a Unit of a model
         api_response = api_instance.update_model_unit(cloud_pk, id, model_pk, project_pk, patched_unit_request=patched_unit_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_model_unit: %s\n" % e)
 ```
 
@@ -17050,13 +17053,13 @@ Update order of all plan of a building  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.storey import Storey
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.storey import Storey
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -17072,13 +17075,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -17090,7 +17093,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     building_uuid = "building_uuid_example" # str | 
@@ -17106,7 +17109,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update order of all plan of a building
         api_response = api_instance.update_order_building_plan(building_uuid, cloud_pk, model_pk, project_pk, request_body)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_order_building_plan: %s\n" % e)
 ```
 
@@ -17164,13 +17167,13 @@ Update order of all plan of a storey  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.storey import Storey
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.storey import Storey
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -17186,13 +17189,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -17204,7 +17207,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -17220,7 +17223,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update order of all plan of a storey
         api_response = api_instance.update_order_storey_plan(cloud_pk, model_pk, project_pk, storey_uuid, request_body)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_order_storey_plan: %s\n" % e)
 ```
 
@@ -17278,13 +17281,13 @@ Update order of all storey of a model  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.storey import Storey
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.storey import Storey
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -17300,13 +17303,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -17318,7 +17321,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -17333,7 +17336,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update order of all storey of a model
         api_response = api_instance.update_order_storeys(cloud_pk, model_pk, project_pk, request_body)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_order_storeys: %s\n" % e)
 ```
 
@@ -17390,14 +17393,14 @@ Update the status of a processor handler  Required scopes: ifc:write, model:writ
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.patched_processor_handler_request import PatchedProcessorHandlerRequest
-from bimdata_api_client.model.processor_handler import ProcessorHandler
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.patched_processor_handler_request import PatchedProcessorHandlerRequest
+from bimdata-api-client.model.processor_handler import ProcessorHandler
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -17413,13 +17416,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -17431,7 +17434,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -17448,7 +17451,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update the status of a processor handler
         api_response = api_instance.update_processor_handler(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_processor_handler: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -17457,7 +17460,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update the status of a processor handler
         api_response = api_instance.update_processor_handler(cloud_pk, id, model_pk, project_pk, patched_processor_handler_request=patched_processor_handler_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_processor_handler: %s\n" % e)
 ```
 
@@ -17515,14 +17518,14 @@ Update some fields of a PropertySet  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_set import PropertySet
-from bimdata_api_client.model.patched_property_set_request import PatchedPropertySetRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.patched_property_set_request import PatchedPropertySetRequest
+from bimdata-api-client.model.property_set import PropertySet
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -17538,13 +17541,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -17556,7 +17559,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -17576,9 +17579,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                     type="type_example",
                     value_type="value_type_example",
                 ),
-                value={
-                    "key": None,
-                },
+                value=None,
             ),
         ],
     ) # PatchedPropertySetRequest |  (optional)
@@ -17588,7 +17589,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a PropertySet
         api_response = api_instance.update_property_set(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_property_set: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -17597,7 +17598,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a PropertySet
         api_response = api_instance.update_property_set(cloud_pk, id, model_pk, project_pk, patched_property_set_request=patched_property_set_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_property_set: %s\n" % e)
 ```
 
@@ -17655,14 +17656,14 @@ Update some fields of a space. The IFC file will not be updated. The created spa
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.patched_space_request import PatchedSpaceRequest
-from bimdata_api_client.model.space import Space
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.space import Space
+from bimdata-api-client.model.patched_space_request import PatchedSpaceRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -17678,13 +17679,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -17696,7 +17697,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -17721,7 +17722,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a space
         api_response = api_instance.update_space(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_space: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -17730,7 +17731,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a space
         api_response = api_instance.update_space(cloud_pk, id, model_pk, project_pk, patched_space_request=patched_space_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_space: %s\n" % e)
 ```
 
@@ -17788,14 +17789,14 @@ Update some fields of a storey  Required scopes: ifc:write, model:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.storey import Storey
-from bimdata_api_client.model.patched_storey_building_request import PatchedStoreyBuildingRequest
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.storey import Storey
+from bimdata-api-client.model.patched_storey_building_request import PatchedStoreyBuildingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -17811,13 +17812,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -17829,7 +17830,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -17846,7 +17847,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a storey
         api_response = api_instance.update_storey(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_storey: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -17855,7 +17856,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a storey
         api_response = api_instance.update_storey(cloud_pk, model_pk, project_pk, uuid, patched_storey_building_request=patched_storey_building_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_storey: %s\n" % e)
 ```
 
@@ -17913,14 +17914,14 @@ Update the postioning of the plan in the storey  Required scopes: ifc:write, mod
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.patched_positioning_plan_request import PatchedPositioningPlanRequest
-from bimdata_api_client.model.positioning_plan import PositioningPlan
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.positioning_plan import PositioningPlan
+from bimdata-api-client.model.patched_positioning_plan_request import PatchedPositioningPlanRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -17936,13 +17937,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -17954,7 +17955,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -17975,7 +17976,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update the postioning of the plan in the storey
         api_response = api_instance.update_storey_plan_positioning(cloud_pk, id, model_pk, project_pk, storey_uuid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_storey_plan_positioning: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -17984,7 +17985,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update the postioning of the plan in the storey
         api_response = api_instance.update_storey_plan_positioning(cloud_pk, id, model_pk, project_pk, storey_uuid, patched_positioning_plan_request=patched_positioning_plan_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_storey_plan_positioning: %s\n" % e)
 ```
 
@@ -18043,14 +18044,14 @@ Update some fields of a system. The IFC file will not be updated. The created sy
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.patched_system_request import PatchedSystemRequest
-from bimdata_api_client.model.system import System
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.system import System
+from bimdata-api-client.model.patched_system_request import PatchedSystemRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -18066,13 +18067,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -18084,7 +18085,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -18106,7 +18107,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a system
         api_response = api_instance.update_system(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_system: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -18115,7 +18116,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a system
         api_response = api_instance.update_system(cloud_pk, model_pk, project_pk, uuid, patched_system_request=patched_system_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_system: %s\n" % e)
 ```
 
@@ -18173,14 +18174,14 @@ Update some fields of a zone. The IFC file will not be updated. The created zone
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.patched_zone_request import PatchedZoneRequest
-from bimdata_api_client.model.zone import Zone
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.patched_zone_request import PatchedZoneRequest
+from bimdata-api-client.model.zone import Zone
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -18196,13 +18197,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -18214,7 +18215,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -18225,18 +18226,18 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         name="name_example",
         uuid="uuid_example",
         zones=[
-            ZoneRequest(
+            Zone(
                 name="name_example",
                 uuid="uuid_example",
                 zones=[],
                 parent_id=1,
                 spaces=[
-                    ZoneSpaceRequest(
+                    ZoneSpace(
                         name="name_example",
                         longname="longname_example",
                         uuid="uuid_example",
                         geometry=[
-                            GeometryPointRequest(
+                            GeometryPoint(
                                 x=3.14,
                                 y=3.14,
                                 z=3.14,
@@ -18276,7 +18277,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a zone
         api_response = api_instance.update_zone(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_zone: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -18285,7 +18286,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a zone
         api_response = api_instance.update_zone(cloud_pk, id, model_pk, project_pk, patched_zone_request=patched_zone_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_zone: %s\n" % e)
 ```
 
@@ -18343,14 +18344,14 @@ Update some fields of a space. The IFC file will not be updated. The created spa
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import model_api
-from bimdata_api_client.model.patched_zone_space_request import PatchedZoneSpaceRequest
-from bimdata_api_client.model.zone_space import ZoneSpace
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.patched_zone_space_request import PatchedZoneSpaceRequest
+from bimdata-api-client.model.zone_space import ZoneSpace
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -18366,13 +18367,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -18384,7 +18385,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
@@ -18411,7 +18412,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a space
         api_response = api_instance.update_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_zone_space: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -18420,7 +18421,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a space
         api_response = api_instance.update_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk, patched_zone_space_request=patched_zone_space_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->update_zone_space: %s\n" % e)
 ```
 

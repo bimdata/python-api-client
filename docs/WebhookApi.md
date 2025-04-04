@@ -1,4 +1,4 @@
-# bimdata_api_client.WebhookApi
+# bimdata-api-client.WebhookApi
 
 All URIs are relative to *http://localhost*
 
@@ -28,14 +28,14 @@ Create a new Webhook  Required scopes: webhook:manage
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import webhook_api
-from bimdata_api_client.model.web_hook import WebHook
-from bimdata_api_client.model.web_hook_request import WebHookRequest
+import bimdata-api-client
+from bimdata-api-client.api import webhook_api
+from bimdata-api-client.model.web_hook import WebHook
+from bimdata-api-client.model.web_hook_request import WebHookRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -51,13 +51,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -69,7 +69,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = webhook_api.WebhookApi(api_client)
     cloud_pk = 1 # int | 
@@ -86,7 +86,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a new Webhook
         api_response = api_instance.create_web_hook(cloud_pk, web_hook_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling WebhookApi->create_web_hook: %s\n" % e)
 ```
 
@@ -141,12 +141,12 @@ Delete a webhook  Required scopes: webhook:manage
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import webhook_api
+import bimdata-api-client
+from bimdata-api-client.api import webhook_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -162,13 +162,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -180,7 +180,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = webhook_api.WebhookApi(api_client)
     cloud_pk = 1 # int | 
@@ -190,7 +190,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a webhook
         api_instance.delete_web_hook(cloud_pk, id)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling WebhookApi->delete_web_hook: %s\n" % e)
 ```
 
@@ -245,13 +245,13 @@ Retrieve one configured webhook  Required scopes: webhook:manage
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import webhook_api
-from bimdata_api_client.model.web_hook import WebHook
+import bimdata-api-client
+from bimdata-api-client.api import webhook_api
+from bimdata-api-client.model.web_hook import WebHook
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -267,13 +267,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -285,7 +285,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = webhook_api.WebhookApi(api_client)
     cloud_pk = 1 # int | 
@@ -296,7 +296,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve one configured webhook
         api_response = api_instance.get_web_hook(cloud_pk, id)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling WebhookApi->get_web_hook: %s\n" % e)
 ```
 
@@ -350,13 +350,13 @@ Retrieve all configured webhooks  Required scopes: webhook:manage
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import webhook_api
-from bimdata_api_client.model.web_hook import WebHook
+import bimdata-api-client
+from bimdata-api-client.api import webhook_api
+from bimdata-api-client.model.web_hook import WebHook
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -372,13 +372,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -390,7 +390,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = webhook_api.WebhookApi(api_client)
     cloud_pk = 1 # int | 
@@ -400,7 +400,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all configured webhooks
         api_response = api_instance.get_web_hooks(cloud_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling WebhookApi->get_web_hooks: %s\n" % e)
 ```
 
@@ -452,14 +452,14 @@ Trigger a Ping Event sending {\"ok\": true} to the webhook URL. Useful to test y
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import webhook_api
-from bimdata_api_client.model.web_hook import WebHook
-from bimdata_api_client.model.web_hook_request import WebHookRequest
+import bimdata-api-client
+from bimdata-api-client.api import webhook_api
+from bimdata-api-client.model.web_hook import WebHook
+from bimdata-api-client.model.web_hook_request import WebHookRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -475,13 +475,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -493,7 +493,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = webhook_api.WebhookApi(api_client)
     cloud_pk = 1 # int | 
@@ -511,7 +511,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Test a webhook
         api_response = api_instance.ping_web_hook(cloud_pk, id, web_hook_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling WebhookApi->ping_web_hook: %s\n" % e)
 ```
 
@@ -567,14 +567,14 @@ Update some field of a webhook  Required scopes: webhook:manage
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import webhook_api
-from bimdata_api_client.model.web_hook import WebHook
-from bimdata_api_client.model.patched_web_hook_request import PatchedWebHookRequest
+import bimdata-api-client
+from bimdata-api-client.api import webhook_api
+from bimdata-api-client.model.patched_web_hook_request import PatchedWebHookRequest
+from bimdata-api-client.model.web_hook import WebHook
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -590,13 +590,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -608,7 +608,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = webhook_api.WebhookApi(api_client)
     cloud_pk = 1 # int | 
@@ -626,7 +626,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some field of a webhook
         api_response = api_instance.update_web_hook(cloud_pk, id)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling WebhookApi->update_web_hook: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -635,7 +635,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some field of a webhook
         api_response = api_instance.update_web_hook(cloud_pk, id, patched_web_hook_request=patched_web_hook_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling WebhookApi->update_web_hook: %s\n" % e)
 ```
 

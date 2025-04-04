@@ -12,15 +12,15 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.raw_classification_request import RawClassificationRequest
-from bimdata_api_client.model.raw_definition_request import RawDefinitionRequest
-from bimdata_api_client.model.raw_element_request import RawElementRequest
-from bimdata_api_client.model.raw_layer_request import RawLayerRequest
-from bimdata_api_client.model.raw_material_list_request import RawMaterialListRequest
-from bimdata_api_client.model.raw_property_set_request import RawPropertySetRequest
-from bimdata_api_client.model.raw_system_request import RawSystemRequest
-from bimdata_api_client.model.raw_unit_request import RawUnitRequest
+import bimdata-api-client
+from bimdata-api-client.model.raw_classification_request import RawClassificationRequest
+from bimdata-api-client.model.raw_definition_request import RawDefinitionRequest
+from bimdata-api-client.model.raw_element_request import RawElementRequest
+from bimdata-api-client.model.raw_layer_request import RawLayerRequest
+from bimdata-api-client.model.raw_material_list_request import RawMaterialListRequest
+from bimdata-api-client.model.raw_property_set_request import RawPropertySetRequest
+from bimdata-api-client.model.raw_system_request import RawSystemRequest
+from bimdata-api-client.model.raw_unit_request import RawUnitRequest
 globals()['RawClassificationRequest'] = RawClassificationRequest
 globals()['RawDefinitionRequest'] = RawDefinitionRequest
 globals()['RawElementRequest'] = RawElementRequest
@@ -29,7 +29,7 @@ globals()['RawMaterialListRequest'] = RawMaterialListRequest
 globals()['RawPropertySetRequest'] = RawPropertySetRequest
 globals()['RawSystemRequest'] = RawSystemRequest
 globals()['RawUnitRequest'] = RawUnitRequest
-from bimdata_api_client.model.raw_elements_request import RawElementsRequest
+from bimdata-api-client.model.raw_elements_request import RawElementsRequest
 
 
 class TestRawElementsRequest(unittest.TestCase):

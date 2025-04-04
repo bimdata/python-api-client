@@ -12,8 +12,10 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.write_folder_request import WriteFolderRequest
+import bimdata-api-client
+from bimdata-api-client.model.write_folder import WriteFolder
+globals()['WriteFolder'] = WriteFolder
+from bimdata-api-client.model.write_folder_request import WriteFolderRequest
 
 
 class TestWriteFolderRequest(unittest.TestCase):

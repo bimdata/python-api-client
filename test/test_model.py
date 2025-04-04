@@ -12,16 +12,16 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.model_document import ModelDocument
-from bimdata_api_client.model.model_serializer_without_children import ModelSerializerWithoutChildren
-from bimdata_api_client.model.user import User
-from bimdata_api_client.model.xkt_file import XktFile
+import bimdata-api-client
+from bimdata-api-client.model.model_document import ModelDocument
+from bimdata-api-client.model.model_serializer_without_children import ModelSerializerWithoutChildren
+from bimdata-api-client.model.user import User
+from bimdata-api-client.model.xkt_file import XktFile
 globals()['ModelDocument'] = ModelDocument
 globals()['ModelSerializerWithoutChildren'] = ModelSerializerWithoutChildren
 globals()['User'] = User
 globals()['XktFile'] = XktFile
-from bimdata_api_client.model.model import Model
+from bimdata-api-client.model.model import Model
 
 
 class TestModel(unittest.TestCase):

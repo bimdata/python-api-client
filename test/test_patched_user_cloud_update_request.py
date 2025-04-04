@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.patched_user_cloud_update_request import PatchedUserCloudUpdateRequest
+import bimdata-api-client
+from bimdata-api-client.model.patched_user_cloud_update_request import PatchedUserCloudUpdateRequest
 
 
 class TestPatchedUserCloudUpdateRequest(unittest.TestCase):

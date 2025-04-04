@@ -1,4 +1,4 @@
-# bimdata_api_client.BcfApi
+# bimdata-api-client.BcfApi
 
 All URIs are relative to *http://localhost*
 
@@ -84,14 +84,14 @@ Create a comment  Required scopes: bcf:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.comment_request import CommentRequest
-from bimdata_api_client.model.comment import Comment
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.comment import Comment
+from bimdata-api-client.model.comment_request import CommentRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -107,13 +107,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -125,7 +125,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | A unique integer value identifying this project.
@@ -146,7 +146,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a comment
         api_response = api_instance.create_comment(projects_pk, topics_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->create_comment: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -155,7 +155,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a comment
         api_response = api_instance.create_comment(projects_pk, topics_guid, comment_request=comment_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->create_comment: %s\n" % e)
 ```
 
@@ -211,14 +211,14 @@ This is not a standard route. Create a Label available for the project  Required
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.label_request import LabelRequest
-from bimdata_api_client.model.label import Label
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.label import Label
+from bimdata-api-client.model.label_request import LabelRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -234,13 +234,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -252,7 +252,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
@@ -266,7 +266,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a Label
         api_response = api_instance.create_extension_label(projects_pk, label_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->create_extension_label: %s\n" % e)
 ```
 
@@ -321,14 +321,14 @@ This is not a standard route. Create a Priority available for the project  Requi
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.priority import Priority
-from bimdata_api_client.model.priority_request import PriorityRequest
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.priority_request import PriorityRequest
+from bimdata-api-client.model.priority import Priority
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -344,13 +344,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -362,7 +362,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
@@ -377,7 +377,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a Priority
         api_response = api_instance.create_extension_priority(projects_pk, priority_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->create_extension_priority: %s\n" % e)
 ```
 
@@ -432,14 +432,14 @@ This is not a standard route. Create a Stage available for the project  Required
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.stage_request import StageRequest
-from bimdata_api_client.model.stage import Stage
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.stage import Stage
+from bimdata-api-client.model.stage_request import StageRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -455,13 +455,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -473,7 +473,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
@@ -487,7 +487,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a Stage
         api_response = api_instance.create_extension_stage(projects_pk, stage_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->create_extension_stage: %s\n" % e)
 ```
 
@@ -542,14 +542,14 @@ This is not a standard route. Create a TopicStatus available for the project  Re
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.topic_status_request import TopicStatusRequest
-from bimdata_api_client.model.topic_status import TopicStatus
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.topic_status_request import TopicStatusRequest
+from bimdata-api-client.model.topic_status import TopicStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -565,13 +565,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -583,7 +583,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
@@ -598,7 +598,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a TopicStatus
         api_response = api_instance.create_extension_status(projects_pk, topic_status_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->create_extension_status: %s\n" % e)
 ```
 
@@ -653,14 +653,14 @@ This is not a standard route. Create a TopicType available for the project  Requ
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.topic_type import TopicType
-from bimdata_api_client.model.topic_type_request import TopicTypeRequest
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.topic_type_request import TopicTypeRequest
+from bimdata-api-client.model.topic_type import TopicType
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -676,13 +676,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -694,7 +694,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
@@ -708,7 +708,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a TopicType
         api_response = api_instance.create_extension_type(projects_pk, topic_type_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->create_extension_type: %s\n" % e)
 ```
 
@@ -763,14 +763,14 @@ This is not a standard route. You can send a topic, viewpoints and comments in a
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.full_topic_request import FullTopicRequest
-from bimdata_api_client.model.full_topic import FullTopic
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.full_topic_request import FullTopicRequest
+from bimdata-api-client.model.full_topic import FullTopic
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -786,13 +786,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -804,7 +804,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
@@ -905,9 +905,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             ),
         ],
         project=1,
-        bimdata_viewer_layout={
-            "key": None,
-        },
+        bimdata_viewer_layout=None,
     ) # FullTopicRequest | 
     img_format = "url" # str | All snapshot_data will be returned as url instead of base64 (optional) if omitted the server will use the default value of "url"
 
@@ -916,7 +914,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a Topic with viewpoints and comments
         api_response = api_instance.create_full_topic(projects_pk, full_topic_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->create_full_topic: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -925,7 +923,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a Topic with viewpoints and comments
         api_response = api_instance.create_full_topic(projects_pk, full_topic_request, img_format=img_format)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->create_full_topic: %s\n" % e)
 ```
 
@@ -981,14 +979,14 @@ This is not a standard route. Create a Pin  Required scopes: bcf:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.pin import Pin
-from bimdata_api_client.model.pin_request import PinRequest
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.pin_request import PinRequest
+from bimdata-api-client.model.pin import Pin
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1004,13 +1002,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1022,7 +1020,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
@@ -1045,7 +1043,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a Pin
         api_response = api_instance.create_pin(projects_pk, topics_guid, viewpoints_guid, pin_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->create_pin: %s\n" % e)
 ```
 
@@ -1102,14 +1100,14 @@ Create a topic  Required scopes: bcf:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.topic_request import TopicRequest
-from bimdata_api_client.model.topic import Topic
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.topic_request import TopicRequest
+from bimdata-api-client.model.topic import Topic
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1125,13 +1123,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1143,7 +1141,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
@@ -1175,9 +1173,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         format="format_example",
         index=0,
         project=1,
-        bimdata_viewer_layout={
-            "key": None,
-        },
+        bimdata_viewer_layout=None,
     ) # TopicRequest | 
 
     # example passing only required values which don't have defaults set
@@ -1185,7 +1181,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a topic
         api_response = api_instance.create_topic(projects_pk, topic_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->create_topic: %s\n" % e)
 ```
 
@@ -1240,14 +1236,14 @@ Create a Viewpoint  Required scopes: bcf:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.viewpoint_request import ViewpointRequest
-from bimdata_api_client.model.viewpoint import Viewpoint
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.viewpoint import Viewpoint
+from bimdata-api-client.model.viewpoint_request import ViewpointRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1263,13 +1259,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1281,7 +1277,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
@@ -1348,7 +1344,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a Viewpoint
         api_response = api_instance.create_viewpoint(projects_pk, topics_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->create_viewpoint: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1357,7 +1353,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Create a Viewpoint
         api_response = api_instance.create_viewpoint(projects_pk, topics_guid, img_format=img_format, viewpoint_request=viewpoint_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->create_viewpoint: %s\n" % e)
 ```
 
@@ -1414,12 +1410,12 @@ Delete a comment  Required scopes: bcf:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1435,13 +1431,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1453,7 +1449,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -1464,7 +1460,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a comment
         api_instance.delete_comment(guid, projects_pk, topics_guid)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->delete_comment: %s\n" % e)
 ```
 
@@ -1520,12 +1516,12 @@ This is not a standard route. Delete a Label. Topics using this label won't be d
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1541,13 +1537,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1559,7 +1555,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this label.
@@ -1569,7 +1565,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Label
         api_instance.delete_extension_label(id, projects_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->delete_extension_label: %s\n" % e)
 ```
 
@@ -1624,12 +1620,12 @@ This is not a standard route. Delete a Priority. Topics using this priority won'
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1645,13 +1641,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1663,7 +1659,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this priority.
@@ -1673,7 +1669,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Priority
         api_instance.delete_extension_priority(id, projects_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->delete_extension_priority: %s\n" % e)
 ```
 
@@ -1728,12 +1724,12 @@ This is not a standard route. Delete a Stage. Topics using this stage won't be d
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1749,13 +1745,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1767,7 +1763,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this stage.
@@ -1777,7 +1773,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Stage
         api_instance.delete_extension_stage(id, projects_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->delete_extension_stage: %s\n" % e)
 ```
 
@@ -1832,12 +1828,12 @@ This is not a standard route. Delete a TopicStatus. Topics using this status won
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1853,13 +1849,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1871,7 +1867,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this topic status.
@@ -1881,7 +1877,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a TopicStatus
         api_instance.delete_extension_status(id, projects_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->delete_extension_status: %s\n" % e)
 ```
 
@@ -1936,12 +1932,12 @@ This is not a standard route. Delete a TopicType. Topics using this type won't b
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -1957,13 +1953,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1975,7 +1971,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this topic type.
@@ -1985,7 +1981,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a TopicType
         api_instance.delete_extension_type(id, projects_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->delete_extension_type: %s\n" % e)
 ```
 
@@ -2040,12 +2036,12 @@ This is not a standard route. Delete a Pin  Required scopes: bcf:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2061,13 +2057,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2079,7 +2075,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -2091,7 +2087,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Pin
         api_instance.delete_pin(guid, projects_pk, topics_guid, viewpoints_guid)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->delete_pin: %s\n" % e)
 ```
 
@@ -2148,12 +2144,12 @@ Delete a topic  Required scopes: bcf:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2169,13 +2165,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2187,7 +2183,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -2197,7 +2193,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a topic
         api_instance.delete_topic(guid, projects_pk)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->delete_topic: %s\n" % e)
 ```
 
@@ -2252,12 +2248,12 @@ This is not a standard route. Delete a Viewpoint  Required scopes: bcf:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2273,13 +2269,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2291,7 +2287,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -2303,7 +2299,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Viewpoint
         api_instance.delete_viewpoint(guid, projects_pk, topics_guid)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->delete_viewpoint: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2311,7 +2307,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Viewpoint
         api_instance.delete_viewpoint(guid, projects_pk, topics_guid, img_format=img_format)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->delete_viewpoint: %s\n" % e)
 ```
 
@@ -2368,12 +2364,12 @@ This is not a standard route. Export project's topics in bcf-xml format  Require
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2389,13 +2385,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2407,7 +2403,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this project.
@@ -2419,7 +2415,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Export project's topics in bcf-xml format
         api_response = api_instance.download_bcf_export(id)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->download_bcf_export: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2428,7 +2424,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Export project's topics in bcf-xml format
         api_response = api_instance.download_bcf_export(id, format=format, topics=topics)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->download_bcf_export: %s\n" % e)
 ```
 
@@ -2483,12 +2479,12 @@ This is not a standard route. Export project's topics in excel format  Required 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2504,13 +2500,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2522,7 +2518,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this project.
@@ -2535,7 +2531,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Export project's topics in excel format
         api_response = api_instance.download_bcf_export_xlsx(id)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->download_bcf_export_xlsx: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2544,7 +2540,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Export project's topics in excel format
         api_response = api_instance.download_bcf_export_xlsx(id, format=format, locale=locale, topics=topics)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->download_bcf_export_xlsx: %s\n" % e)
 ```
 
@@ -2600,14 +2596,14 @@ Update all fields of a BCF project  Required scopes: bcf:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.bcf_project_request import BcfProjectRequest
-from bimdata_api_client.model.bcf_project import BcfProject
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.bcf_project import BcfProject
+from bimdata-api-client.model.bcf_project_request import BcfProjectRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2623,13 +2619,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2641,7 +2637,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this project.
@@ -2654,7 +2650,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update all fields of a BCF project
         api_response = api_instance.full_update_bcf_project(id, bcf_project_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->full_update_bcf_project: %s\n" % e)
 ```
 
@@ -2709,14 +2705,14 @@ Update all fields of a comment  Required scopes: bcf:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.comment_request import CommentRequest
-from bimdata_api_client.model.comment import Comment
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.comment import Comment
+from bimdata-api-client.model.comment_request import CommentRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2732,13 +2728,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2750,7 +2746,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -2772,7 +2768,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update all fields of a comment
         api_response = api_instance.full_update_comment(guid, projects_pk, topics_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->full_update_comment: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2781,7 +2777,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update all fields of a comment
         api_response = api_instance.full_update_comment(guid, projects_pk, topics_guid, comment_request=comment_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->full_update_comment: %s\n" % e)
 ```
 
@@ -2838,14 +2834,14 @@ This is not a standard route. You can update topic, viewpoints and comment is a 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.full_topic_request import FullTopicRequest
-from bimdata_api_client.model.full_topic import FullTopic
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.full_topic_request import FullTopicRequest
+from bimdata-api-client.model.full_topic import FullTopic
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -2861,13 +2857,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2879,7 +2875,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -2981,9 +2977,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             ),
         ],
         project=1,
-        bimdata_viewer_layout={
-            "key": None,
-        },
+        bimdata_viewer_layout=None,
     ) # FullTopicRequest | 
     img_format = "url" # str | All snapshot_data will be returned as url instead of base64 (optional) if omitted the server will use the default value of "url"
 
@@ -2992,7 +2986,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update all fields of a topic
         api_response = api_instance.full_update_full_topic(guid, projects_pk, full_topic_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->full_update_full_topic: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -3001,7 +2995,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update all fields of a topic
         api_response = api_instance.full_update_full_topic(guid, projects_pk, full_topic_request, img_format=img_format)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->full_update_full_topic: %s\n" % e)
 ```
 
@@ -3058,14 +3052,14 @@ This is not a standard route. Update all fields of a Pin  Required scopes: bcf:w
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.pin import Pin
-from bimdata_api_client.model.pin_request import PinRequest
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.pin_request import PinRequest
+from bimdata-api-client.model.pin import Pin
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3081,13 +3075,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3099,7 +3093,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -3123,7 +3117,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update all fields of a Pin
         api_response = api_instance.full_update_pin(guid, projects_pk, topics_guid, viewpoints_guid, pin_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->full_update_pin: %s\n" % e)
 ```
 
@@ -3181,14 +3175,14 @@ Update all fields of a topic  Required scopes: bcf:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.topic_request import TopicRequest
-from bimdata_api_client.model.topic import Topic
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.topic_request import TopicRequest
+from bimdata-api-client.model.topic import Topic
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3204,13 +3198,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3222,7 +3216,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -3255,9 +3249,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         format="format_example",
         index=0,
         project=1,
-        bimdata_viewer_layout={
-            "key": None,
-        },
+        bimdata_viewer_layout=None,
     ) # TopicRequest | 
 
     # example passing only required values which don't have defaults set
@@ -3265,7 +3257,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update all fields of a topic
         api_response = api_instance.full_update_topic(guid, projects_pk, topic_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->full_update_topic: %s\n" % e)
 ```
 
@@ -3321,13 +3313,13 @@ oauth2_dynamic_client_reg_url is not supported, http_basic_supported is always s
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.auth import Auth
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.auth import Auth
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3343,13 +3335,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3361,7 +3353,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
 
@@ -3370,7 +3362,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve Authentication Information
         api_response = api_instance.get_auth()
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_auth: %s\n" % e)
 ```
 
@@ -3419,13 +3411,13 @@ Retrieve a BCF project  Required scopes: bcf:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.bcf_project import BcfProject
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.bcf_project import BcfProject
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3441,13 +3433,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3459,7 +3451,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this project.
@@ -3469,7 +3461,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a BCF project
         api_response = api_instance.get_bcf_project(id)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_bcf_project: %s\n" % e)
 ```
 
@@ -3522,13 +3514,13 @@ Retrieve all BCF projects  Required scopes: bcf:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.bcf_project import BcfProject
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.bcf_project import BcfProject
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3544,13 +3536,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3562,7 +3554,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
 
@@ -3571,7 +3563,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all BCF projects
         api_response = api_instance.get_bcf_projects()
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_bcf_projects: %s\n" % e)
 ```
 
@@ -3605,7 +3597,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_colorings**
-> [Coloring] get_colorings(guid, projects_pk, topics_guid)
+> ColoringDefinition get_colorings(guid, projects_pk, topics_guid)
 
 Retrieve all colorings of a viewpoint
 
@@ -3620,13 +3612,13 @@ Retrieve all colorings of a viewpoint  Required scopes: bcf:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.coloring import Coloring
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.coloring_definition import ColoringDefinition
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3642,13 +3634,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3660,7 +3652,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -3672,7 +3664,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all colorings of a viewpoint
         api_response = api_instance.get_colorings(guid, projects_pk, topics_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_colorings: %s\n" % e)
 ```
 
@@ -3687,7 +3679,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Coloring]**](Coloring.md)
+[**ColoringDefinition**](ColoringDefinition.md)
 
 ### Authorization
 
@@ -3706,6 +3698,7 @@ Name | Type | Description  | Notes
 **200** |  |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
 **500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3726,13 +3719,13 @@ Retrieve a comment  Required scopes: bcf:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.comment import Comment
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.comment import Comment
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3748,13 +3741,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3766,7 +3759,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -3778,7 +3771,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a comment
         api_response = api_instance.get_comment(guid, projects_pk, topics_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_comment: %s\n" % e)
 ```
 
@@ -3833,13 +3826,13 @@ Retrieve all comments  Required scopes: bcf:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.comment import Comment
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.comment import Comment
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3855,13 +3848,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3873,7 +3866,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | A unique integer value identifying this project.
@@ -3886,7 +3879,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all comments
         api_response = api_instance.get_comments(projects_pk, topics_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_comments: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -3895,7 +3888,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all comments
         api_response = api_instance.get_comments(projects_pk, topics_guid, filter=filter, orderby=orderby)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_comments: %s\n" % e)
 ```
 
@@ -3950,13 +3943,13 @@ This is not a standard route. Retrieve project detailed extensions  Required sco
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.detailed_extensions import DetailedExtensions
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.detailed_extensions import DetailedExtensions
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -3972,13 +3965,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3990,7 +3983,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this project.
@@ -4000,7 +3993,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve project detailed extensions
         api_response = api_instance.get_detailed_extensions(id)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_detailed_extensions: %s\n" % e)
 ```
 
@@ -4053,13 +4046,13 @@ Retrieve project extensions  Required scopes: bcf:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.extensions import Extensions
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.extensions import Extensions
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4075,13 +4068,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4093,7 +4086,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this project.
@@ -4103,7 +4096,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve project extensions
         api_response = api_instance.get_extensions(id)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_extensions: %s\n" % e)
 ```
 
@@ -4156,13 +4149,13 @@ This is not a standard route. It responds with a topic, its viewpoints and its c
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.full_topic import FullTopic
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.full_topic import FullTopic
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4178,13 +4171,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4196,7 +4189,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -4208,7 +4201,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a full topic
         api_response = api_instance.get_full_topic(guid, projects_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_full_topic: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -4217,7 +4210,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a full topic
         api_response = api_instance.get_full_topic(guid, projects_pk, img_format=img_format)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_full_topic: %s\n" % e)
 ```
 
@@ -4272,13 +4265,13 @@ This is not a standard route. It responds with all topics, their viewpoints and 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.full_topic import FullTopic
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.full_topic import FullTopic
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4294,13 +4287,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4312,7 +4305,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
@@ -4332,7 +4325,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all full topics
         api_response = api_instance.get_full_topics(projects_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_full_topics: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -4341,7 +4334,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all full topics
         api_response = api_instance.get_full_topics(projects_pk, filter=filter, orderby=orderby, format=format, ifcs=ifcs, img_format=img_format, models=models)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_full_topics: %s\n" % e)
 ```
 
@@ -4399,13 +4392,13 @@ This is not a standard route. Retrieve all Pins of a viewpoint  Required scopes:
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.pin import Pin
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.pin import Pin
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4421,13 +4414,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4439,7 +4432,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
@@ -4451,7 +4444,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all Pins of a viewpoint
         api_response = api_instance.get_pins(projects_pk, topics_guid, viewpoints_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_pins: %s\n" % e)
 ```
 
@@ -4505,12 +4498,12 @@ This feature is not supported yet and will always respond with an empty array  R
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4526,13 +4519,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4544,7 +4537,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -4562,7 +4555,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Get all related topics
         api_response = api_instance.get_related_topics(guid, projects_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_related_topics: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -4571,7 +4564,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Get all related topics
         api_response = api_instance.get_related_topics(guid, projects_pk, format=format, ifcs=ifcs, models=models)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_related_topics: %s\n" % e)
 ```
 
@@ -4612,7 +4605,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_selections**
-> [Component] get_selections(guid, projects_pk, topics_guid)
+> SelectionDefinition get_selections(guid, projects_pk, topics_guid)
 
 Retrieve all selections of a viewpoint
 
@@ -4627,13 +4620,13 @@ Retrieve all selections of a viewpoint  Required scopes: bcf:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.component import Component
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.selection_definition import SelectionDefinition
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4649,13 +4642,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4667,7 +4660,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -4679,7 +4672,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all selections of a viewpoint
         api_response = api_instance.get_selections(guid, projects_pk, topics_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_selections: %s\n" % e)
 ```
 
@@ -4694,7 +4687,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Component]**](Component.md)
+[**SelectionDefinition**](SelectionDefinition.md)
 
 ### Authorization
 
@@ -4713,6 +4706,7 @@ Name | Type | Description  | Notes
 **200** |  |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
 **500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -4733,12 +4727,12 @@ Retrieve the viewpoint' snapshot  Required scopes: bcf:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4754,13 +4748,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4772,7 +4766,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -4784,7 +4778,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve the viewpoint' snapshot
         api_response = api_instance.get_snapshot(guid, projects_pk, topics_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_snapshot: %s\n" % e)
 ```
 
@@ -4839,13 +4833,13 @@ Retrieve a topic  Required scopes: bcf:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.topic import Topic
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.topic import Topic
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4861,13 +4855,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4879,7 +4873,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -4890,7 +4884,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a topic
         api_response = api_instance.get_topic(guid, projects_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_topic: %s\n" % e)
 ```
 
@@ -4944,12 +4938,12 @@ This feature is not supported yet and will always respond with an empty array  R
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -4965,13 +4959,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4983,7 +4977,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -5001,7 +4995,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Get all related documents
         api_response = api_instance.get_topic_document_references(guid, projects_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_topic_document_references: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -5010,7 +5004,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Get all related documents
         api_response = api_instance.get_topic_document_references(guid, projects_pk, format=format, ifcs=ifcs, models=models)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_topic_document_references: %s\n" % e)
 ```
 
@@ -5066,13 +5060,13 @@ This is not a standard route. It returns all viewpoints of the topic that are no
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.viewpoint import Viewpoint
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.viewpoint import Viewpoint
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5088,13 +5082,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5106,7 +5100,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
@@ -5118,7 +5112,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all viewpoints attached to the topic
         api_response = api_instance.get_topic_viewpoints(projects_pk, topics_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_topic_viewpoints: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -5127,7 +5121,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all viewpoints attached to the topic
         api_response = api_instance.get_topic_viewpoints(projects_pk, topics_guid, img_format=img_format)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_topic_viewpoints: %s\n" % e)
 ```
 
@@ -5181,13 +5175,13 @@ Retrieve all topics  Required scopes: bcf:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.topic import Topic
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.topic import Topic
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5203,13 +5197,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5221,7 +5215,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
@@ -5240,7 +5234,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all topics
         api_response = api_instance.get_topics(projects_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_topics: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -5249,7 +5243,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all topics
         api_response = api_instance.get_topics(projects_pk, filter=filter, orderby=orderby, format=format, ifcs=ifcs, models=models)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_topics: %s\n" % e)
 ```
 
@@ -5306,13 +5300,13 @@ Get current user info. If request comes from an App, the response is always:{   
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.self_bcf_user import SelfBcfUser
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.self_bcf_user import SelfBcfUser
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5328,13 +5322,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5346,7 +5340,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
 
@@ -5355,7 +5349,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Get current user info
         api_response = api_instance.get_user()
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_user: %s\n" % e)
 ```
 
@@ -5404,13 +5398,13 @@ Spoiler: it's only v2.1
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.version import Version
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.version import Version
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5426,13 +5420,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5444,7 +5438,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
 
@@ -5453,7 +5447,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all supported BCF versions by this API
         api_response = api_instance.get_versions()
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_versions: %s\n" % e)
 ```
 
@@ -5502,13 +5496,13 @@ This is not a standard route. Retrieve a Pin  Required scopes: bcf:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.pin import Pin
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.pin import Pin
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5524,13 +5518,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5542,7 +5536,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -5555,7 +5549,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a Pin
         api_response = api_instance.get_viewpoin_pin(guid, projects_pk, topics_guid, viewpoints_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_viewpoin_pin: %s\n" % e)
 ```
 
@@ -5611,13 +5605,13 @@ Retrieve a Viewpoint  Required scopes: bcf:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.viewpoint import Viewpoint
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.viewpoint import Viewpoint
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5633,13 +5627,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5651,7 +5645,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -5664,7 +5658,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a Viewpoint
         api_response = api_instance.get_viewpoint(guid, projects_pk, topics_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_viewpoint: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -5673,7 +5667,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve a Viewpoint
         api_response = api_instance.get_viewpoint(guid, projects_pk, topics_guid, img_format=img_format)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_viewpoint: %s\n" % e)
 ```
 
@@ -5729,13 +5723,13 @@ Retrieve all Viewpoints of a topic  Required scopes: bcf:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.viewpoint import Viewpoint
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.viewpoint import Viewpoint
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5751,13 +5745,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5769,7 +5763,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
@@ -5781,7 +5775,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all Viewpoints of a topic
         api_response = api_instance.get_viewpoints(projects_pk, topics_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_viewpoints: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -5790,7 +5784,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all Viewpoints of a topic
         api_response = api_instance.get_viewpoints(projects_pk, topics_guid, img_format=img_format)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_viewpoints: %s\n" % e)
 ```
 
@@ -5829,7 +5823,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_visibilities**
-> Visibility get_visibilities(guid, projects_pk, topics_guid)
+> VisibilityDefinition get_visibilities(guid, projects_pk, topics_guid)
 
 Retrieve all visibilities of a viewpoint
 
@@ -5844,13 +5838,13 @@ Retrieve all visibilities of a viewpoint  Required scopes: bcf:read
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.visibility import Visibility
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.visibility_definition import VisibilityDefinition
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5866,13 +5860,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5884,7 +5878,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -5896,7 +5890,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Retrieve all visibilities of a viewpoint
         api_response = api_instance.get_visibilities(guid, projects_pk, topics_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->get_visibilities: %s\n" % e)
 ```
 
@@ -5911,7 +5905,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Visibility**](Visibility.md)
+[**VisibilityDefinition**](VisibilityDefinition.md)
 
 ### Authorization
 
@@ -5951,12 +5945,12 @@ This is not a standard route. Import bcf-xml format into this project. If there 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -5972,13 +5966,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5990,7 +5984,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this project.
@@ -6000,7 +5994,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     try:
         # Import bcf-xml format into this project
         api_instance.import_bcf(id, name)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->import_bcf: %s\n" % e)
 ```
 
@@ -6055,14 +6049,14 @@ Update some fields of a BCF project  Required scopes: bcf:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.patched_bcf_project_request import PatchedBcfProjectRequest
-from bimdata_api_client.model.bcf_project import BcfProject
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.bcf_project import BcfProject
+from bimdata-api-client.model.patched_bcf_project_request import PatchedBcfProjectRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6078,13 +6072,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6096,7 +6090,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this project.
@@ -6109,7 +6103,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a BCF project
         api_response = api_instance.update_bcf_project(id)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_bcf_project: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6118,7 +6112,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a BCF project
         api_response = api_instance.update_bcf_project(id, patched_bcf_project_request=patched_bcf_project_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_bcf_project: %s\n" % e)
 ```
 
@@ -6173,14 +6167,14 @@ Update some fields of a comment  Required scopes: bcf:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.patched_comment_request import PatchedCommentRequest
-from bimdata_api_client.model.comment import Comment
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.comment import Comment
+from bimdata-api-client.model.patched_comment_request import PatchedCommentRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6196,13 +6190,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6214,7 +6208,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -6236,7 +6230,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a comment
         api_response = api_instance.update_comment(guid, projects_pk, topics_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_comment: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6245,7 +6239,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a comment
         api_response = api_instance.update_comment(guid, projects_pk, topics_guid, patched_comment_request=patched_comment_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_comment: %s\n" % e)
 ```
 
@@ -6302,14 +6296,14 @@ This is not a standard route. Update a Label. All topics using this label will b
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.label import Label
-from bimdata_api_client.model.patched_label_request import PatchedLabelRequest
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.patched_label_request import PatchedLabelRequest
+from bimdata-api-client.model.label import Label
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6325,13 +6319,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6343,7 +6337,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this label.
@@ -6358,7 +6352,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update a Label
         api_response = api_instance.update_extension_label(id, projects_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_extension_label: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6367,7 +6361,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update a Label
         api_response = api_instance.update_extension_label(id, projects_pk, patched_label_request=patched_label_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_extension_label: %s\n" % e)
 ```
 
@@ -6423,14 +6417,14 @@ This is not a standard route. Update a Priority. All topics using this priority 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.priority import Priority
-from bimdata_api_client.model.patched_priority_request import PatchedPriorityRequest
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.patched_priority_request import PatchedPriorityRequest
+from bimdata-api-client.model.priority import Priority
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6446,13 +6440,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6464,7 +6458,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this priority.
@@ -6480,7 +6474,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update a Priority
         api_response = api_instance.update_extension_priority(id, projects_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_extension_priority: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6489,7 +6483,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update a Priority
         api_response = api_instance.update_extension_priority(id, projects_pk, patched_priority_request=patched_priority_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_extension_priority: %s\n" % e)
 ```
 
@@ -6545,14 +6539,14 @@ This is not a standard route. Update a Stage. All topics using this stage will b
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.stage import Stage
-from bimdata_api_client.model.patched_stage_request import PatchedStageRequest
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.patched_stage_request import PatchedStageRequest
+from bimdata-api-client.model.stage import Stage
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6568,13 +6562,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6586,7 +6580,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this stage.
@@ -6601,7 +6595,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update a Stage
         api_response = api_instance.update_extension_stage(id, projects_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_extension_stage: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6610,7 +6604,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update a Stage
         api_response = api_instance.update_extension_stage(id, projects_pk, patched_stage_request=patched_stage_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_extension_stage: %s\n" % e)
 ```
 
@@ -6666,14 +6660,14 @@ This is not a standard route. Update a TopicStatus. All topics using this status
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.patched_topic_status_request import PatchedTopicStatusRequest
-from bimdata_api_client.model.topic_status import TopicStatus
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.topic_status import TopicStatus
+from bimdata-api-client.model.patched_topic_status_request import PatchedTopicStatusRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6689,13 +6683,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6707,7 +6701,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this topic status.
@@ -6723,7 +6717,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update a TopicStatus
         api_response = api_instance.update_extension_status(id, projects_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_extension_status: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6732,7 +6726,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update a TopicStatus
         api_response = api_instance.update_extension_status(id, projects_pk, patched_topic_status_request=patched_topic_status_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_extension_status: %s\n" % e)
 ```
 
@@ -6788,14 +6782,14 @@ This is not a standard route. Update a TopicType. All topics using this type wil
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.topic_type import TopicType
-from bimdata_api_client.model.patched_topic_type_request import PatchedTopicTypeRequest
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.patched_topic_type_request import PatchedTopicTypeRequest
+from bimdata-api-client.model.topic_type import TopicType
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6811,13 +6805,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6829,7 +6823,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this topic type.
@@ -6844,7 +6838,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update a TopicType
         api_response = api_instance.update_extension_type(id, projects_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_extension_type: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6853,7 +6847,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update a TopicType
         api_response = api_instance.update_extension_type(id, projects_pk, patched_topic_type_request=patched_topic_type_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_extension_type: %s\n" % e)
 ```
 
@@ -6909,14 +6903,14 @@ This is not a standard route. You can update topic, viewpoints and comment is a 
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.patched_full_topic_request import PatchedFullTopicRequest
-from bimdata_api_client.model.full_topic import FullTopic
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.full_topic import FullTopic
+from bimdata-api-client.model.patched_full_topic_request import PatchedFullTopicRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -6932,13 +6926,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -6950,7 +6944,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -7053,9 +7047,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             ),
         ],
         project=1,
-        bimdata_viewer_layout={
-            "key": None,
-        },
+        bimdata_viewer_layout=None,
     ) # PatchedFullTopicRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -7063,7 +7055,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a topic
         api_response = api_instance.update_full_topic(guid, projects_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_full_topic: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -7072,7 +7064,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a topic
         api_response = api_instance.update_full_topic(guid, projects_pk, img_format=img_format, patched_full_topic_request=patched_full_topic_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_full_topic: %s\n" % e)
 ```
 
@@ -7129,14 +7121,14 @@ This is not a standard route. Update some fields of a Pin  Required scopes: bcf:
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.pin import Pin
-from bimdata_api_client.model.patched_pin_request import PatchedPinRequest
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.pin import Pin
+from bimdata-api-client.model.patched_pin_request import PatchedPinRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -7152,13 +7144,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -7170,7 +7162,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -7194,7 +7186,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a Pin
         api_response = api_instance.update_pin(guid, projects_pk, topics_guid, viewpoints_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_pin: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -7203,7 +7195,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a Pin
         api_response = api_instance.update_pin(guid, projects_pk, topics_guid, viewpoints_guid, patched_pin_request=patched_pin_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_pin: %s\n" % e)
 ```
 
@@ -7261,14 +7253,14 @@ Update some fields of a topic  Required scopes: bcf:write
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.topic import Topic
-from bimdata_api_client.model.patched_topic_request import PatchedTopicRequest
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.topic import Topic
+from bimdata-api-client.model.patched_topic_request import PatchedTopicRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -7284,13 +7276,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -7302,7 +7294,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -7335,9 +7327,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         format="format_example",
         index=0,
         project=1,
-        bimdata_viewer_layout={
-            "key": None,
-        },
+        bimdata_viewer_layout=None,
     ) # PatchedTopicRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -7345,7 +7335,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a topic
         api_response = api_instance.update_topic(guid, projects_pk)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_topic: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -7354,7 +7344,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a topic
         api_response = api_instance.update_topic(guid, projects_pk, patched_topic_request=patched_topic_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_topic: %s\n" % e)
 ```
 
@@ -7410,14 +7400,14 @@ This is not a standard route. Update some fields of a Viewpoint  Required scopes
 
 ```python
 import time
-import bimdata_api_client
-from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.viewpoint import Viewpoint
-from bimdata_api_client.model.patched_viewpoint_request import PatchedViewpointRequest
+import bimdata-api-client
+from bimdata-api-client.api import bcf_api
+from bimdata-api-client.model.patched_viewpoint_request import PatchedViewpointRequest
+from bimdata-api-client.model.viewpoint import Viewpoint
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 
@@ -7433,13 +7423,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
+configuration = bimdata-api-client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -7451,7 +7441,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
+with bimdata-api-client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
@@ -7519,7 +7509,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a Viewpoint
         api_response = api_instance.update_viewpoint(guid, projects_pk, topics_guid)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_viewpoint: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -7528,7 +7518,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         # Update some fields of a Viewpoint
         api_response = api_instance.update_viewpoint(guid, projects_pk, topics_guid, img_format=img_format, patched_viewpoint_request=patched_viewpoint_request)
         pprint(api_response)
-    except bimdata_api_client.ApiException as e:
+    except bimdata-api-client.ApiException as e:
         print("Exception when calling BcfApi->update_viewpoint: %s\n" % e)
 ```
 

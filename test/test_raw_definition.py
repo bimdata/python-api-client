@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.raw_definition import RawDefinition
+import bimdata-api-client
+from bimdata-api-client.model.raw_definition import RawDefinition
 
 
 class TestRawDefinition(unittest.TestCase):

@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.model_errors_request import ModelErrorsRequest
+import bimdata-api-client
+from bimdata-api-client.model.model_errors_request import ModelErrorsRequest
 
 
 class TestModelErrorsRequest(unittest.TestCase):

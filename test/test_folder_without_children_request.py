@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.folder_without_children_request import FolderWithoutChildrenRequest
+import bimdata-api-client
+from bimdata-api-client.model.folder_without_children_request import FolderWithoutChildrenRequest
 
 
 class TestFolderWithoutChildrenRequest(unittest.TestCase):

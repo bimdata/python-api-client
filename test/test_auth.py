@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.auth import Auth
+import bimdata-api-client
+from bimdata-api-client.model.auth import Auth
 
 
 class TestAuth(unittest.TestCase):

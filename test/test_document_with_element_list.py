@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.document import Document
+import bimdata-api-client
+from bimdata-api-client.model.document import Document
 globals()['Document'] = Document
-from bimdata_api_client.model.document_with_element_list import DocumentWithElementList
+from bimdata-api-client.model.document_with_element_list import DocumentWithElementList
 
 
 class TestDocumentWithElementList(unittest.TestCase):

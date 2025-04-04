@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.cloud_invitation import CloudInvitation
+import bimdata-api-client
+from bimdata-api-client.model.cloud_invitation import CloudInvitation
 
 
 class TestCloudInvitation(unittest.TestCase):

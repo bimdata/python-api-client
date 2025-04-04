@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.model import Model
+import bimdata-api-client
+from bimdata-api-client.model.model import Model
 globals()['Model'] = Model
-from bimdata_api_client.model.model_with_positioning_plan import ModelWithPositioningPlan
+from bimdata-api-client.model.model_with_positioning_plan import ModelWithPositioningPlan
 
 
 class TestModelWithPositioningPlan(unittest.TestCase):

@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.cloud import Cloud
+import bimdata-api-client
+from bimdata-api-client.model.cloud import Cloud
 globals()['Cloud'] = Cloud
-from bimdata_api_client.model.project import Project
+from bimdata-api-client.model.project import Project
 
 
 class TestProject(unittest.TestCase):

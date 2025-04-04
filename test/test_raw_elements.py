@@ -12,15 +12,15 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.raw_classification import RawClassification
-from bimdata_api_client.model.raw_definition import RawDefinition
-from bimdata_api_client.model.raw_element import RawElement
-from bimdata_api_client.model.raw_layer import RawLayer
-from bimdata_api_client.model.raw_material_list import RawMaterialList
-from bimdata_api_client.model.raw_property_set import RawPropertySet
-from bimdata_api_client.model.raw_system import RawSystem
-from bimdata_api_client.model.raw_unit import RawUnit
+import bimdata-api-client
+from bimdata-api-client.model.raw_classification import RawClassification
+from bimdata-api-client.model.raw_definition import RawDefinition
+from bimdata-api-client.model.raw_element import RawElement
+from bimdata-api-client.model.raw_layer import RawLayer
+from bimdata-api-client.model.raw_material_list import RawMaterialList
+from bimdata-api-client.model.raw_property_set import RawPropertySet
+from bimdata-api-client.model.raw_system import RawSystem
+from bimdata-api-client.model.raw_unit import RawUnit
 globals()['RawClassification'] = RawClassification
 globals()['RawDefinition'] = RawDefinition
 globals()['RawElement'] = RawElement
@@ -29,7 +29,7 @@ globals()['RawMaterialList'] = RawMaterialList
 globals()['RawPropertySet'] = RawPropertySet
 globals()['RawSystem'] = RawSystem
 globals()['RawUnit'] = RawUnit
-from bimdata_api_client.model.raw_elements import RawElements
+from bimdata-api-client.model.raw_elements import RawElements
 
 
 class TestRawElements(unittest.TestCase):

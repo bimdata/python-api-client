@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.component_request import ComponentRequest
+import bimdata-api-client
+from bimdata-api-client.model.component_request import ComponentRequest
 globals()['ComponentRequest'] = ComponentRequest
-from bimdata_api_client.model.coloring_request import ColoringRequest
+from bimdata-api-client.model.coloring_request import ColoringRequest
 
 
 class TestColoringRequest(unittest.TestCase):

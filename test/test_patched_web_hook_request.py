@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.patched_web_hook_request import PatchedWebHookRequest
+import bimdata-api-client
+from bimdata-api-client.model.patched_web_hook_request import PatchedWebHookRequest
 
 
 class TestPatchedWebHookRequest(unittest.TestCase):

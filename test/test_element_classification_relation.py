@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.element_classification_relation import ElementClassificationRelation
+import bimdata-api-client
+from bimdata-api-client.model.element_classification_relation import ElementClassificationRelation
 
 
 class TestElementClassificationRelation(unittest.TestCase):

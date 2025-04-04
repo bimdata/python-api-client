@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.visa_validation_request import VisaValidationRequest
+import bimdata-api-client
+from bimdata-api-client.model.visa_validation_request import VisaValidationRequest
 
 
 class TestVisaValidationRequest(unittest.TestCase):

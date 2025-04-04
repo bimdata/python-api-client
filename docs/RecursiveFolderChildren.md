@@ -19,13 +19,13 @@ Name | Type | Description | Notes
 **user_permission** | **int** | Aggregate of group user permissions and folder default permission | [readonly] 
 **history_count** | **int, none_type** | Number of previous versions | [readonly] 
 **tags** | [**[Tag], none_type**](Tag.md) | Tags of a document | [readonly] 
+**children** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
 **created_by** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **file_name** | **str, none_type** |  | [optional] 
 **description** | **str, none_type** |  | [optional] 
 **size** | **int, none_type** |  | [optional] 
 **file** | **str, none_type** |  | [optional] 
 **office_preview** | **str, none_type** |  | [optional] 
-**children** | [**[RecursiveFolderChildren], none_type**](RecursiveFolderChildren.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

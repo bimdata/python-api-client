@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.coloring_request import ColoringRequest
-from bimdata_api_client.model.component_request import ComponentRequest
-from bimdata_api_client.model.visibility_request import VisibilityRequest
+import bimdata-api-client
+from bimdata-api-client.model.coloring_request import ColoringRequest
+from bimdata-api-client.model.component_request import ComponentRequest
+from bimdata-api-client.model.visibility_request import VisibilityRequest
 globals()['ColoringRequest'] = ColoringRequest
 globals()['ComponentRequest'] = ComponentRequest
 globals()['VisibilityRequest'] = VisibilityRequest
-from bimdata_api_client.model.components_parent_request import ComponentsParentRequest
+from bimdata-api-client.model.components_parent_request import ComponentsParentRequest
 
 
 class TestComponentsParentRequest(unittest.TestCase):

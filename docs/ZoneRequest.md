@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **str** |  | 
 **name** | **str, none_type** |  | [optional] 
-**zones** | [**[ZoneRequest]**](ZoneRequest.md) |  | [optional] 
+**zones** | [**[Zone]**](Zone.md) |  | [optional] 
 **parent_id** | **int, none_type** |  | [optional] 
 **spaces** | [**[ZoneSpaceRequest]**](ZoneSpaceRequest.md) |  | [optional] 
 **color** | **str, none_type** |  | [optional] 

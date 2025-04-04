@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.unit_request import UnitRequest
-globals()['UnitRequest'] = UnitRequest
-from bimdata_api_client.model.patched_unit_request import PatchedUnitRequest
+import bimdata-api-client
+from bimdata-api-client.model.unit import Unit
+globals()['Unit'] = Unit
+from bimdata-api-client.model.patched_unit_request import PatchedUnitRequest
 
 
 class TestPatchedUnitRequest(unittest.TestCase):

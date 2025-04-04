@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.direction import Direction
-from bimdata_api_client.model.point import Point
+import bimdata-api-client
+from bimdata-api-client.model.direction import Direction
+from bimdata-api-client.model.point import Point
 globals()['Direction'] = Direction
 globals()['Point'] = Point
-from bimdata_api_client.model.clipping_plane import ClippingPlane
+from bimdata-api-client.model.clipping_plane import ClippingPlane
 
 
 class TestClippingPlane(unittest.TestCase):

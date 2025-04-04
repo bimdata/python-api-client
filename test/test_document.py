@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.model.tag import Tag
-from bimdata_api_client.model.user import User
-from bimdata_api_client.model.visa import Visa
+import bimdata-api-client
+from bimdata-api-client.model.tag import Tag
+from bimdata-api-client.model.user import User
+from bimdata-api-client.model.visa import Visa
 globals()['Tag'] = Tag
 globals()['User'] = User
 globals()['Visa'] = Visa
-from bimdata_api_client.model.document import Document
+from bimdata-api-client.model.document import Document
 
 
 class TestDocument(unittest.TestCase):
