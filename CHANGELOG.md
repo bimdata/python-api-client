@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.10.3 (2025-04-04)
+
+### Fix
+
+- Patch: fix bcf spec (#831)
+  ([`3cac422`](https://github.com/bimdata/python-api-client/commit/3cac422f2fbf587b76591f53934a1fa9b1d4ea8d))
+
+* fix bcf spec
+
+* fix colorign definition
+
+
 ## v10.10.2 (2025-01-09)
 
 ### Fix
