@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **warnings** | **[str], none_type** | List of warnings that happened during IFC processing | [readonly] 
 **parent_id** | **int, none_type** | The first page of the pdf | [readonly] 
 **page_number** | **int, none_type** | The page number of the related pdf | [readonly] 
+**mask_2d** | [**Mask2D**](Mask2D.md) |  | 
 **children** | [**[ModelSerializerWithoutChildren]**](ModelSerializerWithoutChildren.md) | Contains additional pages of a pdf | [readonly] 
 **name** | **str, none_type** |  | [optional] 
 **source** | **str** | * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED | [optional] 

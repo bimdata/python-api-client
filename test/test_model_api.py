@@ -206,6 +206,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_create_mask2_d(self):
+        """Test case for create_mask2_d
+
+        Create or update a 2D mask for the model  # noqa: E501
+        """
+        pass
+
     def test_create_meta_building(self):
         """Test case for create_meta_building
 
@@ -371,6 +378,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for delete_layer
 
         Delete a layer of a model  # noqa: E501
+        """
+        pass
+
+    def test_delete_mask2_d(self):
+        """Test case for delete_mask2_d
+
+        Delete the 2D mask for the model  # noqa: E501
         """
         pass
 

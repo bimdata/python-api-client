@@ -30,6 +30,7 @@ Method | HTTP request | Description
 [**create_element_property_set_property_definition**](ModelApi.md#create_element_property_set_property_definition) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition | Create a Definition to a Property
 [**create_element_property_set_property_definition_unit**](ModelApi.md#create_element_property_set_property_definition_unit) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit | Create a Unit to a Definition
 [**create_layer**](ModelApi.md#create_layer) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer | Create a layer in the model
+[**create_mask2_d**](ModelApi.md#create_mask2_d) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Create or update a 2D mask for the model
 [**create_meta_building**](ModelApi.md#create_meta_building) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-metabuilding | Create an empty 3D Model
 [**create_model**](ModelApi.md#create_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-model | Make a PDF or Image file a Model
 [**create_model_property_definition**](ModelApi.md#create_model_property_definition) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition | Create a PropertyDefinition on the model
@@ -54,6 +55,7 @@ Method | HTTP request | Description
 [**delete_drawing**](ModelApi.md#delete_drawing) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id} | Delete a drawing of a model
 [**delete_element**](ModelApi.md#delete_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Delete an element of a model
 [**delete_layer**](ModelApi.md#delete_layer) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Delete a layer of a model
+[**delete_mask2_d**](ModelApi.md#delete_mask2_d) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Delete the 2D mask for the model
 [**delete_model**](ModelApi.md#delete_model) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id} | Delete a model
 [**delete_model_property**](ModelApi.md#delete_model_property) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id} | Delete a Property of a model
 [**delete_model_property_definition**](ModelApi.md#delete_model_property_definition) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id} | Delete a PropertyDefinitions of a model
@@ -3441,6 +3443,124 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **create_mask2_d**
+> Mask2D create_mask2_d(cloud_pk, id, project_pk, mask2_d_request)
+
+Create or update a 2D mask for the model
+
+Create or update a 2D mask for the model. Only available for PDF, JPEG and PNG models
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from bimdata-api-client.model.mask2_d import Mask2D
+from bimdata-api-client.model.mask2_d_request import Mask2DRequest
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata-api-client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata-api-client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata-api-client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata-api-client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | 
+    id = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | 
+    mask2_d_request = Mask2DRequest(
+        viewport=[
+            [
+                3.14,
+            ],
+        ],
+    ) # Mask2DRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create or update a 2D mask for the model
+        api_response = api_instance.create_mask2_d(cloud_pk, id, project_pk, mask2_d_request)
+        pprint(api_response)
+    except bimdata-api-client.ApiException as e:
+        print("Exception when calling ModelApi->create_mask2_d: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**|  |
+ **id** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**|  |
+ **mask2_d_request** | [**Mask2DRequest**](Mask2DRequest.md)|  |
+
+### Return type
+
+[**Mask2D**](Mask2D.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**201** |  |  -  |
+**400** | Bad request, model type not supported. |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **create_meta_building**
 > Model create_meta_building(cloud_pk, project_pk, create_building_by_name_request)
 
@@ -6326,6 +6446,112 @@ void (empty response body)
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
 **404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_mask2_d**
+> delete_mask2_d(cloud_pk, id, project_pk)
+
+Delete the 2D mask for the model
+
+Delete the 2D mask for the model.
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata-api-client
+from bimdata-api-client.api import model_api
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata-api-client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata-api-client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata-api-client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata-api-client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | 
+    id = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete the 2D mask for the model
+        api_instance.delete_mask2_d(cloud_pk, id, project_pk)
+    except bimdata-api-client.ApiException as e:
+        print("Exception when calling ModelApi->delete_mask2_d: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**|  |
+ **id** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No response body |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | This model has no 2d mask yet. |  -  |
 **500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -16444,6 +16670,13 @@ with bimdata-api-client.ApiClient(configuration) as api_client:
         ],
         recommanded_2d_angle=3.14,
         layout_name="layout_name_example",
+        mask_2d=Mask2DRequest(
+            viewport=[
+                [
+                    3.14,
+                ],
+            ],
+        ),
     ) # PatchedModelRequest |  (optional)
 
     # example passing only required values which don't have defaults set

@@ -356,6 +356,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**create_element_property_set_property_definition**](docs/ModelApi.md#create_element_property_set_property_definition) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition | Create a Definition to a Property
 *ModelApi* | [**create_element_property_set_property_definition_unit**](docs/ModelApi.md#create_element_property_set_property_definition_unit) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit | Create a Unit to a Definition
 *ModelApi* | [**create_layer**](docs/ModelApi.md#create_layer) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer | Create a layer in the model
+*ModelApi* | [**create_mask2_d**](docs/ModelApi.md#create_mask2_d) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Create or update a 2D mask for the model
 *ModelApi* | [**create_meta_building**](docs/ModelApi.md#create_meta_building) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-metabuilding | Create an empty 3D Model
 *ModelApi* | [**create_model**](docs/ModelApi.md#create_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-model | Make a PDF or Image file a Model
 *ModelApi* | [**create_model_property_definition**](docs/ModelApi.md#create_model_property_definition) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition | Create a PropertyDefinition on the model
@@ -380,6 +381,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**delete_drawing**](docs/ModelApi.md#delete_drawing) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id} | Delete a drawing of a model
 *ModelApi* | [**delete_element**](docs/ModelApi.md#delete_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Delete an element of a model
 *ModelApi* | [**delete_layer**](docs/ModelApi.md#delete_layer) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Delete a layer of a model
+*ModelApi* | [**delete_mask2_d**](docs/ModelApi.md#delete_mask2_d) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Delete the 2D mask for the model
 *ModelApi* | [**delete_model**](docs/ModelApi.md#delete_model) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id} | Delete a model
 *ModelApi* | [**delete_model_property**](docs/ModelApi.md#delete_model_property) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id} | Delete a Property of a model
 *ModelApi* | [**delete_model_property_definition**](docs/ModelApi.md#delete_model_property_definition) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id} | Delete a PropertyDefinitions of a model
@@ -578,6 +580,8 @@ Class | Method | HTTP request | Description
  - [MarketplaceAppImage](docs/MarketplaceAppImage.md)
  - [MarketplaceAppLight](docs/MarketplaceAppLight.md)
  - [MarketplaceAppLightRequest](docs/MarketplaceAppLightRequest.md)
+ - [Mask2D](docs/Mask2D.md)
+ - [Mask2DRequest](docs/Mask2DRequest.md)
  - [Material](docs/Material.md)
  - [MaterialListComponent](docs/MaterialListComponent.md)
  - [MaterialListComponentRequest](docs/MaterialListComponentRequest.md)

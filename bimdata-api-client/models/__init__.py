@@ -86,6 +86,8 @@ from bimdata-api-client.model.log_entry import LogEntry
 from bimdata-api-client.model.marketplace_app_image import MarketplaceAppImage
 from bimdata-api-client.model.marketplace_app_light import MarketplaceAppLight
 from bimdata-api-client.model.marketplace_app_light_request import MarketplaceAppLightRequest
+from bimdata-api-client.model.mask2_d import Mask2D
+from bimdata-api-client.model.mask2_d_request import Mask2DRequest
 from bimdata-api-client.model.material import Material
 from bimdata-api-client.model.material_list_component import MaterialListComponent
 from bimdata-api-client.model.material_list_component_request import MaterialListComponentRequest

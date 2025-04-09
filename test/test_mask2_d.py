@@ -14,20 +14,10 @@ import unittest
 
 import bimdata-api-client
 from bimdata-api-client.model.mask2_d import Mask2D
-from bimdata-api-client.model.model_document import ModelDocument
-from bimdata-api-client.model.model_serializer_without_children import ModelSerializerWithoutChildren
-from bimdata-api-client.model.user import User
-from bimdata-api-client.model.xkt_file import XktFile
-globals()['Mask2D'] = Mask2D
-globals()['ModelDocument'] = ModelDocument
-globals()['ModelSerializerWithoutChildren'] = ModelSerializerWithoutChildren
-globals()['User'] = User
-globals()['XktFile'] = XktFile
-from bimdata-api-client.model.model import Model
 
 
-class TestModel(unittest.TestCase):
-    """Model unit test stubs"""
+class TestMask2D(unittest.TestCase):
+    """Mask2D unit test stubs"""
 
     def setUp(self):
         pass
@@ -35,10 +25,10 @@ class TestModel(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testModel(self):
-        """Test Model"""
+    def testMask2D(self):
+        """Test Mask2D"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = Model()  # noqa: E501
+        # model = Mask2D()  # noqa: E501
         pass
 
 

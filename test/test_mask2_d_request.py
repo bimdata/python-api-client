@@ -14,12 +14,10 @@ import unittest
 
 import bimdata-api-client
 from bimdata-api-client.model.mask2_d_request import Mask2DRequest
-globals()['Mask2DRequest'] = Mask2DRequest
-from bimdata-api-client.model.patched_model_request import PatchedModelRequest
 
 
-class TestPatchedModelRequest(unittest.TestCase):
-    """PatchedModelRequest unit test stubs"""
+class TestMask2DRequest(unittest.TestCase):
+    """Mask2DRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -27,10 +25,10 @@ class TestPatchedModelRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testPatchedModelRequest(self):
-        """Test PatchedModelRequest"""
+    def testMask2DRequest(self):
+        """Test Mask2DRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = PatchedModelRequest()  # noqa: E501
+        # model = Mask2DRequest()  # noqa: E501
         pass
 
 

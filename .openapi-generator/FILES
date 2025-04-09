@@ -91,6 +91,8 @@ bimdata-api-client/model/log_entry.py
 bimdata-api-client/model/marketplace_app_image.py
 bimdata-api-client/model/marketplace_app_light.py
 bimdata-api-client/model/marketplace_app_light_request.py
+bimdata-api-client/model/mask2_d.py
+bimdata-api-client/model/mask2_d_request.py
 bimdata-api-client/model/material.py
 bimdata-api-client/model/material_list_component.py
 bimdata-api-client/model/material_list_component_request.py
@@ -345,6 +347,8 @@ docs/LogEntry.md
 docs/MarketplaceAppImage.md
 docs/MarketplaceAppLight.md
 docs/MarketplaceAppLightRequest.md
+docs/Mask2D.md
+docs/Mask2DRequest.md
 docs/Material.md
 docs/MaterialListComponent.md
 docs/MaterialListComponentRequest.md
@@ -603,6 +607,8 @@ test/test_log_entry.py
 test/test_marketplace_app_image.py
 test/test_marketplace_app_light.py
 test/test_marketplace_app_light_request.py
+test/test_mask2_d.py
+test/test_mask2_d_request.py
 test/test_material.py
 test/test_material_list_component.py
 test/test_material_list_component_request.py
