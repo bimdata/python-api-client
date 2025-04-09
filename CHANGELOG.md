@@ -1,6 +1,26 @@
 # CHANGELOG
 
 
+## v10.11.0 (2025-04-09)
+
+### Feature
+
+- Minor: Add a 2D mask to model to be able to cleanup plan (#832)
+  ([`a0f9192`](https://github.com/bimdata/python-api-client/commit/a0f9192fb1e3902068befb4121ec37989a0102b9))
+
+* Add ability to save a viewport for a plan.
+
+* Fix doc.
+
+* Rename 2D mask.
+
+* Use kwargs instead of args in test mask 2d.
+
+* Rework with a simplier view on the model
+
+* Rename migration to match the mask2d rename
+
+
 ## v10.10.3 (2025-04-04)
 
 ### Fix
