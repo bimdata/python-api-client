@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.11.4 (2025-04-16)
+
+### Fix
+
+- Patch: fix dms tree openapi
+  ([`cef9ff1`](https://github.com/bimdata/python-api-client/commit/cef9ff17f013c2e16a86dac670c3aefee58a53e6))
+
+
 ## v10.11.3 (2025-04-16)
 
 ### Fix
