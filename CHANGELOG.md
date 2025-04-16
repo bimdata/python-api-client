@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.11.1 (2025-04-16)
+
+### Fix
+
+- Patch: empty commit for release viewport rename
+  ([`e711f6d`](https://github.com/bimdata/python-api-client/commit/e711f6d1fb49cffdd1af6f9089ca0c5f076a80b6))
+
+
 ## v10.11.0 (2025-04-09)
 
 ### Feature
