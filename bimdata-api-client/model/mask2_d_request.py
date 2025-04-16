@@ -82,7 +82,7 @@ class Mask2DRequest(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'viewport': ([[float]],),  # noqa: E501
+            'crop_path': ([[float]],),  # noqa: E501
         }
 
     @cached_property
@@ -91,7 +91,7 @@ class Mask2DRequest(ModelNormal):
 
 
     attribute_map = {
-        'viewport': 'viewport',  # noqa: E501
+        'crop_path': 'crop_path',  # noqa: E501
     }
 
     read_only_vars = {
@@ -101,11 +101,11 @@ class Mask2DRequest(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, viewport, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, crop_path, *args, **kwargs):  # noqa: E501
         """Mask2DRequest - a model defined in OpenAPI
 
         Args:
-            viewport ([[float]]): Viewport of the manually created mask to show only a part of the model.
+            crop_path ([[float]]): Crop path of the manually created mask to show only a part of the model.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -165,7 +165,7 @@ class Mask2DRequest(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.viewport = viewport
+        self.crop_path = crop_path
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -186,11 +186,11 @@ class Mask2DRequest(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, viewport, *args, **kwargs):  # noqa: E501
+    def __init__(self, crop_path, *args, **kwargs):  # noqa: E501
         """Mask2DRequest - a model defined in OpenAPI
 
         Args:
-            viewport ([[float]]): Viewport of the manually created mask to show only a part of the model.
+            crop_path ([[float]]): Crop path of the manually created mask to show only a part of the model.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -248,7 +248,7 @@ class Mask2DRequest(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.viewport = viewport
+        self.crop_path = crop_path
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

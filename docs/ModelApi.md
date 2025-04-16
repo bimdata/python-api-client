@@ -3507,7 +3507,7 @@ with bimdata-api-client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | 
     mask2_d_request = Mask2DRequest(
-        viewport=[
+        crop_path=[
             [
                 3.14,
             ],
@@ -16671,7 +16671,7 @@ with bimdata-api-client.ApiClient(configuration) as api_client:
         recommanded_2d_angle=3.14,
         layout_name="layout_name_example",
         mask_2d=Mask2DRequest(
-            viewport=[
+            crop_path=[
                 [
                     3.14,
                 ],
