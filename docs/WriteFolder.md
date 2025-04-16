@@ -4,15 +4,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**created_at** | **datetime** | Creation date | [readonly] 
-**user_permission** | **int** | Aggregate of group user permissions and folder default permission | [readonly] 
-**created_by** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
-**id** | **int** |  | [readonly] 
 **updated_at** | **datetime** | Date of the last update | [readonly] 
-**nature** | **str** | Value is \&quot;Folder\&quot;. It is usefull to parse the tree and discriminate folders and files | [readonly] 
+**id** | **int** |  | [readonly] 
 **type** | **str** | DEPRECATED: Use &#39;nature&#39; instead. Value is \&quot;Folder\&quot;. It is usefull to parse the tree and discriminate folders and files | [readonly] 
-**groups_permissions** | [**[GroupFolderRead]**](GroupFolderRead.md) | List of group permissions | [readonly] 
+**user_permission** | **int** | Aggregate of group user permissions and folder default permission | [readonly] 
 **name** | **str** | Name of the folder | 
+**created_at** | **datetime** | Creation date | [readonly] 
+**nature** | **str** | Value is \&quot;Folder\&quot;. It is usefull to parse the tree and discriminate folders and files | [readonly] 
+**created_by** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
+**groups_permissions** | [**[GroupFolderRead]**](GroupFolderRead.md) | List of group permissions | [readonly] 
 **parent_id** | **int, none_type** |  | [optional] 
 **default_permission** | **int** | Permission for a Folder  * &#x60;1&#x60; - denied * &#x60;50&#x60; - read_only * &#x60;100&#x60; - read_write | [optional] 
 **children** | [**[WriteFolder], none_type**](WriteFolder.md) |  | [optional] 

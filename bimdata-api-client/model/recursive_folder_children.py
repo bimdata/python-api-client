@@ -138,13 +138,13 @@ class RecursiveFolderChildren(ModelNormal):
             'user_permission': (int,),  # noqa: E501
             'history_count': (int, none_type,),  # noqa: E501
             'tags': ([Tag], none_type,),  # noqa: E501
-            'children': ([RecursiveFolderChildren], none_type,),  # noqa: E501
             'created_by': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'file_name': (str, none_type,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
             'size': (int, none_type,),  # noqa: E501
             'file': (str, none_type,),  # noqa: E501
             'office_preview': (str, none_type,),  # noqa: E501
+            'children': ([RecursiveFolderChildren], none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -168,13 +168,13 @@ class RecursiveFolderChildren(ModelNormal):
         'user_permission': 'user_permission',  # noqa: E501
         'history_count': 'history_count',  # noqa: E501
         'tags': 'tags',  # noqa: E501
-        'children': 'children',  # noqa: E501
         'created_by': 'created_by',  # noqa: E501
         'file_name': 'file_name',  # noqa: E501
         'description': 'description',  # noqa: E501
         'size': 'size',  # noqa: E501
         'file': 'file',  # noqa: E501
         'office_preview': 'office_preview',  # noqa: E501
+        'children': 'children',  # noqa: E501
     }
 
     read_only_vars = {
@@ -189,14 +189,13 @@ class RecursiveFolderChildren(ModelNormal):
         'user_permission',  # noqa: E501
         'history_count',  # noqa: E501
         'tags',  # noqa: E501
-        'children',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, parent_id, type, nature, model_type, name, created_at, updated_at, model_id, ifc_id, groups_permissions, default_permission, user_permission, history_count, tags, children, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, parent_id, type, nature, model_type, name, created_at, updated_at, model_id, ifc_id, groups_permissions, default_permission, user_permission, history_count, tags, *args, **kwargs):  # noqa: E501
         """RecursiveFolderChildren - a model defined in OpenAPI
 
         Args:
@@ -215,7 +214,6 @@ class RecursiveFolderChildren(ModelNormal):
             user_permission (int): Aggregate of group user permissions and folder default permission
             history_count (int, none_type): Number of previous versions
             tags ([Tag], none_type): Tags of a document
-            children ([RecursiveFolderChildren], none_type):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -254,6 +252,7 @@ class RecursiveFolderChildren(ModelNormal):
             size (int, none_type): [optional]  # noqa: E501
             file (str, none_type): [optional]  # noqa: E501
             office_preview (str, none_type): [optional]  # noqa: E501
+            children ([RecursiveFolderChildren], none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -296,7 +295,6 @@ class RecursiveFolderChildren(ModelNormal):
         self.user_permission = user_permission
         self.history_count = history_count
         self.tags = tags
-        self.children = children
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -362,6 +360,7 @@ class RecursiveFolderChildren(ModelNormal):
             size (int, none_type): [optional]  # noqa: E501
             file (str, none_type): [optional]  # noqa: E501
             office_preview (str, none_type): [optional]  # noqa: E501
+            children ([RecursiveFolderChildren], none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
