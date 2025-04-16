@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **user_permission** | **int** | Aggregate of group user permissions and folder default permission | [readonly] 
 **history_count** | **int, none_type** | Number of previous versions | [readonly] 
 **tags** | [**[Tag], none_type**](Tag.md) | Tags of a document | [readonly] 
-**children** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
+**children** | [**[RecursiveFolderChildren], none_type**](RecursiveFolderChildren.md) |  | [readonly] 
 **created_by** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **file_name** | **str, none_type** |  | [optional] 
 **description** | **str, none_type** |  | [optional] 

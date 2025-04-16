@@ -31,10 +31,8 @@ from bimdata-api-client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from bimdata-api-client.model.recursive_folder_children import RecursiveFolderChildren
     from bimdata-api-client.model.short_user import ShortUser
     from bimdata-api-client.model.tag import Tag
-    globals()['RecursiveFolderChildren'] = RecursiveFolderChildren
     globals()['ShortUser'] = ShortUser
     globals()['Tag'] = Tag
 
@@ -140,7 +138,7 @@ class RecursiveFolderChildren(ModelNormal):
             'user_permission': (int,),  # noqa: E501
             'history_count': (int, none_type,),  # noqa: E501
             'tags': ([Tag], none_type,),  # noqa: E501
-            'children': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'children': ([RecursiveFolderChildren], none_type,),  # noqa: E501
             'created_by': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'file_name': (str, none_type,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
@@ -217,7 +215,7 @@ class RecursiveFolderChildren(ModelNormal):
             user_permission (int): Aggregate of group user permissions and folder default permission
             history_count (int, none_type): Number of previous versions
             tags ([Tag], none_type): Tags of a document
-            children (bool, date, datetime, dict, float, int, list, str, none_type):
+            children ([RecursiveFolderChildren], none_type):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

@@ -13,10 +13,8 @@ import sys
 import unittest
 
 import bimdata-api-client
-from bimdata-api-client.model.recursive_folder_children import RecursiveFolderChildren
 from bimdata-api-client.model.short_user import ShortUser
 from bimdata-api-client.model.tag import Tag
-globals()['RecursiveFolderChildren'] = RecursiveFolderChildren
 globals()['ShortUser'] = ShortUser
 globals()['Tag'] = Tag
 from bimdata-api-client.model.recursive_folder_children import RecursiveFolderChildren
