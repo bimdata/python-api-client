@@ -3363,6 +3363,7 @@ class ModelApi(object):
                     'project_pk',
                     'version',
                     'file',
+                    'chunks',
                 ],
                 'required': [
                     'cloud_pk',
@@ -3400,6 +3401,8 @@ class ModelApi(object):
                         (int,),
                     'file':
                         (file_type,),
+                    'chunks':
+                        ([file_type],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3407,6 +3410,7 @@ class ModelApi(object):
                     'project_pk': 'project_pk',
                     'version': 'version',
                     'file': 'file',
+                    'chunks': 'chunks',
                 },
                 'location_map': {
                     'cloud_pk': 'path',
@@ -3414,8 +3418,10 @@ class ModelApi(object):
                     'project_pk': 'path',
                     'version': 'form',
                     'file': 'form',
+                    'chunks': 'form',
                 },
                 'collection_format_map': {
+                    'chunks': 'csv',
                 }
             },
             headers_map={
@@ -15872,6 +15878,7 @@ class ModelApi(object):
             file (file_type):
 
         Keyword Args:
+            chunks ([file_type]): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

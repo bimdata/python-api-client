@@ -13,13 +13,13 @@ import sys
 import unittest
 
 import bimdata-api-client
-from bimdata-api-client.model.xkt_chunk import XktChunk
-globals()['XktChunk'] = XktChunk
-from bimdata-api-client.model.xkt_file import XktFile
+from bimdata-api-client.model.xkt_chunk_request import XktChunkRequest
+globals()['XktChunkRequest'] = XktChunkRequest
+from bimdata-api-client.model.xkt_file_request import XktFileRequest
 
 
-class TestXktFile(unittest.TestCase):
-    """XktFile unit test stubs"""
+class TestXktFileRequest(unittest.TestCase):
+    """XktFileRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -27,10 +27,10 @@ class TestXktFile(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testXktFile(self):
-        """Test XktFile"""
+    def testXktFileRequest(self):
+        """Test XktFileRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = XktFile()  # noqa: E501
+        # model = XktFileRequest()  # noqa: E501
         pass
 
 

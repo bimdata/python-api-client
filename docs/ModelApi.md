@@ -5455,11 +5455,23 @@ with bimdata-api-client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | 
     version = 0 # int | 
     file = open('/path/to/file', 'rb') # file_type | 
+    chunks = [
+        open('/path/to/file', 'rb'),
+    ] # [file_type] |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Create an xkt file for the model. Overrides existing file with same version
         api_response = api_instance.create_xkt_file(cloud_pk, id, project_pk, version, file)
+        pprint(api_response)
+    except bimdata-api-client.ApiException as e:
+        print("Exception when calling ModelApi->create_xkt_file: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Create an xkt file for the model. Overrides existing file with same version
+        api_response = api_instance.create_xkt_file(cloud_pk, id, project_pk, version, file, chunks=chunks)
         pprint(api_response)
     except bimdata-api-client.ApiException as e:
         print("Exception when calling ModelApi->create_xkt_file: %s\n" % e)
@@ -5475,6 +5487,7 @@ Name | Type | Description  | Notes
  **project_pk** | **int**|  |
  **version** | **int**|  |
  **file** | **file_type**|  |
+ **chunks** | **[file_type]**|  | [optional]
 
 ### Return type
 

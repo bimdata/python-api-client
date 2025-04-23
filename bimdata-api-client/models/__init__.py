@@ -254,7 +254,10 @@ from bimdata-api-client.model.web_hook import WebHook
 from bimdata-api-client.model.web_hook_request import WebHookRequest
 from bimdata-api-client.model.write_folder import WriteFolder
 from bimdata-api-client.model.write_folder_request import WriteFolderRequest
+from bimdata-api-client.model.xkt_chunk import XktChunk
+from bimdata-api-client.model.xkt_chunk_request import XktChunkRequest
 from bimdata-api-client.model.xkt_file import XktFile
+from bimdata-api-client.model.xkt_file_request import XktFileRequest
 from bimdata-api-client.model.zone import Zone
 from bimdata-api-client.model.zone_request import ZoneRequest
 from bimdata-api-client.model.zone_space import ZoneSpace

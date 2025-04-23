@@ -259,7 +259,10 @@ bimdata-api-client/model/web_hook.py
 bimdata-api-client/model/web_hook_request.py
 bimdata-api-client/model/write_folder.py
 bimdata-api-client/model/write_folder_request.py
+bimdata-api-client/model/xkt_chunk.py
+bimdata-api-client/model/xkt_chunk_request.py
 bimdata-api-client/model/xkt_file.py
+bimdata-api-client/model/xkt_file_request.py
 bimdata-api-client/model/zone.py
 bimdata-api-client/model/zone_request.py
 bimdata-api-client/model/zone_space.py
@@ -518,7 +521,10 @@ docs/WebHookRequest.md
 docs/WebhookApi.md
 docs/WriteFolder.md
 docs/WriteFolderRequest.md
+docs/XktChunk.md
+docs/XktChunkRequest.md
 docs/XktFile.md
+docs/XktFileRequest.md
 docs/Zone.md
 docs/ZoneRequest.md
 docs/ZoneSpace.md
@@ -778,7 +784,10 @@ test/test_web_hook_request.py
 test/test_webhook_api.py
 test/test_write_folder.py
 test/test_write_folder_request.py
+test/test_xkt_chunk.py
+test/test_xkt_chunk_request.py
 test/test_xkt_file.py
+test/test_xkt_file_request.py
 test/test_zone.py
 test/test_zone_request.py
 test/test_zone_space.py
