@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.12.0 (2025-04-23)
+
+### Feature
+
+- Minor: empty commit to release lib with xkt chunk
+  ([`0e46a00`](https://github.com/bimdata/python-api-client/commit/0e46a0031e7f4e64e216288dd72e64199c5d5aca))
+
+
 ## v10.11.4 (2025-04-16)
 
 ### Fix
