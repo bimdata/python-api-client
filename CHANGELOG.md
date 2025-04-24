@@ -1,6 +1,48 @@
 # CHANGELOG
 
 
+## v10.14.0 (2025-04-24)
+
+### Feature
+
+- Minor: add project webhooks (#827)
+  ([`2e9098e`](https://github.com/bimdata/python-api-client/commit/2e9098eb259c51ecd3ceb66a4215e6e0558c6ea3))
+
+* add project webhooks
+
+* use only one serializer
+
+* add test
+
+* add document.deletion hook, better tests for webhooks
+
+* add project_id to project.creation webhook
+
+* remove breakpoint
+
+* send all webhooks from views
+
+* add contect to webhook payload serializer
+
+* add context to webhook payload serializer
+
+* add folder webhooks
+
+* wip: add folder webhooks
+
+* add invitation webhooks
+
+* no more unmocked http calls in tests
+
+* add visa webhooks
+
+* fix typo
+
+* send webhook id in payload
+
+* add bcf comment test
+
+
 ## v10.13.2 (2025-04-24)
 
 ### Fix
