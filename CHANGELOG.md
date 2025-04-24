@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.13.2 (2025-04-24)
+
+### Fix
+
+- Patch: reverse wrong fix for pep 625
+  ([`175b21d`](https://github.com/bimdata/python-api-client/commit/175b21d76b9e2bd2897606fe78a39d09d1891573))
+
+
 ## v10.13.1 (2025-04-24)
 
 ### Fix
