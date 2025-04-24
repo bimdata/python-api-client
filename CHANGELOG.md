@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.14.1 (2025-04-24)
+
+### Fix
+
+- Patch: fix release
+  ([`be473e0`](https://github.com/bimdata/python-api-client/commit/be473e062e19f075c0bfffbd444f633589c4c026))
+
+
 ## v10.14.0 (2025-04-24)
 
 ### Feature
