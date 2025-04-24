@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.geometry_point_request import GeometryPointRequest
+import bimdata_api_client
+from bimdata_api_client.model.geometry_point_request import GeometryPointRequest
 globals()['GeometryPointRequest'] = GeometryPointRequest
-from bimdata-api-client.model.patched_space_request import PatchedSpaceRequest
+from bimdata_api_client.model.patched_space_request import PatchedSpaceRequest
 
 
 class TestPatchedSpaceRequest(unittest.TestCase):

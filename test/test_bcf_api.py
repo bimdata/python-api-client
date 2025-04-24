@@ -11,8 +11,8 @@
 
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.api.bcf_api import BcfApi  # noqa: E501
+import bimdata_api_client
+from bimdata_api_client.api.bcf_api import BcfApi  # noqa: E501
 
 
 class TestBcfApi(unittest.TestCase):

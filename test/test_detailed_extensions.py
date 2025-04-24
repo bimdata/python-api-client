@@ -12,18 +12,18 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.label import Label
-from bimdata-api-client.model.priority import Priority
-from bimdata-api-client.model.stage import Stage
-from bimdata-api-client.model.topic_status import TopicStatus
-from bimdata-api-client.model.topic_type import TopicType
+import bimdata_api_client
+from bimdata_api_client.model.label import Label
+from bimdata_api_client.model.priority import Priority
+from bimdata_api_client.model.stage import Stage
+from bimdata_api_client.model.topic_status import TopicStatus
+from bimdata_api_client.model.topic_type import TopicType
 globals()['Label'] = Label
 globals()['Priority'] = Priority
 globals()['Stage'] = Stage
 globals()['TopicStatus'] = TopicStatus
 globals()['TopicType'] = TopicType
-from bimdata-api-client.model.detailed_extensions import DetailedExtensions
+from bimdata_api_client.model.detailed_extensions import DetailedExtensions
 
 
 class TestDetailedExtensions(unittest.TestCase):

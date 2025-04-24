@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.clipping_plane import ClippingPlane
-from bimdata-api-client.model.components_parent import ComponentsParent
-from bimdata-api-client.model.line import Line
-from bimdata-api-client.model.orthogonal_camera import OrthogonalCamera
-from bimdata-api-client.model.perspective_camera import PerspectiveCamera
-from bimdata-api-client.model.pin import Pin
-from bimdata-api-client.model.snapshot import Snapshot
+import bimdata_api_client
+from bimdata_api_client.model.clipping_plane import ClippingPlane
+from bimdata_api_client.model.components_parent import ComponentsParent
+from bimdata_api_client.model.line import Line
+from bimdata_api_client.model.orthogonal_camera import OrthogonalCamera
+from bimdata_api_client.model.perspective_camera import PerspectiveCamera
+from bimdata_api_client.model.pin import Pin
+from bimdata_api_client.model.snapshot import Snapshot
 globals()['ClippingPlane'] = ClippingPlane
 globals()['ComponentsParent'] = ComponentsParent
 globals()['Line'] = Line
@@ -27,7 +27,7 @@ globals()['OrthogonalCamera'] = OrthogonalCamera
 globals()['PerspectiveCamera'] = PerspectiveCamera
 globals()['Pin'] = Pin
 globals()['Snapshot'] = Snapshot
-from bimdata-api-client.model.viewpoint import Viewpoint
+from bimdata_api_client.model.viewpoint import Viewpoint
 
 
 class TestViewpoint(unittest.TestCase):

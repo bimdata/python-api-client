@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.size import Size
+import bimdata_api_client
+from bimdata_api_client.model.size import Size
 
 
 class TestSize(unittest.TestCase):

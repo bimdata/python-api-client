@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.user_project import UserProject
+import bimdata_api_client
+from bimdata_api_client.model.user_project import UserProject
 globals()['UserProject'] = UserProject
-from bimdata-api-client.model.visa_comment import VisaComment
+from bimdata_api_client.model.visa_comment import VisaComment
 
 
 class TestVisaComment(unittest.TestCase):

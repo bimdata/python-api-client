@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.label_request import LabelRequest
+import bimdata_api_client
+from bimdata_api_client.model.label_request import LabelRequest
 
 
 class TestLabelRequest(unittest.TestCase):

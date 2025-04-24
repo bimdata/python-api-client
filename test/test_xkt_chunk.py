@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.xkt_chunk import XktChunk
+import bimdata_api_client
+from bimdata_api_client.model.xkt_chunk import XktChunk
 
 
 class TestXktChunk(unittest.TestCase):

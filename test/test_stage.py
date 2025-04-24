@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.stage import Stage
+import bimdata_api_client
+from bimdata_api_client.model.stage import Stage
 
 
 class TestStage(unittest.TestCase):

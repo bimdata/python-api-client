@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.patched_visa_request import PatchedVisaRequest
+import bimdata_api_client
+from bimdata_api_client.model.patched_visa_request import PatchedVisaRequest
 
 
 class TestPatchedVisaRequest(unittest.TestCase):

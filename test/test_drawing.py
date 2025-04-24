@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.user import User
+import bimdata_api_client
+from bimdata_api_client.model.user import User
 globals()['User'] = User
-from bimdata-api-client.model.drawing import Drawing
+from bimdata_api_client.model.drawing import Drawing
 
 
 class TestDrawing(unittest.TestCase):

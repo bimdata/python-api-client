@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.group import Group
+import bimdata_api_client
+from bimdata_api_client.model.group import Group
 globals()['Group'] = Group
-from bimdata-api-client.model.group_folder_read import GroupFolderRead
+from bimdata_api_client.model.group_folder_read import GroupFolderRead
 
 
 class TestGroupFolderRead(unittest.TestCase):

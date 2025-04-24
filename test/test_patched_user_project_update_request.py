@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.patched_user_project_update_request import PatchedUserProjectUpdateRequest
+import bimdata_api_client
+from bimdata_api_client.model.patched_user_project_update_request import PatchedUserProjectUpdateRequest
 
 
 class TestPatchedUserProjectUpdateRequest(unittest.TestCase):

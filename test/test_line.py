@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.point import Point
+import bimdata_api_client
+from bimdata_api_client.model.point import Point
 globals()['Point'] = Point
-from bimdata-api-client.model.line import Line
+from bimdata_api_client.model.line import Line
 
 
 class TestLine(unittest.TestCase):

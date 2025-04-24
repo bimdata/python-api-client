@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.patched_group_folder_request import PatchedGroupFolderRequest
+import bimdata_api_client
+from bimdata_api_client.model.patched_group_folder_request import PatchedGroupFolderRequest
 
 
 class TestPatchedGroupFolderRequest(unittest.TestCase):

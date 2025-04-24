@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.patched_positioning_plan_request import PatchedPositioningPlanRequest
+import bimdata_api_client
+from bimdata_api_client.model.patched_positioning_plan_request import PatchedPositioningPlanRequest
 
 
 class TestPatchedPositioningPlanRequest(unittest.TestCase):

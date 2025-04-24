@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.mask2_d_request import Mask2DRequest
+import bimdata_api_client
+from bimdata_api_client.model.mask2_d_request import Mask2DRequest
 
 
 class TestMask2DRequest(unittest.TestCase):

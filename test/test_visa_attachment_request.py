@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.visa_attachment_request import VisaAttachmentRequest
+import bimdata_api_client
+from bimdata_api_client.model.visa_attachment_request import VisaAttachmentRequest
 
 
 class TestVisaAttachmentRequest(unittest.TestCase):

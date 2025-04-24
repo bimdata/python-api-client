@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.component import Component
+import bimdata_api_client
+from bimdata_api_client.model.component import Component
 globals()['Component'] = Component
-from bimdata-api-client.model.selection_definition import SelectionDefinition
+from bimdata_api_client.model.selection_definition import SelectionDefinition
 
 
 class TestSelectionDefinition(unittest.TestCase):

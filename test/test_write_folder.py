@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.group_folder_read import GroupFolderRead
-from bimdata-api-client.model.short_user import ShortUser
+import bimdata_api_client
+from bimdata_api_client.model.group_folder_read import GroupFolderRead
+from bimdata_api_client.model.short_user import ShortUser
 globals()['GroupFolderRead'] = GroupFolderRead
 globals()['ShortUser'] = ShortUser
-from bimdata-api-client.model.write_folder import WriteFolder
+from bimdata_api_client.model.write_folder import WriteFolder
 
 
 class TestWriteFolder(unittest.TestCase):

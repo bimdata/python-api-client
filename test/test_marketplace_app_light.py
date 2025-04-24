@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.marketplace_app_image import MarketplaceAppImage
-from bimdata-api-client.model.public_organization import PublicOrganization
+import bimdata_api_client
+from bimdata_api_client.model.marketplace_app_image import MarketplaceAppImage
+from bimdata_api_client.model.public_organization import PublicOrganization
 globals()['MarketplaceAppImage'] = MarketplaceAppImage
 globals()['PublicOrganization'] = PublicOrganization
-from bimdata-api-client.model.marketplace_app_light import MarketplaceAppLight
+from bimdata_api_client.model.marketplace_app_light import MarketplaceAppLight
 
 
 class TestMarketplaceAppLight(unittest.TestCase):

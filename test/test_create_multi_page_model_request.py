@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.create_multi_page_model_request import CreateMultiPageModelRequest
+import bimdata_api_client
+from bimdata_api_client.model.create_multi_page_model_request import CreateMultiPageModelRequest
 
 
 class TestCreateMultiPageModelRequest(unittest.TestCase):

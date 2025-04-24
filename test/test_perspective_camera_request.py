@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.direction_request import DirectionRequest
-from bimdata-api-client.model.point_request import PointRequest
+import bimdata_api_client
+from bimdata_api_client.model.direction_request import DirectionRequest
+from bimdata_api_client.model.point_request import PointRequest
 globals()['DirectionRequest'] = DirectionRequest
 globals()['PointRequest'] = PointRequest
-from bimdata-api-client.model.perspective_camera_request import PerspectiveCameraRequest
+from bimdata_api_client.model.perspective_camera_request import PerspectiveCameraRequest
 
 
 class TestPerspectiveCameraRequest(unittest.TestCase):

@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.comment_request import CommentRequest
+import bimdata_api_client
+from bimdata_api_client.model.comment_request import CommentRequest
 
 
 class TestCommentRequest(unittest.TestCase):

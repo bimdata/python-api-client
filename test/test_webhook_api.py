@@ -11,8 +11,8 @@
 
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.api.webhook_api import WebhookApi  # noqa: E501
+import bimdata_api_client
+from bimdata_api_client.api.webhook_api import WebhookApi  # noqa: E501
 
 
 class TestWebhookApi(unittest.TestCase):
@@ -24,6 +24,13 @@ class TestWebhookApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_create_project_web_hook(self):
+        """Test case for create_project_web_hook
+
+        Create a new project Webhook  # noqa: E501
+        """
+        pass
+
     def test_create_web_hook(self):
         """Test case for create_web_hook
 
@@ -31,10 +38,31 @@ class TestWebhookApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_project_web_hook(self):
+        """Test case for delete_project_web_hook
+
+        Delete a webhook  # noqa: E501
+        """
+        pass
+
     def test_delete_web_hook(self):
         """Test case for delete_web_hook
 
         Delete a webhook  # noqa: E501
+        """
+        pass
+
+    def test_get_project_web_hook(self):
+        """Test case for get_project_web_hook
+
+        Retrieve one configured project webhook  # noqa: E501
+        """
+        pass
+
+    def test_get_project_web_hooks(self):
+        """Test case for get_project_web_hooks
+
+        Retrieve all configured project webhooks  # noqa: E501
         """
         pass
 
@@ -52,10 +80,24 @@ class TestWebhookApi(unittest.TestCase):
         """
         pass
 
+    def test_ping_project_web_hook(self):
+        """Test case for ping_project_web_hook
+
+        Test a project webhook  # noqa: E501
+        """
+        pass
+
     def test_ping_web_hook(self):
         """Test case for ping_web_hook
 
         Test a webhook  # noqa: E501
+        """
+        pass
+
+    def test_update_project_web_hook(self):
+        """Test case for update_project_web_hook
+
+        Update some field of a webhook  # noqa: E501
         """
         pass
 

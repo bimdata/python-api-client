@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.property_definition_request import PropertyDefinitionRequest
+import bimdata_api_client
+from bimdata_api_client.model.property_definition_request import PropertyDefinitionRequest
 globals()['PropertyDefinitionRequest'] = PropertyDefinitionRequest
-from bimdata-api-client.model.property_request import PropertyRequest
+from bimdata_api_client.model.property_request import PropertyRequest
 
 
 class TestPropertyRequest(unittest.TestCase):

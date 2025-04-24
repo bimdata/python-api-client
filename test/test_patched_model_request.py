@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.mask2_d_request import Mask2DRequest
+import bimdata_api_client
+from bimdata_api_client.model.mask2_d_request import Mask2DRequest
 globals()['Mask2DRequest'] = Mask2DRequest
-from bimdata-api-client.model.patched_model_request import PatchedModelRequest
+from bimdata_api_client.model.patched_model_request import PatchedModelRequest
 
 
 class TestPatchedModelRequest(unittest.TestCase):

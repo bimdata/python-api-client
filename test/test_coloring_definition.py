@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.coloring import Coloring
+import bimdata_api_client
+from bimdata_api_client.model.coloring import Coloring
 globals()['Coloring'] = Coloring
-from bimdata-api-client.model.coloring_definition import ColoringDefinition
+from bimdata_api_client.model.coloring_definition import ColoringDefinition
 
 
 class TestColoringDefinition(unittest.TestCase):

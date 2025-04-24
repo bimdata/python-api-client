@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.priority import Priority
+import bimdata_api_client
+from bimdata_api_client.model.priority import Priority
 
 
 class TestPriority(unittest.TestCase):

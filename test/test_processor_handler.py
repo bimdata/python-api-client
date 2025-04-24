@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.processor_handler import ProcessorHandler
+import bimdata_api_client
+from bimdata_api_client.model.processor_handler import ProcessorHandler
 
 
 class TestProcessorHandler(unittest.TestCase):

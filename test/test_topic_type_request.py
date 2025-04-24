@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.topic_type_request import TopicTypeRequest
+import bimdata_api_client
+from bimdata_api_client.model.topic_type_request import TopicTypeRequest
 
 
 class TestTopicTypeRequest(unittest.TestCase):

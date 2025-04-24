@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.xkt_chunk_request import XktChunkRequest
+import bimdata_api_client
+from bimdata_api_client.model.xkt_chunk_request import XktChunkRequest
 globals()['XktChunkRequest'] = XktChunkRequest
-from bimdata-api-client.model.xkt_file_request import XktFileRequest
+from bimdata_api_client.model.xkt_file_request import XktFileRequest
 
 
 class TestXktFileRequest(unittest.TestCase):

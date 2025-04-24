@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.simple_element import SimpleElement
+import bimdata_api_client
+from bimdata_api_client.model.simple_element import SimpleElement
 
 
 class TestSimpleElement(unittest.TestCase):

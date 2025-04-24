@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.point import Point
+import bimdata_api_client
+from bimdata_api_client.model.point import Point
 
 
 class TestPoint(unittest.TestCase):

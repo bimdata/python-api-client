@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.comment_request import CommentRequest
-from bimdata-api-client.model.viewpoint_request import ViewpointRequest
+import bimdata_api_client
+from bimdata_api_client.model.comment_request import CommentRequest
+from bimdata_api_client.model.viewpoint_request import ViewpointRequest
 globals()['CommentRequest'] = CommentRequest
 globals()['ViewpointRequest'] = ViewpointRequest
-from bimdata-api-client.model.patched_full_topic_request import PatchedFullTopicRequest
+from bimdata_api_client.model.patched_full_topic_request import PatchedFullTopicRequest
 
 
 class TestPatchedFullTopicRequest(unittest.TestCase):

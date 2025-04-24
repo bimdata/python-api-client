@@ -25,7 +25,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import bimdata-api-client
+import bimdata_api_client
 ```
 
 ### Setuptools
@@ -39,7 +39,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import bimdata-api-client
+import bimdata_api_client
 ```
 
 ## Getting Started
@@ -49,53 +49,53 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 
 import time
-import bimdata-api-client
+import bimdata_api_client
 from pprint import pprint
-from bimdata-api-client.api import bcf_api
-from bimdata-api-client.model.auth import Auth
-from bimdata-api-client.model.bcf_project import BcfProject
-from bimdata-api-client.model.bcf_project_request import BcfProjectRequest
-from bimdata-api-client.model.coloring_definition import ColoringDefinition
-from bimdata-api-client.model.comment import Comment
-from bimdata-api-client.model.comment_request import CommentRequest
-from bimdata-api-client.model.detailed_extensions import DetailedExtensions
-from bimdata-api-client.model.extensions import Extensions
-from bimdata-api-client.model.full_topic import FullTopic
-from bimdata-api-client.model.full_topic_request import FullTopicRequest
-from bimdata-api-client.model.label import Label
-from bimdata-api-client.model.label_request import LabelRequest
-from bimdata-api-client.model.patched_bcf_project_request import PatchedBcfProjectRequest
-from bimdata-api-client.model.patched_comment_request import PatchedCommentRequest
-from bimdata-api-client.model.patched_full_topic_request import PatchedFullTopicRequest
-from bimdata-api-client.model.patched_label_request import PatchedLabelRequest
-from bimdata-api-client.model.patched_pin_request import PatchedPinRequest
-from bimdata-api-client.model.patched_priority_request import PatchedPriorityRequest
-from bimdata-api-client.model.patched_stage_request import PatchedStageRequest
-from bimdata-api-client.model.patched_topic_request import PatchedTopicRequest
-from bimdata-api-client.model.patched_topic_status_request import PatchedTopicStatusRequest
-from bimdata-api-client.model.patched_topic_type_request import PatchedTopicTypeRequest
-from bimdata-api-client.model.patched_viewpoint_request import PatchedViewpointRequest
-from bimdata-api-client.model.pin import Pin
-from bimdata-api-client.model.pin_request import PinRequest
-from bimdata-api-client.model.priority import Priority
-from bimdata-api-client.model.priority_request import PriorityRequest
-from bimdata-api-client.model.selection_definition import SelectionDefinition
-from bimdata-api-client.model.self_bcf_user import SelfBcfUser
-from bimdata-api-client.model.stage import Stage
-from bimdata-api-client.model.stage_request import StageRequest
-from bimdata-api-client.model.topic import Topic
-from bimdata-api-client.model.topic_request import TopicRequest
-from bimdata-api-client.model.topic_status import TopicStatus
-from bimdata-api-client.model.topic_status_request import TopicStatusRequest
-from bimdata-api-client.model.topic_type import TopicType
-from bimdata-api-client.model.topic_type_request import TopicTypeRequest
-from bimdata-api-client.model.version import Version
-from bimdata-api-client.model.viewpoint import Viewpoint
-from bimdata-api-client.model.viewpoint_request import ViewpointRequest
-from bimdata-api-client.model.visibility_definition import VisibilityDefinition
+from bimdata_api_client.api import bcf_api
+from bimdata_api_client.model.auth import Auth
+from bimdata_api_client.model.bcf_project import BcfProject
+from bimdata_api_client.model.bcf_project_request import BcfProjectRequest
+from bimdata_api_client.model.coloring_definition import ColoringDefinition
+from bimdata_api_client.model.comment import Comment
+from bimdata_api_client.model.comment_request import CommentRequest
+from bimdata_api_client.model.detailed_extensions import DetailedExtensions
+from bimdata_api_client.model.extensions import Extensions
+from bimdata_api_client.model.full_topic import FullTopic
+from bimdata_api_client.model.full_topic_request import FullTopicRequest
+from bimdata_api_client.model.label import Label
+from bimdata_api_client.model.label_request import LabelRequest
+from bimdata_api_client.model.patched_bcf_project_request import PatchedBcfProjectRequest
+from bimdata_api_client.model.patched_comment_request import PatchedCommentRequest
+from bimdata_api_client.model.patched_full_topic_request import PatchedFullTopicRequest
+from bimdata_api_client.model.patched_label_request import PatchedLabelRequest
+from bimdata_api_client.model.patched_pin_request import PatchedPinRequest
+from bimdata_api_client.model.patched_priority_request import PatchedPriorityRequest
+from bimdata_api_client.model.patched_stage_request import PatchedStageRequest
+from bimdata_api_client.model.patched_topic_request import PatchedTopicRequest
+from bimdata_api_client.model.patched_topic_status_request import PatchedTopicStatusRequest
+from bimdata_api_client.model.patched_topic_type_request import PatchedTopicTypeRequest
+from bimdata_api_client.model.patched_viewpoint_request import PatchedViewpointRequest
+from bimdata_api_client.model.pin import Pin
+from bimdata_api_client.model.pin_request import PinRequest
+from bimdata_api_client.model.priority import Priority
+from bimdata_api_client.model.priority_request import PriorityRequest
+from bimdata_api_client.model.selection_definition import SelectionDefinition
+from bimdata_api_client.model.self_bcf_user import SelfBcfUser
+from bimdata_api_client.model.stage import Stage
+from bimdata_api_client.model.stage_request import StageRequest
+from bimdata_api_client.model.topic import Topic
+from bimdata_api_client.model.topic_request import TopicRequest
+from bimdata_api_client.model.topic_status import TopicStatus
+from bimdata_api_client.model.topic_status_request import TopicStatusRequest
+from bimdata_api_client.model.topic_type import TopicType
+from bimdata_api_client.model.topic_type_request import TopicTypeRequest
+from bimdata_api_client.model.version import Version
+from bimdata_api_client.model.viewpoint import Viewpoint
+from bimdata_api_client.model.viewpoint_request import ViewpointRequest
+from bimdata_api_client.model.visibility_definition import VisibilityDefinition
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 
@@ -111,13 +111,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -130,7 +130,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 
 
 # Enter a context with an instance of the API client
-with bimdata-api-client.ApiClient(configuration) as api_client:
+with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | A unique integer value identifying this project.
@@ -150,7 +150,7 @@ comment_request = CommentRequest(
         # Create a comment
         api_response = api_instance.create_comment(projects_pk, topics_guid, comment_request=comment_request)
         pprint(api_response)
-    except bimdata-api-client.ApiException as e:
+    except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->create_comment: %s\n" % e)
 ```
 
@@ -493,11 +493,17 @@ Class | Method | HTTP request | Description
 *SsoApi* | [**deny_invitation**](docs/SsoApi.md#deny_invitation) | **POST** /identity-provider/invitation/{id}/deny | Deny an invitation
 *SsoApi* | [**get_invitation**](docs/SsoApi.md#get_invitation) | **GET** /identity-provider/invitation/{id} | Retrieve an invitation
 *SsoApi* | [**get_invitations**](docs/SsoApi.md#get_invitations) | **GET** /identity-provider/invitation | Retrieve all invitations
+*WebhookApi* | [**create_project_web_hook**](docs/WebhookApi.md#create_project_web_hook) | **POST** /cloud/{cloud_pk}/project/{project_pk}/webhook | Create a new project Webhook
 *WebhookApi* | [**create_web_hook**](docs/WebhookApi.md#create_web_hook) | **POST** /cloud/{cloud_pk}/webhook | Create a new Webhook
+*WebhookApi* | [**delete_project_web_hook**](docs/WebhookApi.md#delete_project_web_hook) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/webhook/{id} | Delete a webhook
 *WebhookApi* | [**delete_web_hook**](docs/WebhookApi.md#delete_web_hook) | **DELETE** /cloud/{cloud_pk}/webhook/{id} | Delete a webhook
+*WebhookApi* | [**get_project_web_hook**](docs/WebhookApi.md#get_project_web_hook) | **GET** /cloud/{cloud_pk}/project/{project_pk}/webhook/{id} | Retrieve one configured project webhook
+*WebhookApi* | [**get_project_web_hooks**](docs/WebhookApi.md#get_project_web_hooks) | **GET** /cloud/{cloud_pk}/project/{project_pk}/webhook | Retrieve all configured project webhooks
 *WebhookApi* | [**get_web_hook**](docs/WebhookApi.md#get_web_hook) | **GET** /cloud/{cloud_pk}/webhook/{id} | Retrieve one configured webhook
 *WebhookApi* | [**get_web_hooks**](docs/WebhookApi.md#get_web_hooks) | **GET** /cloud/{cloud_pk}/webhook | Retrieve all configured webhooks
+*WebhookApi* | [**ping_project_web_hook**](docs/WebhookApi.md#ping_project_web_hook) | **POST** /cloud/{cloud_pk}/project/{project_pk}/webhook/{id}/ping | Test a project webhook
 *WebhookApi* | [**ping_web_hook**](docs/WebhookApi.md#ping_web_hook) | **POST** /cloud/{cloud_pk}/webhook/{id}/ping | Test a webhook
+*WebhookApi* | [**update_project_web_hook**](docs/WebhookApi.md#update_project_web_hook) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/webhook/{id} | Update some field of a webhook
 *WebhookApi* | [**update_web_hook**](docs/WebhookApi.md#update_web_hook) | **PATCH** /cloud/{cloud_pk}/webhook/{id} | Update some field of a webhook
 
 
@@ -798,21 +804,21 @@ support@bimdata.io
 
 
 ## Notes for Large OpenAPI documents
-If the OpenAPI document is large, imports in bimdata-api-client.apis and bimdata-api-client.models may fail with a
+If the OpenAPI document is large, imports in bimdata_api_client.apis and bimdata_api_client.models may fail with a
 RecursionError indicating the maximum recursion limit has been exceeded. In that case, there are a couple of solutions:
 
 Solution 1:
 Use specific imports for apis and models like:
-- `from bimdata-api-client.api.default_api import DefaultApi`
-- `from bimdata-api-client.model.pet import Pet`
+- `from bimdata_api_client.api.default_api import DefaultApi`
+- `from bimdata_api_client.model.pet import Pet`
 
 Solution 2:
 Before importing the package, adjust the maximum recursion limit as shown below:
 ```
 import sys
 sys.setrecursionlimit(1500)
-import bimdata-api-client
-from bimdata-api-client.apis import *
-from bimdata-api-client.models import *
+import bimdata_api_client
+from bimdata_api_client.apis import *
+from bimdata_api_client.models import *
 ```
 

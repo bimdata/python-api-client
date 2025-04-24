@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.component_request import ComponentRequest
-from bimdata-api-client.model.view_setup_hints_request import ViewSetupHintsRequest
+import bimdata_api_client
+from bimdata_api_client.model.component_request import ComponentRequest
+from bimdata_api_client.model.view_setup_hints_request import ViewSetupHintsRequest
 globals()['ComponentRequest'] = ComponentRequest
 globals()['ViewSetupHintsRequest'] = ViewSetupHintsRequest
-from bimdata-api-client.model.visibility_request import VisibilityRequest
+from bimdata_api_client.model.visibility_request import VisibilityRequest
 
 
 class TestVisibilityRequest(unittest.TestCase):

@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.direction import Direction
-from bimdata-api-client.model.point import Point
+import bimdata_api_client
+from bimdata_api_client.model.direction import Direction
+from bimdata_api_client.model.point import Point
 globals()['Direction'] = Direction
 globals()['Point'] = Point
-from bimdata-api-client.model.orthogonal_camera import OrthogonalCamera
+from bimdata_api_client.model.orthogonal_camera import OrthogonalCamera
 
 
 class TestOrthogonalCamera(unittest.TestCase):

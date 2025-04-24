@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.folder_user_project import FolderUserProject
+import bimdata_api_client
+from bimdata_api_client.model.folder_user_project import FolderUserProject
 
 
 class TestFolderUserProject(unittest.TestCase):

@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.visibility import Visibility
+import bimdata_api_client
+from bimdata_api_client.model.visibility import Visibility
 globals()['Visibility'] = Visibility
-from bimdata-api-client.model.visibility_definition import VisibilityDefinition
+from bimdata_api_client.model.visibility_definition import VisibilityDefinition
 
 
 class TestVisibilityDefinition(unittest.TestCase):

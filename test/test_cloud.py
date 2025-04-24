@@ -12,16 +12,16 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.feature import Feature
-from bimdata-api-client.model.marketplace_app_light import MarketplaceAppLight
-from bimdata-api-client.model.organization import Organization
-from bimdata-api-client.model.user import User
+import bimdata_api_client
+from bimdata_api_client.model.feature import Feature
+from bimdata_api_client.model.marketplace_app_light import MarketplaceAppLight
+from bimdata_api_client.model.organization import Organization
+from bimdata_api_client.model.user import User
 globals()['Feature'] = Feature
 globals()['MarketplaceAppLight'] = MarketplaceAppLight
 globals()['Organization'] = Organization
 globals()['User'] = User
-from bimdata-api-client.model.cloud import Cloud
+from bimdata_api_client.model.cloud import Cloud
 
 
 class TestCloud(unittest.TestCase):

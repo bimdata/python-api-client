@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.zone_space import ZoneSpace
+import bimdata_api_client
+from bimdata_api_client.model.zone_space import ZoneSpace
 globals()['ZoneSpace'] = ZoneSpace
-from bimdata-api-client.model.zone import Zone
+from bimdata_api_client.model.zone import Zone
 
 
 class TestZone(unittest.TestCase):

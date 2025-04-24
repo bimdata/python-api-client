@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.folder_without_children import FolderWithoutChildren
-from bimdata-api-client.model.group import Group
+import bimdata_api_client
+from bimdata_api_client.model.folder_without_children import FolderWithoutChildren
+from bimdata_api_client.model.group import Group
 globals()['FolderWithoutChildren'] = FolderWithoutChildren
 globals()['Group'] = Group
-from bimdata-api-client.model.group_folder import GroupFolder
+from bimdata_api_client.model.group_folder import GroupFolder
 
 
 class TestGroupFolder(unittest.TestCase):

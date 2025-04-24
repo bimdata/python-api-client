@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.patched_tag_request import PatchedTagRequest
+import bimdata_api_client
+from bimdata_api_client.model.patched_tag_request import PatchedTagRequest
 
 
 class TestPatchedTagRequest(unittest.TestCase):

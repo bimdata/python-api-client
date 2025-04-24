@@ -12,16 +12,16 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.classification import Classification
-from bimdata-api-client.model.layer_element import LayerElement
-from bimdata-api-client.model.material_list_component import MaterialListComponent
-from bimdata-api-client.model.property_set import PropertySet
+import bimdata_api_client
+from bimdata_api_client.model.classification import Classification
+from bimdata_api_client.model.layer_element import LayerElement
+from bimdata_api_client.model.material_list_component import MaterialListComponent
+from bimdata_api_client.model.property_set import PropertySet
 globals()['Classification'] = Classification
 globals()['LayerElement'] = LayerElement
 globals()['MaterialListComponent'] = MaterialListComponent
 globals()['PropertySet'] = PropertySet
-from bimdata-api-client.model.element import Element
+from bimdata_api_client.model.element import Element
 
 
 class TestElement(unittest.TestCase):

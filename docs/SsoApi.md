@@ -1,4 +1,4 @@
-# bimdata-api-client.SsoApi
+# bimdata_api_client.SsoApi
 
 All URIs are relative to *http://localhost*
 
@@ -28,12 +28,12 @@ If the user already exists, s·he is added to the cloud and projet. If not, we w
 
 ```python
 import time
-import bimdata-api-client
-from bimdata-api-client.api import sso_api
+import bimdata_api_client
+from bimdata_api_client.api import sso_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 
@@ -49,13 +49,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -67,7 +67,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata-api-client.ApiClient(configuration) as api_client:
+with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sso_api.SsoApi(api_client)
     id = 1 # int | A unique integer value identifying this invitation.
@@ -76,7 +76,7 @@ with bimdata-api-client.ApiClient(configuration) as api_client:
     try:
         # Accept an invitation
         api_instance.accept_invitation(id)
-    except bimdata-api-client.ApiException as e:
+    except bimdata_api_client.ApiException as e:
         print("Exception when calling SsoApi->accept_invitation: %s\n" % e)
 ```
 
@@ -130,14 +130,14 @@ Create a user, linked to the provider. This route is only useful when used with 
 
 ```python
 import time
-import bimdata-api-client
-from bimdata-api-client.api import sso_api
-from bimdata-api-client.model.short_user import ShortUser
-from bimdata-api-client.model.create_user_request import CreateUserRequest
+import bimdata_api_client
+from bimdata_api_client.api import sso_api
+from bimdata_api_client.model.create_user_request import CreateUserRequest
+from bimdata_api_client.model.short_user import ShortUser
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 
@@ -153,13 +153,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -171,7 +171,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata-api-client.ApiClient(configuration) as api_client:
+with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sso_api.SsoApi(api_client)
     create_user_request = CreateUserRequest(
@@ -186,7 +186,7 @@ with bimdata-api-client.ApiClient(configuration) as api_client:
         # Create a user
         api_response = api_instance.create_user(create_user_request)
         pprint(api_response)
-    except bimdata-api-client.ApiException as e:
+    except bimdata_api_client.ApiException as e:
         print("Exception when calling SsoApi->create_user: %s\n" % e)
 ```
 
@@ -240,13 +240,13 @@ Delete the user and all clouds where the user is alone
 
 ```python
 import time
-import bimdata-api-client
-from bimdata-api-client.api import sso_api
-from bimdata-api-client.model.select_user_request import SelectUserRequest
+import bimdata_api_client
+from bimdata_api_client.api import sso_api
+from bimdata_api_client.model.select_user_request import SelectUserRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 
@@ -262,13 +262,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -280,7 +280,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata-api-client.ApiClient(configuration) as api_client:
+with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sso_api.SsoApi(api_client)
     select_user_request = SelectUserRequest(
@@ -291,7 +291,7 @@ with bimdata-api-client.ApiClient(configuration) as api_client:
     try:
         # Delete user from BIMData
         api_instance.delete_user(select_user_request)
-    except bimdata-api-client.ApiException as e:
+    except bimdata_api_client.ApiException as e:
         print("Exception when calling SsoApi->delete_user: %s\n" % e)
 ```
 
@@ -344,12 +344,12 @@ The invitation status change to DENIED and the user is not added to the cloud. Y
 
 ```python
 import time
-import bimdata-api-client
-from bimdata-api-client.api import sso_api
+import bimdata_api_client
+from bimdata_api_client.api import sso_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 
@@ -365,13 +365,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -383,7 +383,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata-api-client.ApiClient(configuration) as api_client:
+with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sso_api.SsoApi(api_client)
     id = 1 # int | A unique integer value identifying this invitation.
@@ -392,7 +392,7 @@ with bimdata-api-client.ApiClient(configuration) as api_client:
     try:
         # Deny an invitation
         api_instance.deny_invitation(id)
-    except bimdata-api-client.ApiException as e:
+    except bimdata_api_client.ApiException as e:
         print("Exception when calling SsoApi->deny_invitation: %s\n" % e)
 ```
 
@@ -446,13 +446,13 @@ Retrieve all invitations of your identity provider  Required scopes: org:manage
 
 ```python
 import time
-import bimdata-api-client
-from bimdata-api-client.api import sso_api
-from bimdata-api-client.model.invitation import Invitation
+import bimdata_api_client
+from bimdata_api_client.api import sso_api
+from bimdata_api_client.model.invitation import Invitation
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 
@@ -468,13 +468,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -486,7 +486,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata-api-client.ApiClient(configuration) as api_client:
+with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sso_api.SsoApi(api_client)
     id = 1 # int | A unique integer value identifying this invitation.
@@ -496,7 +496,7 @@ with bimdata-api-client.ApiClient(configuration) as api_client:
         # Retrieve an invitation
         api_response = api_instance.get_invitation(id)
         pprint(api_response)
-    except bimdata-api-client.ApiException as e:
+    except bimdata_api_client.ApiException as e:
         print("Exception when calling SsoApi->get_invitation: %s\n" % e)
 ```
 
@@ -549,13 +549,13 @@ Retrieve all invitations of your identity provider  Required scopes: org:manage
 
 ```python
 import time
-import bimdata-api-client
-from bimdata-api-client.api import sso_api
-from bimdata-api-client.model.invitation import Invitation
+import bimdata_api_client
+from bimdata_api_client.api import sso_api
+from bimdata_api_client.model.invitation import Invitation
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 
@@ -571,13 +571,13 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata-api-client.Configuration(
+configuration = bimdata_api_client.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -589,7 +589,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with bimdata-api-client.ApiClient(configuration) as api_client:
+with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sso_api.SsoApi(api_client)
     status = "A" # str |          A: Accepted         D: Denied         P: Pending           * `A` - accepted * `D` - denied * `P` - pending (optional)
@@ -600,7 +600,7 @@ with bimdata-api-client.ApiClient(configuration) as api_client:
         # Retrieve all invitations
         api_response = api_instance.get_invitations(status=status)
         pprint(api_response)
-    except bimdata-api-client.ApiException as e:
+    except bimdata_api_client.ApiException as e:
         print("Exception when calling SsoApi->get_invitations: %s\n" % e)
 ```
 

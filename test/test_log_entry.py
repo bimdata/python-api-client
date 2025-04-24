@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.log_entry import LogEntry
+import bimdata_api_client
+from bimdata_api_client.model.log_entry import LogEntry
 
 
 class TestLogEntry(unittest.TestCase):

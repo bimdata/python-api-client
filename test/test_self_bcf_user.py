@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.self_bcf_user import SelfBcfUser
+import bimdata_api_client
+from bimdata_api_client.model.self_bcf_user import SelfBcfUser
 
 
 class TestSelfBcfUser(unittest.TestCase):

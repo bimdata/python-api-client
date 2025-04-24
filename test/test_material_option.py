@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.material_option import MaterialOption
+import bimdata_api_client
+from bimdata_api_client.model.material_option import MaterialOption
 
 
 class TestMaterialOption(unittest.TestCase):

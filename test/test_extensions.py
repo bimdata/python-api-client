@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.extensions import Extensions
+import bimdata_api_client
+from bimdata_api_client.model.extensions import Extensions
 
 
 class TestExtensions(unittest.TestCase):

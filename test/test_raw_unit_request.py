@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.raw_unit_request import RawUnitRequest
+import bimdata_api_client
+from bimdata_api_client.model.raw_unit_request import RawUnitRequest
 
 
 class TestRawUnitRequest(unittest.TestCase):

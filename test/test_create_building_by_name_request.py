@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.create_building_by_name_request import CreateBuildingByNameRequest
+import bimdata_api_client
+from bimdata_api_client.model.create_building_by_name_request import CreateBuildingByNameRequest
 
 
 class TestCreateBuildingByNameRequest(unittest.TestCase):

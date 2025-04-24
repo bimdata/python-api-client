@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.patched_folder_without_children_request import PatchedFolderWithoutChildrenRequest
+import bimdata_api_client
+from bimdata_api_client.model.patched_folder_without_children_request import PatchedFolderWithoutChildrenRequest
 
 
 class TestPatchedFolderWithoutChildrenRequest(unittest.TestCase):

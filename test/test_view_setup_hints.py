@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.view_setup_hints import ViewSetupHints
+import bimdata_api_client
+from bimdata_api_client.model.view_setup_hints import ViewSetupHints
 
 
 class TestViewSetupHints(unittest.TestCase):

@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.group_request import GroupRequest
+import bimdata_api_client
+from bimdata_api_client.model.group_request import GroupRequest
 
 
 class TestGroupRequest(unittest.TestCase):

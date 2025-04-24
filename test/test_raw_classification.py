@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.raw_classification import RawClassification
+import bimdata_api_client
+from bimdata_api_client.model.raw_classification import RawClassification
 
 
 class TestRawClassification(unittest.TestCase):

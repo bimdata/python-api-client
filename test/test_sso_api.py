@@ -11,8 +11,8 @@
 
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.api.sso_api import SsoApi  # noqa: E501
+import bimdata_api_client
+from bimdata_api_client.api.sso_api import SsoApi  # noqa: E501
 
 
 class TestSsoApi(unittest.TestCase):

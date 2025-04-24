@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import bimdata-api-client
-from bimdata-api-client.model.storey_building_request import StoreyBuildingRequest
+import bimdata_api_client
+from bimdata_api_client.model.storey_building_request import StoreyBuildingRequest
 
 
 class TestStoreyBuildingRequest(unittest.TestCase):
