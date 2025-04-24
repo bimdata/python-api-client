@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.13.0 (2025-04-24)
+
+### Feature
+
+- Minor: test release
+  ([`ea745fc`](https://github.com/bimdata/python-api-client/commit/ea745fcbd8bea5eabc2c19f6b42d6631fc4e9e79))
+
+
 ## v10.12.0 (2025-04-23)
 
 ### Feature
