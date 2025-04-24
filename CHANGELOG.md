@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.13.1 (2025-04-24)
+
+### Fix
+
+- Patch: release
+  ([`8ff3fbd`](https://github.com/bimdata/python-api-client/commit/8ff3fbd608a642d48593914de8e2799500717eed))
+
+
 ## v10.13.0 (2025-04-24)
 
 ### Feature
@@ -297,6 +305,17 @@
 
 ### Feature
 
+- Minor: Add filters and document and some utility routes (#710)
+  ([`1c43bba`](https://github.com/bimdata/python-api-client/commit/1c43bbac2d36f8db99acdb3b320e528c3d43194a))
+
+* add folder:id/document route and visa validation attachment
+
+* add filter on first level
+
+* add document advanced filters and folder-tree route
+
+* remove uselesss unpacking operator
+
 - Minor: Add log for cloud invitations (#746)
   ([`d35212c`](https://github.com/bimdata/python-api-client/commit/d35212c15a9d26e6348f827776cd79b3e75ce526))
 
@@ -313,20 +332,6 @@
 * Fix migration.
 
 * Rename log decorators.
-
-- Minor: Add missing attachment in visa validation serializer. (#726)
-  ([`157b488`](https://github.com/bimdata/python-api-client/commit/157b488573349452828fefd97c2b3071a75a1e4d))
-
-- Minor: Feat/add link between zone and storey (#723)
-  ([`abe503b`](https://github.com/bimdata/python-api-client/commit/abe503bc8934c2108a389f82057730922148b5a5))
-
-* Add a link between zone and storey.
-
-* Zone-storey, use uuid instead of pk.
-
-* Rename storey as storey_uuid in zone serializer.
-
-* Split update/remove storey from zone test.
 
 - Minor: add logging for documents, folder and user invitations (#712)
   ([`d68b901`](https://github.com/bimdata/python-api-client/commit/d68b90147f5ce18b32b2fe4d80e30e36eeae6aae))
@@ -351,16 +356,8 @@
 
 * commit app migrations
 
-- Minor: Add filters and document and some utility routes (#710)
-  ([`1c43bba`](https://github.com/bimdata/python-api-client/commit/1c43bbac2d36f8db99acdb3b320e528c3d43194a))
-
-* add folder:id/document route and visa validation attachment
-
-* add filter on first level
-
-* add document advanced filters and folder-tree route
-
-* remove uselesss unpacking operator
+- Minor: Add missing attachment in visa validation serializer. (#726)
+  ([`157b488`](https://github.com/bimdata/python-api-client/commit/157b488573349452828fefd97c2b3071a75a1e4d))
 
 - Minor: add model drawings (#709)
   ([`81c1d8e`](https://github.com/bimdata/python-api-client/commit/81c1d8ee19e118ddb478f92fc36c7803df734acb))
@@ -373,6 +370,17 @@
 
 - Minor: add user deail to check-access response (#707)
   ([`368656e`](https://github.com/bimdata/python-api-client/commit/368656ed2a9c47df2f232ba3a1a152845c698d28))
+
+- Minor: Feat/add link between zone and storey (#723)
+  ([`abe503b`](https://github.com/bimdata/python-api-client/commit/abe503bc8934c2108a389f82057730922148b5a5))
+
+* Add a link between zone and storey.
+
+* Zone-storey, use uuid instead of pk.
+
+* Rename storey as storey_uuid in zone serializer.
+
+* Split update/remove storey from zone test.
 
 ### Fix
 
@@ -1209,6 +1217,30 @@ Co-authored-by: Amoki <hugo@bimdata.io>
 - Patch: fix swagger generation
   ([`3952685`](https://github.com/bimdata/python-api-client/commit/3952685f9c92059b94605b178693de95cd670f1d))
 
+### Breaking Changes
+
+- * install and pre configure drf-spectacular
+
+- * finish replace drf-yasg lib by drf-spectacular
+
+- * fix error on lib generation
+
+- * recreate data for oauth delete tests
+
+- * fix some typo
+
+- * fix null enums
+
+- * fix some serializer
+
+- * add bearer auth to swagger
+
+- * add test operationId and fix numquery MPApp test
+
+- * fix head action in test doc
+
+- Co-authored-by: Amoki <hugo@bimdata.io>
+
 
 ## v8.0.0 (2022-04-12)
 
@@ -1238,6 +1270,30 @@ Co-authored-by: Amoki <hugo@bimdata.io>
 * fix head action in test doc
 
 Co-authored-by: Amoki <hugo@bimdata.io>
+
+### Breaking Changes
+
+- * install and pre configure drf-spectacular
+
+- * finish replace drf-yasg lib by drf-spectacular
+
+- * fix error on lib generation
+
+- * recreate data for oauth delete tests
+
+- * fix some typo
+
+- * fix null enums
+
+- * fix some serializer
+
+- * add bearer auth to swagger
+
+- * add test operationId and fix numquery MPApp test
+
+- * fix head action in test doc
+
+- Co-authored-by: Amoki <hugo@bimdata.io>
 
 
 ## v7.4.2 (2022-03-17)
@@ -1394,6 +1450,42 @@ Co-authored-by: Amoki <hugo@bimdata.io>
 * don't unzip unzipped structure files
 
 * fix bad rebase
+
+### Breaking Changes
+
+- * filter storey models with permissions
+
+- * duplicate ifc routes and update tags ViewSet
+
+- * add deprecated ifc views and filter by type
+
+- * rename ifc operations
+
+- * rename Ifc table
+
+- * rename some Ifc classes
+
+- * duplicate ifc test and change reverse url name
+
+- * update foreignkeys
+
+- * rename ifc_pk in model_pk
+
+- * update route name
+
+- * update scopes
+
+- * fix swagger dupplicate
+
+- * fix test projectAccessToken
+
+- * actually send keycloak scope create
+
+- * restore ifc_guid
+
+- * don't unzip unzipped structure files
+
+- * fix bad rebase
 
 
 ## v6.0.0 (2022-02-04)
@@ -1654,6 +1746,13 @@ Co-authored-by: Hugo Duroux <hugo@bimdata.io>
 
 ### Feature
 
+- Minor: Add leave project route (#449)
+  ([`4d52c51`](https://github.com/bimdata/python-api-client/commit/4d52c51628bf3e977074dfec3d8af51615a13c2d))
+
+* Add leave project route
+
+* fix roles
+
 - Minor: Remove deprecated and put (#450)
   ([`5769df5`](https://github.com/bimdata/python-api-client/commit/5769df5195f22e65696b4c46ed1a8ee925634526))
 
@@ -1667,14 +1766,13 @@ Co-authored-by: Hugo Duroux <hugo@bimdata.io>
 
 * rename fullUpdate operation
 
-- Minor: Add leave project route (#449)
-  ([`4d52c51`](https://github.com/bimdata/python-api-client/commit/4d52c51628bf3e977074dfec3d8af51615a13c2d))
-
-* Add leave project route
-
-* fix roles
-
 ### Fix
+
+- Patch: add invitation key in UserProject
+  ([`30a8fb5`](https://github.com/bimdata/python-api-client/commit/30a8fb5ad88a6aed47de4bcb69a34cd37702e5ff))
+
+- Patch: fix list/create methods openAPI
+  ([`7519d93`](https://github.com/bimdata/python-api-client/commit/7519d931205caffc57f964e92e0547714d916304))
 
 - Patch: fix semantic release
   ([`aca3560`](https://github.com/bimdata/python-api-client/commit/aca3560c5d69a91d32be6992c0d8aea1153110b4))
@@ -1688,22 +1786,16 @@ Breaking Change: - key to for GroupUser create view - Route pk for userProject v
 Some other change: - fix serializer of userProject for swagger and libs - add missing invitation
   user project from project and group - fix some test
 
-- Patch: add invitation key in UserProject
-  ([`30a8fb5`](https://github.com/bimdata/python-api-client/commit/30a8fb5ad88a6aed47de4bcb69a34cd37702e5ff))
-
 - Patch: get cloud size operation id in openapi
   ([`d508862`](https://github.com/bimdata/python-api-client/commit/d5088627492eec9d1ea02a8915cfb1d7ed4ce09c))
-
-- Patch: fix list/create methods openAPI
-  ([`7519d93`](https://github.com/bimdata/python-api-client/commit/7519d931205caffc57f964e92e0547714d916304))
 
 
 ## v5.14.0 (2021-09-13)
 
 ### Feature
 
-- Minor: serialize user-permissions on documents
-  ([`8597421`](https://github.com/bimdata/python-api-client/commit/859742176f6e0827c170dd8d30c95c254d502fcc))
+- Minor: add GED permissions
+  ([`00b987a`](https://github.com/bimdata/python-api-client/commit/00b987af3d7f310c07beb9d30c7354b9e5830d26))
 
 - Minor: Add profile_picture field in user serialization
   ([`45bd37c`](https://github.com/bimdata/python-api-client/commit/45bd37ce3e9ead5bb4050fa2a26a609a64e8ac26))
@@ -1712,11 +1804,11 @@ Some other change: - fix serializer of userProject for swagger and libs - add mi
 
 * fix user.company, add comment about an edge case
 
-- Minor: add GED permissions
-  ([`00b987a`](https://github.com/bimdata/python-api-client/commit/00b987af3d7f310c07beb9d30c7354b9e5830d26))
-
 - Minor: allow bigger guids (#420)
   ([`54b2b09`](https://github.com/bimdata/python-api-client/commit/54b2b090cbbf127cf8ac0f17c3492e6d0e1c7f29))
+
+- Minor: serialize user-permissions on documents
+  ([`8597421`](https://github.com/bimdata/python-api-client/commit/859742176f6e0827c170dd8d30c95c254d502fcc))
 
 ### Fix
 
@@ -2373,12 +2465,12 @@ Some other change: - fix serializer of userProject for swagger and libs - add mi
 
 ### Breaking
 
-- Major: user openapi-codegen instead of swagger-codegen
-  ([`a812b96`](https://github.com/bimdata/python-api-client/commit/a812b9686052b133703b41b36a81eeb1ad497263))
-
 - Major: set default api url to beta.bimdata.io, change auth behavior to use headers instead of
   querystring
   ([`18e4efe`](https://github.com/bimdata/python-api-client/commit/18e4efeea41cfa43eda671c6a8ff097fd9f46350))
+
+- Major: user openapi-codegen instead of swagger-codegen
+  ([`a812b96`](https://github.com/bimdata/python-api-client/commit/a812b9686052b133703b41b36a81eeb1ad497263))
 
 
 ## v1.3.3 (2018-07-06)
@@ -2446,11 +2538,11 @@ Some other change: - fix serializer of userProject for swagger and libs - add mi
 
 ### Fix
 
+- Patch: add semantic-release
+  ([`5cf5cd7`](https://github.com/bimdata/python-api-client/commit/5cf5cd78e397316c9166a4099ced0fd80beae7d7))
+
 - Patch: update-swagger-codegen
   ([`c47c676`](https://github.com/bimdata/python-api-client/commit/c47c67664cd4c4ab5084ba7dd774dc38201f3b2a))
 
 - Patch:: test
   ([`3f95811`](https://github.com/bimdata/python-api-client/commit/3f958119eb9f430d415150886616e6b7985fa0cc))
-
-- Patch: add semantic-release
-  ([`5cf5cd7`](https://github.com/bimdata/python-api-client/commit/5cf5cd78e397316c9166a4099ced0fd80beae7d7))
