@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.14.3 (2025-04-28)
+
+### Fix
+
+- Patch: Fix mask_2d in model, can be null. (#840)
+  ([`1c52df4`](https://github.com/bimdata/python-api-client/commit/1c52df4fef57538605863c2462dee87df2a1b5ef))
+
+
 ## v10.14.2 (2025-04-24)
 
 ### Fix
