@@ -154,7 +154,7 @@ class Model(ModelNormal):
             'warnings': ([str], none_type,),  # noqa: E501
             'parent_id': (int, none_type,),  # noqa: E501
             'page_number': (int, none_type,),  # noqa: E501
-            'mask_2d': (Mask2D,),  # noqa: E501
+            'mask_2d': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'children': ([ModelSerializerWithoutChildren],),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'source': (str,),  # noqa: E501
@@ -231,6 +231,7 @@ class Model(ModelNormal):
         'warnings',  # noqa: E501
         'parent_id',  # noqa: E501
         'page_number',  # noqa: E501
+        'mask_2d',  # noqa: E501
         'children',  # noqa: E501
     }
 
@@ -264,7 +265,7 @@ class Model(ModelNormal):
             warnings ([str], none_type): List of warnings that happened during IFC processing
             parent_id (int, none_type): The first page of the pdf
             page_number (int, none_type): The page number of the related pdf
-            mask_2d (Mask2D):
+            mask_2d (bool, date, datetime, dict, float, int, list, str, none_type):
             children ([ModelSerializerWithoutChildren]): Contains additional pages of a pdf
 
         Keyword Args:
@@ -378,10 +379,9 @@ class Model(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, mask_2d, *args, **kwargs):  # noqa: E501
+    def __init__(self, *args, **kwargs):  # noqa: E501
         """Model - a model defined in OpenAPI
 
-            mask_2d (Mask2D):
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
                                 will be type checked and a TypeError will be
@@ -447,7 +447,6 @@ class Model(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.mask_2d = mask_2d
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

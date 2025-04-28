@@ -16683,13 +16683,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         ],
         recommanded_2d_angle=3.14,
         layout_name="layout_name_example",
-        mask_2d=Mask2DRequest(
-            crop_path=[
-                [
-                    3.14,
-                ],
-            ],
-        ),
     ) # PatchedModelRequest |  (optional)
 
     # example passing only required values which don't have defaults set
