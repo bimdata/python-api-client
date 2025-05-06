@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.14.4 (2025-05-06)
+
+### Fix
+
+- Patch: fix create model serializer (#843)
+  ([`f855ec7`](https://github.com/bimdata/python-api-client/commit/f855ec73503994a588ca8ad6a1e916430e2a7dee))
+
+
 ## v10.14.3 (2025-04-28)
 
 ### Fix
