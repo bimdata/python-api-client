@@ -105,6 +105,7 @@ class ModelDocument(ModelNormal):
             'user_permission': (int,),  # noqa: E501
             'office_preview': (str, none_type,),  # noqa: E501
             'file_name': (str,),  # noqa: E501
+            'parent_id': (int, none_type,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
         }
 
@@ -126,6 +127,7 @@ class ModelDocument(ModelNormal):
         'user_permission': 'user_permission',  # noqa: E501
         'office_preview': 'office_preview',  # noqa: E501
         'file_name': 'file_name',  # noqa: E501
+        'parent_id': 'parent_id',  # noqa: E501
         'description': 'description',  # noqa: E501
     }
 
@@ -193,6 +195,7 @@ class ModelDocument(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             file_name (str): Full name of the file. [optional]  # noqa: E501
+            parent_id (int, none_type): [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501
         """
 
@@ -289,6 +292,7 @@ class ModelDocument(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             file_name (str): Full name of the file. [optional]  # noqa: E501
+            parent_id (int, none_type): [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501
         """
 

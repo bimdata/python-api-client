@@ -96,6 +96,7 @@ class ModelDocumentRequest(ModelNormal):
             'name': (str,),  # noqa: E501
             'file': (file_type,),  # noqa: E501
             'file_name': (str,),  # noqa: E501
+            'parent_id': (int, none_type,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
             'process_hint': (str,),  # noqa: E501
         }
@@ -109,6 +110,7 @@ class ModelDocumentRequest(ModelNormal):
         'name': 'name',  # noqa: E501
         'file': 'file',  # noqa: E501
         'file_name': 'file_name',  # noqa: E501
+        'parent_id': 'parent_id',  # noqa: E501
         'description': 'description',  # noqa: E501
         'process_hint': 'process_hint',  # noqa: E501
     }
@@ -159,6 +161,7 @@ class ModelDocumentRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             file_name (str): Full name of the file. [optional]  # noqa: E501
+            parent_id (int, none_type): [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501
             process_hint (str): Provide a info about the document in order to customize the way it is processed.  * `PHOTOSPHERE` - PHOTOSPHERE. [optional] if omitted the server will use the default value of "PHOTOSPHERE"  # noqa: E501
         """
@@ -249,6 +252,7 @@ class ModelDocumentRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             file_name (str): Full name of the file. [optional]  # noqa: E501
+            parent_id (int, none_type): [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501
             process_hint (str): Provide a info about the document in order to customize the way it is processed.  * `PHOTOSPHERE` - PHOTOSPHERE. [optional] if omitted the server will use the default value of "PHOTOSPHERE"  # noqa: E501
         """
