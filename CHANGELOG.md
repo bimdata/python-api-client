@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.14.5 (2025-05-12)
+
+### Fix
+
+- Patch: fix model.document parent_id
+  ([`f00e1ba`](https://github.com/bimdata/python-api-client/commit/f00e1ba2e1fcdf3d287e45610cb4878b007ee3b5))
+
+
 ## v10.14.4 (2025-05-06)
 
 ### Fix
