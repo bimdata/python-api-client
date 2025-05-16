@@ -475,6 +475,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**update_model_files**](docs/ModelApi.md#update_model_files) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/files | Update models file (gltf, svg, structure, etc)
 *ModelApi* | [**update_model_property**](docs/ModelApi.md#update_model_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id} | Update some fields of a Property
 *ModelApi* | [**update_model_property_definition**](docs/ModelApi.md#update_model_property_definition) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id} | Update some fields of many PropertyDefinitions of a model
+*ModelApi* | [**update_model_transform**](docs/ModelApi.md#update_model_transform) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/transform | Update model transform
 *ModelApi* | [**update_model_unit**](docs/ModelApi.md#update_model_unit) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id} | Update some fields of a Unit of a model
 *ModelApi* | [**update_order_building_plan**](docs/ModelApi.md#update_order_building_plan) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/order | Update order of all plan of a building
 *ModelApi* | [**update_order_storey_plan**](docs/ModelApi.md#update_order_storey_plan) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/order | Update order of all plan of a storey
@@ -637,6 +638,7 @@ Class | Method | HTTP request | Description
  - [PatchedTopicRequest](docs/PatchedTopicRequest.md)
  - [PatchedTopicStatusRequest](docs/PatchedTopicStatusRequest.md)
  - [PatchedTopicTypeRequest](docs/PatchedTopicTypeRequest.md)
+ - [PatchedTransformRequest](docs/PatchedTransformRequest.md)
  - [PatchedUnitRequest](docs/PatchedUnitRequest.md)
  - [PatchedUserCloudUpdateRequest](docs/PatchedUserCloudUpdateRequest.md)
  - [PatchedUserProjectUpdateRequest](docs/PatchedUserProjectUpdateRequest.md)
@@ -727,6 +729,8 @@ Class | Method | HTTP request | Description
  - [TopicStatusRequest](docs/TopicStatusRequest.md)
  - [TopicType](docs/TopicType.md)
  - [TopicTypeRequest](docs/TopicTypeRequest.md)
+ - [Transform](docs/Transform.md)
+ - [TransformRequest](docs/TransformRequest.md)
  - [Unit](docs/Unit.md)
  - [UnitRequest](docs/UnitRequest.md)
  - [User](docs/User.md)

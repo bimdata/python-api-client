@@ -142,6 +142,7 @@ bimdata_api_client/model/patched_tag_request.py
 bimdata_api_client/model/patched_topic_request.py
 bimdata_api_client/model/patched_topic_status_request.py
 bimdata_api_client/model/patched_topic_type_request.py
+bimdata_api_client/model/patched_transform_request.py
 bimdata_api_client/model/patched_unit_request.py
 bimdata_api_client/model/patched_user_cloud_update_request.py
 bimdata_api_client/model/patched_user_project_update_request.py
@@ -232,6 +233,8 @@ bimdata_api_client/model/topic_status.py
 bimdata_api_client/model/topic_status_request.py
 bimdata_api_client/model/topic_type.py
 bimdata_api_client/model/topic_type_request.py
+bimdata_api_client/model/transform.py
+bimdata_api_client/model/transform_request.py
 bimdata_api_client/model/unit.py
 bimdata_api_client/model/unit_request.py
 bimdata_api_client/model/user.py
@@ -402,6 +405,7 @@ docs/PatchedTagRequest.md
 docs/PatchedTopicRequest.md
 docs/PatchedTopicStatusRequest.md
 docs/PatchedTopicTypeRequest.md
+docs/PatchedTransformRequest.md
 docs/PatchedUnitRequest.md
 docs/PatchedUserCloudUpdateRequest.md
 docs/PatchedUserProjectUpdateRequest.md
@@ -493,6 +497,8 @@ docs/TopicStatus.md
 docs/TopicStatusRequest.md
 docs/TopicType.md
 docs/TopicTypeRequest.md
+docs/Transform.md
+docs/TransformRequest.md
 docs/Unit.md
 docs/UnitRequest.md
 docs/User.md
@@ -665,6 +671,7 @@ test/test_patched_tag_request.py
 test/test_patched_topic_request.py
 test/test_patched_topic_status_request.py
 test/test_patched_topic_type_request.py
+test/test_patched_transform_request.py
 test/test_patched_unit_request.py
 test/test_patched_user_cloud_update_request.py
 test/test_patched_user_project_update_request.py
@@ -756,6 +763,8 @@ test/test_topic_status.py
 test/test_topic_status_request.py
 test/test_topic_type.py
 test/test_topic_type_request.py
+test/test_transform.py
+test/test_transform_request.py
 test/test_unit.py
 test/test_unit_request.py
 test/test_user.py

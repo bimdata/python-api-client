@@ -87,7 +87,6 @@ class PatchedLabelRequest(ModelNormal):
         """
         return {
             'label': (str,),  # noqa: E501
-            'project': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -97,7 +96,6 @@ class PatchedLabelRequest(ModelNormal):
 
     attribute_map = {
         'label': 'label',  # noqa: E501
-        'project': 'project',  # noqa: E501
     }
 
     read_only_vars = {
@@ -142,7 +140,6 @@ class PatchedLabelRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             label (str): [optional]  # noqa: E501
-            project (int): This field is automatically provided by the route, you don't need to provide it in the body. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -225,7 +222,6 @@ class PatchedLabelRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             label (str): [optional]  # noqa: E501
-            project (int): This field is automatically provided by the route, you don't need to provide it in the body. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -108,7 +108,6 @@ class FullTopic(ModelNormal):
         return {
             'modified_date': (datetime, none_type,),  # noqa: E501
             'title': (str,),  # noqa: E501
-            'project': (int,),  # noqa: E501
             'guid': (str,),  # noqa: E501
             'creation_date': (datetime,),  # noqa: E501
             'creation_author': (str, none_type,),  # noqa: E501
@@ -139,7 +138,6 @@ class FullTopic(ModelNormal):
     attribute_map = {
         'modified_date': 'modified_date',  # noqa: E501
         'title': 'title',  # noqa: E501
-        'project': 'project',  # noqa: E501
         'guid': 'guid',  # noqa: E501
         'creation_date': 'creation_date',  # noqa: E501
         'creation_author': 'creation_author',  # noqa: E501
@@ -170,13 +168,12 @@ class FullTopic(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, modified_date, title, project, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, modified_date, title, *args, **kwargs):  # noqa: E501
         """FullTopic - a model defined in OpenAPI
 
         Args:
             modified_date (datetime, none_type):
             title (str):
-            project (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -258,7 +255,6 @@ class FullTopic(ModelNormal):
 
         self.modified_date = modified_date
         self.title = title
-        self.project = project
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -279,11 +275,10 @@ class FullTopic(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, title, project, *args, **kwargs):  # noqa: E501
+    def __init__(self, title, *args, **kwargs):  # noqa: E501
         """FullTopic - a model defined in OpenAPI
 
             title (str):
-            project (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -362,7 +357,6 @@ class FullTopic(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.title = title
-        self.project = project
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

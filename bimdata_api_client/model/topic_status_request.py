@@ -91,7 +91,6 @@ class TopicStatusRequest(ModelNormal):
         return {
             'topic_status': (str,),  # noqa: E501
             'color': (str, none_type,),  # noqa: E501
-            'project': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -102,7 +101,6 @@ class TopicStatusRequest(ModelNormal):
     attribute_map = {
         'topic_status': 'topic_status',  # noqa: E501
         'color': 'color',  # noqa: E501
-        'project': 'project',  # noqa: E501
     }
 
     read_only_vars = {
@@ -150,7 +148,6 @@ class TopicStatusRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             color (str, none_type): [optional]  # noqa: E501
-            project (int): This field is automatically provided by the route, you don't need to provide it in the body. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -237,7 +234,6 @@ class TopicStatusRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             color (str, none_type): [optional]  # noqa: E501
-            project (int): This field is automatically provided by the route, you don't need to provide it in the body. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

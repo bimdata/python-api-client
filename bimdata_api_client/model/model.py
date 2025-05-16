@@ -34,11 +34,13 @@ def lazy_import():
     from bimdata_api_client.model.mask2_d import Mask2D
     from bimdata_api_client.model.model_document import ModelDocument
     from bimdata_api_client.model.model_serializer_without_children import ModelSerializerWithoutChildren
+    from bimdata_api_client.model.transform import Transform
     from bimdata_api_client.model.user import User
     from bimdata_api_client.model.xkt_file import XktFile
     globals()['Mask2D'] = Mask2D
     globals()['ModelDocument'] = ModelDocument
     globals()['ModelSerializerWithoutChildren'] = ModelSerializerWithoutChildren
+    globals()['Transform'] = Transform
     globals()['User'] = User
     globals()['XktFile'] = XktFile
 
@@ -155,6 +157,7 @@ class Model(ModelNormal):
             'parent_id': (int, none_type,),  # noqa: E501
             'page_number': (int, none_type,),  # noqa: E501
             'mask_2d': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'transform': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'children': ([ModelSerializerWithoutChildren],),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'source': (str,),  # noqa: E501
@@ -196,6 +199,7 @@ class Model(ModelNormal):
         'parent_id': 'parent_id',  # noqa: E501
         'page_number': 'page_number',  # noqa: E501
         'mask_2d': 'mask_2d',  # noqa: E501
+        'transform': 'transform',  # noqa: E501
         'children': 'children',  # noqa: E501
         'name': 'name',  # noqa: E501
         'source': 'source',  # noqa: E501
@@ -232,6 +236,7 @@ class Model(ModelNormal):
         'parent_id',  # noqa: E501
         'page_number',  # noqa: E501
         'mask_2d',  # noqa: E501
+        'transform',  # noqa: E501
         'children',  # noqa: E501
     }
 
@@ -239,7 +244,7 @@ class Model(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, type, creator, status, created_at, updated_at, document_id, document, structure_file, systems_file, map_file, gltf_file, preview_file, viewer_360_file, xkt_file, xkt_files, binary_2d_file, project_id, errors, warnings, parent_id, page_number, mask_2d, children, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, type, creator, status, created_at, updated_at, document_id, document, structure_file, systems_file, map_file, gltf_file, preview_file, viewer_360_file, xkt_file, xkt_files, binary_2d_file, project_id, errors, warnings, parent_id, page_number, mask_2d, transform, children, *args, **kwargs):  # noqa: E501
         """Model - a model defined in OpenAPI
 
         Args:
@@ -266,6 +271,7 @@ class Model(ModelNormal):
             parent_id (int, none_type): The first page of the pdf
             page_number (int, none_type): The page number of the related pdf
             mask_2d (bool, date, datetime, dict, float, int, list, str, none_type):
+            transform (bool, date, datetime, dict, float, int, list, str, none_type):
             children ([ModelSerializerWithoutChildren]): Contains additional pages of a pdf
 
         Keyword Args:
@@ -358,6 +364,7 @@ class Model(ModelNormal):
         self.parent_id = parent_id
         self.page_number = page_number
         self.mask_2d = mask_2d
+        self.transform = transform
         self.children = children
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \

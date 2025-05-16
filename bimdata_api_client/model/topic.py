@@ -100,7 +100,6 @@ class Topic(ModelNormal):
         return {
             'title': (str,),  # noqa: E501
             'modified_date': (datetime, none_type,),  # noqa: E501
-            'project': (int,),  # noqa: E501
             'guid': (str,),  # noqa: E501
             'topic_type': (str, none_type,),  # noqa: E501
             'topic_status': (str, none_type,),  # noqa: E501
@@ -129,7 +128,6 @@ class Topic(ModelNormal):
     attribute_map = {
         'title': 'title',  # noqa: E501
         'modified_date': 'modified_date',  # noqa: E501
-        'project': 'project',  # noqa: E501
         'guid': 'guid',  # noqa: E501
         'topic_type': 'topic_type',  # noqa: E501
         'topic_status': 'topic_status',  # noqa: E501
@@ -158,13 +156,12 @@ class Topic(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, title, modified_date, project, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, title, modified_date, *args, **kwargs):  # noqa: E501
         """Topic - a model defined in OpenAPI
 
         Args:
             title (str):
             modified_date (datetime, none_type):
-            project (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -244,7 +241,6 @@ class Topic(ModelNormal):
 
         self.title = title
         self.modified_date = modified_date
-        self.project = project
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -265,13 +261,11 @@ class Topic(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, title, project, *args, **kwargs):  # noqa: E501
+    def __init__(self, title, *args, **kwargs):  # noqa: E501
         """Topic - a model defined in OpenAPI
 
         Args:
             title (str):
-            project (int):
-
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
                                 will be type checked and a TypeError will be
@@ -347,7 +341,6 @@ class Topic(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.title = title
-        self.project = project
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

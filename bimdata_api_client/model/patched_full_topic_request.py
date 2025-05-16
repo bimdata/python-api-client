@@ -142,7 +142,6 @@ class PatchedFullTopicRequest(ModelNormal):
             'due_date': (datetime, none_type,),  # noqa: E501
             'comments': ([CommentRequest],),  # noqa: E501
             'viewpoints': ([ViewpointRequest],),  # noqa: E501
-            'project': (int,),  # noqa: E501
             'bimdata_viewer_layout': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
         }
 
@@ -172,7 +171,6 @@ class PatchedFullTopicRequest(ModelNormal):
         'due_date': 'due_date',  # noqa: E501
         'comments': 'comments',  # noqa: E501
         'viewpoints': 'viewpoints',  # noqa: E501
-        'project': 'project',  # noqa: E501
         'bimdata_viewer_layout': 'bimdata_viewer_layout',  # noqa: E501
     }
 
@@ -237,7 +235,6 @@ class PatchedFullTopicRequest(ModelNormal):
             due_date (datetime, none_type): [optional]  # noqa: E501
             comments ([CommentRequest]): [optional]  # noqa: E501
             viewpoints ([ViewpointRequest]): [optional]  # noqa: E501
-            project (int): [optional]  # noqa: E501
             bimdata_viewer_layout (bool, date, datetime, dict, float, int, list, str, none_type): Non standard field. JSON describing bimdataViewerLayout.. [optional]  # noqa: E501
         """
 
@@ -340,7 +337,6 @@ class PatchedFullTopicRequest(ModelNormal):
             due_date (datetime, none_type): [optional]  # noqa: E501
             comments ([CommentRequest]): [optional]  # noqa: E501
             viewpoints ([ViewpointRequest]): [optional]  # noqa: E501
-            project (int): [optional]  # noqa: E501
             bimdata_viewer_layout (bool, date, datetime, dict, float, int, list, str, none_type): Non standard field. JSON describing bimdataViewerLayout.. [optional]  # noqa: E501
         """
 

@@ -1039,6 +1039,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_update_model_transform(self):
+        """Test case for update_model_transform
+
+        Update model transform  # noqa: E501
+        """
+        pass
+
     def test_update_model_unit(self):
         """Test case for update_model_unit
 

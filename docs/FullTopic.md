@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **modified_date** | **datetime, none_type** |  | [readonly] 
 **title** | **str** |  | 
-**project** | **int** |  | 
 **guid** | **str** |  | [optional] 
 **creation_date** | **datetime** |  | [optional] 
 **creation_author** | **str, none_type** |  | [optional] 

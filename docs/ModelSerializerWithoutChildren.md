@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **parent_id** | **int, none_type** | The first page of the pdf | [readonly] 
 **page_number** | **int, none_type** | The page number of the related pdf | [readonly] 
 **mask_2d** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
+**transform** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
 **name** | **str, none_type** |  | [optional] 
 **source** | **str** | * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED | [optional] 
 **world_position** | **[float], none_type** | [x,y,z] array of the position of the local_placement in world coordinates | [optional] 

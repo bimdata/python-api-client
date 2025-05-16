@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **title** | **str** |  | 
-**project** | **int** |  | 
 **guid** | **str** |  | [optional] 
 **topic_type** | **str, none_type** |  | [optional] 
 **topic_status** | **str, none_type** |  | [optional] 

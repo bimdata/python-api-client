@@ -258,7 +258,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 1 # int | 
     label_request = LabelRequest(
         label="label_example",
-        project=1,
     ) # LabelRequest | 
 
     # example passing only required values which don't have defaults set
@@ -369,7 +368,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     priority_request = PriorityRequest(
         priority="priority_example",
         color="color_example",
-        project=1,
     ) # PriorityRequest | 
 
     # example passing only required values which don't have defaults set
@@ -479,7 +477,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 1 # int | 
     stage_request = StageRequest(
         stage="stage_example",
-        project=1,
     ) # StageRequest | 
 
     # example passing only required values which don't have defaults set
@@ -590,7 +587,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     topic_status_request = TopicStatusRequest(
         topic_status="topic_status_example",
         color="color_example",
-        project=1,
     ) # TopicStatusRequest | 
 
     # example passing only required values which don't have defaults set
@@ -700,7 +696,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 1 # int | 
     topic_type_request = TopicTypeRequest(
         topic_type="topic_type_example",
-        project=1,
     ) # TopicTypeRequest | 
 
     # example passing only required values which don't have defaults set
@@ -904,7 +899,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 ],
             ),
         ],
-        project=1,
         bimdata_viewer_layout=None,
     ) # FullTopicRequest | 
     img_format = "url" # str | All snapshot_data will be returned as url instead of base64 (optional) if omitted the server will use the default value of "url"
@@ -1172,7 +1166,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         ],
         format="format_example",
         index=0,
-        project=1,
         bimdata_viewer_layout=None,
     ) # TopicRequest | 
 
@@ -2976,7 +2969,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 ],
             ),
         ],
-        project=1,
         bimdata_viewer_layout=None,
     ) # FullTopicRequest | 
     img_format = "url" # str | All snapshot_data will be returned as url instead of base64 (optional) if omitted the server will use the default value of "url"
@@ -3248,7 +3240,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         ],
         format="format_example",
         index=0,
-        project=1,
         bimdata_viewer_layout=None,
     ) # TopicRequest | 
 
@@ -6344,7 +6335,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 1 # int | 
     patched_label_request = PatchedLabelRequest(
         label="label_example",
-        project=1,
     ) # PatchedLabelRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -6466,7 +6456,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     patched_priority_request = PatchedPriorityRequest(
         priority="priority_example",
         color="color_example",
-        project=1,
     ) # PatchedPriorityRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -6587,7 +6576,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 1 # int | 
     patched_stage_request = PatchedStageRequest(
         stage="stage_example",
-        project=1,
     ) # PatchedStageRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -6709,7 +6697,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     patched_topic_status_request = PatchedTopicStatusRequest(
         topic_status="topic_status_example",
         color="color_example",
-        project=1,
     ) # PatchedTopicStatusRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -6830,7 +6817,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 1 # int | 
     patched_topic_type_request = PatchedTopicTypeRequest(
         topic_type="topic_type_example",
-        project=1,
     ) # PatchedTopicTypeRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -7046,7 +7032,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 ],
             ),
         ],
-        project=1,
         bimdata_viewer_layout=None,
     ) # PatchedFullTopicRequest |  (optional)
 
@@ -7326,7 +7311,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         ],
         format="format_example",
         index=0,
-        project=1,
         bimdata_viewer_layout=None,
     ) # PatchedTopicRequest |  (optional)
 

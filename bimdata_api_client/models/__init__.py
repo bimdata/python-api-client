@@ -137,6 +137,7 @@ from bimdata_api_client.model.patched_tag_request import PatchedTagRequest
 from bimdata_api_client.model.patched_topic_request import PatchedTopicRequest
 from bimdata_api_client.model.patched_topic_status_request import PatchedTopicStatusRequest
 from bimdata_api_client.model.patched_topic_type_request import PatchedTopicTypeRequest
+from bimdata_api_client.model.patched_transform_request import PatchedTransformRequest
 from bimdata_api_client.model.patched_unit_request import PatchedUnitRequest
 from bimdata_api_client.model.patched_user_cloud_update_request import PatchedUserCloudUpdateRequest
 from bimdata_api_client.model.patched_user_project_update_request import PatchedUserProjectUpdateRequest
@@ -227,6 +228,8 @@ from bimdata_api_client.model.topic_status import TopicStatus
 from bimdata_api_client.model.topic_status_request import TopicStatusRequest
 from bimdata_api_client.model.topic_type import TopicType
 from bimdata_api_client.model.topic_type_request import TopicTypeRequest
+from bimdata_api_client.model.transform import Transform
+from bimdata_api_client.model.transform_request import TransformRequest
 from bimdata_api_client.model.unit import Unit
 from bimdata_api_client.model.unit_request import UnitRequest
 from bimdata_api_client.model.user import User

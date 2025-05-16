@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **title** | **str** |  | 
-**project** | **int** |  | 
 **guid** | **str** |  | [optional] 
 **creation_date** | **datetime** |  | [optional] 
 **creation_author** | **str, none_type** |  | [optional] 
