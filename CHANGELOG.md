@@ -1,6 +1,22 @@
 # CHANGELOG
 
 
+## v10.15.0 (2025-05-16)
+
+### Feature
+
+- Minor: Feature: Model Transform (#786)
+  ([`41b4129`](https://github.com/bimdata/python-api-client/commit/41b412930f623db90a09214c6e221756ebb9504a))
+
+* MINOR: feat(model): add models transform
+
+* fix: set transform read_only=True
+
+* fix(transform): use 'prefetch_related' instead of 'select_related' for transform in model qs
+
+* fix(transform): use select_related and fix model_list tests
+
+
 ## v10.14.5 (2025-05-12)
 
 ### Fix
