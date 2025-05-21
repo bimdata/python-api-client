@@ -152,6 +152,7 @@ from bimdata_api_client.model.perspective_camera import PerspectiveCamera
 from bimdata_api_client.model.perspective_camera_request import PerspectiveCameraRequest
 from bimdata_api_client.model.pin import Pin
 from bimdata_api_client.model.pin_request import PinRequest
+from bimdata_api_client.model.pin_with_models import PinWithModels
 from bimdata_api_client.model.point import Point
 from bimdata_api_client.model.point_request import PointRequest
 from bimdata_api_client.model.positioning_plan import PositioningPlan
@@ -223,6 +224,7 @@ from bimdata_api_client.model.tag import Tag
 from bimdata_api_client.model.tag_id_request import TagIdRequest
 from bimdata_api_client.model.tag_request import TagRequest
 from bimdata_api_client.model.topic import Topic
+from bimdata_api_client.model.topic_pin import TopicPin
 from bimdata_api_client.model.topic_request import TopicRequest
 from bimdata_api_client.model.topic_status import TopicStatus
 from bimdata_api_client.model.topic_status_request import TopicStatusRequest

@@ -157,6 +157,7 @@ bimdata_api_client/model/perspective_camera.py
 bimdata_api_client/model/perspective_camera_request.py
 bimdata_api_client/model/pin.py
 bimdata_api_client/model/pin_request.py
+bimdata_api_client/model/pin_with_models.py
 bimdata_api_client/model/point.py
 bimdata_api_client/model/point_request.py
 bimdata_api_client/model/positioning_plan.py
@@ -228,6 +229,7 @@ bimdata_api_client/model/tag.py
 bimdata_api_client/model/tag_id_request.py
 bimdata_api_client/model/tag_request.py
 bimdata_api_client/model/topic.py
+bimdata_api_client/model/topic_pin.py
 bimdata_api_client/model/topic_request.py
 bimdata_api_client/model/topic_status.py
 bimdata_api_client/model/topic_status_request.py
@@ -420,6 +422,7 @@ docs/PerspectiveCamera.md
 docs/PerspectiveCameraRequest.md
 docs/Pin.md
 docs/PinRequest.md
+docs/PinWithModels.md
 docs/Point.md
 docs/PointRequest.md
 docs/PositioningPlan.md
@@ -492,6 +495,7 @@ docs/Tag.md
 docs/TagIdRequest.md
 docs/TagRequest.md
 docs/Topic.md
+docs/TopicPin.md
 docs/TopicRequest.md
 docs/TopicStatus.md
 docs/TopicStatusRequest.md
@@ -686,6 +690,7 @@ test/test_perspective_camera.py
 test/test_perspective_camera_request.py
 test/test_pin.py
 test/test_pin_request.py
+test/test_pin_with_models.py
 test/test_point.py
 test/test_point_request.py
 test/test_positioning_plan.py
@@ -758,6 +763,7 @@ test/test_tag.py
 test/test_tag_id_request.py
 test/test_tag_request.py
 test/test_topic.py
+test/test_topic_pin.py
 test/test_topic_request.py
 test/test_topic_status.py
 test/test_topic_status_request.py

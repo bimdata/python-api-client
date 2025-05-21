@@ -84,6 +84,7 @@ from bimdata_api_client.model.self_bcf_user import SelfBcfUser
 from bimdata_api_client.model.stage import Stage
 from bimdata_api_client.model.stage_request import StageRequest
 from bimdata_api_client.model.topic import Topic
+from bimdata_api_client.model.topic_pin import TopicPin
 from bimdata_api_client.model.topic_request import TopicRequest
 from bimdata_api_client.model.topic_status import TopicStatus
 from bimdata_api_client.model.topic_status_request import TopicStatusRequest
@@ -204,6 +205,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**get_topic_document_references**](docs/BcfApi.md#get_topic_document_references) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{guid}/document_references | Get all related documents
 *BcfApi* | [**get_topic_viewpoints**](docs/BcfApi.md#get_topic_viewpoints) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/topic-viewpoints | Retrieve all viewpoints attached to the topic
 *BcfApi* | [**get_topics**](docs/BcfApi.md#get_topics) | **GET** /bcf/2.1/projects/{projects_pk}/topics | Retrieve all topics
+*BcfApi* | [**get_topics_pins**](docs/BcfApi.md#get_topics_pins) | **GET** /bcf/2.1/projects/{projects_pk}/topics/pins | Get pins of all or many topics
 *BcfApi* | [**get_user**](docs/BcfApi.md#get_user) | **GET** /bcf/2.1/current-user | Get current user info
 *BcfApi* | [**get_versions**](docs/BcfApi.md#get_versions) | **GET** /bcf/versions | Retrieve all supported BCF versions by this API
 *BcfApi* | [**get_viewpoin_pin**](docs/BcfApi.md#get_viewpoin_pin) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid} | Retrieve a Pin
@@ -653,6 +655,7 @@ Class | Method | HTTP request | Description
  - [PerspectiveCameraRequest](docs/PerspectiveCameraRequest.md)
  - [Pin](docs/Pin.md)
  - [PinRequest](docs/PinRequest.md)
+ - [PinWithModels](docs/PinWithModels.md)
  - [Point](docs/Point.md)
  - [PointRequest](docs/PointRequest.md)
  - [PositioningPlan](docs/PositioningPlan.md)
@@ -724,6 +727,7 @@ Class | Method | HTTP request | Description
  - [TagIdRequest](docs/TagIdRequest.md)
  - [TagRequest](docs/TagRequest.md)
  - [Topic](docs/Topic.md)
+ - [TopicPin](docs/TopicPin.md)
  - [TopicRequest](docs/TopicRequest.md)
  - [TopicStatus](docs/TopicStatus.md)
  - [TopicStatusRequest](docs/TopicStatusRequest.md)

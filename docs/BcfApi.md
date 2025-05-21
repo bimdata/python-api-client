@@ -48,6 +48,7 @@ Method | HTTP request | Description
 [**get_topic_document_references**](BcfApi.md#get_topic_document_references) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{guid}/document_references | Get all related documents
 [**get_topic_viewpoints**](BcfApi.md#get_topic_viewpoints) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/topic-viewpoints | Retrieve all viewpoints attached to the topic
 [**get_topics**](BcfApi.md#get_topics) | **GET** /bcf/2.1/projects/{projects_pk}/topics | Retrieve all topics
+[**get_topics_pins**](BcfApi.md#get_topics_pins) | **GET** /bcf/2.1/projects/{projects_pk}/topics/pins | Get pins of all or many topics
 [**get_user**](BcfApi.md#get_user) | **GET** /bcf/2.1/current-user | Get current user info
 [**get_versions**](BcfApi.md#get_versions) | **GET** /bcf/versions | Retrieve all supported BCF versions by this API
 [**get_viewpoin_pin**](BcfApi.md#get_viewpoin_pin) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid} | Retrieve a Pin
@@ -5253,6 +5254,129 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[Topic]**](Topic.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_topics_pins**
+> [TopicPin] get_topics_pins(projects_pk)
+
+Get pins of all or many topics
+
+This is not a standard route. Get pins of all or many topics  Required scopes: bcf:read
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import bcf_api
+from bimdata_api_client.model.topic_pin import TopicPin
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bcf_api.BcfApi(api_client)
+    projects_pk = 1 # int | 
+    format = "format_example" # str |  (optional)
+    ifcs = [
+        1,
+    ] # [int] |  (optional)
+    models = [
+        1,
+    ] # [int] |  (optional)
+    topics = "topics_example" # str | topic guids to include, comma separated. Default = all (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Get pins of all or many topics
+        api_response = api_instance.get_topics_pins(projects_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->get_topics_pins: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get pins of all or many topics
+        api_response = api_instance.get_topics_pins(projects_pk, format=format, ifcs=ifcs, models=models, topics=topics)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->get_topics_pins: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projects_pk** | **int**|  |
+ **format** | **str**|  | [optional]
+ **ifcs** | **[int]**|  | [optional]
+ **models** | **[int]**|  | [optional]
+ **topics** | **str**| topic guids to include, comma separated. Default &#x3D; all | [optional]
+
+### Return type
+
+[**[TopicPin]**](TopicPin.md)
 
 ### Authorization
 

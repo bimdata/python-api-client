@@ -332,6 +332,13 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_get_topics_pins(self):
+        """Test case for get_topics_pins
+
+        Get pins of all or many topics  # noqa: E501
+        """
+        pass
+
     def test_get_user(self):
         """Test case for get_user
 
