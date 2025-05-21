@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.16.0 (2025-05-21)
+
+### Feature
+
+- Minor: add BCF topic/pins route (#855)
+  ([`64d6996`](https://github.com/bimdata/python-api-client/commit/64d6996251854fac39d648eb333e0de334fae378))
+
+* MINOR: add BCF topic/pins route
+
+* add topic guid filter test
+
+
 ## v10.15.0 (2025-05-16)
 
 ### Feature
