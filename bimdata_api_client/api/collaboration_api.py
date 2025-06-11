@@ -98,8 +98,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/user/invitations/{id}/accept',
@@ -150,8 +148,6 @@ class CollaborationApi(object):
                 'response_type': (VisaAttachment,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}/accept',
@@ -238,8 +234,6 @@ class CollaborationApi(object):
                 'response_type': (Document,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/tag',
@@ -313,8 +307,6 @@ class CollaborationApi(object):
                 'response_type': (UserProject,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/group/{group_pk}/member',
@@ -388,8 +380,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/invitation/{id}',
@@ -446,8 +436,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/invitation/{id}',
@@ -510,8 +498,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{id}/check-access',
@@ -562,8 +548,6 @@ class CollaborationApi(object):
                 'response_type': (CheckProjectAccess,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{id}/check-access',
@@ -622,8 +606,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id}/close',
@@ -692,8 +674,6 @@ class CollaborationApi(object):
                 'response_type': ([Classification],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/classification',
@@ -761,8 +741,6 @@ class CollaborationApi(object):
                 'response_type': (Cloud,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud',
@@ -818,8 +796,6 @@ class CollaborationApi(object):
                 'response_type': (Project,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{id}/create-demo',
@@ -872,8 +848,6 @@ class CollaborationApi(object):
                 'response_type': (Folder,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{id}/dms-tree',
@@ -941,8 +915,6 @@ class CollaborationApi(object):
                 'response_type': (Document,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document',
@@ -1086,8 +1058,6 @@ class CollaborationApi(object):
                 'response_type': (FolderWithoutChildren,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/folder',
@@ -1155,8 +1125,6 @@ class CollaborationApi(object):
                 'response_type': (Group,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/group',
@@ -1224,8 +1192,6 @@ class CollaborationApi(object):
                 'response_type': (Project,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project',
@@ -1287,8 +1253,6 @@ class CollaborationApi(object):
                 'response_type': (ProjectAccessToken,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/access-token',
@@ -1356,8 +1320,6 @@ class CollaborationApi(object):
                 'response_type': (Tag,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/tag',
@@ -1425,8 +1387,6 @@ class CollaborationApi(object):
                 'response_type': (VisaValidation,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation',
@@ -1506,8 +1466,6 @@ class CollaborationApi(object):
                 'response_type': (Visa,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa',
@@ -1580,8 +1538,6 @@ class CollaborationApi(object):
                 'response_type': (VisaComment,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment',
@@ -1660,8 +1616,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history/delete',
@@ -1724,8 +1678,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/classification/{id}',
@@ -1788,8 +1740,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{id}',
@@ -1840,8 +1790,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/user/{id}',
@@ -1898,8 +1846,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{id}',
@@ -1962,8 +1908,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/tag/{id}',
@@ -2032,8 +1976,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/folder/{id}',
@@ -2096,8 +2038,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/group/{group_pk}/member/{id}',
@@ -2166,8 +2106,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/group/{id}',
@@ -2230,8 +2168,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{id}',
@@ -2288,8 +2224,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/access-token/{token}',
@@ -2352,8 +2286,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/user/{id}',
@@ -2416,8 +2348,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/tag/{id}',
@@ -2480,8 +2410,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}',
@@ -2556,8 +2484,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id}',
@@ -2626,8 +2552,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment/{id}',
@@ -2702,8 +2626,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/user/invitations/{id}/deny',
@@ -2754,8 +2676,6 @@ class CollaborationApi(object):
                 'response_type': (VisaAttachment,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}/deny',
@@ -2842,8 +2762,6 @@ class CollaborationApi(object):
                 'response_type': (Classification,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/classification/{id}',
@@ -2908,8 +2826,6 @@ class CollaborationApi(object):
                 'response_type': ([Classification],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/classification',
@@ -2968,8 +2884,6 @@ class CollaborationApi(object):
                 'response_type': (Cloud,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{id}',
@@ -3022,8 +2936,6 @@ class CollaborationApi(object):
                 'response_type': ([CloudInvitation],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/invitation',
@@ -3076,8 +2988,6 @@ class CollaborationApi(object):
                 'response_type': (Size,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{id}/size',
@@ -3130,8 +3040,6 @@ class CollaborationApi(object):
                 'response_type': (User,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/user/{id}',
@@ -3190,8 +3098,6 @@ class CollaborationApi(object):
                 'response_type': ([User],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/user',
@@ -3264,8 +3170,6 @@ class CollaborationApi(object):
                 'response_type': ([Cloud],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud',
@@ -3311,8 +3215,6 @@ class CollaborationApi(object):
                 'response_type': (Document,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{id}',
@@ -3377,8 +3279,6 @@ class CollaborationApi(object):
                 'response_type': ([Document],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history',
@@ -3443,8 +3343,6 @@ class CollaborationApi(object):
                 'response_type': ([Document],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document',
@@ -3672,8 +3570,6 @@ class CollaborationApi(object):
                 'response_type': (FolderWithoutChildren,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/folder/{id}',
@@ -3738,8 +3634,6 @@ class CollaborationApi(object):
                 'response_type': ([Document],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/document',
@@ -3973,8 +3867,6 @@ class CollaborationApi(object):
                 'response_type': ([FolderUserProject],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/user',
@@ -4039,8 +3931,6 @@ class CollaborationApi(object):
                 'response_type': ([FolderWithoutChildren],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/folder',
@@ -4099,8 +3989,6 @@ class CollaborationApi(object):
                 'response_type': (Group,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/me/group/{id}',
@@ -4165,8 +4053,6 @@ class CollaborationApi(object):
                 'response_type': ([Group],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/me/group',
@@ -4225,8 +4111,6 @@ class CollaborationApi(object):
                 'response_type': ([LogEntry],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/logs',
@@ -4285,8 +4169,6 @@ class CollaborationApi(object):
                 'response_type': (Group,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/group/{id}',
@@ -4351,8 +4233,6 @@ class CollaborationApi(object):
                 'response_type': ([Group],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/group',
@@ -4411,8 +4291,6 @@ class CollaborationApi(object):
                 'response_type': (Project,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{id}',
@@ -4471,8 +4349,6 @@ class CollaborationApi(object):
                 'response_type': (ProjectAccessToken,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/access-token/{token}',
@@ -4537,8 +4413,6 @@ class CollaborationApi(object):
                 'response_type': ([ProjectAccessToken],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/access-token',
@@ -4597,8 +4471,6 @@ class CollaborationApi(object):
                 'response_type': ([VisaWithDocument],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/me/visa/creator',
@@ -4689,8 +4561,6 @@ class CollaborationApi(object):
                 'response_type': (Folder,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{id}/dms-tree',
@@ -4749,8 +4619,6 @@ class CollaborationApi(object):
                 'response_type': ([FolderTree],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{id}/folder-tree',
@@ -4809,8 +4677,6 @@ class CollaborationApi(object):
                 'response_type': ([ProjectInvitation],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/invitation',
@@ -4869,8 +4735,6 @@ class CollaborationApi(object):
                 'response_type': (ProjectSize,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{id}/size',
@@ -4929,8 +4793,6 @@ class CollaborationApi(object):
                 'response_type': (Folder,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{id}/tree',
@@ -4989,8 +4851,6 @@ class CollaborationApi(object):
                 'response_type': ([UserProject],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/user',
@@ -5069,8 +4929,6 @@ class CollaborationApi(object):
                 'response_type': ([VisaWithDocument],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/me/visa/validator',
@@ -5161,8 +5019,6 @@ class CollaborationApi(object):
                 'response_type': ([Project],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project',
@@ -5215,8 +5071,6 @@ class CollaborationApi(object):
                 'response_type': ([Project],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/user/projects',
@@ -5262,8 +5116,6 @@ class CollaborationApi(object):
                 'response_type': (SelfUser,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/user',
@@ -5309,8 +5161,6 @@ class CollaborationApi(object):
                 'response_type': (Tag,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/tag/{id}',
@@ -5375,8 +5225,6 @@ class CollaborationApi(object):
                 'response_type': ([Tag],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/tag',
@@ -5435,8 +5283,6 @@ class CollaborationApi(object):
                 'response_type': (UserInvitation,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/user/invitations/{id}',
@@ -5489,8 +5335,6 @@ class CollaborationApi(object):
                 'response_type': ([UserInvitation],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/user/invitations',
@@ -5536,8 +5380,6 @@ class CollaborationApi(object):
                 'response_type': (VisaValidation,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}',
@@ -5614,8 +5456,6 @@ class CollaborationApi(object):
                 'response_type': ([VisaValidation],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation',
@@ -5686,8 +5526,6 @@ class CollaborationApi(object):
                 'response_type': (Visa,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id}',
@@ -5758,8 +5596,6 @@ class CollaborationApi(object):
                 'response_type': (VisaComment,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment/{id}',
@@ -5836,8 +5672,6 @@ class CollaborationApi(object):
                 'response_type': ([VisaComment],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment',
@@ -5908,8 +5742,6 @@ class CollaborationApi(object):
                 'response_type': ([Visa],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa',
@@ -5974,8 +5806,6 @@ class CollaborationApi(object):
                 'response_type': (Project,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{id}/import_from',
@@ -6043,8 +5873,6 @@ class CollaborationApi(object):
                 'response_type': ([Group],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/group/import',
@@ -6112,8 +5940,6 @@ class CollaborationApi(object):
                 'response_type': (CloudInvitation,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/invitation',
@@ -6175,8 +6001,6 @@ class CollaborationApi(object):
                 'response_type': (ProjectInvitation,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/invitation',
@@ -6244,8 +6068,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{id}/leave',
@@ -6302,8 +6124,6 @@ class CollaborationApi(object):
                 'response_type': (Document,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history/{id}/leave',
@@ -6374,8 +6194,6 @@ class CollaborationApi(object):
                 'response_type': (Document,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history/{id}/head-version',
@@ -6446,8 +6264,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id}/pause',
@@ -6516,8 +6332,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}/reset',
@@ -6592,8 +6406,6 @@ class CollaborationApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id}/resume',
@@ -6662,8 +6474,6 @@ class CollaborationApi(object):
                 'response_type': (Classification,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/classification/{id}',
@@ -6736,8 +6546,6 @@ class CollaborationApi(object):
                 'response_type': (Cloud,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{id}',
@@ -6798,8 +6606,6 @@ class CollaborationApi(object):
                 'response_type': (User,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/user/{id}',
@@ -6866,8 +6672,6 @@ class CollaborationApi(object):
                 'response_type': (Document,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{id}',
@@ -6940,8 +6744,6 @@ class CollaborationApi(object):
                 'response_type': (FolderWithoutChildren,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/folder/{id}',
@@ -7014,8 +6816,6 @@ class CollaborationApi(object):
                 'response_type': (GroupFolder,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/group/{id}',
@@ -7094,8 +6894,6 @@ class CollaborationApi(object):
                 'response_type': (Group,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/group/{id}',
@@ -7168,8 +6966,6 @@ class CollaborationApi(object):
                 'response_type': (DocumentPreviewFile,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{id}/preview-file',
@@ -7242,8 +7038,6 @@ class CollaborationApi(object):
                 'response_type': (Project,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{id}',
@@ -7310,8 +7104,6 @@ class CollaborationApi(object):
                 'response_type': (UserProject,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/user/{id}',
@@ -7384,8 +7176,6 @@ class CollaborationApi(object):
                 'response_type': (Tag,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/tag/{id}',
@@ -7458,8 +7248,6 @@ class CollaborationApi(object):
                 'response_type': (VisaValidation,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}',
@@ -7544,8 +7332,6 @@ class CollaborationApi(object):
                 'response_type': (Visa,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id}',
@@ -7624,8 +7410,6 @@ class CollaborationApi(object):
                 'response_type': (VisaComment,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment/{id}',
@@ -8815,7 +8599,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'DXF', 'DWG', 'POINT_CLOUD', 'OBJ', 'IFC', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'IFC', 'POINT_CLOUD', 'DXF', 'DWG', 'OBJ', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

@@ -145,6 +145,7 @@ Method | HTTP request | Description
 [**update_element**](ModelApi.md#update_element) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Update some fields of an element
 [**update_element_property_set_property**](ModelApi.md#update_element_property_set_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Update a property from an element
 [**update_layer**](ModelApi.md#update_layer) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Update some fields of a layer
+[**update_mask2_d**](ModelApi.md#update_mask2_d) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Partial update of a 2D mask for the model
 [**update_model**](ModelApi.md#update_model) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{id} | Update some fields of a model
 [**update_model_files**](ModelApi.md#update_model_files) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/files | Update models file (gltf, svg, structure, etc)
 [**update_model_property**](ModelApi.md#update_model_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id} | Update some fields of a Property
@@ -174,8 +175,6 @@ Model errors are warnings and errors during model process. They alert about miss
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -201,18 +200,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -270,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -301,8 +288,6 @@ Add a space to a zone. The IFC file will not be updated. The created space will 
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -328,18 +313,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -386,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -417,8 +390,6 @@ Delete relation between filtered classifications (eg. /classifications?name=unte
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -443,18 +414,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -507,7 +466,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -538,8 +497,6 @@ Delete many Property of a model
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -563,18 +520,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -617,7 +562,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -648,8 +593,6 @@ Delete many PropertyDefinitions of a model
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -673,18 +616,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -727,7 +658,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -758,8 +689,6 @@ Delete many Units of a model
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -783,18 +712,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -837,7 +754,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -868,8 +785,6 @@ Delete many PropertySet of a model
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -893,18 +808,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -947,7 +850,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -978,8 +881,6 @@ Update many elements at once (only changing fields may be defined)
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -1005,18 +906,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -1128,7 +1017,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -1159,8 +1048,6 @@ Update some fields of many properties of a model
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -1186,18 +1073,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -1250,7 +1125,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -1281,8 +1156,6 @@ Remove many classifications from an element
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -1306,18 +1179,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -1362,7 +1223,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -1393,8 +1254,6 @@ Remove many documents from an element
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -1418,18 +1277,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -1474,7 +1321,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -1505,8 +1352,6 @@ Remove the classifications from all elements
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -1530,18 +1375,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -1586,7 +1419,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -1617,8 +1450,6 @@ Update many elements at once (all field must be defined)
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -1644,18 +1475,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -1767,7 +1586,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -1798,8 +1617,6 @@ Update all fields of many properties of a model
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -1825,18 +1642,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -1889,7 +1694,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -1920,8 +1725,6 @@ DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, m
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -1947,18 +1750,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -2012,7 +1803,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -2043,8 +1834,6 @@ Create a building of a model.  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -2070,18 +1859,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -2125,7 +1902,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -2156,8 +1933,6 @@ Create a relation between a 2d model and a building. The model type must be one 
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -2183,18 +1958,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -2240,7 +2003,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -2271,8 +2034,6 @@ Create association between existing classification and existing element  Require
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -2297,18 +2058,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -2354,7 +2103,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -2386,8 +2135,6 @@ Create one or many classifications to an element
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -2413,18 +2160,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -2474,7 +2209,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -2505,8 +2240,6 @@ Create a drawing in the model  Required scopes: model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -2532,18 +2265,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -2587,7 +2308,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -2618,8 +2339,6 @@ Create an element in the model
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -2645,18 +2364,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -2768,7 +2475,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -2799,8 +2506,6 @@ Create a PropertySets that will be automatically linked to the element  Required
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -2826,18 +2531,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -2906,7 +2599,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -2937,8 +2630,6 @@ Create a property to a PropertySet  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -2964,18 +2655,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -3030,7 +2709,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -3061,8 +2740,6 @@ Create a Definition to a Property  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -3088,18 +2765,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -3162,7 +2827,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -3193,8 +2858,6 @@ Create a Unit to a Definition  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -3220,18 +2883,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -3305,7 +2956,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -3336,8 +2987,6 @@ The IFC file will not be updated. The created layer will be accessible over the 
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -3363,18 +3012,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -3423,7 +3060,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -3454,8 +3091,6 @@ Create or update a 2D mask for the model. Only available for PDF, JPEG and PNG m
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -3482,18 +3117,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 
@@ -3513,6 +3136,10 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 3.14,
             ],
         ],
+        grayscale=True,
+        opacity=0,
+        brightness=3.14,
+        contrast=3.14,
     ) # Mask2DRequest | 
 
     # example passing only required values which don't have defaults set
@@ -3540,7 +3167,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -3572,8 +3199,6 @@ Create an empty 3D Model to be used in BIMData services  Required scopes: ifc:wr
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -3599,18 +3224,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -3652,7 +3265,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -3683,8 +3296,6 @@ Make a PDF or Image file a Model to be used in BIMData services. If a model alre
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -3710,18 +3321,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -3763,7 +3362,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -3794,8 +3393,6 @@ Create a PropertyDefinition on the model
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -3821,18 +3418,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -3882,7 +3467,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -3913,8 +3498,6 @@ Create a Unit on a model
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -3940,18 +3523,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -4019,7 +3590,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -4050,8 +3621,6 @@ Create a multi page model  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -4077,18 +3646,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -4137,7 +3694,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -4168,8 +3725,6 @@ Create a photosphere model to be used in BIMData services  Required scopes: ifc:
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -4195,18 +3750,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -4248,7 +3791,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -4279,8 +3822,6 @@ Create an empty Photosphere Building Model  Required scopes: ifc:write, model:wr
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -4306,18 +3847,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -4359,7 +3888,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -4390,8 +3919,6 @@ Create one or many PropertySet
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -4417,18 +3944,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -4488,7 +4003,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -4519,8 +4034,6 @@ Create association between PropertySet and element  Required scopes: ifc:write, 
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -4545,18 +4058,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -4602,7 +4103,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -4633,8 +4134,6 @@ Create many elements in an optimized format to reduce JSON size and avoid reduda
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -4659,18 +4158,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -4794,7 +4281,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -4825,8 +4312,6 @@ Create a space in the model
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -4852,18 +4337,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -4918,7 +4391,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -4949,8 +4422,6 @@ Create a storey of a model.  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -4976,18 +4447,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -5031,7 +4490,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -5062,8 +4521,6 @@ Create a relation between a 2d model and a storey. The model type must be one of
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -5089,18 +4546,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -5146,7 +4591,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -5177,8 +4622,6 @@ The IFC file will not be updated. The created system will be accessible over the
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -5204,18 +4647,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -5265,7 +4696,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -5296,8 +4727,6 @@ This route is internaly used by BIMData, you probably don't want to use it  Requ
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -5321,18 +4750,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -5371,7 +4788,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -5402,8 +4819,6 @@ This route does not accept JSON, only files as x-www-form-urlencoded  Required s
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -5428,18 +4843,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -5496,7 +4899,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -5527,8 +4930,6 @@ Create a zone in the model
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -5554,18 +4955,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -5668,7 +5057,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -5699,8 +5088,6 @@ The IFC file will not be updated. The created space will be accessible over the 
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -5726,18 +5113,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -5793,7 +5168,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -5824,8 +5199,6 @@ DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, m
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -5849,18 +5222,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -5901,7 +5262,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -5932,8 +5293,6 @@ Delete a building of a model  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -5957,18 +5316,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -6009,7 +5356,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -6040,8 +5387,6 @@ Delete the relation between a 2d model and a building  Required scopes: ifc:writ
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -6065,18 +5410,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -6119,7 +5452,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -6150,8 +5483,6 @@ Delete a drawing of a model  Required scopes: model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -6175,18 +5506,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -6227,7 +5546,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -6258,8 +5577,6 @@ The IFC file will not be updated. The remaining elements are available in API an
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -6283,18 +5600,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -6335,7 +5640,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -6366,8 +5671,6 @@ The IFC file will not be updated. The remaining layers are available in API and 
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -6391,18 +5694,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -6443,7 +5734,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -6474,8 +5765,6 @@ Delete the 2D mask for the model.
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -6499,18 +5788,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -6549,7 +5826,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -6580,8 +5857,6 @@ It will also delete the related document  Required scopes: ifc:write, model:writ
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -6605,18 +5880,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -6655,7 +5918,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -6686,8 +5949,6 @@ Delete a Property of a model  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -6711,18 +5972,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -6763,7 +6012,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -6794,8 +6043,6 @@ Delete a PropertyDefinitions of a model  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -6819,18 +6066,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -6871,7 +6106,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -6902,8 +6137,6 @@ Delete a Unit of a model  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -6927,18 +6160,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -6979,7 +6200,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -7010,8 +6231,6 @@ Delete the Model without deleting the related document  Required scopes: ifc:wri
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -7035,18 +6254,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -7085,7 +6292,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -7116,8 +6323,6 @@ Delete a PropertySet of a model  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -7141,18 +6346,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -7193,7 +6386,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -7224,8 +6417,6 @@ It will not delete related zones. The IFC file will not be updated. The remainin
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -7249,18 +6440,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -7301,7 +6480,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -7332,8 +6511,6 @@ Delete a storey of a model  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -7357,18 +6534,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -7409,7 +6574,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -7440,8 +6605,6 @@ Delete the relation between a 2d model and a storey  Required scopes: ifc:write,
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -7465,18 +6628,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -7519,7 +6670,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -7550,8 +6701,6 @@ The IFC file will not be updated. The remaining systems are available in API and
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -7575,18 +6724,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -7627,7 +6764,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -7658,8 +6795,6 @@ The IFC file will not be updated. The remaining zones are available in API and w
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -7683,18 +6818,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -7735,7 +6858,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -7766,8 +6889,6 @@ Delete the relation between a space and a zone. The IFC file will not be updated
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -7791,18 +6912,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -7845,7 +6954,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -7876,8 +6985,6 @@ Only works for IFC files. Export IFC as requested in parameters. When the export
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -7902,18 +7009,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -7967,7 +7062,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -7998,8 +7093,6 @@ Update all fields of an element. The IFC file will not be updated. The created e
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -8025,18 +7118,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -8133,7 +7214,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -8164,8 +7245,6 @@ DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, m
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -8190,18 +7269,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -8243,7 +7310,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -8273,8 +7340,6 @@ DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, m
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -8299,18 +7364,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -8350,7 +7403,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -8379,8 +7432,6 @@ Retrieve a building of a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -8405,18 +7456,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -8458,7 +7497,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -8488,8 +7527,6 @@ Retrieve the postioning of the plan in the building  Required scopes: ifc:read, 
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -8514,18 +7551,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -8569,7 +7594,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -8599,8 +7624,6 @@ Retrieve all buildings of a model.  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -8625,18 +7648,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -8676,7 +7687,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -8705,8 +7716,6 @@ Retrieve all classifications of an element  Required scopes: ifc:read, model:rea
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -8731,18 +7740,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -8784,7 +7781,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -8813,8 +7810,6 @@ Retrieve all documents of an element  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -8839,18 +7834,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -8892,7 +7875,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -8921,8 +7904,6 @@ Retrieve a drawing of a model  Required scopes: model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -8947,18 +7928,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -9000,7 +7969,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -9030,8 +7999,6 @@ Retrieve all drawings of a model.  Required scopes: model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -9056,18 +8023,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -9107,7 +8062,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -9136,8 +8091,6 @@ Retrieve an element of a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -9162,18 +8115,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -9215,7 +8156,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -9245,8 +8186,6 @@ Retrieve all documents linked to any element with the list of uuids  Required sc
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -9271,18 +8210,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -9337,7 +8264,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -9366,8 +8293,6 @@ Retrieve a PropertySet of an element  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -9392,18 +8317,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -9447,7 +8360,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -9477,8 +8390,6 @@ Retrieve all Properties of a PropertySet  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -9503,18 +8414,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -9558,7 +8457,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -9587,8 +8486,6 @@ Retrieve a Property of a PropertySet  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -9613,18 +8510,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -9670,7 +8555,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -9700,8 +8585,6 @@ Retrieve a Definition of a Property  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -9726,18 +8609,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -9785,7 +8656,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -9815,8 +8686,6 @@ Retrieve a Unit of a Definition  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -9841,18 +8710,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -9902,7 +8759,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -9932,8 +8789,6 @@ Retrieve all Units of a Definition  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -9958,18 +8813,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -10017,7 +8860,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -10046,8 +8889,6 @@ Retrieve all Definitions of a PropertySet  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -10072,18 +8913,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -10129,7 +8958,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -10158,8 +8987,6 @@ Retrieve all PropertySets of an element  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -10184,18 +9011,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -10237,7 +9052,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -10266,8 +9081,6 @@ Retrieve all elements of a model. If not filtered, the json may be very large. T
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -10292,18 +9105,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -10358,7 +9159,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -10387,8 +9188,6 @@ Retrieve all elements with the classification  Required scopes: ifc:read, model:
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -10413,18 +9212,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -10466,7 +9253,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -10495,8 +9282,6 @@ Retrieve a layer of a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -10521,18 +9306,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -10574,7 +9347,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -10604,8 +9377,6 @@ Retrieve all layers of a model.  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -10630,18 +9401,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -10681,7 +9440,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -10710,8 +9469,6 @@ Retrieve a material of a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -10736,18 +9493,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -10791,7 +9536,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -10821,8 +9566,6 @@ Retrieve all materials of a model.  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -10847,18 +9590,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -10900,7 +9631,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -10929,8 +9660,6 @@ Retrieve one model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -10955,18 +9684,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -11006,7 +9723,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -11036,8 +9753,6 @@ Retrieve all classifications in a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -11062,18 +9777,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -11113,7 +9816,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -11142,8 +9845,6 @@ Retrieve a material of a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -11168,18 +9869,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -11221,7 +9910,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -11251,8 +9940,6 @@ Retrieve all materials of a model.  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -11277,18 +9964,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -11328,7 +10003,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -11357,8 +10032,6 @@ Retrieve all PropertySets of a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -11383,18 +10056,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -11434,7 +10095,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -11463,8 +10124,6 @@ Retrieve a Property of a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -11489,18 +10148,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -11542,7 +10189,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -11572,8 +10219,6 @@ Retrieve a PropertyDefinition of a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -11598,18 +10243,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -11651,7 +10284,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -11681,8 +10314,6 @@ Retrieve all PropertyDefinitions of a model  Required scopes: ifc:read, model:re
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -11707,18 +10338,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -11758,7 +10377,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -11787,8 +10406,6 @@ Retrieve a Unit of a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -11813,18 +10430,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -11866,7 +10471,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -11896,8 +10501,6 @@ Retrieve all Units of a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -11922,18 +10525,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -11973,7 +10564,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -12002,8 +10593,6 @@ Retrieve all models. The field `type` allows you to discriminate which kind of m
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -12028,18 +10617,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -12096,7 +10673,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -12125,8 +10702,6 @@ Retrieve a processor handler  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -12151,18 +10726,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -12204,7 +10767,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -12234,8 +10797,6 @@ Get all processor handlers  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -12260,18 +10821,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -12311,7 +10860,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -12340,8 +10889,6 @@ Retrieve a PropertySet of a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -12366,18 +10913,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -12419,7 +10954,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -12449,8 +10984,6 @@ Retrieve all PropertySets of a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -12475,18 +11008,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -12526,7 +11047,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -12555,8 +11076,6 @@ Instead of a nested representation, this route respond with a flat structure and
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -12581,18 +11100,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -12647,7 +11154,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -12677,8 +11184,6 @@ Retrieve an element of a model with a simple value representation  Required scop
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -12703,18 +11208,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -12756,7 +11249,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -12786,8 +11279,6 @@ Retrieve all elements of a model with a simple value representation  Required sc
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -12812,18 +11303,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -12878,7 +11357,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -12908,8 +11387,6 @@ Retrieve one space of the model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -12934,18 +11411,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -12987,7 +11452,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -13017,8 +11482,6 @@ Retrieve all spaces of the model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -13043,18 +11506,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -13094,7 +11545,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -13123,8 +11574,6 @@ Retrieve a storey of a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -13149,18 +11598,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -13202,7 +11639,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -13232,8 +11669,6 @@ Retrieve the postioning of the plan in the storey  Required scopes: ifc:read, mo
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -13258,18 +11693,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -13313,7 +11736,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -13343,8 +11766,6 @@ Retrieve all storeys of a model.  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -13369,18 +11790,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -13420,7 +11829,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -13449,8 +11858,6 @@ Retrieve a system of a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -13475,18 +11882,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -13528,7 +11923,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -13558,8 +11953,6 @@ Retrieve all systems of a model.  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -13584,18 +11977,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -13635,7 +12016,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -13664,8 +12045,6 @@ This is only availble if the model is a POINT_CLOUD  Required scopes: ifc:read, 
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -13689,18 +12068,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -13749,7 +12116,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -13779,8 +12146,6 @@ Retrieve one zone of a model  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -13805,18 +12170,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -13858,7 +12211,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -13888,8 +12241,6 @@ Retrieve one space of a zone  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -13914,18 +12265,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -13969,7 +12308,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -13999,8 +12338,6 @@ Retrieve all spaces of a zone  Required scopes: ifc:read, model:read
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -14025,18 +12362,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -14078,7 +12403,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -14107,8 +12432,6 @@ Retrieve parent zones of a model. Children zones we'll be in the 'zones' field  
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -14133,18 +12456,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -14195,7 +12506,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -14224,8 +12535,6 @@ Link one or many documents to an element
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -14250,18 +12559,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -14307,7 +12604,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -14338,8 +12635,6 @@ List all associations between classifications and elements  Required scopes: ifc
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -14364,18 +12659,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -14415,7 +12698,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -14444,8 +12727,6 @@ Only works for IFC files. Merge IFC files. The merged IFC file will be put in th
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -14470,18 +12751,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -14526,7 +12795,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -14557,8 +12826,6 @@ Only works for IFC files. Optimize the IFC. A new optimized IFC file will be put
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -14583,18 +12850,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -14645,7 +12900,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -14676,8 +12931,6 @@ Remove all property sets from element. Property Sets will not be deleted, just d
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -14701,18 +12954,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -14753,7 +12994,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -14784,8 +13025,6 @@ The classification will not be deleted  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -14809,18 +13048,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -14863,7 +13090,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -14894,8 +13121,6 @@ The document will not be deleted  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -14919,18 +13144,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -14973,7 +13186,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -15004,8 +13217,6 @@ Delete the relation between the element and the property set. Does not delete an
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -15029,18 +13240,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -15083,7 +13282,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -15114,8 +13313,6 @@ Remove a property from a PropertySet  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -15139,18 +13336,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -15195,7 +13380,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -15226,8 +13411,6 @@ Delete a Definition to a Property  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -15251,18 +13434,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -15309,7 +13480,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -15340,8 +13511,6 @@ Remove a Unit from a Definition  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -15365,18 +13534,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -15425,7 +13582,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -15456,8 +13613,6 @@ Remove the classification from all elements. No element nor classification will 
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -15481,18 +13636,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -15535,7 +13678,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -15566,8 +13709,6 @@ Reprocess the model. All data that are not in the original model files will be l
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -15591,18 +13732,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -15641,7 +13770,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -15672,8 +13801,6 @@ DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, m
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -15699,18 +13826,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -15766,7 +13881,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -15797,8 +13912,6 @@ Update some fields of a building  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -15824,18 +13937,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -15891,7 +13992,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -15922,8 +14023,6 @@ Update the postioning of the plan in the building  Required scopes: ifc:write, m
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -15949,18 +14048,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -16021,7 +14108,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -16052,8 +14139,6 @@ Update some fields of a drawing  Required scopes: model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -16079,18 +14164,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -16145,7 +14218,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -16176,8 +14249,6 @@ Update some fields of an element. The IFC file will not be updated. The created 
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -16203,18 +14274,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -16320,7 +14379,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -16351,8 +14410,6 @@ Update a property value from an element. If the element is the only one to have 
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -16378,18 +14435,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -16455,7 +14500,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -16486,8 +14531,6 @@ Update some fields of a layer. The IFC file will not be updated. The created lay
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -16513,18 +14556,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -16584,7 +14615,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -16605,6 +14636,122 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **update_mask2_d**
+> Mask2D update_mask2_d(cloud_pk, id, project_pk)
+
+Partial update of a 2D mask for the model
+
+Partial update of a 2D mask for the model. Only available for PDF, JPEG and PNG models
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import model_api
+from bimdata_api_client.model.patched_mask2_d_request import PatchedMask2DRequest
+from bimdata_api_client.model.mask2_d import Mask2D
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | 
+    id = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | 
+    patched_mask2_d_request = PatchedMask2DRequest(
+        crop_path=[
+            [
+                3.14,
+            ],
+        ],
+        grayscale=True,
+        opacity=0,
+        brightness=3.14,
+        contrast=3.14,
+    ) # PatchedMask2DRequest |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Partial update of a 2D mask for the model
+        api_response = api_instance.update_mask2_d(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->update_mask2_d: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Partial update of a 2D mask for the model
+        api_response = api_instance.update_mask2_d(cloud_pk, id, project_pk, patched_mask2_d_request=patched_mask2_d_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->update_mask2_d: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**|  |
+ **id** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**|  |
+ **patched_mask2_d_request** | [**PatchedMask2DRequest**](PatchedMask2DRequest.md)|  | [optional]
+
+### Return type
+
+[**Mask2D**](Mask2D.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | Bad request, model type not supported. |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **update_model**
 > Model update_model(cloud_pk, id, project_pk)
 
@@ -16615,8 +14762,6 @@ Update some fields of a model  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -16642,18 +14787,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -16720,7 +14853,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -16751,8 +14884,6 @@ This route does not accept JSON, only files as x-www-form-urlencoded  Required s
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -16777,18 +14908,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -16851,7 +14970,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -16882,8 +15001,6 @@ Update some fields of a Property  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -16909,18 +15026,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -16982,7 +15087,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -17013,8 +15118,6 @@ Update some fields of many PropertyDefinitions of a model  Required scopes: ifc:
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -17040,18 +15143,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -17110,7 +15201,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -17141,8 +15232,6 @@ Update model transform (translate, scale, rotate and opacity)  Required scopes: 
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -17168,18 +15257,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -17237,7 +15314,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -17268,8 +15345,6 @@ Update some fields of a Unit of a model  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -17295,18 +15370,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -17383,7 +15446,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -17414,8 +15477,6 @@ Update order of all plan of a building  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -17440,18 +15501,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -17497,7 +15546,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -17528,8 +15577,6 @@ Update order of all plan of a storey  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -17554,18 +15601,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -17611,7 +15646,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -17642,8 +15677,6 @@ Update order of all storey of a model  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -17668,18 +15701,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -17723,7 +15744,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -17754,8 +15775,6 @@ Update the status of a processor handler  Required scopes: ifc:write, model:writ
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -17781,18 +15800,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -17848,7 +15855,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -17879,8 +15886,6 @@ Update some fields of a PropertySet  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -17906,18 +15911,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -17986,7 +15979,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -18017,8 +16010,6 @@ Update some fields of a space. The IFC file will not be updated. The created spa
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -18044,18 +16035,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -18119,7 +16098,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -18150,8 +16129,6 @@ Update some fields of a storey  Required scopes: ifc:write, model:write
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -18177,18 +16154,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -18244,7 +16209,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -18275,8 +16240,6 @@ Update the postioning of the plan in the storey  Required scopes: ifc:write, mod
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -18302,18 +16265,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -18374,7 +16325,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -18405,8 +16356,6 @@ Update some fields of a system. The IFC file will not be updated. The created sy
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -18432,18 +16381,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -18504,7 +16441,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -18535,8 +16472,6 @@ Update some fields of a zone. The IFC file will not be updated. The created zone
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -18562,18 +16497,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -18674,7 +16597,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -18705,8 +16628,6 @@ Update some fields of a space. The IFC file will not be updated. The created spa
 ### Example
 
 * Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
 * Api Key Authentication (Bearer):
 
 ```python
@@ -18732,18 +16653,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
@@ -18810,7 +16719,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 

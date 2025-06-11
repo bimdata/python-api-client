@@ -1011,6 +1011,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_update_mask2_d(self):
+        """Test case for update_mask2_d
+
+        Partial update of a 2D mask for the model  # noqa: E501
+        """
+        pass
+
     def test_update_model(self):
         """Test case for update_model
 

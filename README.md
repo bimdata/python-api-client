@@ -111,18 +111,6 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
 # Configure API key authorization: Bearer
 configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 
@@ -473,6 +461,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**update_element**](docs/ModelApi.md#update_element) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Update some fields of an element
 *ModelApi* | [**update_element_property_set_property**](docs/ModelApi.md#update_element_property_set_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Update a property from an element
 *ModelApi* | [**update_layer**](docs/ModelApi.md#update_layer) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Update some fields of a layer
+*ModelApi* | [**update_mask2_d**](docs/ModelApi.md#update_mask2_d) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Partial update of a 2D mask for the model
 *ModelApi* | [**update_model**](docs/ModelApi.md#update_model) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{id} | Update some fields of a model
 *ModelApi* | [**update_model_files**](docs/ModelApi.md#update_model_files) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/files | Update models file (gltf, svg, structure, etc)
 *ModelApi* | [**update_model_property**](docs/ModelApi.md#update_model_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id} | Update some fields of a Property
@@ -623,6 +612,7 @@ Class | Method | HTTP request | Description
  - [PatchedIfcAccessTokenRequest](docs/PatchedIfcAccessTokenRequest.md)
  - [PatchedLabelRequest](docs/PatchedLabelRequest.md)
  - [PatchedLayerRequest](docs/PatchedLayerRequest.md)
+ - [PatchedMask2DRequest](docs/PatchedMask2DRequest.md)
  - [PatchedModelRequest](docs/PatchedModelRequest.md)
  - [PatchedPinRequest](docs/PatchedPinRequest.md)
  - [PatchedPositioningPlanRequest](docs/PatchedPositioningPlanRequest.md)
@@ -781,22 +771,6 @@ Class | Method | HTTP request | Description
 - **Type**: API key
 - **API key parameter name**: Authorization
 - **Location**: HTTP header
-
-
-## BIMData_Connect
-
-- **Type**: OAuth
-- **Flow**: implicit
-- **Authorization URL**: http://fakeurl.bimdata.example/realms/bimdata/protocol/openid-connect/auth
-- **Scopes**: N/A
-
-
-## BIMData_Connect
-
-- **Type**: OAuth
-- **Flow**: application
-- **Authorization URL**: 
-- **Scopes**: N/A
 
 
 ## Bearer

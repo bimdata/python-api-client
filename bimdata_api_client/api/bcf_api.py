@@ -82,8 +82,6 @@ class BcfApi(object):
                 'response_type': (Comment,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments',
@@ -150,8 +148,6 @@ class BcfApi(object):
                 'response_type': (Label,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/extension/label',
@@ -213,8 +209,6 @@ class BcfApi(object):
                 'response_type': (Priority,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/extension/priority',
@@ -276,8 +270,6 @@ class BcfApi(object):
                 'response_type': (Stage,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/extension/stage',
@@ -339,8 +331,6 @@ class BcfApi(object):
                 'response_type': (TopicStatus,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/extension/status',
@@ -402,8 +392,6 @@ class BcfApi(object):
                 'response_type': (TopicType,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/extension/type',
@@ -465,8 +453,6 @@ class BcfApi(object):
                 'response_type': (FullTopic,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/full-topic',
@@ -538,8 +524,6 @@ class BcfApi(object):
                 'response_type': (Pin,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin',
@@ -613,8 +597,6 @@ class BcfApi(object):
                 'response_type': (Topic,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics',
@@ -676,8 +658,6 @@ class BcfApi(object):
                 'response_type': (Viewpoint,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints',
@@ -754,8 +734,6 @@ class BcfApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid}',
@@ -818,8 +796,6 @@ class BcfApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/extension/label/{id}',
@@ -876,8 +852,6 @@ class BcfApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/extension/priority/{id}',
@@ -934,8 +908,6 @@ class BcfApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/extension/stage/{id}',
@@ -992,8 +964,6 @@ class BcfApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/extension/status/{id}',
@@ -1050,8 +1020,6 @@ class BcfApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/extension/type/{id}',
@@ -1108,8 +1076,6 @@ class BcfApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid}',
@@ -1178,8 +1144,6 @@ class BcfApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{guid}',
@@ -1236,8 +1200,6 @@ class BcfApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}',
@@ -1310,8 +1272,6 @@ class BcfApi(object):
                 'response_type': (file_type,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{id}/export',
@@ -1374,8 +1334,6 @@ class BcfApi(object):
                 'response_type': (file_type,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{id}/export-xlsx',
@@ -1449,8 +1407,6 @@ class BcfApi(object):
                 'response_type': (BcfProject,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{id}',
@@ -1512,8 +1468,6 @@ class BcfApi(object):
                 'response_type': (Comment,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid}',
@@ -1586,8 +1540,6 @@ class BcfApi(object):
                 'response_type': (FullTopic,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/full-topic/{guid}',
@@ -1665,8 +1617,6 @@ class BcfApi(object):
                 'response_type': (Pin,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid}',
@@ -1746,8 +1696,6 @@ class BcfApi(object):
                 'response_type': (Topic,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{guid}',
@@ -1815,8 +1763,6 @@ class BcfApi(object):
                 'response_type': ([Auth],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/auth',
@@ -1862,8 +1808,6 @@ class BcfApi(object):
                 'response_type': (BcfProject,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{id}',
@@ -1916,8 +1860,6 @@ class BcfApi(object):
                 'response_type': ([BcfProject],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects',
@@ -1963,8 +1905,6 @@ class BcfApi(object):
                 'response_type': (ColoringDefinition,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/coloring',
@@ -2029,8 +1969,6 @@ class BcfApi(object):
                 'response_type': (Comment,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid}',
@@ -2095,8 +2033,6 @@ class BcfApi(object):
                 'response_type': ([Comment],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments',
@@ -2165,8 +2101,6 @@ class BcfApi(object):
                 'response_type': (DetailedExtensions,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{id}/detailed-extensions',
@@ -2219,8 +2153,6 @@ class BcfApi(object):
                 'response_type': (Extensions,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{id}/extensions',
@@ -2273,8 +2205,6 @@ class BcfApi(object):
                 'response_type': (FullTopic,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/full-topic/{guid}',
@@ -2343,8 +2273,6 @@ class BcfApi(object):
                 'response_type': ([FullTopic],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/full-topic',
@@ -2434,8 +2362,6 @@ class BcfApi(object):
                 'response_type': ([Pin],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin',
@@ -2500,8 +2426,6 @@ class BcfApi(object):
                 'response_type': ([str],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{guid}/related_topics',
@@ -2577,8 +2501,6 @@ class BcfApi(object):
                 'response_type': (SelectionDefinition,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/selection',
@@ -2643,8 +2565,6 @@ class BcfApi(object):
                 'response_type': (file_type,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/snapshot',
@@ -2709,8 +2629,6 @@ class BcfApi(object):
                 'response_type': (Topic,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{guid}',
@@ -2769,8 +2687,6 @@ class BcfApi(object):
                 'response_type': ([str],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{guid}/document_references',
@@ -2846,8 +2762,6 @@ class BcfApi(object):
                 'response_type': ([Viewpoint],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/topic-viewpoints',
@@ -2916,8 +2830,6 @@ class BcfApi(object):
                 'response_type': ([Topic],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics',
@@ -2997,8 +2909,6 @@ class BcfApi(object):
                 'response_type': ([TopicPin],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/pins',
@@ -3073,8 +2983,6 @@ class BcfApi(object):
                 'response_type': (SelfBcfUser,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/current-user',
@@ -3120,8 +3028,6 @@ class BcfApi(object):
                 'response_type': ([Version],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/versions',
@@ -3167,8 +3073,6 @@ class BcfApi(object):
                 'response_type': (Pin,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid}',
@@ -3239,8 +3143,6 @@ class BcfApi(object):
                 'response_type': (Viewpoint,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}',
@@ -3315,8 +3217,6 @@ class BcfApi(object):
                 'response_type': ([Viewpoint],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints',
@@ -3385,8 +3285,6 @@ class BcfApi(object):
                 'response_type': (VisibilityDefinition,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/visibility',
@@ -3451,8 +3349,6 @@ class BcfApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{id}/import',
@@ -3517,8 +3413,6 @@ class BcfApi(object):
                 'response_type': (BcfProject,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{id}',
@@ -3579,8 +3473,6 @@ class BcfApi(object):
                 'response_type': (Comment,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid}',
@@ -3653,8 +3545,6 @@ class BcfApi(object):
                 'response_type': (Label,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/extension/label/{id}',
@@ -3721,8 +3611,6 @@ class BcfApi(object):
                 'response_type': (Priority,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/extension/priority/{id}',
@@ -3789,8 +3677,6 @@ class BcfApi(object):
                 'response_type': (Stage,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/extension/stage/{id}',
@@ -3857,8 +3743,6 @@ class BcfApi(object):
                 'response_type': (TopicStatus,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/extension/status/{id}',
@@ -3925,8 +3809,6 @@ class BcfApi(object):
                 'response_type': (TopicType,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/extension/type/{id}',
@@ -3993,8 +3875,6 @@ class BcfApi(object):
                 'response_type': (FullTopic,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/full-topic/{guid}',
@@ -4071,8 +3951,6 @@ class BcfApi(object):
                 'response_type': (Pin,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid}',
@@ -4151,8 +4029,6 @@ class BcfApi(object):
                 'response_type': (Topic,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{guid}',
@@ -4219,8 +4095,6 @@ class BcfApi(object):
                 'response_type': (Viewpoint,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}',

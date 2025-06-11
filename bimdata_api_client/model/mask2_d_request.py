@@ -59,6 +59,10 @@ class Mask2DRequest(ModelNormal):
     }
 
     validations = {
+        ('opacity',): {
+            'inclusive_maximum': 1,
+            'inclusive_minimum': 0,
+        },
     }
 
     @cached_property
@@ -83,6 +87,10 @@ class Mask2DRequest(ModelNormal):
         """
         return {
             'crop_path': ([[float]],),  # noqa: E501
+            'grayscale': (bool,),  # noqa: E501
+            'opacity': (float, none_type,),  # noqa: E501
+            'brightness': (float, none_type,),  # noqa: E501
+            'contrast': (float, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -92,6 +100,10 @@ class Mask2DRequest(ModelNormal):
 
     attribute_map = {
         'crop_path': 'crop_path',  # noqa: E501
+        'grayscale': 'grayscale',  # noqa: E501
+        'opacity': 'opacity',  # noqa: E501
+        'brightness': 'brightness',  # noqa: E501
+        'contrast': 'contrast',  # noqa: E501
     }
 
     read_only_vars = {
@@ -138,6 +150,10 @@ class Mask2DRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            grayscale (bool): Whether the mask is grayscale. [optional]  # noqa: E501
+            opacity (float, none_type): Opacity of the mask (0-1). [optional]  # noqa: E501
+            brightness (float, none_type): Brightness of the mask. [optional]  # noqa: E501
+            contrast (float, none_type): Contrast of the mask. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -223,6 +239,10 @@ class Mask2DRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            grayscale (bool): Whether the mask is grayscale. [optional]  # noqa: E501
+            opacity (float, none_type): Opacity of the mask (0-1). [optional]  # noqa: E501
+            brightness (float, none_type): Brightness of the mask. [optional]  # noqa: E501
+            contrast (float, none_type): Contrast of the mask. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

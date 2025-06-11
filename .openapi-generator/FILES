@@ -125,6 +125,7 @@ bimdata_api_client/model/patched_group_request.py
 bimdata_api_client/model/patched_ifc_access_token_request.py
 bimdata_api_client/model/patched_label_request.py
 bimdata_api_client/model/patched_layer_request.py
+bimdata_api_client/model/patched_mask2_d_request.py
 bimdata_api_client/model/patched_model_request.py
 bimdata_api_client/model/patched_pin_request.py
 bimdata_api_client/model/patched_positioning_plan_request.py
@@ -390,6 +391,7 @@ docs/PatchedGroupRequest.md
 docs/PatchedIfcAccessTokenRequest.md
 docs/PatchedLabelRequest.md
 docs/PatchedLayerRequest.md
+docs/PatchedMask2DRequest.md
 docs/PatchedModelRequest.md
 docs/PatchedPinRequest.md
 docs/PatchedPositioningPlanRequest.md
@@ -658,6 +660,7 @@ test/test_patched_group_request.py
 test/test_patched_ifc_access_token_request.py
 test/test_patched_label_request.py
 test/test_patched_layer_request.py
+test/test_patched_mask2_d_request.py
 test/test_patched_model_request.py
 test/test_patched_pin_request.py
 test/test_patched_positioning_plan_request.py

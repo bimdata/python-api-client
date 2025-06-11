@@ -44,8 +44,6 @@ class SsoApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/identity-provider/invitation/{id}/accept',
@@ -96,8 +94,6 @@ class SsoApi(object):
                 'response_type': (ShortUser,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/identity-provider/user',
@@ -153,8 +149,6 @@ class SsoApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/identity-provider/user',
@@ -208,8 +202,6 @@ class SsoApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/identity-provider/invitation/{id}/deny',
@@ -260,8 +252,6 @@ class SsoApi(object):
                 'response_type': (Invitation,),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/identity-provider/invitation/{id}',
@@ -314,8 +304,6 @@ class SsoApi(object):
                 'response_type': ([Invitation],),
                 'auth': [
                     'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/identity-provider/invitation',

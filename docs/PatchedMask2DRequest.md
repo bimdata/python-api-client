@@ -1,13 +1,10 @@
-# Mask2D
+# PatchedMask2DRequest
 
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [readonly] 
-**crop_path** | **[[float]]** | Crop path of the manually created mask to show only a part of the model. | 
-**created_at** | **datetime** | Creation date | [readonly] 
-**updated_at** | **datetime** | Date of the last update | [readonly] 
+**crop_path** | **[[float]]** | Crop path of the manually created mask to show only a part of the model. | [optional] 
 **grayscale** | **bool** | Whether the mask is grayscale | [optional] 
 **opacity** | **float, none_type** | Opacity of the mask (0-1) | [optional] 
 **brightness** | **float, none_type** | Brightness of the mask | [optional] 
