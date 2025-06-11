@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.16.1 (2025-06-11)
+
+### Fix
+
+- Patch: 2d mask improvment (commit for lib release)
+  ([`9c80429`](https://github.com/bimdata/python-api-client/commit/9c80429ef9b49ae0b4e7d4aea77bdb03122b0e4e))
+
+
 ## v10.16.0 (2025-05-21)
 
 ### Feature
