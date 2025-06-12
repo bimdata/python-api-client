@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.16.2 (2025-06-12)
+
+### Fix
+
+- Patch: Allow crop_path to be null on Mask2D. (#867)
+  ([`bac378e`](https://github.com/bimdata/python-api-client/commit/bac378e2bffe4fb80acf0f6519453639e6541813))
+
+
 ## v10.16.1 (2025-06-11)
 
 ### Fix
