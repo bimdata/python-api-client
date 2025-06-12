@@ -86,7 +86,7 @@ class Mask2DRequest(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'crop_path': ([[float]],),  # noqa: E501
+            'crop_path': ([[float]], none_type,),  # noqa: E501
             'grayscale': (bool,),  # noqa: E501
             'opacity': (float, none_type,),  # noqa: E501
             'brightness': (float, none_type,),  # noqa: E501
@@ -113,11 +113,8 @@ class Mask2DRequest(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, crop_path, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, *args, **kwargs):  # noqa: E501
         """Mask2DRequest - a model defined in OpenAPI
-
-        Args:
-            crop_path ([[float]]): Crop path of the manually created mask to show only a part of the model.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -150,6 +147,7 @@ class Mask2DRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            crop_path ([[float]], none_type): Crop path of the manually created mask to show only a part of the model.. [optional]  # noqa: E501
             grayscale (bool): Whether the mask is grayscale. [optional]  # noqa: E501
             opacity (float, none_type): Opacity of the mask (0-1). [optional]  # noqa: E501
             brightness (float, none_type): Brightness of the mask. [optional]  # noqa: E501
@@ -181,7 +179,6 @@ class Mask2DRequest(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.crop_path = crop_path
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -202,11 +199,8 @@ class Mask2DRequest(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, crop_path, *args, **kwargs):  # noqa: E501
+    def __init__(self, *args, **kwargs):  # noqa: E501
         """Mask2DRequest - a model defined in OpenAPI
-
-        Args:
-            crop_path ([[float]]): Crop path of the manually created mask to show only a part of the model.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -239,6 +233,7 @@ class Mask2DRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            crop_path ([[float]], none_type): Crop path of the manually created mask to show only a part of the model.. [optional]  # noqa: E501
             grayscale (bool): Whether the mask is grayscale. [optional]  # noqa: E501
             opacity (float, none_type): Opacity of the mask (0-1). [optional]  # noqa: E501
             brightness (float, none_type): Brightness of the mask. [optional]  # noqa: E501
@@ -268,7 +263,6 @@ class Mask2DRequest(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.crop_path = crop_path
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

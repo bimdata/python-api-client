@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**crop_path** | **[[float]]** | Crop path of the manually created mask to show only a part of the model. | [optional] 
+**crop_path** | **[[float]], none_type** | Crop path of the manually created mask to show only a part of the model. | [optional] 
 **grayscale** | **bool** | Whether the mask is grayscale | [optional] 
 **opacity** | **float, none_type** | Opacity of the mask (0-1) | [optional] 
 **brightness** | **float, none_type** | Brightness of the mask | [optional] 

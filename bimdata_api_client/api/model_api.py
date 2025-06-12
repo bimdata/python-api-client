@@ -2149,7 +2149,6 @@ class ModelApi(object):
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'mask2_d_request',
                 ],
                 'nullable': [
                 ],
@@ -14266,7 +14265,6 @@ class ModelApi(object):
         cloud_pk,
         id,
         project_pk,
-        mask2_d_request,
         **kwargs
     ):
         """Create or update a 2D mask for the model  # noqa: E501
@@ -14275,16 +14273,16 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_mask2_d(cloud_pk, id, project_pk, mask2_d_request, async_req=True)
+        >>> thread = api.create_mask2_d(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int):
             id (int): A unique integer value identifying this model.
             project_pk (int):
-            mask2_d_request (Mask2DRequest):
 
         Keyword Args:
+            mask2_d_request (Mask2DRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -14347,8 +14345,6 @@ class ModelApi(object):
             id
         kwargs['project_pk'] = \
             project_pk
-        kwargs['mask2_d_request'] = \
-            mask2_d_request
         return self.create_mask2_d_endpoint.call_with_http_info(**kwargs)
 
     def create_meta_building(

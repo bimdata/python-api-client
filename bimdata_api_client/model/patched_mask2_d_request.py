@@ -86,7 +86,7 @@ class PatchedMask2DRequest(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'crop_path': ([[float]],),  # noqa: E501
+            'crop_path': ([[float]], none_type,),  # noqa: E501
             'grayscale': (bool,),  # noqa: E501
             'opacity': (float, none_type,),  # noqa: E501
             'brightness': (float, none_type,),  # noqa: E501
@@ -147,7 +147,7 @@ class PatchedMask2DRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            crop_path ([[float]]): Crop path of the manually created mask to show only a part of the model.. [optional]  # noqa: E501
+            crop_path ([[float]], none_type): Crop path of the manually created mask to show only a part of the model.. [optional]  # noqa: E501
             grayscale (bool): Whether the mask is grayscale. [optional]  # noqa: E501
             opacity (float, none_type): Opacity of the mask (0-1). [optional]  # noqa: E501
             brightness (float, none_type): Brightness of the mask. [optional]  # noqa: E501
@@ -233,7 +233,7 @@ class PatchedMask2DRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            crop_path ([[float]]): Crop path of the manually created mask to show only a part of the model.. [optional]  # noqa: E501
+            crop_path ([[float]], none_type): Crop path of the manually created mask to show only a part of the model.. [optional]  # noqa: E501
             grayscale (bool): Whether the mask is grayscale. [optional]  # noqa: E501
             opacity (float, none_type): Opacity of the mask (0-1). [optional]  # noqa: E501
             brightness (float, none_type): Brightness of the mask. [optional]  # noqa: E501

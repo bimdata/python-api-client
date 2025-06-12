@@ -3082,7 +3082,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_mask2_d**
-> Mask2D create_mask2_d(cloud_pk, id, project_pk, mask2_d_request)
+> Mask2D create_mask2_d(cloud_pk, id, project_pk)
 
 Create or update a 2D mask for the model
 
@@ -3140,12 +3140,21 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         opacity=0,
         brightness=3.14,
         contrast=3.14,
-    ) # Mask2DRequest | 
+    ) # Mask2DRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Create or update a 2D mask for the model
-        api_response = api_instance.create_mask2_d(cloud_pk, id, project_pk, mask2_d_request)
+        api_response = api_instance.create_mask2_d(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->create_mask2_d: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Create or update a 2D mask for the model
+        api_response = api_instance.create_mask2_d(cloud_pk, id, project_pk, mask2_d_request=mask2_d_request)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->create_mask2_d: %s\n" % e)
@@ -3159,7 +3168,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**|  |
  **id** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**|  |
- **mask2_d_request** | [**Mask2DRequest**](Mask2DRequest.md)|  |
+ **mask2_d_request** | [**Mask2DRequest**](Mask2DRequest.md)|  | [optional]
 
 ### Return type
 

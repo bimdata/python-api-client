@@ -87,9 +87,9 @@ class Mask2D(ModelNormal):
         """
         return {
             'id': (int,),  # noqa: E501
-            'crop_path': ([[float]],),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
+            'crop_path': ([[float]], none_type,),  # noqa: E501
             'grayscale': (bool,),  # noqa: E501
             'opacity': (float, none_type,),  # noqa: E501
             'brightness': (float, none_type,),  # noqa: E501
@@ -103,9 +103,9 @@ class Mask2D(ModelNormal):
 
     attribute_map = {
         'id': 'id',  # noqa: E501
-        'crop_path': 'crop_path',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
+        'crop_path': 'crop_path',  # noqa: E501
         'grayscale': 'grayscale',  # noqa: E501
         'opacity': 'opacity',  # noqa: E501
         'brightness': 'brightness',  # noqa: E501
@@ -122,12 +122,11 @@ class Mask2D(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, crop_path, created_at, updated_at, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, created_at, updated_at, *args, **kwargs):  # noqa: E501
         """Mask2D - a model defined in OpenAPI
 
         Args:
             id (int):
-            crop_path ([[float]]): Crop path of the manually created mask to show only a part of the model.
             created_at (datetime): Creation date
             updated_at (datetime): Date of the last update
 
@@ -162,6 +161,7 @@ class Mask2D(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            crop_path ([[float]], none_type): Crop path of the manually created mask to show only a part of the model.. [optional]  # noqa: E501
             grayscale (bool): Whether the mask is grayscale. [optional]  # noqa: E501
             opacity (float, none_type): Opacity of the mask (0-1). [optional]  # noqa: E501
             brightness (float, none_type): Brightness of the mask. [optional]  # noqa: E501
@@ -194,7 +194,6 @@ class Mask2D(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.id = id
-        self.crop_path = crop_path
         self.created_at = created_at
         self.updated_at = updated_at
         for var_name, var_value in kwargs.items():
@@ -217,10 +216,9 @@ class Mask2D(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, crop_path, *args, **kwargs):  # noqa: E501
+    def __init__(self, *args, **kwargs):  # noqa: E501
         """Mask2D - a model defined in OpenAPI
 
-            crop_path ([[float]]): Crop path of the manually created mask to show only a part of the model.
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
                                 will be type checked and a TypeError will be
@@ -252,6 +250,7 @@ class Mask2D(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            crop_path ([[float]], none_type): Crop path of the manually created mask to show only a part of the model.. [optional]  # noqa: E501
             grayscale (bool): Whether the mask is grayscale. [optional]  # noqa: E501
             opacity (float, none_type): Opacity of the mask (0-1). [optional]  # noqa: E501
             brightness (float, none_type): Brightness of the mask. [optional]  # noqa: E501
@@ -281,7 +280,6 @@ class Mask2D(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.crop_path = crop_path
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
