@@ -53,6 +53,8 @@ import bimdata_api_client
 from pprint import pprint
 from bimdata_api_client.api import bcf_api
 from bimdata_api_client.model.auth import Auth
+from bimdata_api_client.model.bcf_label import BcfLabel
+from bimdata_api_client.model.bcf_label_request import BcfLabelRequest
 from bimdata_api_client.model.bcf_project import BcfProject
 from bimdata_api_client.model.bcf_project_request import BcfProjectRequest
 from bimdata_api_client.model.coloring_definition import ColoringDefinition
@@ -62,12 +64,10 @@ from bimdata_api_client.model.detailed_extensions import DetailedExtensions
 from bimdata_api_client.model.extensions import Extensions
 from bimdata_api_client.model.full_topic import FullTopic
 from bimdata_api_client.model.full_topic_request import FullTopicRequest
-from bimdata_api_client.model.label import Label
-from bimdata_api_client.model.label_request import LabelRequest
+from bimdata_api_client.model.patched_bcf_label_request import PatchedBcfLabelRequest
 from bimdata_api_client.model.patched_bcf_project_request import PatchedBcfProjectRequest
 from bimdata_api_client.model.patched_comment_request import PatchedCommentRequest
 from bimdata_api_client.model.patched_full_topic_request import PatchedFullTopicRequest
-from bimdata_api_client.model.patched_label_request import PatchedLabelRequest
 from bimdata_api_client.model.patched_pin_request import PatchedPinRequest
 from bimdata_api_client.model.patched_priority_request import PatchedPriorityRequest
 from bimdata_api_client.model.patched_stage_request import PatchedStageRequest
@@ -345,6 +345,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**create_element_property_set_property**](docs/ModelApi.md#create_element_property_set_property) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property | Create a property to a PropertySet
 *ModelApi* | [**create_element_property_set_property_definition**](docs/ModelApi.md#create_element_property_set_property_definition) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition | Create a Definition to a Property
 *ModelApi* | [**create_element_property_set_property_definition_unit**](docs/ModelApi.md#create_element_property_set_property_definition_unit) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit | Create a Unit to a Definition
+*ModelApi* | [**create_label**](docs/ModelApi.md#create_label) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label | Create a label in the model
 *ModelApi* | [**create_layer**](docs/ModelApi.md#create_layer) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer | Create a layer in the model
 *ModelApi* | [**create_mask2_d**](docs/ModelApi.md#create_mask2_d) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Create or update a 2D mask for the model
 *ModelApi* | [**create_meta_building**](docs/ModelApi.md#create_meta_building) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-metabuilding | Create an empty 3D Model
@@ -370,6 +371,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**delete_building_plan**](docs/ModelApi.md#delete_building_plan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/{id} | Delete the relation between a 2d model and a building
 *ModelApi* | [**delete_drawing**](docs/ModelApi.md#delete_drawing) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id} | Delete a drawing of a model
 *ModelApi* | [**delete_element**](docs/ModelApi.md#delete_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Delete an element of a model
+*ModelApi* | [**delete_label**](docs/ModelApi.md#delete_label) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Delete a label
 *ModelApi* | [**delete_layer**](docs/ModelApi.md#delete_layer) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Delete a layer of a model
 *ModelApi* | [**delete_mask2_d**](docs/ModelApi.md#delete_mask2_d) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Delete the 2D mask for the model
 *ModelApi* | [**delete_model**](docs/ModelApi.md#delete_model) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id} | Delete a model
@@ -407,6 +409,8 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**get_element_property_sets**](docs/ModelApi.md#get_element_property_sets) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset | Retrieve all PropertySets of an element
 *ModelApi* | [**get_elements**](docs/ModelApi.md#get_elements) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element | Retrieve all elements of a model
 *ModelApi* | [**get_elements_from_classification**](docs/ModelApi.md#get_elements_from_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element | Retrieve all elements with the classification
+*ModelApi* | [**get_label**](docs/ModelApi.md#get_label) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Retrieve one label of the model
+*ModelApi* | [**get_labels**](docs/ModelApi.md#get_labels) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label | Retrieve all labels of the model
 *ModelApi* | [**get_layer**](docs/ModelApi.md#get_layer) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Retrieve a layer of a model
 *ModelApi* | [**get_layers**](docs/ModelApi.md#get_layers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer | Retrieve all layers of a model
 *ModelApi* | [**get_material**](docs/ModelApi.md#get_material) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/material/{id} | Retrieve a material of a model
@@ -460,6 +464,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**update_drawing**](docs/ModelApi.md#update_drawing) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id} | Update some fields of a drawing
 *ModelApi* | [**update_element**](docs/ModelApi.md#update_element) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Update some fields of an element
 *ModelApi* | [**update_element_property_set_property**](docs/ModelApi.md#update_element_property_set_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Update a property from an element
+*ModelApi* | [**update_label**](docs/ModelApi.md#update_label) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Update some fields of a label
 *ModelApi* | [**update_layer**](docs/ModelApi.md#update_layer) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Update some fields of a layer
 *ModelApi* | [**update_mask2_d**](docs/ModelApi.md#update_mask2_d) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Partial update of a 2D mask for the model
 *ModelApi* | [**update_model**](docs/ModelApi.md#update_model) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{id} | Update some fields of a model
@@ -502,6 +507,8 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [Auth](docs/Auth.md)
+ - [BcfLabel](docs/BcfLabel.md)
+ - [BcfLabelRequest](docs/BcfLabelRequest.md)
  - [BcfProject](docs/BcfProject.md)
  - [BcfProjectRequest](docs/BcfProjectRequest.md)
  - [Building](docs/Building.md)
@@ -552,6 +559,8 @@ Class | Method | HTTP request | Description
  - [FolderWithoutChildrenRequest](docs/FolderWithoutChildrenRequest.md)
  - [FullTopic](docs/FullTopic.md)
  - [FullTopicRequest](docs/FullTopicRequest.md)
+ - [Geometry2dPoint](docs/Geometry2dPoint.md)
+ - [Geometry2dPointRequest](docs/Geometry2dPointRequest.md)
  - [GeometryPoint](docs/GeometryPoint.md)
  - [GeometryPointRequest](docs/GeometryPointRequest.md)
  - [Group](docs/Group.md)
@@ -565,8 +574,6 @@ Class | Method | HTTP request | Description
  - [IfcOptimizeRequest](docs/IfcOptimizeRequest.md)
  - [ImportGroupRequest](docs/ImportGroupRequest.md)
  - [Invitation](docs/Invitation.md)
- - [Label](docs/Label.md)
- - [LabelRequest](docs/LabelRequest.md)
  - [Layer](docs/Layer.md)
  - [LayerElement](docs/LayerElement.md)
  - [LayerElementRequest](docs/LayerElementRequest.md)
@@ -591,6 +598,8 @@ Class | Method | HTTP request | Description
  - [ModelErrors](docs/ModelErrors.md)
  - [ModelErrorsRequest](docs/ModelErrorsRequest.md)
  - [ModelFiles](docs/ModelFiles.md)
+ - [ModelLabel](docs/ModelLabel.md)
+ - [ModelLabelRequest](docs/ModelLabelRequest.md)
  - [ModelProperty](docs/ModelProperty.md)
  - [ModelSerializerWithoutChildren](docs/ModelSerializerWithoutChildren.md)
  - [ModelWithPositioningPlan](docs/ModelWithPositioningPlan.md)
@@ -598,6 +607,7 @@ Class | Method | HTTP request | Description
  - [OrganizationRequest](docs/OrganizationRequest.md)
  - [OrthogonalCamera](docs/OrthogonalCamera.md)
  - [OrthogonalCameraRequest](docs/OrthogonalCameraRequest.md)
+ - [PatchedBcfLabelRequest](docs/PatchedBcfLabelRequest.md)
  - [PatchedBcfProjectRequest](docs/PatchedBcfProjectRequest.md)
  - [PatchedClassificationRequest](docs/PatchedClassificationRequest.md)
  - [PatchedCloudRequest](docs/PatchedCloudRequest.md)
@@ -610,9 +620,9 @@ Class | Method | HTTP request | Description
  - [PatchedGroupFolderRequest](docs/PatchedGroupFolderRequest.md)
  - [PatchedGroupRequest](docs/PatchedGroupRequest.md)
  - [PatchedIfcAccessTokenRequest](docs/PatchedIfcAccessTokenRequest.md)
- - [PatchedLabelRequest](docs/PatchedLabelRequest.md)
  - [PatchedLayerRequest](docs/PatchedLayerRequest.md)
  - [PatchedMask2DRequest](docs/PatchedMask2DRequest.md)
+ - [PatchedModelLabelRequest](docs/PatchedModelLabelRequest.md)
  - [PatchedModelRequest](docs/PatchedModelRequest.md)
  - [PatchedPinRequest](docs/PatchedPinRequest.md)
  - [PatchedPositioningPlanRequest](docs/PatchedPositioningPlanRequest.md)

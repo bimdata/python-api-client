@@ -15,6 +15,8 @@ bimdata_api_client/configuration.py
 bimdata_api_client/exceptions.py
 bimdata_api_client/model/__init__.py
 bimdata_api_client/model/auth.py
+bimdata_api_client/model/bcf_label.py
+bimdata_api_client/model/bcf_label_request.py
 bimdata_api_client/model/bcf_project.py
 bimdata_api_client/model/bcf_project_request.py
 bimdata_api_client/model/building.py
@@ -65,6 +67,8 @@ bimdata_api_client/model/folder_without_children.py
 bimdata_api_client/model/folder_without_children_request.py
 bimdata_api_client/model/full_topic.py
 bimdata_api_client/model/full_topic_request.py
+bimdata_api_client/model/geometry2d_point.py
+bimdata_api_client/model/geometry2d_point_request.py
 bimdata_api_client/model/geometry_point.py
 bimdata_api_client/model/geometry_point_request.py
 bimdata_api_client/model/group.py
@@ -78,8 +82,6 @@ bimdata_api_client/model/ifc_merge_request.py
 bimdata_api_client/model/ifc_optimize_request.py
 bimdata_api_client/model/import_group_request.py
 bimdata_api_client/model/invitation.py
-bimdata_api_client/model/label.py
-bimdata_api_client/model/label_request.py
 bimdata_api_client/model/layer.py
 bimdata_api_client/model/layer_element.py
 bimdata_api_client/model/layer_element_request.py
@@ -104,6 +106,8 @@ bimdata_api_client/model/model_document_request.py
 bimdata_api_client/model/model_errors.py
 bimdata_api_client/model/model_errors_request.py
 bimdata_api_client/model/model_files.py
+bimdata_api_client/model/model_label.py
+bimdata_api_client/model/model_label_request.py
 bimdata_api_client/model/model_property.py
 bimdata_api_client/model/model_serializer_without_children.py
 bimdata_api_client/model/model_with_positioning_plan.py
@@ -111,6 +115,7 @@ bimdata_api_client/model/organization.py
 bimdata_api_client/model/organization_request.py
 bimdata_api_client/model/orthogonal_camera.py
 bimdata_api_client/model/orthogonal_camera_request.py
+bimdata_api_client/model/patched_bcf_label_request.py
 bimdata_api_client/model/patched_bcf_project_request.py
 bimdata_api_client/model/patched_classification_request.py
 bimdata_api_client/model/patched_cloud_request.py
@@ -123,9 +128,9 @@ bimdata_api_client/model/patched_full_topic_request.py
 bimdata_api_client/model/patched_group_folder_request.py
 bimdata_api_client/model/patched_group_request.py
 bimdata_api_client/model/patched_ifc_access_token_request.py
-bimdata_api_client/model/patched_label_request.py
 bimdata_api_client/model/patched_layer_request.py
 bimdata_api_client/model/patched_mask2_d_request.py
+bimdata_api_client/model/patched_model_label_request.py
 bimdata_api_client/model/patched_model_request.py
 bimdata_api_client/model/patched_pin_request.py
 bimdata_api_client/model/patched_positioning_plan_request.py
@@ -279,6 +284,8 @@ bimdata_api_client/models/__init__.py
 bimdata_api_client/rest.py
 docs/Auth.md
 docs/BcfApi.md
+docs/BcfLabel.md
+docs/BcfLabelRequest.md
 docs/BcfProject.md
 docs/BcfProjectRequest.md
 docs/Building.md
@@ -330,6 +337,8 @@ docs/FolderWithoutChildren.md
 docs/FolderWithoutChildrenRequest.md
 docs/FullTopic.md
 docs/FullTopicRequest.md
+docs/Geometry2dPoint.md
+docs/Geometry2dPointRequest.md
 docs/GeometryPoint.md
 docs/GeometryPointRequest.md
 docs/Group.md
@@ -343,8 +352,6 @@ docs/IfcMergeRequest.md
 docs/IfcOptimizeRequest.md
 docs/ImportGroupRequest.md
 docs/Invitation.md
-docs/Label.md
-docs/LabelRequest.md
 docs/Layer.md
 docs/LayerElement.md
 docs/LayerElementRequest.md
@@ -370,6 +377,8 @@ docs/ModelDocumentRequest.md
 docs/ModelErrors.md
 docs/ModelErrorsRequest.md
 docs/ModelFiles.md
+docs/ModelLabel.md
+docs/ModelLabelRequest.md
 docs/ModelProperty.md
 docs/ModelSerializerWithoutChildren.md
 docs/ModelWithPositioningPlan.md
@@ -377,6 +386,7 @@ docs/Organization.md
 docs/OrganizationRequest.md
 docs/OrthogonalCamera.md
 docs/OrthogonalCameraRequest.md
+docs/PatchedBcfLabelRequest.md
 docs/PatchedBcfProjectRequest.md
 docs/PatchedClassificationRequest.md
 docs/PatchedCloudRequest.md
@@ -389,9 +399,9 @@ docs/PatchedFullTopicRequest.md
 docs/PatchedGroupFolderRequest.md
 docs/PatchedGroupRequest.md
 docs/PatchedIfcAccessTokenRequest.md
-docs/PatchedLabelRequest.md
 docs/PatchedLayerRequest.md
 docs/PatchedMask2DRequest.md
+docs/PatchedModelLabelRequest.md
 docs/PatchedModelRequest.md
 docs/PatchedPinRequest.md
 docs/PatchedPositioningPlanRequest.md
@@ -548,6 +558,8 @@ test-requirements.txt
 test/__init__.py
 test/test_auth.py
 test/test_bcf_api.py
+test/test_bcf_label.py
+test/test_bcf_label_request.py
 test/test_bcf_project.py
 test/test_bcf_project_request.py
 test/test_building.py
@@ -599,6 +611,8 @@ test/test_folder_without_children.py
 test/test_folder_without_children_request.py
 test/test_full_topic.py
 test/test_full_topic_request.py
+test/test_geometry2d_point.py
+test/test_geometry2d_point_request.py
 test/test_geometry_point.py
 test/test_geometry_point_request.py
 test/test_group.py
@@ -612,8 +626,6 @@ test/test_ifc_merge_request.py
 test/test_ifc_optimize_request.py
 test/test_import_group_request.py
 test/test_invitation.py
-test/test_label.py
-test/test_label_request.py
 test/test_layer.py
 test/test_layer_element.py
 test/test_layer_element_request.py
@@ -639,6 +651,8 @@ test/test_model_document_request.py
 test/test_model_errors.py
 test/test_model_errors_request.py
 test/test_model_files.py
+test/test_model_label.py
+test/test_model_label_request.py
 test/test_model_property.py
 test/test_model_serializer_without_children.py
 test/test_model_with_positioning_plan.py
@@ -646,6 +660,7 @@ test/test_organization.py
 test/test_organization_request.py
 test/test_orthogonal_camera.py
 test/test_orthogonal_camera_request.py
+test/test_patched_bcf_label_request.py
 test/test_patched_bcf_project_request.py
 test/test_patched_classification_request.py
 test/test_patched_cloud_request.py
@@ -658,9 +673,9 @@ test/test_patched_full_topic_request.py
 test/test_patched_group_folder_request.py
 test/test_patched_group_request.py
 test/test_patched_ifc_access_token_request.py
-test/test_patched_label_request.py
 test/test_patched_layer_request.py
 test/test_patched_mask2_d_request.py
+test/test_patched_model_label_request.py
 test/test_patched_model_request.py
 test/test_patched_pin_request.py
 test/test_patched_positioning_plan_request.py

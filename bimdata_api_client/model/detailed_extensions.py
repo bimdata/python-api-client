@@ -31,12 +31,12 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from bimdata_api_client.model.label import Label
+    from bimdata_api_client.model.bcf_label import BcfLabel
     from bimdata_api_client.model.priority import Priority
     from bimdata_api_client.model.stage import Stage
     from bimdata_api_client.model.topic_status import TopicStatus
     from bimdata_api_client.model.topic_type import TopicType
-    globals()['Label'] = Label
+    globals()['BcfLabel'] = BcfLabel
     globals()['Priority'] = Priority
     globals()['Stage'] = Stage
     globals()['TopicStatus'] = TopicStatus
@@ -96,7 +96,7 @@ class DetailedExtensions(ModelNormal):
         """
         lazy_import()
         return {
-            'topic_labels': ([Label],),  # noqa: E501
+            'topic_labels': ([BcfLabel],),  # noqa: E501
             'topic_types': ([TopicType],),  # noqa: E501
             'topic_statuses': ([TopicStatus],),  # noqa: E501
             'priorities': ([Priority],),  # noqa: E501
@@ -157,7 +157,7 @@ class DetailedExtensions(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            topic_labels ([Label]): [optional]  # noqa: E501
+            topic_labels ([BcfLabel]): [optional]  # noqa: E501
             topic_types ([TopicType]): [optional]  # noqa: E501
             topic_statuses ([TopicStatus]): [optional]  # noqa: E501
             priorities ([Priority]): [optional]  # noqa: E501
@@ -243,7 +243,7 @@ class DetailedExtensions(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            topic_labels ([Label]): [optional]  # noqa: E501
+            topic_labels ([BcfLabel]): [optional]  # noqa: E501
             topic_types ([TopicType]): [optional]  # noqa: E501
             topic_statuses ([TopicStatus]): [optional]  # noqa: E501
             priorities ([Priority]): [optional]  # noqa: E501

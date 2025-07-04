@@ -13,12 +13,12 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.label import Label
+from bimdata_api_client.model.bcf_label import BcfLabel
 from bimdata_api_client.model.priority import Priority
 from bimdata_api_client.model.stage import Stage
 from bimdata_api_client.model.topic_status import TopicStatus
 from bimdata_api_client.model.topic_type import TopicType
-globals()['Label'] = Label
+globals()['BcfLabel'] = BcfLabel
 globals()['Priority'] = Priority
 globals()['Stage'] = Stage
 globals()['TopicStatus'] = TopicStatus

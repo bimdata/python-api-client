@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_extension_label**
-> Label create_extension_label(projects_pk, label_request)
+> BcfLabel create_extension_label(projects_pk, bcf_label_request)
 
 Create a Label
 
@@ -198,8 +198,8 @@ This is not a standard route. Create a Label available for the project  Required
 import time
 import bimdata_api_client
 from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.label_request import LabelRequest
-from bimdata_api_client.model.label import Label
+from bimdata_api_client.model.bcf_label import BcfLabel
+from bimdata_api_client.model.bcf_label_request import BcfLabelRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -229,14 +229,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
-    label_request = LabelRequest(
+    bcf_label_request = BcfLabelRequest(
         label="label_example",
-    ) # LabelRequest | 
+    ) # BcfLabelRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Create a Label
-        api_response = api_instance.create_extension_label(projects_pk, label_request)
+        api_response = api_instance.create_extension_label(projects_pk, bcf_label_request)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->create_extension_label: %s\n" % e)
@@ -248,11 +248,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **int**|  |
- **label_request** | [**LabelRequest**](LabelRequest.md)|  |
+ **bcf_label_request** | [**BcfLabelRequest**](BcfLabelRequest.md)|  |
 
 ### Return type
 
-[**Label**](Label.md)
+[**BcfLabel**](BcfLabel.md)
 
 ### Authorization
 
@@ -5640,7 +5640,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_extension_label**
-> Label update_extension_label(id, projects_pk)
+> BcfLabel update_extension_label(id, projects_pk)
 
 Update a Label
 
@@ -5655,8 +5655,8 @@ This is not a standard route. Update a Label. All topics using this label will b
 import time
 import bimdata_api_client
 from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.label import Label
-from bimdata_api_client.model.patched_label_request import PatchedLabelRequest
+from bimdata_api_client.model.patched_bcf_label_request import PatchedBcfLabelRequest
+from bimdata_api_client.model.bcf_label import BcfLabel
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -5687,9 +5687,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this label.
     projects_pk = 1 # int | 
-    patched_label_request = PatchedLabelRequest(
+    patched_bcf_label_request = PatchedBcfLabelRequest(
         label="label_example",
-    ) # PatchedLabelRequest |  (optional)
+    ) # PatchedBcfLabelRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -5703,7 +5703,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Update a Label
-        api_response = api_instance.update_extension_label(id, projects_pk, patched_label_request=patched_label_request)
+        api_response = api_instance.update_extension_label(id, projects_pk, patched_bcf_label_request=patched_bcf_label_request)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->update_extension_label: %s\n" % e)
@@ -5716,11 +5716,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this label. |
  **projects_pk** | **int**|  |
- **patched_label_request** | [**PatchedLabelRequest**](PatchedLabelRequest.md)|  | [optional]
+ **patched_bcf_label_request** | [**PatchedBcfLabelRequest**](PatchedBcfLabelRequest.md)|  | [optional]
 
 ### Return type
 
-[**Label**](Label.md)
+[**BcfLabel**](BcfLabel.md)
 
 ### Authorization
 

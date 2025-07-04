@@ -13,11 +13,11 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.label import Label
+from bimdata_api_client.model.geometry2d_point_request import Geometry2dPointRequest
 
 
-class TestLabel(unittest.TestCase):
-    """Label unit test stubs"""
+class TestGeometry2dPointRequest(unittest.TestCase):
+    """Geometry2dPointRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +25,10 @@ class TestLabel(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testLabel(self):
-        """Test Label"""
+    def testGeometry2dPointRequest(self):
+        """Test Geometry2dPointRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = Label()  # noqa: E501
+        # model = Geometry2dPointRequest()  # noqa: E501
         pass
 
 

@@ -199,6 +199,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_create_label(self):
+        """Test case for create_label
+
+        Create a label in the model  # noqa: E501
+        """
+        pass
+
     def test_create_layer(self):
         """Test case for create_layer
 
@@ -371,6 +378,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for delete_element
 
         Delete an element of a model  # noqa: E501
+        """
+        pass
+
+    def test_delete_label(self):
+        """Test case for delete_label
+
+        Delete a label  # noqa: E501
         """
         pass
 
@@ -630,6 +644,20 @@ class TestModelApi(unittest.TestCase):
         """Test case for get_elements_from_classification
 
         Retrieve all elements with the classification  # noqa: E501
+        """
+        pass
+
+    def test_get_label(self):
+        """Test case for get_label
+
+        Retrieve one label of the model  # noqa: E501
+        """
+        pass
+
+    def test_get_labels(self):
+        """Test case for get_labels
+
+        Retrieve all labels of the model  # noqa: E501
         """
         pass
 
@@ -1001,6 +1029,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for update_element_property_set_property
 
         Update a property from an element  # noqa: E501
+        """
+        pass
+
+    def test_update_label(self):
+        """Test case for update_label
+
+        Update some fields of a label  # noqa: E501
         """
         pass
 

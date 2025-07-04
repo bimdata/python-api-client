@@ -10,6 +10,8 @@
 # sys.setrecursionlimit(n)
 
 from bimdata_api_client.model.auth import Auth
+from bimdata_api_client.model.bcf_label import BcfLabel
+from bimdata_api_client.model.bcf_label_request import BcfLabelRequest
 from bimdata_api_client.model.bcf_project import BcfProject
 from bimdata_api_client.model.bcf_project_request import BcfProjectRequest
 from bimdata_api_client.model.building import Building
@@ -60,6 +62,8 @@ from bimdata_api_client.model.folder_without_children import FolderWithoutChildr
 from bimdata_api_client.model.folder_without_children_request import FolderWithoutChildrenRequest
 from bimdata_api_client.model.full_topic import FullTopic
 from bimdata_api_client.model.full_topic_request import FullTopicRequest
+from bimdata_api_client.model.geometry2d_point import Geometry2dPoint
+from bimdata_api_client.model.geometry2d_point_request import Geometry2dPointRequest
 from bimdata_api_client.model.geometry_point import GeometryPoint
 from bimdata_api_client.model.geometry_point_request import GeometryPointRequest
 from bimdata_api_client.model.group import Group
@@ -73,8 +77,6 @@ from bimdata_api_client.model.ifc_merge_request import IfcMergeRequest
 from bimdata_api_client.model.ifc_optimize_request import IfcOptimizeRequest
 from bimdata_api_client.model.import_group_request import ImportGroupRequest
 from bimdata_api_client.model.invitation import Invitation
-from bimdata_api_client.model.label import Label
-from bimdata_api_client.model.label_request import LabelRequest
 from bimdata_api_client.model.layer import Layer
 from bimdata_api_client.model.layer_element import LayerElement
 from bimdata_api_client.model.layer_element_request import LayerElementRequest
@@ -99,6 +101,8 @@ from bimdata_api_client.model.model_document_request import ModelDocumentRequest
 from bimdata_api_client.model.model_errors import ModelErrors
 from bimdata_api_client.model.model_errors_request import ModelErrorsRequest
 from bimdata_api_client.model.model_files import ModelFiles
+from bimdata_api_client.model.model_label import ModelLabel
+from bimdata_api_client.model.model_label_request import ModelLabelRequest
 from bimdata_api_client.model.model_property import ModelProperty
 from bimdata_api_client.model.model_serializer_without_children import ModelSerializerWithoutChildren
 from bimdata_api_client.model.model_with_positioning_plan import ModelWithPositioningPlan
@@ -106,6 +110,7 @@ from bimdata_api_client.model.organization import Organization
 from bimdata_api_client.model.organization_request import OrganizationRequest
 from bimdata_api_client.model.orthogonal_camera import OrthogonalCamera
 from bimdata_api_client.model.orthogonal_camera_request import OrthogonalCameraRequest
+from bimdata_api_client.model.patched_bcf_label_request import PatchedBcfLabelRequest
 from bimdata_api_client.model.patched_bcf_project_request import PatchedBcfProjectRequest
 from bimdata_api_client.model.patched_classification_request import PatchedClassificationRequest
 from bimdata_api_client.model.patched_cloud_request import PatchedCloudRequest
@@ -118,9 +123,9 @@ from bimdata_api_client.model.patched_full_topic_request import PatchedFullTopic
 from bimdata_api_client.model.patched_group_folder_request import PatchedGroupFolderRequest
 from bimdata_api_client.model.patched_group_request import PatchedGroupRequest
 from bimdata_api_client.model.patched_ifc_access_token_request import PatchedIfcAccessTokenRequest
-from bimdata_api_client.model.patched_label_request import PatchedLabelRequest
 from bimdata_api_client.model.patched_layer_request import PatchedLayerRequest
 from bimdata_api_client.model.patched_mask2_d_request import PatchedMask2DRequest
+from bimdata_api_client.model.patched_model_label_request import PatchedModelLabelRequest
 from bimdata_api_client.model.patched_model_request import PatchedModelRequest
 from bimdata_api_client.model.patched_pin_request import PatchedPinRequest
 from bimdata_api_client.model.patched_positioning_plan_request import PatchedPositioningPlanRequest

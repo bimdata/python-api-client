@@ -13,11 +13,11 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.patched_label_request import PatchedLabelRequest
+from bimdata_api_client.model.bcf_label import BcfLabel
 
 
-class TestPatchedLabelRequest(unittest.TestCase):
-    """PatchedLabelRequest unit test stubs"""
+class TestBcfLabel(unittest.TestCase):
+    """BcfLabel unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +25,10 @@ class TestPatchedLabelRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testPatchedLabelRequest(self):
-        """Test PatchedLabelRequest"""
+    def testBcfLabel(self):
+        """Test BcfLabel"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = PatchedLabelRequest()  # noqa: E501
+        # model = BcfLabel()  # noqa: E501
         pass
 
 

@@ -13,11 +13,13 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.label_request import LabelRequest
+from bimdata_api_client.model.geometry2d_point_request import Geometry2dPointRequest
+globals()['Geometry2dPointRequest'] = Geometry2dPointRequest
+from bimdata_api_client.model.model_label_request import ModelLabelRequest
 
 
-class TestLabelRequest(unittest.TestCase):
-    """LabelRequest unit test stubs"""
+class TestModelLabelRequest(unittest.TestCase):
+    """ModelLabelRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +27,10 @@ class TestLabelRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testLabelRequest(self):
-        """Test LabelRequest"""
+    def testModelLabelRequest(self):
+        """Test ModelLabelRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = LabelRequest()  # noqa: E501
+        # model = ModelLabelRequest()  # noqa: E501
         pass
 
 

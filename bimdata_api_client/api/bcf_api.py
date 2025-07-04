@@ -23,6 +23,8 @@ from bimdata_api_client.model_utils import (  # noqa: F401
     validate_and_convert_types
 )
 from bimdata_api_client.model.auth import Auth
+from bimdata_api_client.model.bcf_label import BcfLabel
+from bimdata_api_client.model.bcf_label_request import BcfLabelRequest
 from bimdata_api_client.model.bcf_project import BcfProject
 from bimdata_api_client.model.bcf_project_request import BcfProjectRequest
 from bimdata_api_client.model.coloring_definition import ColoringDefinition
@@ -32,12 +34,10 @@ from bimdata_api_client.model.detailed_extensions import DetailedExtensions
 from bimdata_api_client.model.extensions import Extensions
 from bimdata_api_client.model.full_topic import FullTopic
 from bimdata_api_client.model.full_topic_request import FullTopicRequest
-from bimdata_api_client.model.label import Label
-from bimdata_api_client.model.label_request import LabelRequest
+from bimdata_api_client.model.patched_bcf_label_request import PatchedBcfLabelRequest
 from bimdata_api_client.model.patched_bcf_project_request import PatchedBcfProjectRequest
 from bimdata_api_client.model.patched_comment_request import PatchedCommentRequest
 from bimdata_api_client.model.patched_full_topic_request import PatchedFullTopicRequest
-from bimdata_api_client.model.patched_label_request import PatchedLabelRequest
 from bimdata_api_client.model.patched_pin_request import PatchedPinRequest
 from bimdata_api_client.model.patched_priority_request import PatchedPriorityRequest
 from bimdata_api_client.model.patched_stage_request import PatchedStageRequest
@@ -145,7 +145,7 @@ class BcfApi(object):
         )
         self.create_extension_label_endpoint = _Endpoint(
             settings={
-                'response_type': (Label,),
+                'response_type': (BcfLabel,),
                 'auth': [
                     'ApiKey',
                     'Bearer'
@@ -158,11 +158,11 @@ class BcfApi(object):
             params_map={
                 'all': [
                     'projects_pk',
-                    'label_request',
+                    'bcf_label_request',
                 ],
                 'required': [
                     'projects_pk',
-                    'label_request',
+                    'bcf_label_request',
                 ],
                 'nullable': [
                 ],
@@ -179,15 +179,15 @@ class BcfApi(object):
                 'openapi_types': {
                     'projects_pk':
                         (int,),
-                    'label_request':
-                        (LabelRequest,),
+                    'bcf_label_request':
+                        (BcfLabelRequest,),
                 },
                 'attribute_map': {
                     'projects_pk': 'projects_pk',
                 },
                 'location_map': {
                     'projects_pk': 'path',
-                    'label_request': 'body',
+                    'bcf_label_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -3542,7 +3542,7 @@ class BcfApi(object):
         )
         self.update_extension_label_endpoint = _Endpoint(
             settings={
-                'response_type': (Label,),
+                'response_type': (BcfLabel,),
                 'auth': [
                     'ApiKey',
                     'Bearer'
@@ -3556,7 +3556,7 @@ class BcfApi(object):
                 'all': [
                     'id',
                     'projects_pk',
-                    'patched_label_request',
+                    'patched_bcf_label_request',
                 ],
                 'required': [
                     'id',
@@ -3579,8 +3579,8 @@ class BcfApi(object):
                         (int,),
                     'projects_pk':
                         (int,),
-                    'patched_label_request':
-                        (PatchedLabelRequest,),
+                    'patched_bcf_label_request':
+                        (PatchedBcfLabelRequest,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -3589,7 +3589,7 @@ class BcfApi(object):
                 'location_map': {
                     'id': 'path',
                     'projects_pk': 'path',
-                    'patched_label_request': 'body',
+                    'patched_bcf_label_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -4259,7 +4259,7 @@ class BcfApi(object):
     def create_extension_label(
         self,
         projects_pk,
-        label_request,
+        bcf_label_request,
         **kwargs
     ):
         """Create a Label  # noqa: E501
@@ -4268,12 +4268,12 @@ class BcfApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_extension_label(projects_pk, label_request, async_req=True)
+        >>> thread = api.create_extension_label(projects_pk, bcf_label_request, async_req=True)
         >>> result = thread.get()
 
         Args:
             projects_pk (int):
-            label_request (LabelRequest):
+            bcf_label_request (BcfLabelRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -4304,7 +4304,7 @@ class BcfApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            Label
+            BcfLabel
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -4334,8 +4334,8 @@ class BcfApi(object):
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['projects_pk'] = \
             projects_pk
-        kwargs['label_request'] = \
-            label_request
+        kwargs['bcf_label_request'] = \
+            bcf_label_request
         return self.create_extension_label_endpoint.call_with_http_info(**kwargs)
 
     def create_extension_priority(
@@ -8678,7 +8678,7 @@ class BcfApi(object):
             projects_pk (int):
 
         Keyword Args:
-            patched_label_request (PatchedLabelRequest): [optional]
+            patched_bcf_label_request (PatchedBcfLabelRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -8707,7 +8707,7 @@ class BcfApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            Label
+            BcfLabel
                 If the method is called asynchronously, returns the request
                 thread.
         """

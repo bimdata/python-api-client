@@ -29,6 +29,7 @@ Method | HTTP request | Description
 [**create_element_property_set_property**](ModelApi.md#create_element_property_set_property) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property | Create a property to a PropertySet
 [**create_element_property_set_property_definition**](ModelApi.md#create_element_property_set_property_definition) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition | Create a Definition to a Property
 [**create_element_property_set_property_definition_unit**](ModelApi.md#create_element_property_set_property_definition_unit) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit | Create a Unit to a Definition
+[**create_label**](ModelApi.md#create_label) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label | Create a label in the model
 [**create_layer**](ModelApi.md#create_layer) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer | Create a layer in the model
 [**create_mask2_d**](ModelApi.md#create_mask2_d) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Create or update a 2D mask for the model
 [**create_meta_building**](ModelApi.md#create_meta_building) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-metabuilding | Create an empty 3D Model
@@ -54,6 +55,7 @@ Method | HTTP request | Description
 [**delete_building_plan**](ModelApi.md#delete_building_plan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/{id} | Delete the relation between a 2d model and a building
 [**delete_drawing**](ModelApi.md#delete_drawing) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id} | Delete a drawing of a model
 [**delete_element**](ModelApi.md#delete_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Delete an element of a model
+[**delete_label**](ModelApi.md#delete_label) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Delete a label
 [**delete_layer**](ModelApi.md#delete_layer) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Delete a layer of a model
 [**delete_mask2_d**](ModelApi.md#delete_mask2_d) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Delete the 2D mask for the model
 [**delete_model**](ModelApi.md#delete_model) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id} | Delete a model
@@ -91,6 +93,8 @@ Method | HTTP request | Description
 [**get_element_property_sets**](ModelApi.md#get_element_property_sets) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset | Retrieve all PropertySets of an element
 [**get_elements**](ModelApi.md#get_elements) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element | Retrieve all elements of a model
 [**get_elements_from_classification**](ModelApi.md#get_elements_from_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element | Retrieve all elements with the classification
+[**get_label**](ModelApi.md#get_label) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Retrieve one label of the model
+[**get_labels**](ModelApi.md#get_labels) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label | Retrieve all labels of the model
 [**get_layer**](ModelApi.md#get_layer) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Retrieve a layer of a model
 [**get_layers**](ModelApi.md#get_layers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer | Retrieve all layers of a model
 [**get_material**](ModelApi.md#get_material) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/material/{id} | Retrieve a material of a model
@@ -144,6 +148,7 @@ Method | HTTP request | Description
 [**update_drawing**](ModelApi.md#update_drawing) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id} | Update some fields of a drawing
 [**update_element**](ModelApi.md#update_element) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Update some fields of an element
 [**update_element_property_set_property**](ModelApi.md#update_element_property_set_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Update a property from an element
+[**update_label**](ModelApi.md#update_label) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Update some fields of a label
 [**update_layer**](ModelApi.md#update_layer) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Update some fields of a layer
 [**update_mask2_d**](ModelApi.md#update_mask2_d) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Partial update of a 2D mask for the model
 [**update_model**](ModelApi.md#update_model) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{id} | Update some fields of a model
@@ -2977,6 +2982,113 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **create_label**
+> ModelLabel create_label(cloud_pk, model_pk, project_pk, model_label_request)
+
+Create a label in the model
+
+ Bulk create available. You can either post an object or a list of objects. Is you post a list, the response will be a list (in the same order) of created objects or of errors if any If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors   Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import model_api
+from bimdata_api_client.model.model_label_request import ModelLabelRequest
+from bimdata_api_client.model.model_label import ModelLabel
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    model_pk = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | A unique integer value identifying this project.
+    model_label_request = ModelLabelRequest(
+        name="name_example",
+        color="color_example",
+        geometry=[
+            Geometry2dPointRequest(
+                x=3.14,
+                y=3.14,
+            ),
+        ],
+        human_validated=True,
+    ) # ModelLabelRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create a label in the model
+        api_response = api_instance.create_label(cloud_pk, model_pk, project_pk, model_label_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->create_label: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **model_pk** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+ **model_label_request** | [**ModelLabelRequest**](ModelLabelRequest.md)|  |
+
+### Return type
+
+[**ModelLabel**](ModelLabel.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **create_layer**
 > Layer create_layer(cloud_pk, model_pk, project_pk, layer_request)
 
@@ -5642,6 +5754,100 @@ Name | Type | Description  | Notes
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **uuid** | **str**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No response body |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_label**
+> delete_label(cloud_pk, id, model_pk, project_pk)
+
+Delete a label
+
+Delete on label of the model.  Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import model_api
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    id = 1 # int | A unique integer value identifying this label.
+    model_pk = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | A unique integer value identifying this project.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete a label
+        api_instance.delete_label(cloud_pk, id, model_pk, project_pk)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->delete_label: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **id** | **int**| A unique integer value identifying this label. |
+ **model_pk** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
 
 ### Return type
 
@@ -9259,6 +9465,204 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[Element]**](Element.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_label**
+> ModelLabel get_label(cloud_pk, id, model_pk, project_pk)
+
+Retrieve one label of the model
+
+Retrieve one label of the model  Required scopes: ifc:read, model:read
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import model_api
+from bimdata_api_client.model.model_label import ModelLabel
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    id = 1 # int | A unique integer value identifying this label.
+    model_pk = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | A unique integer value identifying this project.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Retrieve one label of the model
+        api_response = api_instance.get_label(cloud_pk, id, model_pk, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->get_label: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **id** | **int**| A unique integer value identifying this label. |
+ **model_pk** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+
+### Return type
+
+[**ModelLabel**](ModelLabel.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_labels**
+> [ModelLabel] get_labels(cloud_pk, model_pk, project_pk)
+
+Retrieve all labels of the model
+
+Retrieve all labels of the model  Required scopes: ifc:read, model:read
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import model_api
+from bimdata_api_client.model.model_label import ModelLabel
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    model_pk = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | A unique integer value identifying this project.
+    is_validated = True # bool |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Retrieve all labels of the model
+        api_response = api_instance.get_labels(cloud_pk, model_pk, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->get_labels: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Retrieve all labels of the model
+        api_response = api_instance.get_labels(cloud_pk, model_pk, project_pk, is_validated=is_validated)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->get_labels: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **model_pk** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+ **is_validated** | **bool**|  | [optional]
+
+### Return type
+
+[**[ModelLabel]**](ModelLabel.md)
 
 ### Authorization
 
@@ -14506,6 +14910,124 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ModelProperty**](ModelProperty.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_label**
+> ModelLabel update_label(cloud_pk, id, model_pk, project_pk)
+
+Update some fields of a label
+
+Update some fields of a label.  Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import model_api
+from bimdata_api_client.model.model_label import ModelLabel
+from bimdata_api_client.model.patched_model_label_request import PatchedModelLabelRequest
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    id = 1 # int | A unique integer value identifying this label.
+    model_pk = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | A unique integer value identifying this project.
+    patched_model_label_request = PatchedModelLabelRequest(
+        name="name_example",
+        color="color_example",
+        geometry=[
+            Geometry2dPointRequest(
+                x=3.14,
+                y=3.14,
+            ),
+        ],
+        human_validated=True,
+    ) # PatchedModelLabelRequest |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Update some fields of a label
+        api_response = api_instance.update_label(cloud_pk, id, model_pk, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->update_label: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Update some fields of a label
+        api_response = api_instance.update_label(cloud_pk, id, model_pk, project_pk, patched_model_label_request=patched_model_label_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->update_label: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **id** | **int**| A unique integer value identifying this label. |
+ **model_pk** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+ **patched_model_label_request** | [**PatchedModelLabelRequest**](PatchedModelLabelRequest.md)|  | [optional]
+
+### Return type
+
+[**ModelLabel**](ModelLabel.md)
 
 ### Authorization
 
