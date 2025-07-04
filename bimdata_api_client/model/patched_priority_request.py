@@ -145,7 +145,7 @@ class PatchedPriorityRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             priority (str): [optional]  # noqa: E501
-            color (str, none_type): [optional]  # noqa: E501
+            color (str, none_type):              Color of the priority in hexadecimal string without the '#' prefix.             Example: 'fff', 'fff0', '0f0f0f', '0f0f0f00'.         . [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -228,7 +228,7 @@ class PatchedPriorityRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             priority (str): [optional]  # noqa: E501
-            color (str, none_type): [optional]  # noqa: E501
+            color (str, none_type):              Color of the priority in hexadecimal string without the '#' prefix.             Example: 'fff', 'fff0', '0f0f0f', '0f0f0f00'.         . [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

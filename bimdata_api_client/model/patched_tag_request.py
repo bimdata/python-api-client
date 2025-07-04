@@ -64,7 +64,7 @@ class PatchedTagRequest(ModelNormal):
             'min_length': 1,
         },
         ('color',): {
-            'max_length': 6,
+            'max_length': 8,
         },
     }
 
@@ -145,7 +145,7 @@ class PatchedTagRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             name (str): Full name of the tags. [optional]  # noqa: E501
-            color (str, none_type): [optional]  # noqa: E501
+            color (str, none_type):              Color of the Tag status in hexadecimal string without the '#' prefix.             Example: 'fff', 'fff0', '0f0f0f', '0f0f0f00'.         . [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -228,7 +228,7 @@ class PatchedTagRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             name (str): Full name of the tags. [optional]  # noqa: E501
-            color (str, none_type): [optional]  # noqa: E501
+            color (str, none_type):              Color of the Tag status in hexadecimal string without the '#' prefix.             Example: 'fff', 'fff0', '0f0f0f', '0f0f0f00'.         . [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

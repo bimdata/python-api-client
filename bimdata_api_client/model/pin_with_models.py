@@ -128,7 +128,7 @@ class PinWithModels(ModelNormal):
         Args:
             guid (str):
             name (str, none_type):
-            color (str, none_type):
+            color (str, none_type):              Color of the pin in hexadecimal string without the '#' prefix.             Example: 'fff', 'fff0', '0f0f0f', '0f0f0f00'.         
             point (GeometryPoint):
             index (int, none_type):
             model_ids ([int]):
