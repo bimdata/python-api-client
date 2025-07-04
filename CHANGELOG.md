@@ -1,6 +1,32 @@
 # CHANGELOG
 
 
+## v10.17.0 (2025-07-04)
+
+### Feature
+
+- Minor: labeling API on JPEG, PNG & PDF model (#870)
+  ([`87bfe2f`](https://github.com/bimdata/python-api-client/commit/87bfe2fde61c964f29cea7b66bf4df74c71a6c3f))
+
+* Add basic labels.
+
+* WIP: label route for worker.
+
+* Add label retrieving at the org level.
+
+* Rename BCF Label view to avoid swagger warning about conflict
+
+* Add test for malicious requests on label routes.
+
+* Rename Model Label view & serialiser.
+
+* Rework color formating for label.
+
+* Compile the color regex.
+
+* Fix typo in help text describing color format.
+
+
 ## v10.16.2 (2025-06-12)
 
 ### Fix
