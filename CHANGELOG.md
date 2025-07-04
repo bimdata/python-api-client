@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.18.0 (2025-07-04)
+
+### Feature
+
+- Minor: Add color validator where it's possible. (#874)
+  ([`71c59ab`](https://github.com/bimdata/python-api-client/commit/71c59ab9c4b806efaf255ff88495dfb5497b6c48))
+
+
 ## v10.17.0 (2025-07-04)
 
 ### Feature
