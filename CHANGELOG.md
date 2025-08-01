@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.18.1 (2025-08-01)
+
+### Fix
+
+- Patch: add meta routes for model elements (#881)
+  ([`787dd4a`](https://github.com/bimdata/python-api-client/commit/787dd4a9e43bb1e6230fb4a403271c44e7ae6100))
+
+
 ## v10.18.0 (2025-07-04)
 
 ### Feature
