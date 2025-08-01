@@ -181,6 +181,7 @@ bimdata_api_client/model/project_role.py
 bimdata_api_client/model/project_size.py
 bimdata_api_client/model/property_definition.py
 bimdata_api_client/model/property_definition_request.py
+bimdata_api_client/model/property_list.py
 bimdata_api_client/model/property_request.py
 bimdata_api_client/model/property_set.py
 bimdata_api_client/model/property_set_request.py
@@ -452,6 +453,7 @@ docs/ProjectRole.md
 docs/ProjectSize.md
 docs/PropertyDefinition.md
 docs/PropertyDefinitionRequest.md
+docs/PropertyList.md
 docs/PropertyRequest.md
 docs/PropertySet.md
 docs/PropertySetRequest.md
@@ -726,6 +728,7 @@ test/test_project_role.py
 test/test_project_size.py
 test/test_property_definition.py
 test/test_property_definition_request.py
+test/test_property_list.py
 test/test_property_request.py
 test/test_property_set.py
 test/test_property_set_request.py

@@ -428,6 +428,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**get_models**](docs/ModelApi.md#get_models) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model | Retrieve all models
 *ModelApi* | [**get_processor_handler**](docs/ModelApi.md#get_processor_handler) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler/{id} | Retrieve a processor handler
 *ModelApi* | [**get_processor_handlers**](docs/ModelApi.md#get_processor_handlers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler | Get all processor handlers
+*ModelApi* | [**get_properties_types**](docs/ModelApi.md#get_properties_types) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/properties | Retrieve all property types and their value type used in this model
 *ModelApi* | [**get_property_set**](docs/ModelApi.md#get_property_set) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/{id} | Retrieve a PropertySet of a model
 *ModelApi* | [**get_property_sets**](docs/ModelApi.md#get_property_sets) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset | Retrieve all PropertySets of a model
 *ModelApi* | [**get_raw_elements**](docs/ModelApi.md#get_raw_elements) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/raw | Retrieve all elements in a optimized format
@@ -441,6 +442,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**get_system**](docs/ModelApi.md#get_system) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system/{uuid} | Retrieve a system of a model
 *ModelApi* | [**get_systems**](docs/ModelApi.md#get_systems) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system | Retrieve all systems of a model
 *ModelApi* | [**get_tileset**](docs/ModelApi.md#get_tileset) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/tileset | Retrieve the tileset of the model
+*ModelApi* | [**get_types**](docs/ModelApi.md#get_types) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/types | Retrieve all IFC Types used in this model
 *ModelApi* | [**get_zone**](docs/ModelApi.md#get_zone) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{id} | Retrieve one zone of a model
 *ModelApi* | [**get_zone_space**](docs/ModelApi.md#get_zone_space) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/{id} | Retrieve one space of a zone
 *ModelApi* | [**get_zone_spaces**](docs/ModelApi.md#get_zone_spaces) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space | Retrieve all spaces of a zone
@@ -673,6 +675,7 @@ Class | Method | HTTP request | Description
  - [ProjectSize](docs/ProjectSize.md)
  - [PropertyDefinition](docs/PropertyDefinition.md)
  - [PropertyDefinitionRequest](docs/PropertyDefinitionRequest.md)
+ - [PropertyList](docs/PropertyList.md)
  - [PropertyRequest](docs/PropertyRequest.md)
  - [PropertySet](docs/PropertySet.md)
  - [PropertySetRequest](docs/PropertySetRequest.md)

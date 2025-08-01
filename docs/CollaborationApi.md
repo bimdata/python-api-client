@@ -1299,14 +1299,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this project.
     write_folder_request = [
         WriteFolderRequest(
-            default_permission=1,
             parent_id=1,
             name="name_example",
+            default_permission=1,
             children=[
                 WriteFolder(
-                    default_permission=1,
                     parent_id=1,
                     name="name_example",
+                    default_permission=1,
                     children=None,
                 ),
             ],
@@ -1363,7 +1363,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'OBJ', 'DWG', 'IFC', 'GLTF', 'POINT_CLOUD', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'DWG', 'POINT_CLOUD', 'GLTF', 'DXF', 'OBJ', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 

@@ -780,6 +780,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_get_properties_types(self):
+        """Test case for get_properties_types
+
+        Retrieve all property types and their value type used in this model  # noqa: E501
+        """
+        pass
+
     def test_get_property_set(self):
         """Test case for get_property_set
 
@@ -868,6 +875,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for get_tileset
 
         Retrieve the tileset of the model  # noqa: E501
+        """
+        pass
+
+    def test_get_types(self):
+        """Test case for get_types
+
+        Retrieve all IFC Types used in this model  # noqa: E501
         """
         pass
 

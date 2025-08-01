@@ -112,6 +112,7 @@ Method | HTTP request | Description
 [**get_models**](ModelApi.md#get_models) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model | Retrieve all models
 [**get_processor_handler**](ModelApi.md#get_processor_handler) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler/{id} | Retrieve a processor handler
 [**get_processor_handlers**](ModelApi.md#get_processor_handlers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler | Get all processor handlers
+[**get_properties_types**](ModelApi.md#get_properties_types) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/properties | Retrieve all property types and their value type used in this model
 [**get_property_set**](ModelApi.md#get_property_set) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/{id} | Retrieve a PropertySet of a model
 [**get_property_sets**](ModelApi.md#get_property_sets) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset | Retrieve all PropertySets of a model
 [**get_raw_elements**](ModelApi.md#get_raw_elements) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/raw | Retrieve all elements in a optimized format
@@ -125,6 +126,7 @@ Method | HTTP request | Description
 [**get_system**](ModelApi.md#get_system) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system/{uuid} | Retrieve a system of a model
 [**get_systems**](ModelApi.md#get_systems) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system | Retrieve all systems of a model
 [**get_tileset**](ModelApi.md#get_tileset) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/tileset | Retrieve the tileset of the model
+[**get_types**](ModelApi.md#get_types) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/types | Retrieve all IFC Types used in this model
 [**get_zone**](ModelApi.md#get_zone) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{id} | Retrieve one zone of a model
 [**get_zone_space**](ModelApi.md#get_zone_space) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/{id} | Retrieve one space of a zone
 [**get_zone_spaces**](ModelApi.md#get_zone_spaces) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space | Retrieve all spaces of a zone
@@ -11292,6 +11294,113 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_properties_types**
+> [PropertyList] get_properties_types(cloud_pk, model_pk, project_pk)
+
+Retrieve all property types and their value type used in this model
+
+Retrieve all property types and their value type used in this model  Required scopes: ifc:read, model:read
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import model_api
+from bimdata_api_client.model.property_list import PropertyList
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    model_pk = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | A unique integer value identifying this project.
+    classification = "classification_example" # str |  (optional)
+    classification__notation = "classification__notation_example" # str |  (optional)
+    type = "type_example" # str |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Retrieve all property types and their value type used in this model
+        api_response = api_instance.get_properties_types(cloud_pk, model_pk, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->get_properties_types: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Retrieve all property types and their value type used in this model
+        api_response = api_instance.get_properties_types(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, type=type)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->get_properties_types: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **model_pk** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+ **classification** | **str**|  | [optional]
+ **classification__notation** | **str**|  | [optional]
+ **type** | **str**|  | [optional]
+
+### Return type
+
+[**[PropertyList]**](PropertyList.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_property_set**
 > PropertySet get_property_set(cloud_pk, id, model_pk, project_pk)
 
@@ -12542,6 +12651,98 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | No response body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_types**
+> [str] get_types(cloud_pk, model_pk, project_pk)
+
+Retrieve all IFC Types used in this model
+
+Retrieve all IFC Types used in this model  Required scopes: ifc:read, model:read
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import model_api
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    model_pk = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | A unique integer value identifying this project.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Retrieve all IFC Types used in this model
+        api_response = api_instance.get_types(cloud_pk, model_pk, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->get_types: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **model_pk** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+
+### Return type
+
+**[str]**
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
 **404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |

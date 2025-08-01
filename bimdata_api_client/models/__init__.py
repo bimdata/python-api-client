@@ -176,6 +176,7 @@ from bimdata_api_client.model.project_role import ProjectRole
 from bimdata_api_client.model.project_size import ProjectSize
 from bimdata_api_client.model.property_definition import PropertyDefinition
 from bimdata_api_client.model.property_definition_request import PropertyDefinitionRequest
+from bimdata_api_client.model.property_list import PropertyList
 from bimdata_api_client.model.property_request import PropertyRequest
 from bimdata_api_client.model.property_set import PropertySet
 from bimdata_api_client.model.property_set_request import PropertySetRequest
