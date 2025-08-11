@@ -399,6 +399,20 @@ conf = bimdata_api_client.Configuration(
                     'ApiKey',
                 ),
             }
+        if self.access_token is not None:
+            auth['BIMData_Connect'] = {
+                'type': 'oauth2',
+                'in': 'header',
+                'key': 'Authorization',
+                'value': 'Bearer ' + self.access_token
+            }
+        if self.access_token is not None:
+            auth['BIMData_Connect'] = {
+                'type': 'oauth2',
+                'in': 'header',
+                'key': 'Authorization',
+                'value': 'Bearer ' + self.access_token
+            }
         if 'Bearer' in self.api_key:
             auth['Bearer'] = {
                 'type': 'api_key',

@@ -119,6 +119,8 @@ class ModelApi(object):
                 'response_type': (ModelErrors,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/errors',
@@ -191,6 +193,8 @@ class ModelApi(object):
                 'response_type': (ZoneSpace,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/add',
@@ -270,6 +274,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/list_destroy',
@@ -340,6 +346,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/bulk_destroy',
@@ -411,6 +419,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/bulk_destroy',
@@ -482,6 +492,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/bulk_destroy',
@@ -553,6 +565,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/bulk_destroy',
@@ -624,6 +638,8 @@ class ModelApi(object):
                 'response_type': ([Element],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/bulk_update',
@@ -712,6 +728,8 @@ class ModelApi(object):
                 'response_type': ([ModelProperty],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/bulk_update',
@@ -785,6 +803,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/classification/bulk_destroy',
@@ -862,6 +882,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/documents/bulk_destroy',
@@ -939,6 +961,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element/bulk_destroy',
@@ -1016,6 +1040,8 @@ class ModelApi(object):
                 'response_type': ([Element],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/bulk_update',
@@ -1104,6 +1130,8 @@ class ModelApi(object):
                 'response_type': ([ModelProperty],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/bulk_update',
@@ -1177,6 +1205,8 @@ class ModelApi(object):
                 'response_type': (IfcAccessToken,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token',
@@ -1249,6 +1279,8 @@ class ModelApi(object):
                 'response_type': (Building,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building',
@@ -1322,6 +1354,8 @@ class ModelApi(object):
                 'response_type': (Building,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/add',
@@ -1401,6 +1435,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification-element',
@@ -1472,6 +1508,8 @@ class ModelApi(object):
                 'response_type': ([Classification],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/classification',
@@ -1551,6 +1589,8 @@ class ModelApi(object):
                 'response_type': (Drawing,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing',
@@ -1624,6 +1664,8 @@ class ModelApi(object):
                 'response_type': ([Element],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element',
@@ -1712,6 +1754,8 @@ class ModelApi(object):
                 'response_type': (PropertySet,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset',
@@ -1790,6 +1834,8 @@ class ModelApi(object):
                 'response_type': (ModelProperty,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property',
@@ -1875,6 +1921,8 @@ class ModelApi(object):
                 'response_type': (PropertyDefinition,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition',
@@ -1965,6 +2013,8 @@ class ModelApi(object):
                 'response_type': (Unit,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit',
@@ -2062,6 +2112,8 @@ class ModelApi(object):
                 'response_type': (ModelLabel,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label',
@@ -2135,6 +2187,8 @@ class ModelApi(object):
                 'response_type': (Layer,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer',
@@ -2208,6 +2262,8 @@ class ModelApi(object):
                 'response_type': (Mask2D,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d',
@@ -2280,6 +2336,8 @@ class ModelApi(object):
                 'response_type': (Model,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/create-metabuilding',
@@ -2347,6 +2405,8 @@ class ModelApi(object):
                 'response_type': (Model,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/create-model',
@@ -2414,6 +2474,8 @@ class ModelApi(object):
                 'response_type': ([PropertyDefinition],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition',
@@ -2487,6 +2549,8 @@ class ModelApi(object):
                 'response_type': ([Unit],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit',
@@ -2560,6 +2624,8 @@ class ModelApi(object):
                 'response_type': (Model,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/create-multipage-model',
@@ -2633,6 +2699,8 @@ class ModelApi(object):
                 'response_type': (Model,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/create-photosphere',
@@ -2700,6 +2768,8 @@ class ModelApi(object):
                 'response_type': (Model,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/create-photosphere-building',
@@ -2767,6 +2837,8 @@ class ModelApi(object):
                 'response_type': ([PropertySet],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset',
@@ -2840,6 +2912,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset-element',
@@ -2911,6 +2985,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/raw',
@@ -2982,6 +3058,8 @@ class ModelApi(object):
                 'response_type': ([Space],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space',
@@ -3055,6 +3133,8 @@ class ModelApi(object):
                 'response_type': (Storey,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey',
@@ -3128,6 +3208,8 @@ class ModelApi(object):
                 'response_type': (Storey,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/add',
@@ -3207,6 +3289,8 @@ class ModelApi(object):
                 'response_type': (System,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system',
@@ -3280,6 +3364,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/tileset',
@@ -3342,6 +3428,8 @@ class ModelApi(object):
                 'response_type': (XktFile,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/xkt-file',
@@ -3433,6 +3521,8 @@ class ModelApi(object):
                 'response_type': ([Zone],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone',
@@ -3511,6 +3601,8 @@ class ModelApi(object):
                 'response_type': (ZoneSpace,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space',
@@ -3590,6 +3682,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token}',
@@ -3658,6 +3752,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{uuid}',
@@ -3726,6 +3822,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/{id}',
@@ -3800,6 +3898,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id}',
@@ -3868,6 +3968,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid}',
@@ -3936,6 +4038,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id}',
@@ -4004,6 +4108,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id}',
@@ -4072,6 +4178,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d',
@@ -4134,6 +4242,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}',
@@ -4196,6 +4306,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id}',
@@ -4264,6 +4376,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id}',
@@ -4332,6 +4446,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id}',
@@ -4400,6 +4516,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/delete-model',
@@ -4462,6 +4580,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/{id}',
@@ -4530,6 +4650,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space/{id}',
@@ -4598,6 +4720,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{uuid}',
@@ -4666,6 +4790,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/{id}',
@@ -4740,6 +4866,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system/{uuid}',
@@ -4808,6 +4936,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{id}',
@@ -4876,6 +5006,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/{id}',
@@ -4950,6 +5082,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/export',
@@ -5021,6 +5155,8 @@ class ModelApi(object):
                 'response_type': (Element,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid}',
@@ -5100,6 +5236,8 @@ class ModelApi(object):
                 'response_type': (IfcAccessToken,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token}',
@@ -5170,6 +5308,8 @@ class ModelApi(object):
                 'response_type': ([IfcAccessToken],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token',
@@ -5234,6 +5374,8 @@ class ModelApi(object):
                 'response_type': (Building,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{uuid}',
@@ -5304,6 +5446,8 @@ class ModelApi(object):
                 'response_type': (PositioningPlan,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/{id}/positioning',
@@ -5380,6 +5524,8 @@ class ModelApi(object):
                 'response_type': ([Building],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building',
@@ -5444,6 +5590,8 @@ class ModelApi(object):
                 'response_type': ([Classification],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/classification',
@@ -5514,6 +5662,8 @@ class ModelApi(object):
                 'response_type': ([Document],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/documents',
@@ -5584,6 +5734,8 @@ class ModelApi(object):
                 'response_type': (Drawing,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id}',
@@ -5654,6 +5806,8 @@ class ModelApi(object):
                 'response_type': ([Drawing],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing',
@@ -5718,6 +5872,8 @@ class ModelApi(object):
                 'response_type': (Element,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid}',
@@ -5788,6 +5944,8 @@ class ModelApi(object):
                 'response_type': ([DocumentWithElementList],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/documents',
@@ -5867,6 +6025,8 @@ class ModelApi(object):
                 'response_type': (PropertySet,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{id}',
@@ -5943,6 +6103,8 @@ class ModelApi(object):
                 'response_type': ([ModelProperty],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property',
@@ -6019,6 +6181,8 @@ class ModelApi(object):
                 'response_type': (ModelProperty,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id}',
@@ -6101,6 +6265,8 @@ class ModelApi(object):
                 'response_type': (PropertyDefinition,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{id}',
@@ -6189,6 +6355,8 @@ class ModelApi(object):
                 'response_type': (Unit,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit/{id}',
@@ -6283,6 +6451,8 @@ class ModelApi(object):
                 'response_type': ([Unit],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit',
@@ -6371,6 +6541,8 @@ class ModelApi(object):
                 'response_type': ([PropertyDefinition],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition',
@@ -6453,6 +6625,8 @@ class ModelApi(object):
                 'response_type': ([PropertySet],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset',
@@ -6523,6 +6697,8 @@ class ModelApi(object):
                 'response_type': ([Element],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element',
@@ -6602,6 +6778,8 @@ class ModelApi(object):
                 'response_type': ([Element],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element',
@@ -6672,6 +6850,8 @@ class ModelApi(object):
                 'response_type': (ModelLabel,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id}',
@@ -6742,6 +6922,8 @@ class ModelApi(object):
                 'response_type': ([ModelLabel],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label',
@@ -6811,6 +6993,8 @@ class ModelApi(object):
                 'response_type': (Layer,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id}',
@@ -6881,6 +7065,8 @@ class ModelApi(object):
                 'response_type': ([Layer],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer',
@@ -6945,6 +7131,8 @@ class ModelApi(object):
                 'response_type': (Material,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/material/{id}',
@@ -7021,6 +7209,8 @@ class ModelApi(object):
                 'response_type': ([Material],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/material',
@@ -7091,6 +7281,8 @@ class ModelApi(object):
                 'response_type': (Model,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}',
@@ -7155,6 +7347,8 @@ class ModelApi(object):
                 'response_type': ([Classification],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification',
@@ -7219,6 +7413,8 @@ class ModelApi(object):
                 'response_type': (Material,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/material/{id}',
@@ -7289,6 +7485,8 @@ class ModelApi(object):
                 'response_type': ([Material],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/material',
@@ -7353,6 +7551,8 @@ class ModelApi(object):
                 'response_type': ([ModelProperty],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property',
@@ -7417,6 +7617,8 @@ class ModelApi(object):
                 'response_type': (ModelProperty,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id}',
@@ -7487,6 +7689,8 @@ class ModelApi(object):
                 'response_type': (PropertyDefinition,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id}',
@@ -7557,6 +7761,8 @@ class ModelApi(object):
                 'response_type': ([PropertyDefinition],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition',
@@ -7621,6 +7827,8 @@ class ModelApi(object):
                 'response_type': (Unit,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id}',
@@ -7691,6 +7899,8 @@ class ModelApi(object):
                 'response_type': ([Unit],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit',
@@ -7755,6 +7965,8 @@ class ModelApi(object):
                 'response_type': ([Model],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model',
@@ -7866,6 +8078,8 @@ class ModelApi(object):
                 'response_type': (ProcessorHandler,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler/{id}',
@@ -7936,6 +8150,8 @@ class ModelApi(object):
                 'response_type': ([ProcessorHandler],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler',
@@ -8000,6 +8216,8 @@ class ModelApi(object):
                 'response_type': ([PropertyList],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/properties',
@@ -8079,6 +8297,8 @@ class ModelApi(object):
                 'response_type': (PropertySet,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/{id}',
@@ -8149,6 +8369,8 @@ class ModelApi(object):
                 'response_type': ([PropertySet],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset',
@@ -8213,6 +8435,8 @@ class ModelApi(object):
                 'response_type': (RawElements,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/raw',
@@ -8292,6 +8516,8 @@ class ModelApi(object):
                 'response_type': (SimpleElement,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid}/simple',
@@ -8362,6 +8588,8 @@ class ModelApi(object):
                 'response_type': (SimpleElement,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/simple',
@@ -8441,6 +8669,8 @@ class ModelApi(object):
                 'response_type': (Space,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space/{id}',
@@ -8511,6 +8741,8 @@ class ModelApi(object):
                 'response_type': ([Space],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space',
@@ -8575,6 +8807,8 @@ class ModelApi(object):
                 'response_type': (Storey,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{uuid}',
@@ -8645,6 +8879,8 @@ class ModelApi(object):
                 'response_type': (PositioningPlan,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/{id}/positioning',
@@ -8721,6 +8957,8 @@ class ModelApi(object):
                 'response_type': ([Storey],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey',
@@ -8785,6 +9023,8 @@ class ModelApi(object):
                 'response_type': (System,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system/{uuid}',
@@ -8855,6 +9095,8 @@ class ModelApi(object):
                 'response_type': ([System],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system',
@@ -8919,6 +9161,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/tileset',
@@ -8992,6 +9236,8 @@ class ModelApi(object):
                 'response_type': ([str],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/types',
@@ -9056,6 +9302,8 @@ class ModelApi(object):
                 'response_type': (Zone,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{id}',
@@ -9126,6 +9374,8 @@ class ModelApi(object):
                 'response_type': (ZoneSpace,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/{id}',
@@ -9202,6 +9452,8 @@ class ModelApi(object):
                 'response_type': ([ZoneSpace],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space',
@@ -9272,6 +9524,8 @@ class ModelApi(object):
                 'response_type': ([Zone],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone',
@@ -9341,6 +9595,8 @@ class ModelApi(object):
                 'response_type': ([Document],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/documents',
@@ -9420,6 +9676,8 @@ class ModelApi(object):
                 'response_type': ([ElementClassificationRelation],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification-element',
@@ -9484,6 +9742,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/merge',
@@ -9549,6 +9809,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/optimize',
@@ -9619,6 +9881,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/all',
@@ -9687,6 +9951,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/classification/{id}',
@@ -9761,6 +10027,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/documents/{id}',
@@ -9835,6 +10103,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{id}',
@@ -9909,6 +10179,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id}',
@@ -9989,6 +10261,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{id}',
@@ -10075,6 +10349,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit/{id}',
@@ -10167,6 +10443,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element/{uuid}',
@@ -10241,6 +10519,8 @@ class ModelApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/reprocess',
@@ -10303,6 +10583,8 @@ class ModelApi(object):
                 'response_type': (IfcAccessToken,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token}',
@@ -10381,6 +10663,8 @@ class ModelApi(object):
                 'response_type': (Building,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{uuid}',
@@ -10459,6 +10743,8 @@ class ModelApi(object):
                 'response_type': (PositioningPlan,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/{id}/positioning',
@@ -10543,6 +10829,8 @@ class ModelApi(object):
                 'response_type': (Drawing,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id}',
@@ -10621,6 +10909,8 @@ class ModelApi(object):
                 'response_type': (Element,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid}',
@@ -10699,6 +10989,8 @@ class ModelApi(object):
                 'response_type': (ModelProperty,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id}',
@@ -10789,6 +11081,8 @@ class ModelApi(object):
                 'response_type': (ModelLabel,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id}',
@@ -10867,6 +11161,8 @@ class ModelApi(object):
                 'response_type': (Layer,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id}',
@@ -10945,6 +11241,8 @@ class ModelApi(object):
                 'response_type': (Mask2D,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d',
@@ -11017,6 +11315,8 @@ class ModelApi(object):
                 'response_type': (Model,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}',
@@ -11089,6 +11389,8 @@ class ModelApi(object):
                 'response_type': (ModelFiles,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/files',
@@ -11198,6 +11500,8 @@ class ModelApi(object):
                 'response_type': (ModelProperty,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id}',
@@ -11276,6 +11580,8 @@ class ModelApi(object):
                 'response_type': (PropertyDefinition,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id}',
@@ -11354,6 +11660,8 @@ class ModelApi(object):
                 'response_type': (Transform,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/transform',
@@ -11426,6 +11734,8 @@ class ModelApi(object):
                 'response_type': (Unit,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id}',
@@ -11504,6 +11814,8 @@ class ModelApi(object):
                 'response_type': (Storey,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/order',
@@ -11583,6 +11895,8 @@ class ModelApi(object):
                 'response_type': (Storey,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/order',
@@ -11662,6 +11976,8 @@ class ModelApi(object):
                 'response_type': ([Storey],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/order',
@@ -11735,6 +12051,8 @@ class ModelApi(object):
                 'response_type': (ProcessorHandler,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler/{id}',
@@ -11813,6 +12131,8 @@ class ModelApi(object):
                 'response_type': (PropertySet,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/{id}',
@@ -11891,6 +12211,8 @@ class ModelApi(object):
                 'response_type': (Space,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space/{id}',
@@ -11969,6 +12291,8 @@ class ModelApi(object):
                 'response_type': (Storey,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{uuid}',
@@ -12047,6 +12371,8 @@ class ModelApi(object):
                 'response_type': (PositioningPlan,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/{id}/positioning',
@@ -12131,6 +12457,8 @@ class ModelApi(object):
                 'response_type': (System,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system/{uuid}',
@@ -12209,6 +12537,8 @@ class ModelApi(object):
                 'response_type': (Zone,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{id}',
@@ -12287,6 +12617,8 @@ class ModelApi(object):
                 'response_type': (ZoneSpace,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/{id}',

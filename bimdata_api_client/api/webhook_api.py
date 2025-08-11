@@ -43,6 +43,8 @@ class WebhookApi(object):
                 'response_type': (WebHook,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/webhook',
@@ -110,6 +112,8 @@ class WebhookApi(object):
                 'response_type': (WebHook,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/webhook',
@@ -171,6 +175,8 @@ class WebhookApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/webhook/{id}',
@@ -233,6 +239,8 @@ class WebhookApi(object):
                 'response_type': None,
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/webhook/{id}',
@@ -289,6 +297,8 @@ class WebhookApi(object):
                 'response_type': (WebHook,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/webhook/{id}',
@@ -353,6 +363,8 @@ class WebhookApi(object):
                 'response_type': ([WebHook],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/webhook',
@@ -411,6 +423,8 @@ class WebhookApi(object):
                 'response_type': (WebHook,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/webhook/{id}',
@@ -469,6 +483,8 @@ class WebhookApi(object):
                 'response_type': ([WebHook],),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/webhook',
@@ -521,6 +537,8 @@ class WebhookApi(object):
                 'response_type': (WebHook,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/webhook/{id}/ping',
@@ -594,6 +612,8 @@ class WebhookApi(object):
                 'response_type': (WebHook,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/webhook/{id}/ping',
@@ -661,6 +681,8 @@ class WebhookApi(object):
                 'response_type': (WebHook,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/webhook/{id}',
@@ -733,6 +755,8 @@ class WebhookApi(object):
                 'response_type': (WebHook,),
                 'auth': [
                     'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/webhook/{id}',
