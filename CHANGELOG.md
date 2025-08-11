@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.19.0 (2025-08-11)
+
+### Feature
+
+- Minor: Add full path in document route (empty commit for release)
+  ([`1bd6c69`](https://github.com/bimdata/python-api-client/commit/1bd6c69dac891c7717d18836cc86e12a192a219c))
+
+
 ## v10.18.1 (2025-08-01)
 
 ### Fix
