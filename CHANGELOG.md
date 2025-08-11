@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.19.2 (2025-08-11)
+
+### Fix
+
+- Patch: fix declared auth method in openapi
+  ([`f451301`](https://github.com/bimdata/python-api-client/commit/f4513015d69da9bfe1f242af014ffc8e063cdc40))
+
+
 ## v10.19.1 (2025-08-11)
 
 ### Fix
