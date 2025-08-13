@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.19.3 (2025-08-13)
+
+### Fix
+
+- Patch: add property filters (#883)
+  ([`02e59c8`](https://github.com/bimdata/python-api-client/commit/02e59c85807b4b5d4bfb2e74e555917c19f0796e))
+
+* add property filters
+
+* remove test of atrtibutes
+
+
 ## v10.19.2 (2025-08-11)
 
 ### Fix
