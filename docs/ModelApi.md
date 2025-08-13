@@ -1097,6 +1097,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     ] # [ElementRequest] | 
     classification = "classification_example" # str |  (optional)
     classification__notation = "classification__notation_example" # str |  (optional)
+    property_filter = "property_filter_example" # str |  (optional)
     type = "type_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -1111,7 +1112,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Update many elements at once (only changing fields may be defined)
-        api_response = api_instance.bulk_full_update_elements(cloud_pk, model_pk, project_pk, element_request, classification=classification, classification__notation=classification__notation, type=type)
+        api_response = api_instance.bulk_full_update_elements(cloud_pk, model_pk, project_pk, element_request, classification=classification, classification__notation=classification__notation, property_filter=property_filter, type=type)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->bulk_full_update_elements: %s\n" % e)
@@ -1128,6 +1129,7 @@ Name | Type | Description  | Notes
  **element_request** | [**[ElementRequest]**](ElementRequest.md)|  |
  **classification** | **str**|  | [optional]
  **classification__notation** | **str**|  | [optional]
+ **property_filter** | **str**|  | [optional]
  **type** | **str**|  | [optional]
 
 ### Return type
@@ -1736,6 +1738,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     ] # [ElementRequest] | 
     classification = "classification_example" # str |  (optional)
     classification__notation = "classification__notation_example" # str |  (optional)
+    property_filter = "property_filter_example" # str |  (optional)
     type = "type_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -1750,7 +1753,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Update many elements at once (all field must be defined)
-        api_response = api_instance.bulk_update_elements(cloud_pk, model_pk, project_pk, element_request, classification=classification, classification__notation=classification__notation, type=type)
+        api_response = api_instance.bulk_update_elements(cloud_pk, model_pk, project_pk, element_request, classification=classification, classification__notation=classification__notation, property_filter=property_filter, type=type)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->bulk_update_elements: %s\n" % e)
@@ -1767,6 +1770,7 @@ Name | Type | Description  | Notes
  **element_request** | [**[ElementRequest]**](ElementRequest.md)|  |
  **classification** | **str**|  | [optional]
  **classification__notation** | **str**|  | [optional]
+ **property_filter** | **str**|  | [optional]
  **type** | **str**|  | [optional]
 
 ### Return type
@@ -2737,6 +2741,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     ] # [ElementRequest] | 
     classification = "classification_example" # str |  (optional)
     classification__notation = "classification__notation_example" # str |  (optional)
+    property_filter = "property_filter_example" # str |  (optional)
     type = "type_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -2751,7 +2756,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Create an element in the model
-        api_response = api_instance.create_element(cloud_pk, model_pk, project_pk, element_request, classification=classification, classification__notation=classification__notation, type=type)
+        api_response = api_instance.create_element(cloud_pk, model_pk, project_pk, element_request, classification=classification, classification__notation=classification__notation, property_filter=property_filter, type=type)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->create_element: %s\n" % e)
@@ -2768,6 +2773,7 @@ Name | Type | Description  | Notes
  **element_request** | [**[ElementRequest]**](ElementRequest.md)|  |
  **classification** | **str**|  | [optional]
  **classification__notation** | **str**|  | [optional]
+ **property_filter** | **str**|  | [optional]
  **type** | **str**|  | [optional]
 
 ### Return type
@@ -9381,7 +9387,7 @@ Name | Type | Description  | Notes
 
 Retrieve an element of a model
 
-Retrieve an element of a model  Required scopes: ifc:read, model:read
+Retrieve an element of a model      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operande\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operande\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read
 
 ### Example
 
@@ -9549,6 +9555,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     classification = "classification_example" # str |  (optional)
     classification__notation = "classification__notation_example" # str |  (optional)
+    property_filter = "property_filter_example" # str |  (optional)
     type = "type_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -9563,7 +9570,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Retrieve all documents linked to any element
-        api_response = api_instance.get_element_linked_documents(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, type=type)
+        api_response = api_instance.get_element_linked_documents(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, property_filter=property_filter, type=type)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->get_element_linked_documents: %s\n" % e)
@@ -9579,6 +9586,7 @@ Name | Type | Description  | Notes
  **project_pk** | **int**| A unique integer value identifying this project. |
  **classification** | **str**|  | [optional]
  **classification__notation** | **str**|  | [optional]
+ **property_filter** | **str**|  | [optional]
  **type** | **str**|  | [optional]
 
 ### Return type
@@ -10511,7 +10519,7 @@ Name | Type | Description  | Notes
 
 Retrieve all elements of a model
 
-Retrieve all elements of a model. If not filtered, the json may be very large. To efficently retrieve all elements and their data, see getRawElements  Required scopes: ifc:read, model:read
+Retrieve all elements of a model. If not filtered, the json may be very large. To efficently retrieve all elements and their data, see `getRawElements` or `getSimpleElements`      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operande\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operande\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read
 
 ### Example
 
@@ -10570,6 +10578,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     classification = "classification_example" # str |  (optional)
     classification__notation = "classification__notation_example" # str |  (optional)
+    property_filter = "property_filter_example" # str |  (optional)
     type = "type_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -10584,7 +10593,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Retrieve all elements of a model
-        api_response = api_instance.get_elements(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, type=type)
+        api_response = api_instance.get_elements(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, property_filter=property_filter, type=type)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->get_elements: %s\n" % e)
@@ -10600,6 +10609,7 @@ Name | Type | Description  | Notes
  **project_pk** | **int**| A unique integer value identifying this project. |
  **classification** | **str**|  | [optional]
  **classification__notation** | **str**|  | [optional]
+ **property_filter** | **str**|  | [optional]
  **type** | **str**|  | [optional]
 
 ### Return type
@@ -12870,6 +12880,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     classification = "classification_example" # str |  (optional)
     classification__notation = "classification__notation_example" # str |  (optional)
+    property_filter = "property_filter_example" # str |  (optional)
     type = "type_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -12884,7 +12895,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Retrieve all property types and their value type used in this model
-        api_response = api_instance.get_properties_types(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, type=type)
+        api_response = api_instance.get_properties_types(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, property_filter=property_filter, type=type)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->get_properties_types: %s\n" % e)
@@ -12900,6 +12911,7 @@ Name | Type | Description  | Notes
  **project_pk** | **int**| A unique integer value identifying this project. |
  **classification** | **str**|  | [optional]
  **classification__notation** | **str**|  | [optional]
+ **property_filter** | **str**|  | [optional]
  **type** | **str**|  | [optional]
 
 ### Return type
@@ -13147,7 +13159,7 @@ Name | Type | Description  | Notes
 
 Retrieve all elements in a optimized format
 
-Instead of a nested representation, this route respond with a flat structure and indices pointing to related object. The IFC file will not be updated. The created elements will be accessible over the API and when exporting an IFC file. Returns elements, property_sets, properties, definitions and units in a JSON optimized structure  Required scopes: ifc:read, model:read
+Instead of a nested representation, this route respond with a flat structure and indices pointing to related object. The IFC file will not be updated. The created elements will be accessible over the API and when exporting an IFC file. Returns elements, property_sets, properties, definitions and units in a JSON optimized structure      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operande\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operande\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read
 
 ### Example
 
@@ -13206,6 +13218,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     classification = "classification_example" # str |  (optional)
     classification__notation = "classification__notation_example" # str |  (optional)
+    property_filter = "property_filter_example" # str |  (optional)
     type = "type_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -13220,7 +13233,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Retrieve all elements in a optimized format
-        api_response = api_instance.get_raw_elements(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, type=type)
+        api_response = api_instance.get_raw_elements(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, property_filter=property_filter, type=type)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->get_raw_elements: %s\n" % e)
@@ -13236,6 +13249,7 @@ Name | Type | Description  | Notes
  **project_pk** | **int**| A unique integer value identifying this project. |
  **classification** | **str**|  | [optional]
  **classification__notation** | **str**|  | [optional]
+ **property_filter** | **str**|  | [optional]
  **type** | **str**|  | [optional]
 
 ### Return type
@@ -13378,7 +13392,7 @@ Name | Type | Description  | Notes
 
 Retrieve all elements of a model with a simple value representation
 
-Retrieve all elements of a model with a simple value representation  Required scopes: ifc:read, model:read
+Retrieve all elements of a model with a simple value representation      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operande\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operande\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read
 
 ### Example
 
@@ -13437,6 +13451,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     classification = "classification_example" # str |  (optional)
     classification__notation = "classification__notation_example" # str |  (optional)
+    property_filter = "property_filter_example" # str |  (optional)
     type = "type_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -13451,7 +13466,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Retrieve all elements of a model with a simple value representation
-        api_response = api_instance.get_simple_elements(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, type=type)
+        api_response = api_instance.get_simple_elements(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, property_filter=property_filter, type=type)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->get_simple_elements: %s\n" % e)
@@ -13467,6 +13482,7 @@ Name | Type | Description  | Notes
  **project_pk** | **int**| A unique integer value identifying this project. |
  **classification** | **str**|  | [optional]
  **classification__notation** | **str**|  | [optional]
+ **property_filter** | **str**|  | [optional]
  **type** | **str**|  | [optional]
 
 ### Return type

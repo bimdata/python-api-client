@@ -655,6 +655,7 @@ class ModelApi(object):
                     'element_request',
                     'classification',
                     'classification__notation',
+                    'property_filter',
                     'type',
                 ],
                 'required': [
@@ -688,6 +689,8 @@ class ModelApi(object):
                         (str,),
                     'classification__notation':
                         (str,),
+                    'property_filter':
+                        (str,),
                     'type':
                         (str,),
                 },
@@ -697,6 +700,7 @@ class ModelApi(object):
                     'project_pk': 'project_pk',
                     'classification': 'classification',
                     'classification__notation': 'classification__notation',
+                    'property_filter': 'property_filter',
                     'type': 'type',
                 },
                 'location_map': {
@@ -706,6 +710,7 @@ class ModelApi(object):
                     'element_request': 'body',
                     'classification': 'query',
                     'classification__notation': 'query',
+                    'property_filter': 'query',
                     'type': 'query',
                 },
                 'collection_format_map': {
@@ -1057,6 +1062,7 @@ class ModelApi(object):
                     'element_request',
                     'classification',
                     'classification__notation',
+                    'property_filter',
                     'type',
                 ],
                 'required': [
@@ -1090,6 +1096,8 @@ class ModelApi(object):
                         (str,),
                     'classification__notation':
                         (str,),
+                    'property_filter':
+                        (str,),
                     'type':
                         (str,),
                 },
@@ -1099,6 +1107,7 @@ class ModelApi(object):
                     'project_pk': 'project_pk',
                     'classification': 'classification',
                     'classification__notation': 'classification__notation',
+                    'property_filter': 'property_filter',
                     'type': 'type',
                 },
                 'location_map': {
@@ -1108,6 +1117,7 @@ class ModelApi(object):
                     'element_request': 'body',
                     'classification': 'query',
                     'classification__notation': 'query',
+                    'property_filter': 'query',
                     'type': 'query',
                 },
                 'collection_format_map': {
@@ -1681,6 +1691,7 @@ class ModelApi(object):
                     'element_request',
                     'classification',
                     'classification__notation',
+                    'property_filter',
                     'type',
                 ],
                 'required': [
@@ -1714,6 +1725,8 @@ class ModelApi(object):
                         (str,),
                     'classification__notation':
                         (str,),
+                    'property_filter':
+                        (str,),
                     'type':
                         (str,),
                 },
@@ -1723,6 +1736,7 @@ class ModelApi(object):
                     'project_pk': 'project_pk',
                     'classification': 'classification',
                     'classification__notation': 'classification__notation',
+                    'property_filter': 'property_filter',
                     'type': 'type',
                 },
                 'location_map': {
@@ -1732,6 +1746,7 @@ class ModelApi(object):
                     'element_request': 'body',
                     'classification': 'query',
                     'classification__notation': 'query',
+                    'property_filter': 'query',
                     'type': 'query',
                 },
                 'collection_format_map': {
@@ -5960,6 +5975,7 @@ class ModelApi(object):
                     'project_pk',
                     'classification',
                     'classification__notation',
+                    'property_filter',
                     'type',
                 ],
                 'required': [
@@ -5990,6 +6006,8 @@ class ModelApi(object):
                         (str,),
                     'classification__notation':
                         (str,),
+                    'property_filter':
+                        (str,),
                     'type':
                         (str,),
                 },
@@ -5999,6 +6017,7 @@ class ModelApi(object):
                     'project_pk': 'project_pk',
                     'classification': 'classification',
                     'classification__notation': 'classification__notation',
+                    'property_filter': 'property_filter',
                     'type': 'type',
                 },
                 'location_map': {
@@ -6007,6 +6026,7 @@ class ModelApi(object):
                     'project_pk': 'path',
                     'classification': 'query',
                     'classification__notation': 'query',
+                    'property_filter': 'query',
                     'type': 'query',
                 },
                 'collection_format_map': {
@@ -6713,6 +6733,7 @@ class ModelApi(object):
                     'project_pk',
                     'classification',
                     'classification__notation',
+                    'property_filter',
                     'type',
                 ],
                 'required': [
@@ -6743,6 +6764,8 @@ class ModelApi(object):
                         (str,),
                     'classification__notation':
                         (str,),
+                    'property_filter':
+                        (str,),
                     'type':
                         (str,),
                 },
@@ -6752,6 +6775,7 @@ class ModelApi(object):
                     'project_pk': 'project_pk',
                     'classification': 'classification',
                     'classification__notation': 'classification__notation',
+                    'property_filter': 'property_filter',
                     'type': 'type',
                 },
                 'location_map': {
@@ -6760,6 +6784,7 @@ class ModelApi(object):
                     'project_pk': 'path',
                     'classification': 'query',
                     'classification__notation': 'query',
+                    'property_filter': 'query',
                     'type': 'query',
                 },
                 'collection_format_map': {
@@ -8232,6 +8257,7 @@ class ModelApi(object):
                     'project_pk',
                     'classification',
                     'classification__notation',
+                    'property_filter',
                     'type',
                 ],
                 'required': [
@@ -8262,6 +8288,8 @@ class ModelApi(object):
                         (str,),
                     'classification__notation':
                         (str,),
+                    'property_filter':
+                        (str,),
                     'type':
                         (str,),
                 },
@@ -8271,6 +8299,7 @@ class ModelApi(object):
                     'project_pk': 'project_pk',
                     'classification': 'classification',
                     'classification__notation': 'classification__notation',
+                    'property_filter': 'property_filter',
                     'type': 'type',
                 },
                 'location_map': {
@@ -8279,6 +8308,7 @@ class ModelApi(object):
                     'project_pk': 'path',
                     'classification': 'query',
                     'classification__notation': 'query',
+                    'property_filter': 'query',
                     'type': 'query',
                 },
                 'collection_format_map': {
@@ -8451,6 +8481,7 @@ class ModelApi(object):
                     'project_pk',
                     'classification',
                     'classification__notation',
+                    'property_filter',
                     'type',
                 ],
                 'required': [
@@ -8481,6 +8512,8 @@ class ModelApi(object):
                         (str,),
                     'classification__notation':
                         (str,),
+                    'property_filter':
+                        (str,),
                     'type':
                         (str,),
                 },
@@ -8490,6 +8523,7 @@ class ModelApi(object):
                     'project_pk': 'project_pk',
                     'classification': 'classification',
                     'classification__notation': 'classification__notation',
+                    'property_filter': 'property_filter',
                     'type': 'type',
                 },
                 'location_map': {
@@ -8498,6 +8532,7 @@ class ModelApi(object):
                     'project_pk': 'path',
                     'classification': 'query',
                     'classification__notation': 'query',
+                    'property_filter': 'query',
                     'type': 'query',
                 },
                 'collection_format_map': {
@@ -8604,6 +8639,7 @@ class ModelApi(object):
                     'project_pk',
                     'classification',
                     'classification__notation',
+                    'property_filter',
                     'type',
                 ],
                 'required': [
@@ -8634,6 +8670,8 @@ class ModelApi(object):
                         (str,),
                     'classification__notation':
                         (str,),
+                    'property_filter':
+                        (str,),
                     'type':
                         (str,),
                 },
@@ -8643,6 +8681,7 @@ class ModelApi(object):
                     'project_pk': 'project_pk',
                     'classification': 'classification',
                     'classification__notation': 'classification__notation',
+                    'property_filter': 'property_filter',
                     'type': 'type',
                 },
                 'location_map': {
@@ -8651,6 +8690,7 @@ class ModelApi(object):
                     'project_pk': 'path',
                     'classification': 'query',
                     'classification__notation': 'query',
+                    'property_filter': 'query',
                     'type': 'query',
                 },
                 'collection_format_map': {
@@ -13353,6 +13393,7 @@ class ModelApi(object):
         Keyword Args:
             classification (str): [optional]
             classification__notation (str): [optional]
+            property_filter (str): [optional]
             type (str): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -13818,6 +13859,7 @@ class ModelApi(object):
         Keyword Args:
             classification (str): [optional]
             classification__notation (str): [optional]
+            property_filter (str): [optional]
             type (str): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -14546,6 +14588,7 @@ class ModelApi(object):
         Keyword Args:
             classification (str): [optional]
             classification__notation (str): [optional]
+            property_filter (str): [optional]
             type (str): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -19684,7 +19727,7 @@ class ModelApi(object):
     ):
         """Retrieve an element of a model  # noqa: E501
 
-        Retrieve an element of a model  Required scopes: ifc:read, model:read  # noqa: E501
+        Retrieve an element of a model      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operande\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operande\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -19788,6 +19831,7 @@ class ModelApi(object):
         Keyword Args:
             classification (str): [optional]
             classification__notation (str): [optional]
+            property_filter (str): [optional]
             type (str): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -20646,7 +20690,7 @@ class ModelApi(object):
     ):
         """Retrieve all elements of a model  # noqa: E501
 
-        Retrieve all elements of a model. If not filtered, the json may be very large. To efficently retrieve all elements and their data, see getRawElements  Required scopes: ifc:read, model:read  # noqa: E501
+        Retrieve all elements of a model. If not filtered, the json may be very large. To efficently retrieve all elements and their data, see `getRawElements` or `getSimpleElements`      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operande\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operande\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -20661,6 +20705,7 @@ class ModelApi(object):
         Keyword Args:
             classification (str): [optional]
             classification__notation (str): [optional]
+            property_filter (str): [optional]
             type (str): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -22514,6 +22559,7 @@ class ModelApi(object):
         Keyword Args:
             classification (str): [optional]
             classification__notation (str): [optional]
+            property_filter (str): [optional]
             type (str): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -22764,7 +22810,7 @@ class ModelApi(object):
     ):
         """Retrieve all elements in a optimized format  # noqa: E501
 
-        Instead of a nested representation, this route respond with a flat structure and indices pointing to related object. The IFC file will not be updated. The created elements will be accessible over the API and when exporting an IFC file. Returns elements, property_sets, properties, definitions and units in a JSON optimized structure  Required scopes: ifc:read, model:read  # noqa: E501
+        Instead of a nested representation, this route respond with a flat structure and indices pointing to related object. The IFC file will not be updated. The created elements will be accessible over the API and when exporting an IFC file. Returns elements, property_sets, properties, definitions and units in a JSON optimized structure      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operande\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operande\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -22779,6 +22825,7 @@ class ModelApi(object):
         Keyword Args:
             classification (str): [optional]
             classification__notation (str): [optional]
+            property_filter (str): [optional]
             type (str): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
@@ -22943,7 +22990,7 @@ class ModelApi(object):
     ):
         """Retrieve all elements of a model with a simple value representation  # noqa: E501
 
-        Retrieve all elements of a model with a simple value representation  Required scopes: ifc:read, model:read  # noqa: E501
+        Retrieve all elements of a model with a simple value representation      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operande\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operande\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -22958,6 +23005,7 @@ class ModelApi(object):
         Keyword Args:
             classification (str): [optional]
             classification__notation (str): [optional]
+            property_filter (str): [optional]
             type (str): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
