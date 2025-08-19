@@ -1,6 +1,20 @@
 # CHANGELOG
 
 
+## v10.19.4 (2025-08-19)
+
+### Fix
+
+- Patch: better element filter (#889)
+  ([`907d342`](https://github.com/bimdata/python-api-client/commit/907d3422bfd2e1a438dcb34e3ed839a0215b8191))
+
+* better element filter
+
+* remove prints
+
+* limit max depth to 4
+
+
 ## v10.19.3 (2025-08-13)
 
 ### Fix
