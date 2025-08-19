@@ -9387,7 +9387,7 @@ Name | Type | Description  | Notes
 
 Retrieve an element of a model
 
-Retrieve an element of a model      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operande\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operande\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read
+Retrieve an element of a model      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operator\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operator\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read
 
 ### Example
 
@@ -10519,7 +10519,7 @@ Name | Type | Description  | Notes
 
 Retrieve all elements of a model
 
-Retrieve all elements of a model. If not filtered, the json may be very large. To efficently retrieve all elements and their data, see `getRawElements` or `getSimpleElements`      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operande\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operande\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read
+Retrieve all elements of a model. If not filtered, the json may be very large. To efficently retrieve all elements and their data, see `getRawElements` or `getSimpleElements`      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operator\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operator\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read
 
 ### Example
 
@@ -12881,7 +12881,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     classification = "classification_example" # str |  (optional)
     classification__notation = "classification__notation_example" # str |  (optional)
     property_filter = "property_filter_example" # str |  (optional)
-    type = "type_example" # str |  (optional)
+    type = "type_example" # str | Filter by IfcType (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -12912,7 +12912,7 @@ Name | Type | Description  | Notes
  **classification** | **str**|  | [optional]
  **classification__notation** | **str**|  | [optional]
  **property_filter** | **str**|  | [optional]
- **type** | **str**|  | [optional]
+ **type** | **str**| Filter by IfcType | [optional]
 
 ### Return type
 
@@ -13159,7 +13159,7 @@ Name | Type | Description  | Notes
 
 Retrieve all elements in a optimized format
 
-Instead of a nested representation, this route respond with a flat structure and indices pointing to related object. The IFC file will not be updated. The created elements will be accessible over the API and when exporting an IFC file. Returns elements, property_sets, properties, definitions and units in a JSON optimized structure      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operande\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operande\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read
+Instead of a nested representation, this route respond with a flat structure and indices pointing to related object. The IFC file will not be updated. The created elements will be accessible over the API and when exporting an IFC file. Returns elements, property_sets, properties, definitions and units in a JSON optimized structure      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operator\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operator\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read
 
 ### Example
 
@@ -13392,7 +13392,7 @@ Name | Type | Description  | Notes
 
 Retrieve all elements of a model with a simple value representation
 
-Retrieve all elements of a model with a simple value representation      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operande\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operande\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read
+Retrieve all elements of a model with a simple value representation      `property_filter` simple syntax:         {             \"name\": \"property_name\",             \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",             \"value\": \"property_value\"         }     `property_filter` combinatory syntax:         {             \"operator\": \"AND\" | \"OR\",             \"conditions\": [                 {                     \"operator\": \"AND\" | \"OR\",                     \"conditions\": [...],                 }                 // OR                 {                     \"name\": \"property_name\",                     \"comparator\": \"contains\" | \"icontains\" | \"exact\" | \"gt\" | \"gte\" | \"lt\" | \"lte\" | \"startswith\" | \"istartswith\" | \"endswith\" | \"iendswith\",                     \"value\": \"property_value\"                 },                 ...             ]         }       Required scopes: ifc:read, model:read
 
 ### Example
 
