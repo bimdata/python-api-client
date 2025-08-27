@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.19.5 (2025-08-27)
+
+### Fix
+
+- Patch: add size-ratios for create-multimodel (#891)
+  ([`f7fe306`](https://github.com/bimdata/python-api-client/commit/f7fe3067993abb0b03de225120133272365bcb73))
+
+
 ## v10.19.4 (2025-08-19)
 
 ### Fix
