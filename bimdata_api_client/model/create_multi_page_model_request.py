@@ -84,6 +84,7 @@ class CreateMultiPageModelRequest(ModelNormal):
         return {
             'map_files': ([file_type],),  # noqa: E501
             'layout_names': ([str], none_type,),  # noqa: E501
+            'size_ratios': ([float], none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -94,6 +95,7 @@ class CreateMultiPageModelRequest(ModelNormal):
     attribute_map = {
         'map_files': 'map_files',  # noqa: E501
         'layout_names': 'layout_names',  # noqa: E501
+        'size_ratios': 'size_ratios',  # noqa: E501
     }
 
     read_only_vars = {
@@ -141,6 +143,7 @@ class CreateMultiPageModelRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             layout_names ([str], none_type): [optional]  # noqa: E501
+            size_ratios ([float], none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,6 +230,7 @@ class CreateMultiPageModelRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             layout_names ([str], none_type): [optional]  # noqa: E501
+            size_ratios ([float], none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

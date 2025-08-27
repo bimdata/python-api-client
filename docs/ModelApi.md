@@ -4258,6 +4258,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         layout_names=[
             "layout_names_example",
         ],
+        size_ratios=[
+            3.14,
+        ],
     ) # CreateMultiPageModelRequest | 
 
     # example passing only required values which don't have defaults set
