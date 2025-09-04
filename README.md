@@ -322,6 +322,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**update_cloud**](docs/CollaborationApi.md#update_cloud) | **PATCH** /cloud/{id} | Update some fields of a cloud
 *CollaborationApi* | [**update_cloud_user**](docs/CollaborationApi.md#update_cloud_user) | **PATCH** /cloud/{cloud_pk}/user/{id} | Change the user role in the cloud
 *CollaborationApi* | [**update_document**](docs/CollaborationApi.md#update_document) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Update some fields of the document
+*CollaborationApi* | [**update_document_text**](docs/CollaborationApi.md#update_document_text) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id}/text | Update the text representation of a document
 *CollaborationApi* | [**update_folder**](docs/CollaborationApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Update some fields of a folder
 *CollaborationApi* | [**update_group_folder**](docs/CollaborationApi.md#update_group_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/group/{id} | Update the permission of a group on a folder. When propagate is set to True, the permission of all children in the folder will be updated.
 *CollaborationApi* | [**update_manage_group**](docs/CollaborationApi.md#update_manage_group) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Update some fields of a group
@@ -555,6 +556,7 @@ Class | Method | HTTP request | Description
  - [DirectionRequest](docs/DirectionRequest.md)
  - [Document](docs/Document.md)
  - [DocumentPreviewFile](docs/DocumentPreviewFile.md)
+ - [DocumentText](docs/DocumentText.md)
  - [DocumentWithElementList](docs/DocumentWithElementList.md)
  - [Drawing](docs/Drawing.md)
  - [DrawingRequest](docs/DrawingRequest.md)
@@ -627,6 +629,7 @@ Class | Method | HTTP request | Description
  - [PatchedCloudRequest](docs/PatchedCloudRequest.md)
  - [PatchedCommentRequest](docs/PatchedCommentRequest.md)
  - [PatchedDocumentRequest](docs/PatchedDocumentRequest.md)
+ - [PatchedDocumentTextRequest](docs/PatchedDocumentTextRequest.md)
  - [PatchedDrawingRequest](docs/PatchedDrawingRequest.md)
  - [PatchedElementRequest](docs/PatchedElementRequest.md)
  - [PatchedFolderWithoutChildrenRequest](docs/PatchedFolderWithoutChildrenRequest.md)

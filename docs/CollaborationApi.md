@@ -102,6 +102,7 @@ Method | HTTP request | Description
 [**update_cloud**](CollaborationApi.md#update_cloud) | **PATCH** /cloud/{id} | Update some fields of a cloud
 [**update_cloud_user**](CollaborationApi.md#update_cloud_user) | **PATCH** /cloud/{cloud_pk}/user/{id} | Change the user role in the cloud
 [**update_document**](CollaborationApi.md#update_document) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Update some fields of the document
+[**update_document_text**](CollaborationApi.md#update_document_text) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id}/text | Update the text representation of a document
 [**update_folder**](CollaborationApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Update some fields of a folder
 [**update_group_folder**](CollaborationApi.md#update_group_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/group/{id} | Update the permission of a group on a folder. When propagate is set to True, the permission of all children in the folder will be updated.
 [**update_manage_group**](CollaborationApi.md#update_manage_group) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Update some fields of a group
@@ -1545,7 +1546,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'GLTF', 'IFC', 'OBJ', 'POINT_CLOUD', 'DXF', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'IFC', 'POINT_CLOUD', 'DWG', 'DXF', 'GLTF', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -5591,7 +5592,7 @@ Name | Type | Description  | Notes
 
 Retrieve all documents
 
-Retrieve all documents in the project. Filters are case insentive  Required scopes: document:read
+Retrieve all documents in the project. Filters are case insentive. Search filter only works if AI features are enabled.  Required scopes: document:read
 
 ### Example
 
@@ -5663,11 +5664,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     name__contains = "name__contains_example" # str |  (optional)
     name__endswith = "name__endswith_example" # str |  (optional)
     name__startswith = "name__startswith_example" # str |  (optional)
+    search = "search_example" # str |  (optional)
     size_max = 0 # int, none_type | Size of the file. (optional)
     size_min = 0 # int, none_type | Size of the file. (optional)
     tags = [
         "tags_example",
     ] # [str] | Multiple values may be separated by commas. (optional)
+    text = True # bool | If this field is present (with any value), the full text representation of the documents will be added to the response under the field `text` (optional)
     visa__creator_email = "visa__creator_email_example" # str |  (optional)
     visa__deadline_after = dateutil_parser('1970-01-01').date() # date |  (optional)
     visa__deadline_before = dateutil_parser('1970-01-01').date() # date |  (optional)
@@ -5690,7 +5693,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Retrieve all documents
-        api_response = api_instance.get_documents(cloud_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, has__visa=has__visa, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, size_max=size_max, size_min=size_min, tags=tags, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
+        api_response = api_instance.get_documents(cloud_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, has__visa=has__visa, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, search=search, size_max=size_max, size_min=size_min, tags=tags, text=text, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->get_documents: %s\n" % e)
@@ -5719,9 +5722,11 @@ Name | Type | Description  | Notes
  **name__contains** | **str**|  | [optional]
  **name__endswith** | **str**|  | [optional]
  **name__startswith** | **str**|  | [optional]
+ **search** | **str**|  | [optional]
  **size_max** | **int, none_type**| Size of the file. | [optional]
  **size_min** | **int, none_type**| Size of the file. | [optional]
  **tags** | **[str]**| Multiple values may be separated by commas. | [optional]
+ **text** | **bool**| If this field is present (with any value), the full text representation of the documents will be added to the response under the field &#x60;text&#x60; | [optional]
  **visa__creator_email** | **str**|  | [optional]
  **visa__deadline_after** | **date**|  | [optional]
  **visa__deadline_before** | **date**|  | [optional]
@@ -5942,6 +5947,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     name__contains = "name__contains_example" # str |  (optional)
     name__endswith = "name__endswith_example" # str |  (optional)
     name__startswith = "name__startswith_example" # str |  (optional)
+    search = "search_example" # str |  (optional)
     size_max = 0 # int, none_type | Size of the file. (optional)
     size_min = 0 # int, none_type | Size of the file. (optional)
     tags = [
@@ -5969,7 +5975,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Get all documents of a folder
-        api_response = api_instance.get_folder_documents(cloud_pk, folder_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, has__visa=has__visa, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, size_max=size_max, size_min=size_min, tags=tags, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
+        api_response = api_instance.get_folder_documents(cloud_pk, folder_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, has__visa=has__visa, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, search=search, size_max=size_max, size_min=size_min, tags=tags, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->get_folder_documents: %s\n" % e)
@@ -5999,6 +6005,7 @@ Name | Type | Description  | Notes
  **name__contains** | **str**|  | [optional]
  **name__endswith** | **str**|  | [optional]
  **name__startswith** | **str**|  | [optional]
+ **search** | **str**|  | [optional]
  **size_max** | **int, none_type**| Size of the file. | [optional]
  **size_min** | **int, none_type**| Size of the file. | [optional]
  **tags** | **[str]**| Multiple values may be separated by commas. | [optional]
@@ -10916,6 +10923,129 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Document**](Document.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_document_text**
+> DocumentText update_document_text(cloud_pk, id, project_pk)
+
+Update the text representation of a document
+
+Update the text representation of a document. The document itself will not be changed. It is useful for full text search  Required scopes: document:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.document_text import DocumentText
+from bimdata_api_client.model.patched_document_text_request import PatchedDocumentTextRequest
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    id = 1 # int | A unique integer value identifying this document.
+    project_pk = 1 # int | A unique integer value identifying this project.
+    patched_document_text_request = PatchedDocumentTextRequest(
+        text="text_example",
+        language="french",
+    ) # PatchedDocumentTextRequest |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Update the text representation of a document
+        api_response = api_instance.update_document_text(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->update_document_text: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Update the text representation of a document
+        api_response = api_instance.update_document_text(cloud_pk, id, project_pk, patched_document_text_request=patched_document_text_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->update_document_text: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **id** | **int**| A unique integer value identifying this document. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+ **patched_document_text_request** | [**PatchedDocumentTextRequest**](PatchedDocumentTextRequest.md)|  | [optional]
+
+### Return type
+
+[**DocumentText**](DocumentText.md)
 
 ### Authorization
 

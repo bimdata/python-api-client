@@ -31,6 +31,7 @@ from bimdata_api_client.model.cloud_invitation_request import CloudInvitationReq
 from bimdata_api_client.model.cloud_request import CloudRequest
 from bimdata_api_client.model.document import Document
 from bimdata_api_client.model.document_preview_file import DocumentPreviewFile
+from bimdata_api_client.model.document_text import DocumentText
 from bimdata_api_client.model.folder import Folder
 from bimdata_api_client.model.folder_tree import FolderTree
 from bimdata_api_client.model.folder_user_project import FolderUserProject
@@ -44,6 +45,7 @@ from bimdata_api_client.model.log_entry import LogEntry
 from bimdata_api_client.model.patched_classification_request import PatchedClassificationRequest
 from bimdata_api_client.model.patched_cloud_request import PatchedCloudRequest
 from bimdata_api_client.model.patched_document_request import PatchedDocumentRequest
+from bimdata_api_client.model.patched_document_text_request import PatchedDocumentTextRequest
 from bimdata_api_client.model.patched_folder_without_children_request import PatchedFolderWithoutChildrenRequest
 from bimdata_api_client.model.patched_group_folder_request import PatchedGroupFolderRequest
 from bimdata_api_client.model.patched_group_request import PatchedGroupRequest
@@ -3472,9 +3474,11 @@ class CollaborationApi(object):
                     'name__contains',
                     'name__endswith',
                     'name__startswith',
+                    'search',
                     'size_max',
                     'size_min',
                     'tags',
+                    'text',
                     'visa__creator_email',
                     'visa__deadline_after',
                     'visa__deadline_before',
@@ -3566,12 +3570,16 @@ class CollaborationApi(object):
                         (str,),
                     'name__startswith':
                         (str,),
+                    'search':
+                        (str,),
                     'size_max':
                         (int, none_type,),
                     'size_min':
                         (int, none_type,),
                     'tags':
                         ([str],),
+                    'text':
+                        (bool,),
                     'visa__creator_email':
                         (str,),
                     'visa__deadline_after':
@@ -3610,9 +3618,11 @@ class CollaborationApi(object):
                     'name__contains': 'name__contains',
                     'name__endswith': 'name__endswith',
                     'name__startswith': 'name__startswith',
+                    'search': 'search',
                     'size_max': 'size_max',
                     'size_min': 'size_min',
                     'tags': 'tags',
+                    'text': 'text',
                     'visa__creator_email': 'visa__creator_email',
                     'visa__deadline_after': 'visa__deadline_after',
                     'visa__deadline_before': 'visa__deadline_before',
@@ -3642,9 +3652,11 @@ class CollaborationApi(object):
                     'name__contains': 'query',
                     'name__endswith': 'query',
                     'name__startswith': 'query',
+                    'search': 'query',
                     'size_max': 'query',
                     'size_min': 'query',
                     'tags': 'query',
+                    'text': 'query',
                     'visa__creator_email': 'query',
                     'visa__deadline_after': 'query',
                     'visa__deadline_before': 'query',
@@ -3768,6 +3780,7 @@ class CollaborationApi(object):
                     'name__contains',
                     'name__endswith',
                     'name__startswith',
+                    'search',
                     'size_max',
                     'size_min',
                     'tags',
@@ -3865,6 +3878,8 @@ class CollaborationApi(object):
                         (str,),
                     'name__startswith':
                         (str,),
+                    'search':
+                        (str,),
                     'size_max':
                         (int, none_type,),
                     'size_min':
@@ -3910,6 +3925,7 @@ class CollaborationApi(object):
                     'name__contains': 'name__contains',
                     'name__endswith': 'name__endswith',
                     'name__startswith': 'name__startswith',
+                    'search': 'search',
                     'size_max': 'size_max',
                     'size_min': 'size_min',
                     'tags': 'tags',
@@ -3943,6 +3959,7 @@ class CollaborationApi(object):
                     'name__contains': 'query',
                     'name__endswith': 'query',
                     'name__startswith': 'query',
+                    'search': 'query',
                     'size_max': 'query',
                     'size_min': 'query',
                     'tags': 'query',
@@ -6935,6 +6952,80 @@ class CollaborationApi(object):
             },
             api_client=api_client
         )
+        self.update_document_text_endpoint = _Endpoint(
+            settings={
+                'response_type': (DocumentText,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{id}/text',
+                'operation_id': 'update_document_text',
+                'http_method': 'PATCH',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                    'patched_document_text_request',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'patched_document_text_request':
+                        (PatchedDocumentTextRequest,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_pk': 'path',
+                    'patched_document_text_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
         self.update_folder_endpoint = _Endpoint(
             settings={
                 'response_type': (FolderWithoutChildren,),
@@ -8815,7 +8906,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'GLTF', 'IFC', 'OBJ', 'POINT_CLOUD', 'DXF', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'IFC', 'POINT_CLOUD', 'DWG', 'DXF', 'GLTF', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -11980,7 +12071,7 @@ class CollaborationApi(object):
     ):
         """Retrieve all documents  # noqa: E501
 
-        Retrieve all documents in the project. Filters are case insentive  Required scopes: document:read  # noqa: E501
+        Retrieve all documents in the project. Filters are case insentive. Search filter only works if AI features are enabled.  Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -12008,9 +12099,11 @@ class CollaborationApi(object):
             name__contains (str): [optional]
             name__endswith (str): [optional]
             name__startswith (str): [optional]
+            search (str): [optional]
             size_max (int, none_type): Size of the file.. [optional]
             size_min (int, none_type): Size of the file.. [optional]
             tags ([str]): Multiple values may be separated by commas.. [optional]
+            text (bool): If this field is present (with any value), the full text representation of the documents will be added to the response under the field `text`. [optional]
             visa__creator_email (str): [optional]
             visa__deadline_after (date): [optional]
             visa__deadline_before (date): [optional]
@@ -12206,6 +12299,7 @@ class CollaborationApi(object):
             name__contains (str): [optional]
             name__endswith (str): [optional]
             name__startswith (str): [optional]
+            search (str): [optional]
             size_max (int, none_type): Size of the file.. [optional]
             size_min (int, none_type): Size of the file.. [optional]
             tags ([str]): Multiple values may be separated by commas.. [optional]
@@ -16086,6 +16180,93 @@ class CollaborationApi(object):
         kwargs['project_pk'] = \
             project_pk
         return self.update_document_endpoint.call_with_http_info(**kwargs)
+
+    def update_document_text(
+        self,
+        cloud_pk,
+        id,
+        project_pk,
+        **kwargs
+    ):
+        """Update the text representation of a document  # noqa: E501
+
+        Update the text representation of a document. The document itself will not be changed. It is useful for full text search  Required scopes: document:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.update_document_text(cloud_pk, id, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): A unique integer value identifying this document.
+            project_pk (int): A unique integer value identifying this project.
+
+        Keyword Args:
+            patched_document_text_request (PatchedDocumentTextRequest): [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            DocumentText
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_pk'] = \
+            project_pk
+        return self.update_document_text_endpoint.call_with_http_info(**kwargs)
 
     def update_folder(
         self,

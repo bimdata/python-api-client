@@ -710,6 +710,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_update_document_text(self):
+        """Test case for update_document_text
+
+        Update the text representation of a document  # noqa: E501
+        """
+        pass
+
     def test_update_folder(self):
         """Test case for update_folder
 

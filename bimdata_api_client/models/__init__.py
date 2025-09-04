@@ -44,6 +44,7 @@ from bimdata_api_client.model.direction import Direction
 from bimdata_api_client.model.direction_request import DirectionRequest
 from bimdata_api_client.model.document import Document
 from bimdata_api_client.model.document_preview_file import DocumentPreviewFile
+from bimdata_api_client.model.document_text import DocumentText
 from bimdata_api_client.model.document_with_element_list import DocumentWithElementList
 from bimdata_api_client.model.drawing import Drawing
 from bimdata_api_client.model.drawing_request import DrawingRequest
@@ -116,6 +117,7 @@ from bimdata_api_client.model.patched_classification_request import PatchedClass
 from bimdata_api_client.model.patched_cloud_request import PatchedCloudRequest
 from bimdata_api_client.model.patched_comment_request import PatchedCommentRequest
 from bimdata_api_client.model.patched_document_request import PatchedDocumentRequest
+from bimdata_api_client.model.patched_document_text_request import PatchedDocumentTextRequest
 from bimdata_api_client.model.patched_drawing_request import PatchedDrawingRequest
 from bimdata_api_client.model.patched_element_request import PatchedElementRequest
 from bimdata_api_client.model.patched_folder_without_children_request import PatchedFolderWithoutChildrenRequest
