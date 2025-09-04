@@ -1,6 +1,26 @@
 # CHANGELOG
 
 
+## v10.20.0 (2025-09-04)
+
+### Feature
+
+- Minor: add document full text search (#893)
+  ([`3cee9cc`](https://github.com/bimdata/python-api-client/commit/3cee9cc05d25cc22802fee71073457e73a9e01e4))
+
+* add document full text search
+
+* use cloud language if no language provided
+
+* enable text only on ai clouds
+
+* fix tests
+
+* add comment to doc
+
+* fix test with new field
+
+
 ## v10.19.5 (2025-08-27)
 
 ### Fix
