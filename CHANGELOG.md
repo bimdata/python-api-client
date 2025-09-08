@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.22.0 (2025-09-08)
+
+### Feature
+
+- Minor: add parent_id__in document filter
+  ([`21cd638`](https://github.com/bimdata/python-api-client/commit/21cd638eaf03c7523ea6178fe4e3854eba1a9d43))
+
+
 ## v10.21.0 (2025-09-08)
 
 ### Feature
