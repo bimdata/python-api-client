@@ -1546,7 +1546,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'GLTF', 'OBJ', 'IFC', 'DWG', 'POINT_CLOUD', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'OBJ', 'DWG', 'IFC', 'GLTF', 'POINT_CLOUD', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -5667,6 +5667,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     name__contains = "name__contains_example" # str |  (optional)
     name__endswith = "name__endswith_example" # str |  (optional)
     name__startswith = "name__startswith_example" # str |  (optional)
+    parent_id__in = [
+        3.14,
+    ] # [float] | Multiple values may be separated by commas. (optional)
     search = "search_example" # str |  (optional)
     size_max = 0 # int, none_type | Size of the file. (optional)
     size_min = 0 # int, none_type | Size of the file. (optional)
@@ -5696,7 +5699,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Retrieve all documents
-        api_response = api_instance.get_documents(cloud_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, has__visa=has__visa, id__in=id__in, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, search=search, size_max=size_max, size_min=size_min, tags=tags, text=text, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
+        api_response = api_instance.get_documents(cloud_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, has__visa=has__visa, id__in=id__in, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, parent_id__in=parent_id__in, search=search, size_max=size_max, size_min=size_min, tags=tags, text=text, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->get_documents: %s\n" % e)
@@ -5726,6 +5729,7 @@ Name | Type | Description  | Notes
  **name__contains** | **str**|  | [optional]
  **name__endswith** | **str**|  | [optional]
  **name__startswith** | **str**|  | [optional]
+ **parent_id__in** | **[float]**| Multiple values may be separated by commas. | [optional]
  **search** | **str**|  | [optional]
  **size_max** | **int, none_type**| Size of the file. | [optional]
  **size_min** | **int, none_type**| Size of the file. | [optional]
@@ -5954,6 +5958,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     name__contains = "name__contains_example" # str |  (optional)
     name__endswith = "name__endswith_example" # str |  (optional)
     name__startswith = "name__startswith_example" # str |  (optional)
+    parent_id__in = [
+        3.14,
+    ] # [float] | Multiple values may be separated by commas. (optional)
     search = "search_example" # str |  (optional)
     size_max = 0 # int, none_type | Size of the file. (optional)
     size_min = 0 # int, none_type | Size of the file. (optional)
@@ -5982,7 +5989,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Get all documents of a folder
-        api_response = api_instance.get_folder_documents(cloud_pk, folder_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, has__visa=has__visa, id__in=id__in, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, search=search, size_max=size_max, size_min=size_min, tags=tags, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
+        api_response = api_instance.get_folder_documents(cloud_pk, folder_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, has__visa=has__visa, id__in=id__in, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, parent_id__in=parent_id__in, search=search, size_max=size_max, size_min=size_min, tags=tags, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->get_folder_documents: %s\n" % e)
@@ -6013,6 +6020,7 @@ Name | Type | Description  | Notes
  **name__contains** | **str**|  | [optional]
  **name__endswith** | **str**|  | [optional]
  **name__startswith** | **str**|  | [optional]
+ **parent_id__in** | **[float]**| Multiple values may be separated by commas. | [optional]
  **search** | **str**|  | [optional]
  **size_max** | **int, none_type**| Size of the file. | [optional]
  **size_min** | **int, none_type**| Size of the file. | [optional]

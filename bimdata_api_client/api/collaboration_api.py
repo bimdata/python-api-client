@@ -3475,6 +3475,7 @@ class CollaborationApi(object):
                     'name__contains',
                     'name__endswith',
                     'name__startswith',
+                    'parent_id__in',
                     'search',
                     'size_max',
                     'size_min',
@@ -3573,6 +3574,8 @@ class CollaborationApi(object):
                         (str,),
                     'name__startswith':
                         (str,),
+                    'parent_id__in':
+                        ([float],),
                     'search':
                         (str,),
                     'size_max':
@@ -3622,6 +3625,7 @@ class CollaborationApi(object):
                     'name__contains': 'name__contains',
                     'name__endswith': 'name__endswith',
                     'name__startswith': 'name__startswith',
+                    'parent_id__in': 'parent_id__in',
                     'search': 'search',
                     'size_max': 'size_max',
                     'size_min': 'size_min',
@@ -3657,6 +3661,7 @@ class CollaborationApi(object):
                     'name__contains': 'query',
                     'name__endswith': 'query',
                     'name__startswith': 'query',
+                    'parent_id__in': 'query',
                     'search': 'query',
                     'size_max': 'query',
                     'size_min': 'query',
@@ -3674,6 +3679,7 @@ class CollaborationApi(object):
                 },
                 'collection_format_map': {
                     'id__in': 'csv',
+                    'parent_id__in': 'csv',
                     'tags': 'csv',
                 }
             },
@@ -3787,6 +3793,7 @@ class CollaborationApi(object):
                     'name__contains',
                     'name__endswith',
                     'name__startswith',
+                    'parent_id__in',
                     'search',
                     'size_max',
                     'size_min',
@@ -3887,6 +3894,8 @@ class CollaborationApi(object):
                         (str,),
                     'name__startswith':
                         (str,),
+                    'parent_id__in':
+                        ([float],),
                     'search':
                         (str,),
                     'size_max':
@@ -3935,6 +3944,7 @@ class CollaborationApi(object):
                     'name__contains': 'name__contains',
                     'name__endswith': 'name__endswith',
                     'name__startswith': 'name__startswith',
+                    'parent_id__in': 'parent_id__in',
                     'search': 'search',
                     'size_max': 'size_max',
                     'size_min': 'size_min',
@@ -3970,6 +3980,7 @@ class CollaborationApi(object):
                     'name__contains': 'query',
                     'name__endswith': 'query',
                     'name__startswith': 'query',
+                    'parent_id__in': 'query',
                     'search': 'query',
                     'size_max': 'query',
                     'size_min': 'query',
@@ -3986,6 +3997,7 @@ class CollaborationApi(object):
                 },
                 'collection_format_map': {
                     'id__in': 'csv',
+                    'parent_id__in': 'csv',
                     'tags': 'csv',
                 }
             },
@@ -8918,7 +8930,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'GLTF', 'OBJ', 'IFC', 'DWG', 'POINT_CLOUD', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'OBJ', 'DWG', 'IFC', 'GLTF', 'POINT_CLOUD', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -12112,6 +12124,7 @@ class CollaborationApi(object):
             name__contains (str): [optional]
             name__endswith (str): [optional]
             name__startswith (str): [optional]
+            parent_id__in ([float]): Multiple values may be separated by commas.. [optional]
             search (str): [optional]
             size_max (int, none_type): Size of the file.. [optional]
             size_min (int, none_type): Size of the file.. [optional]
@@ -12313,6 +12326,7 @@ class CollaborationApi(object):
             name__contains (str): [optional]
             name__endswith (str): [optional]
             name__startswith (str): [optional]
+            parent_id__in ([float]): Multiple values may be separated by commas.. [optional]
             search (str): [optional]
             size_max (int, none_type): Size of the file.. [optional]
             size_min (int, none_type): Size of the file.. [optional]
