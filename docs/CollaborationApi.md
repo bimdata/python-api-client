@@ -1482,14 +1482,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this project.
     write_folder_request = [
         WriteFolderRequest(
-            parent_id=1,
             name="name_example",
             default_permission=1,
+            parent_id=1,
             children=[
                 WriteFolder(
-                    parent_id=1,
                     name="name_example",
                     default_permission=1,
+                    parent_id=1,
                     children=None,
                 ),
             ],
@@ -1546,7 +1546,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'IFC', 'POINT_CLOUD', 'DWG', 'DXF', 'GLTF', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'GLTF', 'OBJ', 'IFC', 'DWG', 'POINT_CLOUD', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -5660,6 +5660,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     file_name__endswith = "file_name__endswith_example" # str |  (optional)
     file_name__startswith = "file_name__startswith_example" # str |  (optional)
     has__visa = True # bool |  (optional)
+    id__in = [
+        1,
+    ] # [int] | Multiple values may be separated by commas. (optional)
     name = "name_example" # str |  (optional)
     name__contains = "name__contains_example" # str |  (optional)
     name__endswith = "name__endswith_example" # str |  (optional)
@@ -5693,7 +5696,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Retrieve all documents
-        api_response = api_instance.get_documents(cloud_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, has__visa=has__visa, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, search=search, size_max=size_max, size_min=size_min, tags=tags, text=text, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
+        api_response = api_instance.get_documents(cloud_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, has__visa=has__visa, id__in=id__in, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, search=search, size_max=size_max, size_min=size_min, tags=tags, text=text, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->get_documents: %s\n" % e)
@@ -5718,6 +5721,7 @@ Name | Type | Description  | Notes
  **file_name__endswith** | **str**|  | [optional]
  **file_name__startswith** | **str**|  | [optional]
  **has__visa** | **bool**|  | [optional]
+ **id__in** | **[int]**| Multiple values may be separated by commas. | [optional]
  **name** | **str**|  | [optional]
  **name__contains** | **str**|  | [optional]
  **name__endswith** | **str**|  | [optional]
@@ -5943,6 +5947,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     file_name__endswith = "file_name__endswith_example" # str |  (optional)
     file_name__startswith = "file_name__startswith_example" # str |  (optional)
     has__visa = True # bool |  (optional)
+    id__in = [
+        1,
+    ] # [int] | Multiple values may be separated by commas. (optional)
     name = "name_example" # str |  (optional)
     name__contains = "name__contains_example" # str |  (optional)
     name__endswith = "name__endswith_example" # str |  (optional)
@@ -5975,7 +5982,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Get all documents of a folder
-        api_response = api_instance.get_folder_documents(cloud_pk, folder_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, has__visa=has__visa, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, search=search, size_max=size_max, size_min=size_min, tags=tags, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
+        api_response = api_instance.get_folder_documents(cloud_pk, folder_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, has__visa=has__visa, id__in=id__in, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, search=search, size_max=size_max, size_min=size_min, tags=tags, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->get_folder_documents: %s\n" % e)
@@ -6001,6 +6008,7 @@ Name | Type | Description  | Notes
  **file_name__endswith** | **str**|  | [optional]
  **file_name__startswith** | **str**|  | [optional]
  **has__visa** | **bool**|  | [optional]
+ **id__in** | **[int]**| Multiple values may be separated by commas. | [optional]
  **name** | **str**|  | [optional]
  **name__contains** | **str**|  | [optional]
  **name__endswith** | **str**|  | [optional]
@@ -11012,7 +11020,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_document_text_request = PatchedDocumentTextRequest(
         text="text_example",
-        language="french",
+        language="german",
     ) # PatchedDocumentTextRequest |  (optional)
 
     # example passing only required values which don't have defaults set

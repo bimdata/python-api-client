@@ -3470,6 +3470,7 @@ class CollaborationApi(object):
                     'file_name__endswith',
                     'file_name__startswith',
                     'has__visa',
+                    'id__in',
                     'name',
                     'name__contains',
                     'name__endswith',
@@ -3562,6 +3563,8 @@ class CollaborationApi(object):
                         (str,),
                     'has__visa':
                         (bool,),
+                    'id__in':
+                        ([int],),
                     'name':
                         (str,),
                     'name__contains':
@@ -3614,6 +3617,7 @@ class CollaborationApi(object):
                     'file_name__endswith': 'file_name__endswith',
                     'file_name__startswith': 'file_name__startswith',
                     'has__visa': 'has__visa',
+                    'id__in': 'id__in',
                     'name': 'name',
                     'name__contains': 'name__contains',
                     'name__endswith': 'name__endswith',
@@ -3648,6 +3652,7 @@ class CollaborationApi(object):
                     'file_name__endswith': 'query',
                     'file_name__startswith': 'query',
                     'has__visa': 'query',
+                    'id__in': 'query',
                     'name': 'query',
                     'name__contains': 'query',
                     'name__endswith': 'query',
@@ -3668,6 +3673,7 @@ class CollaborationApi(object):
                     'visa__validator_email': 'query',
                 },
                 'collection_format_map': {
+                    'id__in': 'csv',
                     'tags': 'csv',
                 }
             },
@@ -3776,6 +3782,7 @@ class CollaborationApi(object):
                     'file_name__endswith',
                     'file_name__startswith',
                     'has__visa',
+                    'id__in',
                     'name',
                     'name__contains',
                     'name__endswith',
@@ -3870,6 +3877,8 @@ class CollaborationApi(object):
                         (str,),
                     'has__visa':
                         (bool,),
+                    'id__in':
+                        ([int],),
                     'name':
                         (str,),
                     'name__contains':
@@ -3921,6 +3930,7 @@ class CollaborationApi(object):
                     'file_name__endswith': 'file_name__endswith',
                     'file_name__startswith': 'file_name__startswith',
                     'has__visa': 'has__visa',
+                    'id__in': 'id__in',
                     'name': 'name',
                     'name__contains': 'name__contains',
                     'name__endswith': 'name__endswith',
@@ -3955,6 +3965,7 @@ class CollaborationApi(object):
                     'file_name__endswith': 'query',
                     'file_name__startswith': 'query',
                     'has__visa': 'query',
+                    'id__in': 'query',
                     'name': 'query',
                     'name__contains': 'query',
                     'name__endswith': 'query',
@@ -3974,6 +3985,7 @@ class CollaborationApi(object):
                     'visa__validator_email': 'query',
                 },
                 'collection_format_map': {
+                    'id__in': 'csv',
                     'tags': 'csv',
                 }
             },
@@ -8906,7 +8918,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'IFC', 'POINT_CLOUD', 'DWG', 'DXF', 'GLTF', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'GLTF', 'OBJ', 'IFC', 'DWG', 'POINT_CLOUD', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -12095,6 +12107,7 @@ class CollaborationApi(object):
             file_name__endswith (str): [optional]
             file_name__startswith (str): [optional]
             has__visa (bool): [optional]
+            id__in ([int]): Multiple values may be separated by commas.. [optional]
             name (str): [optional]
             name__contains (str): [optional]
             name__endswith (str): [optional]
@@ -12295,6 +12308,7 @@ class CollaborationApi(object):
             file_name__endswith (str): [optional]
             file_name__startswith (str): [optional]
             has__visa (bool): [optional]
+            id__in ([int]): Multiple values may be separated by commas.. [optional]
             name (str): [optional]
             name__contains (str): [optional]
             name__endswith (str): [optional]
