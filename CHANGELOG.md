@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.21.0 (2025-09-08)
+
+### Feature
+
+- Minor: add id__in document filter
+  ([`89ba13e`](https://github.com/bimdata/python-api-client/commit/89ba13ee07f510af362339a7d52ea6043b485ecd))
+
+
 ## v10.20.0 (2025-09-04)
 
 ### Feature
