@@ -1,6 +1,22 @@
 # CHANGELOG
 
 
+## v10.22.1 (2025-10-03)
+
+### Fix
+
+- Patch: Add BCF document references (#903)
+  ([`146eb85`](https://github.com/bimdata/python-api-client/commit/146eb859754b5399128282815e34061c78a1f3d1))
+
+* add tests, improve documentation
+
+* remove useless field, add some tests
+
+* remove document_url
+
+* add warning
+
+
 ## v10.22.0 (2025-09-08)
 
 ### Feature
