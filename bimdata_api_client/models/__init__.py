@@ -44,6 +44,8 @@ from bimdata_api_client.model.direction import Direction
 from bimdata_api_client.model.direction_request import DirectionRequest
 from bimdata_api_client.model.document import Document
 from bimdata_api_client.model.document_preview_file import DocumentPreviewFile
+from bimdata_api_client.model.document_reference import DocumentReference
+from bimdata_api_client.model.document_reference_request import DocumentReferenceRequest
 from bimdata_api_client.model.document_text import DocumentText
 from bimdata_api_client.model.document_with_element_list import DocumentWithElementList
 from bimdata_api_client.model.drawing import Drawing

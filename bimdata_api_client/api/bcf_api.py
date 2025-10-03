@@ -31,6 +31,8 @@ from bimdata_api_client.model.coloring_definition import ColoringDefinition
 from bimdata_api_client.model.comment import Comment
 from bimdata_api_client.model.comment_request import CommentRequest
 from bimdata_api_client.model.detailed_extensions import DetailedExtensions
+from bimdata_api_client.model.document_reference import DocumentReference
+from bimdata_api_client.model.document_reference_request import DocumentReferenceRequest
 from bimdata_api_client.model.extensions import Extensions
 from bimdata_api_client.model.full_topic import FullTopic
 from bimdata_api_client.model.full_topic_request import FullTopicRequest
@@ -129,6 +131,75 @@ class BcfApi(object):
                     'projects_pk': 'path',
                     'topics_guid': 'path',
                     'comment_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
+        self.create_document_reference_endpoint = _Endpoint(
+            settings={
+                'response_type': (DocumentReference,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{guid}/document_references',
+                'operation_id': 'create_document_reference',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'guid',
+                    'projects_pk',
+                    'document_reference_request',
+                ],
+                'required': [
+                    'guid',
+                    'projects_pk',
+                    'document_reference_request',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'guid':
+                        (str,),
+                    'projects_pk':
+                        (int,),
+                    'document_reference_request':
+                        (DocumentReferenceRequest,),
+                },
+                'attribute_map': {
+                    'guid': 'guid',
+                    'projects_pk': 'projects_pk',
+                },
+                'location_map': {
+                    'guid': 'path',
+                    'projects_pk': 'path',
+                    'document_reference_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -1581,6 +1652,92 @@ class BcfApi(object):
             },
             api_client=api_client
         )
+        self.full_update_document_reference_endpoint = _Endpoint(
+            settings={
+                'response_type': ([DocumentReference],),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{guid}/document_references',
+                'operation_id': 'full_update_document_reference',
+                'http_method': 'PUT',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'guid',
+                    'projects_pk',
+                    'document_reference_request',
+                    'format',
+                    'ifcs',
+                    'models',
+                ],
+                'required': [
+                    'guid',
+                    'projects_pk',
+                    'document_reference_request',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'guid':
+                        (str,),
+                    'projects_pk':
+                        (int,),
+                    'document_reference_request':
+                        ([DocumentReferenceRequest],),
+                    'format':
+                        (str,),
+                    'ifcs':
+                        ([int],),
+                    'models':
+                        ([int],),
+                },
+                'attribute_map': {
+                    'guid': 'guid',
+                    'projects_pk': 'projects_pk',
+                    'format': 'format',
+                    'ifcs': 'ifcs',
+                    'models': 'models',
+                },
+                'location_map': {
+                    'guid': 'path',
+                    'projects_pk': 'path',
+                    'document_reference_request': 'body',
+                    'format': 'query',
+                    'ifcs': 'query',
+                    'models': 'query',
+                },
+                'collection_format_map': {
+                    'ifcs': 'multi',
+                    'models': 'multi',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
         self.full_update_full_topic_endpoint = _Endpoint(
             settings={
                 'response_type': (FullTopic,),
@@ -2214,6 +2371,83 @@ class BcfApi(object):
             },
             api_client=api_client
         )
+        self.get_document_references_endpoint = _Endpoint(
+            settings={
+                'response_type': ([DocumentReference],),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{guid}/document_references',
+                'operation_id': 'get_document_references',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'guid',
+                    'projects_pk',
+                    'format',
+                    'ifcs',
+                    'models',
+                ],
+                'required': [
+                    'guid',
+                    'projects_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'guid':
+                        (str,),
+                    'projects_pk':
+                        (int,),
+                    'format':
+                        (str,),
+                    'ifcs':
+                        ([int],),
+                    'models':
+                        ([int],),
+                },
+                'attribute_map': {
+                    'guid': 'guid',
+                    'projects_pk': 'projects_pk',
+                    'format': 'format',
+                    'ifcs': 'ifcs',
+                    'models': 'models',
+                },
+                'location_map': {
+                    'guid': 'path',
+                    'projects_pk': 'path',
+                    'format': 'query',
+                    'ifcs': 'query',
+                    'models': 'query',
+                },
+                'collection_format_map': {
+                    'ifcs': 'multi',
+                    'models': 'multi',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
         self.get_extensions_endpoint = _Endpoint(
             settings={
                 'response_type': (Extensions,),
@@ -2754,83 +2988,6 @@ class BcfApi(object):
                     'projects_pk': 'path',
                 },
                 'collection_format_map': {
-                }
-            },
-            headers_map={
-                'accept': [
-                    'application/json'
-                ],
-                'content_type': [],
-            },
-            api_client=api_client
-        )
-        self.get_topic_document_references_endpoint = _Endpoint(
-            settings={
-                'response_type': ([str],),
-                'auth': [
-                    'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
-                    'Bearer'
-                ],
-                'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{guid}/document_references',
-                'operation_id': 'get_topic_document_references',
-                'http_method': 'GET',
-                'servers': None,
-            },
-            params_map={
-                'all': [
-                    'guid',
-                    'projects_pk',
-                    'format',
-                    'ifcs',
-                    'models',
-                ],
-                'required': [
-                    'guid',
-                    'projects_pk',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
-            },
-            root_map={
-                'validations': {
-                },
-                'allowed_values': {
-                },
-                'openapi_types': {
-                    'guid':
-                        (str,),
-                    'projects_pk':
-                        (int,),
-                    'format':
-                        (str,),
-                    'ifcs':
-                        ([int],),
-                    'models':
-                        ([int],),
-                },
-                'attribute_map': {
-                    'guid': 'guid',
-                    'projects_pk': 'projects_pk',
-                    'format': 'format',
-                    'ifcs': 'ifcs',
-                    'models': 'models',
-                },
-                'location_map': {
-                    'guid': 'path',
-                    'projects_pk': 'path',
-                    'format': 'query',
-                    'ifcs': 'query',
-                    'models': 'query',
-                },
-                'collection_format_map': {
-                    'ifcs': 'multi',
-                    'models': 'multi',
                 }
             },
             headers_map={
@@ -4381,6 +4538,92 @@ class BcfApi(object):
         kwargs['topics_guid'] = \
             topics_guid
         return self.create_comment_endpoint.call_with_http_info(**kwargs)
+
+    def create_document_reference(
+        self,
+        guid,
+        projects_pk,
+        document_reference_request,
+        **kwargs
+    ):
+        """Create a reference to a document  # noqa: E501
+
+        Create a reference to a document  Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.create_document_reference(guid, projects_pk, document_reference_request, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            guid (str):
+            projects_pk (int):
+            document_reference_request (DocumentReferenceRequest):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            DocumentReference
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['guid'] = \
+            guid
+        kwargs['projects_pk'] = \
+            projects_pk
+        kwargs['document_reference_request'] = \
+            document_reference_request
+        return self.create_document_reference_endpoint.call_with_http_info(**kwargs)
 
     def create_extension_label(
         self,
@@ -6216,6 +6459,95 @@ class BcfApi(object):
             topics_guid
         return self.full_update_comment_endpoint.call_with_http_info(**kwargs)
 
+    def full_update_document_reference(
+        self,
+        guid,
+        projects_pk,
+        document_reference_request,
+        **kwargs
+    ):
+        """Add or update document references to a topic  # noqa: E501
+
+        This will replace every references by references passed in the body  Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.full_update_document_reference(guid, projects_pk, document_reference_request, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            guid (str):
+            projects_pk (int):
+            document_reference_request ([DocumentReferenceRequest]):
+
+        Keyword Args:
+            format (str): [optional]
+            ifcs ([int]): [optional]
+            models ([int]): [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [DocumentReference]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['guid'] = \
+            guid
+        kwargs['projects_pk'] = \
+            projects_pk
+        kwargs['document_reference_request'] = \
+            document_reference_request
+        return self.full_update_document_reference_endpoint.call_with_http_info(**kwargs)
+
     def full_update_full_topic(
         self,
         guid,
@@ -7041,6 +7373,91 @@ class BcfApi(object):
             id
         return self.get_detailed_extensions_endpoint.call_with_http_info(**kwargs)
 
+    def get_document_references(
+        self,
+        guid,
+        projects_pk,
+        **kwargs
+    ):
+        """Retrieve all documents referenced by the topic  # noqa: E501
+
+        Retrieve all documents referenced by the topic  Required scopes: bcf:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_document_references(guid, projects_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            guid (str):
+            projects_pk (int):
+
+        Keyword Args:
+            format (str): [optional]
+            ifcs ([int]): [optional]
+            models ([int]): [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [DocumentReference]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['guid'] = \
+            guid
+        kwargs['projects_pk'] = \
+            projects_pk
+        return self.get_document_references_endpoint.call_with_http_info(**kwargs)
+
     def get_extensions(
         self,
         id,
@@ -7710,91 +8127,6 @@ class BcfApi(object):
         kwargs['projects_pk'] = \
             projects_pk
         return self.get_topic_endpoint.call_with_http_info(**kwargs)
-
-    def get_topic_document_references(
-        self,
-        guid,
-        projects_pk,
-        **kwargs
-    ):
-        """Get all related documents  # noqa: E501
-
-        This feature is not supported yet and will always respond with an empty array  Required scopes: bcf:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.get_topic_document_references(guid, projects_pk, async_req=True)
-        >>> result = thread.get()
-
-        Args:
-            guid (str):
-            projects_pk (int):
-
-        Keyword Args:
-            format (str): [optional]
-            ifcs ([int]): [optional]
-            models ([int]): [optional]
-            _return_http_data_only (bool): response data without head status
-                code and headers. Default is True.
-            _preload_content (bool): if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            _request_timeout (int/float/tuple): timeout setting for this request. If
-                one number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            _check_input_type (bool): specifies if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            _check_return_type (bool): specifies if type checking
-                should be done one the data received from the server.
-                Default is True.
-            _spec_property_naming (bool): True if the variable names in the input data
-                are serialized names, as specified in the OpenAPI document.
-                False if the variable names in the input data
-                are pythonic names, e.g. snake case (default)
-            _content_type (str/None): force body content-type.
-                Default is None and content-type will be predicted by allowed
-                content-types and body.
-            _host_index (int/None): specifies the index of the server
-                that we want to use.
-                Default is read from the configuration.
-            async_req (bool): execute request asynchronously
-
-        Returns:
-            [str]
-                If the method is called asynchronously, returns the request
-                thread.
-        """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_spec_property_naming'] = kwargs.get(
-            '_spec_property_naming', False
-        )
-        kwargs['_content_type'] = kwargs.get(
-            '_content_type')
-        kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['guid'] = \
-            guid
-        kwargs['projects_pk'] = \
-            projects_pk
-        return self.get_topic_document_references_endpoint.call_with_http_info(**kwargs)
 
     def get_topic_viewpoints(
         self,

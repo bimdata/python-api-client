@@ -31,6 +31,13 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_create_document_reference(self):
+        """Test case for create_document_reference
+
+        Create a reference to a document  # noqa: E501
+        """
+        pass
+
     def test_create_extension_label(self):
         """Test case for create_extension_label
 
@@ -185,6 +192,13 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_full_update_document_reference(self):
+        """Test case for full_update_document_reference
+
+        Add or update document references to a topic  # noqa: E501
+        """
+        pass
+
     def test_full_update_full_topic(self):
         """Test case for full_update_full_topic
 
@@ -255,6 +269,13 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_get_document_references(self):
+        """Test case for get_document_references
+
+        Retrieve all documents referenced by the topic  # noqa: E501
+        """
+        pass
+
     def test_get_extensions(self):
         """Test case for get_extensions
 
@@ -308,13 +329,6 @@ class TestBcfApi(unittest.TestCase):
         """Test case for get_topic
 
         Retrieve a topic  # noqa: E501
-        """
-        pass
-
-    def test_get_topic_document_references(self):
-        """Test case for get_topic_document_references
-
-        Get all related documents  # noqa: E501
         """
         pass
 

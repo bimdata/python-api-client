@@ -61,6 +61,8 @@ from bimdata_api_client.model.coloring_definition import ColoringDefinition
 from bimdata_api_client.model.comment import Comment
 from bimdata_api_client.model.comment_request import CommentRequest
 from bimdata_api_client.model.detailed_extensions import DetailedExtensions
+from bimdata_api_client.model.document_reference import DocumentReference
+from bimdata_api_client.model.document_reference_request import DocumentReferenceRequest
 from bimdata_api_client.model.extensions import Extensions
 from bimdata_api_client.model.full_topic import FullTopic
 from bimdata_api_client.model.full_topic_request import FullTopicRequest
@@ -162,6 +164,7 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *BcfApi* | [**create_comment**](docs/BcfApi.md#create_comment) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments | Create a comment
+*BcfApi* | [**create_document_reference**](docs/BcfApi.md#create_document_reference) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{guid}/document_references | Create a reference to a document
 *BcfApi* | [**create_extension_label**](docs/BcfApi.md#create_extension_label) | **POST** /bcf/2.1/projects/{projects_pk}/extension/label | Create a Label
 *BcfApi* | [**create_extension_priority**](docs/BcfApi.md#create_extension_priority) | **POST** /bcf/2.1/projects/{projects_pk}/extension/priority | Create a Priority
 *BcfApi* | [**create_extension_stage**](docs/BcfApi.md#create_extension_stage) | **POST** /bcf/2.1/projects/{projects_pk}/extension/stage | Create a Stage
@@ -184,6 +187,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**download_bcf_export_xlsx**](docs/BcfApi.md#download_bcf_export_xlsx) | **GET** /bcf/2.1/projects/{id}/export-xlsx | Export project&#39;s topics in excel format
 *BcfApi* | [**full_update_bcf_project**](docs/BcfApi.md#full_update_bcf_project) | **PUT** /bcf/2.1/projects/{id} | Update all fields of a BCF project
 *BcfApi* | [**full_update_comment**](docs/BcfApi.md#full_update_comment) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Update all fields of a comment
+*BcfApi* | [**full_update_document_reference**](docs/BcfApi.md#full_update_document_reference) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{guid}/document_references | Add or update document references to a topic
 *BcfApi* | [**full_update_full_topic**](docs/BcfApi.md#full_update_full_topic) | **PUT** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Update all fields of a topic
 *BcfApi* | [**full_update_pin**](docs/BcfApi.md#full_update_pin) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid} | Update all fields of a Pin
 *BcfApi* | [**full_update_topic**](docs/BcfApi.md#full_update_topic) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Update all fields of a topic
@@ -194,6 +198,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**get_comment**](docs/BcfApi.md#get_comment) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Retrieve a comment
 *BcfApi* | [**get_comments**](docs/BcfApi.md#get_comments) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments | Retrieve all comments
 *BcfApi* | [**get_detailed_extensions**](docs/BcfApi.md#get_detailed_extensions) | **GET** /bcf/2.1/projects/{id}/detailed-extensions | Retrieve project detailed extensions
+*BcfApi* | [**get_document_references**](docs/BcfApi.md#get_document_references) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{guid}/document_references | Retrieve all documents referenced by the topic
 *BcfApi* | [**get_extensions**](docs/BcfApi.md#get_extensions) | **GET** /bcf/2.1/projects/{id}/extensions | Retrieve project extensions
 *BcfApi* | [**get_full_topic**](docs/BcfApi.md#get_full_topic) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Retrieve a full topic
 *BcfApi* | [**get_full_topics**](docs/BcfApi.md#get_full_topics) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic | Retrieve all full topics
@@ -202,7 +207,6 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**get_selections**](docs/BcfApi.md#get_selections) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/selection | Retrieve all selections of a viewpoint
 *BcfApi* | [**get_snapshot**](docs/BcfApi.md#get_snapshot) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/snapshot | Retrieve the viewpoint&#39; snapshot
 *BcfApi* | [**get_topic**](docs/BcfApi.md#get_topic) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Retrieve a topic
-*BcfApi* | [**get_topic_document_references**](docs/BcfApi.md#get_topic_document_references) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{guid}/document_references | Get all related documents
 *BcfApi* | [**get_topic_viewpoints**](docs/BcfApi.md#get_topic_viewpoints) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/topic-viewpoints | Retrieve all viewpoints attached to the topic
 *BcfApi* | [**get_topics**](docs/BcfApi.md#get_topics) | **GET** /bcf/2.1/projects/{projects_pk}/topics | Retrieve all topics
 *BcfApi* | [**get_topics_pins**](docs/BcfApi.md#get_topics_pins) | **GET** /bcf/2.1/projects/{projects_pk}/topics/pins | Get pins of all or many topics
@@ -556,6 +560,8 @@ Class | Method | HTTP request | Description
  - [DirectionRequest](docs/DirectionRequest.md)
  - [Document](docs/Document.md)
  - [DocumentPreviewFile](docs/DocumentPreviewFile.md)
+ - [DocumentReference](docs/DocumentReference.md)
+ - [DocumentReferenceRequest](docs/DocumentReferenceRequest.md)
  - [DocumentText](docs/DocumentText.md)
  - [DocumentWithElementList](docs/DocumentWithElementList.md)
  - [Drawing](docs/Drawing.md)
