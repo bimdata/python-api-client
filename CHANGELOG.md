@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.22.4 (2025-10-28)
+
+### Fix
+
+- Patch: Multiples fixes in ModelOnModel positioning (#914)
+  ([`bc5cd99`](https://github.com/bimdata/python-api-client/commit/bc5cd9914153e5c232ce19af7a100ae60e6d01a8))
+
+* Fixes & typo
+
+* some code deduplication
+
+
 ## v10.22.3 (2025-10-28)
 
 ### Fix
