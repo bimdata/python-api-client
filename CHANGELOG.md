@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.22.2 (2025-10-28)
+
+### Fix
+
+- Patch: ModelOnModel lib API release (empty commit to trigger CI)
+  ([`fafac8e`](https://github.com/bimdata/python-api-client/commit/fafac8e118477f5594ed569b0e76f6d5ab27b9f7))
+
+
 ## v10.22.1 (2025-10-03)
 
 ### Fix
