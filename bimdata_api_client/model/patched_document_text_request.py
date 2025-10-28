@@ -58,9 +58,9 @@ class PatchedDocumentTextRequest(ModelNormal):
     allowed_values = {
         ('language',): {
             'None': None,
-            'GERMAN': "german",
             'FRENCH': "french",
             'SPANISH': "spanish",
+            'GERMAN': "german",
             'ITALIAN': "italian",
             'ENGLISH': "english",
             'NULL': "null",
@@ -147,7 +147,7 @@ class PatchedDocumentTextRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             text (str, none_type): The full text representation of a document if the feature is enabled and the file format supported. [optional]  # noqa: E501
-            language (str, none_type): * `german` - german * `french` - french * `spanish` - spanish * `italian` - italian * `english` - english. [optional]  # noqa: E501
+            language (str, none_type): * `french` - french * `spanish` - spanish * `german` - german * `italian` - italian * `english` - english. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -230,7 +230,7 @@ class PatchedDocumentTextRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             text (str, none_type): The full text representation of a document if the feature is enabled and the file format supported. [optional]  # noqa: E501
-            language (str, none_type): * `german` - german * `french` - french * `spanish` - spanish * `italian` - italian * `english` - english. [optional]  # noqa: E501
+            language (str, none_type): * `french` - french * `spanish` - spanish * `german` - german * `italian` - italian * `english` - english. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

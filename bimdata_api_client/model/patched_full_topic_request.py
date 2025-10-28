@@ -143,6 +143,7 @@ class PatchedFullTopicRequest(ModelNormal):
             'comments': ([CommentRequest],),  # noqa: E501
             'viewpoints': ([ViewpointRequest],),  # noqa: E501
             'bimdata_viewer_layout': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'groups': ([int],),  # noqa: E501
         }
 
     @cached_property
@@ -172,6 +173,7 @@ class PatchedFullTopicRequest(ModelNormal):
         'comments': 'comments',  # noqa: E501
         'viewpoints': 'viewpoints',  # noqa: E501
         'bimdata_viewer_layout': 'bimdata_viewer_layout',  # noqa: E501
+        'groups': 'groups',  # noqa: E501
     }
 
     read_only_vars = {
@@ -236,6 +238,7 @@ class PatchedFullTopicRequest(ModelNormal):
             comments ([CommentRequest]): [optional]  # noqa: E501
             viewpoints ([ViewpointRequest]): [optional]  # noqa: E501
             bimdata_viewer_layout (bool, date, datetime, dict, float, int, list, str, none_type): Non standard field. JSON describing bimdataViewerLayout.. [optional]  # noqa: E501
+            groups ([int]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -338,6 +341,7 @@ class PatchedFullTopicRequest(ModelNormal):
             comments ([CommentRequest]): [optional]  # noqa: E501
             viewpoints ([ViewpointRequest]): [optional]  # noqa: E501
             bimdata_viewer_layout (bool, date, datetime, dict, float, int, list, str, none_type): Non standard field. JSON describing bimdataViewerLayout.. [optional]  # noqa: E501
+            groups ([int]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

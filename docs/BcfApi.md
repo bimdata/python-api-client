@@ -1015,6 +1015,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             ),
         ],
         bimdata_viewer_layout=None,
+        groups=[
+            1,
+        ],
     ) # FullTopicRequest | 
     img_format = "url" # str | All snapshot_data will be returned as url instead of base64 (optional) if omitted the server will use the default value of "url"
 
@@ -1282,6 +1285,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         format="format_example",
         index=0,
         bimdata_viewer_layout=None,
+        groups=[
+            1,
+        ],
     ) # TopicRequest | 
 
     # example passing only required values which don't have defaults set
@@ -3218,6 +3224,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             ),
         ],
         bimdata_viewer_layout=None,
+        groups=[
+            1,
+        ],
     ) # FullTopicRequest | 
     img_format = "url" # str | All snapshot_data will be returned as url instead of base64 (optional) if omitted the server will use the default value of "url"
 
@@ -3489,6 +3498,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         format="format_example",
         index=0,
         bimdata_viewer_layout=None,
+        groups=[
+            1,
+        ],
     ) # TopicRequest | 
 
     # example passing only required values which don't have defaults set
@@ -7405,6 +7417,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             ),
         ],
         bimdata_viewer_layout=None,
+        groups=[
+            1,
+        ],
     ) # PatchedFullTopicRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -7684,6 +7699,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         format="format_example",
         index=0,
         bimdata_viewer_layout=None,
+        groups=[
+            1,
+        ],
     ) # PatchedTopicRequest |  (optional)
 
     # example passing only required values which don't have defaults set
