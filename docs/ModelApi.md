@@ -39,7 +39,7 @@ Method | HTTP request | Description
 [**create_multi_page_model**](ModelApi.md#create_multi_page_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/create-multipage-model | Create a multi page model
 [**create_photosphere**](ModelApi.md#create_photosphere) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-photosphere | Create a photopshere model from an image file
 [**create_photosphere_building**](ModelApi.md#create_photosphere_building) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-photosphere-building | Create an empty Photosphere Building Model
-[**create_postioned_model**](ModelApi.md#create_postioned_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model | Add a child model and it&#39;s position on the model
+[**create_positioned_model**](ModelApi.md#create_positioned_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model | Add a child model and it&#39;s position on the model
 [**create_property_set**](ModelApi.md#create_property_set) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset | Create one or many PropertySet
 [**create_property_set_element_relations**](ModelApi.md#create_property_set_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset-element | Create association between PropertySet and element
 [**create_raw_elements**](ModelApi.md#create_raw_elements) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/raw | Create elements in an optimized format
@@ -64,7 +64,7 @@ Method | HTTP request | Description
 [**delete_model_property_definition**](ModelApi.md#delete_model_property_definition) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id} | Delete a PropertyDefinitions of a model
 [**delete_model_unit**](ModelApi.md#delete_model_unit) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id} | Delete a Unit of a model
 [**delete_model_without_doc**](ModelApi.md#delete_model_without_doc) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/delete-model | Delete the Model without deleting the related document
-[**delete_postioned_model**](ModelApi.md#delete_postioned_model) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id} | Remove a child model and its position from the model
+[**delete_positioned_model**](ModelApi.md#delete_positioned_model) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id} | Remove a child model and its position from the model
 [**delete_property_set**](ModelApi.md#delete_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/{id} | Delete a PropertySet of a model
 [**delete_space**](ModelApi.md#delete_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space/{id} | Delete a space
 [**delete_storey**](ModelApi.md#delete_storey) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{uuid} | Delete a storey of a model
@@ -112,8 +112,8 @@ Method | HTTP request | Description
 [**get_model_unit**](ModelApi.md#get_model_unit) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id} | Retrieve a Unit of a model
 [**get_model_units**](ModelApi.md#get_model_units) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit | Retrieve all Units of a model
 [**get_models**](ModelApi.md#get_models) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model | Retrieve all models
-[**get_postioned_model**](ModelApi.md#get_postioned_model) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id} | Retrieve one specific child model &amp; position on the model
-[**get_postioned_models**](ModelApi.md#get_postioned_models) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model | Retrieve all positioned child model &amp; positions on the model
+[**get_positioned_model**](ModelApi.md#get_positioned_model) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id} | Retrieve one specific child model &amp; position on the model
+[**get_positioned_models**](ModelApi.md#get_positioned_models) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model | Retrieve all positioned child model &amp; positions on the model
 [**get_processor_handler**](ModelApi.md#get_processor_handler) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler/{id} | Retrieve a processor handler
 [**get_processor_handlers**](ModelApi.md#get_processor_handlers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler | Get all processor handlers
 [**get_properties_types**](ModelApi.md#get_properties_types) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/properties | Retrieve all property types and their value type used in this model
@@ -167,7 +167,7 @@ Method | HTTP request | Description
 [**update_order_building_plan**](ModelApi.md#update_order_building_plan) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/order | Update order of all plan of a building
 [**update_order_storey_plan**](ModelApi.md#update_order_storey_plan) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/order | Update order of all plan of a storey
 [**update_order_storeys**](ModelApi.md#update_order_storeys) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/order | Update order of all storey of a model
-[**update_postioned_model**](ModelApi.md#update_postioned_model) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id} | Update the position of a child model on the model
+[**update_positioned_model**](ModelApi.md#update_positioned_model) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id} | Update the position of a child model on the model
 [**update_processor_handler**](ModelApi.md#update_processor_handler) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler/{id} | Update the status of a processor handler
 [**update_property_set**](ModelApi.md#update_property_set) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/{id} | Update some fields of a PropertySet
 [**update_space**](ModelApi.md#update_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space/{id} | Update some fields of a space
@@ -4537,8 +4537,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_postioned_model**
-> ModelOnModelPosition create_postioned_model(cloud_pk, id, model_pk, project_pk, model_on_model_position_request)
+# **create_positioned_model**
+> ModelOnModelPosition create_positioned_model(cloud_pk, model_pk, project_pk, model_on_model_position_creation_request)
 
 Add a child model and it's position on the model
 
@@ -4556,7 +4556,7 @@ import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
 from bimdata_api_client.model.model_on_model_position import ModelOnModelPosition
-from bimdata_api_client.model.model_on_model_position_request import ModelOnModelPositionRequest
+from bimdata_api_client.model.model_on_model_position_creation_request import ModelOnModelPositionCreationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -4598,22 +4598,22 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
-    id = 1 # int | ID of the positioned model
     model_pk = 1 # int | ID of the host model in which {id} is positioned
     project_pk = 1 # int | A unique integer value identifying this project.
-    model_on_model_position_request = ModelOnModelPositionRequest(
+    model_on_model_position_creation_request = ModelOnModelPositionCreationRequest(
+        positioned_model=1,
         position=[
             3.14,
         ],
-    ) # ModelOnModelPositionRequest | 
+    ) # ModelOnModelPositionCreationRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Add a child model and it's position on the model
-        api_response = api_instance.create_postioned_model(cloud_pk, id, model_pk, project_pk, model_on_model_position_request)
+        api_response = api_instance.create_positioned_model(cloud_pk, model_pk, project_pk, model_on_model_position_creation_request)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
-        print("Exception when calling ModelApi->create_postioned_model: %s\n" % e)
+        print("Exception when calling ModelApi->create_positioned_model: %s\n" % e)
 ```
 
 
@@ -4622,10 +4622,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
- **id** | **int**| ID of the positioned model |
  **model_pk** | **int**| ID of the host model in which {id} is positioned |
  **project_pk** | **int**| A unique integer value identifying this project. |
- **model_on_model_position_request** | [**ModelOnModelPositionRequest**](ModelOnModelPositionRequest.md)|  |
+ **model_on_model_position_creation_request** | [**ModelOnModelPositionCreationRequest**](ModelOnModelPositionCreationRequest.md)|  |
 
 ### Return type
 
@@ -7488,8 +7487,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_postioned_model**
-> delete_postioned_model(cloud_pk, id, model_pk, project_pk)
+# **delete_positioned_model**
+> delete_positioned_model(cloud_pk, id, model_pk, project_pk)
 
 Remove a child model and its position from the model
 
@@ -7547,16 +7546,16 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
-    id = 1 # int | ID of the positioned model
+    id = 1 # int | A unique integer value identifying this model on model position.
     model_pk = 1 # int | ID of the host model in which {id} is positioned
     project_pk = 1 # int | A unique integer value identifying this project.
 
     # example passing only required values which don't have defaults set
     try:
         # Remove a child model and its position from the model
-        api_instance.delete_postioned_model(cloud_pk, id, model_pk, project_pk)
+        api_instance.delete_positioned_model(cloud_pk, id, model_pk, project_pk)
     except bimdata_api_client.ApiException as e:
-        print("Exception when calling ModelApi->delete_postioned_model: %s\n" % e)
+        print("Exception when calling ModelApi->delete_positioned_model: %s\n" % e)
 ```
 
 
@@ -7565,7 +7564,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
- **id** | **int**| ID of the positioned model |
+ **id** | **int**| A unique integer value identifying this model on model position. |
  **model_pk** | **int**| ID of the host model in which {id} is positioned |
  **project_pk** | **int**| A unique integer value identifying this project. |
 
@@ -12835,8 +12834,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_postioned_model**
-> ModelOnModelPosition get_postioned_model(cloud_pk, id, model_pk, project_pk)
+# **get_positioned_model**
+> ModelOnModelPosition get_positioned_model(cloud_pk, id, model_pk, project_pk)
 
 Retrieve one specific child model & position on the model
 
@@ -12902,10 +12901,10 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Retrieve one specific child model & position on the model
-        api_response = api_instance.get_postioned_model(cloud_pk, id, model_pk, project_pk)
+        api_response = api_instance.get_positioned_model(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
-        print("Exception when calling ModelApi->get_postioned_model: %s\n" % e)
+        print("Exception when calling ModelApi->get_positioned_model: %s\n" % e)
 ```
 
 
@@ -12944,12 +12943,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_postioned_models**
-> [ModelOnModelPosition] get_postioned_models(cloud_pk, id, model_pk, project_pk)
+# **get_positioned_models**
+> [ModelOnModelPosition] get_positioned_models(cloud_pk, model_pk, project_pk)
 
 Retrieve all positioned child model & positions on the model
 
-Retrieve all postitionned child model & positions on the model  Required scopes: ifc:read, model:read
+Retrieve all positioned child model & positions on the model  Required scopes: ifc:read, model:read
 
 ### Example
 
@@ -13004,17 +13003,16 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
-    id = 1 # int | ID of the positioned model
     model_pk = 1 # int | ID of the host model in which {id} is positioned
     project_pk = 1 # int | A unique integer value identifying this project.
 
     # example passing only required values which don't have defaults set
     try:
         # Retrieve all positioned child model & positions on the model
-        api_response = api_instance.get_postioned_models(cloud_pk, id, model_pk, project_pk)
+        api_response = api_instance.get_positioned_models(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
-        print("Exception when calling ModelApi->get_postioned_models: %s\n" % e)
+        print("Exception when calling ModelApi->get_positioned_models: %s\n" % e)
 ```
 
 
@@ -13023,7 +13021,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
- **id** | **int**| ID of the positioned model |
  **model_pk** | **int**| ID of the host model in which {id} is positioned |
  **project_pk** | **int**| A unique integer value identifying this project. |
 
@@ -15666,27 +15663,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | 
     id = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | 
-    source = "EXPORT" # str | * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED (optional)
-    status = [
-        "C",
-    ] # [str] | * `C` - completed * `D` - deleted * `P` - pending * `W` - waiting * `I` - in process * `E` - errored * `X` - won't fix (optional)
-    type = [
-        "DWG",
-    ] # [str] | * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `METABUILDING` - METABUILDING * `PHOTOSPHERE` - PHOTOSPHERE * `PHOTOSPHERE_BUILDING` - PHOTOSPHERE_BUILDING (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # List all models where the model is positioned in
         api_response = api_instance.list_models_positioned_in(cloud_pk, id, project_pk)
-        pprint(api_response)
-    except bimdata_api_client.ApiException as e:
-        print("Exception when calling ModelApi->list_models_positioned_in: %s\n" % e)
-
-    # example passing only required values which don't have defaults set
-    # and optional values
-    try:
-        # List all models where the model is positioned in
-        api_response = api_instance.list_models_positioned_in(cloud_pk, id, project_pk, source=source, status=status, type=type)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->list_models_positioned_in: %s\n" % e)
@@ -15700,9 +15681,6 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**|  |
  **id** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**|  |
- **source** | **str**| * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED | [optional]
- **status** | **[str]**| * &#x60;C&#x60; - completed * &#x60;D&#x60; - deleted * &#x60;P&#x60; - pending * &#x60;W&#x60; - waiting * &#x60;I&#x60; - in process * &#x60;E&#x60; - errored * &#x60;X&#x60; - won&#39;t fix | [optional]
- **type** | **[str]**| * &#x60;IFC&#x60; - IFC * &#x60;DWG&#x60; - DWG * &#x60;DXF&#x60; - DXF * &#x60;GLTF&#x60; - GLTF * &#x60;PDF&#x60; - PDF * &#x60;JPEG&#x60; - JPEG * &#x60;PNG&#x60; - PNG * &#x60;OBJ&#x60; - OBJ * &#x60;POINT_CLOUD&#x60; - POINT_CLOUD * &#x60;METABUILDING&#x60; - METABUILDING * &#x60;PHOTOSPHERE&#x60; - PHOTOSPHERE * &#x60;PHOTOSPHERE_BUILDING&#x60; - PHOTOSPHERE_BUILDING | [optional]
 
 ### Return type
 
@@ -19302,8 +19280,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_postioned_model**
-> ModelOnModelPosition update_postioned_model(cloud_pk, id, model_pk, project_pk)
+# **update_positioned_model**
+> ModelOnModelPosition update_positioned_model(cloud_pk, id, model_pk, project_pk)
 
 Update the position of a child model on the model
 
@@ -19375,19 +19353,19 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Update the position of a child model on the model
-        api_response = api_instance.update_postioned_model(cloud_pk, id, model_pk, project_pk)
+        api_response = api_instance.update_positioned_model(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
-        print("Exception when calling ModelApi->update_postioned_model: %s\n" % e)
+        print("Exception when calling ModelApi->update_positioned_model: %s\n" % e)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Update the position of a child model on the model
-        api_response = api_instance.update_postioned_model(cloud_pk, id, model_pk, project_pk, patched_model_on_model_position_request=patched_model_on_model_position_request)
+        api_response = api_instance.update_positioned_model(cloud_pk, id, model_pk, project_pk, patched_model_on_model_position_request=patched_model_on_model_position_request)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
-        print("Exception when calling ModelApi->update_postioned_model: %s\n" % e)
+        print("Exception when calling ModelApi->update_positioned_model: %s\n" % e)
 ```
 
 

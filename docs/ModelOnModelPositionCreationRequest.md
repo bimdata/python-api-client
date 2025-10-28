@@ -1,9 +1,10 @@
-# ModelOnModelPositionRequest
+# ModelOnModelPositionCreationRequest
 
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**positioned_model** | **int** | The model that is positioned on the reference model | 
 **position** | **[float]** | Must be an array [x,y,z] of the position of the positioned model in reference model coordinates | 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

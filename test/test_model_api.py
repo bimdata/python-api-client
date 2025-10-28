@@ -269,8 +269,8 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
-    def test_create_postioned_model(self):
-        """Test case for create_postioned_model
+    def test_create_positioned_model(self):
+        """Test case for create_positioned_model
 
         Add a child model and it's position on the model  # noqa: E501
         """
@@ -444,8 +444,8 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_postioned_model(self):
-        """Test case for delete_postioned_model
+    def test_delete_positioned_model(self):
+        """Test case for delete_positioned_model
 
         Remove a child model and its position from the model  # noqa: E501
         """
@@ -780,15 +780,15 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
-    def test_get_postioned_model(self):
-        """Test case for get_postioned_model
+    def test_get_positioned_model(self):
+        """Test case for get_positioned_model
 
         Retrieve one specific child model & position on the model  # noqa: E501
         """
         pass
 
-    def test_get_postioned_models(self):
-        """Test case for get_postioned_models
+    def test_get_positioned_models(self):
+        """Test case for get_positioned_models
 
         Retrieve all positioned child model & positions on the model  # noqa: E501
         """
@@ -1165,8 +1165,8 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
-    def test_update_postioned_model(self):
-        """Test case for update_postioned_model
+    def test_update_positioned_model(self):
+        """Test case for update_positioned_model
 
         Update the position of a child model on the model  # noqa: E501
         """

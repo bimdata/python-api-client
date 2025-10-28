@@ -13,11 +13,11 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.model_on_model_position_request import ModelOnModelPositionRequest
+from bimdata_api_client.model.model_on_model_position_creation_request import ModelOnModelPositionCreationRequest
 
 
-class TestModelOnModelPositionRequest(unittest.TestCase):
-    """ModelOnModelPositionRequest unit test stubs"""
+class TestModelOnModelPositionCreationRequest(unittest.TestCase):
+    """ModelOnModelPositionCreationRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +25,10 @@ class TestModelOnModelPositionRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testModelOnModelPositionRequest(self):
-        """Test ModelOnModelPositionRequest"""
+    def testModelOnModelPositionCreationRequest(self):
+        """Test ModelOnModelPositionCreationRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = ModelOnModelPositionRequest()  # noqa: E501
+        # model = ModelOnModelPositionCreationRequest()  # noqa: E501
         pass
 
 

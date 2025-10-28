@@ -113,7 +113,7 @@ bimdata_api_client/model/model_in_model_position.py
 bimdata_api_client/model/model_label.py
 bimdata_api_client/model/model_label_request.py
 bimdata_api_client/model/model_on_model_position.py
-bimdata_api_client/model/model_on_model_position_request.py
+bimdata_api_client/model/model_on_model_position_creation_request.py
 bimdata_api_client/model/model_property.py
 bimdata_api_client/model/model_serializer_without_children.py
 bimdata_api_client/model/model_with_positioning_plan.py
@@ -393,7 +393,7 @@ docs/ModelInModelPosition.md
 docs/ModelLabel.md
 docs/ModelLabelRequest.md
 docs/ModelOnModelPosition.md
-docs/ModelOnModelPositionRequest.md
+docs/ModelOnModelPositionCreationRequest.md
 docs/ModelProperty.md
 docs/ModelSerializerWithoutChildren.md
 docs/ModelWithPositioningPlan.md
@@ -676,7 +676,7 @@ test/test_model_in_model_position.py
 test/test_model_label.py
 test/test_model_label_request.py
 test/test_model_on_model_position.py
-test/test_model_on_model_position_request.py
+test/test_model_on_model_position_creation_request.py
 test/test_model_property.py
 test/test_model_serializer_without_children.py
 test/test_model_with_positioning_plan.py

@@ -56,7 +56,7 @@ from bimdata_api_client.model.model_in_model_position import ModelInModelPositio
 from bimdata_api_client.model.model_label import ModelLabel
 from bimdata_api_client.model.model_label_request import ModelLabelRequest
 from bimdata_api_client.model.model_on_model_position import ModelOnModelPosition
-from bimdata_api_client.model.model_on_model_position_request import ModelOnModelPositionRequest
+from bimdata_api_client.model.model_on_model_position_creation_request import ModelOnModelPositionCreationRequest
 from bimdata_api_client.model.model_property import ModelProperty
 from bimdata_api_client.model.patched_drawing_request import PatchedDrawingRequest
 from bimdata_api_client.model.patched_element_request import PatchedElementRequest
@@ -2851,7 +2851,7 @@ class ModelApi(object):
             },
             api_client=api_client
         )
-        self.create_postioned_model_endpoint = _Endpoint(
+        self.create_positioned_model_endpoint = _Endpoint(
             settings={
                 'response_type': (ModelOnModelPosition,),
                 'auth': [
@@ -2861,24 +2861,22 @@ class ModelApi(object):
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model',
-                'operation_id': 'create_postioned_model',
+                'operation_id': 'create_positioned_model',
                 'http_method': 'POST',
                 'servers': None,
             },
             params_map={
                 'all': [
                     'cloud_pk',
-                    'id',
                     'model_pk',
                     'project_pk',
-                    'model_on_model_position_request',
+                    'model_on_model_position_creation_request',
                 ],
                 'required': [
                     'cloud_pk',
-                    'id',
                     'model_pk',
                     'project_pk',
-                    'model_on_model_position_request',
+                    'model_on_model_position_creation_request',
                 ],
                 'nullable': [
                 ],
@@ -2895,27 +2893,23 @@ class ModelApi(object):
                 'openapi_types': {
                     'cloud_pk':
                         (int,),
-                    'id':
-                        (int,),
                     'model_pk':
                         (int,),
                     'project_pk':
                         (int,),
-                    'model_on_model_position_request':
-                        (ModelOnModelPositionRequest,),
+                    'model_on_model_position_creation_request':
+                        (ModelOnModelPositionCreationRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
-                    'id': 'id',
                     'model_pk': 'model_pk',
                     'project_pk': 'project_pk',
                 },
                 'location_map': {
                     'cloud_pk': 'path',
-                    'id': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
-                    'model_on_model_position_request': 'body',
+                    'model_on_model_position_creation_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -4675,7 +4669,7 @@ class ModelApi(object):
             },
             api_client=api_client
         )
-        self.delete_postioned_model_endpoint = _Endpoint(
+        self.delete_positioned_model_endpoint = _Endpoint(
             settings={
                 'response_type': None,
                 'auth': [
@@ -4685,7 +4679,7 @@ class ModelApi(object):
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id}',
-                'operation_id': 'delete_postioned_model',
+                'operation_id': 'delete_positioned_model',
                 'http_method': 'DELETE',
                 'servers': None,
             },
@@ -8253,7 +8247,7 @@ class ModelApi(object):
             },
             api_client=api_client
         )
-        self.get_postioned_model_endpoint = _Endpoint(
+        self.get_positioned_model_endpoint = _Endpoint(
             settings={
                 'response_type': (ModelOnModelPosition,),
                 'auth': [
@@ -8263,7 +8257,7 @@ class ModelApi(object):
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id}',
-                'operation_id': 'get_postioned_model',
+                'operation_id': 'get_positioned_model',
                 'http_method': 'GET',
                 'servers': None,
             },
@@ -8325,7 +8319,7 @@ class ModelApi(object):
             },
             api_client=api_client
         )
-        self.get_postioned_models_endpoint = _Endpoint(
+        self.get_positioned_models_endpoint = _Endpoint(
             settings={
                 'response_type': ([ModelOnModelPosition],),
                 'auth': [
@@ -8335,20 +8329,18 @@ class ModelApi(object):
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model',
-                'operation_id': 'get_postioned_models',
+                'operation_id': 'get_positioned_models',
                 'http_method': 'GET',
                 'servers': None,
             },
             params_map={
                 'all': [
                     'cloud_pk',
-                    'id',
                     'model_pk',
                     'project_pk',
                 ],
                 'required': [
                     'cloud_pk',
-                    'id',
                     'model_pk',
                     'project_pk',
                 ],
@@ -8367,8 +8359,6 @@ class ModelApi(object):
                 'openapi_types': {
                     'cloud_pk':
                         (int,),
-                    'id':
-                        (int,),
                     'model_pk':
                         (int,),
                     'project_pk':
@@ -8376,13 +8366,11 @@ class ModelApi(object):
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
-                    'id': 'id',
                     'model_pk': 'model_pk',
                     'project_pk': 'project_pk',
                 },
                 'location_map': {
                     'cloud_pk': 'path',
-                    'id': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
                 },
@@ -10095,9 +10083,6 @@ class ModelApi(object):
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'source',
-                    'status',
-                    'type',
                 ],
                 'required': [
                     'cloud_pk',
@@ -10107,9 +10092,6 @@ class ModelApi(object):
                 'nullable': [
                 ],
                 'enum': [
-                    'source',
-                    'status',
-                    'type',
                 ],
                 'validation': [
                 ]
@@ -10118,39 +10100,6 @@ class ModelApi(object):
                 'validations': {
                 },
                 'allowed_values': {
-                    ('source',): {
-
-                        "EXPORT": "EXPORT",
-                        "MERGE": "MERGE",
-                        "OPTIMIZED": "OPTIMIZED",
-                        "SPLIT": "SPLIT",
-                        "UPLOAD": "UPLOAD"
-                    },
-                    ('status',): {
-
-                        "C": "C",
-                        "D": "D",
-                        "E": "E",
-                        "I": "I",
-                        "P": "P",
-                        "W": "W",
-                        "X": "X"
-                    },
-                    ('type',): {
-
-                        "DWG": "DWG",
-                        "DXF": "DXF",
-                        "GLTF": "GLTF",
-                        "IFC": "IFC",
-                        "JPEG": "JPEG",
-                        "METABUILDING": "METABUILDING",
-                        "OBJ": "OBJ",
-                        "PDF": "PDF",
-                        "PHOTOSPHERE": "PHOTOSPHERE",
-                        "PHOTOSPHERE_BUILDING": "PHOTOSPHERE_BUILDING",
-                        "PNG": "PNG",
-                        "POINT_CLOUD": "POINT_CLOUD"
-                    },
                 },
                 'openapi_types': {
                     'cloud_pk':
@@ -10159,32 +10108,18 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'source':
-                        (str,),
-                    'status':
-                        ([str],),
-                    'type':
-                        ([str],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
                     'id': 'id',
                     'project_pk': 'project_pk',
-                    'source': 'source',
-                    'status': 'status',
-                    'type': 'type',
                 },
                 'location_map': {
                     'cloud_pk': 'path',
                     'id': 'path',
                     'project_pk': 'path',
-                    'source': 'query',
-                    'status': 'query',
-                    'type': 'query',
                 },
                 'collection_format_map': {
-                    'status': 'multi',
-                    'type': 'multi',
                 }
             },
             headers_map={
@@ -12504,7 +12439,7 @@ class ModelApi(object):
             },
             api_client=api_client
         )
-        self.update_postioned_model_endpoint = _Endpoint(
+        self.update_positioned_model_endpoint = _Endpoint(
             settings={
                 'response_type': (ModelOnModelPosition,),
                 'auth': [
@@ -12514,7 +12449,7 @@ class ModelApi(object):
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id}',
-                'operation_id': 'update_postioned_model',
+                'operation_id': 'update_positioned_model',
                 'http_method': 'PATCH',
                 'servers': None,
             },
@@ -16429,13 +16364,12 @@ class ModelApi(object):
             create_building_by_name_request
         return self.create_photosphere_building_endpoint.call_with_http_info(**kwargs)
 
-    def create_postioned_model(
+    def create_positioned_model(
         self,
         cloud_pk,
-        id,
         model_pk,
         project_pk,
-        model_on_model_position_request,
+        model_on_model_position_creation_request,
         **kwargs
     ):
         """Add a child model and it's position on the model  # noqa: E501
@@ -16444,15 +16378,14 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_postioned_model(cloud_pk, id, model_pk, project_pk, model_on_model_position_request, async_req=True)
+        >>> thread = api.create_positioned_model(cloud_pk, model_pk, project_pk, model_on_model_position_creation_request, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
-            id (int): ID of the positioned model
             model_pk (int): ID of the host model in which {id} is positioned
             project_pk (int): A unique integer value identifying this project.
-            model_on_model_position_request (ModelOnModelPositionRequest):
+            model_on_model_position_creation_request (ModelOnModelPositionCreationRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -16513,15 +16446,13 @@ class ModelApi(object):
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['cloud_pk'] = \
             cloud_pk
-        kwargs['id'] = \
-            id
         kwargs['model_pk'] = \
             model_pk
         kwargs['project_pk'] = \
             project_pk
-        kwargs['model_on_model_position_request'] = \
-            model_on_model_position_request
-        return self.create_postioned_model_endpoint.call_with_http_info(**kwargs)
+        kwargs['model_on_model_position_creation_request'] = \
+            model_on_model_position_creation_request
+        return self.create_positioned_model_endpoint.call_with_http_info(**kwargs)
 
     def create_property_set(
         self,
@@ -18685,7 +18616,7 @@ class ModelApi(object):
             project_pk
         return self.delete_model_without_doc_endpoint.call_with_http_info(**kwargs)
 
-    def delete_postioned_model(
+    def delete_positioned_model(
         self,
         cloud_pk,
         id,
@@ -18699,12 +18630,12 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_postioned_model(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> thread = api.delete_positioned_model(cloud_pk, id, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
-            id (int): ID of the positioned model
+            id (int): A unique integer value identifying this model on model position.
             model_pk (int): ID of the host model in which {id} is positioned
             project_pk (int): A unique integer value identifying this project.
 
@@ -18773,7 +18704,7 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
-        return self.delete_postioned_model_endpoint.call_with_http_info(**kwargs)
+        return self.delete_positioned_model_endpoint.call_with_http_info(**kwargs)
 
     def delete_property_set(
         self,
@@ -23041,7 +22972,7 @@ class ModelApi(object):
             project_pk
         return self.get_models_endpoint.call_with_http_info(**kwargs)
 
-    def get_postioned_model(
+    def get_positioned_model(
         self,
         cloud_pk,
         id,
@@ -23055,7 +22986,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_postioned_model(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> thread = api.get_positioned_model(cloud_pk, id, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -23129,28 +23060,26 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
-        return self.get_postioned_model_endpoint.call_with_http_info(**kwargs)
+        return self.get_positioned_model_endpoint.call_with_http_info(**kwargs)
 
-    def get_postioned_models(
+    def get_positioned_models(
         self,
         cloud_pk,
-        id,
         model_pk,
         project_pk,
         **kwargs
     ):
         """Retrieve all positioned child model & positions on the model  # noqa: E501
 
-        Retrieve all postitionned child model & positions on the model  Required scopes: ifc:read, model:read  # noqa: E501
+        Retrieve all positioned child model & positions on the model  Required scopes: ifc:read, model:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_postioned_models(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> thread = api.get_positioned_models(cloud_pk, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
-            id (int): ID of the positioned model
             model_pk (int): ID of the host model in which {id} is positioned
             project_pk (int): A unique integer value identifying this project.
 
@@ -23213,13 +23142,11 @@ class ModelApi(object):
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['cloud_pk'] = \
             cloud_pk
-        kwargs['id'] = \
-            id
         kwargs['model_pk'] = \
             model_pk
         kwargs['project_pk'] = \
             project_pk
-        return self.get_postioned_models_endpoint.call_with_http_info(**kwargs)
+        return self.get_positioned_models_endpoint.call_with_http_info(**kwargs)
 
     def get_processor_handler(
         self,
@@ -25291,9 +25218,6 @@ class ModelApi(object):
             project_pk (int):
 
         Keyword Args:
-            source (str): * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]
-            status ([str]): * `C` - completed * `D` - deleted * `P` - pending * `W` - waiting * `I` - in process * `E` - errored * `X` - won't fix. [optional]
-            type ([str]): * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `METABUILDING` - METABUILDING * `PHOTOSPHERE` - PHOTOSPHERE * `PHOTOSPHERE_BUILDING` - PHOTOSPHERE_BUILDING. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -28034,7 +27958,7 @@ class ModelApi(object):
             request_body
         return self.update_order_storeys_endpoint.call_with_http_info(**kwargs)
 
-    def update_postioned_model(
+    def update_positioned_model(
         self,
         cloud_pk,
         id,
@@ -28048,7 +27972,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_postioned_model(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> thread = api.update_positioned_model(cloud_pk, id, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -28123,7 +28047,7 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
-        return self.update_postioned_model_endpoint.call_with_http_info(**kwargs)
+        return self.update_positioned_model_endpoint.call_with_http_info(**kwargs)
 
     def update_processor_handler(
         self,
