@@ -1,6 +1,30 @@
 # CHANGELOG
 
 
+## v10.22.3 (2025-10-28)
+
+### Fix
+
+- Patch: Bcf group permissions (#911)
+  ([`b589beb`](https://github.com/bimdata/python-api-client/commit/b589bebb278ddeff9ef9f6cd000b6e32d634e087))
+
+* Add model, filter list views
+
+* wip: permissions
+
+* remove useless config
+
+* Comment permission implementation
+
+* bcf permissions
+
+* more tests, more view filters
+
+* add more tests
+
+* add comment about permissions
+
+
 ## v10.22.2 (2025-10-28)
 
 ### Fix
