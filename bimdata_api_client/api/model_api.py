@@ -52,8 +52,11 @@ from bimdata_api_client.model.model import Model
 from bimdata_api_client.model.model_errors import ModelErrors
 from bimdata_api_client.model.model_errors_request import ModelErrorsRequest
 from bimdata_api_client.model.model_files import ModelFiles
+from bimdata_api_client.model.model_in_model_position import ModelInModelPosition
 from bimdata_api_client.model.model_label import ModelLabel
 from bimdata_api_client.model.model_label_request import ModelLabelRequest
+from bimdata_api_client.model.model_on_model_position import ModelOnModelPosition
+from bimdata_api_client.model.model_on_model_position_request import ModelOnModelPositionRequest
 from bimdata_api_client.model.model_property import ModelProperty
 from bimdata_api_client.model.patched_drawing_request import PatchedDrawingRequest
 from bimdata_api_client.model.patched_element_request import PatchedElementRequest
@@ -61,6 +64,7 @@ from bimdata_api_client.model.patched_ifc_access_token_request import PatchedIfc
 from bimdata_api_client.model.patched_layer_request import PatchedLayerRequest
 from bimdata_api_client.model.patched_mask2_d_request import PatchedMask2DRequest
 from bimdata_api_client.model.patched_model_label_request import PatchedModelLabelRequest
+from bimdata_api_client.model.patched_model_on_model_position_request import PatchedModelOnModelPositionRequest
 from bimdata_api_client.model.patched_model_request import PatchedModelRequest
 from bimdata_api_client.model.patched_positioning_plan_request import PatchedPositioningPlanRequest
 from bimdata_api_client.model.patched_processor_handler_request import PatchedProcessorHandlerRequest
@@ -2847,6 +2851,87 @@ class ModelApi(object):
             },
             api_client=api_client
         )
+        self.create_postioned_model_endpoint = _Endpoint(
+            settings={
+                'response_type': (ModelOnModelPosition,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model',
+                'operation_id': 'create_postioned_model',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'model_pk',
+                    'project_pk',
+                    'model_on_model_position_request',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'model_pk',
+                    'project_pk',
+                    'model_on_model_position_request',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'model_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'model_on_model_position_request':
+                        (ModelOnModelPositionRequest,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'model_pk': 'model_pk',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'model_pk': 'path',
+                    'project_pk': 'path',
+                    'model_on_model_position_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
         self.create_property_set_endpoint = _Endpoint(
             settings={
                 'response_type': ([PropertySet],),
@@ -4579,6 +4664,76 @@ class ModelApi(object):
                 'location_map': {
                     'cloud_pk': 'path',
                     'id': 'path',
+                    'project_pk': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.delete_postioned_model_endpoint = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id}',
+                'operation_id': 'delete_postioned_model',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'model_pk',
+                    'project_pk',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'model_pk',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'model_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'model_pk': 'model_pk',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'model_pk': 'path',
                     'project_pk': 'path',
                 },
                 'collection_format_map': {
@@ -8098,6 +8253,150 @@ class ModelApi(object):
             },
             api_client=api_client
         )
+        self.get_postioned_model_endpoint = _Endpoint(
+            settings={
+                'response_type': (ModelOnModelPosition,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id}',
+                'operation_id': 'get_postioned_model',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'model_pk',
+                    'project_pk',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'model_pk',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'model_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'model_pk': 'model_pk',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'model_pk': 'path',
+                    'project_pk': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.get_postioned_models_endpoint = _Endpoint(
+            settings={
+                'response_type': ([ModelOnModelPosition],),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model',
+                'operation_id': 'get_postioned_models',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'model_pk',
+                    'project_pk',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'model_pk',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'model_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'model_pk': 'model_pk',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'model_pk': 'path',
+                    'project_pk': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
         self.get_processor_handler_endpoint = _Endpoint(
             settings={
                 'response_type': (ProcessorHandler,),
@@ -9767,6 +10066,125 @@ class ModelApi(object):
                     'project_pk': 'path',
                 },
                 'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.list_models_positioned_in_endpoint = _Endpoint(
+            settings={
+                'response_type': ([ModelInModelPosition],),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/positioned-in',
+                'operation_id': 'list_models_positioned_in',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                    'source',
+                    'status',
+                    'type',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                    'source',
+                    'status',
+                    'type',
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                    ('source',): {
+
+                        "EXPORT": "EXPORT",
+                        "MERGE": "MERGE",
+                        "OPTIMIZED": "OPTIMIZED",
+                        "SPLIT": "SPLIT",
+                        "UPLOAD": "UPLOAD"
+                    },
+                    ('status',): {
+
+                        "C": "C",
+                        "D": "D",
+                        "E": "E",
+                        "I": "I",
+                        "P": "P",
+                        "W": "W",
+                        "X": "X"
+                    },
+                    ('type',): {
+
+                        "DWG": "DWG",
+                        "DXF": "DXF",
+                        "GLTF": "GLTF",
+                        "IFC": "IFC",
+                        "JPEG": "JPEG",
+                        "METABUILDING": "METABUILDING",
+                        "OBJ": "OBJ",
+                        "PDF": "PDF",
+                        "PHOTOSPHERE": "PHOTOSPHERE",
+                        "PHOTOSPHERE_BUILDING": "PHOTOSPHERE_BUILDING",
+                        "PNG": "PNG",
+                        "POINT_CLOUD": "POINT_CLOUD"
+                    },
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'source':
+                        (str,),
+                    'status':
+                        ([str],),
+                    'type':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'project_pk': 'project_pk',
+                    'source': 'source',
+                    'status': 'status',
+                    'type': 'type',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_pk': 'path',
+                    'source': 'query',
+                    'status': 'query',
+                    'type': 'query',
+                },
+                'collection_format_map': {
+                    'status': 'multi',
+                    'type': 'multi',
                 }
             },
             headers_map={
@@ -12070,6 +12488,86 @@ class ModelApi(object):
                     'model_pk': 'path',
                     'project_pk': 'path',
                     'request_body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
+        self.update_postioned_model_endpoint = _Endpoint(
+            settings={
+                'response_type': (ModelOnModelPosition,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id}',
+                'operation_id': 'update_postioned_model',
+                'http_method': 'PATCH',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'model_pk',
+                    'project_pk',
+                    'patched_model_on_model_position_request',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'model_pk',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'model_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'patched_model_on_model_position_request':
+                        (PatchedModelOnModelPositionRequest,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'model_pk': 'model_pk',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'model_pk': 'path',
+                    'project_pk': 'path',
+                    'patched_model_on_model_position_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -15931,6 +16429,100 @@ class ModelApi(object):
             create_building_by_name_request
         return self.create_photosphere_building_endpoint.call_with_http_info(**kwargs)
 
+    def create_postioned_model(
+        self,
+        cloud_pk,
+        id,
+        model_pk,
+        project_pk,
+        model_on_model_position_request,
+        **kwargs
+    ):
+        """Add a child model and it's position on the model  # noqa: E501
+
+        Add a child model and it's position on the model  Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.create_postioned_model(cloud_pk, id, model_pk, project_pk, model_on_model_position_request, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): ID of the positioned model
+            model_pk (int): ID of the host model in which {id} is positioned
+            project_pk (int): A unique integer value identifying this project.
+            model_on_model_position_request (ModelOnModelPositionRequest):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            ModelOnModelPosition
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['model_pk'] = \
+            model_pk
+        kwargs['project_pk'] = \
+            project_pk
+        kwargs['model_on_model_position_request'] = \
+            model_on_model_position_request
+        return self.create_postioned_model_endpoint.call_with_http_info(**kwargs)
+
     def create_property_set(
         self,
         cloud_pk,
@@ -18092,6 +18684,96 @@ class ModelApi(object):
         kwargs['project_pk'] = \
             project_pk
         return self.delete_model_without_doc_endpoint.call_with_http_info(**kwargs)
+
+    def delete_postioned_model(
+        self,
+        cloud_pk,
+        id,
+        model_pk,
+        project_pk,
+        **kwargs
+    ):
+        """Remove a child model and its position from the model  # noqa: E501
+
+        Remove a child model and its position from the model  Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.delete_postioned_model(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): ID of the positioned model
+            model_pk (int): ID of the host model in which {id} is positioned
+            project_pk (int): A unique integer value identifying this project.
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            None
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['model_pk'] = \
+            model_pk
+        kwargs['project_pk'] = \
+            project_pk
+        return self.delete_postioned_model_endpoint.call_with_http_info(**kwargs)
 
     def delete_property_set(
         self,
@@ -22359,6 +23041,186 @@ class ModelApi(object):
             project_pk
         return self.get_models_endpoint.call_with_http_info(**kwargs)
 
+    def get_postioned_model(
+        self,
+        cloud_pk,
+        id,
+        model_pk,
+        project_pk,
+        **kwargs
+    ):
+        """Retrieve one specific child model & position on the model  # noqa: E501
+
+        Retrieve one specific child model & position on the model  Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_postioned_model(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): ID of the positioned model
+            model_pk (int): ID of the host model in which {id} is positioned
+            project_pk (int): A unique integer value identifying this project.
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            ModelOnModelPosition
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['model_pk'] = \
+            model_pk
+        kwargs['project_pk'] = \
+            project_pk
+        return self.get_postioned_model_endpoint.call_with_http_info(**kwargs)
+
+    def get_postioned_models(
+        self,
+        cloud_pk,
+        id,
+        model_pk,
+        project_pk,
+        **kwargs
+    ):
+        """Retrieve all positioned child model & positions on the model  # noqa: E501
+
+        Retrieve all postitionned child model & positions on the model  Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_postioned_models(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): ID of the positioned model
+            model_pk (int): ID of the host model in which {id} is positioned
+            project_pk (int): A unique integer value identifying this project.
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [ModelOnModelPosition]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['model_pk'] = \
+            model_pk
+        kwargs['project_pk'] = \
+            project_pk
+        return self.get_postioned_models_endpoint.call_with_http_info(**kwargs)
+
     def get_processor_handler(
         self,
         cloud_pk,
@@ -24406,6 +25268,95 @@ class ModelApi(object):
         kwargs['project_pk'] = \
             project_pk
         return self.list_classification_element_relations_endpoint.call_with_http_info(**kwargs)
+
+    def list_models_positioned_in(
+        self,
+        cloud_pk,
+        id,
+        project_pk,
+        **kwargs
+    ):
+        """List all models where the model is positioned in  # noqa: E501
+
+        List all models where the model is positioned in.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.list_models_positioned_in(cloud_pk, id, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int):
+            id (int): A unique integer value identifying this model.
+            project_pk (int):
+
+        Keyword Args:
+            source (str): * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]
+            status ([str]): * `C` - completed * `D` - deleted * `P` - pending * `W` - waiting * `I` - in process * `E` - errored * `X` - won't fix. [optional]
+            type ([str]): * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `METABUILDING` - METABUILDING * `PHOTOSPHERE` - PHOTOSPHERE * `PHOTOSPHERE_BUILDING` - PHOTOSPHERE_BUILDING. [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [ModelInModelPosition]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_pk'] = \
+            project_pk
+        return self.list_models_positioned_in_endpoint.call_with_http_info(**kwargs)
 
     def merge_ifcs(
         self,
@@ -27082,6 +28033,97 @@ class ModelApi(object):
         kwargs['request_body'] = \
             request_body
         return self.update_order_storeys_endpoint.call_with_http_info(**kwargs)
+
+    def update_postioned_model(
+        self,
+        cloud_pk,
+        id,
+        model_pk,
+        project_pk,
+        **kwargs
+    ):
+        """Update the position of a child model on the model  # noqa: E501
+
+        Update the position of a child model on the model  Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.update_postioned_model(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): ID of the positioned model
+            model_pk (int): ID of the host model in which {id} is positioned
+            project_pk (int): A unique integer value identifying this project.
+
+        Keyword Args:
+            patched_model_on_model_position_request (PatchedModelOnModelPositionRequest): [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            ModelOnModelPosition
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['model_pk'] = \
+            model_pk
+        kwargs['project_pk'] = \
+            project_pk
+        return self.update_postioned_model_endpoint.call_with_http_info(**kwargs)
 
     def update_processor_handler(
         self,

@@ -372,6 +372,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**create_multi_page_model**](docs/ModelApi.md#create_multi_page_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/create-multipage-model | Create a multi page model
 *ModelApi* | [**create_photosphere**](docs/ModelApi.md#create_photosphere) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-photosphere | Create a photopshere model from an image file
 *ModelApi* | [**create_photosphere_building**](docs/ModelApi.md#create_photosphere_building) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-photosphere-building | Create an empty Photosphere Building Model
+*ModelApi* | [**create_postioned_model**](docs/ModelApi.md#create_postioned_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model | Add a child model and it&#39;s position on the model
 *ModelApi* | [**create_property_set**](docs/ModelApi.md#create_property_set) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset | Create one or many PropertySet
 *ModelApi* | [**create_property_set_element_relations**](docs/ModelApi.md#create_property_set_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset-element | Create association between PropertySet and element
 *ModelApi* | [**create_raw_elements**](docs/ModelApi.md#create_raw_elements) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/raw | Create elements in an optimized format
@@ -396,6 +397,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**delete_model_property_definition**](docs/ModelApi.md#delete_model_property_definition) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id} | Delete a PropertyDefinitions of a model
 *ModelApi* | [**delete_model_unit**](docs/ModelApi.md#delete_model_unit) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id} | Delete a Unit of a model
 *ModelApi* | [**delete_model_without_doc**](docs/ModelApi.md#delete_model_without_doc) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/delete-model | Delete the Model without deleting the related document
+*ModelApi* | [**delete_postioned_model**](docs/ModelApi.md#delete_postioned_model) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id} | Remove a child model and its position from the model
 *ModelApi* | [**delete_property_set**](docs/ModelApi.md#delete_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/{id} | Delete a PropertySet of a model
 *ModelApi* | [**delete_space**](docs/ModelApi.md#delete_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space/{id} | Delete a space
 *ModelApi* | [**delete_storey**](docs/ModelApi.md#delete_storey) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{uuid} | Delete a storey of a model
@@ -443,6 +445,8 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**get_model_unit**](docs/ModelApi.md#get_model_unit) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id} | Retrieve a Unit of a model
 *ModelApi* | [**get_model_units**](docs/ModelApi.md#get_model_units) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit | Retrieve all Units of a model
 *ModelApi* | [**get_models**](docs/ModelApi.md#get_models) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model | Retrieve all models
+*ModelApi* | [**get_postioned_model**](docs/ModelApi.md#get_postioned_model) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id} | Retrieve one specific child model &amp; position on the model
+*ModelApi* | [**get_postioned_models**](docs/ModelApi.md#get_postioned_models) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model | Retrieve all positioned child model &amp; positions on the model
 *ModelApi* | [**get_processor_handler**](docs/ModelApi.md#get_processor_handler) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler/{id} | Retrieve a processor handler
 *ModelApi* | [**get_processor_handlers**](docs/ModelApi.md#get_processor_handlers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler | Get all processor handlers
 *ModelApi* | [**get_properties_types**](docs/ModelApi.md#get_properties_types) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/properties | Retrieve all property types and their value type used in this model
@@ -466,6 +470,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**get_zones**](docs/ModelApi.md#get_zones) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone | Retrieve zones of a model
 *ModelApi* | [**link_documents_of_element**](docs/ModelApi.md#link_documents_of_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/documents | Link one or many documents to an element
 *ModelApi* | [**list_classification_element_relations**](docs/ModelApi.md#list_classification_element_relations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification-element | List all associations between classifications and elements
+*ModelApi* | [**list_models_positioned_in**](docs/ModelApi.md#list_models_positioned_in) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/positioned-in | List all models where the model is positioned in
 *ModelApi* | [**merge_ifcs**](docs/ModelApi.md#merge_ifcs) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/merge | Merge IFC files
 *ModelApi* | [**optimize_ifc**](docs/ModelApi.md#optimize_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/optimize | Optimize the IFC
 *ModelApi* | [**remove_all_element_property_set**](docs/ModelApi.md#remove_all_element_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/all | Remove all property sets from element
@@ -495,6 +500,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**update_order_building_plan**](docs/ModelApi.md#update_order_building_plan) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/order | Update order of all plan of a building
 *ModelApi* | [**update_order_storey_plan**](docs/ModelApi.md#update_order_storey_plan) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/order | Update order of all plan of a storey
 *ModelApi* | [**update_order_storeys**](docs/ModelApi.md#update_order_storeys) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/order | Update order of all storey of a model
+*ModelApi* | [**update_postioned_model**](docs/ModelApi.md#update_postioned_model) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id} | Update the position of a child model on the model
 *ModelApi* | [**update_processor_handler**](docs/ModelApi.md#update_processor_handler) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler/{id} | Update the status of a processor handler
 *ModelApi* | [**update_property_set**](docs/ModelApi.md#update_property_set) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/{id} | Update some fields of a PropertySet
 *ModelApi* | [**update_space**](docs/ModelApi.md#update_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space/{id} | Update some fields of a space
@@ -620,8 +626,11 @@ Class | Method | HTTP request | Description
  - [ModelErrors](docs/ModelErrors.md)
  - [ModelErrorsRequest](docs/ModelErrorsRequest.md)
  - [ModelFiles](docs/ModelFiles.md)
+ - [ModelInModelPosition](docs/ModelInModelPosition.md)
  - [ModelLabel](docs/ModelLabel.md)
  - [ModelLabelRequest](docs/ModelLabelRequest.md)
+ - [ModelOnModelPosition](docs/ModelOnModelPosition.md)
+ - [ModelOnModelPositionRequest](docs/ModelOnModelPositionRequest.md)
  - [ModelProperty](docs/ModelProperty.md)
  - [ModelSerializerWithoutChildren](docs/ModelSerializerWithoutChildren.md)
  - [ModelWithPositioningPlan](docs/ModelWithPositioningPlan.md)
@@ -646,6 +655,7 @@ Class | Method | HTTP request | Description
  - [PatchedLayerRequest](docs/PatchedLayerRequest.md)
  - [PatchedMask2DRequest](docs/PatchedMask2DRequest.md)
  - [PatchedModelLabelRequest](docs/PatchedModelLabelRequest.md)
+ - [PatchedModelOnModelPositionRequest](docs/PatchedModelOnModelPositionRequest.md)
  - [PatchedModelRequest](docs/PatchedModelRequest.md)
  - [PatchedPinRequest](docs/PatchedPinRequest.md)
  - [PatchedPositioningPlanRequest](docs/PatchedPositioningPlanRequest.md)

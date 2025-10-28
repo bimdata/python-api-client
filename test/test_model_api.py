@@ -269,6 +269,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_create_postioned_model(self):
+        """Test case for create_postioned_model
+
+        Add a child model and it's position on the model  # noqa: E501
+        """
+        pass
+
     def test_create_property_set(self):
         """Test case for create_property_set
 
@@ -434,6 +441,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for delete_model_without_doc
 
         Delete the Model without deleting the related document  # noqa: E501
+        """
+        pass
+
+    def test_delete_postioned_model(self):
+        """Test case for delete_postioned_model
+
+        Remove a child model and its position from the model  # noqa: E501
         """
         pass
 
@@ -766,6 +780,20 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_get_postioned_model(self):
+        """Test case for get_postioned_model
+
+        Retrieve one specific child model & position on the model  # noqa: E501
+        """
+        pass
+
+    def test_get_postioned_models(self):
+        """Test case for get_postioned_models
+
+        Retrieve all positioned child model & positions on the model  # noqa: E501
+        """
+        pass
+
     def test_get_processor_handler(self):
         """Test case for get_processor_handler
 
@@ -924,6 +952,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for list_classification_element_relations
 
         List all associations between classifications and elements  # noqa: E501
+        """
+        pass
+
+    def test_list_models_positioned_in(self):
+        """Test case for list_models_positioned_in
+
+        List all models where the model is positioned in  # noqa: E501
         """
         pass
 
@@ -1127,6 +1162,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for update_order_storeys
 
         Update order of all storey of a model  # noqa: E501
+        """
+        pass
+
+    def test_update_postioned_model(self):
+        """Test case for update_postioned_model
+
+        Update the position of a child model on the model  # noqa: E501
         """
         pass
 

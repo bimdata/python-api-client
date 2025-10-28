@@ -3469,6 +3469,7 @@ class CollaborationApi(object):
                     'file_name__contains',
                     'file_name__endswith',
                     'file_name__startswith',
+                    'file_type',
                     'has__visa',
                     'id__in',
                     'name',
@@ -3562,6 +3563,8 @@ class CollaborationApi(object):
                         (str,),
                     'file_name__startswith':
                         (str,),
+                    'file_type':
+                        (str,),
                     'has__visa':
                         (bool,),
                     'id__in':
@@ -3619,6 +3622,7 @@ class CollaborationApi(object):
                     'file_name__contains': 'file_name__contains',
                     'file_name__endswith': 'file_name__endswith',
                     'file_name__startswith': 'file_name__startswith',
+                    'file_type': 'file_type',
                     'has__visa': 'has__visa',
                     'id__in': 'id__in',
                     'name': 'name',
@@ -3655,6 +3659,7 @@ class CollaborationApi(object):
                     'file_name__contains': 'query',
                     'file_name__endswith': 'query',
                     'file_name__startswith': 'query',
+                    'file_type': 'query',
                     'has__visa': 'query',
                     'id__in': 'query',
                     'name': 'query',
@@ -3787,6 +3792,7 @@ class CollaborationApi(object):
                     'file_name__contains',
                     'file_name__endswith',
                     'file_name__startswith',
+                    'file_type',
                     'has__visa',
                     'id__in',
                     'name',
@@ -3882,6 +3888,8 @@ class CollaborationApi(object):
                         (str,),
                     'file_name__startswith':
                         (str,),
+                    'file_type':
+                        (str,),
                     'has__visa':
                         (bool,),
                     'id__in':
@@ -3938,6 +3946,7 @@ class CollaborationApi(object):
                     'file_name__contains': 'file_name__contains',
                     'file_name__endswith': 'file_name__endswith',
                     'file_name__startswith': 'file_name__startswith',
+                    'file_type': 'file_type',
                     'has__visa': 'has__visa',
                     'id__in': 'id__in',
                     'name': 'name',
@@ -3974,6 +3983,7 @@ class CollaborationApi(object):
                     'file_name__contains': 'query',
                     'file_name__endswith': 'query',
                     'file_name__startswith': 'query',
+                    'file_type': 'query',
                     'has__visa': 'query',
                     'id__in': 'query',
                     'name': 'query',
@@ -8930,7 +8940,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'DXF', 'GLTF', 'POINT_CLOUD', 'OBJ', 'DWG', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'DXF', 'OBJ', 'POINT_CLOUD', 'DWG', 'GLTF', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -12118,6 +12128,7 @@ class CollaborationApi(object):
             file_name__contains (str): [optional]
             file_name__endswith (str): [optional]
             file_name__startswith (str): [optional]
+            file_type (str): [optional]
             has__visa (bool): [optional]
             id__in ([int]): Multiple values may be separated by commas.. [optional]
             name (str): [optional]
@@ -12320,6 +12331,7 @@ class CollaborationApi(object):
             file_name__contains (str): [optional]
             file_name__endswith (str): [optional]
             file_name__startswith (str): [optional]
+            file_type (str): [optional]
             has__visa (bool): [optional]
             id__in ([int]): Multiple values may be separated by commas.. [optional]
             name (str): [optional]

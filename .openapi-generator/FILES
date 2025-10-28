@@ -109,8 +109,11 @@ bimdata_api_client/model/model_document_request.py
 bimdata_api_client/model/model_errors.py
 bimdata_api_client/model/model_errors_request.py
 bimdata_api_client/model/model_files.py
+bimdata_api_client/model/model_in_model_position.py
 bimdata_api_client/model/model_label.py
 bimdata_api_client/model/model_label_request.py
+bimdata_api_client/model/model_on_model_position.py
+bimdata_api_client/model/model_on_model_position_request.py
 bimdata_api_client/model/model_property.py
 bimdata_api_client/model/model_serializer_without_children.py
 bimdata_api_client/model/model_with_positioning_plan.py
@@ -135,6 +138,7 @@ bimdata_api_client/model/patched_ifc_access_token_request.py
 bimdata_api_client/model/patched_layer_request.py
 bimdata_api_client/model/patched_mask2_d_request.py
 bimdata_api_client/model/patched_model_label_request.py
+bimdata_api_client/model/patched_model_on_model_position_request.py
 bimdata_api_client/model/patched_model_request.py
 bimdata_api_client/model/patched_pin_request.py
 bimdata_api_client/model/patched_positioning_plan_request.py
@@ -385,8 +389,11 @@ docs/ModelDocumentRequest.md
 docs/ModelErrors.md
 docs/ModelErrorsRequest.md
 docs/ModelFiles.md
+docs/ModelInModelPosition.md
 docs/ModelLabel.md
 docs/ModelLabelRequest.md
+docs/ModelOnModelPosition.md
+docs/ModelOnModelPositionRequest.md
 docs/ModelProperty.md
 docs/ModelSerializerWithoutChildren.md
 docs/ModelWithPositioningPlan.md
@@ -411,6 +418,7 @@ docs/PatchedIfcAccessTokenRequest.md
 docs/PatchedLayerRequest.md
 docs/PatchedMask2DRequest.md
 docs/PatchedModelLabelRequest.md
+docs/PatchedModelOnModelPositionRequest.md
 docs/PatchedModelRequest.md
 docs/PatchedPinRequest.md
 docs/PatchedPositioningPlanRequest.md
@@ -664,8 +672,11 @@ test/test_model_document_request.py
 test/test_model_errors.py
 test/test_model_errors_request.py
 test/test_model_files.py
+test/test_model_in_model_position.py
 test/test_model_label.py
 test/test_model_label_request.py
+test/test_model_on_model_position.py
+test/test_model_on_model_position_request.py
 test/test_model_property.py
 test/test_model_serializer_without_children.py
 test/test_model_with_positioning_plan.py
@@ -690,6 +701,7 @@ test/test_patched_ifc_access_token_request.py
 test/test_patched_layer_request.py
 test/test_patched_mask2_d_request.py
 test/test_patched_model_label_request.py
+test/test_patched_model_on_model_position_request.py
 test/test_patched_model_request.py
 test/test_patched_pin_request.py
 test/test_patched_positioning_plan_request.py

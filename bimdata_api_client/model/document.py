@@ -121,6 +121,7 @@ class Document(ModelNormal):
             'project': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'file': (str,),  # noqa: E501
+            'file_type': (str, none_type,),  # noqa: E501
             'size': (int, none_type,),  # noqa: E501
             'tags': ([Tag],),  # noqa: E501
             'visas': ([Visa],),  # noqa: E501
@@ -151,6 +152,7 @@ class Document(ModelNormal):
         'project': 'project',  # noqa: E501
         'name': 'name',  # noqa: E501
         'file': 'file',  # noqa: E501
+        'file_type': 'file_type',  # noqa: E501
         'size': 'size',  # noqa: E501
         'tags': 'tags',  # noqa: E501
         'visas': 'visas',  # noqa: E501
@@ -174,6 +176,7 @@ class Document(ModelNormal):
         'id',  # noqa: E501
         'created_by',  # noqa: E501
         'project',  # noqa: E501
+        'file_type',  # noqa: E501
         'size',  # noqa: E501
         'tags',  # noqa: E501
         'visas',  # noqa: E501
@@ -194,7 +197,7 @@ class Document(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, created_by, project, name, file, size, tags, visas, created_at, updated_at, model_id, model_type, ifc_id, head_id, is_head_version, history_count, user_permission, office_preview, path, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, created_by, project, name, file, file_type, size, tags, visas, created_at, updated_at, model_id, model_type, ifc_id, head_id, is_head_version, history_count, user_permission, office_preview, path, *args, **kwargs):  # noqa: E501
         """Document - a model defined in OpenAPI
 
         Args:
@@ -203,6 +206,7 @@ class Document(ModelNormal):
             project (int):
             name (str): Shown name of the file
             file (str):
+            file_type (str, none_type): Lower case file extension
             size (int, none_type): Size of the file.
             tags ([Tag]):
             visas ([Visa]):
@@ -284,6 +288,7 @@ class Document(ModelNormal):
         self.project = project
         self.name = name
         self.file = file
+        self.file_type = file_type
         self.size = size
         self.tags = tags
         self.visas = visas

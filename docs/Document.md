@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **project** | **int** |  | [readonly] 
 **name** | **str** | Shown name of the file | 
 **file** | **str** |  | 
+**file_type** | **str, none_type** | Lower case file extension | [readonly] 
 **size** | **int, none_type** | Size of the file. | [readonly] 
 **tags** | [**[Tag]**](Tag.md) |  | [readonly] 
 **visas** | [**[Visa]**](Visa.md) |  | [readonly] 
