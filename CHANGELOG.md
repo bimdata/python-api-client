@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.23.0 (2025-10-30)
+
+### Feature
+
+- Minor: add BCF events
+  ([`ac35a75`](https://github.com/bimdata/python-api-client/commit/ac35a758aa388abf0055c71cd3a7b9298ad8c87d))
+
+
 ## v10.22.4 (2025-10-28)
 
 ### Fix
