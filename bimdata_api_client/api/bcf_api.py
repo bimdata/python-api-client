@@ -29,6 +29,7 @@ from bimdata_api_client.model.bcf_project import BcfProject
 from bimdata_api_client.model.bcf_project_request import BcfProjectRequest
 from bimdata_api_client.model.coloring_definition import ColoringDefinition
 from bimdata_api_client.model.comment import Comment
+from bimdata_api_client.model.comment_event import CommentEvent
 from bimdata_api_client.model.comment_request import CommentRequest
 from bimdata_api_client.model.detailed_extensions import DetailedExtensions
 from bimdata_api_client.model.document_reference import DocumentReference
@@ -56,6 +57,7 @@ from bimdata_api_client.model.self_bcf_user import SelfBcfUser
 from bimdata_api_client.model.stage import Stage
 from bimdata_api_client.model.stage_request import StageRequest
 from bimdata_api_client.model.topic import Topic
+from bimdata_api_client.model.topic_event import TopicEvent
 from bimdata_api_client.model.topic_pin import TopicPin
 from bimdata_api_client.model.topic_request import TopicRequest
 from bimdata_api_client.model.topic_status import TopicStatus
@@ -2317,6 +2319,70 @@ class BcfApi(object):
             },
             api_client=api_client
         )
+        self.get_comments_events_endpoint = _Endpoint(
+            settings={
+                'response_type': ([CommentEvent],),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/comments/events',
+                'operation_id': 'get_comments_events',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'projects_pk',
+                    'filter',
+                    'orderby',
+                ],
+                'required': [
+                    'projects_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'projects_pk':
+                        (int,),
+                    'filter':
+                        (str,),
+                    'orderby':
+                        (str,),
+                },
+                'attribute_map': {
+                    'projects_pk': 'projects_pk',
+                    'filter': '$filter',
+                    'orderby': '$orderby',
+                },
+                'location_map': {
+                    'projects_pk': 'path',
+                    'filter': 'query',
+                    'orderby': 'query',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
         self.get_detailed_extensions_endpoint = _Endpoint(
             settings={
                 'response_type': (DetailedExtensions,),
@@ -3139,6 +3205,70 @@ class BcfApi(object):
                 'collection_format_map': {
                     'ifcs': 'multi',
                     'models': 'multi',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.get_topics_events_endpoint = _Endpoint(
+            settings={
+                'response_type': ([TopicEvent],),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/events',
+                'operation_id': 'get_topics_events',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'projects_pk',
+                    'filter',
+                    'orderby',
+                ],
+                'required': [
+                    'projects_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'projects_pk':
+                        (int,),
+                    'filter':
+                        (str,),
+                    'orderby':
+                        (str,),
+                },
+                'attribute_map': {
+                    'projects_pk': 'projects_pk',
+                    'filter': '$filter',
+                    'orderby': '$orderby',
+                },
+                'location_map': {
+                    'projects_pk': 'path',
+                    'filter': 'query',
+                    'orderby': 'query',
+                },
+                'collection_format_map': {
                 }
             },
             headers_map={
@@ -7295,6 +7425,86 @@ class BcfApi(object):
             topics_guid
         return self.get_comments_endpoint.call_with_http_info(**kwargs)
 
+    def get_comments_events(
+        self,
+        projects_pk,
+        **kwargs
+    ):
+        """Get comments events  # noqa: E501
+
+        Get comments events  Required scopes: bcf:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_comments_events(projects_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            projects_pk (int):
+
+        Keyword Args:
+            filter (str): OData filters as defined in BCF spec. [optional]
+            orderby (str): OData orderby as defined in BCF spec. [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [CommentEvent]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['projects_pk'] = \
+            projects_pk
+        return self.get_comments_events_endpoint.call_with_http_info(**kwargs)
+
     def get_detailed_extensions(
         self,
         id,
@@ -8293,6 +8503,86 @@ class BcfApi(object):
         kwargs['projects_pk'] = \
             projects_pk
         return self.get_topics_endpoint.call_with_http_info(**kwargs)
+
+    def get_topics_events(
+        self,
+        projects_pk,
+        **kwargs
+    ):
+        """Get topics events  # noqa: E501
+
+        Get topics events  Required scopes: bcf:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_topics_events(projects_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            projects_pk (int):
+
+        Keyword Args:
+            filter (str): OData filters as defined in BCF spec. [optional]
+            orderby (str): OData orderby as defined in BCF spec. [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [TopicEvent]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['projects_pk'] = \
+            projects_pk
+        return self.get_topics_events_endpoint.call_with_http_info(**kwargs)
 
     def get_topics_pins(
         self,

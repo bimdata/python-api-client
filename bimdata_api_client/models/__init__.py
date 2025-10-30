@@ -30,6 +30,8 @@ from bimdata_api_client.model.coloring import Coloring
 from bimdata_api_client.model.coloring_definition import ColoringDefinition
 from bimdata_api_client.model.coloring_request import ColoringRequest
 from bimdata_api_client.model.comment import Comment
+from bimdata_api_client.model.comment_event import CommentEvent
+from bimdata_api_client.model.comment_event_action import CommentEventAction
 from bimdata_api_client.model.comment_request import CommentRequest
 from bimdata_api_client.model.component import Component
 from bimdata_api_client.model.component_request import ComponentRequest
@@ -239,6 +241,8 @@ from bimdata_api_client.model.tag import Tag
 from bimdata_api_client.model.tag_id_request import TagIdRequest
 from bimdata_api_client.model.tag_request import TagRequest
 from bimdata_api_client.model.topic import Topic
+from bimdata_api_client.model.topic_event import TopicEvent
+from bimdata_api_client.model.topic_event_action import TopicEventAction
 from bimdata_api_client.model.topic_pin import TopicPin
 from bimdata_api_client.model.topic_request import TopicRequest
 from bimdata_api_client.model.topic_status import TopicStatus

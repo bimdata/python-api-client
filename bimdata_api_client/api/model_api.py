@@ -8542,9 +8542,6 @@ class ModelApi(object):
                     'cloud_pk',
                     'model_pk',
                     'project_pk',
-                    'classification',
-                    'classification__notation',
-                    'property_filter',
                     'type',
                 ],
                 'required': [
@@ -8571,12 +8568,6 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'classification':
-                        (str,),
-                    'classification__notation':
-                        (str,),
-                    'property_filter':
-                        (str,),
                     'type':
                         (str,),
                 },
@@ -8584,18 +8575,12 @@ class ModelApi(object):
                     'cloud_pk': 'cloud_pk',
                     'model_pk': 'model_pk',
                     'project_pk': 'project_pk',
-                    'classification': 'classification',
-                    'classification__notation': 'classification__notation',
-                    'property_filter': 'property_filter',
                     'type': 'type',
                 },
                 'location_map': {
                     'cloud_pk': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
-                    'classification': 'query',
-                    'classification__notation': 'query',
-                    'property_filter': 'query',
                     'type': 'query',
                 },
                 'collection_format_map': {
@@ -23346,9 +23331,6 @@ class ModelApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
-            classification (str): [optional]
-            classification__notation (str): [optional]
-            property_filter (str): [optional]
             type (str): Filter by IfcType. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.

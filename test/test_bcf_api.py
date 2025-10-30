@@ -262,6 +262,13 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_get_comments_events(self):
+        """Test case for get_comments_events
+
+        Get comments events  # noqa: E501
+        """
+        pass
+
     def test_get_detailed_extensions(self):
         """Test case for get_detailed_extensions
 
@@ -343,6 +350,13 @@ class TestBcfApi(unittest.TestCase):
         """Test case for get_topics
 
         Retrieve all topics  # noqa: E501
+        """
+        pass
+
+    def test_get_topics_events(self):
+        """Test case for get_topics_events
+
+        Get topics events  # noqa: E501
         """
         pass
 

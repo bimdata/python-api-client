@@ -35,6 +35,8 @@ bimdata_api_client/model/coloring.py
 bimdata_api_client/model/coloring_definition.py
 bimdata_api_client/model/coloring_request.py
 bimdata_api_client/model/comment.py
+bimdata_api_client/model/comment_event.py
+bimdata_api_client/model/comment_event_action.py
 bimdata_api_client/model/comment_request.py
 bimdata_api_client/model/component.py
 bimdata_api_client/model/component_request.py
@@ -244,6 +246,8 @@ bimdata_api_client/model/tag.py
 bimdata_api_client/model/tag_id_request.py
 bimdata_api_client/model/tag_request.py
 bimdata_api_client/model/topic.py
+bimdata_api_client/model/topic_event.py
+bimdata_api_client/model/topic_event_action.py
 bimdata_api_client/model/topic_pin.py
 bimdata_api_client/model/topic_request.py
 bimdata_api_client/model/topic_status.py
@@ -314,6 +318,8 @@ docs/Coloring.md
 docs/ColoringDefinition.md
 docs/ColoringRequest.md
 docs/Comment.md
+docs/CommentEvent.md
+docs/CommentEventAction.md
 docs/CommentRequest.md
 docs/Component.md
 docs/ComponentRequest.md
@@ -525,6 +531,8 @@ docs/Tag.md
 docs/TagIdRequest.md
 docs/TagRequest.md
 docs/Topic.md
+docs/TopicEvent.md
+docs/TopicEventAction.md
 docs/TopicPin.md
 docs/TopicRequest.md
 docs/TopicStatus.md
@@ -597,6 +605,8 @@ test/test_coloring.py
 test/test_coloring_definition.py
 test/test_coloring_request.py
 test/test_comment.py
+test/test_comment_event.py
+test/test_comment_event_action.py
 test/test_comment_request.py
 test/test_component.py
 test/test_component_request.py
@@ -808,6 +818,8 @@ test/test_tag.py
 test/test_tag_id_request.py
 test/test_tag_request.py
 test/test_topic.py
+test/test_topic_event.py
+test/test_topic_event_action.py
 test/test_topic_pin.py
 test/test_topic_request.py
 test/test_topic_status.py

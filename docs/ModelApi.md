@@ -13326,9 +13326,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
-    classification = "classification_example" # str |  (optional)
-    classification__notation = "classification__notation_example" # str |  (optional)
-    property_filter = "property_filter_example" # str |  (optional)
     type = "type_example" # str | Filter by IfcType (optional)
 
     # example passing only required values which don't have defaults set
@@ -13343,7 +13340,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Retrieve all property types and their value type used in this model
-        api_response = api_instance.get_properties_types(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, property_filter=property_filter, type=type)
+        api_response = api_instance.get_properties_types(cloud_pk, model_pk, project_pk, type=type)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->get_properties_types: %s\n" % e)
@@ -13357,9 +13354,6 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
- **classification** | **str**|  | [optional]
- **classification__notation** | **str**|  | [optional]
- **property_filter** | **str**|  | [optional]
  **type** | **str**| Filter by IfcType | [optional]
 
 ### Return type

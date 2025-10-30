@@ -59,6 +59,7 @@ from bimdata_api_client.model.bcf_project import BcfProject
 from bimdata_api_client.model.bcf_project_request import BcfProjectRequest
 from bimdata_api_client.model.coloring_definition import ColoringDefinition
 from bimdata_api_client.model.comment import Comment
+from bimdata_api_client.model.comment_event import CommentEvent
 from bimdata_api_client.model.comment_request import CommentRequest
 from bimdata_api_client.model.detailed_extensions import DetailedExtensions
 from bimdata_api_client.model.document_reference import DocumentReference
@@ -86,6 +87,7 @@ from bimdata_api_client.model.self_bcf_user import SelfBcfUser
 from bimdata_api_client.model.stage import Stage
 from bimdata_api_client.model.stage_request import StageRequest
 from bimdata_api_client.model.topic import Topic
+from bimdata_api_client.model.topic_event import TopicEvent
 from bimdata_api_client.model.topic_pin import TopicPin
 from bimdata_api_client.model.topic_request import TopicRequest
 from bimdata_api_client.model.topic_status import TopicStatus
@@ -197,6 +199,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**get_colorings**](docs/BcfApi.md#get_colorings) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/coloring | Retrieve all colorings of a viewpoint
 *BcfApi* | [**get_comment**](docs/BcfApi.md#get_comment) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Retrieve a comment
 *BcfApi* | [**get_comments**](docs/BcfApi.md#get_comments) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments | Retrieve all comments
+*BcfApi* | [**get_comments_events**](docs/BcfApi.md#get_comments_events) | **GET** /bcf/2.1/projects/{projects_pk}/topics/comments/events | Get comments events
 *BcfApi* | [**get_detailed_extensions**](docs/BcfApi.md#get_detailed_extensions) | **GET** /bcf/2.1/projects/{id}/detailed-extensions | Retrieve project detailed extensions
 *BcfApi* | [**get_document_references**](docs/BcfApi.md#get_document_references) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{guid}/document_references | Retrieve all documents referenced by the topic
 *BcfApi* | [**get_extensions**](docs/BcfApi.md#get_extensions) | **GET** /bcf/2.1/projects/{id}/extensions | Retrieve project extensions
@@ -209,6 +212,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**get_topic**](docs/BcfApi.md#get_topic) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Retrieve a topic
 *BcfApi* | [**get_topic_viewpoints**](docs/BcfApi.md#get_topic_viewpoints) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/topic-viewpoints | Retrieve all viewpoints attached to the topic
 *BcfApi* | [**get_topics**](docs/BcfApi.md#get_topics) | **GET** /bcf/2.1/projects/{projects_pk}/topics | Retrieve all topics
+*BcfApi* | [**get_topics_events**](docs/BcfApi.md#get_topics_events) | **GET** /bcf/2.1/projects/{projects_pk}/topics/events | Get topics events
 *BcfApi* | [**get_topics_pins**](docs/BcfApi.md#get_topics_pins) | **GET** /bcf/2.1/projects/{projects_pk}/topics/pins | Get pins of all or many topics
 *BcfApi* | [**get_user**](docs/BcfApi.md#get_user) | **GET** /bcf/2.1/current-user | Get current user info
 *BcfApi* | [**get_versions**](docs/BcfApi.md#get_versions) | **GET** /bcf/versions | Retrieve all supported BCF versions by this API
@@ -552,6 +556,8 @@ Class | Method | HTTP request | Description
  - [ColoringDefinition](docs/ColoringDefinition.md)
  - [ColoringRequest](docs/ColoringRequest.md)
  - [Comment](docs/Comment.md)
+ - [CommentEvent](docs/CommentEvent.md)
+ - [CommentEventAction](docs/CommentEventAction.md)
  - [CommentRequest](docs/CommentRequest.md)
  - [Component](docs/Component.md)
  - [ComponentRequest](docs/ComponentRequest.md)
@@ -761,6 +767,8 @@ Class | Method | HTTP request | Description
  - [TagIdRequest](docs/TagIdRequest.md)
  - [TagRequest](docs/TagRequest.md)
  - [Topic](docs/Topic.md)
+ - [TopicEvent](docs/TopicEvent.md)
+ - [TopicEventAction](docs/TopicEventAction.md)
  - [TopicPin](docs/TopicPin.md)
  - [TopicRequest](docs/TopicRequest.md)
  - [TopicStatus](docs/TopicStatus.md)
