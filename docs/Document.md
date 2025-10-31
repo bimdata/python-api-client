@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **created_at** | **datetime** | Creation date | [readonly] 
 **updated_at** | **datetime** | Date of the last update | [readonly] 
 **model_id** | **int, none_type** |  | [readonly] 
-**model_type** | **str, none_type** | Model&#39;s type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, POINT_CLOUD | [readonly] 
+**model_type** | **str, none_type** | Model&#39;s type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, POINT_CLOUD, PHOTOSPHERE | [readonly] 
 **ifc_id** | **int, none_type** | DEPRECATED: Use &#39;model_id&#39; instead. | [readonly] 
 **head_id** | **int, none_type** | Document id of head version | [readonly] 
 **is_head_version** | **bool** | Document is a head of version or is owned by another document | [readonly] 

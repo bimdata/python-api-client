@@ -83,6 +83,7 @@ class RecursiveFolderChildren(ModelNormal):
             'PNG': "PNG",
             'OBJ': "OBJ",
             'POINT_CLOUD': "POINT_CLOUD",
+            'PHOTOSPHERE': "PHOTOSPHERE",
             'NULL': "null",
         },
         ('default_permission',): {
@@ -203,7 +204,7 @@ class RecursiveFolderChildren(ModelNormal):
             parent_id (int, none_type):
             type (str): DEPRECATED: Use 'nature' instead. Values can be 'Folder', 'Document' or 'Ifc'. It is usefull to parse the tree and discriminate folders and files
             nature (str): Values can be 'Folder', 'Document' or 'Model'. It is usefull to parse the tree and discriminate folders and files
-            model_type (str, none_type): Model's type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, POINT_CLOUD
+            model_type (str, none_type): Model's type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, POINT_CLOUD, PHOTOSPHERE
             name (str):
             created_at (datetime):
             updated_at (datetime):

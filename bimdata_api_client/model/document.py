@@ -75,6 +75,7 @@ class Document(ModelNormal):
             'PNG': "PNG",
             'OBJ': "OBJ",
             'POINT_CLOUD': "POINT_CLOUD",
+            'PHOTOSPHERE': "PHOTOSPHERE",
             'NULL': "null",
         },
         ('user_permission',): {
@@ -213,7 +214,7 @@ class Document(ModelNormal):
             created_at (datetime): Creation date
             updated_at (datetime): Date of the last update
             model_id (int, none_type):
-            model_type (str, none_type): Model's type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, POINT_CLOUD
+            model_type (str, none_type): Model's type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, POINT_CLOUD, PHOTOSPHERE
             ifc_id (int, none_type): DEPRECATED: Use 'model_id' instead.
             head_id (int, none_type): Document id of head version
             is_head_version (bool): Document is a head of version or is owned by another document
