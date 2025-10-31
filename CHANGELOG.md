@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.23.2 (2025-10-31)
+
+### Fix
+
+- Patch: fix model_type documentation
+  ([`5929f66`](https://github.com/bimdata/python-api-client/commit/5929f66699c075d6267a4509ed9c39a53b5a9fc5))
+
+
 ## v10.23.1 (2025-10-31)
 
 ### Fix
