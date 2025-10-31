@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.23.1 (2025-10-31)
+
+### Fix
+
+- Patch: fix model_type notification
+  ([`af4f524`](https://github.com/bimdata/python-api-client/commit/af4f52448a51781c4c8ead4ccc37cc4dfc3f6c92))
+
+
 ## v10.23.0 (2025-10-30)
 
 ### Feature
