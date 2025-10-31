@@ -8203,7 +8203,6 @@ class ModelApi(object):
                         "OBJ": "OBJ",
                         "PDF": "PDF",
                         "PHOTOSPHERE": "PHOTOSPHERE",
-                        "PHOTOSPHERE": "PHOTOSPHERE",
                         "PHOTOSPHERE_BUILDING": "PHOTOSPHERE_BUILDING",
                         "PNG": "PNG",
                         "POINT_CLOUD": "POINT_CLOUD"
@@ -22895,7 +22894,7 @@ class ModelApi(object):
         Keyword Args:
             source (str): * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]
             status ([str]): * `C` - completed * `D` - deleted * `P` - pending * `W` - waiting * `I` - in process * `E` - errored * `X` - won't fix. [optional]
-            type ([str]): * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `PHOTOSPHERE` - PHOTOSPHERE * `METABUILDING` - METABUILDING * `PHOTOSPHERE` - PHOTOSPHERE * `PHOTOSPHERE_BUILDING` - PHOTOSPHERE_BUILDING. [optional]
+            type ([str]): * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `PHOTOSPHERE` - PHOTOSPHERE * `METABUILDING` - METABUILDING * `PHOTOSPHERE_BUILDING` - PHOTOSPHERE_BUILDING. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

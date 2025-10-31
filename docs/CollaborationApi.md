@@ -1546,7 +1546,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'DWG', 'PHOTOSPHERE', 'GLTF', 'IFC', 'DXF', 'POINT_CLOUD', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'POINT_CLOUD', 'DXF', 'OBJ', 'DWG', 'IFC', 'PHOTOSPHERE', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -11032,7 +11032,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_document_text_request = PatchedDocumentTextRequest(
         text="text_example",
-        language="german",
+        language="french",
     ) # PatchedDocumentTextRequest |  (optional)
 
     # example passing only required values which don't have defaults set
