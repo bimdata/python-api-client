@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.23.3 (2025-11-06)
+
+### Fix
+
+- Patch: add group short name. (#920)
+  ([`cecef31`](https://github.com/bimdata/python-api-client/commit/cecef310703203a4782b004e3a0abda4d9923316))
+
+
 ## v10.23.2 (2025-10-31)
 
 ### Fix
