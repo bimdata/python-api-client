@@ -66,6 +66,9 @@ class Group(ModelNormal):
         ('name',): {
             'max_length': 512,
         },
+        ('short_name',): {
+            'max_length': 128,
+        },
         ('color',): {
             'max_length': 255,
         },
@@ -97,6 +100,7 @@ class Group(ModelNormal):
             'id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'members': ([UserProject],),  # noqa: E501
+            'short_name': (str, none_type,),  # noqa: E501
             'color': (str, none_type,),  # noqa: E501
         }
 
@@ -109,6 +113,7 @@ class Group(ModelNormal):
         'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'members': 'members',  # noqa: E501
+        'short_name': 'short_name',  # noqa: E501
         'color': 'color',  # noqa: E501
     }
 
@@ -160,6 +165,7 @@ class Group(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            short_name (str, none_type): Short name of the group. [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
         """
 
@@ -246,6 +252,7 @@ class Group(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            short_name (str, none_type): Short name of the group. [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
         """
 

@@ -1482,14 +1482,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this project.
     write_folder_request = [
         WriteFolderRequest(
-            name="name_example",
             default_permission=1,
             parent_id=1,
+            name="name_example",
             children=[
                 WriteFolder(
-                    name="name_example",
                     default_permission=1,
                     parent_id=1,
+                    name="name_example",
                     children=None,
                 ),
             ],
@@ -1546,7 +1546,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'POINT_CLOUD', 'DXF', 'OBJ', 'DWG', 'IFC', 'PHOTOSPHERE', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'PHOTOSPHERE', 'GLTF', 'IFC', 'DWG', 'POINT_CLOUD', 'DXF', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -1853,6 +1853,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     group_request = GroupRequest(
         name="name_example",
+        short_name="short_name_example",
         color="color_example",
     ) # GroupRequest | 
 
@@ -11032,7 +11033,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_document_text_request = PatchedDocumentTextRequest(
         text="text_example",
-        language="french",
+        language="german",
     ) # PatchedDocumentTextRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -11405,6 +11406,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_group_request = PatchedGroupRequest(
         name="name_example",
+        short_name="short_name_example",
         color="color_example",
     ) # PatchedGroupRequest |  (optional)
 

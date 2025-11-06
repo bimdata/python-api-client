@@ -63,6 +63,9 @@ class PatchedGroupRequest(ModelNormal):
             'max_length': 512,
             'min_length': 1,
         },
+        ('short_name',): {
+            'max_length': 128,
+        },
         ('color',): {
             'max_length': 255,
         },
@@ -90,6 +93,7 @@ class PatchedGroupRequest(ModelNormal):
         """
         return {
             'name': (str,),  # noqa: E501
+            'short_name': (str, none_type,),  # noqa: E501
             'color': (str, none_type,),  # noqa: E501
         }
 
@@ -100,6 +104,7 @@ class PatchedGroupRequest(ModelNormal):
 
     attribute_map = {
         'name': 'name',  # noqa: E501
+        'short_name': 'short_name',  # noqa: E501
         'color': 'color',  # noqa: E501
     }
 
@@ -145,6 +150,7 @@ class PatchedGroupRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             name (str): Full name of the group. [optional]  # noqa: E501
+            short_name (str, none_type): Short name of the group. [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
         """
 
@@ -228,6 +234,7 @@ class PatchedGroupRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             name (str): Full name of the group. [optional]  # noqa: E501
+            short_name (str, none_type): Short name of the group. [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
         """
 

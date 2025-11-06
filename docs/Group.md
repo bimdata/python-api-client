@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [readonly] 
 **name** | **str** | Full name of the group | 
 **members** | [**[UserProject]**](UserProject.md) |  | [readonly] 
+**short_name** | **str, none_type** | Short name of the group | [optional] 
 **color** | **str, none_type** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
