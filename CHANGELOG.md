@@ -1,6 +1,26 @@
 # CHANGELOG
 
 
+## v10.23.4 (2025-11-21)
+
+### Fix
+
+- Patch: add BCF export with POST verb. (#927)
+  ([`2d3e8ef`](https://github.com/bimdata/python-api-client/commit/2d3e8ef0a947368ed26a2b22ed38a920bcb642c2))
+
+* PATCH: add BCF export with POST verb.
+
+* fix typo
+
+* Some debug print
+
+* Fix viewpoint order in bcf xlsx export
+
+* Remove debug.
+
+* fix comparator.
+
+
 ## v10.23.3 (2025-11-06)
 
 ### Fix
