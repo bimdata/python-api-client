@@ -24,8 +24,10 @@ Method | HTTP request | Description
 [**delete_pin**](BcfApi.md#delete_pin) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid} | Delete a Pin
 [**delete_topic**](BcfApi.md#delete_topic) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Delete a topic
 [**delete_viewpoint**](BcfApi.md#delete_viewpoint) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Delete a Viewpoint
-[**download_bcf_export**](BcfApi.md#download_bcf_export) | **GET** /bcf/2.1/projects/{id}/export | Export project&#39;s topics in bcf-xml format
-[**download_bcf_export_xlsx**](BcfApi.md#download_bcf_export_xlsx) | **GET** /bcf/2.1/projects/{id}/export-xlsx | Export project&#39;s topics in excel format
+[**download_bcf_export**](BcfApi.md#download_bcf_export) | **GET** /bcf/2.1/projects/{id}/export | 
+[**download_bcf_export_post**](BcfApi.md#download_bcf_export_post) | **POST** /bcf/2.1/projects/{id}/export | 
+[**download_bcf_export_xlsx**](BcfApi.md#download_bcf_export_xlsx) | **GET** /bcf/2.1/projects/{id}/export-xlsx | 
+[**download_bcf_export_xlsx_post**](BcfApi.md#download_bcf_export_xlsx_post) | **POST** /bcf/2.1/projects/{id}/export-xlsx | 
 [**full_update_bcf_project**](BcfApi.md#full_update_bcf_project) | **PUT** /bcf/2.1/projects/{id} | Update all fields of a BCF project
 [**full_update_comment**](BcfApi.md#full_update_comment) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Update all fields of a comment
 [**full_update_document_reference**](BcfApi.md#full_update_document_reference) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{guid}/document_references | Add or update document references to a topic
@@ -2467,9 +2469,9 @@ void (empty response body)
 # **download_bcf_export**
 > file_type download_bcf_export(id)
 
-Export project's topics in bcf-xml format
 
-This is not a standard route. Export project's topics in bcf-xml format  Required scopes: bcf:read
+
+Required scopes: bcf:read
 
 ### Example
 
@@ -2528,7 +2530,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        # Export project's topics in bcf-xml format
         api_response = api_instance.download_bcf_export(id)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
@@ -2537,7 +2538,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        # Export project's topics in bcf-xml format
         api_response = api_instance.download_bcf_export(id, format=format, topics=topics)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
@@ -2579,12 +2579,130 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **download_bcf_export_post**
+> file_type download_bcf_export_post(id)
+
+
+
+Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import bcf_api
+from bimdata_api_client.model.bcf_project_export_request import BcfProjectExportRequest
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bcf_api.BcfApi(api_client)
+    id = 1 # int | A unique integer value identifying this project.
+    bcf_project_export_request = BcfProjectExportRequest(
+        topics=[
+            "topics_example",
+        ],
+        format="standard",
+    ) # BcfProjectExportRequest |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.download_bcf_export_post(id)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->download_bcf_export_post: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.download_bcf_export_post(id, bcf_project_export_request=bcf_project_export_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->download_bcf_export_post: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this project. |
+ **bcf_project_export_request** | [**BcfProjectExportRequest**](BcfProjectExportRequest.md)|  | [optional]
+
+### Return type
+
+**file_type**
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | bcf-xml file |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **download_bcf_export_xlsx**
 > file_type download_bcf_export_xlsx(id)
 
-Export project's topics in excel format
 
-This is not a standard route. Export project's topics in excel format  Required scopes: bcf:read
+
+Required scopes: bcf:read
 
 ### Example
 
@@ -2644,7 +2762,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        # Export project's topics in excel format
         api_response = api_instance.download_bcf_export_xlsx(id)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
@@ -2653,7 +2770,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        # Export project's topics in excel format
         api_response = api_instance.download_bcf_export_xlsx(id, format=format, locale=locale, topics=topics)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
@@ -2689,6 +2805,126 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | bcf Excel file |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **download_bcf_export_xlsx_post**
+> file_type download_bcf_export_xlsx_post(id)
+
+
+
+Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import bcf_api
+from bimdata_api_client.model.bcf_project_export_request import BcfProjectExportRequest
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bcf_api.BcfApi(api_client)
+    id = 1 # int | A unique integer value identifying this project.
+    locale = "en" # str | Locale of the exported file. Available locales are 'en' and 'fr'. If set locale is not supported, 'en' will be used (optional)
+    bcf_project_export_request = BcfProjectExportRequest(
+        topics=[
+            "topics_example",
+        ],
+        format="standard",
+    ) # BcfProjectExportRequest |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.download_bcf_export_xlsx_post(id)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->download_bcf_export_xlsx_post: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.download_bcf_export_xlsx_post(id, locale=locale, bcf_project_export_request=bcf_project_export_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->download_bcf_export_xlsx_post: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this project. |
+ **locale** | **str**| Locale of the exported file. Available locales are &#39;en&#39; and &#39;fr&#39;. If set locale is not supported, &#39;en&#39; will be used | [optional]
+ **bcf_project_export_request** | [**BcfProjectExportRequest**](BcfProjectExportRequest.md)|  | [optional]
+
+### Return type
+
+**file_type**
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | bcf-xml file |  -  |
+**400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
 **404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |

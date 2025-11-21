@@ -18,6 +18,7 @@ bimdata_api_client/model/auth.py
 bimdata_api_client/model/bcf_label.py
 bimdata_api_client/model/bcf_label_request.py
 bimdata_api_client/model/bcf_project.py
+bimdata_api_client/model/bcf_project_export_request.py
 bimdata_api_client/model/bcf_project_request.py
 bimdata_api_client/model/building.py
 bimdata_api_client/model/building_model_plan_request.py
@@ -300,6 +301,7 @@ docs/BcfApi.md
 docs/BcfLabel.md
 docs/BcfLabelRequest.md
 docs/BcfProject.md
+docs/BcfProjectExportRequest.md
 docs/BcfProjectRequest.md
 docs/Building.md
 docs/BuildingModelPlanRequest.md
@@ -587,6 +589,7 @@ test/test_bcf_api.py
 test/test_bcf_label.py
 test/test_bcf_label_request.py
 test/test_bcf_project.py
+test/test_bcf_project_export_request.py
 test/test_bcf_project_request.py
 test/test_building.py
 test/test_building_model_plan_request.py

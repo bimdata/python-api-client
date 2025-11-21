@@ -13,6 +13,7 @@ from bimdata_api_client.model.auth import Auth
 from bimdata_api_client.model.bcf_label import BcfLabel
 from bimdata_api_client.model.bcf_label_request import BcfLabelRequest
 from bimdata_api_client.model.bcf_project import BcfProject
+from bimdata_api_client.model.bcf_project_export_request import BcfProjectExportRequest
 from bimdata_api_client.model.bcf_project_request import BcfProjectRequest
 from bimdata_api_client.model.building import Building
 from bimdata_api_client.model.building_model_plan_request import BuildingModelPlanRequest

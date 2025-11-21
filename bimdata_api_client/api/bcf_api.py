@@ -26,6 +26,7 @@ from bimdata_api_client.model.auth import Auth
 from bimdata_api_client.model.bcf_label import BcfLabel
 from bimdata_api_client.model.bcf_label_request import BcfLabelRequest
 from bimdata_api_client.model.bcf_project import BcfProject
+from bimdata_api_client.model.bcf_project_export_request import BcfProjectExportRequest
 from bimdata_api_client.model.bcf_project_request import BcfProjectRequest
 from bimdata_api_client.model.coloring_definition import ColoringDefinition
 from bimdata_api_client.model.comment import Comment
@@ -1442,6 +1443,68 @@ class BcfApi(object):
             },
             api_client=api_client
         )
+        self.download_bcf_export_post_endpoint = _Endpoint(
+            settings={
+                'response_type': (file_type,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{id}/export',
+                'operation_id': 'download_bcf_export_post',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'id',
+                    'bcf_project_export_request',
+                ],
+                'required': [
+                    'id',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'id':
+                        (int,),
+                    'bcf_project_export_request':
+                        (BcfProjectExportRequest,),
+                },
+                'attribute_map': {
+                    'id': 'id',
+                },
+                'location_map': {
+                    'id': 'path',
+                    'bcf_project_export_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
         self.download_bcf_export_xlsx_endpoint = _Endpoint(
             settings={
                 'response_type': (file_type,),
@@ -1514,6 +1577,79 @@ class BcfApi(object):
                     'application/json'
                 ],
                 'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.download_bcf_export_xlsx_post_endpoint = _Endpoint(
+            settings={
+                'response_type': (file_type,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{id}/export-xlsx',
+                'operation_id': 'download_bcf_export_xlsx_post',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'id',
+                    'locale',
+                    'bcf_project_export_request',
+                ],
+                'required': [
+                    'id',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                    'locale',
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                    ('locale',): {
+
+                        "EN": "en",
+                        "FR": "fr"
+                    },
+                },
+                'openapi_types': {
+                    'id':
+                        (int,),
+                    'locale':
+                        (str,),
+                    'bcf_project_export_request':
+                        (BcfProjectExportRequest,),
+                },
+                'attribute_map': {
+                    'id': 'id',
+                    'locale': 'locale',
+                },
+                'location_map': {
+                    'id': 'path',
+                    'locale': 'query',
+                    'bcf_project_export_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -6264,9 +6400,9 @@ class BcfApi(object):
         id,
         **kwargs
     ):
-        """Export project's topics in bcf-xml format  # noqa: E501
+        """download_bcf_export  # noqa: E501
 
-        This is not a standard route. Export project's topics in bcf-xml format  Required scopes: bcf:read  # noqa: E501
+        Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -6339,14 +6475,93 @@ class BcfApi(object):
             id
         return self.download_bcf_export_endpoint.call_with_http_info(**kwargs)
 
+    def download_bcf_export_post(
+        self,
+        id,
+        **kwargs
+    ):
+        """download_bcf_export_post  # noqa: E501
+
+        Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.download_bcf_export_post(id, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            id (int): A unique integer value identifying this project.
+
+        Keyword Args:
+            bcf_project_export_request (BcfProjectExportRequest): [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            file_type
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['id'] = \
+            id
+        return self.download_bcf_export_post_endpoint.call_with_http_info(**kwargs)
+
     def download_bcf_export_xlsx(
         self,
         id,
         **kwargs
     ):
-        """Export project's topics in excel format  # noqa: E501
+        """download_bcf_export_xlsx  # noqa: E501
 
-        This is not a standard route. Export project's topics in excel format  Required scopes: bcf:read  # noqa: E501
+        Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -6419,6 +6634,86 @@ class BcfApi(object):
         kwargs['id'] = \
             id
         return self.download_bcf_export_xlsx_endpoint.call_with_http_info(**kwargs)
+
+    def download_bcf_export_xlsx_post(
+        self,
+        id,
+        **kwargs
+    ):
+        """download_bcf_export_xlsx_post  # noqa: E501
+
+        Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.download_bcf_export_xlsx_post(id, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            id (int): A unique integer value identifying this project.
+
+        Keyword Args:
+            locale (str): Locale of the exported file. Available locales are 'en' and 'fr'. If set locale is not supported, 'en' will be used. [optional]
+            bcf_project_export_request (BcfProjectExportRequest): [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            file_type
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['id'] = \
+            id
+        return self.download_bcf_export_xlsx_post_endpoint.call_with_http_info(**kwargs)
 
     def full_update_bcf_project(
         self,
