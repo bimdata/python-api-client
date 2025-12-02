@@ -1,6 +1,20 @@
 # CHANGELOG
 
 
+## v10.24.0 (2025-12-02)
+
+### Feature
+
+- Minor: add infos to users lists (#934)
+  ([`8897518`](https://github.com/bimdata/python-api-client/commit/8897518be783dc5136b672ff051863d5896aa653))
+
+* add infos to users lists
+
+* migrate in_all_projects
+
+* fix doc
+
+
 ## v10.23.4 (2025-11-21)
 
 ### Fix
