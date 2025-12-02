@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.24.1 (2025-12-02)
+
+### Fix
+
+- Patch: Retro-compatibility: use FosUser id in UC serializer, like FosUser. (#935)
+  ([`ef70175`](https://github.com/bimdata/python-api-client/commit/ef70175734c9d645b9c728111416bc23a743b054))
+
+* Retro-compatibility: use FosUser id in UC serializer, like FosUser.
+
+* Fix migration
+
+
 ## v10.24.0 (2025-12-02)
 
 ### Feature
