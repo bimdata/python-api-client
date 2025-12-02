@@ -5,8 +5,7 @@ This is a flattened nested representation of FosUser and UserCloud models in thi
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [readonly] 
-**user_id** | **int, none_type** |  | [readonly] 
+**id** | **int, none_type** |  | [readonly] 
 **email** | **str** |  | [readonly] 
 **firstname** | **str, none_type** |  | [readonly] 
 **lastname** | **str, none_type** |  | [readonly] 

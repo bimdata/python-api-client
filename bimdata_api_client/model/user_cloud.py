@@ -86,8 +86,7 @@ class UserCloud(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'id': (int,),  # noqa: E501
-            'user_id': (int, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
             'email': (str,),  # noqa: E501
             'firstname': (str, none_type,),  # noqa: E501
             'lastname': (str, none_type,),  # noqa: E501
@@ -107,7 +106,6 @@ class UserCloud(ModelNormal):
 
     attribute_map = {
         'id': 'id',  # noqa: E501
-        'user_id': 'user_id',  # noqa: E501
         'email': 'email',  # noqa: E501
         'firstname': 'firstname',  # noqa: E501
         'lastname': 'lastname',  # noqa: E501
@@ -122,7 +120,6 @@ class UserCloud(ModelNormal):
 
     read_only_vars = {
         'id',  # noqa: E501
-        'user_id',  # noqa: E501
         'email',  # noqa: E501
         'firstname',  # noqa: E501
         'lastname',  # noqa: E501
@@ -139,12 +136,11 @@ class UserCloud(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, user_id, email, firstname, lastname, profile_picture, sub, created_at, updated_at, provider, cloud_role, in_all_projects, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, email, firstname, lastname, profile_picture, sub, created_at, updated_at, provider, cloud_role, in_all_projects, *args, **kwargs):  # noqa: E501
         """UserCloud - a model defined in OpenAPI
 
         Args:
-            id (int):
-            user_id (int, none_type):
+            id (int, none_type):
             email (str):
             firstname (str, none_type):
             lastname (str, none_type):
@@ -215,7 +211,6 @@ class UserCloud(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.id = id
-        self.user_id = user_id
         self.email = email
         self.firstname = firstname
         self.lastname = lastname
