@@ -49,7 +49,6 @@ Method | HTTP request | Description
 [**get_cloud**](CollaborationApi.md#get_cloud) | **GET** /cloud/{id} | Retrieve one cloud
 [**get_cloud_invitations**](CollaborationApi.md#get_cloud_invitations) | **GET** /cloud/{cloud_pk}/invitation | Retrieve all pending invitations in the cloud
 [**get_cloud_size**](CollaborationApi.md#get_cloud_size) | **GET** /cloud/{id}/size | Get size of the cloud
-[**get_cloud_user**](CollaborationApi.md#get_cloud_user) | **GET** /cloud/{cloud_pk}/user/{id} | Retrieve a user in a cloud
 [**get_cloud_users**](CollaborationApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | Retrieve all users in a cloud, or a list with a filter by email
 [**get_clouds**](CollaborationApi.md#get_clouds) | **GET** /cloud | Retrieve all clouds
 [**get_document**](CollaborationApi.md#get_document) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Retrieve a document
@@ -1482,14 +1481,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this project.
     write_folder_request = [
         WriteFolderRequest(
-            name="name_example",
             parent_id=1,
             default_permission=1,
+            name="name_example",
             children=[
                 WriteFolder(
-                    name="name_example",
                     parent_id=1,
                     default_permission=1,
+                    name="name_example",
                     children=None,
                 ),
             ],
@@ -1546,7 +1545,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'GLTF', 'OBJ', 'PHOTOSPHERE', 'DWG', 'DXF', 'POINT_CLOUD', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'OBJ', 'IFC', 'GLTF', 'DWG', 'DXF', 'PHOTOSPHERE', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -5053,113 +5052,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_cloud_user**
-> User get_cloud_user(cloud_pk, id)
-
-Retrieve a user in a cloud
-
-Only administrators can see a cloud member  Required scopes: cloud:read
-
-### Example
-
-* Api Key Authentication (ApiKey):
-* OAuth Authentication (BIMData_Connect):
-* OAuth Authentication (BIMData_Connect):
-* Api Key Authentication (Bearer):
-
-```python
-import time
-import bimdata_api_client
-from bimdata_api_client.api import collaboration_api
-from bimdata_api_client.model.user import User
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: ApiKey
-configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: BIMData_Connect
-configuration = bimdata_api_client.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure API key authorization: Bearer
-configuration.api_key['Bearer'] = 'YOUR_API_KEY'
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Bearer'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = collaboration_api.CollaborationApi(api_client)
-    cloud_pk = 1 # int | 
-    id = 1 # int | A unique integer value identifying this fos user.
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Retrieve a user in a cloud
-        api_response = api_instance.get_cloud_user(cloud_pk, id)
-        pprint(api_response)
-    except bimdata_api_client.ApiException as e:
-        print("Exception when calling CollaborationApi->get_cloud_user: %s\n" % e)
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **int**|  |
- **id** | **int**| A unique integer value identifying this fos user. |
-
-### Return type
-
-[**User**](User.md)
-
-### Authorization
-
-[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **get_cloud_users**
-> [User] get_cloud_users(cloud_pk)
+> [UserCloud] get_cloud_users(cloud_pk)
 
 Retrieve all users in a cloud, or a list with a filter by email
 
@@ -5176,7 +5070,7 @@ Only administrators can see cloud members.  Required scopes: cloud:read
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
-from bimdata_api_client.model.user import User
+from bimdata_api_client.model.user_cloud import UserCloud
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -5254,7 +5148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[User]**](User.md)
+[**[UserCloud]**](UserCloud.md)
 
 ### Authorization
 
@@ -11033,7 +10927,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_document_text_request = PatchedDocumentTextRequest(
         text="text_example",
-        language="spanish",
+        language="german",
     ) # PatchedDocumentTextRequest |  (optional)
 
     # example passing only required values which don't have defaults set

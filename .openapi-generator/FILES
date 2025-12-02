@@ -260,6 +260,7 @@ bimdata_api_client/model/transform_request.py
 bimdata_api_client/model/unit.py
 bimdata_api_client/model/unit_request.py
 bimdata_api_client/model/user.py
+bimdata_api_client/model/user_cloud.py
 bimdata_api_client/model/user_invitation.py
 bimdata_api_client/model/user_project.py
 bimdata_api_client/model/user_project_id_request.py
@@ -546,6 +547,7 @@ docs/TransformRequest.md
 docs/Unit.md
 docs/UnitRequest.md
 docs/User.md
+docs/UserCloud.md
 docs/UserInvitation.md
 docs/UserProject.md
 docs/UserProjectIdRequest.md
@@ -834,6 +836,7 @@ test/test_transform_request.py
 test/test_unit.py
 test/test_unit_request.py
 test/test_user.py
+test/test_user_cloud.py
 test/test_user_invitation.py
 test/test_user_project.py
 test/test_user_project_id_request.py

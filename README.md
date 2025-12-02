@@ -280,7 +280,6 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_cloud**](docs/CollaborationApi.md#get_cloud) | **GET** /cloud/{id} | Retrieve one cloud
 *CollaborationApi* | [**get_cloud_invitations**](docs/CollaborationApi.md#get_cloud_invitations) | **GET** /cloud/{cloud_pk}/invitation | Retrieve all pending invitations in the cloud
 *CollaborationApi* | [**get_cloud_size**](docs/CollaborationApi.md#get_cloud_size) | **GET** /cloud/{id}/size | Get size of the cloud
-*CollaborationApi* | [**get_cloud_user**](docs/CollaborationApi.md#get_cloud_user) | **GET** /cloud/{cloud_pk}/user/{id} | Retrieve a user in a cloud
 *CollaborationApi* | [**get_cloud_users**](docs/CollaborationApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | Retrieve all users in a cloud, or a list with a filter by email
 *CollaborationApi* | [**get_clouds**](docs/CollaborationApi.md#get_clouds) | **GET** /cloud | Retrieve all clouds
 *CollaborationApi* | [**get_document**](docs/CollaborationApi.md#get_document) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Retrieve a document
@@ -784,6 +783,7 @@ Class | Method | HTTP request | Description
  - [Unit](docs/Unit.md)
  - [UnitRequest](docs/UnitRequest.md)
  - [User](docs/User.md)
+ - [UserCloud](docs/UserCloud.md)
  - [UserInvitation](docs/UserInvitation.md)
  - [UserProject](docs/UserProject.md)
  - [UserProjectIdRequest](docs/UserProjectIdRequest.md)

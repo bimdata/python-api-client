@@ -70,6 +70,7 @@ from bimdata_api_client.model.tag import Tag
 from bimdata_api_client.model.tag_id_request import TagIdRequest
 from bimdata_api_client.model.tag_request import TagRequest
 from bimdata_api_client.model.user import User
+from bimdata_api_client.model.user_cloud import UserCloud
 from bimdata_api_client.model.user_invitation import UserInvitation
 from bimdata_api_client.model.user_project import UserProject
 from bimdata_api_client.model.user_project_id_request import UserProjectIdRequest
@@ -3127,69 +3128,9 @@ class CollaborationApi(object):
             },
             api_client=api_client
         )
-        self.get_cloud_user_endpoint = _Endpoint(
-            settings={
-                'response_type': (User,),
-                'auth': [
-                    'ApiKey',
-                    'BIMData_Connect',
-                    'BIMData_Connect',
-                    'Bearer'
-                ],
-                'endpoint_path': '/cloud/{cloud_pk}/user/{id}',
-                'operation_id': 'get_cloud_user',
-                'http_method': 'GET',
-                'servers': None,
-            },
-            params_map={
-                'all': [
-                    'cloud_pk',
-                    'id',
-                ],
-                'required': [
-                    'cloud_pk',
-                    'id',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
-            },
-            root_map={
-                'validations': {
-                },
-                'allowed_values': {
-                },
-                'openapi_types': {
-                    'cloud_pk':
-                        (int,),
-                    'id':
-                        (int,),
-                },
-                'attribute_map': {
-                    'cloud_pk': 'cloud_pk',
-                    'id': 'id',
-                },
-                'location_map': {
-                    'cloud_pk': 'path',
-                    'id': 'path',
-                },
-                'collection_format_map': {
-                }
-            },
-            headers_map={
-                'accept': [
-                    'application/json'
-                ],
-                'content_type': [],
-            },
-            api_client=api_client
-        )
         self.get_cloud_users_endpoint = _Endpoint(
             settings={
-                'response_type': ([User],),
+                'response_type': ([UserCloud],),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -8940,7 +8881,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'GLTF', 'OBJ', 'PHOTOSPHERE', 'DWG', 'DXF', 'POINT_CLOUD', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'OBJ', 'IFC', 'GLTF', 'DWG', 'DXF', 'PHOTOSPHERE', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -11688,88 +11629,6 @@ class CollaborationApi(object):
             id
         return self.get_cloud_size_endpoint.call_with_http_info(**kwargs)
 
-    def get_cloud_user(
-        self,
-        cloud_pk,
-        id,
-        **kwargs
-    ):
-        """Retrieve a user in a cloud  # noqa: E501
-
-        Only administrators can see a cloud member  Required scopes: cloud:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.get_cloud_user(cloud_pk, id, async_req=True)
-        >>> result = thread.get()
-
-        Args:
-            cloud_pk (int):
-            id (int): A unique integer value identifying this fos user.
-
-        Keyword Args:
-            _return_http_data_only (bool): response data without head status
-                code and headers. Default is True.
-            _preload_content (bool): if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            _request_timeout (int/float/tuple): timeout setting for this request. If
-                one number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            _check_input_type (bool): specifies if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            _check_return_type (bool): specifies if type checking
-                should be done one the data received from the server.
-                Default is True.
-            _spec_property_naming (bool): True if the variable names in the input data
-                are serialized names, as specified in the OpenAPI document.
-                False if the variable names in the input data
-                are pythonic names, e.g. snake case (default)
-            _content_type (str/None): force body content-type.
-                Default is None and content-type will be predicted by allowed
-                content-types and body.
-            _host_index (int/None): specifies the index of the server
-                that we want to use.
-                Default is read from the configuration.
-            async_req (bool): execute request asynchronously
-
-        Returns:
-            User
-                If the method is called asynchronously, returns the request
-                thread.
-        """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_spec_property_naming'] = kwargs.get(
-            '_spec_property_naming', False
-        )
-        kwargs['_content_type'] = kwargs.get(
-            '_content_type')
-        kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['cloud_pk'] = \
-            cloud_pk
-        kwargs['id'] = \
-            id
-        return self.get_cloud_user_endpoint.call_with_http_info(**kwargs)
-
     def get_cloud_users(
         self,
         cloud_pk,
@@ -11820,7 +11679,7 @@ class CollaborationApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            [User]
+            [UserCloud]
                 If the method is called asynchronously, returns the request
                 thread.
         """

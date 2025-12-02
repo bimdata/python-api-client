@@ -64,8 +64,8 @@ class CloudRole(ModelNormal):
 
     validations = {
         ('role',): {
-            'inclusive_maximum': 32767,
-            'inclusive_minimum': -32768,
+            'inclusive_maximum': 2147483647,
+            'inclusive_minimum': 0,
         },
     }
 

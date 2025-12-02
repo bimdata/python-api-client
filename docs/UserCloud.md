@@ -1,22 +1,22 @@
-# FolderUserProject
+# UserCloud
 
-This is a flattened nested representation of FosUser, Invitation, UserCloud and UserProject models in this serializer.
+This is a flattened nested representation of FosUser and UserCloud models in this serializer.
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [readonly] 
 **user_id** | **int, none_type** |  | [readonly] 
-**invitation_id** | **int, none_type** |  | [readonly] 
 **email** | **str** |  | [readonly] 
 **firstname** | **str, none_type** |  | [readonly] 
 **lastname** | **str, none_type** |  | [readonly] 
 **profile_picture** | **str, none_type** |  | [readonly] 
 **sub** | **str, none_type** |  | [readonly] 
-**role** | **int** | * &#x60;100&#x60; - admin * &#x60;50&#x60; - user * &#x60;25&#x60; - guest | [readonly] 
+**created_at** | **datetime** |  | [readonly] 
+**updated_at** | **datetime** |  | [readonly] 
+**provider** | **str** |  | [readonly] 
 **cloud_role** | **int** | * &#x60;100&#x60; - admin * &#x60;50&#x60; - user | [readonly] 
 **in_all_projects** | **bool** |  | [readonly] 
-**permission** | **int** | * &#x60;1&#x60; - denied * &#x60;50&#x60; - read_only * &#x60;100&#x60; - read_write | [readonly] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

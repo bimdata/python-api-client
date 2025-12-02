@@ -339,13 +339,6 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
-    def test_get_cloud_user(self):
-        """Test case for get_cloud_user
-
-        Retrieve a user in a cloud  # noqa: E501
-        """
-        pass
-
     def test_get_cloud_users(self):
         """Test case for get_cloud_users
 

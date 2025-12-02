@@ -61,6 +61,10 @@ class FolderUserProject(ModelNormal):
             '50': 50,
             '25': 25,
         },
+        ('cloud_role',): {
+            '100': 100,
+            '50': 50,
+        },
         ('permission',): {
             '1': 1,
             '50': 50,
@@ -101,6 +105,8 @@ class FolderUserProject(ModelNormal):
             'profile_picture': (str, none_type,),  # noqa: E501
             'sub': (str, none_type,),  # noqa: E501
             'role': (int,),  # noqa: E501
+            'cloud_role': (int,),  # noqa: E501
+            'in_all_projects': (bool,),  # noqa: E501
             'permission': (int,),  # noqa: E501
         }
 
@@ -119,6 +125,8 @@ class FolderUserProject(ModelNormal):
         'profile_picture': 'profile_picture',  # noqa: E501
         'sub': 'sub',  # noqa: E501
         'role': 'role',  # noqa: E501
+        'cloud_role': 'cloud_role',  # noqa: E501
+        'in_all_projects': 'in_all_projects',  # noqa: E501
         'permission': 'permission',  # noqa: E501
     }
 
@@ -132,6 +140,8 @@ class FolderUserProject(ModelNormal):
         'profile_picture',  # noqa: E501
         'sub',  # noqa: E501
         'role',  # noqa: E501
+        'cloud_role',  # noqa: E501
+        'in_all_projects',  # noqa: E501
         'permission',  # noqa: E501
     }
 
@@ -139,7 +149,7 @@ class FolderUserProject(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, user_id, invitation_id, email, firstname, lastname, profile_picture, sub, role, permission, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, user_id, invitation_id, email, firstname, lastname, profile_picture, sub, role, cloud_role, in_all_projects, permission, *args, **kwargs):  # noqa: E501
         """FolderUserProject - a model defined in OpenAPI
 
         Args:
@@ -152,6 +162,8 @@ class FolderUserProject(ModelNormal):
             profile_picture (str, none_type):
             sub (str, none_type):
             role (int): * `100` - admin * `50` - user * `25` - guest
+            cloud_role (int): * `100` - admin * `50` - user
+            in_all_projects (bool):
             permission (int): * `1` - denied * `50` - read_only * `100` - read_write
 
         Keyword Args:
@@ -221,6 +233,8 @@ class FolderUserProject(ModelNormal):
         self.profile_picture = profile_picture
         self.sub = sub
         self.role = role
+        self.cloud_role = cloud_role
+        self.in_all_projects = in_all_projects
         self.permission = permission
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \

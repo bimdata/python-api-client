@@ -1,6 +1,6 @@
 # UserProject
 
-This is a flattened nested represetation of FosUser and Invitation models in this serializer.
+This is a flattened nested representation of FosUser, Invitation, UserCloud and UserProject models in this serializer.
 
 ## Properties
 Name | Type | Description | Notes
@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **profile_picture** | **str, none_type** |  | [readonly] 
 **sub** | **str, none_type** |  | [readonly] 
 **role** | **int** | * &#x60;100&#x60; - admin * &#x60;50&#x60; - user * &#x60;25&#x60; - guest | [readonly] 
+**cloud_role** | **int** | * &#x60;100&#x60; - admin * &#x60;50&#x60; - user | [readonly] 
+**in_all_projects** | **bool** |  | [readonly] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
