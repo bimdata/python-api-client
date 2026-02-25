@@ -133,6 +133,7 @@ class ModelDocument(ModelNormal):
 
     read_only_vars = {
         'id',  # noqa: E501
+        'file',  # noqa: E501
         'size',  # noqa: E501
         'created_at',  # noqa: E501
         'updated_at',  # noqa: E501
@@ -153,7 +154,7 @@ class ModelDocument(ModelNormal):
         Args:
             id (int):
             name (str): Shown name of the file
-            file (str):
+            file (str): URL to access the document file
             size (int, none_type): Size of the file.
             created_at (datetime): Creation date
             updated_at (datetime): Date of the last update
@@ -255,11 +256,10 @@ class ModelDocument(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, name, file, *args, **kwargs):  # noqa: E501
+    def __init__(self, name, *args, **kwargs):  # noqa: E501
         """ModelDocument - a model defined in OpenAPI
 
             name (str): Shown name of the file
-            file (str):
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
                                 will be type checked and a TypeError will be
@@ -320,7 +320,6 @@ class ModelDocument(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.name = name
-        self.file = file
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

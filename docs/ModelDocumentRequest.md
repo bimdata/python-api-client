@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | Shown name of the file | 
-**file** | **file_type** |  | 
 **file_name** | **str** | Full name of the file | [optional] 
 **parent_id** | **int, none_type** |  | [optional] 
 **description** | **str, none_type** | Description of the file | [optional] 

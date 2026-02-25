@@ -52,6 +52,27 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_bulk_delete_document_history(self):
+        """Test case for bulk_delete_document_history
+
+        Bulk delete document history  # noqa: E501
+        """
+        pass
+
+    def test_bulk_delete_documents(self):
+        """Test case for bulk_delete_documents
+
+        Bulk delete documents  # noqa: E501
+        """
+        pass
+
+    def test_bulk_delete_folders(self):
+        """Test case for bulk_delete_folders
+
+        Bulk delete folders  # noqa: E501
+        """
+        pass
+
     def test_cancel_cloud_user_invitation(self):
         """Test case for cancel_cloud_user_invitation
 

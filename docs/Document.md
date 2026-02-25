@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **created_by** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
 **project** | **int** |  | [readonly] 
 **name** | **str** | Shown name of the file | 
-**file** | **str** |  | 
+**file** | **str** | URL to access the document file | [readonly] 
 **file_type** | **str, none_type** | Lower case file extension | [readonly] 
 **size** | **int, none_type** | Size of the file. | [readonly] 
 **tags** | [**[Tag]**](Tag.md) |  | [readonly] 

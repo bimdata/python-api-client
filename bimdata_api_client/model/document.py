@@ -177,6 +177,7 @@ class Document(ModelNormal):
         'id',  # noqa: E501
         'created_by',  # noqa: E501
         'project',  # noqa: E501
+        'file',  # noqa: E501
         'file_type',  # noqa: E501
         'size',  # noqa: E501
         'tags',  # noqa: E501
@@ -206,7 +207,7 @@ class Document(ModelNormal):
             created_by (bool, date, datetime, dict, float, int, list, str, none_type):
             project (int):
             name (str): Shown name of the file
-            file (str):
+            file (str): URL to access the document file
             file_type (str, none_type): Lower case file extension
             size (int, none_type): Size of the file.
             tags ([Tag]):
@@ -324,11 +325,10 @@ class Document(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, name, file, *args, **kwargs):  # noqa: E501
+    def __init__(self, name, *args, **kwargs):  # noqa: E501
         """Document - a model defined in OpenAPI
 
             name (str): Shown name of the file
-            file (str):
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
                                 will be type checked and a TypeError will be
@@ -389,7 +389,6 @@ class Document(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.name = name
-        self.file = file
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

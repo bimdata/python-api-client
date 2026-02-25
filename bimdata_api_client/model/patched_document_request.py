@@ -111,7 +111,6 @@ class PatchedDocumentRequest(ModelNormal):
             'name': (str,),  # noqa: E501
             'file_name': (str,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
-            'file': (file_type,),  # noqa: E501
             'model_source': (str,),  # noqa: E501
             'ifc_source': (str,),  # noqa: E501
             'successor_of': (int,),  # noqa: E501
@@ -128,7 +127,6 @@ class PatchedDocumentRequest(ModelNormal):
         'name': 'name',  # noqa: E501
         'file_name': 'file_name',  # noqa: E501
         'description': 'description',  # noqa: E501
-        'file': 'file',  # noqa: E501
         'model_source': 'model_source',  # noqa: E501
         'ifc_source': 'ifc_source',  # noqa: E501
         'successor_of': 'successor_of',  # noqa: E501
@@ -180,7 +178,6 @@ class PatchedDocumentRequest(ModelNormal):
             name (str): Shown name of the file. [optional]  # noqa: E501
             file_name (str): Full name of the file. [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501
-            file (file_type): [optional]  # noqa: E501
             model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]  # noqa: E501
             ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]  # noqa: E501
             successor_of (int): Old document version to replace. Only for create. [optional]  # noqa: E501
@@ -270,7 +267,6 @@ class PatchedDocumentRequest(ModelNormal):
             name (str): Shown name of the file. [optional]  # noqa: E501
             file_name (str): Full name of the file. [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501
-            file (file_type): [optional]  # noqa: E501
             model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]  # noqa: E501
             ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]  # noqa: E501
             successor_of (int): Old document version to replace. Only for create. [optional]  # noqa: E501

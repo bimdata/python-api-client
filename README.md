@@ -239,6 +239,9 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**accept_validation**](docs/CollaborationApi.md#accept_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}/accept | Accept a validation
 *CollaborationApi* | [**add_document_tag**](docs/CollaborationApi.md#add_document_tag) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/tag | Add a tag to a document
 *CollaborationApi* | [**add_group_member**](docs/CollaborationApi.md#add_group_member) | **POST** /cloud/{cloud_pk}/project/{project_pk}/group/{group_pk}/member | Add a user to a group
+*CollaborationApi* | [**bulk_delete_document_history**](docs/CollaborationApi.md#bulk_delete_document_history) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/bulk_destroy_history | Bulk delete document history
+*CollaborationApi* | [**bulk_delete_documents**](docs/CollaborationApi.md#bulk_delete_documents) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/bulk_destroy | Bulk delete documents
+*CollaborationApi* | [**bulk_delete_folders**](docs/CollaborationApi.md#bulk_delete_folders) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/folder/bulk_destroy | Bulk delete folders
 *CollaborationApi* | [**cancel_cloud_user_invitation**](docs/CollaborationApi.md#cancel_cloud_user_invitation) | **DELETE** /cloud/{cloud_pk}/invitation/{id} | Cancel a pending invitation
 *CollaborationApi* | [**cancel_project_user_invitation**](docs/CollaborationApi.md#cancel_project_user_invitation) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/invitation/{id} | Cancel a pending invitation
 *CollaborationApi* | [**check_access**](docs/CollaborationApi.md#check_access) | **GET** /cloud/{id}/check-access | Check app access from cloud

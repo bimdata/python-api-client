@@ -8,6 +8,9 @@ Method | HTTP request | Description
 [**accept_validation**](CollaborationApi.md#accept_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}/accept | Accept a validation
 [**add_document_tag**](CollaborationApi.md#add_document_tag) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/tag | Add a tag to a document
 [**add_group_member**](CollaborationApi.md#add_group_member) | **POST** /cloud/{cloud_pk}/project/{project_pk}/group/{group_pk}/member | Add a user to a group
+[**bulk_delete_document_history**](CollaborationApi.md#bulk_delete_document_history) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/bulk_destroy_history | Bulk delete document history
+[**bulk_delete_documents**](CollaborationApi.md#bulk_delete_documents) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/bulk_destroy | Bulk delete documents
+[**bulk_delete_folders**](CollaborationApi.md#bulk_delete_folders) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/folder/bulk_destroy | Bulk delete folders
 [**cancel_cloud_user_invitation**](CollaborationApi.md#cancel_cloud_user_invitation) | **DELETE** /cloud/{cloud_pk}/invitation/{id} | Cancel a pending invitation
 [**cancel_project_user_invitation**](CollaborationApi.md#cancel_project_user_invitation) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/invitation/{id} | Cancel a pending invitation
 [**check_access**](CollaborationApi.md#check_access) | **GET** /cloud/{id}/check-access | Check app access from cloud
@@ -557,6 +560,330 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **bulk_delete_document_history**
+> bulk_delete_document_history(cloud_pk, project_pk, request_body)
+
+Bulk delete document history
+
+ Bulk delete. You must send a list of ids in the body. These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted   Required scopes: document:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    project_pk = 1 # int | A unique integer value identifying this project.
+    request_body = [
+        1,
+    ] # [int] | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Bulk delete document history
+        api_instance.bulk_delete_document_history(cloud_pk, project_pk, request_body)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->bulk_delete_document_history: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+ **request_body** | **[int]**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | Document history deleted |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **bulk_delete_documents**
+> bulk_delete_documents(cloud_pk, project_pk, request_body)
+
+Bulk delete documents
+
+ Bulk delete. You must send a list of ids in the body. These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted   Required scopes: document:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    project_pk = 1 # int | A unique integer value identifying this project.
+    request_body = [
+        1,
+    ] # [int] | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Bulk delete documents
+        api_instance.bulk_delete_documents(cloud_pk, project_pk, request_body)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->bulk_delete_documents: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+ **request_body** | **[int]**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No response body |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **bulk_delete_folders**
+> bulk_delete_folders(cloud_pk, project_pk, request_body)
+
+Bulk delete folders
+
+ Bulk delete. You must send a list of ids in the body. These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted   Required scopes: document:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    project_pk = 1 # int | A unique integer value identifying this project.
+    request_body = [
+        1,
+    ] # [int] | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Bulk delete folders
+        api_instance.bulk_delete_folders(cloud_pk, project_pk, request_body)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->bulk_delete_folders: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+ **request_body** | **[int]**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No response body |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
@@ -1481,14 +1808,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this project.
     write_folder_request = [
         WriteFolderRequest(
+            default_permission=1,
             parent_id=1,
             name="name_example",
-            default_permission=1,
             children=[
                 WriteFolder(
+                    default_permission=1,
                     parent_id=1,
                     name="name_example",
-                    default_permission=1,
                     children=None,
                 ),
             ],
@@ -1541,11 +1868,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_document**
-> Document create_document(cloud_pk, project_pk, name, file)
+> Document create_document(cloud_pk, project_pk, name)
 
 Create a document
 
-Create a document. If the document is one of {'GLTF', 'PHOTOSPHERE', 'DWG', 'DXF', 'OBJ', 'IFC', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'IFC', 'DXF', 'GLTF', 'PHOTOSPHERE', 'POINT_CLOUD', 'DWG', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -1602,7 +1929,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     project_pk = 1 # int | A unique integer value identifying this project.
     name = "name_example" # str | Shown name of the file
-    file = open('/path/to/file', 'rb') # file_type | 
     parent_id = 1 # int, none_type |  (optional)
     file_name = "file_name_example" # str | Full name of the file (optional)
     description = "description_example" # str, none_type | Description of the file (optional)
@@ -1614,7 +1940,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Create a document
-        api_response = api_instance.create_document(cloud_pk, project_pk, name, file)
+        api_response = api_instance.create_document(cloud_pk, project_pk, name)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->create_document: %s\n" % e)
@@ -1623,7 +1949,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Create a document
-        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent_id=parent_id, file_name=file_name, description=description, model_source=model_source, ifc_source=ifc_source, successor_of=successor_of, process_hint=process_hint)
+        api_response = api_instance.create_document(cloud_pk, project_pk, name, parent_id=parent_id, file_name=file_name, description=description, model_source=model_source, ifc_source=ifc_source, successor_of=successor_of, process_hint=process_hint)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->create_document: %s\n" % e)
@@ -1637,7 +1963,6 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **name** | **str**| Shown name of the file |
- **file** | **file_type**|  |
  **parent_id** | **int, none_type**|  | [optional]
  **file_name** | **str**| Full name of the file | [optional]
  **description** | **str, none_type**| Description of the file | [optional]
@@ -10800,7 +11125,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         name="name_example",
         file_name="file_name_example",
         description="description_example",
-        file=open('/path/to/file', 'rb'),
         model_source="UPLOAD",
         ifc_source="UPLOAD",
         successor_of=1,
@@ -10927,7 +11251,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_document_text_request = PatchedDocumentTextRequest(
         text="text_example",
-        language="english",
+        language="italian",
     ) # PatchedDocumentTextRequest |  (optional)
 
     # example passing only required values which don't have defaults set

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [readonly] 
 **name** | **str** | Shown name of the file | 
-**file** | **str** |  | 
+**file** | **str** | URL to access the document file | [readonly] 
 **size** | **int, none_type** | Size of the file. | [readonly] 
 **created_at** | **datetime** | Creation date | [readonly] 
 **updated_at** | **datetime** | Date of the last update | [readonly] 

@@ -94,7 +94,6 @@ class ModelDocumentRequest(ModelNormal):
         """
         return {
             'name': (str,),  # noqa: E501
-            'file': (file_type,),  # noqa: E501
             'file_name': (str,),  # noqa: E501
             'parent_id': (int, none_type,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
@@ -108,7 +107,6 @@ class ModelDocumentRequest(ModelNormal):
 
     attribute_map = {
         'name': 'name',  # noqa: E501
-        'file': 'file',  # noqa: E501
         'file_name': 'file_name',  # noqa: E501
         'parent_id': 'parent_id',  # noqa: E501
         'description': 'description',  # noqa: E501
@@ -122,12 +120,11 @@ class ModelDocumentRequest(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, name, file, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, name, *args, **kwargs):  # noqa: E501
         """ModelDocumentRequest - a model defined in OpenAPI
 
         Args:
             name (str): Shown name of the file
-            file (file_type):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -192,7 +189,6 @@ class ModelDocumentRequest(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.name = name
-        self.file = file
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -213,12 +209,11 @@ class ModelDocumentRequest(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, name, file, *args, **kwargs):  # noqa: E501
+    def __init__(self, name, *args, **kwargs):  # noqa: E501
         """ModelDocumentRequest - a model defined in OpenAPI
 
         Args:
             name (str): Shown name of the file
-            file (file_type):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -281,7 +276,6 @@ class ModelDocumentRequest(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.name = name
-        self.file = file
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

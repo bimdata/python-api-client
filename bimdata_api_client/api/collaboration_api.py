@@ -386,6 +386,207 @@ class CollaborationApi(object):
             },
             api_client=api_client
         )
+        self.bulk_delete_document_history_endpoint = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/bulk_destroy_history',
+                'operation_id': 'bulk_delete_document_history',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'project_pk',
+                    'request_body',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'project_pk',
+                    'request_body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'request_body':
+                        ([int],),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'project_pk': 'path',
+                    'request_body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
+        self.bulk_delete_documents_endpoint = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/bulk_destroy',
+                'operation_id': 'bulk_delete_documents',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'project_pk',
+                    'request_body',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'project_pk',
+                    'request_body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'request_body':
+                        ([int],),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'project_pk': 'path',
+                    'request_body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
+        self.bulk_delete_folders_endpoint = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/folder/bulk_destroy',
+                'operation_id': 'bulk_delete_folders',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'project_pk',
+                    'request_body',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'project_pk',
+                    'request_body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'request_body':
+                        ([int],),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'project_pk': 'path',
+                    'request_body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
         self.cancel_cloud_user_invitation_endpoint = _Endpoint(
             settings={
                 'response_type': None,
@@ -958,7 +1159,6 @@ class CollaborationApi(object):
                     'cloud_pk',
                     'project_pk',
                     'name',
-                    'file',
                     'parent_id',
                     'file_name',
                     'description',
@@ -971,7 +1171,6 @@ class CollaborationApi(object):
                     'cloud_pk',
                     'project_pk',
                     'name',
-                    'file',
                 ],
                 'nullable': [
                     'parent_id',
@@ -1027,8 +1226,6 @@ class CollaborationApi(object):
                         (int,),
                     'name':
                         (str,),
-                    'file':
-                        (file_type,),
                     'parent_id':
                         (int, none_type,),
                     'file_name':
@@ -1048,7 +1245,6 @@ class CollaborationApi(object):
                     'cloud_pk': 'cloud_pk',
                     'project_pk': 'project_pk',
                     'name': 'name',
-                    'file': 'file',
                     'parent_id': 'parent_id',
                     'file_name': 'file_name',
                     'description': 'description',
@@ -1061,7 +1257,6 @@ class CollaborationApi(object):
                     'cloud_pk': 'path',
                     'project_pk': 'path',
                     'name': 'form',
-                    'file': 'form',
                     'parent_id': 'form',
                     'file_name': 'form',
                     'description': 'form',
@@ -8125,6 +8320,264 @@ class CollaborationApi(object):
             user_project_id_request
         return self.add_group_member_endpoint.call_with_http_info(**kwargs)
 
+    def bulk_delete_document_history(
+        self,
+        cloud_pk,
+        project_pk,
+        request_body,
+        **kwargs
+    ):
+        """Bulk delete document history  # noqa: E501
+
+         Bulk delete. You must send a list of ids in the body. These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted   Required scopes: document:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.bulk_delete_document_history(cloud_pk, project_pk, request_body, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            None
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['project_pk'] = \
+            project_pk
+        kwargs['request_body'] = \
+            request_body
+        return self.bulk_delete_document_history_endpoint.call_with_http_info(**kwargs)
+
+    def bulk_delete_documents(
+        self,
+        cloud_pk,
+        project_pk,
+        request_body,
+        **kwargs
+    ):
+        """Bulk delete documents  # noqa: E501
+
+         Bulk delete. You must send a list of ids in the body. These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted   Required scopes: document:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.bulk_delete_documents(cloud_pk, project_pk, request_body, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            None
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['project_pk'] = \
+            project_pk
+        kwargs['request_body'] = \
+            request_body
+        return self.bulk_delete_documents_endpoint.call_with_http_info(**kwargs)
+
+    def bulk_delete_folders(
+        self,
+        cloud_pk,
+        project_pk,
+        request_body,
+        **kwargs
+    ):
+        """Bulk delete folders  # noqa: E501
+
+         Bulk delete. You must send a list of ids in the body. These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted   Required scopes: document:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.bulk_delete_folders(cloud_pk, project_pk, request_body, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            None
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['project_pk'] = \
+            project_pk
+        kwargs['request_body'] = \
+            request_body
+        return self.bulk_delete_folders_endpoint.call_with_http_info(**kwargs)
+
     def cancel_cloud_user_invitation(
         self,
         cloud_pk,
@@ -8876,23 +9329,21 @@ class CollaborationApi(object):
         cloud_pk,
         project_pk,
         name,
-        file,
         **kwargs
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'GLTF', 'PHOTOSPHERE', 'DWG', 'DXF', 'OBJ', 'IFC', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'IFC', 'DXF', 'GLTF', 'PHOTOSPHERE', 'POINT_CLOUD', 'DWG', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_document(cloud_pk, project_pk, name, file, async_req=True)
+        >>> thread = api.create_document(cloud_pk, project_pk, name, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             project_pk (int): A unique integer value identifying this project.
             name (str): Shown name of the file
-            file (file_type):
 
         Keyword Args:
             parent_id (int, none_type): [optional]
@@ -8964,8 +9415,6 @@ class CollaborationApi(object):
             project_pk
         kwargs['name'] = \
             name
-        kwargs['file'] = \
-            file
         return self.create_document_endpoint.call_with_http_info(**kwargs)
 
     def create_folder(

@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **name** | **str** | Shown name of the file | [optional] 
 **file_name** | **str** | Full name of the file | [optional] 
 **description** | **str, none_type** | Description of the file | [optional] 
-**file** | **file_type** |  | [optional] 
 **model_source** | **str** | Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED | [optional] 
 **ifc_source** | **str** | DEPRECATED: Use &#39;model_source&#39; instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED | [optional] 
 **successor_of** | **int** | Old document version to replace. Only for create | [optional] 
