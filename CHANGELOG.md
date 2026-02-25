@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.25.0 (2026-02-25)
+
+### Feature
+
+- Minor: feat: add bulk delete folders route (#962)
+  ([`9527e0d`](https://github.com/bimdata/python-api-client/commit/9527e0d304760cd227b4a9ec536cc80ef24cd17f))
+
+* MINOR: feat: add bulk delete folders route
+
+* fix: remove 'document.deletion' webhook tests on folder deletion
+
+
 ## v10.24.1 (2025-12-02)
 
 ### Fix
