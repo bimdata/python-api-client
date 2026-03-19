@@ -88,6 +88,7 @@ class ModelFiles(ModelNormal):
             'gltf_file': (str, none_type,),  # noqa: E501
             'preview_file': (str, none_type,),  # noqa: E501
             'xkt_file': (str, none_type,),  # noqa: E501
+            'fragments_file': (str, none_type,),  # noqa: E501
             'binary_2d_file': (str, none_type,),  # noqa: E501
         }
 
@@ -103,6 +104,7 @@ class ModelFiles(ModelNormal):
         'gltf_file': 'gltf_file',  # noqa: E501
         'preview_file': 'preview_file',  # noqa: E501
         'xkt_file': 'xkt_file',  # noqa: E501
+        'fragments_file': 'fragments_file',  # noqa: E501
         'binary_2d_file': 'binary_2d_file',  # noqa: E501
     }
 
@@ -153,6 +155,7 @@ class ModelFiles(ModelNormal):
             gltf_file (str, none_type): [optional]  # noqa: E501
             preview_file (str, none_type): [optional]  # noqa: E501
             xkt_file (str, none_type): DEPRECATED. xkt file url is now in xkt_files field with its version number. [optional]  # noqa: E501
+            fragments_file (str, none_type): [optional]  # noqa: E501
             binary_2d_file (str, none_type): [optional]  # noqa: E501
         """
 
@@ -241,6 +244,7 @@ class ModelFiles(ModelNormal):
             gltf_file (str, none_type): [optional]  # noqa: E501
             preview_file (str, none_type): [optional]  # noqa: E501
             xkt_file (str, none_type): DEPRECATED. xkt file url is now in xkt_files field with its version number. [optional]  # noqa: E501
+            fragments_file (str, none_type): [optional]  # noqa: E501
             binary_2d_file (str, none_type): [optional]  # noqa: E501
         """
 

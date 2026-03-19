@@ -11787,6 +11787,7 @@ class ModelApi(object):
                     'gltf_file',
                     'preview_file',
                     'xkt_file',
+                    'fragments_file',
                     'binary_2d_file',
                 ],
                 'required': [
@@ -11801,6 +11802,7 @@ class ModelApi(object):
                     'gltf_file',
                     'preview_file',
                     'xkt_file',
+                    'fragments_file',
                     'binary_2d_file',
                 ],
                 'enum': [
@@ -11832,6 +11834,8 @@ class ModelApi(object):
                         (file_type, none_type,),
                     'xkt_file':
                         (file_type, none_type,),
+                    'fragments_file':
+                        (file_type, none_type,),
                     'binary_2d_file':
                         (file_type, none_type,),
                 },
@@ -11845,6 +11849,7 @@ class ModelApi(object):
                     'gltf_file': 'gltf_file',
                     'preview_file': 'preview_file',
                     'xkt_file': 'xkt_file',
+                    'fragments_file': 'fragments_file',
                     'binary_2d_file': 'binary_2d_file',
                 },
                 'location_map': {
@@ -11857,6 +11862,7 @@ class ModelApi(object):
                     'gltf_file': 'form',
                     'preview_file': 'form',
                     'xkt_file': 'form',
+                    'fragments_file': 'form',
                     'binary_2d_file': 'form',
                 },
                 'collection_format_map': {
@@ -27237,6 +27243,7 @@ class ModelApi(object):
             gltf_file (file_type, none_type): [optional]
             preview_file (file_type, none_type): [optional]
             xkt_file (file_type, none_type): DEPRECATED. xkt file url is now in xkt_files field with its version number. [optional]
+            fragments_file (file_type, none_type): [optional]
             binary_2d_file (file_type, none_type): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.

@@ -18339,6 +18339,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     gltf_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
     preview_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
     xkt_file = open('/path/to/file', 'rb') # file_type, none_type | DEPRECATED. xkt file url is now in xkt_files field with its version number (optional)
+    fragments_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
     binary_2d_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -18353,7 +18354,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Update models file (gltf, svg, structure, etc)
-        api_response = api_instance.update_model_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, preview_file=preview_file, xkt_file=xkt_file, binary_2d_file=binary_2d_file)
+        api_response = api_instance.update_model_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, preview_file=preview_file, xkt_file=xkt_file, fragments_file=fragments_file, binary_2d_file=binary_2d_file)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->update_model_files: %s\n" % e)
@@ -18373,6 +18374,7 @@ Name | Type | Description  | Notes
  **gltf_file** | **file_type, none_type**|  | [optional]
  **preview_file** | **file_type, none_type**|  | [optional]
  **xkt_file** | **file_type, none_type**| DEPRECATED. xkt file url is now in xkt_files field with its version number | [optional]
+ **fragments_file** | **file_type, none_type**|  | [optional]
  **binary_2d_file** | **file_type, none_type**|  | [optional]
 
 ### Return type

@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **viewer_360_file** | **str, none_type** | DEPRECATED: Use &#39;preview_file&#39; instead. | [readonly] 
 **xkt_file** | **str, none_type** | DEPRECATED: Use &#39;xkt_files&#39; instead. This field only respond with xkt v6 files | [readonly] 
 **xkt_files** | [**[XktFile]**](XktFile.md) |  | [readonly] 
+**fragments_file** | **str, none_type** |  | [readonly] 
 **binary_2d_file** | **str, none_type** |  | [readonly] 
 **project_id** | **int, none_type** |  | [readonly] 
 **errors** | **[str], none_type** | List of errors that happened during IFC processing | [readonly] 

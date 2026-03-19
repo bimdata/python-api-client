@@ -148,6 +148,7 @@ class ModelSerializerWithoutChildren(ModelNormal):
             'viewer_360_file': (str, none_type,),  # noqa: E501
             'xkt_file': (str, none_type,),  # noqa: E501
             'xkt_files': ([XktFile],),  # noqa: E501
+            'fragments_file': (str, none_type,),  # noqa: E501
             'binary_2d_file': (str, none_type,),  # noqa: E501
             'project_id': (int, none_type,),  # noqa: E501
             'errors': ([str], none_type,),  # noqa: E501
@@ -189,6 +190,7 @@ class ModelSerializerWithoutChildren(ModelNormal):
         'viewer_360_file': 'viewer_360_file',  # noqa: E501
         'xkt_file': 'xkt_file',  # noqa: E501
         'xkt_files': 'xkt_files',  # noqa: E501
+        'fragments_file': 'fragments_file',  # noqa: E501
         'binary_2d_file': 'binary_2d_file',  # noqa: E501
         'project_id': 'project_id',  # noqa: E501
         'errors': 'errors',  # noqa: E501
@@ -225,6 +227,7 @@ class ModelSerializerWithoutChildren(ModelNormal):
         'viewer_360_file',  # noqa: E501
         'xkt_file',  # noqa: E501
         'xkt_files',  # noqa: E501
+        'fragments_file',  # noqa: E501
         'binary_2d_file',  # noqa: E501
         'project_id',  # noqa: E501
         'errors',  # noqa: E501
@@ -239,7 +242,7 @@ class ModelSerializerWithoutChildren(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, type, creator, status, created_at, updated_at, document_id, document, structure_file, systems_file, map_file, gltf_file, preview_file, viewer_360_file, xkt_file, xkt_files, binary_2d_file, project_id, errors, warnings, parent_id, page_number, mask_2d, transform, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, type, creator, status, created_at, updated_at, document_id, document, structure_file, systems_file, map_file, gltf_file, preview_file, viewer_360_file, xkt_file, xkt_files, fragments_file, binary_2d_file, project_id, errors, warnings, parent_id, page_number, mask_2d, transform, *args, **kwargs):  # noqa: E501
         """ModelSerializerWithoutChildren - a model defined in OpenAPI
 
         Args:
@@ -259,6 +262,7 @@ class ModelSerializerWithoutChildren(ModelNormal):
             viewer_360_file (str, none_type): DEPRECATED: Use 'preview_file' instead.
             xkt_file (str, none_type): DEPRECATED: Use 'xkt_files' instead. This field only respond with xkt v6 files
             xkt_files ([XktFile]):
+            fragments_file (str, none_type):
             binary_2d_file (str, none_type):
             project_id (int, none_type):
             errors ([str], none_type): List of errors that happened during IFC processing
@@ -351,6 +355,7 @@ class ModelSerializerWithoutChildren(ModelNormal):
         self.viewer_360_file = viewer_360_file
         self.xkt_file = xkt_file
         self.xkt_files = xkt_files
+        self.fragments_file = fragments_file
         self.binary_2d_file = binary_2d_file
         self.project_id = project_id
         self.errors = errors
