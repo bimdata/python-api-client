@@ -1,6 +1,26 @@
 # CHANGELOG
 
 
+## v10.26.0 (2026-03-19)
+
+### Feature
+
+- Minor: add fragments_file (#980)
+  ([`af35c6e`](https://github.com/bimdata/python-api-client/commit/af35c6e48d5c5b886a4462fef774cca216dac262))
+
+* add fragments_file
+
+* add test
+
+* add fragments to demo
+
+* fix typos
+
+* add fragments worker to ifc process graph
+
+* fix demo typo
+
+
 ## v10.25.0 (2026-02-25)
 
 ### Feature
