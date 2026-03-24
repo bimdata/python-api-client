@@ -1,6 +1,36 @@
 # CHANGELOG
 
 
+## v10.27.0 (2026-03-24)
+
+### Feature
+
+- Minor: First approach for document chunking. (#950)
+  ([`553264a`](https://github.com/bimdata/python-api-client/commit/553264a6c6f58a2d80dda97863f9e03f056ef9b3))
+
+* WIP first approach for document chunking.
+
+* More rag
+
+* Rework vith content type framework
+
+* Improve rag view with new contenttype framework
+
+* multiples fixes & tests
+
+* Remove metadata & add page_numbers.
+
+* Fix how the AI app is loaded.
+
+* Remove code that was wrongfuly commit on this branch
+
+* Start moving exisint ai feature inside ai app.
+
+* Add document content & fixes
+
+* Improve migration to not break cloud during deployment.
+
+
 ## v10.26.0 (2026-03-19)
 
 ### Feature
