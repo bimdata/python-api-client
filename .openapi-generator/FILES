@@ -93,6 +93,7 @@ bimdata_api_client/model/layer_element.py
 bimdata_api_client/model/layer_element_request.py
 bimdata_api_client/model/layer_request.py
 bimdata_api_client/model/light_document.py
+bimdata_api_client/model/light_model.py
 bimdata_api_client/model/line.py
 bimdata_api_client/model/line_request.py
 bimdata_api_client/model/log_entry.py
@@ -378,6 +379,7 @@ docs/LayerElement.md
 docs/LayerElementRequest.md
 docs/LayerRequest.md
 docs/LightDocument.md
+docs/LightModel.md
 docs/Line.md
 docs/LineRequest.md
 docs/LogEntry.md
@@ -667,6 +669,7 @@ test/test_layer_element.py
 test/test_layer_element_request.py
 test/test_layer_request.py
 test/test_light_document.py
+test/test_light_model.py
 test/test_line.py
 test/test_line_request.py
 test/test_log_entry.py

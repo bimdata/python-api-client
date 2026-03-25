@@ -45,6 +45,7 @@ from bimdata_api_client.model.ifc_merge_request import IfcMergeRequest
 from bimdata_api_client.model.ifc_optimize_request import IfcOptimizeRequest
 from bimdata_api_client.model.layer import Layer
 from bimdata_api_client.model.layer_request import LayerRequest
+from bimdata_api_client.model.light_model import LightModel
 from bimdata_api_client.model.mask2_d import Mask2D
 from bimdata_api_client.model.mask2_d_request import Mask2DRequest
 from bimdata_api_client.model.material import Material
@@ -8145,6 +8146,119 @@ class ModelApi(object):
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model',
                 'operation_id': 'get_models',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'project_pk',
+                    'source',
+                    'status',
+                    'type',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                    'source',
+                    'status',
+                    'type',
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                    ('source',): {
+
+                        "EXPORT": "EXPORT",
+                        "MERGE": "MERGE",
+                        "OPTIMIZED": "OPTIMIZED",
+                        "SPLIT": "SPLIT",
+                        "UPLOAD": "UPLOAD"
+                    },
+                    ('status',): {
+
+                        "C": "C",
+                        "D": "D",
+                        "E": "E",
+                        "I": "I",
+                        "P": "P",
+                        "W": "W",
+                        "X": "X"
+                    },
+                    ('type',): {
+
+                        "DWG": "DWG",
+                        "DXF": "DXF",
+                        "GLTF": "GLTF",
+                        "IFC": "IFC",
+                        "JPEG": "JPEG",
+                        "METABUILDING": "METABUILDING",
+                        "OBJ": "OBJ",
+                        "PDF": "PDF",
+                        "PHOTOSPHERE": "PHOTOSPHERE",
+                        "PHOTOSPHERE_BUILDING": "PHOTOSPHERE_BUILDING",
+                        "PNG": "PNG",
+                        "POINT_CLOUD": "POINT_CLOUD"
+                    },
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'source':
+                        (str,),
+                    'status':
+                        ([str],),
+                    'type':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'project_pk': 'project_pk',
+                    'source': 'source',
+                    'status': 'status',
+                    'type': 'type',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'project_pk': 'path',
+                    'source': 'query',
+                    'status': 'query',
+                    'type': 'query',
+                },
+                'collection_format_map': {
+                    'status': 'multi',
+                    'type': 'multi',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.get_models_summary_endpoint = _Endpoint(
+            settings={
+                'response_type': ([LightModel],),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/summary',
+                'operation_id': 'get_models_summary',
                 'http_method': 'GET',
                 'servers': None,
             },
@@ -22962,6 +23076,91 @@ class ModelApi(object):
         kwargs['project_pk'] = \
             project_pk
         return self.get_models_endpoint.call_with_http_info(**kwargs)
+
+    def get_models_summary(
+        self,
+        cloud_pk,
+        project_pk,
+        **kwargs
+    ):
+        """Retrieve all models summary  # noqa: E501
+
+        Retrieve all models summary with a light payload.  Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_models_summary(cloud_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int):
+            project_pk (int):
+
+        Keyword Args:
+            source (str): * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]
+            status ([str]): * `C` - completed * `D` - deleted * `P` - pending * `W` - waiting * `I` - in process * `E` - errored * `X` - won't fix. [optional]
+            type ([str]): * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `PHOTOSPHERE` - PHOTOSPHERE * `METABUILDING` - METABUILDING * `PHOTOSPHERE_BUILDING` - PHOTOSPHERE_BUILDING. [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [LightModel]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['project_pk'] = \
+            project_pk
+        return self.get_models_summary_endpoint.call_with_http_info(**kwargs)
 
     def get_positioned_model(
         self,

@@ -454,6 +454,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**get_model_unit**](docs/ModelApi.md#get_model_unit) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id} | Retrieve a Unit of a model
 *ModelApi* | [**get_model_units**](docs/ModelApi.md#get_model_units) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit | Retrieve all Units of a model
 *ModelApi* | [**get_models**](docs/ModelApi.md#get_models) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model | Retrieve all models
+*ModelApi* | [**get_models_summary**](docs/ModelApi.md#get_models_summary) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/summary | Retrieve all models summary
 *ModelApi* | [**get_positioned_model**](docs/ModelApi.md#get_positioned_model) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model/{id} | Retrieve one specific child model &amp; position on the model
 *ModelApi* | [**get_positioned_models**](docs/ModelApi.md#get_positioned_models) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/positioned-model | Retrieve all positioned child model &amp; positions on the model
 *ModelApi* | [**get_processor_handler**](docs/ModelApi.md#get_processor_handler) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler/{id} | Retrieve a processor handler
@@ -619,6 +620,7 @@ Class | Method | HTTP request | Description
  - [LayerElementRequest](docs/LayerElementRequest.md)
  - [LayerRequest](docs/LayerRequest.md)
  - [LightDocument](docs/LightDocument.md)
+ - [LightModel](docs/LightModel.md)
  - [Line](docs/Line.md)
  - [LineRequest](docs/LineRequest.md)
  - [LogEntry](docs/LogEntry.md)

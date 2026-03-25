@@ -88,6 +88,7 @@ from bimdata_api_client.model.layer_element import LayerElement
 from bimdata_api_client.model.layer_element_request import LayerElementRequest
 from bimdata_api_client.model.layer_request import LayerRequest
 from bimdata_api_client.model.light_document import LightDocument
+from bimdata_api_client.model.light_model import LightModel
 from bimdata_api_client.model.line import Line
 from bimdata_api_client.model.line_request import LineRequest
 from bimdata_api_client.model.log_entry import LogEntry

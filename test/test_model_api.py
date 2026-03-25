@@ -780,6 +780,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_get_models_summary(self):
+        """Test case for get_models_summary
+
+        Retrieve all models summary  # noqa: E501
+        """
+        pass
+
     def test_get_positioned_model(self):
         """Test case for get_positioned_model
 

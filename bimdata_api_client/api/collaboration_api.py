@@ -4889,6 +4889,7 @@ class CollaborationApi(object):
                 'all': [
                     'cloud_pk',
                     'id',
+                    'with_urls',
                 ],
                 'required': [
                     'cloud_pk',
@@ -4897,6 +4898,7 @@ class CollaborationApi(object):
                 'nullable': [
                 ],
                 'enum': [
+                    'with_urls',
                 ],
                 'validation': [
                 ]
@@ -4905,20 +4907,29 @@ class CollaborationApi(object):
                 'validations': {
                 },
                 'allowed_values': {
+                    ('with_urls',): {
+
+                        "FALSE": "false",
+                        "TRUE": "true"
+                    },
                 },
                 'openapi_types': {
                     'cloud_pk':
                         (int,),
                     'id':
                         (int,),
+                    'with_urls':
+                        (str,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
                     'id': 'id',
+                    'with_urls': 'with_urls',
                 },
                 'location_map': {
                     'cloud_pk': 'path',
                     'id': 'path',
+                    'with_urls': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -9333,7 +9344,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'DXF', 'OBJ', 'IFC', 'PHOTOSPHERE', 'GLTF', 'POINT_CLOUD', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'GLTF', 'OBJ', 'POINT_CLOUD', 'DXF', 'PHOTOSPHERE', 'DWG', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -13667,6 +13678,7 @@ class CollaborationApi(object):
             id (int): A unique integer value identifying this project.
 
         Keyword Args:
+            with_urls (str):  By default, `file` and `office_preview` fields are set to None for performance reasons. If you want those fields, set `?with_urls=true`. . [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
