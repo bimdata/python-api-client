@@ -109,13 +109,13 @@ class WriteFolder(ModelNormal):
         return {
             'id': (int,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
-            'groups_permissions': ([GroupFolderRead],),  # noqa: E501
-            'created_at': (datetime,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'user_permission': (int,),  # noqa: E501
             'type': (str,),  # noqa: E501
             'created_by': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'nature': (str,),  # noqa: E501
+            'groups_permissions': ([GroupFolderRead],),  # noqa: E501
+            'user_permission': (int,),  # noqa: E501
+            'created_at': (datetime,),  # noqa: E501
+            'name': (str,),  # noqa: E501
             'default_permission': (int,),  # noqa: E501
             'parent_id': (int, none_type,),  # noqa: E501
             'children': ([WriteFolder], none_type,),  # noqa: E501
@@ -129,13 +129,13 @@ class WriteFolder(ModelNormal):
     attribute_map = {
         'id': 'id',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
-        'groups_permissions': 'groups_permissions',  # noqa: E501
-        'created_at': 'created_at',  # noqa: E501
-        'name': 'name',  # noqa: E501
-        'user_permission': 'user_permission',  # noqa: E501
         'type': 'type',  # noqa: E501
         'created_by': 'created_by',  # noqa: E501
         'nature': 'nature',  # noqa: E501
+        'groups_permissions': 'groups_permissions',  # noqa: E501
+        'user_permission': 'user_permission',  # noqa: E501
+        'created_at': 'created_at',  # noqa: E501
+        'name': 'name',  # noqa: E501
         'default_permission': 'default_permission',  # noqa: E501
         'parent_id': 'parent_id',  # noqa: E501
         'children': 'children',  # noqa: E501
@@ -144,31 +144,31 @@ class WriteFolder(ModelNormal):
     read_only_vars = {
         'id',  # noqa: E501
         'updated_at',  # noqa: E501
-        'groups_permissions',  # noqa: E501
-        'created_at',  # noqa: E501
-        'user_permission',  # noqa: E501
         'type',  # noqa: E501
         'created_by',  # noqa: E501
         'nature',  # noqa: E501
+        'groups_permissions',  # noqa: E501
+        'user_permission',  # noqa: E501
+        'created_at',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, updated_at, groups_permissions, created_at, name, user_permission, type, created_by, nature, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, updated_at, type, created_by, nature, groups_permissions, user_permission, created_at, name, *args, **kwargs):  # noqa: E501
         """WriteFolder - a model defined in OpenAPI
 
         Args:
             id (int):
             updated_at (datetime): Date of the last update
-            groups_permissions ([GroupFolderRead]): List of group permissions
-            created_at (datetime): Creation date
-            name (str): Name of the folder
-            user_permission (int): Aggregate of group user permissions and folder default permission
             type (str): DEPRECATED: Use 'nature' instead. Value is \"Folder\". It is usefull to parse the tree and discriminate folders and files
             created_by (bool, date, datetime, dict, float, int, list, str, none_type):
             nature (str): Value is \"Folder\". It is usefull to parse the tree and discriminate folders and files
+            groups_permissions ([GroupFolderRead]): List of group permissions
+            user_permission (int): Aggregate of group user permissions and folder default permission
+            created_at (datetime): Creation date
+            name (str): Name of the folder
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -233,13 +233,13 @@ class WriteFolder(ModelNormal):
 
         self.id = id
         self.updated_at = updated_at
-        self.groups_permissions = groups_permissions
-        self.created_at = created_at
-        self.name = name
-        self.user_permission = user_permission
         self.type = type
         self.created_by = created_by
         self.nature = nature
+        self.groups_permissions = groups_permissions
+        self.user_permission = user_permission
+        self.created_at = created_at
+        self.name = name
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -264,6 +264,7 @@ class WriteFolder(ModelNormal):
         """WriteFolder - a model defined in OpenAPI
 
             name (str): Name of the folder
+
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
                                 will be type checked and a TypeError will be
