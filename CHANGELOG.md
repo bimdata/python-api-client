@@ -1,6 +1,22 @@
 # CHANGELOG
 
 
+## v10.28.0 (2026-03-25)
+
+### Feature
+
+- Minor: gen the doc & lib with the AI app enabled (#982)
+  ([`b23ca4c`](https://github.com/bimdata/python-api-client/commit/b23ca4c90d6d40013454d176402e54bc77763472))
+
+* MINOR: gen the lib with the AI app enabled
+
+* Fix ProjectAiViewSet argument usage.
+
+* Move ai features into private urls.
+
+* Fix url for document content
+
+
 ## v10.27.0 (2026-03-24)
 
 ### Feature
