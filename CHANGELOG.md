@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.29.0 (2026-03-25)
+
+### Feature
+
+- Minor: improve dms_tree performance, mainly by remove urls fields by default
+  ([`b961161`](https://github.com/bimdata/python-api-client/commit/b961161beb30189d1a17d5ba9f2eb2bc1907bcda))
+
+
 ## v10.28.0 (2026-03-25)
 
 ### Feature
