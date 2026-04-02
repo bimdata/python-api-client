@@ -1808,14 +1808,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this project.
     write_folder_request = [
         WriteFolderRequest(
+            default_permission=1,
             parent_id=1,
             name="name_example",
-            default_permission=1,
             children=[
                 WriteFolder(
+                    default_permission=1,
                     parent_id=1,
                     name="name_example",
-                    default_permission=1,
                     children=None,
                 ),
             ],
@@ -1872,7 +1872,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'GLTF', 'OBJ', 'POINT_CLOUD', 'DXF', 'PHOTOSPHERE', 'DWG', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'GLTF', 'PHOTOSPHERE', 'POINT_CLOUD', 'IFC', 'DWG', 'DXF', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -7520,7 +7520,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = collaboration_api.CollaborationApi(api_client)
     cloud_pk = 1 # int | 
     id = 1 # int | A unique integer value identifying this project.
-    with_urls = "false" # str |  By default, `file` and `office_preview` fields are set to None for performance reasons. If you want those fields, set `?with_urls=true`.  (optional)
+    without_urls = "false" # str |  Serializing many file fields is slow and CPU heavy. If you don't need those fields, you can skip them. File fields will be set to None, even if they are set.  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -7534,7 +7534,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Retrieve the complete DMS tree
-        api_response = api_instance.get_project_dms_tree(cloud_pk, id, with_urls=with_urls)
+        api_response = api_instance.get_project_dms_tree(cloud_pk, id, without_urls=without_urls)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->get_project_dms_tree: %s\n" % e)
@@ -7547,7 +7547,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **int**|  |
  **id** | **int**| A unique integer value identifying this project. |
- **with_urls** | **str**|  By default, &#x60;file&#x60; and &#x60;office_preview&#x60; fields are set to None for performance reasons. If you want those fields, set &#x60;?with_urls&#x3D;true&#x60;.  | [optional]
+ **without_urls** | **str**|  Serializing many file fields is slow and CPU heavy. If you don&#39;t need those fields, you can skip them. File fields will be set to None, even if they are set.  | [optional]
 
 ### Return type
 
@@ -11262,7 +11262,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_document_text_request = PatchedDocumentTextRequest(
         text="text_example",
-        language="english",
+        language="french",
     ) # PatchedDocumentTextRequest |  (optional)
 
     # example passing only required values which don't have defaults set
