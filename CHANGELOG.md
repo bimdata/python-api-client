@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.30.0 (2026-04-02)
+
+### Feature
+
+- Minor: use without_urls instead of with_urls /dms-tree
+  ([`36ae8df`](https://github.com/bimdata/python-api-client/commit/36ae8df536eb2f1faaefa85995d2e27bc3cc91fb))
+
+
 ## v10.29.0 (2026-03-25)
 
 ### Feature
