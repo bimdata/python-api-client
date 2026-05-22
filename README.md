@@ -371,6 +371,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**create_element_property_set_property**](docs/ModelApi.md#create_element_property_set_property) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property | Create a property to a PropertySet
 *ModelApi* | [**create_element_property_set_property_definition**](docs/ModelApi.md#create_element_property_set_property_definition) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition | Create a Definition to a Property
 *ModelApi* | [**create_element_property_set_property_definition_unit**](docs/ModelApi.md#create_element_property_set_property_definition_unit) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit | Create a Unit to a Definition
+*ModelApi* | [**create_equipment**](docs/ModelApi.md#create_equipment) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment | Create an equipment on the model
 *ModelApi* | [**create_label**](docs/ModelApi.md#create_label) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label | Create a label in the model
 *ModelApi* | [**create_layer**](docs/ModelApi.md#create_layer) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer | Create a layer in the model
 *ModelApi* | [**create_mask2_d**](docs/ModelApi.md#create_mask2_d) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Create or update a 2D mask for the model
@@ -398,6 +399,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**delete_building_plan**](docs/ModelApi.md#delete_building_plan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/{id} | Delete the relation between a 2d model and a building
 *ModelApi* | [**delete_drawing**](docs/ModelApi.md#delete_drawing) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id} | Delete a drawing of a model
 *ModelApi* | [**delete_element**](docs/ModelApi.md#delete_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Delete an element of a model
+*ModelApi* | [**delete_equipment**](docs/ModelApi.md#delete_equipment) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{id} | Delete an equipment
 *ModelApi* | [**delete_label**](docs/ModelApi.md#delete_label) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Delete a label
 *ModelApi* | [**delete_layer**](docs/ModelApi.md#delete_layer) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Delete a layer of a model
 *ModelApi* | [**delete_mask2_d**](docs/ModelApi.md#delete_mask2_d) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Delete the 2D mask for the model
@@ -437,6 +439,8 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**get_element_property_sets**](docs/ModelApi.md#get_element_property_sets) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset | Retrieve all PropertySets of an element
 *ModelApi* | [**get_elements**](docs/ModelApi.md#get_elements) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element | Retrieve all elements of a model
 *ModelApi* | [**get_elements_from_classification**](docs/ModelApi.md#get_elements_from_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element | Retrieve all elements with the classification
+*ModelApi* | [**get_equipment**](docs/ModelApi.md#get_equipment) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{id} | Retrieve one equipment of the model
+*ModelApi* | [**get_equipments**](docs/ModelApi.md#get_equipments) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment | Retrieve all equipments of the model
 *ModelApi* | [**get_label**](docs/ModelApi.md#get_label) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Retrieve one label of the model
 *ModelApi* | [**get_labels**](docs/ModelApi.md#get_labels) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label | Retrieve all labels of the model
 *ModelApi* | [**get_layer**](docs/ModelApi.md#get_layer) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Retrieve a layer of a model
@@ -498,6 +502,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**update_drawing**](docs/ModelApi.md#update_drawing) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id} | Update some fields of a drawing
 *ModelApi* | [**update_element**](docs/ModelApi.md#update_element) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Update some fields of an element
 *ModelApi* | [**update_element_property_set_property**](docs/ModelApi.md#update_element_property_set_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Update a property from an element
+*ModelApi* | [**update_equipment**](docs/ModelApi.md#update_equipment) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{id} | Update some fields of an equipment
 *ModelApi* | [**update_label**](docs/ModelApi.md#update_label) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Update some fields of a label
 *ModelApi* | [**update_layer**](docs/ModelApi.md#update_layer) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Update some fields of a layer
 *ModelApi* | [**update_mask2_d**](docs/ModelApi.md#update_mask2_d) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Partial update of a 2D mask for the model
@@ -637,6 +642,8 @@ Class | Method | HTTP request | Description
  - [Model](docs/Model.md)
  - [ModelDocument](docs/ModelDocument.md)
  - [ModelDocumentRequest](docs/ModelDocumentRequest.md)
+ - [ModelEquipment](docs/ModelEquipment.md)
+ - [ModelEquipmentRequest](docs/ModelEquipmentRequest.md)
  - [ModelErrors](docs/ModelErrors.md)
  - [ModelErrorsRequest](docs/ModelErrorsRequest.md)
  - [ModelFiles](docs/ModelFiles.md)
@@ -668,6 +675,7 @@ Class | Method | HTTP request | Description
  - [PatchedIfcAccessTokenRequest](docs/PatchedIfcAccessTokenRequest.md)
  - [PatchedLayerRequest](docs/PatchedLayerRequest.md)
  - [PatchedMask2DRequest](docs/PatchedMask2DRequest.md)
+ - [PatchedModelEquipmentRequest](docs/PatchedModelEquipmentRequest.md)
  - [PatchedModelLabelRequest](docs/PatchedModelLabelRequest.md)
  - [PatchedModelOnModelPositionRequest](docs/PatchedModelOnModelPositionRequest.md)
  - [PatchedModelRequest](docs/PatchedModelRequest.md)

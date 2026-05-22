@@ -199,6 +199,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_create_equipment(self):
+        """Test case for create_equipment
+
+        Create an equipment on the model  # noqa: E501
+        """
+        pass
+
     def test_create_label(self):
         """Test case for create_label
 
@@ -385,6 +392,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for delete_element
 
         Delete an element of a model  # noqa: E501
+        """
+        pass
+
+    def test_delete_equipment(self):
+        """Test case for delete_equipment
+
+        Delete an equipment  # noqa: E501
         """
         pass
 
@@ -658,6 +672,20 @@ class TestModelApi(unittest.TestCase):
         """Test case for get_elements_from_classification
 
         Retrieve all elements with the classification  # noqa: E501
+        """
+        pass
+
+    def test_get_equipment(self):
+        """Test case for get_equipment
+
+        Retrieve one equipment of the model  # noqa: E501
+        """
+        pass
+
+    def test_get_equipments(self):
+        """Test case for get_equipments
+
+        Retrieve all equipments of the model  # noqa: E501
         """
         pass
 
@@ -1085,6 +1113,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for update_element_property_set_property
 
         Update a property from an element  # noqa: E501
+        """
+        pass
+
+    def test_update_equipment(self):
+        """Test case for update_equipment
+
+        Update some fields of an equipment  # noqa: E501
         """
         pass
 

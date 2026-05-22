@@ -110,6 +110,8 @@ bimdata_api_client/model/material_request.py
 bimdata_api_client/model/model.py
 bimdata_api_client/model/model_document.py
 bimdata_api_client/model/model_document_request.py
+bimdata_api_client/model/model_equipment.py
+bimdata_api_client/model/model_equipment_request.py
 bimdata_api_client/model/model_errors.py
 bimdata_api_client/model/model_errors_request.py
 bimdata_api_client/model/model_files.py
@@ -141,6 +143,7 @@ bimdata_api_client/model/patched_group_request.py
 bimdata_api_client/model/patched_ifc_access_token_request.py
 bimdata_api_client/model/patched_layer_request.py
 bimdata_api_client/model/patched_mask2_d_request.py
+bimdata_api_client/model/patched_model_equipment_request.py
 bimdata_api_client/model/patched_model_label_request.py
 bimdata_api_client/model/patched_model_on_model_position_request.py
 bimdata_api_client/model/patched_model_request.py
@@ -397,6 +400,8 @@ docs/Model.md
 docs/ModelApi.md
 docs/ModelDocument.md
 docs/ModelDocumentRequest.md
+docs/ModelEquipment.md
+docs/ModelEquipmentRequest.md
 docs/ModelErrors.md
 docs/ModelErrorsRequest.md
 docs/ModelFiles.md
@@ -428,6 +433,7 @@ docs/PatchedGroupRequest.md
 docs/PatchedIfcAccessTokenRequest.md
 docs/PatchedLayerRequest.md
 docs/PatchedMask2DRequest.md
+docs/PatchedModelEquipmentRequest.md
 docs/PatchedModelLabelRequest.md
 docs/PatchedModelOnModelPositionRequest.md
 docs/PatchedModelRequest.md
@@ -687,6 +693,8 @@ test/test_model.py
 test/test_model_api.py
 test/test_model_document.py
 test/test_model_document_request.py
+test/test_model_equipment.py
+test/test_model_equipment_request.py
 test/test_model_errors.py
 test/test_model_errors_request.py
 test/test_model_files.py
@@ -718,6 +726,7 @@ test/test_patched_group_request.py
 test/test_patched_ifc_access_token_request.py
 test/test_patched_layer_request.py
 test/test_patched_mask2_d_request.py
+test/test_patched_model_equipment_request.py
 test/test_patched_model_label_request.py
 test/test_patched_model_on_model_position_request.py
 test/test_patched_model_request.py

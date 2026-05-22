@@ -1872,7 +1872,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'PHOTOSPHERE', 'POINT_CLOUD', 'DWG', 'GLTF', 'DXF', 'IFC', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'DXF', 'DWG', 'IFC', 'GLTF', 'POINT_CLOUD', 'PHOTOSPHERE', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 

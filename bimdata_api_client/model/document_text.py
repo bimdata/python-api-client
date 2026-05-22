@@ -59,10 +59,10 @@ class DocumentText(ModelNormal):
         ('language',): {
             'None': None,
             'SPANISH': "spanish",
-            'ENGLISH': "english",
-            'ITALIAN': "italian",
             'GERMAN': "german",
+            'ENGLISH': "english",
             'FRENCH': "french",
+            'ITALIAN': "italian",
             'NULL': "null",
         },
     }
@@ -153,7 +153,7 @@ class DocumentText(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             text (str, none_type): The full text representation of a document if the feature is enabled and the file format supported. [optional]  # noqa: E501
-            language (str, none_type): * `spanish` - spanish * `english` - english * `italian` - italian * `german` - german * `french` - french. [optional]  # noqa: E501
+            language (str, none_type): * `spanish` - spanish * `german` - german * `english` - english * `french` - french * `italian` - italian. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -237,7 +237,7 @@ class DocumentText(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             text (str, none_type): The full text representation of a document if the feature is enabled and the file format supported. [optional]  # noqa: E501
-            language (str, none_type): * `spanish` - spanish * `english` - english * `italian` - italian * `german` - german * `french` - french. [optional]  # noqa: E501
+            language (str, none_type): * `spanish` - spanish * `german` - german * `english` - english * `french` - french * `italian` - italian. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -105,6 +105,8 @@ from bimdata_api_client.model.material_request import MaterialRequest
 from bimdata_api_client.model.model import Model
 from bimdata_api_client.model.model_document import ModelDocument
 from bimdata_api_client.model.model_document_request import ModelDocumentRequest
+from bimdata_api_client.model.model_equipment import ModelEquipment
+from bimdata_api_client.model.model_equipment_request import ModelEquipmentRequest
 from bimdata_api_client.model.model_errors import ModelErrors
 from bimdata_api_client.model.model_errors_request import ModelErrorsRequest
 from bimdata_api_client.model.model_files import ModelFiles
@@ -136,6 +138,7 @@ from bimdata_api_client.model.patched_group_request import PatchedGroupRequest
 from bimdata_api_client.model.patched_ifc_access_token_request import PatchedIfcAccessTokenRequest
 from bimdata_api_client.model.patched_layer_request import PatchedLayerRequest
 from bimdata_api_client.model.patched_mask2_d_request import PatchedMask2DRequest
+from bimdata_api_client.model.patched_model_equipment_request import PatchedModelEquipmentRequest
 from bimdata_api_client.model.patched_model_label_request import PatchedModelLabelRequest
 from bimdata_api_client.model.patched_model_on_model_position_request import PatchedModelOnModelPositionRequest
 from bimdata_api_client.model.patched_model_request import PatchedModelRequest
