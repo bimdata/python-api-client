@@ -138,6 +138,7 @@ class Model(ModelNormal):
             'type': (str,),  # noqa: E501
             'creator': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'status': (str,),  # noqa: E501
+            'fragments_status': (str,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
             'document_id': (int, none_type,),  # noqa: E501
@@ -181,6 +182,7 @@ class Model(ModelNormal):
         'type': 'type',  # noqa: E501
         'creator': 'creator',  # noqa: E501
         'status': 'status',  # noqa: E501
+        'fragments_status': 'fragments_status',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
         'document_id': 'document_id',  # noqa: E501
@@ -219,6 +221,7 @@ class Model(ModelNormal):
         'type',  # noqa: E501
         'creator',  # noqa: E501
         'status',  # noqa: E501
+        'fragments_status',  # noqa: E501
         'created_at',  # noqa: E501
         'updated_at',  # noqa: E501
         'document_id',  # noqa: E501
@@ -247,7 +250,7 @@ class Model(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, type, creator, status, created_at, updated_at, document_id, document, structure_file, systems_file, map_file, gltf_file, preview_file, viewer_360_file, xkt_file, xkt_files, fragments_file, binary_2d_file, project_id, errors, warnings, parent_id, page_number, mask_2d, transform, children, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, type, creator, status, fragments_status, created_at, updated_at, document_id, document, structure_file, systems_file, map_file, gltf_file, preview_file, viewer_360_file, xkt_file, xkt_files, fragments_file, binary_2d_file, project_id, errors, warnings, parent_id, page_number, mask_2d, transform, children, *args, **kwargs):  # noqa: E501
         """Model - a model defined in OpenAPI
 
         Args:
@@ -255,6 +258,7 @@ class Model(ModelNormal):
             type (str): * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `PHOTOSPHERE` - PHOTOSPHERE * `METABUILDING` - METABUILDING * `PHOTOSPHERE_BUILDING` - PHOTOSPHERE_BUILDING
             creator (bool, date, datetime, dict, float, int, list, str, none_type):
             status (str):
+            fragments_status (str): Status of the fragments process. This field may be removed in future versions when the `status` will take fragments into account.
             created_at (datetime):
             updated_at (datetime):
             document_id (int, none_type):
@@ -268,7 +272,7 @@ class Model(ModelNormal):
             xkt_file (str, none_type): DEPRECATED: Use 'xkt_files' instead. This field only respond with xkt v6 files
             xkt_files ([XktFile]):
             fragments_file (str, none_type):
-            binary_2d_file (str, none_type):
+            binary_2d_file (str, none_type): DEPRECATED. This field is only used for old DWG files.
             project_id (int, none_type):
             errors ([str], none_type): List of errors that happened during IFC processing
             warnings ([str], none_type): List of warnings that happened during IFC processing
@@ -349,6 +353,7 @@ class Model(ModelNormal):
         self.type = type
         self.creator = creator
         self.status = status
+        self.fragments_status = fragments_status
         self.created_at = created_at
         self.updated_at = updated_at
         self.document_id = document_id

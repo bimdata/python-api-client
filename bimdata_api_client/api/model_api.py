@@ -27443,7 +27443,7 @@ class ModelApi(object):
             preview_file (file_type, none_type): [optional]
             xkt_file (file_type, none_type): DEPRECATED. xkt file url is now in xkt_files field with its version number. [optional]
             fragments_file (file_type, none_type): [optional]
-            binary_2d_file (file_type, none_type): [optional]
+            binary_2d_file (file_type, none_type): DEPRECATED. This field is only used for old DWG files.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

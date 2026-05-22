@@ -87,8 +87,8 @@ class LogEntry(ModelNormal):
         return {
             'id': (int,),  # noqa: E501
             'user_id': (int, none_type,),  # noqa: E501
-            'user_email': (str,),  # noqa: E501
-            'app_name': (str,),  # noqa: E501
+            'user_email': (str, none_type,),  # noqa: E501
+            'app_name': (str, none_type,),  # noqa: E501
             'project_name': (str,),  # noqa: E501
             'date': (datetime,),  # noqa: E501
             'action': (str,),  # noqa: E501
@@ -127,8 +127,8 @@ class LogEntry(ModelNormal):
         Args:
             id (int):
             user_id (int, none_type):
-            user_email (str):
-            app_name (str):
+            user_email (str, none_type):
+            app_name (str, none_type):
             project_name (str):
             date (datetime):
             action (str):
@@ -223,8 +223,8 @@ class LogEntry(ModelNormal):
     def __init__(self, user_email, app_name, project_name, action, description, *args, **kwargs):  # noqa: E501
         """LogEntry - a model defined in OpenAPI
 
-            user_email (str):
-            app_name (str):
+            user_email (str, none_type):
+            app_name (str, none_type):
             project_name (str):
             action (str):
             description (bool, date, datetime, dict, float, int, list, str, none_type):

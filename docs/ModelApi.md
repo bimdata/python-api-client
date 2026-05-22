@@ -18464,7 +18464,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     preview_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
     xkt_file = open('/path/to/file', 'rb') # file_type, none_type | DEPRECATED. xkt file url is now in xkt_files field with its version number (optional)
     fragments_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
-    binary_2d_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
+    binary_2d_file = open('/path/to/file', 'rb') # file_type, none_type | DEPRECATED. This field is only used for old DWG files. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -18499,7 +18499,7 @@ Name | Type | Description  | Notes
  **preview_file** | **file_type, none_type**|  | [optional]
  **xkt_file** | **file_type, none_type**| DEPRECATED. xkt file url is now in xkt_files field with its version number | [optional]
  **fragments_file** | **file_type, none_type**|  | [optional]
- **binary_2d_file** | **file_type, none_type**|  | [optional]
+ **binary_2d_file** | **file_type, none_type**| DEPRECATED. This field is only used for old DWG files. | [optional]
 
 ### Return type
 

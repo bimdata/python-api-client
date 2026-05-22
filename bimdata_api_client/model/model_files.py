@@ -156,7 +156,7 @@ class ModelFiles(ModelNormal):
             preview_file (str, none_type): [optional]  # noqa: E501
             xkt_file (str, none_type): DEPRECATED. xkt file url is now in xkt_files field with its version number. [optional]  # noqa: E501
             fragments_file (str, none_type): [optional]  # noqa: E501
-            binary_2d_file (str, none_type): [optional]  # noqa: E501
+            binary_2d_file (str, none_type): DEPRECATED. This field is only used for old DWG files.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -245,7 +245,7 @@ class ModelFiles(ModelNormal):
             preview_file (str, none_type): [optional]  # noqa: E501
             xkt_file (str, none_type): DEPRECATED. xkt file url is now in xkt_files field with its version number. [optional]  # noqa: E501
             fragments_file (str, none_type): [optional]  # noqa: E501
-            binary_2d_file (str, none_type): [optional]  # noqa: E501
+            binary_2d_file (str, none_type): DEPRECATED. This field is only used for old DWG files.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

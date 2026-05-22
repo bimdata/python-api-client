@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [readonly] 
 **user_id** | **int, none_type** |  | [readonly] 
-**user_email** | **str** |  | 
-**app_name** | **str** |  | 
+**user_email** | **str, none_type** |  | 
+**app_name** | **str, none_type** |  | 
 **project_name** | **str** |  | 
 **date** | **datetime** |  | [readonly] 
 **action** | **str** |  | 
