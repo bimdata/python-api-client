@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.31.0 (2026-05-22)
+
+### Feature
+
+- Minor: Improve fragment status handling (#1020)
+  ([`c3e3213`](https://github.com/bimdata/python-api-client/commit/c3e321398017aa40cac2b2d0e490fa9177641838))
+
+* Improve fragment status handling.
+
+* Better implementation
+
+
 ## v10.30.0 (2026-04-02)
 
 ### Feature
