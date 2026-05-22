@@ -1,6 +1,20 @@
 # CHANGELOG
 
 
+## v10.32.0 (2026-05-22)
+
+### Feature
+
+- Minor: Feature Equipment (#1021)
+  ([`2a17038`](https://github.com/bimdata/python-api-client/commit/2a17038f882712b0d85fa00ad51d6807888d38f0))
+
+* feat(equipment): create Equimment model
+
+* fix(equipment): add validate_point validators to position field
+
+* fix: merge migrations
+
+
 ## v10.31.0 (2026-05-22)
 
 ### Feature
