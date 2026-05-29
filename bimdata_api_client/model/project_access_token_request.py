@@ -98,6 +98,7 @@ class ProjectAccessTokenRequest(ModelNormal):
             'scopes': ([str],),  # noqa: E501
             'expires_at': (datetime,),  # noqa: E501
             'email_impersonation': (str, none_type,),  # noqa: E501
+            'available_models': ([int],),  # noqa: E501
         }
 
     @cached_property
@@ -109,6 +110,7 @@ class ProjectAccessTokenRequest(ModelNormal):
         'scopes': 'scopes',  # noqa: E501
         'expires_at': 'expires_at',  # noqa: E501
         'email_impersonation': 'email_impersonation',  # noqa: E501
+        'available_models': 'available_models',  # noqa: E501
     }
 
     read_only_vars = {
@@ -156,7 +158,8 @@ class ProjectAccessTokenRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             expires_at (datetime): [optional]  # noqa: E501
-            email_impersonation (str, none_type):          If the request is made from an SSO application, you can link the token to a user.         All calls made with the token will populate created_by fields with the user.         If the user don't have access to some data, the token won't have access.         . [optional]  # noqa: E501
+            email_impersonation (str, none_type):          If the request is made from an SSO application, you can link the token to a user.         All calls made with the token will populate created_by fields with the user.         If the user don't have access to some data, the token won't have access.         `available_models` can't be set when a user is impersonated.         . [optional]  # noqa: E501
+            available_models ([int]):          List of model IDs that the token can access.         If not specified, the token can access all models of the project.         This field can't be set if email_impersonation is set.         This field can't be set if `document:read` is in scopes.         . [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -243,7 +246,8 @@ class ProjectAccessTokenRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             expires_at (datetime): [optional]  # noqa: E501
-            email_impersonation (str, none_type):          If the request is made from an SSO application, you can link the token to a user.         All calls made with the token will populate created_by fields with the user.         If the user don't have access to some data, the token won't have access.         . [optional]  # noqa: E501
+            email_impersonation (str, none_type):          If the request is made from an SSO application, you can link the token to a user.         All calls made with the token will populate created_by fields with the user.         If the user don't have access to some data, the token won't have access.         `available_models` can't be set when a user is impersonated.         . [optional]  # noqa: E501
+            available_models ([int]):          List of model IDs that the token can access.         If not specified, the token can access all models of the project.         This field can't be set if email_impersonation is set.         This field can't be set if `document:read` is in scopes.         . [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
