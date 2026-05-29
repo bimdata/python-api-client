@@ -1,6 +1,26 @@
 # CHANGELOG
 
 
+## v10.33.0 (2026-05-29)
+
+### Feature
+
+- Minor: add available_models to ProjectAccessToken (#1025)
+  ([`d6eecfd`](https://github.com/bimdata/python-api-client/commit/d6eecfda7ca4c3b856f5826bdac79c9acac774a5))
+
+* MINOR: add available_models to ProjectAccessToken
+
+* add migration
+
+* remove prints, better doc
+
+* Fixes after rebase
+
+---------
+
+Co-authored-by: Amoki <hugo@bimdata.io>
+
+
 ## v10.32.0 (2026-05-22)
 
 ### Feature
