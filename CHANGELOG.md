@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.34.0 (2026-06-17)
+
+### Feature
+
+- Minor: feat(equipment): add equipment images (#1034)
+  ([`1f65175`](https://github.com/bimdata/python-api-client/commit/1f65175db0efbe15395f8832c914944a5b5c4caf))
+
+
 ## v10.33.0 (2026-05-29)
 
 ### Feature
