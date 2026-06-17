@@ -13,15 +13,11 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.equipment_image import EquipmentImage
-from bimdata_api_client.model.user import User
-globals()['EquipmentImage'] = EquipmentImage
-globals()['User'] = User
-from bimdata_api_client.model.model_equipment import ModelEquipment
+from bimdata_api_client.model.equipment_image_request import EquipmentImageRequest
 
 
-class TestModelEquipment(unittest.TestCase):
-    """ModelEquipment unit test stubs"""
+class TestEquipmentImageRequest(unittest.TestCase):
+    """EquipmentImageRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +25,10 @@ class TestModelEquipment(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testModelEquipment(self):
-        """Test ModelEquipment"""
+    def testEquipmentImageRequest(self):
+        """Test EquipmentImageRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = ModelEquipment()  # noqa: E501
+        # model = EquipmentImageRequest()  # noqa: E501
         pass
 
 

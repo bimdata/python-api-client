@@ -24,6 +24,13 @@ class TestModelApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_add_equipment_image(self):
+        """Test case for add_equipment_image
+
+        Add a new image to the equipment  # noqa: E501
+        """
+        pass
+
     def test_add_model_errors(self):
         """Test case for add_model_errors
 
@@ -402,6 +409,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_equipment_image(self):
+        """Test case for delete_equipment_image
+
+        Remove an equipment image  # noqa: E501
+        """
+        pass
+
     def test_delete_label(self):
         """Test case for delete_label
 
@@ -679,6 +693,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for get_equipment
 
         Retrieve one equipment of the model  # noqa: E501
+        """
+        pass
+
+    def test_get_equipment_images(self):
+        """Test case for get_equipment_images
+
+        Retrieve all images attached to the equipment  # noqa: E501
         """
         pass
 

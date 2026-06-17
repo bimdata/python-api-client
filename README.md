@@ -346,6 +346,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**update_validation**](docs/CollaborationApi.md#update_validation) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id} | Update the validator of validation
 *CollaborationApi* | [**update_visa**](docs/CollaborationApi.md#update_visa) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id} | Update some fields of a visa
 *CollaborationApi* | [**update_visa_comment**](docs/CollaborationApi.md#update_visa_comment) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment/{id} | Update some fields of a comment
+*ModelApi* | [**add_equipment_image**](docs/ModelApi.md#add_equipment_image) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/equipment-image | Add a new image to the equipment
 *ModelApi* | [**add_model_errors**](docs/ModelApi.md#add_model_errors) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/errors | Add errors to model
 *ModelApi* | [**add_zone_space**](docs/ModelApi.md#add_zone_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/add | Add a space to a zone
 *ModelApi* | [**bulk_delete_model_classifications**](docs/ModelApi.md#bulk_delete_model_classifications) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/list_destroy | Remove all classifications from model&#39;s elements
@@ -400,6 +401,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**delete_drawing**](docs/ModelApi.md#delete_drawing) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id} | Delete a drawing of a model
 *ModelApi* | [**delete_element**](docs/ModelApi.md#delete_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Delete an element of a model
 *ModelApi* | [**delete_equipment**](docs/ModelApi.md#delete_equipment) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{id} | Delete an equipment
+*ModelApi* | [**delete_equipment_image**](docs/ModelApi.md#delete_equipment_image) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/equipment-image/{id} | Remove an equipment image
 *ModelApi* | [**delete_label**](docs/ModelApi.md#delete_label) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Delete a label
 *ModelApi* | [**delete_layer**](docs/ModelApi.md#delete_layer) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Delete a layer of a model
 *ModelApi* | [**delete_mask2_d**](docs/ModelApi.md#delete_mask2_d) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Delete the 2D mask for the model
@@ -440,6 +442,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**get_elements**](docs/ModelApi.md#get_elements) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element | Retrieve all elements of a model
 *ModelApi* | [**get_elements_from_classification**](docs/ModelApi.md#get_elements_from_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element | Retrieve all elements with the classification
 *ModelApi* | [**get_equipment**](docs/ModelApi.md#get_equipment) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{id} | Retrieve one equipment of the model
+*ModelApi* | [**get_equipment_images**](docs/ModelApi.md#get_equipment_images) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/equipment-image | Retrieve all images attached to the equipment
 *ModelApi* | [**get_equipments**](docs/ModelApi.md#get_equipments) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment | Retrieve all equipments of the model
 *ModelApi* | [**get_label**](docs/ModelApi.md#get_label) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Retrieve one label of the model
 *ModelApi* | [**get_labels**](docs/ModelApi.md#get_labels) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label | Retrieve all labels of the model
@@ -595,6 +598,8 @@ Class | Method | HTTP request | Description
  - [ElementClassificationRelationRequest](docs/ElementClassificationRelationRequest.md)
  - [ElementPropertySetRelationRequest](docs/ElementPropertySetRelationRequest.md)
  - [ElementRequest](docs/ElementRequest.md)
+ - [EquipmentImage](docs/EquipmentImage.md)
+ - [EquipmentImageRequest](docs/EquipmentImageRequest.md)
  - [Extensions](docs/Extensions.md)
  - [Feature](docs/Feature.md)
  - [FeatureRequest](docs/FeatureRequest.md)

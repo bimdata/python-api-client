@@ -58,6 +58,8 @@ from bimdata_api_client.model.element_classification_relation import ElementClas
 from bimdata_api_client.model.element_classification_relation_request import ElementClassificationRelationRequest
 from bimdata_api_client.model.element_property_set_relation_request import ElementPropertySetRelationRequest
 from bimdata_api_client.model.element_request import ElementRequest
+from bimdata_api_client.model.equipment_image import EquipmentImage
+from bimdata_api_client.model.equipment_image_request import EquipmentImageRequest
 from bimdata_api_client.model.extensions import Extensions
 from bimdata_api_client.model.feature import Feature
 from bimdata_api_client.model.feature_request import FeatureRequest

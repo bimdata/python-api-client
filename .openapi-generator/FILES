@@ -63,6 +63,8 @@ bimdata_api_client/model/element_classification_relation.py
 bimdata_api_client/model/element_classification_relation_request.py
 bimdata_api_client/model/element_property_set_relation_request.py
 bimdata_api_client/model/element_request.py
+bimdata_api_client/model/equipment_image.py
+bimdata_api_client/model/equipment_image_request.py
 bimdata_api_client/model/extensions.py
 bimdata_api_client/model/feature.py
 bimdata_api_client/model/feature_request.py
@@ -352,6 +354,8 @@ docs/ElementClassificationRelation.md
 docs/ElementClassificationRelationRequest.md
 docs/ElementPropertySetRelationRequest.md
 docs/ElementRequest.md
+docs/EquipmentImage.md
+docs/EquipmentImageRequest.md
 docs/Extensions.md
 docs/Feature.md
 docs/FeatureRequest.md
@@ -645,6 +649,8 @@ test/test_element_classification_relation.py
 test/test_element_classification_relation_request.py
 test/test_element_property_set_relation_request.py
 test/test_element_request.py
+test/test_equipment_image.py
+test/test_equipment_image_request.py
 test/test_extensions.py
 test/test_feature.py
 test/test_feature_request.py

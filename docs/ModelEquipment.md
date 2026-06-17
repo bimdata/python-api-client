@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **model** | **int** | The model to which the equipment is attached | [readonly] 
 **name** | **str** | Name of the equipment | 
 **position** | **[float]** |  | 
+**images** | [**[EquipmentImage]**](EquipmentImage.md) |  | [readonly] 
 **creator** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
 **created_at** | **datetime** | Creation date | [readonly] 
 **updated_at** | **datetime** | Date of the last update | [readonly] 
