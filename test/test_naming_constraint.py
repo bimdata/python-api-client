@@ -13,11 +13,11 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.patched_folder_without_children_request import PatchedFolderWithoutChildrenRequest
+from bimdata_api_client.model.naming_constraint import NamingConstraint
 
 
-class TestPatchedFolderWithoutChildrenRequest(unittest.TestCase):
-    """PatchedFolderWithoutChildrenRequest unit test stubs"""
+class TestNamingConstraint(unittest.TestCase):
+    """NamingConstraint unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +25,10 @@ class TestPatchedFolderWithoutChildrenRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testPatchedFolderWithoutChildrenRequest(self):
-        """Test PatchedFolderWithoutChildrenRequest"""
+    def testNamingConstraint(self):
+        """Test NamingConstraint"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = PatchedFolderWithoutChildrenRequest()  # noqa: E501
+        # model = NamingConstraint()  # noqa: E501
         pass
 
 

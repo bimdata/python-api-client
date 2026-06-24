@@ -60,6 +60,7 @@ bimdata_api_client/model/drawing.py
 bimdata_api_client/model/drawing_request.py
 bimdata_api_client/model/edit_comment.py
 bimdata_api_client/model/edit_comment_request.py
+bimdata_api_client/model/edit_folder.py
 bimdata_api_client/model/element.py
 bimdata_api_client/model/element_classification_relation.py
 bimdata_api_client/model/element_classification_relation_request.py
@@ -71,6 +72,8 @@ bimdata_api_client/model/extensions.py
 bimdata_api_client/model/feature.py
 bimdata_api_client/model/feature_request.py
 bimdata_api_client/model/folder.py
+bimdata_api_client/model/folder_naming_constraint.py
+bimdata_api_client/model/folder_naming_constraint_request.py
 bimdata_api_client/model/folder_tree.py
 bimdata_api_client/model/folder_user_project.py
 bimdata_api_client/model/folder_without_children.py
@@ -127,6 +130,10 @@ bimdata_api_client/model/model_on_model_position_creation_request.py
 bimdata_api_client/model/model_property.py
 bimdata_api_client/model/model_serializer_without_children.py
 bimdata_api_client/model/model_with_positioning_plan.py
+bimdata_api_client/model/naming_constraint.py
+bimdata_api_client/model/naming_constraint_request.py
+bimdata_api_client/model/naming_parts_template.py
+bimdata_api_client/model/naming_parts_template_request.py
 bimdata_api_client/model/organization.py
 bimdata_api_client/model/organization_request.py
 bimdata_api_client/model/orthogonal_camera.py
@@ -139,8 +146,8 @@ bimdata_api_client/model/patched_comment_request.py
 bimdata_api_client/model/patched_document_request.py
 bimdata_api_client/model/patched_document_text_request.py
 bimdata_api_client/model/patched_drawing_request.py
+bimdata_api_client/model/patched_edit_folder_request.py
 bimdata_api_client/model/patched_element_request.py
-bimdata_api_client/model/patched_folder_without_children_request.py
 bimdata_api_client/model/patched_full_topic_request.py
 bimdata_api_client/model/patched_group_folder_request.py
 bimdata_api_client/model/patched_group_request.py
@@ -151,6 +158,8 @@ bimdata_api_client/model/patched_model_equipment_request.py
 bimdata_api_client/model/patched_model_label_request.py
 bimdata_api_client/model/patched_model_on_model_position_request.py
 bimdata_api_client/model/patched_model_request.py
+bimdata_api_client/model/patched_naming_constraint_request.py
+bimdata_api_client/model/patched_naming_parts_template_request.py
 bimdata_api_client/model/patched_pin_request.py
 bimdata_api_client/model/patched_positioning_plan_request.py
 bimdata_api_client/model/patched_priority_request.py
@@ -353,6 +362,7 @@ docs/Drawing.md
 docs/DrawingRequest.md
 docs/EditComment.md
 docs/EditCommentRequest.md
+docs/EditFolder.md
 docs/Element.md
 docs/ElementClassificationRelation.md
 docs/ElementClassificationRelationRequest.md
@@ -364,6 +374,8 @@ docs/Extensions.md
 docs/Feature.md
 docs/FeatureRequest.md
 docs/Folder.md
+docs/FolderNamingConstraint.md
+docs/FolderNamingConstraintRequest.md
 docs/FolderTree.md
 docs/FolderUserProject.md
 docs/FolderWithoutChildren.md
@@ -421,6 +433,10 @@ docs/ModelOnModelPositionCreationRequest.md
 docs/ModelProperty.md
 docs/ModelSerializerWithoutChildren.md
 docs/ModelWithPositioningPlan.md
+docs/NamingConstraint.md
+docs/NamingConstraintRequest.md
+docs/NamingPartsTemplate.md
+docs/NamingPartsTemplateRequest.md
 docs/Organization.md
 docs/OrganizationRequest.md
 docs/OrthogonalCamera.md
@@ -433,8 +449,8 @@ docs/PatchedCommentRequest.md
 docs/PatchedDocumentRequest.md
 docs/PatchedDocumentTextRequest.md
 docs/PatchedDrawingRequest.md
+docs/PatchedEditFolderRequest.md
 docs/PatchedElementRequest.md
-docs/PatchedFolderWithoutChildrenRequest.md
 docs/PatchedFullTopicRequest.md
 docs/PatchedGroupFolderRequest.md
 docs/PatchedGroupRequest.md
@@ -445,6 +461,8 @@ docs/PatchedModelEquipmentRequest.md
 docs/PatchedModelLabelRequest.md
 docs/PatchedModelOnModelPositionRequest.md
 docs/PatchedModelRequest.md
+docs/PatchedNamingConstraintRequest.md
+docs/PatchedNamingPartsTemplateRequest.md
 docs/PatchedPinRequest.md
 docs/PatchedPositioningPlanRequest.md
 docs/PatchedPriorityRequest.md
@@ -650,6 +668,7 @@ test/test_drawing.py
 test/test_drawing_request.py
 test/test_edit_comment.py
 test/test_edit_comment_request.py
+test/test_edit_folder.py
 test/test_element.py
 test/test_element_classification_relation.py
 test/test_element_classification_relation_request.py
@@ -661,6 +680,8 @@ test/test_extensions.py
 test/test_feature.py
 test/test_feature_request.py
 test/test_folder.py
+test/test_folder_naming_constraint.py
+test/test_folder_naming_constraint_request.py
 test/test_folder_tree.py
 test/test_folder_user_project.py
 test/test_folder_without_children.py
@@ -718,6 +739,10 @@ test/test_model_on_model_position_creation_request.py
 test/test_model_property.py
 test/test_model_serializer_without_children.py
 test/test_model_with_positioning_plan.py
+test/test_naming_constraint.py
+test/test_naming_constraint_request.py
+test/test_naming_parts_template.py
+test/test_naming_parts_template_request.py
 test/test_organization.py
 test/test_organization_request.py
 test/test_orthogonal_camera.py
@@ -730,8 +755,8 @@ test/test_patched_comment_request.py
 test/test_patched_document_request.py
 test/test_patched_document_text_request.py
 test/test_patched_drawing_request.py
+test/test_patched_edit_folder_request.py
 test/test_patched_element_request.py
-test/test_patched_folder_without_children_request.py
 test/test_patched_full_topic_request.py
 test/test_patched_group_folder_request.py
 test/test_patched_group_request.py
@@ -742,6 +767,8 @@ test/test_patched_model_equipment_request.py
 test/test_patched_model_label_request.py
 test/test_patched_model_on_model_position_request.py
 test/test_patched_model_request.py
+test/test_patched_naming_constraint_request.py
+test/test_patched_naming_parts_template_request.py
 test/test_patched_pin_request.py
 test/test_patched_positioning_plan_request.py
 test/test_patched_priority_request.py

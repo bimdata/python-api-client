@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **size** | **int, none_type** |  | [optional] 
 **file** | **str, none_type** |  | [optional] 
 **office_preview** | **str, none_type** |  | [optional] 
+**naming_constraint_conflit** | **bool, none_type** |  | [optional] 
 **children** | [**[RecursiveFolderChildren], none_type**](RecursiveFolderChildren.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

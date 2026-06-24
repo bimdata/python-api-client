@@ -157,6 +157,20 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_create_naming_constraint(self):
+        """Test case for create_naming_constraint
+
+        Create a naming constraint  # noqa: E501
+        """
+        pass
+
+    def test_create_naming_parts_template(self):
+        """Test case for create_naming_parts_template
+
+        Create a naming rule list  # noqa: E501
+        """
+        pass
+
     def test_create_project(self):
         """Test case for create_project
 
@@ -248,6 +262,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_folder_naming_constraint(self):
+        """Test case for delete_folder_naming_constraint
+
+        Remove a naming constraint from a folder  # noqa: E501
+        """
+        pass
+
     def test_delete_group_member(self):
         """Test case for delete_group_member
 
@@ -259,6 +280,20 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for delete_manage_group
 
         Delete a group  # noqa: E501
+        """
+        pass
+
+    def test_delete_naming_constraint(self):
+        """Test case for delete_naming_constraint
+
+        Delete a naming constraint  # noqa: E501
+        """
+        pass
+
+    def test_delete_naming_parts_template(self):
+        """Test case for delete_naming_parts_template
+
+        Delete a naming rule list  # noqa: E501
         """
         pass
 
@@ -409,6 +444,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_get_folder_naming_constraint(self):
+        """Test case for get_folder_naming_constraint
+
+        Get the naming constraint of a folder  # noqa: E501
+        """
+        pass
+
     def test_get_folder_project_users(self):
         """Test case for get_folder_project_users
 
@@ -455,6 +497,34 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for get_manage_groups
 
         Retrieve all groups  # noqa: E501
+        """
+        pass
+
+    def test_get_naming_constraint(self):
+        """Test case for get_naming_constraint
+
+        Retrieve a naming constraint  # noqa: E501
+        """
+        pass
+
+    def test_get_naming_constraints(self):
+        """Test case for get_naming_constraints
+
+        Retrieve all naming constraints  # noqa: E501
+        """
+        pass
+
+    def test_get_naming_parts_template(self):
+        """Test case for get_naming_parts_template
+
+        Retrieve a naming rule list  # noqa: E501
+        """
+        pass
+
+    def test_get_naming_parts_templates(self):
+        """Test case for get_naming_parts_templates
+
+        Retrieve all naming rule lists  # noqa: E501
         """
         pass
 
@@ -696,6 +766,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_set_folder_naming_constraint(self):
+        """Test case for set_folder_naming_constraint
+
+        Set or replace a naming constraint on a folder  # noqa: E501
+        """
+        pass
+
     def test_update_classification(self):
         """Test case for update_classification
 
@@ -749,6 +826,20 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for update_manage_group
 
         Update some fields of a group  # noqa: E501
+        """
+        pass
+
+    def test_update_naming_constraint(self):
+        """Test case for update_naming_constraint
+
+        Update some fields of a naming constraint  # noqa: E501
+        """
+        pass
+
+    def test_update_naming_parts_template(self):
+        """Test case for update_naming_parts_template
+
+        Update some fields of a naming rule list  # noqa: E501
         """
         pass
 

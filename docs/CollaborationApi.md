@@ -23,6 +23,8 @@ Method | HTTP request | Description
 [**create_document**](CollaborationApi.md#create_document) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document | Create a document
 [**create_folder**](CollaborationApi.md#create_folder) | **POST** /cloud/{cloud_pk}/project/{project_pk}/folder | Create a folder
 [**create_manage_group**](CollaborationApi.md#create_manage_group) | **POST** /cloud/{cloud_pk}/project/{project_pk}/group | Create a group
+[**create_naming_constraint**](CollaborationApi.md#create_naming_constraint) | **POST** /cloud/{cloud_pk}/project/{project_pk}/naming-constraint | Create a naming constraint
+[**create_naming_parts_template**](CollaborationApi.md#create_naming_parts_template) | **POST** /cloud/{cloud_pk}/project/{project_pk}/naming-parts-template | Create a naming rule list
 [**create_project**](CollaborationApi.md#create_project) | **POST** /cloud/{cloud_pk}/project | Create a project
 [**create_project_access_token**](CollaborationApi.md#create_project_access_token) | **POST** /cloud/{cloud_pk}/project/{project_pk}/access-token | Create a token for this project
 [**create_tag**](CollaborationApi.md#create_tag) | **POST** /cloud/{cloud_pk}/project/{project_pk}/tag | Create a tag
@@ -36,8 +38,11 @@ Method | HTTP request | Description
 [**delete_document**](CollaborationApi.md#delete_document) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Delete the document
 [**delete_document_tag**](CollaborationApi.md#delete_document_tag) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/tag/{id} | Delete a tag from a document
 [**delete_folder**](CollaborationApi.md#delete_folder) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Delete a folder
+[**delete_folder_naming_constraint**](CollaborationApi.md#delete_folder_naming_constraint) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/folder/{id}/naming-constraint | Remove a naming constraint from a folder
 [**delete_group_member**](CollaborationApi.md#delete_group_member) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/group/{group_pk}/member/{id} | Delete a user from a group
 [**delete_manage_group**](CollaborationApi.md#delete_manage_group) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Delete a group
+[**delete_naming_constraint**](CollaborationApi.md#delete_naming_constraint) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/naming-constraint/{id} | Delete a naming constraint
+[**delete_naming_parts_template**](CollaborationApi.md#delete_naming_parts_template) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/naming-parts-template/{id} | Delete a naming rule list
 [**delete_project**](CollaborationApi.md#delete_project) | **DELETE** /cloud/{cloud_pk}/project/{id} | Delete a project
 [**delete_project_access_token**](CollaborationApi.md#delete_project_access_token) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Delete a token
 [**delete_project_user**](CollaborationApi.md#delete_project_user) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Remove a user from a project
@@ -59,6 +64,7 @@ Method | HTTP request | Description
 [**get_documents**](CollaborationApi.md#get_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document | Retrieve all documents
 [**get_folder**](CollaborationApi.md#get_folder) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Retrieve a folder
 [**get_folder_documents**](CollaborationApi.md#get_folder_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/document | Get all documents of a folder
+[**get_folder_naming_constraint**](CollaborationApi.md#get_folder_naming_constraint) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{id}/naming-constraint | Get the naming constraint of a folder
 [**get_folder_project_users**](CollaborationApi.md#get_folder_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/user | Retrieve all users in a project with the permission on the folder
 [**get_folders**](CollaborationApi.md#get_folders) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder | Retrieve all folders
 [**get_group**](CollaborationApi.md#get_group) | **GET** /cloud/{cloud_pk}/project/{project_pk}/me/group/{id} | Retrieve a group
@@ -66,6 +72,10 @@ Method | HTTP request | Description
 [**get_logs**](CollaborationApi.md#get_logs) | **GET** /cloud/{cloud_pk}/project/{project_pk}/logs | Retrieve all logs of the project
 [**get_manage_group**](CollaborationApi.md#get_manage_group) | **GET** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Retrieve a group
 [**get_manage_groups**](CollaborationApi.md#get_manage_groups) | **GET** /cloud/{cloud_pk}/project/{project_pk}/group | Retrieve all groups
+[**get_naming_constraint**](CollaborationApi.md#get_naming_constraint) | **GET** /cloud/{cloud_pk}/project/{project_pk}/naming-constraint/{id} | Retrieve a naming constraint
+[**get_naming_constraints**](CollaborationApi.md#get_naming_constraints) | **GET** /cloud/{cloud_pk}/project/{project_pk}/naming-constraint | Retrieve all naming constraints
+[**get_naming_parts_template**](CollaborationApi.md#get_naming_parts_template) | **GET** /cloud/{cloud_pk}/project/{project_pk}/naming-parts-template/{id} | Retrieve a naming rule list
+[**get_naming_parts_templates**](CollaborationApi.md#get_naming_parts_templates) | **GET** /cloud/{cloud_pk}/project/{project_pk}/naming-parts-template | Retrieve all naming rule lists
 [**get_project**](CollaborationApi.md#get_project) | **GET** /cloud/{cloud_pk}/project/{id} | Retrieve a project
 [**get_project_access_token**](CollaborationApi.md#get_project_access_token) | **GET** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Retrieve one token created for this project
 [**get_project_access_tokens**](CollaborationApi.md#get_project_access_tokens) | **GET** /cloud/{cloud_pk}/project/{project_pk}/access-token | Retrieve all tokens created for this project
@@ -100,6 +110,7 @@ Method | HTTP request | Description
 [**pause_visa**](CollaborationApi.md#pause_visa) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id}/pause | Pause a visa of a document
 [**reset_validation**](CollaborationApi.md#reset_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}/reset | Reset a validation
 [**resume_visa**](CollaborationApi.md#resume_visa) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id}/resume | Resume a visa of a document
+[**set_folder_naming_constraint**](CollaborationApi.md#set_folder_naming_constraint) | **POST** /cloud/{cloud_pk}/project/{project_pk}/folder/{id}/naming-constraint | Set or replace a naming constraint on a folder
 [**update_classification**](CollaborationApi.md#update_classification) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Update some fields of a classification
 [**update_cloud**](CollaborationApi.md#update_cloud) | **PATCH** /cloud/{id} | Update some fields of a cloud
 [**update_cloud_user**](CollaborationApi.md#update_cloud_user) | **PATCH** /cloud/{cloud_pk}/user/{id} | Change the user role in the cloud
@@ -108,6 +119,8 @@ Method | HTTP request | Description
 [**update_folder**](CollaborationApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Update some fields of a folder
 [**update_group_folder**](CollaborationApi.md#update_group_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/group/{id} | Update the permission of a group on a folder. When propagate is set to True, the permission of all children in the folder will be updated.
 [**update_manage_group**](CollaborationApi.md#update_manage_group) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Update some fields of a group
+[**update_naming_constraint**](CollaborationApi.md#update_naming_constraint) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/naming-constraint/{id} | Update some fields of a naming constraint
+[**update_naming_parts_template**](CollaborationApi.md#update_naming_parts_template) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/naming-parts-template/{id} | Update some fields of a naming rule list
 [**update_preview_file**](CollaborationApi.md#update_preview_file) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id}/preview-file | Update preview of the document
 [**update_project**](CollaborationApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | Update some fields of a project
 [**update_project_user**](CollaborationApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Change the user role in the cloud
@@ -1872,7 +1885,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'DWG', 'POINT_CLOUD', 'OBJ', 'DXF', 'IFC', 'PHOTOSPHERE', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'GLTF', 'DXF', 'DWG', 'POINT_CLOUD', 'OBJ', 'IFC', 'PHOTOSPHERE'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -1885,6 +1898,7 @@ Create a document. If the document is one of {'DWG', 'POINT_CLOUD', 'OBJ', 'DXF'
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.folder_naming_constraint import FolderNamingConstraint
 from bimdata_api_client.model.document import Document
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -1995,6 +2009,7 @@ Name | Type | Description  | Notes
 **402** | You have reached your upload limit. You must pay more storage |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
 **404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**409** | The document name doesn&#39;t match a strict rule |  -  |
 **500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2202,6 +2217,233 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Group**](Group.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_naming_constraint**
+> NamingConstraint create_naming_constraint(cloud_pk, project_pk, naming_constraint_request)
+
+Create a naming constraint
+
+Create a naming constraint  Required scopes: document:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.naming_constraint_request import NamingConstraintRequest
+from bimdata_api_client.model.naming_constraint import NamingConstraint
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    project_pk = 1 # int | 
+    naming_constraint_request = NamingConstraintRequest(
+        name="name_example",
+        rule=None,
+        strict=True,
+    ) # NamingConstraintRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create a naming constraint
+        api_response = api_instance.create_naming_constraint(cloud_pk, project_pk, naming_constraint_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->create_naming_constraint: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **project_pk** | **int**|  |
+ **naming_constraint_request** | [**NamingConstraintRequest**](NamingConstraintRequest.md)|  |
+
+### Return type
+
+[**NamingConstraint**](NamingConstraint.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_naming_parts_template**
+> NamingPartsTemplate create_naming_parts_template(cloud_pk, project_pk, naming_parts_template_request)
+
+Create a naming rule list
+
+Create a naming rule list  Required scopes: document:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.naming_parts_template_request import NamingPartsTemplateRequest
+from bimdata_api_client.model.naming_parts_template import NamingPartsTemplate
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    project_pk = 1 # int | 
+    naming_parts_template_request = NamingPartsTemplateRequest(
+        name="name_example",
+        elements=[
+            "elements_example",
+        ],
+    ) # NamingPartsTemplateRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create a naming rule list
+        api_response = api_instance.create_naming_parts_template(cloud_pk, project_pk, naming_parts_template_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->create_naming_parts_template: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **project_pk** | **int**|  |
+ **naming_parts_template_request** | [**NamingPartsTemplateRequest**](NamingPartsTemplateRequest.md)|  |
+
+### Return type
+
+[**NamingPartsTemplate**](NamingPartsTemplate.md)
 
 ### Authorization
 
@@ -3672,6 +3914,115 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_folder_naming_constraint**
+> [LightDocument] delete_folder_naming_constraint(cloud_pk, id, project_pk)
+
+Remove a naming constraint from a folder
+
+Remove a naming constraint from a folder.  Required scopes: document:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.light_document import LightDocument
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    id = 1 # int | A unique integer value identifying this folder.
+    project_pk = 1 # int | A unique integer value identifying this project.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Remove a naming constraint from a folder
+        api_response = api_instance.delete_folder_naming_constraint(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->delete_folder_naming_constraint: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **id** | **int**| A unique integer value identifying this folder. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+
+### Return type
+
+[**[LightDocument]**](LightDocument.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  Returned when there are documents that are now invalid with a recursive parent rule. Even if the constraint is strict, invalid documents will be allowed and flagged as invalid to avoid a constraint block loop  |  -  |
+**204** | No response body |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **delete_group_member**
 > delete_group_member(cloud_pk, group_pk, id, project_pk)
 
@@ -3858,6 +4209,218 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **id** | **int**| A unique integer value identifying this group. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No response body |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_naming_constraint**
+> delete_naming_constraint(cloud_pk, id, project_pk)
+
+Delete a naming constraint
+
+Delete a naming constraint  Required scopes: document:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    id = 1 # int | A unique integer value identifying this naming constraint.
+    project_pk = 1 # int | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete a naming constraint
+        api_instance.delete_naming_constraint(cloud_pk, id, project_pk)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->delete_naming_constraint: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **id** | **int**| A unique integer value identifying this naming constraint. |
+ **project_pk** | **int**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No response body |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_naming_parts_template**
+> delete_naming_parts_template(cloud_pk, id, project_pk)
+
+Delete a naming rule list
+
+Delete a naming rule list  Required scopes: document:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    id = 1 # int | A unique integer value identifying this naming parts template.
+    project_pk = 1 # int | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete a naming rule list
+        api_instance.delete_naming_parts_template(cloud_pk, id, project_pk)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->delete_naming_parts_template: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **id** | **int**| A unique integer value identifying this naming parts template. |
+ **project_pk** | **int**|  |
 
 ### Return type
 
@@ -5891,6 +6454,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     name__contains = "name__contains_example" # str |  (optional)
     name__endswith = "name__endswith_example" # str |  (optional)
     name__startswith = "name__startswith_example" # str |  (optional)
+    naming_constraint_conflit = True # bool |  (optional)
     parent_id__in = [
         3.14,
     ] # [float] | Multiple values may be separated by commas. (optional)
@@ -5923,7 +6487,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Retrieve all documents
-        api_response = api_instance.get_documents(cloud_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, file_type=file_type, has__visa=has__visa, id__in=id__in, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, parent_id__in=parent_id__in, search=search, size_max=size_max, size_min=size_min, tags=tags, text=text, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
+        api_response = api_instance.get_documents(cloud_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, file_type=file_type, has__visa=has__visa, id__in=id__in, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, naming_constraint_conflit=naming_constraint_conflit, parent_id__in=parent_id__in, search=search, size_max=size_max, size_min=size_min, tags=tags, text=text, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->get_documents: %s\n" % e)
@@ -5954,6 +6518,7 @@ Name | Type | Description  | Notes
  **name__contains** | **str**|  | [optional]
  **name__endswith** | **str**|  | [optional]
  **name__startswith** | **str**|  | [optional]
+ **naming_constraint_conflit** | **bool**|  | [optional]
  **parent_id__in** | **[float]**| Multiple values may be separated by commas. | [optional]
  **search** | **str**|  | [optional]
  **size_max** | **int, none_type**| Size of the file. | [optional]
@@ -6184,6 +6749,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     name__contains = "name__contains_example" # str |  (optional)
     name__endswith = "name__endswith_example" # str |  (optional)
     name__startswith = "name__startswith_example" # str |  (optional)
+    naming_constraint_conflit = True # bool |  (optional)
     parent_id__in = [
         3.14,
     ] # [float] | Multiple values may be separated by commas. (optional)
@@ -6215,7 +6781,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Get all documents of a folder
-        api_response = api_instance.get_folder_documents(cloud_pk, folder_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, file_type=file_type, has__visa=has__visa, id__in=id__in, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, parent_id__in=parent_id__in, search=search, size_max=size_max, size_min=size_min, tags=tags, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
+        api_response = api_instance.get_folder_documents(cloud_pk, folder_pk, project_pk, created_after=created_after, created_before=created_before, creator_email=creator_email, description=description, description__contains=description__contains, description__endswith=description__endswith, description__startswith=description__startswith, file_name=file_name, file_name__contains=file_name__contains, file_name__endswith=file_name__endswith, file_name__startswith=file_name__startswith, file_type=file_type, has__visa=has__visa, id__in=id__in, name=name, name__contains=name__contains, name__endswith=name__endswith, name__startswith=name__startswith, naming_constraint_conflit=naming_constraint_conflit, parent_id__in=parent_id__in, search=search, size_max=size_max, size_min=size_min, tags=tags, visa__creator_email=visa__creator_email, visa__deadline_after=visa__deadline_after, visa__deadline_before=visa__deadline_before, visa__past__deadline=visa__past__deadline, visa__past__deadline__strict=visa__past__deadline__strict, visa__status=visa__status, visa__status__strict=visa__status__strict, visa__validation_status=visa__validation_status, visa__validator_email=visa__validator_email)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->get_folder_documents: %s\n" % e)
@@ -6247,6 +6813,7 @@ Name | Type | Description  | Notes
  **name__contains** | **str**|  | [optional]
  **name__endswith** | **str**|  | [optional]
  **name__startswith** | **str**|  | [optional]
+ **naming_constraint_conflit** | **bool**|  | [optional]
  **parent_id__in** | **[float]**| Multiple values may be separated by commas. | [optional]
  **search** | **str**|  | [optional]
  **size_max** | **int, none_type**| Size of the file. | [optional]
@@ -6283,6 +6850,113 @@ Name | Type | Description  | Notes
 **200** |  |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_folder_naming_constraint**
+> FolderNamingConstraint get_folder_naming_constraint(cloud_pk, id, project_pk)
+
+Get the naming constraint of a folder
+
+Get the naming constraint of a folder. The constraint may come from a parent folder with a recursive constraint.  Required scopes: document:read
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.folder_naming_constraint import FolderNamingConstraint
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    id = 1 # int | A unique integer value identifying this folder.
+    project_pk = 1 # int | A unique integer value identifying this project.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Get the naming constraint of a folder
+        api_response = api_instance.get_folder_naming_constraint(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->get_folder_naming_constraint: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **id** | **int**| A unique integer value identifying this folder. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+
+### Return type
+
+[**FolderNamingConstraint**](FolderNamingConstraint.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
 **500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -7001,6 +7675,428 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[Group]**](Group.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_naming_constraint**
+> NamingConstraint get_naming_constraint(cloud_pk, id, project_pk)
+
+Retrieve a naming constraint
+
+Retrieve a naming constraint  Required scopes: document:read
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.naming_constraint import NamingConstraint
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    id = 1 # int | A unique integer value identifying this naming constraint.
+    project_pk = 1 # int | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Retrieve a naming constraint
+        api_response = api_instance.get_naming_constraint(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->get_naming_constraint: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **id** | **int**| A unique integer value identifying this naming constraint. |
+ **project_pk** | **int**|  |
+
+### Return type
+
+[**NamingConstraint**](NamingConstraint.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_naming_constraints**
+> [NamingConstraint] get_naming_constraints(cloud_pk, project_pk)
+
+Retrieve all naming constraints
+
+Retrieve all naming constraints  Required scopes: document:read
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.naming_constraint import NamingConstraint
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    project_pk = 1 # int | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Retrieve all naming constraints
+        api_response = api_instance.get_naming_constraints(cloud_pk, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->get_naming_constraints: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **project_pk** | **int**|  |
+
+### Return type
+
+[**[NamingConstraint]**](NamingConstraint.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_naming_parts_template**
+> NamingPartsTemplate get_naming_parts_template(cloud_pk, id, project_pk)
+
+Retrieve a naming rule list
+
+Retrieve a naming rule list in the cloud  Required scopes: document:read
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.naming_parts_template import NamingPartsTemplate
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    id = 1 # int | A unique integer value identifying this naming parts template.
+    project_pk = 1 # int | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Retrieve a naming rule list
+        api_response = api_instance.get_naming_parts_template(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->get_naming_parts_template: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **id** | **int**| A unique integer value identifying this naming parts template. |
+ **project_pk** | **int**|  |
+
+### Return type
+
+[**NamingPartsTemplate**](NamingPartsTemplate.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_naming_parts_templates**
+> [NamingPartsTemplate] get_naming_parts_templates(cloud_pk, project_pk)
+
+Retrieve all naming rule lists
+
+Retrieve all naming rule lists in the cloud  Required scopes: document:read
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.naming_parts_template import NamingPartsTemplate
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    project_pk = 1 # int | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Retrieve all naming rule lists
+        api_response = api_instance.get_naming_parts_templates(cloud_pk, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->get_naming_parts_templates: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **project_pk** | **int**|  |
+
+### Return type
+
+[**[NamingPartsTemplate]**](NamingPartsTemplate.md)
 
 ### Authorization
 
@@ -10707,6 +11803,122 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **set_folder_naming_constraint**
+> FolderNamingConstraint set_folder_naming_constraint(cloud_pk, id, project_pk, folder_naming_constraint_request)
+
+Set or replace a naming constraint on a folder
+
+Set or replace a naming constraint on a folder.  Required scopes: document:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.folder_naming_constraint import FolderNamingConstraint
+from bimdata_api_client.model.light_document import LightDocument
+from bimdata_api_client.model.folder_naming_constraint_request import FolderNamingConstraintRequest
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    id = 1 # int | A unique integer value identifying this folder.
+    project_pk = 1 # int | A unique integer value identifying this project.
+    folder_naming_constraint_request = FolderNamingConstraintRequest(
+        constraint_id=1,
+        recursive=True,
+    ) # FolderNamingConstraintRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Set or replace a naming constraint on a folder
+        api_response = api_instance.set_folder_naming_constraint(cloud_pk, id, project_pk, folder_naming_constraint_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->set_folder_naming_constraint: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **id** | **int**| A unique integer value identifying this folder. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+ **folder_naming_constraint_request** | [**FolderNamingConstraintRequest**](FolderNamingConstraintRequest.md)|  |
+
+### Return type
+
+[**FolderNamingConstraint**](FolderNamingConstraint.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**409** | Returned when the naming constraint is strict and some documents doesn&#39;t match it. |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **update_classification**
 > Classification update_classification(cloud_pk, id, project_pk)
 
@@ -11089,6 +12301,7 @@ Update some fields of the document  Required scopes: document:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.folder_naming_constraint import FolderNamingConstraint
 from bimdata_api_client.model.document import Document
 from bimdata_api_client.model.patched_document_request import PatchedDocumentRequest
 from pprint import pprint
@@ -11191,11 +12404,12 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
+**201** |  |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
 **404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**409** | The document name doesn&#39;t match a strict rule. |  -  |
 **500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -11265,7 +12479,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_document_text_request = PatchedDocumentTextRequest(
         text="text_example",
-        language="italian",
+        language="french",
     ) # PatchedDocumentTextRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -11324,7 +12538,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_folder**
-> FolderWithoutChildren update_folder(cloud_pk, id, project_pk)
+> EditFolder update_folder(cloud_pk, id, project_pk)
 
 Update some fields of a folder
 
@@ -11341,8 +12555,9 @@ Update some fields of a folder
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
-from bimdata_api_client.model.patched_folder_without_children_request import PatchedFolderWithoutChildrenRequest
-from bimdata_api_client.model.folder_without_children import FolderWithoutChildren
+from bimdata_api_client.model.light_document import LightDocument
+from bimdata_api_client.model.edit_folder import EditFolder
+from bimdata_api_client.model.patched_edit_folder_request import PatchedEditFolderRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -11386,12 +12601,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     id = 1 # int | A unique integer value identifying this folder.
     project_pk = 1 # int | A unique integer value identifying this project.
-    patched_folder_without_children_request = PatchedFolderWithoutChildrenRequest(
+    patched_edit_folder_request = PatchedEditFolderRequest(
         parent_id=1,
-        name="name_example",
         default_permission=1,
         propagate=False,
-    ) # PatchedFolderWithoutChildrenRequest |  (optional)
+        name="name_example",
+    ) # PatchedEditFolderRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -11405,7 +12620,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Update some fields of a folder
-        api_response = api_instance.update_folder(cloud_pk, id, project_pk, patched_folder_without_children_request=patched_folder_without_children_request)
+        api_response = api_instance.update_folder(cloud_pk, id, project_pk, patched_edit_folder_request=patched_edit_folder_request)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->update_folder: %s\n" % e)
@@ -11419,11 +12634,11 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **id** | **int**| A unique integer value identifying this folder. |
  **project_pk** | **int**| A unique integer value identifying this project. |
- **patched_folder_without_children_request** | [**PatchedFolderWithoutChildrenRequest**](PatchedFolderWithoutChildrenRequest.md)|  | [optional]
+ **patched_edit_folder_request** | [**PatchedEditFolderRequest**](PatchedEditFolderRequest.md)|  | [optional]
 
 ### Return type
 
-[**FolderWithoutChildren**](FolderWithoutChildren.md)
+[**EditFolder**](EditFolder.md)
 
 ### Authorization
 
@@ -11444,6 +12659,7 @@ Name | Type | Description  | Notes
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
 **404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**409** | Returned when the destination has a strict naming constraint and some documents won&#39;t match de new constraint. |  -  |
 **500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -11673,6 +12889,255 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Group**](Group.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_naming_constraint**
+> NamingConstraint update_naming_constraint(cloud_pk, id, project_pk)
+
+Update some fields of a naming constraint
+
+Update some fields of a naming constraint  Required scopes: document:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.patched_naming_constraint_request import PatchedNamingConstraintRequest
+from bimdata_api_client.model.naming_constraint import NamingConstraint
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    id = 1 # int | A unique integer value identifying this naming constraint.
+    project_pk = 1 # int | 
+    patched_naming_constraint_request = PatchedNamingConstraintRequest(
+        name="name_example",
+        rule=None,
+        strict=True,
+    ) # PatchedNamingConstraintRequest |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Update some fields of a naming constraint
+        api_response = api_instance.update_naming_constraint(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->update_naming_constraint: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Update some fields of a naming constraint
+        api_response = api_instance.update_naming_constraint(cloud_pk, id, project_pk, patched_naming_constraint_request=patched_naming_constraint_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->update_naming_constraint: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **id** | **int**| A unique integer value identifying this naming constraint. |
+ **project_pk** | **int**|  |
+ **patched_naming_constraint_request** | [**PatchedNamingConstraintRequest**](PatchedNamingConstraintRequest.md)|  | [optional]
+
+### Return type
+
+[**NamingConstraint**](NamingConstraint.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_naming_parts_template**
+> NamingPartsTemplate update_naming_parts_template(cloud_pk, id, project_pk)
+
+Update some fields of a naming rule list
+
+Update some fields of a naming rule list  Required scopes: document:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.patched_naming_parts_template_request import PatchedNamingPartsTemplateRequest
+from bimdata_api_client.model.naming_parts_template import NamingPartsTemplate
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    id = 1 # int | A unique integer value identifying this naming parts template.
+    project_pk = 1 # int | 
+    patched_naming_parts_template_request = PatchedNamingPartsTemplateRequest(
+        name="name_example",
+        elements=[
+            "elements_example",
+        ],
+    ) # PatchedNamingPartsTemplateRequest |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Update some fields of a naming rule list
+        api_response = api_instance.update_naming_parts_template(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->update_naming_parts_template: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Update some fields of a naming rule list
+        api_response = api_instance.update_naming_parts_template(cloud_pk, id, project_pk, patched_naming_parts_template_request=patched_naming_parts_template_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->update_naming_parts_template: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **id** | **int**| A unique integer value identifying this naming parts template. |
+ **project_pk** | **int**|  |
+ **patched_naming_parts_template_request** | [**PatchedNamingPartsTemplateRequest**](PatchedNamingPartsTemplateRequest.md)|  | [optional]
+
+### Return type
+
+[**NamingPartsTemplate**](NamingPartsTemplate.md)
 
 ### Authorization
 

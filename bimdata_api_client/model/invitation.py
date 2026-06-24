@@ -195,7 +195,7 @@ class Invitation(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             project_name (str): [optional]  # noqa: E501
             project_role (int, none_type): Role the user will have when they accept the invitation  * `100` - admin * `50` - user * `25` - guest. [optional]  # noqa: E501
-            status (str):          A: Accepted         D: Denied         P: Pending           * `A` - accepted * `D` - denied * `P` - pending. [optional]  # noqa: E501
+            status (str):  A: Accepted D: Denied P: Pending   * `A` - accepted * `D` - denied * `P` - pending. [optional]  # noqa: E501
             sender_provider_sub (str): OIDC sub of the sender. The original sub from the provider is used instead of the broker sub. [optional]  # noqa: E501
         """
 
@@ -291,7 +291,7 @@ class Invitation(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             project_name (str): [optional]  # noqa: E501
             project_role (int, none_type): Role the user will have when they accept the invitation  * `100` - admin * `50` - user * `25` - guest. [optional]  # noqa: E501
-            status (str):          A: Accepted         D: Denied         P: Pending           * `A` - accepted * `D` - denied * `P` - pending. [optional]  # noqa: E501
+            status (str):  A: Accepted D: Denied P: Pending   * `A` - accepted * `D` - denied * `P` - pending. [optional]  # noqa: E501
             sender_provider_sub (str): OIDC sub of the sender. The original sub from the provider is used instead of the broker sub. [optional]  # noqa: E501
         """
 

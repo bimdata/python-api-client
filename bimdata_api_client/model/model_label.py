@@ -182,7 +182,7 @@ class ModelLabel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            color (str, none_type):              Color of the label in hexadecimal string without the '#' prefix.             Example: 'fff', 'fff0', '0f0f0f', '0f0f0f00'.         . [optional]  # noqa: E501
+            color (str, none_type):  Color of the label in hexadecimal string without the '#' prefix. Example: 'fff', 'fff0', '0f0f0f', '0f0f0f00'. . [optional]  # noqa: E501
             human_validated (bool): Whether the label has been created or validated by a human or not. [optional]  # noqa: E501
         """
 
@@ -274,7 +274,7 @@ class ModelLabel(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            color (str, none_type):              Color of the label in hexadecimal string without the '#' prefix.             Example: 'fff', 'fff0', '0f0f0f', '0f0f0f00'.         . [optional]  # noqa: E501
+            color (str, none_type):  Color of the label in hexadecimal string without the '#' prefix. Example: 'fff', 'fff0', '0f0f0f', '0f0f0f00'. . [optional]  # noqa: E501
             human_validated (bool): Whether the label has been created or validated by a human or not. [optional]  # noqa: E501
         """
 

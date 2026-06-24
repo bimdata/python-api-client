@@ -32,7 +32,10 @@ from bimdata_api_client.model.cloud_request import CloudRequest
 from bimdata_api_client.model.document import Document
 from bimdata_api_client.model.document_preview_file import DocumentPreviewFile
 from bimdata_api_client.model.document_text import DocumentText
+from bimdata_api_client.model.edit_folder import EditFolder
 from bimdata_api_client.model.folder import Folder
+from bimdata_api_client.model.folder_naming_constraint import FolderNamingConstraint
+from bimdata_api_client.model.folder_naming_constraint_request import FolderNamingConstraintRequest
 from bimdata_api_client.model.folder_tree import FolderTree
 from bimdata_api_client.model.folder_user_project import FolderUserProject
 from bimdata_api_client.model.folder_without_children import FolderWithoutChildren
@@ -41,14 +44,21 @@ from bimdata_api_client.model.group import Group
 from bimdata_api_client.model.group_folder import GroupFolder
 from bimdata_api_client.model.group_request import GroupRequest
 from bimdata_api_client.model.import_group_request import ImportGroupRequest
+from bimdata_api_client.model.light_document import LightDocument
 from bimdata_api_client.model.log_entry import LogEntry
+from bimdata_api_client.model.naming_constraint import NamingConstraint
+from bimdata_api_client.model.naming_constraint_request import NamingConstraintRequest
+from bimdata_api_client.model.naming_parts_template import NamingPartsTemplate
+from bimdata_api_client.model.naming_parts_template_request import NamingPartsTemplateRequest
 from bimdata_api_client.model.patched_classification_request import PatchedClassificationRequest
 from bimdata_api_client.model.patched_cloud_request import PatchedCloudRequest
 from bimdata_api_client.model.patched_document_request import PatchedDocumentRequest
 from bimdata_api_client.model.patched_document_text_request import PatchedDocumentTextRequest
-from bimdata_api_client.model.patched_folder_without_children_request import PatchedFolderWithoutChildrenRequest
+from bimdata_api_client.model.patched_edit_folder_request import PatchedEditFolderRequest
 from bimdata_api_client.model.patched_group_folder_request import PatchedGroupFolderRequest
 from bimdata_api_client.model.patched_group_request import PatchedGroupRequest
+from bimdata_api_client.model.patched_naming_constraint_request import PatchedNamingConstraintRequest
+from bimdata_api_client.model.patched_naming_parts_template_request import PatchedNamingPartsTemplateRequest
 from bimdata_api_client.model.patched_project_request import PatchedProjectRequest
 from bimdata_api_client.model.patched_tag_request import PatchedTagRequest
 from bimdata_api_client.model.patched_user_cloud_update_request import PatchedUserCloudUpdateRequest
@@ -1417,6 +1427,144 @@ class CollaborationApi(object):
             },
             api_client=api_client
         )
+        self.create_naming_constraint_endpoint = _Endpoint(
+            settings={
+                'response_type': (NamingConstraint,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/naming-constraint',
+                'operation_id': 'create_naming_constraint',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'project_pk',
+                    'naming_constraint_request',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'project_pk',
+                    'naming_constraint_request',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'naming_constraint_request':
+                        (NamingConstraintRequest,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'project_pk': 'path',
+                    'naming_constraint_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
+        self.create_naming_parts_template_endpoint = _Endpoint(
+            settings={
+                'response_type': (NamingPartsTemplate,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/naming-parts-template',
+                'operation_id': 'create_naming_parts_template',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'project_pk',
+                    'naming_parts_template_request',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'project_pk',
+                    'naming_parts_template_request',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'naming_parts_template_request':
+                        (NamingPartsTemplateRequest,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'project_pk': 'path',
+                    'naming_parts_template_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
         self.create_project_endpoint = _Endpoint(
             settings={
                 'response_type': (Project,),
@@ -2289,6 +2437,72 @@ class CollaborationApi(object):
             },
             api_client=api_client
         )
+        self.delete_folder_naming_constraint_endpoint = _Endpoint(
+            settings={
+                'response_type': ([LightDocument],),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/folder/{id}/naming-constraint',
+                'operation_id': 'delete_folder_naming_constraint',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_pk': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
         self.delete_group_member_endpoint = _Endpoint(
             settings={
                 'response_type': None,
@@ -2370,6 +2584,134 @@ class CollaborationApi(object):
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/group/{id}',
                 'operation_id': 'delete_manage_group',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_pk': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.delete_naming_constraint_endpoint = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/naming-constraint/{id}',
+                'operation_id': 'delete_naming_constraint',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_pk': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.delete_naming_parts_template_endpoint = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/naming-parts-template/{id}',
+                'operation_id': 'delete_naming_parts_template',
                 'http_method': 'DELETE',
                 'servers': None,
             },
@@ -3612,6 +3954,7 @@ class CollaborationApi(object):
                     'name__contains',
                     'name__endswith',
                     'name__startswith',
+                    'naming_constraint_conflit',
                     'parent_id__in',
                     'search',
                     'size_max',
@@ -3713,6 +4056,8 @@ class CollaborationApi(object):
                         (str,),
                     'name__startswith':
                         (str,),
+                    'naming_constraint_conflit':
+                        (bool,),
                     'parent_id__in':
                         ([float],),
                     'search':
@@ -3765,6 +4110,7 @@ class CollaborationApi(object):
                     'name__contains': 'name__contains',
                     'name__endswith': 'name__endswith',
                     'name__startswith': 'name__startswith',
+                    'naming_constraint_conflit': 'naming_constraint_conflit',
                     'parent_id__in': 'parent_id__in',
                     'search': 'search',
                     'size_max': 'size_max',
@@ -3802,6 +4148,7 @@ class CollaborationApi(object):
                     'name__contains': 'query',
                     'name__endswith': 'query',
                     'name__startswith': 'query',
+                    'naming_constraint_conflit': 'query',
                     'parent_id__in': 'query',
                     'search': 'query',
                     'size_max': 'query',
@@ -3935,6 +4282,7 @@ class CollaborationApi(object):
                     'name__contains',
                     'name__endswith',
                     'name__startswith',
+                    'naming_constraint_conflit',
                     'parent_id__in',
                     'search',
                     'size_max',
@@ -4038,6 +4386,8 @@ class CollaborationApi(object):
                         (str,),
                     'name__startswith':
                         (str,),
+                    'naming_constraint_conflit':
+                        (bool,),
                     'parent_id__in':
                         ([float],),
                     'search':
@@ -4089,6 +4439,7 @@ class CollaborationApi(object):
                     'name__contains': 'name__contains',
                     'name__endswith': 'name__endswith',
                     'name__startswith': 'name__startswith',
+                    'naming_constraint_conflit': 'naming_constraint_conflit',
                     'parent_id__in': 'parent_id__in',
                     'search': 'search',
                     'size_max': 'size_max',
@@ -4126,6 +4477,7 @@ class CollaborationApi(object):
                     'name__contains': 'query',
                     'name__endswith': 'query',
                     'name__startswith': 'query',
+                    'naming_constraint_conflit': 'query',
                     'parent_id__in': 'query',
                     'search': 'query',
                     'size_max': 'query',
@@ -4145,6 +4497,72 @@ class CollaborationApi(object):
                     'id__in': 'csv',
                     'parent_id__in': 'csv',
                     'tags': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.get_folder_naming_constraint_endpoint = _Endpoint(
+            settings={
+                'response_type': (FolderNamingConstraint,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/folder/{id}/naming-constraint',
+                'operation_id': 'get_folder_naming_constraint',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_pk': 'path',
+                },
+                'collection_format_map': {
                 }
             },
             headers_map={
@@ -4544,6 +4962,258 @@ class CollaborationApi(object):
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/group',
                 'operation_id': 'get_manage_groups',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'project_pk',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'project_pk': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.get_naming_constraint_endpoint = _Endpoint(
+            settings={
+                'response_type': (NamingConstraint,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/naming-constraint/{id}',
+                'operation_id': 'get_naming_constraint',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_pk': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.get_naming_constraints_endpoint = _Endpoint(
+            settings={
+                'response_type': ([NamingConstraint],),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/naming-constraint',
+                'operation_id': 'get_naming_constraints',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'project_pk',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'project_pk': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.get_naming_parts_template_endpoint = _Endpoint(
+            settings={
+                'response_type': (NamingPartsTemplate,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/naming-parts-template/{id}',
+                'operation_id': 'get_naming_parts_template',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_pk': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.get_naming_parts_templates_endpoint = _Endpoint(
+            settings={
+                'response_type': ([NamingPartsTemplate],),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/naming-parts-template',
+                'operation_id': 'get_naming_parts_templates',
                 'http_method': 'GET',
                 'servers': None,
             },
@@ -6855,6 +7525,81 @@ class CollaborationApi(object):
             },
             api_client=api_client
         )
+        self.set_folder_naming_constraint_endpoint = _Endpoint(
+            settings={
+                'response_type': (FolderNamingConstraint,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/folder/{id}/naming-constraint',
+                'operation_id': 'set_folder_naming_constraint',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                    'folder_naming_constraint_request',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                    'folder_naming_constraint_request',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'folder_naming_constraint_request':
+                        (FolderNamingConstraintRequest,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_pk': 'path',
+                    'folder_naming_constraint_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
         self.update_classification_endpoint = _Endpoint(
             settings={
                 'response_type': (Classification,),
@@ -7209,7 +7954,7 @@ class CollaborationApi(object):
         )
         self.update_folder_endpoint = _Endpoint(
             settings={
-                'response_type': (FolderWithoutChildren,),
+                'response_type': (EditFolder,),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -7226,7 +7971,7 @@ class CollaborationApi(object):
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'patched_folder_without_children_request',
+                    'patched_edit_folder_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -7252,8 +7997,8 @@ class CollaborationApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'patched_folder_without_children_request':
-                        (PatchedFolderWithoutChildrenRequest,),
+                    'patched_edit_folder_request':
+                        (PatchedEditFolderRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -7264,7 +8009,7 @@ class CollaborationApi(object):
                     'cloud_pk': 'path',
                     'id': 'path',
                     'project_pk': 'path',
-                    'patched_folder_without_children_request': 'body',
+                    'patched_edit_folder_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -7419,6 +8164,154 @@ class CollaborationApi(object):
                     'id': 'path',
                     'project_pk': 'path',
                     'patched_group_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
+        self.update_naming_constraint_endpoint = _Endpoint(
+            settings={
+                'response_type': (NamingConstraint,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/naming-constraint/{id}',
+                'operation_id': 'update_naming_constraint',
+                'http_method': 'PATCH',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                    'patched_naming_constraint_request',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'patched_naming_constraint_request':
+                        (PatchedNamingConstraintRequest,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_pk': 'path',
+                    'patched_naming_constraint_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
+        self.update_naming_parts_template_endpoint = _Endpoint(
+            settings={
+                'response_type': (NamingPartsTemplate,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/naming-parts-template/{id}',
+                'operation_id': 'update_naming_parts_template',
+                'http_method': 'PATCH',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                    'patched_naming_parts_template_request',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'patched_naming_parts_template_request':
+                        (PatchedNamingPartsTemplateRequest,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_pk': 'path',
+                    'patched_naming_parts_template_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -9344,7 +10237,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'DWG', 'POINT_CLOUD', 'OBJ', 'DXF', 'IFC', 'PHOTOSPHERE', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'GLTF', 'DXF', 'DWG', 'POINT_CLOUD', 'OBJ', 'IFC', 'PHOTOSPHERE'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -9599,6 +10492,178 @@ class CollaborationApi(object):
         kwargs['group_request'] = \
             group_request
         return self.create_manage_group_endpoint.call_with_http_info(**kwargs)
+
+    def create_naming_constraint(
+        self,
+        cloud_pk,
+        project_pk,
+        naming_constraint_request,
+        **kwargs
+    ):
+        """Create a naming constraint  # noqa: E501
+
+        Create a naming constraint  Required scopes: document:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.create_naming_constraint(cloud_pk, project_pk, naming_constraint_request, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            project_pk (int):
+            naming_constraint_request (NamingConstraintRequest):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            NamingConstraint
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['project_pk'] = \
+            project_pk
+        kwargs['naming_constraint_request'] = \
+            naming_constraint_request
+        return self.create_naming_constraint_endpoint.call_with_http_info(**kwargs)
+
+    def create_naming_parts_template(
+        self,
+        cloud_pk,
+        project_pk,
+        naming_parts_template_request,
+        **kwargs
+    ):
+        """Create a naming rule list  # noqa: E501
+
+        Create a naming rule list  Required scopes: document:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.create_naming_parts_template(cloud_pk, project_pk, naming_parts_template_request, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            project_pk (int):
+            naming_parts_template_request (NamingPartsTemplateRequest):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            NamingPartsTemplate
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['project_pk'] = \
+            project_pk
+        kwargs['naming_parts_template_request'] = \
+            naming_parts_template_request
+        return self.create_naming_parts_template_endpoint.call_with_http_info(**kwargs)
 
     def create_project(
         self,
@@ -10720,6 +11785,92 @@ class CollaborationApi(object):
             project_pk
         return self.delete_folder_endpoint.call_with_http_info(**kwargs)
 
+    def delete_folder_naming_constraint(
+        self,
+        cloud_pk,
+        id,
+        project_pk,
+        **kwargs
+    ):
+        """Remove a naming constraint from a folder  # noqa: E501
+
+        Remove a naming constraint from a folder.  Required scopes: document:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.delete_folder_naming_constraint(cloud_pk, id, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): A unique integer value identifying this folder.
+            project_pk (int): A unique integer value identifying this project.
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [LightDocument]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_pk'] = \
+            project_pk
+        return self.delete_folder_naming_constraint_endpoint.call_with_http_info(**kwargs)
+
     def delete_group_member(
         self,
         cloud_pk,
@@ -10895,6 +12046,178 @@ class CollaborationApi(object):
         kwargs['project_pk'] = \
             project_pk
         return self.delete_manage_group_endpoint.call_with_http_info(**kwargs)
+
+    def delete_naming_constraint(
+        self,
+        cloud_pk,
+        id,
+        project_pk,
+        **kwargs
+    ):
+        """Delete a naming constraint  # noqa: E501
+
+        Delete a naming constraint  Required scopes: document:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.delete_naming_constraint(cloud_pk, id, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): A unique integer value identifying this naming constraint.
+            project_pk (int):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            None
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_pk'] = \
+            project_pk
+        return self.delete_naming_constraint_endpoint.call_with_http_info(**kwargs)
+
+    def delete_naming_parts_template(
+        self,
+        cloud_pk,
+        id,
+        project_pk,
+        **kwargs
+    ):
+        """Delete a naming rule list  # noqa: E501
+
+        Delete a naming rule list  Required scopes: document:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.delete_naming_parts_template(cloud_pk, id, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): A unique integer value identifying this naming parts template.
+            project_pk (int):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            None
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_pk'] = \
+            project_pk
+        return self.delete_naming_parts_template_endpoint.call_with_http_info(**kwargs)
 
     def delete_project(
         self,
@@ -12454,6 +13777,7 @@ class CollaborationApi(object):
             name__contains (str): [optional]
             name__endswith (str): [optional]
             name__startswith (str): [optional]
+            naming_constraint_conflit (bool): [optional]
             parent_id__in ([float]): Multiple values may be separated by commas.. [optional]
             search (str): [optional]
             size_max (int, none_type): Size of the file.. [optional]
@@ -12657,6 +13981,7 @@ class CollaborationApi(object):
             name__contains (str): [optional]
             name__endswith (str): [optional]
             name__startswith (str): [optional]
+            naming_constraint_conflit (bool): [optional]
             parent_id__in ([float]): Multiple values may be separated by commas.. [optional]
             search (str): [optional]
             size_max (int, none_type): Size of the file.. [optional]
@@ -12734,6 +14059,92 @@ class CollaborationApi(object):
         kwargs['project_pk'] = \
             project_pk
         return self.get_folder_documents_endpoint.call_with_http_info(**kwargs)
+
+    def get_folder_naming_constraint(
+        self,
+        cloud_pk,
+        id,
+        project_pk,
+        **kwargs
+    ):
+        """Get the naming constraint of a folder  # noqa: E501
+
+        Get the naming constraint of a folder. The constraint may come from a parent folder with a recursive constraint.  Required scopes: document:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_folder_naming_constraint(cloud_pk, id, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): A unique integer value identifying this folder.
+            project_pk (int): A unique integer value identifying this project.
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            FolderNamingConstraint
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_pk'] = \
+            project_pk
+        return self.get_folder_naming_constraint_endpoint.call_with_http_info(**kwargs)
 
     def get_folder_project_users(
         self,
@@ -13320,6 +14731,342 @@ class CollaborationApi(object):
         kwargs['project_pk'] = \
             project_pk
         return self.get_manage_groups_endpoint.call_with_http_info(**kwargs)
+
+    def get_naming_constraint(
+        self,
+        cloud_pk,
+        id,
+        project_pk,
+        **kwargs
+    ):
+        """Retrieve a naming constraint  # noqa: E501
+
+        Retrieve a naming constraint  Required scopes: document:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_naming_constraint(cloud_pk, id, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): A unique integer value identifying this naming constraint.
+            project_pk (int):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            NamingConstraint
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_pk'] = \
+            project_pk
+        return self.get_naming_constraint_endpoint.call_with_http_info(**kwargs)
+
+    def get_naming_constraints(
+        self,
+        cloud_pk,
+        project_pk,
+        **kwargs
+    ):
+        """Retrieve all naming constraints  # noqa: E501
+
+        Retrieve all naming constraints  Required scopes: document:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_naming_constraints(cloud_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            project_pk (int):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [NamingConstraint]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['project_pk'] = \
+            project_pk
+        return self.get_naming_constraints_endpoint.call_with_http_info(**kwargs)
+
+    def get_naming_parts_template(
+        self,
+        cloud_pk,
+        id,
+        project_pk,
+        **kwargs
+    ):
+        """Retrieve a naming rule list  # noqa: E501
+
+        Retrieve a naming rule list in the cloud  Required scopes: document:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_naming_parts_template(cloud_pk, id, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): A unique integer value identifying this naming parts template.
+            project_pk (int):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            NamingPartsTemplate
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_pk'] = \
+            project_pk
+        return self.get_naming_parts_template_endpoint.call_with_http_info(**kwargs)
+
+    def get_naming_parts_templates(
+        self,
+        cloud_pk,
+        project_pk,
+        **kwargs
+    ):
+        """Retrieve all naming rule lists  # noqa: E501
+
+        Retrieve all naming rule lists in the cloud  Required scopes: document:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_naming_parts_templates(cloud_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            project_pk (int):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [NamingPartsTemplate]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['project_pk'] = \
+            project_pk
+        return self.get_naming_parts_templates_endpoint.call_with_http_info(**kwargs)
 
     def get_project(
         self,
@@ -16205,6 +17952,96 @@ class CollaborationApi(object):
             project_pk
         return self.resume_visa_endpoint.call_with_http_info(**kwargs)
 
+    def set_folder_naming_constraint(
+        self,
+        cloud_pk,
+        id,
+        project_pk,
+        folder_naming_constraint_request,
+        **kwargs
+    ):
+        """Set or replace a naming constraint on a folder  # noqa: E501
+
+        Set or replace a naming constraint on a folder.  Required scopes: document:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.set_folder_naming_constraint(cloud_pk, id, project_pk, folder_naming_constraint_request, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): A unique integer value identifying this folder.
+            project_pk (int): A unique integer value identifying this project.
+            folder_naming_constraint_request (FolderNamingConstraintRequest):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            FolderNamingConstraint
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_pk'] = \
+            project_pk
+        kwargs['folder_naming_constraint_request'] = \
+            folder_naming_constraint_request
+        return self.set_folder_naming_constraint_endpoint.call_with_http_info(**kwargs)
+
     def update_classification(
         self,
         cloud_pk,
@@ -16650,7 +18487,7 @@ class CollaborationApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
-            patched_folder_without_children_request (PatchedFolderWithoutChildrenRequest): [optional]
+            patched_edit_folder_request (PatchedEditFolderRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -16679,7 +18516,7 @@ class CollaborationApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            FolderWithoutChildren
+            EditFolder
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -16892,6 +18729,180 @@ class CollaborationApi(object):
         kwargs['project_pk'] = \
             project_pk
         return self.update_manage_group_endpoint.call_with_http_info(**kwargs)
+
+    def update_naming_constraint(
+        self,
+        cloud_pk,
+        id,
+        project_pk,
+        **kwargs
+    ):
+        """Update some fields of a naming constraint  # noqa: E501
+
+        Update some fields of a naming constraint  Required scopes: document:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.update_naming_constraint(cloud_pk, id, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): A unique integer value identifying this naming constraint.
+            project_pk (int):
+
+        Keyword Args:
+            patched_naming_constraint_request (PatchedNamingConstraintRequest): [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            NamingConstraint
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_pk'] = \
+            project_pk
+        return self.update_naming_constraint_endpoint.call_with_http_info(**kwargs)
+
+    def update_naming_parts_template(
+        self,
+        cloud_pk,
+        id,
+        project_pk,
+        **kwargs
+    ):
+        """Update some fields of a naming rule list  # noqa: E501
+
+        Update some fields of a naming rule list  Required scopes: document:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.update_naming_parts_template(cloud_pk, id, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): A unique integer value identifying this naming parts template.
+            project_pk (int):
+
+        Keyword Args:
+            patched_naming_parts_template_request (PatchedNamingPartsTemplateRequest): [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            NamingPartsTemplate
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_pk'] = \
+            project_pk
+        return self.update_naming_parts_template_endpoint.call_with_http_info(**kwargs)
 
     def update_preview_file(
         self,

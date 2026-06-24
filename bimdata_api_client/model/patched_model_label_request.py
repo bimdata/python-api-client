@@ -158,7 +158,7 @@ class PatchedModelLabelRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             name (str): Name of the label. [optional]  # noqa: E501
-            color (str, none_type):              Color of the label in hexadecimal string without the '#' prefix.             Example: 'fff', 'fff0', '0f0f0f', '0f0f0f00'.         . [optional]  # noqa: E501
+            color (str, none_type):  Color of the label in hexadecimal string without the '#' prefix. Example: 'fff', 'fff0', '0f0f0f', '0f0f0f00'. . [optional]  # noqa: E501
             geometry ([Geometry2dPointRequest]): [optional]  # noqa: E501
             human_validated (bool): Whether the label has been created or validated by a human or not. [optional]  # noqa: E501
         """
@@ -243,7 +243,7 @@ class PatchedModelLabelRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             name (str): Name of the label. [optional]  # noqa: E501
-            color (str, none_type):              Color of the label in hexadecimal string without the '#' prefix.             Example: 'fff', 'fff0', '0f0f0f', '0f0f0f00'.         . [optional]  # noqa: E501
+            color (str, none_type):  Color of the label in hexadecimal string without the '#' prefix. Example: 'fff', 'fff0', '0f0f0f', '0f0f0f00'. . [optional]  # noqa: E501
             geometry ([Geometry2dPointRequest]): [optional]  # noqa: E501
             human_validated (bool): Whether the label has been created or validated by a human or not. [optional]  # noqa: E501
         """

@@ -144,13 +144,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 1 # int | A unique integer value identifying this project.
 topics_guid = "topics_guid_example" # str | 
 comment_request = CommentRequest(
-        author="author_example",
-        date=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        viewpoint_guid="viewpoint_guid_example",
-        comment="comment_example",
         viewpoint_temp_id=1,
-        modified_author="modified_author_example",
+        viewpoint_guid="viewpoint_guid_example",
+        author="author_example",
+        comment="comment_example",
         reply_to_comment_guid="reply_to_comment_guid_example",
+        date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        modified_author="modified_author_example",
         guid="guid_example",
     ) # CommentRequest |  (optional)
 
@@ -256,6 +256,8 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**create_document**](docs/CollaborationApi.md#create_document) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document | Create a document
 *CollaborationApi* | [**create_folder**](docs/CollaborationApi.md#create_folder) | **POST** /cloud/{cloud_pk}/project/{project_pk}/folder | Create a folder
 *CollaborationApi* | [**create_manage_group**](docs/CollaborationApi.md#create_manage_group) | **POST** /cloud/{cloud_pk}/project/{project_pk}/group | Create a group
+*CollaborationApi* | [**create_naming_constraint**](docs/CollaborationApi.md#create_naming_constraint) | **POST** /cloud/{cloud_pk}/project/{project_pk}/naming-constraint | Create a naming constraint
+*CollaborationApi* | [**create_naming_parts_template**](docs/CollaborationApi.md#create_naming_parts_template) | **POST** /cloud/{cloud_pk}/project/{project_pk}/naming-parts-template | Create a naming rule list
 *CollaborationApi* | [**create_project**](docs/CollaborationApi.md#create_project) | **POST** /cloud/{cloud_pk}/project | Create a project
 *CollaborationApi* | [**create_project_access_token**](docs/CollaborationApi.md#create_project_access_token) | **POST** /cloud/{cloud_pk}/project/{project_pk}/access-token | Create a token for this project
 *CollaborationApi* | [**create_tag**](docs/CollaborationApi.md#create_tag) | **POST** /cloud/{cloud_pk}/project/{project_pk}/tag | Create a tag
@@ -269,8 +271,11 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**delete_document**](docs/CollaborationApi.md#delete_document) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Delete the document
 *CollaborationApi* | [**delete_document_tag**](docs/CollaborationApi.md#delete_document_tag) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/tag/{id} | Delete a tag from a document
 *CollaborationApi* | [**delete_folder**](docs/CollaborationApi.md#delete_folder) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Delete a folder
+*CollaborationApi* | [**delete_folder_naming_constraint**](docs/CollaborationApi.md#delete_folder_naming_constraint) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/folder/{id}/naming-constraint | Remove a naming constraint from a folder
 *CollaborationApi* | [**delete_group_member**](docs/CollaborationApi.md#delete_group_member) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/group/{group_pk}/member/{id} | Delete a user from a group
 *CollaborationApi* | [**delete_manage_group**](docs/CollaborationApi.md#delete_manage_group) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Delete a group
+*CollaborationApi* | [**delete_naming_constraint**](docs/CollaborationApi.md#delete_naming_constraint) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/naming-constraint/{id} | Delete a naming constraint
+*CollaborationApi* | [**delete_naming_parts_template**](docs/CollaborationApi.md#delete_naming_parts_template) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/naming-parts-template/{id} | Delete a naming rule list
 *CollaborationApi* | [**delete_project**](docs/CollaborationApi.md#delete_project) | **DELETE** /cloud/{cloud_pk}/project/{id} | Delete a project
 *CollaborationApi* | [**delete_project_access_token**](docs/CollaborationApi.md#delete_project_access_token) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Delete a token
 *CollaborationApi* | [**delete_project_user**](docs/CollaborationApi.md#delete_project_user) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Remove a user from a project
@@ -292,6 +297,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_documents**](docs/CollaborationApi.md#get_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document | Retrieve all documents
 *CollaborationApi* | [**get_folder**](docs/CollaborationApi.md#get_folder) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Retrieve a folder
 *CollaborationApi* | [**get_folder_documents**](docs/CollaborationApi.md#get_folder_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/document | Get all documents of a folder
+*CollaborationApi* | [**get_folder_naming_constraint**](docs/CollaborationApi.md#get_folder_naming_constraint) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{id}/naming-constraint | Get the naming constraint of a folder
 *CollaborationApi* | [**get_folder_project_users**](docs/CollaborationApi.md#get_folder_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/user | Retrieve all users in a project with the permission on the folder
 *CollaborationApi* | [**get_folders**](docs/CollaborationApi.md#get_folders) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder | Retrieve all folders
 *CollaborationApi* | [**get_group**](docs/CollaborationApi.md#get_group) | **GET** /cloud/{cloud_pk}/project/{project_pk}/me/group/{id} | Retrieve a group
@@ -299,6 +305,10 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_logs**](docs/CollaborationApi.md#get_logs) | **GET** /cloud/{cloud_pk}/project/{project_pk}/logs | Retrieve all logs of the project
 *CollaborationApi* | [**get_manage_group**](docs/CollaborationApi.md#get_manage_group) | **GET** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Retrieve a group
 *CollaborationApi* | [**get_manage_groups**](docs/CollaborationApi.md#get_manage_groups) | **GET** /cloud/{cloud_pk}/project/{project_pk}/group | Retrieve all groups
+*CollaborationApi* | [**get_naming_constraint**](docs/CollaborationApi.md#get_naming_constraint) | **GET** /cloud/{cloud_pk}/project/{project_pk}/naming-constraint/{id} | Retrieve a naming constraint
+*CollaborationApi* | [**get_naming_constraints**](docs/CollaborationApi.md#get_naming_constraints) | **GET** /cloud/{cloud_pk}/project/{project_pk}/naming-constraint | Retrieve all naming constraints
+*CollaborationApi* | [**get_naming_parts_template**](docs/CollaborationApi.md#get_naming_parts_template) | **GET** /cloud/{cloud_pk}/project/{project_pk}/naming-parts-template/{id} | Retrieve a naming rule list
+*CollaborationApi* | [**get_naming_parts_templates**](docs/CollaborationApi.md#get_naming_parts_templates) | **GET** /cloud/{cloud_pk}/project/{project_pk}/naming-parts-template | Retrieve all naming rule lists
 *CollaborationApi* | [**get_project**](docs/CollaborationApi.md#get_project) | **GET** /cloud/{cloud_pk}/project/{id} | Retrieve a project
 *CollaborationApi* | [**get_project_access_token**](docs/CollaborationApi.md#get_project_access_token) | **GET** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Retrieve one token created for this project
 *CollaborationApi* | [**get_project_access_tokens**](docs/CollaborationApi.md#get_project_access_tokens) | **GET** /cloud/{cloud_pk}/project/{project_pk}/access-token | Retrieve all tokens created for this project
@@ -333,6 +343,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**pause_visa**](docs/CollaborationApi.md#pause_visa) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id}/pause | Pause a visa of a document
 *CollaborationApi* | [**reset_validation**](docs/CollaborationApi.md#reset_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}/reset | Reset a validation
 *CollaborationApi* | [**resume_visa**](docs/CollaborationApi.md#resume_visa) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id}/resume | Resume a visa of a document
+*CollaborationApi* | [**set_folder_naming_constraint**](docs/CollaborationApi.md#set_folder_naming_constraint) | **POST** /cloud/{cloud_pk}/project/{project_pk}/folder/{id}/naming-constraint | Set or replace a naming constraint on a folder
 *CollaborationApi* | [**update_classification**](docs/CollaborationApi.md#update_classification) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Update some fields of a classification
 *CollaborationApi* | [**update_cloud**](docs/CollaborationApi.md#update_cloud) | **PATCH** /cloud/{id} | Update some fields of a cloud
 *CollaborationApi* | [**update_cloud_user**](docs/CollaborationApi.md#update_cloud_user) | **PATCH** /cloud/{cloud_pk}/user/{id} | Change the user role in the cloud
@@ -341,6 +352,8 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**update_folder**](docs/CollaborationApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Update some fields of a folder
 *CollaborationApi* | [**update_group_folder**](docs/CollaborationApi.md#update_group_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/group/{id} | Update the permission of a group on a folder. When propagate is set to True, the permission of all children in the folder will be updated.
 *CollaborationApi* | [**update_manage_group**](docs/CollaborationApi.md#update_manage_group) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Update some fields of a group
+*CollaborationApi* | [**update_naming_constraint**](docs/CollaborationApi.md#update_naming_constraint) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/naming-constraint/{id} | Update some fields of a naming constraint
+*CollaborationApi* | [**update_naming_parts_template**](docs/CollaborationApi.md#update_naming_parts_template) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/naming-parts-template/{id} | Update some fields of a naming rule list
 *CollaborationApi* | [**update_preview_file**](docs/CollaborationApi.md#update_preview_file) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id}/preview-file | Update preview of the document
 *CollaborationApi* | [**update_project**](docs/CollaborationApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | Update some fields of a project
 *CollaborationApi* | [**update_project_user**](docs/CollaborationApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Change the user role in the cloud
@@ -597,6 +610,7 @@ Class | Method | HTTP request | Description
  - [DrawingRequest](docs/DrawingRequest.md)
  - [EditComment](docs/EditComment.md)
  - [EditCommentRequest](docs/EditCommentRequest.md)
+ - [EditFolder](docs/EditFolder.md)
  - [Element](docs/Element.md)
  - [ElementClassificationRelation](docs/ElementClassificationRelation.md)
  - [ElementClassificationRelationRequest](docs/ElementClassificationRelationRequest.md)
@@ -608,6 +622,8 @@ Class | Method | HTTP request | Description
  - [Feature](docs/Feature.md)
  - [FeatureRequest](docs/FeatureRequest.md)
  - [Folder](docs/Folder.md)
+ - [FolderNamingConstraint](docs/FolderNamingConstraint.md)
+ - [FolderNamingConstraintRequest](docs/FolderNamingConstraintRequest.md)
  - [FolderTree](docs/FolderTree.md)
  - [FolderUserProject](docs/FolderUserProject.md)
  - [FolderWithoutChildren](docs/FolderWithoutChildren.md)
@@ -664,6 +680,10 @@ Class | Method | HTTP request | Description
  - [ModelProperty](docs/ModelProperty.md)
  - [ModelSerializerWithoutChildren](docs/ModelSerializerWithoutChildren.md)
  - [ModelWithPositioningPlan](docs/ModelWithPositioningPlan.md)
+ - [NamingConstraint](docs/NamingConstraint.md)
+ - [NamingConstraintRequest](docs/NamingConstraintRequest.md)
+ - [NamingPartsTemplate](docs/NamingPartsTemplate.md)
+ - [NamingPartsTemplateRequest](docs/NamingPartsTemplateRequest.md)
  - [Organization](docs/Organization.md)
  - [OrganizationRequest](docs/OrganizationRequest.md)
  - [OrthogonalCamera](docs/OrthogonalCamera.md)
@@ -676,8 +696,8 @@ Class | Method | HTTP request | Description
  - [PatchedDocumentRequest](docs/PatchedDocumentRequest.md)
  - [PatchedDocumentTextRequest](docs/PatchedDocumentTextRequest.md)
  - [PatchedDrawingRequest](docs/PatchedDrawingRequest.md)
+ - [PatchedEditFolderRequest](docs/PatchedEditFolderRequest.md)
  - [PatchedElementRequest](docs/PatchedElementRequest.md)
- - [PatchedFolderWithoutChildrenRequest](docs/PatchedFolderWithoutChildrenRequest.md)
  - [PatchedFullTopicRequest](docs/PatchedFullTopicRequest.md)
  - [PatchedGroupFolderRequest](docs/PatchedGroupFolderRequest.md)
  - [PatchedGroupRequest](docs/PatchedGroupRequest.md)
@@ -688,6 +708,8 @@ Class | Method | HTTP request | Description
  - [PatchedModelLabelRequest](docs/PatchedModelLabelRequest.md)
  - [PatchedModelOnModelPositionRequest](docs/PatchedModelOnModelPositionRequest.md)
  - [PatchedModelRequest](docs/PatchedModelRequest.md)
+ - [PatchedNamingConstraintRequest](docs/PatchedNamingConstraintRequest.md)
+ - [PatchedNamingPartsTemplateRequest](docs/PatchedNamingPartsTemplateRequest.md)
  - [PatchedPinRequest](docs/PatchedPinRequest.md)
  - [PatchedPositioningPlanRequest](docs/PatchedPositioningPlanRequest.md)
  - [PatchedPriorityRequest](docs/PatchedPriorityRequest.md)
