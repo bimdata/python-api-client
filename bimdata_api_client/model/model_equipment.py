@@ -32,9 +32,9 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 def lazy_import():
     from bimdata_api_client.model.equipment_image import EquipmentImage
-    from bimdata_api_client.model.user import User
+    from bimdata_api_client.model.short_user import ShortUser
     globals()['EquipmentImage'] = EquipmentImage
-    globals()['User'] = User
+    globals()['ShortUser'] = ShortUser
 
 
 class ModelEquipment(ModelNormal):
@@ -97,7 +97,7 @@ class ModelEquipment(ModelNormal):
         lazy_import()
         return {
             'id': (int,),  # noqa: E501
-            'model': (int,),  # noqa: E501
+            'model_id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'position': ([float],),  # noqa: E501
             'images': ([EquipmentImage],),  # noqa: E501
@@ -114,7 +114,7 @@ class ModelEquipment(ModelNormal):
 
     attribute_map = {
         'id': 'id',  # noqa: E501
-        'model': 'model',  # noqa: E501
+        'model_id': 'model_id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'position': 'position',  # noqa: E501
         'images': 'images',  # noqa: E501
@@ -126,7 +126,7 @@ class ModelEquipment(ModelNormal):
 
     read_only_vars = {
         'id',  # noqa: E501
-        'model',  # noqa: E501
+        'model_id',  # noqa: E501
         'images',  # noqa: E501
         'creator',  # noqa: E501
         'created_at',  # noqa: E501
@@ -137,12 +137,12 @@ class ModelEquipment(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, model, name, position, images, creator, created_at, updated_at, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, model_id, name, position, images, creator, created_at, updated_at, *args, **kwargs):  # noqa: E501
         """ModelEquipment - a model defined in OpenAPI
 
         Args:
             id (int):
-            model (int): The model to which the equipment is attached
+            model_id (int): The model to which the equipment is attached
             name (str): Name of the equipment
             position ([float]):
             images ([EquipmentImage]):
@@ -210,7 +210,7 @@ class ModelEquipment(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.id = id
-        self.model = model
+        self.model_id = model_id
         self.name = name
         self.position = position
         self.images = images

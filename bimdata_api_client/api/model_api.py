@@ -133,7 +133,7 @@ class ModelApi(object):
                     'BIMData_Connect',
                     'Bearer'
                 ],
-                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/equipment-image',
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/image',
                 'operation_id': 'add_equipment_image',
                 'http_method': 'POST',
                 'servers': None,
@@ -4368,7 +4368,7 @@ class ModelApi(object):
                     'BIMData_Connect',
                     'Bearer'
                 ],
-                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/equipment-image/{id}',
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/image/{id}',
                 'operation_id': 'delete_equipment_image',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -7408,7 +7408,7 @@ class ModelApi(object):
                     'BIMData_Connect',
                     'Bearer'
                 ],
-                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/equipment-image',
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/image',
                 'operation_id': 'get_equipment_images',
                 'http_method': 'GET',
                 'servers': None,

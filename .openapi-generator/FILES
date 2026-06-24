@@ -58,6 +58,8 @@ bimdata_api_client/model/document_text.py
 bimdata_api_client/model/document_with_element_list.py
 bimdata_api_client/model/drawing.py
 bimdata_api_client/model/drawing_request.py
+bimdata_api_client/model/edit_comment.py
+bimdata_api_client/model/edit_comment_request.py
 bimdata_api_client/model/element.py
 bimdata_api_client/model/element_classification_relation.py
 bimdata_api_client/model/element_classification_relation_request.py
@@ -349,6 +351,8 @@ docs/DocumentText.md
 docs/DocumentWithElementList.md
 docs/Drawing.md
 docs/DrawingRequest.md
+docs/EditComment.md
+docs/EditCommentRequest.md
 docs/Element.md
 docs/ElementClassificationRelation.md
 docs/ElementClassificationRelationRequest.md
@@ -644,6 +648,8 @@ test/test_document_text.py
 test/test_document_with_element_list.py
 test/test_drawing.py
 test/test_drawing_request.py
+test/test_edit_comment.py
+test/test_edit_comment_request.py
 test/test_element.py
 test/test_element_classification_relation.py
 test/test_element_classification_relation_request.py

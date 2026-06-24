@@ -82,6 +82,7 @@ class EquipmentImage(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'id': (int,),  # noqa: E501
             'file': (str,),  # noqa: E501
         }
 
@@ -91,20 +92,23 @@ class EquipmentImage(ModelNormal):
 
 
     attribute_map = {
+        'id': 'id',  # noqa: E501
         'file': 'file',  # noqa: E501
     }
 
     read_only_vars = {
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, file, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, file, *args, **kwargs):  # noqa: E501
         """EquipmentImage - a model defined in OpenAPI
 
         Args:
+            id (int):
             file (str):
 
         Keyword Args:
@@ -165,6 +169,7 @@ class EquipmentImage(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.id = id
         self.file = file
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
@@ -189,7 +194,6 @@ class EquipmentImage(ModelNormal):
     def __init__(self, file, *args, **kwargs):  # noqa: E501
         """EquipmentImage - a model defined in OpenAPI
 
-        Args:
             file (str):
 
         Keyword Args:

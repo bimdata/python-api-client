@@ -138,14 +138,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 1 # int | A unique integer value identifying this project.
     topics_guid = "topics_guid_example" # str | 
     comment_request = CommentRequest(
-        guid="guid_example",
-        date=dateutil_parser('1970-01-01T00:00:00.00Z'),
         author="author_example",
-        comment="comment_example",
+        date=dateutil_parser('1970-01-01T00:00:00.00Z'),
         viewpoint_guid="viewpoint_guid_example",
-        reply_to_comment_guid="reply_to_comment_guid_example",
-        modified_author="modified_author_example",
+        comment="comment_example",
         viewpoint_temp_id=1,
+        modified_author="modified_author_example",
+        reply_to_comment_guid="reply_to_comment_guid_example",
+        guid="guid_example",
     ) # CommentRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -951,14 +951,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         due_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
         comments=[
             CommentRequest(
-                guid="guid_example",
-                date=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 author="author_example",
-                comment="comment_example",
+                date=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 viewpoint_guid="viewpoint_guid_example",
-                reply_to_comment_guid="reply_to_comment_guid_example",
-                modified_author="modified_author_example",
+                comment="comment_example",
                 viewpoint_temp_id=1,
+                modified_author="modified_author_example",
+                reply_to_comment_guid="reply_to_comment_guid_example",
+                guid="guid_example",
             ),
         ],
         viewpoints=[
@@ -3042,7 +3042,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_comment**
-> Comment full_update_comment(guid, projects_pk, topics_guid)
+> EditComment full_update_comment(guid, projects_pk, topics_guid)
 
 Update all fields of a comment
 
@@ -3059,8 +3059,8 @@ Update all fields of a comment  Required scopes: bcf:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.comment_request import CommentRequest
-from bimdata_api_client.model.comment import Comment
+from bimdata_api_client.model.edit_comment_request import EditCommentRequest
+from bimdata_api_client.model.edit_comment import EditComment
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -3104,8 +3104,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     guid = "guid_example" # str | 
     projects_pk = 1 # int | A unique integer value identifying this project.
     topics_guid = "topics_guid_example" # str | 
-    comment_request = CommentRequest(
-        guid="guid_example",
+    edit_comment_request = EditCommentRequest(
         date=dateutil_parser('1970-01-01T00:00:00.00Z'),
         author="author_example",
         comment="comment_example",
@@ -3113,7 +3112,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         reply_to_comment_guid="reply_to_comment_guid_example",
         modified_author="modified_author_example",
         viewpoint_temp_id=1,
-    ) # CommentRequest |  (optional)
+    ) # EditCommentRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -3127,7 +3126,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Update all fields of a comment
-        api_response = api_instance.full_update_comment(guid, projects_pk, topics_guid, comment_request=comment_request)
+        api_response = api_instance.full_update_comment(guid, projects_pk, topics_guid, edit_comment_request=edit_comment_request)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->full_update_comment: %s\n" % e)
@@ -3141,11 +3140,11 @@ Name | Type | Description  | Notes
  **guid** | **str**|  |
  **projects_pk** | **int**| A unique integer value identifying this project. |
  **topics_guid** | **str**|  |
- **comment_request** | [**CommentRequest**](CommentRequest.md)|  | [optional]
+ **edit_comment_request** | [**EditCommentRequest**](EditCommentRequest.md)|  | [optional]
 
 ### Return type
 
-[**Comment**](Comment.md)
+[**EditComment**](EditComment.md)
 
 ### Authorization
 
@@ -3394,14 +3393,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         due_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
         comments=[
             CommentRequest(
-                guid="guid_example",
-                date=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 author="author_example",
-                comment="comment_example",
+                date=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 viewpoint_guid="viewpoint_guid_example",
-                reply_to_comment_guid="reply_to_comment_guid_example",
-                modified_author="modified_author_example",
+                comment="comment_example",
                 viewpoint_temp_id=1,
+                modified_author="modified_author_example",
+                reply_to_comment_guid="reply_to_comment_guid_example",
+                guid="guid_example",
             ),
         ],
         viewpoints=[
@@ -7058,14 +7057,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 1 # int | A unique integer value identifying this project.
     topics_guid = "topics_guid_example" # str | 
     patched_comment_request = PatchedCommentRequest(
-        guid="guid_example",
-        date=dateutil_parser('1970-01-01T00:00:00.00Z'),
         author="author_example",
-        comment="comment_example",
+        date=dateutil_parser('1970-01-01T00:00:00.00Z'),
         viewpoint_guid="viewpoint_guid_example",
-        reply_to_comment_guid="reply_to_comment_guid_example",
-        modified_author="modified_author_example",
+        comment="comment_example",
         viewpoint_temp_id=1,
+        modified_author="modified_author_example",
+        reply_to_comment_guid="reply_to_comment_guid_example",
+        guid="guid_example",
     ) # PatchedCommentRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -7817,14 +7816,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         due_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
         comments=[
             CommentRequest(
-                guid="guid_example",
-                date=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 author="author_example",
-                comment="comment_example",
+                date=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 viewpoint_guid="viewpoint_guid_example",
-                reply_to_comment_guid="reply_to_comment_guid_example",
-                modified_author="modified_author_example",
+                comment="comment_example",
                 viewpoint_temp_id=1,
+                modified_author="modified_author_example",
+                reply_to_comment_guid="reply_to_comment_guid_example",
+                guid="guid_example",
             ),
         ],
         viewpoints=[

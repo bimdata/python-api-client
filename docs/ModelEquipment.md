@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [readonly] 
-**model** | **int** | The model to which the equipment is attached | [readonly] 
+**model_id** | **int** | The model to which the equipment is attached | [readonly] 
 **name** | **str** | Name of the equipment | 
 **position** | **[float]** |  | 
 **images** | [**[EquipmentImage]**](EquipmentImage.md) |  | [readonly] 

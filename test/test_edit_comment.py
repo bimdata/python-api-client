@@ -13,15 +13,11 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.equipment_image import EquipmentImage
-from bimdata_api_client.model.short_user import ShortUser
-globals()['EquipmentImage'] = EquipmentImage
-globals()['ShortUser'] = ShortUser
-from bimdata_api_client.model.model_equipment import ModelEquipment
+from bimdata_api_client.model.edit_comment import EditComment
 
 
-class TestModelEquipment(unittest.TestCase):
-    """ModelEquipment unit test stubs"""
+class TestEditComment(unittest.TestCase):
+    """EditComment unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +25,10 @@ class TestModelEquipment(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testModelEquipment(self):
-        """Test ModelEquipment"""
+    def testEditComment(self):
+        """Test EditComment"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = ModelEquipment()  # noqa: E501
+        # model = EditComment()  # noqa: E501
         pass
 
 

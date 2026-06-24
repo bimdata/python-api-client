@@ -35,6 +35,8 @@ from bimdata_api_client.model.comment_request import CommentRequest
 from bimdata_api_client.model.detailed_extensions import DetailedExtensions
 from bimdata_api_client.model.document_reference import DocumentReference
 from bimdata_api_client.model.document_reference_request import DocumentReferenceRequest
+from bimdata_api_client.model.edit_comment import EditComment
+from bimdata_api_client.model.edit_comment_request import EditCommentRequest
 from bimdata_api_client.model.extensions import Extensions
 from bimdata_api_client.model.full_topic import FullTopic
 from bimdata_api_client.model.full_topic_request import FullTopicRequest
@@ -1718,7 +1720,7 @@ class BcfApi(object):
         )
         self.full_update_comment_endpoint = _Endpoint(
             settings={
-                'response_type': (Comment,),
+                'response_type': (EditComment,),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -1735,7 +1737,7 @@ class BcfApi(object):
                     'guid',
                     'projects_pk',
                     'topics_guid',
-                    'comment_request',
+                    'edit_comment_request',
                 ],
                 'required': [
                     'guid',
@@ -1761,8 +1763,8 @@ class BcfApi(object):
                         (int,),
                     'topics_guid':
                         (str,),
-                    'comment_request':
-                        (CommentRequest,),
+                    'edit_comment_request':
+                        (EditCommentRequest,),
                 },
                 'attribute_map': {
                     'guid': 'guid',
@@ -1773,7 +1775,7 @@ class BcfApi(object):
                     'guid': 'path',
                     'projects_pk': 'path',
                     'topics_guid': 'path',
-                    'comment_request': 'body',
+                    'edit_comment_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -6819,7 +6821,7 @@ class BcfApi(object):
             topics_guid (str):
 
         Keyword Args:
-            comment_request (CommentRequest): [optional]
+            edit_comment_request (EditCommentRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -6848,7 +6850,7 @@ class BcfApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            Comment
+            EditComment
                 If the method is called asynchronously, returns the request
                 thread.
         """

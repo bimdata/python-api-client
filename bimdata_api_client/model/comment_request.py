@@ -88,14 +88,14 @@ class CommentRequest(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'guid': (str,),  # noqa: E501
-            'date': (datetime,),  # noqa: E501
             'author': (str, none_type,),  # noqa: E501
-            'comment': (str,),  # noqa: E501
+            'date': (datetime,),  # noqa: E501
             'viewpoint_guid': (str, none_type,),  # noqa: E501
-            'reply_to_comment_guid': (str, none_type,),  # noqa: E501
-            'modified_author': (str, none_type,),  # noqa: E501
+            'comment': (str,),  # noqa: E501
             'viewpoint_temp_id': (int,),  # noqa: E501
+            'modified_author': (str, none_type,),  # noqa: E501
+            'reply_to_comment_guid': (str, none_type,),  # noqa: E501
+            'guid': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -104,14 +104,14 @@ class CommentRequest(ModelNormal):
 
 
     attribute_map = {
-        'guid': 'guid',  # noqa: E501
-        'date': 'date',  # noqa: E501
         'author': 'author',  # noqa: E501
-        'comment': 'comment',  # noqa: E501
+        'date': 'date',  # noqa: E501
         'viewpoint_guid': 'viewpoint_guid',  # noqa: E501
-        'reply_to_comment_guid': 'reply_to_comment_guid',  # noqa: E501
-        'modified_author': 'modified_author',  # noqa: E501
+        'comment': 'comment',  # noqa: E501
         'viewpoint_temp_id': 'viewpoint_temp_id',  # noqa: E501
+        'modified_author': 'modified_author',  # noqa: E501
+        'reply_to_comment_guid': 'reply_to_comment_guid',  # noqa: E501
+        'guid': 'guid',  # noqa: E501
     }
 
     read_only_vars = {
@@ -155,14 +155,14 @@ class CommentRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            guid (str): [optional]  # noqa: E501
-            date (datetime): [optional]  # noqa: E501
             author (str, none_type): [optional]  # noqa: E501
-            comment (str): [optional]  # noqa: E501
+            date (datetime): [optional]  # noqa: E501
             viewpoint_guid (str, none_type): [optional]  # noqa: E501
-            reply_to_comment_guid (str, none_type): [optional]  # noqa: E501
-            modified_author (str, none_type): [optional]  # noqa: E501
+            comment (str): [optional]  # noqa: E501
             viewpoint_temp_id (int): Only used when using POST on the full-topic route to bind viewpoint with comment. [optional]  # noqa: E501
+            modified_author (str, none_type): [optional]  # noqa: E501
+            reply_to_comment_guid (str, none_type): [optional]  # noqa: E501
+            guid (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -244,14 +244,14 @@ class CommentRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            guid (str): [optional]  # noqa: E501
-            date (datetime): [optional]  # noqa: E501
             author (str, none_type): [optional]  # noqa: E501
-            comment (str): [optional]  # noqa: E501
+            date (datetime): [optional]  # noqa: E501
             viewpoint_guid (str, none_type): [optional]  # noqa: E501
-            reply_to_comment_guid (str, none_type): [optional]  # noqa: E501
-            modified_author (str, none_type): [optional]  # noqa: E501
+            comment (str): [optional]  # noqa: E501
             viewpoint_temp_id (int): Only used when using POST on the full-topic route to bind viewpoint with comment. [optional]  # noqa: E501
+            modified_author (str, none_type): [optional]  # noqa: E501
+            reply_to_comment_guid (str, none_type): [optional]  # noqa: E501
+            guid (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

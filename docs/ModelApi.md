@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_equipment_image**](ModelApi.md#add_equipment_image) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/equipment-image | Add a new image to the equipment
+[**add_equipment_image**](ModelApi.md#add_equipment_image) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/image | Add a new image to the equipment
 [**add_model_errors**](ModelApi.md#add_model_errors) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/errors | Add errors to model
 [**add_zone_space**](ModelApi.md#add_zone_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/add | Add a space to a zone
 [**bulk_delete_model_classifications**](ModelApi.md#bulk_delete_model_classifications) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/list_destroy | Remove all classifications from model&#39;s elements
@@ -59,7 +59,7 @@ Method | HTTP request | Description
 [**delete_drawing**](ModelApi.md#delete_drawing) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/drawing/{id} | Delete a drawing of a model
 [**delete_element**](ModelApi.md#delete_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Delete an element of a model
 [**delete_equipment**](ModelApi.md#delete_equipment) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{id} | Delete an equipment
-[**delete_equipment_image**](ModelApi.md#delete_equipment_image) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/equipment-image/{id} | Remove an equipment image
+[**delete_equipment_image**](ModelApi.md#delete_equipment_image) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/image/{id} | Remove an equipment image
 [**delete_label**](ModelApi.md#delete_label) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Delete a label
 [**delete_layer**](ModelApi.md#delete_layer) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Delete a layer of a model
 [**delete_mask2_d**](ModelApi.md#delete_mask2_d) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/mask-2d | Delete the 2D mask for the model
@@ -100,7 +100,7 @@ Method | HTTP request | Description
 [**get_elements**](ModelApi.md#get_elements) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element | Retrieve all elements of a model
 [**get_elements_from_classification**](ModelApi.md#get_elements_from_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element | Retrieve all elements with the classification
 [**get_equipment**](ModelApi.md#get_equipment) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{id} | Retrieve one equipment of the model
-[**get_equipment_images**](ModelApi.md#get_equipment_images) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/equipment-image | Retrieve all images attached to the equipment
+[**get_equipment_images**](ModelApi.md#get_equipment_images) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/image | Retrieve all images attached to the equipment
 [**get_equipments**](ModelApi.md#get_equipments) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment | Retrieve all equipments of the model
 [**get_label**](ModelApi.md#get_label) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Retrieve one label of the model
 [**get_labels**](ModelApi.md#get_labels) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label | Retrieve all labels of the model

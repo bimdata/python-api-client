@@ -53,6 +53,8 @@ from bimdata_api_client.model.document_text import DocumentText
 from bimdata_api_client.model.document_with_element_list import DocumentWithElementList
 from bimdata_api_client.model.drawing import Drawing
 from bimdata_api_client.model.drawing_request import DrawingRequest
+from bimdata_api_client.model.edit_comment import EditComment
+from bimdata_api_client.model.edit_comment_request import EditCommentRequest
 from bimdata_api_client.model.element import Element
 from bimdata_api_client.model.element_classification_relation import ElementClassificationRelation
 from bimdata_api_client.model.element_classification_relation_request import ElementClassificationRelationRequest
