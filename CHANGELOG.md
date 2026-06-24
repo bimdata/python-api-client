@@ -1,6 +1,30 @@
 # CHANGELOG
 
 
+## v10.35.0 (2026-06-24)
+
+### Feature
+
+- Minor: Naming template (#1039)
+  ([`d665ee0`](https://github.com/bimdata/python-api-client/commit/d665ee03f8666223ce98ecab88589904853490ec))
+
+* temp diff for debug
+
+* fix tests, move some method
+
+* fix openAPI
+
+* betters tests
+
+* use 409 instead of 400 when uploading documents
+
+* fix serialization of naming_constraint_conflit
+
+* fix pyproject.toml
+
+* use textwrap.dedent, merge migraitons
+
+
 ## v10.34.1 (2026-06-24)
 
 ### Fix
