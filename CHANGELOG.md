@@ -1,6 +1,24 @@
 # CHANGELOG
 
 
+## v10.34.1 (2026-06-24)
+
+### Fix
+
+- Patch: fix(equipment): fix equipment image url and serializer (#1035)
+  ([`cac80c2`](https://github.com/bimdata/python-api-client/commit/cac80c28e4177ae8a1acb4c2abe0911e1985f863))
+
+* PATCH: fix(equipment): fix equipment image url and serializer
+
+* PATCH: fix(equipment): use LightFosUserSerializer for equipment creator
+
+* fix(equipment): add tests for num queries
+
+* fix(equipment): prefetch equipment images
+
+* fix(equipment): select related creator in queryset
+
+
 ## v10.34.0 (2026-06-17)
 
 ### Feature
