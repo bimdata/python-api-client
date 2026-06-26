@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.35.1 (2026-06-26)
+
+### Fix
+
+- Patch: fix typo in document_naming_constraint_conflict (#1044)
+  ([`02bfd6e`](https://github.com/bimdata/python-api-client/commit/02bfd6e0b1e8e73e2b7e419a36926fe6059085a4))
+
+
 ## v10.35.0 (2026-06-24)
 
 ### Feature
