@@ -118,7 +118,7 @@ class NamingConstraint(ModelNormal):
             id (int):
             name (str): Name of the naming constraint
             rule (bool, date, datetime, dict, float, int, list, str, none_type):
-            strict (bool):  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field `naming_constraint_conflit` 
+            strict (bool):  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field `naming_constraint_conflict` 
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -207,7 +207,7 @@ class NamingConstraint(ModelNormal):
 
             name (str): Name of the naming constraint
             rule (bool, date, datetime, dict, float, int, list, str, none_type):
-            strict (bool):  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field `naming_constraint_conflit` 
+            strict (bool):  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field `naming_constraint_conflict` 
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

@@ -88,7 +88,7 @@ class LightDocument(ModelNormal):
             'description': (str, none_type,),  # noqa: E501
             'head_id': (int, none_type,),  # noqa: E501
             'is_head_version': (bool,),  # noqa: E501
-            'naming_constraint_conflit': (bool,),  # noqa: E501
+            'naming_constraint_conflict': (bool,),  # noqa: E501
         }
 
     @cached_property
@@ -103,7 +103,7 @@ class LightDocument(ModelNormal):
         'description': 'description',  # noqa: E501
         'head_id': 'head_id',  # noqa: E501
         'is_head_version': 'is_head_version',  # noqa: E501
-        'naming_constraint_conflit': 'naming_constraint_conflit',  # noqa: E501
+        'naming_constraint_conflict': 'naming_constraint_conflict',  # noqa: E501
     }
 
     read_only_vars = {
@@ -113,14 +113,14 @@ class LightDocument(ModelNormal):
         'description',  # noqa: E501
         'head_id',  # noqa: E501
         'is_head_version',  # noqa: E501
-        'naming_constraint_conflit',  # noqa: E501
+        'naming_constraint_conflict',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, parent_id, name, description, head_id, is_head_version, naming_constraint_conflit, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, parent_id, name, description, head_id, is_head_version, naming_constraint_conflict, *args, **kwargs):  # noqa: E501
         """LightDocument - a model defined in OpenAPI
 
         Args:
@@ -130,7 +130,7 @@ class LightDocument(ModelNormal):
             description (str, none_type): Description of the file
             head_id (int, none_type): Document id of head version
             is_head_version (bool): Document is a head of version or is owned by another document
-            naming_constraint_conflit (bool):
+            naming_constraint_conflict (bool):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -196,7 +196,7 @@ class LightDocument(ModelNormal):
         self.description = description
         self.head_id = head_id
         self.is_head_version = is_head_version
-        self.naming_constraint_conflit = naming_constraint_conflit
+        self.naming_constraint_conflict = naming_constraint_conflict
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

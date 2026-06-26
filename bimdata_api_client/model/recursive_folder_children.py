@@ -145,7 +145,7 @@ class RecursiveFolderChildren(ModelNormal):
             'size': (int, none_type,),  # noqa: E501
             'file': (str, none_type,),  # noqa: E501
             'office_preview': (str, none_type,),  # noqa: E501
-            'naming_constraint_conflit': (bool, none_type,),  # noqa: E501
+            'naming_constraint_conflict': (bool, none_type,),  # noqa: E501
             'children': ([RecursiveFolderChildren], none_type,),  # noqa: E501
         }
 
@@ -176,7 +176,7 @@ class RecursiveFolderChildren(ModelNormal):
         'size': 'size',  # noqa: E501
         'file': 'file',  # noqa: E501
         'office_preview': 'office_preview',  # noqa: E501
-        'naming_constraint_conflit': 'naming_constraint_conflit',  # noqa: E501
+        'naming_constraint_conflict': 'naming_constraint_conflict',  # noqa: E501
         'children': 'children',  # noqa: E501
     }
 
@@ -255,7 +255,7 @@ class RecursiveFolderChildren(ModelNormal):
             size (int, none_type): [optional]  # noqa: E501
             file (str, none_type): [optional]  # noqa: E501
             office_preview (str, none_type): [optional]  # noqa: E501
-            naming_constraint_conflit (bool, none_type): [optional]  # noqa: E501
+            naming_constraint_conflict (bool, none_type): [optional]  # noqa: E501
             children ([RecursiveFolderChildren], none_type): [optional]  # noqa: E501
         """
 
@@ -364,7 +364,7 @@ class RecursiveFolderChildren(ModelNormal):
             size (int, none_type): [optional]  # noqa: E501
             file (str, none_type): [optional]  # noqa: E501
             office_preview (str, none_type): [optional]  # noqa: E501
-            naming_constraint_conflit (bool, none_type): [optional]  # noqa: E501
+            naming_constraint_conflict (bool, none_type): [optional]  # noqa: E501
             children ([RecursiveFolderChildren], none_type): [optional]  # noqa: E501
         """
 

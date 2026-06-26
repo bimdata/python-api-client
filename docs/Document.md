@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **user_permission** | **int** | Aggregate of group user permissions and folder default permission | [readonly] 
 **office_preview** | **str, none_type** | Office files will be converted as pdf to provide a web preview. Supported extensions are .ppt, .pptx, .odp, .xls, .xlsx, .ods, .doc, .docx, .odt | [readonly] 
 **path** | **str** |  | [readonly] 
-**naming_constraint_conflit** | **bool** |  | [readonly] 
+**naming_constraint_conflict** | **bool** |  | [readonly] 
 **parent_id** | **int, none_type** |  | [optional] 
 **file_name** | **str** | Full name of the file | [optional] 
 **description** | **str, none_type** | Description of the file | [optional] 

@@ -95,8 +95,8 @@ class PatchedEditFolderRequest(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'parent_id': (int, none_type,),  # noqa: E501
             'default_permission': (int,),  # noqa: E501
+            'parent_id': (int, none_type,),  # noqa: E501
             'propagate': (bool,),  # noqa: E501
             'name': (str,),  # noqa: E501
         }
@@ -107,8 +107,8 @@ class PatchedEditFolderRequest(ModelNormal):
 
 
     attribute_map = {
-        'parent_id': 'parent_id',  # noqa: E501
         'default_permission': 'default_permission',  # noqa: E501
+        'parent_id': 'parent_id',  # noqa: E501
         'propagate': 'propagate',  # noqa: E501
         'name': 'name',  # noqa: E501
     }
@@ -154,8 +154,8 @@ class PatchedEditFolderRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            parent_id (int, none_type): [optional]  # noqa: E501
             default_permission (int): Permission for a Folder  * `1` - denied * `50` - read_only * `100` - read_write. [optional]  # noqa: E501
+            parent_id (int, none_type): [optional]  # noqa: E501
             propagate (bool): [optional] if omitted the server will use the default value of False  # noqa: E501
             name (str): Name of the folder. [optional]  # noqa: E501
         """
@@ -239,8 +239,8 @@ class PatchedEditFolderRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            parent_id (int, none_type): [optional]  # noqa: E501
             default_permission (int): Permission for a Folder  * `1` - denied * `50` - read_only * `100` - read_write. [optional]  # noqa: E501
+            parent_id (int, none_type): [optional]  # noqa: E501
             propagate (bool): [optional] if omitted the server will use the default value of False  # noqa: E501
             name (str): Name of the folder. [optional]  # noqa: E501
         """

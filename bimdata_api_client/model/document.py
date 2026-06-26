@@ -137,7 +137,7 @@ class Document(ModelNormal):
             'user_permission': (int,),  # noqa: E501
             'office_preview': (str, none_type,),  # noqa: E501
             'path': (str,),  # noqa: E501
-            'naming_constraint_conflit': (bool,),  # noqa: E501
+            'naming_constraint_conflict': (bool,),  # noqa: E501
             'parent_id': (int, none_type,),  # noqa: E501
             'file_name': (str,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
@@ -169,7 +169,7 @@ class Document(ModelNormal):
         'user_permission': 'user_permission',  # noqa: E501
         'office_preview': 'office_preview',  # noqa: E501
         'path': 'path',  # noqa: E501
-        'naming_constraint_conflit': 'naming_constraint_conflit',  # noqa: E501
+        'naming_constraint_conflict': 'naming_constraint_conflict',  # noqa: E501
         'parent_id': 'parent_id',  # noqa: E501
         'file_name': 'file_name',  # noqa: E501
         'description': 'description',  # noqa: E501
@@ -195,14 +195,14 @@ class Document(ModelNormal):
         'user_permission',  # noqa: E501
         'office_preview',  # noqa: E501
         'path',  # noqa: E501
-        'naming_constraint_conflit',  # noqa: E501
+        'naming_constraint_conflict',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, created_by, project, name, file, file_type, size, tags, visas, created_at, updated_at, model_id, model_type, ifc_id, head_id, is_head_version, history_count, user_permission, office_preview, path, naming_constraint_conflit, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, created_by, project, name, file, file_type, size, tags, visas, created_at, updated_at, model_id, model_type, ifc_id, head_id, is_head_version, history_count, user_permission, office_preview, path, naming_constraint_conflict, *args, **kwargs):  # noqa: E501
         """Document - a model defined in OpenAPI
 
         Args:
@@ -226,7 +226,7 @@ class Document(ModelNormal):
             user_permission (int): Aggregate of group user permissions and folder default permission
             office_preview (str, none_type): Office files will be converted as pdf to provide a web preview. Supported extensions are .ppt, .pptx, .odp, .xls, .xlsx, .ods, .doc, .docx, .odt
             path (str):
-            naming_constraint_conflit (bool):
+            naming_constraint_conflict (bool):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -309,7 +309,7 @@ class Document(ModelNormal):
         self.user_permission = user_permission
         self.office_preview = office_preview
         self.path = path
-        self.naming_constraint_conflit = naming_constraint_conflit
+        self.naming_constraint_conflict = naming_constraint_conflict
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

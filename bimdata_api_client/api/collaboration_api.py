@@ -3954,7 +3954,7 @@ class CollaborationApi(object):
                     'name__contains',
                     'name__endswith',
                     'name__startswith',
-                    'naming_constraint_conflit',
+                    'naming_constraint_conflict',
                     'parent_id__in',
                     'search',
                     'size_max',
@@ -4056,7 +4056,7 @@ class CollaborationApi(object):
                         (str,),
                     'name__startswith':
                         (str,),
-                    'naming_constraint_conflit':
+                    'naming_constraint_conflict':
                         (bool,),
                     'parent_id__in':
                         ([float],),
@@ -4110,7 +4110,7 @@ class CollaborationApi(object):
                     'name__contains': 'name__contains',
                     'name__endswith': 'name__endswith',
                     'name__startswith': 'name__startswith',
-                    'naming_constraint_conflit': 'naming_constraint_conflit',
+                    'naming_constraint_conflict': 'naming_constraint_conflict',
                     'parent_id__in': 'parent_id__in',
                     'search': 'search',
                     'size_max': 'size_max',
@@ -4148,7 +4148,7 @@ class CollaborationApi(object):
                     'name__contains': 'query',
                     'name__endswith': 'query',
                     'name__startswith': 'query',
-                    'naming_constraint_conflit': 'query',
+                    'naming_constraint_conflict': 'query',
                     'parent_id__in': 'query',
                     'search': 'query',
                     'size_max': 'query',
@@ -4282,7 +4282,7 @@ class CollaborationApi(object):
                     'name__contains',
                     'name__endswith',
                     'name__startswith',
-                    'naming_constraint_conflit',
+                    'naming_constraint_conflict',
                     'parent_id__in',
                     'search',
                     'size_max',
@@ -4386,7 +4386,7 @@ class CollaborationApi(object):
                         (str,),
                     'name__startswith':
                         (str,),
-                    'naming_constraint_conflit':
+                    'naming_constraint_conflict':
                         (bool,),
                     'parent_id__in':
                         ([float],),
@@ -4439,7 +4439,7 @@ class CollaborationApi(object):
                     'name__contains': 'name__contains',
                     'name__endswith': 'name__endswith',
                     'name__startswith': 'name__startswith',
-                    'naming_constraint_conflit': 'naming_constraint_conflit',
+                    'naming_constraint_conflict': 'naming_constraint_conflict',
                     'parent_id__in': 'parent_id__in',
                     'search': 'search',
                     'size_max': 'size_max',
@@ -4477,7 +4477,7 @@ class CollaborationApi(object):
                     'name__contains': 'query',
                     'name__endswith': 'query',
                     'name__startswith': 'query',
-                    'naming_constraint_conflit': 'query',
+                    'naming_constraint_conflict': 'query',
                     'parent_id__in': 'query',
                     'search': 'query',
                     'size_max': 'query',
@@ -10237,7 +10237,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'GLTF', 'DXF', 'DWG', 'POINT_CLOUD', 'OBJ', 'IFC', 'PHOTOSPHERE'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'GLTF', 'PHOTOSPHERE', 'DWG', 'OBJ', 'POINT_CLOUD', 'DXF', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -13777,7 +13777,7 @@ class CollaborationApi(object):
             name__contains (str): [optional]
             name__endswith (str): [optional]
             name__startswith (str): [optional]
-            naming_constraint_conflit (bool): [optional]
+            naming_constraint_conflict (bool): [optional]
             parent_id__in ([float]): Multiple values may be separated by commas.. [optional]
             search (str): [optional]
             size_max (int, none_type): Size of the file.. [optional]
@@ -13981,7 +13981,7 @@ class CollaborationApi(object):
             name__contains (str): [optional]
             name__endswith (str): [optional]
             name__startswith (str): [optional]
-            naming_constraint_conflit (bool): [optional]
+            naming_constraint_conflict (bool): [optional]
             parent_id__in ([float]): Multiple values may be separated by commas.. [optional]
             search (str): [optional]
             size_max (int, none_type): Size of the file.. [optional]

@@ -91,10 +91,10 @@ class Comment(ModelNormal):
             'topic_guid': (str,),  # noqa: E501
             'modified_date': (datetime,),  # noqa: E501
             'viewpoint_guid': (str, none_type,),  # noqa: E501
-            'author': (str, none_type,),  # noqa: E501
-            'comment': (str,),  # noqa: E501
             'reply_to_comment_guid': (str, none_type,),  # noqa: E501
+            'author': (str, none_type,),  # noqa: E501
             'date': (datetime,),  # noqa: E501
+            'comment': (str,),  # noqa: E501
             'modified_author': (str, none_type,),  # noqa: E501
             'guid': (str,),  # noqa: E501
         }
@@ -108,10 +108,10 @@ class Comment(ModelNormal):
         'topic_guid': 'topic_guid',  # noqa: E501
         'modified_date': 'modified_date',  # noqa: E501
         'viewpoint_guid': 'viewpoint_guid',  # noqa: E501
-        'author': 'author',  # noqa: E501
-        'comment': 'comment',  # noqa: E501
         'reply_to_comment_guid': 'reply_to_comment_guid',  # noqa: E501
+        'author': 'author',  # noqa: E501
         'date': 'date',  # noqa: E501
+        'comment': 'comment',  # noqa: E501
         'modified_author': 'modified_author',  # noqa: E501
         'guid': 'guid',  # noqa: E501
     }
@@ -164,10 +164,10 @@ class Comment(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             viewpoint_guid (str, none_type): [optional]  # noqa: E501
-            author (str, none_type): [optional]  # noqa: E501
-            comment (str): [optional]  # noqa: E501
             reply_to_comment_guid (str, none_type): [optional]  # noqa: E501
+            author (str, none_type): [optional]  # noqa: E501
             date (datetime): [optional]  # noqa: E501
+            comment (str): [optional]  # noqa: E501
             modified_author (str, none_type): [optional]  # noqa: E501
             guid (str): [optional]  # noqa: E501
         """
@@ -254,10 +254,10 @@ class Comment(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             viewpoint_guid (str, none_type): [optional]  # noqa: E501
-            author (str, none_type): [optional]  # noqa: E501
-            comment (str): [optional]  # noqa: E501
             reply_to_comment_guid (str, none_type): [optional]  # noqa: E501
+            author (str, none_type): [optional]  # noqa: E501
             date (datetime): [optional]  # noqa: E501
+            comment (str): [optional]  # noqa: E501
             modified_author (str, none_type): [optional]  # noqa: E501
             guid (str): [optional]  # noqa: E501
         """

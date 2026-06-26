@@ -145,7 +145,7 @@ class PatchedNamingConstraintRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             name (str): Name of the naming constraint. [optional]  # noqa: E501
             rule (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            strict (bool):  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field `naming_constraint_conflit` . [optional]  # noqa: E501
+            strict (bool):  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field `naming_constraint_conflict` . [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -229,7 +229,7 @@ class PatchedNamingConstraintRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             name (str): Name of the naming constraint. [optional]  # noqa: E501
             rule (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            strict (bool):  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field `naming_constraint_conflit` . [optional]  # noqa: E501
+            strict (bool):  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field `naming_constraint_conflict` . [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
