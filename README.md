@@ -144,13 +144,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 1 # int | A unique integer value identifying this project.
 topics_guid = "topics_guid_example" # str | 
 comment_request = CommentRequest(
-        author="author_example",
-        reply_to_comment_guid="reply_to_comment_guid_example",
-        viewpoint_guid="viewpoint_guid_example",
-        modified_author="modified_author_example",
         date=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        viewpoint_temp_id=1,
+        viewpoint_guid="viewpoint_guid_example",
+        reply_to_comment_guid="reply_to_comment_guid_example",
         comment="comment_example",
+        author="author_example",
+        viewpoint_temp_id=1,
+        modified_author="modified_author_example",
         guid="guid_example",
     ) # CommentRequest |  (optional)
 
@@ -457,6 +457,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**get_elements**](docs/ModelApi.md#get_elements) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element | Retrieve all elements of a model
 *ModelApi* | [**get_elements_from_classification**](docs/ModelApi.md#get_elements_from_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element | Retrieve all elements with the classification
 *ModelApi* | [**get_equipment**](docs/ModelApi.md#get_equipment) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{id} | Retrieve one equipment of the model
+*ModelApi* | [**get_equipment_documents**](docs/ModelApi.md#get_equipment_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/document | Retrieve all documents of an equipment
 *ModelApi* | [**get_equipment_images**](docs/ModelApi.md#get_equipment_images) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/image | Retrieve all images attached to the equipment
 *ModelApi* | [**get_equipments**](docs/ModelApi.md#get_equipments) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment | Retrieve all equipments of the model
 *ModelApi* | [**get_label**](docs/ModelApi.md#get_label) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Retrieve one label of the model
@@ -501,6 +502,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**get_zone_spaces**](docs/ModelApi.md#get_zone_spaces) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space | Retrieve all spaces of a zone
 *ModelApi* | [**get_zones**](docs/ModelApi.md#get_zones) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone | Retrieve zones of a model
 *ModelApi* | [**link_documents_of_element**](docs/ModelApi.md#link_documents_of_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/documents | Link one or many documents to an element
+*ModelApi* | [**link_documents_to_equipment**](docs/ModelApi.md#link_documents_to_equipment) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/document | Link one or many documents to an equipment
 *ModelApi* | [**list_classification_element_relations**](docs/ModelApi.md#list_classification_element_relations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification-element | List all associations between classifications and elements
 *ModelApi* | [**list_models_positioned_in**](docs/ModelApi.md#list_models_positioned_in) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/positioned-in | List all models where the model is positioned in
 *ModelApi* | [**merge_ifcs**](docs/ModelApi.md#merge_ifcs) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/merge | Merge IFC files
@@ -513,6 +515,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**remove_element_property_set_property_definition**](docs/ModelApi.md#remove_element_property_set_property_definition) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{id} | Delete a Definition to a Property
 *ModelApi* | [**remove_element_property_set_property_definition_unit**](docs/ModelApi.md#remove_element_property_set_property_definition_unit) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit/{id} | Remove a Unit from a Definition
 *ModelApi* | [**remove_elements_from_classification**](docs/ModelApi.md#remove_elements_from_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element/{uuid} | Remove the classification from all elements
+*ModelApi* | [**remove_equipment_document**](docs/ModelApi.md#remove_equipment_document) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/document/{id} | Remove a document from an equipment
 *ModelApi* | [**reprocess_model**](docs/ModelApi.md#reprocess_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/reprocess | Reprocess Model file
 *ModelApi* | [**update_access_token**](docs/ModelApi.md#update_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token} | Update some fields of a token
 *ModelApi* | [**update_building**](docs/ModelApi.md#update_building) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{uuid} | Update some fields of a building

@@ -696,6 +696,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_get_equipment_documents(self):
+        """Test case for get_equipment_documents
+
+        Retrieve all documents of an equipment  # noqa: E501
+        """
+        pass
+
     def test_get_equipment_images(self):
         """Test case for get_equipment_images
 
@@ -1004,6 +1011,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_link_documents_to_equipment(self):
+        """Test case for link_documents_to_equipment
+
+        Link one or many documents to an equipment  # noqa: E501
+        """
+        pass
+
     def test_list_classification_element_relations(self):
         """Test case for list_classification_element_relations
 
@@ -1085,6 +1099,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for remove_elements_from_classification
 
         Remove the classification from all elements  # noqa: E501
+        """
+        pass
+
+    def test_remove_equipment_document(self):
+        """Test case for remove_equipment_document
+
+        Remove a document from an equipment  # noqa: E501
         """
         pass
 
