@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.36.0 (2026-06-29)
+
+### Feature
+
+- Minor: Merge branch 'release' into develop
+  ([`7439456`](https://github.com/bimdata/python-api-client/commit/7439456301bba5995a90bbbcc81b745f862ae3ad))
+
+
 ## v10.35.1 (2026-06-26)
 
 ### Fix
