@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.37.0 (2026-06-29)
+
+### Feature
+
+- Minor: feat(equipment): add equipment documents (#1042)
+  ([`d3dd08e`](https://github.com/bimdata/python-api-client/commit/d3dd08e779c078fb29527d4283388e18cf4b17f8))
+
+* MINOR: feat(equipment): add equipment documents
+
+* PATCH: fix(equipment): use LightDocumentSerializer for equipment documents
+
+
 ## v10.36.0 (2026-06-29)
 
 ### Feature
