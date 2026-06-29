@@ -1822,13 +1822,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     write_folder_request = [
         WriteFolderRequest(
             default_permission=1,
-            parent_id=1,
             name="name_example",
+            parent_id=1,
             children=[
                 WriteFolder(
                     default_permission=1,
-                    parent_id=1,
                     name="name_example",
+                    parent_id=1,
                     children=None,
                 ),
             ],
@@ -1885,7 +1885,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'GLTF', 'PHOTOSPHERE', 'DWG', 'OBJ', 'POINT_CLOUD', 'DXF', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'OBJ', 'DXF', 'IFC', 'PHOTOSPHERE', 'POINT_CLOUD', 'GLTF', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -12479,7 +12479,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_document_text_request = PatchedDocumentTextRequest(
         text="text_example",
-        language="spanish",
+        language="french",
     ) # PatchedDocumentTextRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -12602,10 +12602,10 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this folder.
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_edit_folder_request = PatchedEditFolderRequest(
-        default_permission=1,
-        parent_id=1,
         propagate=False,
+        default_permission=1,
         name="name_example",
+        parent_id=1,
     ) # PatchedEditFolderRequest |  (optional)
 
     # example passing only required values which don't have defaults set

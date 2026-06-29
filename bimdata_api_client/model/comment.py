@@ -88,14 +88,14 @@ class Comment(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'topic_guid': (str,),  # noqa: E501
             'modified_date': (datetime,),  # noqa: E501
-            'viewpoint_guid': (str, none_type,),  # noqa: E501
-            'reply_to_comment_guid': (str, none_type,),  # noqa: E501
+            'topic_guid': (str,),  # noqa: E501
             'author': (str, none_type,),  # noqa: E501
+            'reply_to_comment_guid': (str, none_type,),  # noqa: E501
+            'viewpoint_guid': (str, none_type,),  # noqa: E501
+            'modified_author': (str, none_type,),  # noqa: E501
             'date': (datetime,),  # noqa: E501
             'comment': (str,),  # noqa: E501
-            'modified_author': (str, none_type,),  # noqa: E501
             'guid': (str,),  # noqa: E501
         }
 
@@ -105,32 +105,32 @@ class Comment(ModelNormal):
 
 
     attribute_map = {
-        'topic_guid': 'topic_guid',  # noqa: E501
         'modified_date': 'modified_date',  # noqa: E501
-        'viewpoint_guid': 'viewpoint_guid',  # noqa: E501
-        'reply_to_comment_guid': 'reply_to_comment_guid',  # noqa: E501
+        'topic_guid': 'topic_guid',  # noqa: E501
         'author': 'author',  # noqa: E501
+        'reply_to_comment_guid': 'reply_to_comment_guid',  # noqa: E501
+        'viewpoint_guid': 'viewpoint_guid',  # noqa: E501
+        'modified_author': 'modified_author',  # noqa: E501
         'date': 'date',  # noqa: E501
         'comment': 'comment',  # noqa: E501
-        'modified_author': 'modified_author',  # noqa: E501
         'guid': 'guid',  # noqa: E501
     }
 
     read_only_vars = {
-        'topic_guid',  # noqa: E501
         'modified_date',  # noqa: E501
+        'topic_guid',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, topic_guid, modified_date, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, modified_date, topic_guid, *args, **kwargs):  # noqa: E501
         """Comment - a model defined in OpenAPI
 
         Args:
-            topic_guid (str):
             modified_date (datetime):
+            topic_guid (str):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -163,12 +163,12 @@ class Comment(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            viewpoint_guid (str, none_type): [optional]  # noqa: E501
-            reply_to_comment_guid (str, none_type): [optional]  # noqa: E501
             author (str, none_type): [optional]  # noqa: E501
+            reply_to_comment_guid (str, none_type): [optional]  # noqa: E501
+            viewpoint_guid (str, none_type): [optional]  # noqa: E501
+            modified_author (str, none_type): [optional]  # noqa: E501
             date (datetime): [optional]  # noqa: E501
             comment (str): [optional]  # noqa: E501
-            modified_author (str, none_type): [optional]  # noqa: E501
             guid (str): [optional]  # noqa: E501
         """
 
@@ -197,8 +197,8 @@ class Comment(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.topic_guid = topic_guid
         self.modified_date = modified_date
+        self.topic_guid = topic_guid
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -253,12 +253,12 @@ class Comment(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            viewpoint_guid (str, none_type): [optional]  # noqa: E501
-            reply_to_comment_guid (str, none_type): [optional]  # noqa: E501
             author (str, none_type): [optional]  # noqa: E501
+            reply_to_comment_guid (str, none_type): [optional]  # noqa: E501
+            viewpoint_guid (str, none_type): [optional]  # noqa: E501
+            modified_author (str, none_type): [optional]  # noqa: E501
             date (datetime): [optional]  # noqa: E501
             comment (str): [optional]  # noqa: E501
-            modified_author (str, none_type): [optional]  # noqa: E501
             guid (str): [optional]  # noqa: E501
         """
 

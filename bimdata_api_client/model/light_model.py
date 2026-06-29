@@ -120,6 +120,7 @@ class LightModel(ModelNormal):
             'source': (str,),  # noqa: E501
             'archived': (bool,),  # noqa: E501
             'status': (str,),  # noqa: E501
+            'fragments_status': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -139,6 +140,7 @@ class LightModel(ModelNormal):
         'source': 'source',  # noqa: E501
         'archived': 'archived',  # noqa: E501
         'status': 'status',  # noqa: E501
+        'fragments_status': 'fragments_status',  # noqa: E501
     }
 
     read_only_vars = {
@@ -153,13 +155,14 @@ class LightModel(ModelNormal):
         'source',  # noqa: E501
         'archived',  # noqa: E501
         'status',  # noqa: E501
+        'fragments_status',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, document_id, creator, name, type, preview_file, created_at, updated_at, source, archived, status, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, document_id, creator, name, type, preview_file, created_at, updated_at, source, archived, status, fragments_status, *args, **kwargs):  # noqa: E501
         """LightModel - a model defined in OpenAPI
 
         Args:
@@ -174,6 +177,7 @@ class LightModel(ModelNormal):
             source (str): * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED
             archived (bool):
             status (str):
+            fragments_status (str): Status of the fragments process. This field may be removed in future versions when the `status` will take fragments into account.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -244,6 +248,7 @@ class LightModel(ModelNormal):
         self.source = source
         self.archived = archived
         self.status = status
+        self.fragments_status = fragments_status
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

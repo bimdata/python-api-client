@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **source** | **str** | * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED | [readonly] 
 **archived** | **bool** |  | [readonly] 
 **status** | **str** |  | [readonly] 
+**fragments_status** | **str** | Status of the fragments process. This field may be removed in future versions when the &#x60;status&#x60; will take fragments into account. | [readonly] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
