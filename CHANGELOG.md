@@ -1,6 +1,22 @@
 # CHANGELOG
 
 
+## v10.37.1 (2026-06-30)
+
+### Fix
+
+- Patch: add missing behaviors in naming constraint (#1046)
+  ([`b9885f7`](https://github.com/bimdata/python-api-client/commit/b9885f7be1e221c47e694b2a970a8cf382f25bcb))
+
+* add missing behaviors in naming constraint
+
+* respond 200 wiht conflicting document on NamingConstraint destroy
+
+* add explaination to avoid bloc loop
+
+* use transaction, simply views
+
+
 ## v10.37.0 (2026-06-29)
 
 ### Feature
