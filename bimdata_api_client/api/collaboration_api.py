@@ -2639,7 +2639,7 @@ class CollaborationApi(object):
         )
         self.delete_naming_constraint_endpoint = _Endpoint(
             settings={
-                'response_type': None,
+                'response_type': ([LightDocument],),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -2696,7 +2696,9 @@ class CollaborationApi(object):
                 }
             },
             headers_map={
-                'accept': [],
+                'accept': [
+                    'application/json'
+                ],
                 'content_type': [],
             },
             api_client=api_client
@@ -10237,7 +10239,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'POINT_CLOUD', 'DXF', 'PHOTOSPHERE', 'IFC', 'OBJ', 'DWG', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'DWG', 'GLTF', 'PHOTOSPHERE', 'DXF', 'IFC', 'OBJ', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -12056,7 +12058,7 @@ class CollaborationApi(object):
     ):
         """Delete a naming constraint  # noqa: E501
 
-        Delete a naming constraint  Required scopes: document:write  # noqa: E501
+        Delete a naming constraint. Responds with 200 OK and a list of documents that are now in conflict if the constraint is strict and some documents don't match the updated rule.  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -12097,7 +12099,7 @@ class CollaborationApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            None
+            [LightDocument]
                 If the method is called asynchronously, returns the request
                 thread.
         """

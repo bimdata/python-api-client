@@ -1885,7 +1885,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'POINT_CLOUD', 'DXF', 'PHOTOSPHERE', 'IFC', 'OBJ', 'DWG', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'DWG', 'GLTF', 'PHOTOSPHERE', 'DXF', 'IFC', 'OBJ', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -4238,11 +4238,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_naming_constraint**
-> delete_naming_constraint(cloud_pk, id, project_pk)
+> [LightDocument] delete_naming_constraint(cloud_pk, id, project_pk)
 
 Delete a naming constraint
 
-Delete a naming constraint  Required scopes: document:write
+Delete a naming constraint. Responds with 200 OK and a list of documents that are now in conflict if the constraint is strict and some documents don't match the updated rule.  Required scopes: document:write
 
 ### Example
 
@@ -4255,6 +4255,7 @@ Delete a naming constraint  Required scopes: document:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.light_document import LightDocument
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -4302,7 +4303,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Delete a naming constraint
-        api_instance.delete_naming_constraint(cloud_pk, id, project_pk)
+        api_response = api_instance.delete_naming_constraint(cloud_pk, id, project_pk)
+        pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->delete_naming_constraint: %s\n" % e)
 ```
@@ -4318,7 +4320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**[LightDocument]**](LightDocument.md)
 
 ### Authorization
 
@@ -4327,13 +4329,14 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**200** |  Returned when a parent recursive rule now applies to the affected folders and some documents don&#39;t match it. Even if the constraint is strict, invalid documents will be allowed and flagged as invalid to avoid a constraint block loop  |  -  |
 **204** | No response body |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
@@ -12602,8 +12605,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this folder.
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_edit_folder_request = PatchedEditFolderRequest(
-        parent_id=1,
         propagate=False,
+        parent_id=1,
         default_permission=1,
         name="name_example",
     ) # PatchedEditFolderRequest |  (optional)
@@ -12932,6 +12935,7 @@ import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
 from bimdata_api_client.model.patched_naming_constraint_request import PatchedNamingConstraintRequest
+from bimdata_api_client.model.light_document import LightDocument
 from bimdata_api_client.model.naming_constraint import NamingConstraint
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -13033,6 +13037,7 @@ Name | Type | Description  | Notes
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
 **404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**409** | Returned when the constraint is strict and some documents don&#39;t match the updated rule. |  -  |
 **500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

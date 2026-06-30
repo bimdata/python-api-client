@@ -13,6 +13,8 @@ import sys
 import unittest
 
 import bimdata_api_client
+from bimdata_api_client.model.light_document import LightDocument
+globals()['LightDocument'] = LightDocument
 from bimdata_api_client.model.naming_constraint import NamingConstraint
 
 

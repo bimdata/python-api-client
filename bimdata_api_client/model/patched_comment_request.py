@@ -59,10 +59,10 @@ class PatchedCommentRequest(ModelNormal):
     }
 
     validations = {
-        ('author',): {
+        ('modified_author',): {
             'max_length': 254,
         },
-        ('modified_author',): {
+        ('author',): {
             'max_length': 254,
         },
     }
@@ -88,13 +88,13 @@ class PatchedCommentRequest(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'date': (datetime,),  # noqa: E501
             'viewpoint_guid': (str, none_type,),  # noqa: E501
+            'modified_author': (str, none_type,),  # noqa: E501
+            'viewpoint_temp_id': (int,),  # noqa: E501
+            'date': (datetime,),  # noqa: E501
+            'author': (str, none_type,),  # noqa: E501
             'reply_to_comment_guid': (str, none_type,),  # noqa: E501
             'comment': (str,),  # noqa: E501
-            'author': (str, none_type,),  # noqa: E501
-            'viewpoint_temp_id': (int,),  # noqa: E501
-            'modified_author': (str, none_type,),  # noqa: E501
             'guid': (str,),  # noqa: E501
         }
 
@@ -104,13 +104,13 @@ class PatchedCommentRequest(ModelNormal):
 
 
     attribute_map = {
-        'date': 'date',  # noqa: E501
         'viewpoint_guid': 'viewpoint_guid',  # noqa: E501
+        'modified_author': 'modified_author',  # noqa: E501
+        'viewpoint_temp_id': 'viewpoint_temp_id',  # noqa: E501
+        'date': 'date',  # noqa: E501
+        'author': 'author',  # noqa: E501
         'reply_to_comment_guid': 'reply_to_comment_guid',  # noqa: E501
         'comment': 'comment',  # noqa: E501
-        'author': 'author',  # noqa: E501
-        'viewpoint_temp_id': 'viewpoint_temp_id',  # noqa: E501
-        'modified_author': 'modified_author',  # noqa: E501
         'guid': 'guid',  # noqa: E501
     }
 
@@ -155,13 +155,13 @@ class PatchedCommentRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            date (datetime): [optional]  # noqa: E501
             viewpoint_guid (str, none_type): [optional]  # noqa: E501
+            modified_author (str, none_type): [optional]  # noqa: E501
+            viewpoint_temp_id (int): Only used when using POST on the full-topic route to bind viewpoint with comment. [optional]  # noqa: E501
+            date (datetime): [optional]  # noqa: E501
+            author (str, none_type): [optional]  # noqa: E501
             reply_to_comment_guid (str, none_type): [optional]  # noqa: E501
             comment (str): [optional]  # noqa: E501
-            author (str, none_type): [optional]  # noqa: E501
-            viewpoint_temp_id (int): Only used when using POST on the full-topic route to bind viewpoint with comment. [optional]  # noqa: E501
-            modified_author (str, none_type): [optional]  # noqa: E501
             guid (str): [optional]  # noqa: E501
         """
 
@@ -244,13 +244,13 @@ class PatchedCommentRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            date (datetime): [optional]  # noqa: E501
             viewpoint_guid (str, none_type): [optional]  # noqa: E501
+            modified_author (str, none_type): [optional]  # noqa: E501
+            viewpoint_temp_id (int): Only used when using POST on the full-topic route to bind viewpoint with comment. [optional]  # noqa: E501
+            date (datetime): [optional]  # noqa: E501
+            author (str, none_type): [optional]  # noqa: E501
             reply_to_comment_guid (str, none_type): [optional]  # noqa: E501
             comment (str): [optional]  # noqa: E501
-            author (str, none_type): [optional]  # noqa: E501
-            viewpoint_temp_id (int): Only used when using POST on the full-topic route to bind viewpoint with comment. [optional]  # noqa: E501
-            modified_author (str, none_type): [optional]  # noqa: E501
             guid (str): [optional]  # noqa: E501
         """
 
