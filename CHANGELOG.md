@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.37.2 (2026-07-02)
+
+### Fix
+
+- Patch: add creator to naming constraints (#1053)
+  ([`9302fb2`](https://github.com/bimdata/python-api-client/commit/9302fb276e8a350cc0a4700334805ee149387876))
+
+* add creator to naming constraints
+
+* prefetch creator
+
+
 ## v10.37.1 (2026-06-30)
 
 ### Fix
