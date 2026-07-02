@@ -144,12 +144,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 1 # int | A unique integer value identifying this project.
 topics_guid = "topics_guid_example" # str | 
 comment_request = CommentRequest(
-        viewpoint_guid="viewpoint_guid_example",
         modified_author="modified_author_example",
-        viewpoint_temp_id=1,
         date=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        author="author_example",
+        viewpoint_guid="viewpoint_guid_example",
         reply_to_comment_guid="reply_to_comment_guid_example",
+        viewpoint_temp_id=1,
+        author="author_example",
         comment="comment_example",
         guid="guid_example",
     ) # CommentRequest |  (optional)

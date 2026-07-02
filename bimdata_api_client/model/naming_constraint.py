@@ -32,7 +32,9 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 def lazy_import():
     from bimdata_api_client.model.light_document import LightDocument
+    from bimdata_api_client.model.short_user import ShortUser
     globals()['LightDocument'] = LightDocument
+    globals()['ShortUser'] = ShortUser
 
 
 class NamingConstraint(ModelNormal):
@@ -96,6 +98,7 @@ class NamingConstraint(ModelNormal):
             'rule': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'strict': (bool,),  # noqa: E501
             'conflicting_documents': ([LightDocument],),  # noqa: E501
+            'creator': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -109,18 +112,20 @@ class NamingConstraint(ModelNormal):
         'rule': 'rule',  # noqa: E501
         'strict': 'strict',  # noqa: E501
         'conflicting_documents': 'conflicting_documents',  # noqa: E501
+        'creator': 'creator',  # noqa: E501
     }
 
     read_only_vars = {
         'id',  # noqa: E501
         'conflicting_documents',  # noqa: E501
+        'creator',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, name, rule, strict, conflicting_documents, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, name, rule, strict, conflicting_documents, creator, *args, **kwargs):  # noqa: E501
         """NamingConstraint - a model defined in OpenAPI
 
         Args:
@@ -129,6 +134,7 @@ class NamingConstraint(ModelNormal):
             rule (bool, date, datetime, dict, float, int, list, str, none_type):
             strict (bool):  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field `naming_constraint_conflict` 
             conflicting_documents ([LightDocument]):
+            creator (bool, date, datetime, dict, float, int, list, str, none_type):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -193,6 +199,7 @@ class NamingConstraint(ModelNormal):
         self.rule = rule
         self.strict = strict
         self.conflicting_documents = conflicting_documents
+        self.creator = creator
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

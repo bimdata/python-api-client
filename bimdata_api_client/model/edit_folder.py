@@ -109,18 +109,18 @@ class EditFolder(ModelNormal):
         """
         lazy_import()
         return {
-            'created_by': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'id': (int,),  # noqa: E501
-            'nature': (str,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
-            'updated_at': (datetime,),  # noqa: E501
-            'type': (str,),  # noqa: E501
             'groups_permissions': ([GroupFolderRead],),  # noqa: E501
-            'name': (str,),  # noqa: E501
+            'type': (str,),  # noqa: E501
+            'updated_at': (datetime,),  # noqa: E501
+            'nature': (str,),  # noqa: E501
+            'created_by': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'user_permission': (int,),  # noqa: E501
+            'id': (int,),  # noqa: E501
+            'name': (str,),  # noqa: E501
             'conflicting_documents': ([LightDocument],),  # noqa: E501
-            'parent_id': (int, none_type,),  # noqa: E501
             'default_permission': (int,),  # noqa: E501
+            'parent_id': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -129,29 +129,29 @@ class EditFolder(ModelNormal):
 
 
     attribute_map = {
-        'created_by': 'created_by',  # noqa: E501
-        'id': 'id',  # noqa: E501
-        'nature': 'nature',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
-        'updated_at': 'updated_at',  # noqa: E501
-        'type': 'type',  # noqa: E501
         'groups_permissions': 'groups_permissions',  # noqa: E501
-        'name': 'name',  # noqa: E501
+        'type': 'type',  # noqa: E501
+        'updated_at': 'updated_at',  # noqa: E501
+        'nature': 'nature',  # noqa: E501
+        'created_by': 'created_by',  # noqa: E501
         'user_permission': 'user_permission',  # noqa: E501
+        'id': 'id',  # noqa: E501
+        'name': 'name',  # noqa: E501
         'conflicting_documents': 'conflicting_documents',  # noqa: E501
-        'parent_id': 'parent_id',  # noqa: E501
         'default_permission': 'default_permission',  # noqa: E501
+        'parent_id': 'parent_id',  # noqa: E501
     }
 
     read_only_vars = {
-        'created_by',  # noqa: E501
-        'id',  # noqa: E501
-        'nature',  # noqa: E501
         'created_at',  # noqa: E501
-        'updated_at',  # noqa: E501
-        'type',  # noqa: E501
         'groups_permissions',  # noqa: E501
+        'type',  # noqa: E501
+        'updated_at',  # noqa: E501
+        'nature',  # noqa: E501
+        'created_by',  # noqa: E501
         'user_permission',  # noqa: E501
+        'id',  # noqa: E501
         'conflicting_documents',  # noqa: E501
     }
 
@@ -159,19 +159,19 @@ class EditFolder(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, created_by, id, nature, created_at, updated_at, type, groups_permissions, name, user_permission, conflicting_documents, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, created_at, groups_permissions, type, updated_at, nature, created_by, user_permission, id, name, conflicting_documents, *args, **kwargs):  # noqa: E501
         """EditFolder - a model defined in OpenAPI
 
         Args:
-            created_by (bool, date, datetime, dict, float, int, list, str, none_type):
-            id (int):
-            nature (str): Value is \"Folder\". It is usefull to parse the tree and discriminate folders and files
             created_at (datetime): Creation date
-            updated_at (datetime): Date of the last update
-            type (str): DEPRECATED: Use 'nature' instead. Value is \"Folder\". It is usefull to parse the tree and discriminate folders and files
             groups_permissions ([GroupFolderRead]): List of group permissions
-            name (str): Name of the folder
+            type (str): DEPRECATED: Use 'nature' instead. Value is \"Folder\". It is usefull to parse the tree and discriminate folders and files
+            updated_at (datetime): Date of the last update
+            nature (str): Value is \"Folder\". It is usefull to parse the tree and discriminate folders and files
+            created_by (bool, date, datetime, dict, float, int, list, str, none_type):
             user_permission (int): Aggregate of group user permissions and folder default permission
+            id (int):
+            name (str): Name of the folder
             conflicting_documents ([LightDocument]): Return document with naming conflict. This is only set when you move a folder
 
         Keyword Args:
@@ -205,8 +205,8 @@ class EditFolder(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            parent_id (int, none_type): [optional]  # noqa: E501
             default_permission (int): Permission for a Folder  * `1` - denied * `50` - read_only * `100` - read_write. [optional]  # noqa: E501
+            parent_id (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -234,15 +234,15 @@ class EditFolder(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.created_by = created_by
-        self.id = id
-        self.nature = nature
         self.created_at = created_at
-        self.updated_at = updated_at
-        self.type = type
         self.groups_permissions = groups_permissions
-        self.name = name
+        self.type = type
+        self.updated_at = updated_at
+        self.nature = nature
+        self.created_by = created_by
         self.user_permission = user_permission
+        self.id = id
+        self.name = name
         self.conflicting_documents = conflicting_documents
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
@@ -299,8 +299,8 @@ class EditFolder(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            parent_id (int, none_type): [optional]  # noqa: E501
             default_permission (int): Permission for a Folder  * `1` - denied * `50` - read_only * `100` - read_write. [optional]  # noqa: E501
+            parent_id (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

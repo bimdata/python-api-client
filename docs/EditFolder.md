@@ -4,18 +4,18 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**created_by** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
-**id** | **int** |  | [readonly] 
-**nature** | **str** | Value is \&quot;Folder\&quot;. It is usefull to parse the tree and discriminate folders and files | [readonly] 
 **created_at** | **datetime** | Creation date | [readonly] 
-**updated_at** | **datetime** | Date of the last update | [readonly] 
-**type** | **str** | DEPRECATED: Use &#39;nature&#39; instead. Value is \&quot;Folder\&quot;. It is usefull to parse the tree and discriminate folders and files | [readonly] 
 **groups_permissions** | [**[GroupFolderRead]**](GroupFolderRead.md) | List of group permissions | [readonly] 
-**name** | **str** | Name of the folder | 
+**type** | **str** | DEPRECATED: Use &#39;nature&#39; instead. Value is \&quot;Folder\&quot;. It is usefull to parse the tree and discriminate folders and files | [readonly] 
+**updated_at** | **datetime** | Date of the last update | [readonly] 
+**nature** | **str** | Value is \&quot;Folder\&quot;. It is usefull to parse the tree and discriminate folders and files | [readonly] 
+**created_by** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
 **user_permission** | **int** | Aggregate of group user permissions and folder default permission | [readonly] 
+**id** | **int** |  | [readonly] 
+**name** | **str** | Name of the folder | 
 **conflicting_documents** | [**[LightDocument]**](LightDocument.md) | Return document with naming conflict. This is only set when you move a folder | [readonly] 
-**parent_id** | **int, none_type** |  | [optional] 
 **default_permission** | **int** | Permission for a Folder  * &#x60;1&#x60; - denied * &#x60;50&#x60; - read_only * &#x60;100&#x60; - read_write | [optional] 
+**parent_id** | **int, none_type** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
