@@ -16506,7 +16506,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **link_documents_to_equipment**
-> [Document] link_documents_to_equipment(cloud_pk, equipment_pk, model_pk, project_pk, request_body)
+> [LightDocument] link_documents_to_equipment(cloud_pk, equipment_pk, model_pk, project_pk, request_body)
 
 Link one or many documents to an equipment
 
@@ -16523,7 +16523,7 @@ Link one or many documents to an equipment
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.document import Document
+from bimdata_api_client.model.light_document import LightDocument
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -16594,7 +16594,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Document]**](Document.md)
+[**[LightDocument]**](LightDocument.md)
 
 ### Authorization
 

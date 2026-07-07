@@ -10689,7 +10689,7 @@ class ModelApi(object):
         )
         self.link_documents_to_equipment_endpoint = _Endpoint(
             settings={
-                'response_type': ([Document],),
+                'response_type': ([LightDocument],),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -26902,7 +26902,7 @@ class ModelApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            [Document]
+            [LightDocument]
                 If the method is called asynchronously, returns the request
                 thread.
         """
