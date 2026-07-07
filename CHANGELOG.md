@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.37.4 (2026-07-07)
+
+### Fix
+
+- Patch: fix(equipment): use LightDocumentSerializer in extend_Schema_view
+  ([`12edad5`](https://github.com/bimdata/python-api-client/commit/12edad5a870841841abfb7b9be751304cf81effb))
+
+
 ## v10.37.3 (2026-07-07)
 
 ### Fix
