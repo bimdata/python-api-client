@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.37.3 (2026-07-07)
+
+### Fix
+
+- Patch: fix(equipment): extend schema view for EquipmentDocumentViewSet (#1054)
+  ([`0f78cf7`](https://github.com/bimdata/python-api-client/commit/0f78cf7706e6052aa4b02a914866d36adf0cd18c))
+
+
 ## v10.37.2 (2026-07-02)
 
 ### Fix
