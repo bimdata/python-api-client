@@ -10689,7 +10689,7 @@ class ModelApi(object):
         )
         self.link_documents_to_equipment_endpoint = _Endpoint(
             settings={
-                'response_type': (LightDocument,),
+                'response_type': ([Document],),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -10707,12 +10707,14 @@ class ModelApi(object):
                     'equipment_pk',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'equipment_pk',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -10735,6 +10737,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -10747,6 +10751,7 @@ class ModelApi(object):
                     'equipment_pk': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -10755,7 +10760,11 @@ class ModelApi(object):
                 'accept': [
                     'application/json'
                 ],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -26756,7 +26765,7 @@ class ModelApi(object):
     ):
         """Link one or many documents to an element  # noqa: E501
 
-         Bulk relation create available. You can either post an id or a list of ids. Is you post a list, the response will be a list (in the same order) of created relation or of errors if any If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors   Required scopes: ifc:write, model:write  # noqa: E501
+         Bulk relation create available. You can either post an id or a list of ids. If you post a list, the response will be a list of created relation (in the same order) or of errors if any. If at least one create succeed, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors.   Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -26845,15 +26854,16 @@ class ModelApi(object):
         equipment_pk,
         model_pk,
         project_pk,
+        request_body,
         **kwargs
     ):
         """Link one or many documents to an equipment  # noqa: E501
 
-         Bulk relation create available. You can either post an id or a list of ids. Is you post a list, the response will be a list (in the same order) of created relation or of errors if any If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors   Required scopes: ifc:write, model:write  # noqa: E501
+         Bulk relation create available. You can either post an id or a list of ids. If you post a list, the response will be a list of created relation (in the same order) or of errors if any. If at least one create succeed, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors.   Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.link_documents_to_equipment(cloud_pk, equipment_pk, model_pk, project_pk, async_req=True)
+        >>> thread = api.link_documents_to_equipment(cloud_pk, equipment_pk, model_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -26861,6 +26871,7 @@ class ModelApi(object):
             equipment_pk (int): A unique integer value identifying this equipment.
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -26891,7 +26902,7 @@ class ModelApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            LightDocument
+            [Document]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -26927,6 +26938,8 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['request_body'] = \
+            request_body
         return self.link_documents_to_equipment_endpoint.call_with_http_info(**kwargs)
 
     def list_classification_element_relations(

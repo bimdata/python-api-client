@@ -4,13 +4,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**modified_author** | **str, none_type** |  | [optional] 
 **date** | **datetime** |  | [optional] 
 **viewpoint_guid** | **str, none_type** |  | [optional] 
 **reply_to_comment_guid** | **str, none_type** |  | [optional] 
-**viewpoint_temp_id** | **int** | Only used when using POST on the full-topic route to bind viewpoint with comment | [optional] 
-**author** | **str, none_type** |  | [optional] 
 **comment** | **str** |  | [optional] 
+**author** | **str, none_type** |  | [optional] 
+**modified_author** | **str, none_type** |  | [optional] 
+**viewpoint_temp_id** | **int** | Only used when using POST on the full-topic route to bind viewpoint with comment | [optional] 
 **guid** | **str** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

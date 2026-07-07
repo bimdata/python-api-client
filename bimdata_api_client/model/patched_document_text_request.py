@@ -58,11 +58,11 @@ class PatchedDocumentTextRequest(ModelNormal):
     allowed_values = {
         ('language',): {
             'None': None,
-            'ITALIAN': "italian",
-            'SPANISH': "spanish",
             'GERMAN': "german",
-            'ENGLISH': "english",
+            'SPANISH': "spanish",
             'FRENCH': "french",
+            'ITALIAN': "italian",
+            'ENGLISH': "english",
             'NULL': "null",
         },
     }
@@ -147,7 +147,7 @@ class PatchedDocumentTextRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             text (str, none_type): The full text representation of a document if the feature is enabled and the file format supported. [optional]  # noqa: E501
-            language (str, none_type): * `italian` - italian * `spanish` - spanish * `german` - german * `english` - english * `french` - french. [optional]  # noqa: E501
+            language (str, none_type): * `german` - german * `spanish` - spanish * `french` - french * `italian` - italian * `english` - english. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -230,7 +230,7 @@ class PatchedDocumentTextRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             text (str, none_type): The full text representation of a document if the feature is enabled and the file format supported. [optional]  # noqa: E501
-            language (str, none_type): * `italian` - italian * `spanish` - spanish * `german` - german * `english` - english * `french` - french. [optional]  # noqa: E501
+            language (str, none_type): * `german` - german * `spanish` - spanish * `french` - french * `italian` - italian * `english` - english. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

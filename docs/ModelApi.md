@@ -16396,7 +16396,7 @@ Name | Type | Description  | Notes
 
 Link one or many documents to an element
 
- Bulk relation create available. You can either post an id or a list of ids. Is you post a list, the response will be a list (in the same order) of created relation or of errors if any If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors   Required scopes: ifc:write, model:write
+ Bulk relation create available. You can either post an id or a list of ids. If you post a list, the response will be a list of created relation (in the same order) or of errors if any. If at least one create succeed, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors.   Required scopes: ifc:write, model:write
 
 ### Example
 
@@ -16506,11 +16506,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **link_documents_to_equipment**
-> LightDocument link_documents_to_equipment(cloud_pk, equipment_pk, model_pk, project_pk)
+> [Document] link_documents_to_equipment(cloud_pk, equipment_pk, model_pk, project_pk, request_body)
 
 Link one or many documents to an equipment
 
- Bulk relation create available. You can either post an id or a list of ids. Is you post a list, the response will be a list (in the same order) of created relation or of errors if any If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors   Required scopes: ifc:write, model:write
+ Bulk relation create available. You can either post an id or a list of ids. If you post a list, the response will be a list of created relation (in the same order) or of errors if any. If at least one create succeed, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors.   Required scopes: ifc:write, model:write
 
 ### Example
 
@@ -16523,7 +16523,7 @@ Link one or many documents to an equipment
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.light_document import LightDocument
+from bimdata_api_client.model.document import Document
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -16568,11 +16568,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     equipment_pk = 1 # int | A unique integer value identifying this equipment.
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
+    request_body = [
+        1,
+    ] # [int] | 
 
     # example passing only required values which don't have defaults set
     try:
         # Link one or many documents to an equipment
-        api_response = api_instance.link_documents_to_equipment(cloud_pk, equipment_pk, model_pk, project_pk)
+        api_response = api_instance.link_documents_to_equipment(cloud_pk, equipment_pk, model_pk, project_pk, request_body)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->link_documents_to_equipment: %s\n" % e)
@@ -16587,10 +16590,11 @@ Name | Type | Description  | Notes
  **equipment_pk** | **int**| A unique integer value identifying this equipment. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **request_body** | **[int]**|  |
 
 ### Return type
 
-[**LightDocument**](LightDocument.md)
+[**[Document]**](Document.md)
 
 ### Authorization
 
@@ -16598,7 +16602,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json
 
 
@@ -16606,8 +16610,8 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** |  |  -  |
-**400** | A required field is missing in the body |  -  |
+**200** |  |  -  |
+**400** | All creates failed: list of errors |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
 **404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
