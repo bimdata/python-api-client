@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.38.0 (2026-07-09)
+
+### Feature
+
+- Minor: Add light document serialization to RAG response (#1055)
+  ([`c36f96e`](https://github.com/bimdata/python-api-client/commit/c36f96eaa9045294e1b243a78db452ffc6fa983b))
+
+* Add light document serialization to RAG response
+
+* remove useless annotate (not serialized)
+
+
 ## v10.37.4 (2026-07-07)
 
 ### Fix
