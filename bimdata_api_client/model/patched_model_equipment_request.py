@@ -91,6 +91,7 @@ class PatchedModelEquipmentRequest(ModelNormal):
         return {
             'name': (str,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
+            'reference_link': (str, none_type,),  # noqa: E501
             'position': ([float],),  # noqa: E501
         }
 
@@ -102,6 +103,7 @@ class PatchedModelEquipmentRequest(ModelNormal):
     attribute_map = {
         'name': 'name',  # noqa: E501
         'description': 'description',  # noqa: E501
+        'reference_link': 'reference_link',  # noqa: E501
         'position': 'position',  # noqa: E501
     }
 
@@ -148,6 +150,7 @@ class PatchedModelEquipmentRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             name (str): Name of the equipment. [optional]  # noqa: E501
             description (str, none_type): Description of the equipment. [optional]  # noqa: E501
+            reference_link (str, none_type): An optional link to the equipment reference.. [optional]  # noqa: E501
             position ([float]): [optional]  # noqa: E501
         """
 
@@ -232,6 +235,7 @@ class PatchedModelEquipmentRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             name (str): Name of the equipment. [optional]  # noqa: E501
             description (str, none_type): Description of the equipment. [optional]  # noqa: E501
+            reference_link (str, none_type): An optional link to the equipment reference.. [optional]  # noqa: E501
             position ([float]): [optional]  # noqa: E501
         """
 

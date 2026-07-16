@@ -92,6 +92,7 @@ class ModelEquipmentRequest(ModelNormal):
             'name': (str,),  # noqa: E501
             'position': ([float],),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
+            'reference_link': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -103,6 +104,7 @@ class ModelEquipmentRequest(ModelNormal):
         'name': 'name',  # noqa: E501
         'position': 'position',  # noqa: E501
         'description': 'description',  # noqa: E501
+        'reference_link': 'reference_link',  # noqa: E501
     }
 
     read_only_vars = {
@@ -151,6 +153,7 @@ class ModelEquipmentRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             description (str, none_type): Description of the equipment. [optional]  # noqa: E501
+            reference_link (str, none_type): An optional link to the equipment reference.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -239,6 +242,7 @@ class ModelEquipmentRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             description (str, none_type): Description of the equipment. [optional]  # noqa: E501
+            reference_link (str, none_type): An optional link to the equipment reference.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

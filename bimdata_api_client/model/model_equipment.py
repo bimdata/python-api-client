@@ -105,6 +105,7 @@ class ModelEquipment(ModelNormal):
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
+            'reference_link': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -122,6 +123,7 @@ class ModelEquipment(ModelNormal):
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
         'description': 'description',  # noqa: E501
+        'reference_link': 'reference_link',  # noqa: E501
     }
 
     read_only_vars = {
@@ -182,6 +184,7 @@ class ModelEquipment(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             description (str, none_type): Description of the equipment. [optional]  # noqa: E501
+            reference_link (str, none_type): An optional link to the equipment reference.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -274,6 +277,7 @@ class ModelEquipment(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             description (str, none_type): Description of the equipment. [optional]  # noqa: E501
+            reference_link (str, none_type): An optional link to the equipment reference.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -146,11 +146,11 @@ topics_guid = "topics_guid_example" # str |
 comment_request = CommentRequest(
         comment="comment_example",
         viewpoint_guid="viewpoint_guid_example",
+        viewpoint_temp_id=1,
+        author="author_example",
+        reply_to_comment_guid="reply_to_comment_guid_example",
         date=dateutil_parser('1970-01-01T00:00:00.00Z'),
         modified_author="modified_author_example",
-        viewpoint_temp_id=1,
-        reply_to_comment_guid="reply_to_comment_guid_example",
-        author="author_example",
         guid="guid_example",
     ) # CommentRequest |  (optional)
 

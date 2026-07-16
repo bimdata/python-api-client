@@ -3539,6 +3539,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     model_equipment_request = ModelEquipmentRequest(
         name="name_example",
         description="description_example",
+        reference_link="reference_link_example",
         position=[
             3.14,
         ],
@@ -19051,6 +19052,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     patched_model_equipment_request = PatchedModelEquipmentRequest(
         name="name_example",
         description="description_example",
+        reference_link="reference_link_example",
         position=[
             3.14,
         ],
