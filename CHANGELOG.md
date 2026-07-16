@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.39.0 (2026-07-16)
+
+### Feature
+
+- Minor: feat(equipment): add equipment reference_link (#1058)
+  ([`1395597`](https://github.com/bimdata/python-api-client/commit/1395597922a2bb7c700b78e228fc0f6c60c9c58c))
+
+* MINOR: feat(equipment): add equipment reference_link
+
+* fix(equipment): update reference_link help_text
+
+
 ## v10.38.0 (2026-07-09)
 
 ### Feature
