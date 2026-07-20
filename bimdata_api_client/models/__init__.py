@@ -129,6 +129,7 @@ from bimdata_api_client.model.naming_constraint import NamingConstraint
 from bimdata_api_client.model.naming_constraint_request import NamingConstraintRequest
 from bimdata_api_client.model.naming_parts_template import NamingPartsTemplate
 from bimdata_api_client.model.naming_parts_template_request import NamingPartsTemplateRequest
+from bimdata_api_client.model.naming_rule_configuration import NamingRuleConfiguration
 from bimdata_api_client.model.organization import Organization
 from bimdata_api_client.model.organization_request import OrganizationRequest
 from bimdata_api_client.model.orthogonal_camera import OrthogonalCamera

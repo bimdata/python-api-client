@@ -14,8 +14,10 @@ import unittest
 
 import bimdata_api_client
 from bimdata_api_client.model.light_document import LightDocument
+from bimdata_api_client.model.naming_rule_configuration import NamingRuleConfiguration
 from bimdata_api_client.model.short_user import ShortUser
 globals()['LightDocument'] = LightDocument
+globals()['NamingRuleConfiguration'] = NamingRuleConfiguration
 globals()['ShortUser'] = ShortUser
 from bimdata_api_client.model.naming_constraint import NamingConstraint
 

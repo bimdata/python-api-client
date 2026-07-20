@@ -134,6 +134,7 @@ bimdata_api_client/model/naming_constraint.py
 bimdata_api_client/model/naming_constraint_request.py
 bimdata_api_client/model/naming_parts_template.py
 bimdata_api_client/model/naming_parts_template_request.py
+bimdata_api_client/model/naming_rule_configuration.py
 bimdata_api_client/model/organization.py
 bimdata_api_client/model/organization_request.py
 bimdata_api_client/model/orthogonal_camera.py
@@ -437,6 +438,7 @@ docs/NamingConstraint.md
 docs/NamingConstraintRequest.md
 docs/NamingPartsTemplate.md
 docs/NamingPartsTemplateRequest.md
+docs/NamingRuleConfiguration.md
 docs/Organization.md
 docs/OrganizationRequest.md
 docs/OrthogonalCamera.md
@@ -743,6 +745,7 @@ test/test_naming_constraint.py
 test/test_naming_constraint_request.py
 test/test_naming_parts_template.py
 test/test_naming_parts_template_request.py
+test/test_naming_rule_configuration.py
 test/test_organization.py
 test/test_organization_request.py
 test/test_orthogonal_camera.py

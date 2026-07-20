@@ -10239,7 +10239,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'PHOTOSPHERE', 'DXF', 'IFC', 'OBJ', 'POINT_CLOUD', 'DWG', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'GLTF', 'OBJ', 'POINT_CLOUD', 'IFC', 'PHOTOSPHERE', 'DWG', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -10590,7 +10590,7 @@ class CollaborationApi(object):
     ):
         """Create a naming rule list  # noqa: E501
 
-        Create a naming rule list  Required scopes: document:write  # noqa: E501
+        Create a naming rule list. These are just templates being copied, effective rules using these lists will copy the content.  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -18828,7 +18828,7 @@ class CollaborationApi(object):
     ):
         """Update some fields of a naming rule list  # noqa: E501
 
-        Update some fields of a naming rule list  Required scopes: document:write  # noqa: E501
+        Update some fields of a naming rule list. These are just templates. Changing the template won't change the effective rules using these lists, they will keep the content they had when they were created.  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

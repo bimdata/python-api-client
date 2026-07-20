@@ -1822,13 +1822,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     write_folder_request = [
         WriteFolderRequest(
             parent_id=1,
-            name="name_example",
             default_permission=1,
+            name="name_example",
             children=[
                 WriteFolder(
                     parent_id=1,
-                    name="name_example",
                     default_permission=1,
+                    name="name_example",
                     children=None,
                 ),
             ],
@@ -1885,7 +1885,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'PHOTOSPHERE', 'DXF', 'IFC', 'OBJ', 'POINT_CLOUD', 'DWG', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'GLTF', 'OBJ', 'POINT_CLOUD', 'IFC', 'PHOTOSPHERE', 'DWG', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -2305,7 +2305,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | 
     naming_constraint_request = NamingConstraintRequest(
         name="name_example",
-        rule=None,
+        rule=NamingRuleConfiguration(
+            separator="-",
+            parts=[
+                None,
+            ],
+        ),
         strict=True,
     ) # NamingConstraintRequest | 
 
@@ -2359,7 +2364,7 @@ Name | Type | Description  | Notes
 
 Create a naming rule list
 
-Create a naming rule list  Required scopes: document:write
+Create a naming rule list. These are just templates being copied, effective rules using these lists will copy the content.  Required scopes: document:write
 
 ### Example
 
@@ -12482,7 +12487,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_document_text_request = PatchedDocumentTextRequest(
         text="text_example",
-        language="english",
+        language="french",
     ) # PatchedDocumentTextRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -12606,9 +12611,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_edit_folder_request = PatchedEditFolderRequest(
         parent_id=1,
-        propagate=False,
-        name="name_example",
         default_permission=1,
+        name="name_example",
+        propagate=False,
     ) # PatchedEditFolderRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -12982,7 +12987,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | 
     patched_naming_constraint_request = PatchedNamingConstraintRequest(
         name="name_example",
-        rule=None,
+        rule=NamingRuleConfiguration(
+            separator="-",
+            parts=[
+                None,
+            ],
+        ),
         strict=True,
     ) # PatchedNamingConstraintRequest |  (optional)
 
@@ -13047,7 +13057,7 @@ Name | Type | Description  | Notes
 
 Update some fields of a naming rule list
 
-Update some fields of a naming rule list  Required scopes: document:write
+Update some fields of a naming rule list. These are just templates. Changing the template won't change the effective rules using these lists, they will keep the content they had when they were created.  Required scopes: document:write
 
 ### Example
 

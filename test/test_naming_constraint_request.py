@@ -13,6 +13,8 @@ import sys
 import unittest
 
 import bimdata_api_client
+from bimdata_api_client.model.naming_rule_configuration import NamingRuleConfiguration
+globals()['NamingRuleConfiguration'] = NamingRuleConfiguration
 from bimdata_api_client.model.naming_constraint_request import NamingConstraintRequest
 
 

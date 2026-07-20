@@ -14,12 +14,10 @@ import unittest
 
 import bimdata_api_client
 from bimdata_api_client.model.naming_rule_configuration import NamingRuleConfiguration
-globals()['NamingRuleConfiguration'] = NamingRuleConfiguration
-from bimdata_api_client.model.patched_naming_constraint_request import PatchedNamingConstraintRequest
 
 
-class TestPatchedNamingConstraintRequest(unittest.TestCase):
-    """PatchedNamingConstraintRequest unit test stubs"""
+class TestNamingRuleConfiguration(unittest.TestCase):
+    """NamingRuleConfiguration unit test stubs"""
 
     def setUp(self):
         pass
@@ -27,10 +25,10 @@ class TestPatchedNamingConstraintRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testPatchedNamingConstraintRequest(self):
-        """Test PatchedNamingConstraintRequest"""
+    def testNamingRuleConfiguration(self):
+        """Test NamingRuleConfiguration"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = PatchedNamingConstraintRequest()  # noqa: E501
+        # model = NamingRuleConfiguration()  # noqa: E501
         pass
 
 
