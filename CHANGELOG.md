@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.39.1 (2026-07-20)
+
+### Fix
+
+- Patch: add name to naming constraint rules (#1059)
+  ([`e52ebe0`](https://github.com/bimdata/python-api-client/commit/e52ebe0476af0b07cd4b11eaa7a9cccf821d6457))
+
+* add name to naming constraint rules
+
+* better doc
+
+
 ## v10.39.0 (2026-07-16)
 
 ### Feature
