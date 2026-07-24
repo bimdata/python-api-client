@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.40.0 (2026-07-24)
+
+### Feature
+
+- Minor: feat(equipment): add equipment tags feature (#1062)
+  ([`5edecdb`](https://github.com/bimdata/python-api-client/commit/5edecdb138dbd89c14a9ea099006159f1266e3fa))
+
+* MINOR: feat(equipment): add equipment tags feature
+
+* fix(equipment): remove FolderPermissionMixin from EquipmentTagViewSet
+
+
 ## v10.39.1 (2026-07-20)
 
 ### Fix
