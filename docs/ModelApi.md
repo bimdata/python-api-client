@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_equipment_image**](ModelApi.md#add_equipment_image) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/image | Add a new image to the equipment
+[**add_equipment_tags**](ModelApi.md#add_equipment_tags) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/tag | Add one or many tags to an equipment
 [**add_model_errors**](ModelApi.md#add_model_errors) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/errors | Add errors to model
 [**add_zone_space**](ModelApi.md#add_zone_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/add | Add a space to a zone
 [**bulk_delete_model_classifications**](ModelApi.md#bulk_delete_model_classifications) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/list_destroy | Remove all classifications from model&#39;s elements
@@ -102,6 +103,7 @@ Method | HTTP request | Description
 [**get_equipment**](ModelApi.md#get_equipment) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{id} | Retrieve one equipment of the model
 [**get_equipment_documents**](ModelApi.md#get_equipment_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/document | Retrieve all documents of an equipment
 [**get_equipment_images**](ModelApi.md#get_equipment_images) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/image | Retrieve all images attached to the equipment
+[**get_equipment_tags**](ModelApi.md#get_equipment_tags) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/tag | Retrieve all tags of an equipment
 [**get_equipments**](ModelApi.md#get_equipments) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment | Retrieve all equipments of the model
 [**get_label**](ModelApi.md#get_label) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Retrieve one label of the model
 [**get_labels**](ModelApi.md#get_labels) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label | Retrieve all labels of the model
@@ -159,6 +161,7 @@ Method | HTTP request | Description
 [**remove_element_property_set_property_definition_unit**](ModelApi.md#remove_element_property_set_property_definition_unit) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit/{id} | Remove a Unit from a Definition
 [**remove_elements_from_classification**](ModelApi.md#remove_elements_from_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element/{uuid} | Remove the classification from all elements
 [**remove_equipment_document**](ModelApi.md#remove_equipment_document) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/document/{id} | Remove a document from an equipment
+[**remove_equipment_tag**](ModelApi.md#remove_equipment_tag) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/tag/{id} | Remove a tag from an equipment
 [**reprocess_model**](ModelApi.md#reprocess_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/reprocess | Reprocess Model file
 [**update_access_token**](ModelApi.md#update_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token} | Update some fields of a token
 [**update_building**](ModelApi.md#update_building) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{uuid} | Update some fields of a building
@@ -298,6 +301,120 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **201** |  |  -  |
 **400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_equipment_tags**
+> [Tag] add_equipment_tags(cloud_pk, equipment_pk, model_pk, project_pk, request_body)
+
+Add one or many tags to an equipment
+
+ Bulk relation create available. You can either post an id or a list of ids. If you post a list, the response will be a list of created relation (in the same order) or of errors if any. If at least one create succeed, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors.   Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import model_api
+from bimdata_api_client.model.tag import Tag
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    equipment_pk = 1 # int | A unique integer value identifying this equipment.
+    model_pk = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | A unique integer value identifying this project.
+    request_body = [
+        1,
+    ] # [int] | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Add one or many tags to an equipment
+        api_response = api_instance.add_equipment_tags(cloud_pk, equipment_pk, model_pk, project_pk, request_body)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->add_equipment_tags: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **equipment_pk** | **int**| A unique integer value identifying this equipment. |
+ **model_pk** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+ **request_body** | **[int]**|  |
+
+### Return type
+
+[**[Tag]**](Tag.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | All creates failed: list of errors |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
 **404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
@@ -11766,6 +11883,114 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_equipment_tags**
+> [Tag] get_equipment_tags(cloud_pk, equipment_pk, model_pk, project_pk)
+
+Retrieve all tags of an equipment
+
+Retrieve all tags of an equipment  Required scopes: ifc:read, model:read
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import model_api
+from bimdata_api_client.model.tag import Tag
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    equipment_pk = 1 # int | A unique integer value identifying this equipment.
+    model_pk = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | A unique integer value identifying this project.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Retrieve all tags of an equipment
+        api_response = api_instance.get_equipment_tags(cloud_pk, equipment_pk, model_pk, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->get_equipment_tags: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **equipment_pk** | **int**| A unique integer value identifying this equipment. |
+ **model_pk** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+
+### Return type
+
+[**[Tag]**](Tag.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_equipments**
 > [ModelEquipment] get_equipments(cloud_pk, model_pk, project_pk)
 
@@ -18035,6 +18260,116 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **equipment_pk** | **int**| A unique integer value identifying this equipment. |
  **id** | **int**| A unique integer value identifying this document. |
+ **model_pk** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No response body |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **remove_equipment_tag**
+> remove_equipment_tag(cloud_pk, equipment_pk, id, model_pk, project_pk)
+
+Remove a tag from an equipment
+
+Remove a tag from an equipment, the tag will not be deleted  Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import model_api
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    equipment_pk = 1 # int | A unique integer value identifying this equipment.
+    id = 1 # int | A unique integer value identifying this tag.
+    model_pk = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | A unique integer value identifying this project.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Remove a tag from an equipment
+        api_instance.remove_equipment_tag(cloud_pk, equipment_pk, id, model_pk, project_pk)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->remove_equipment_tag: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **equipment_pk** | **int**| A unique integer value identifying this equipment. |
+ **id** | **int**| A unique integer value identifying this tag. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
 

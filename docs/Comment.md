@@ -4,14 +4,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**topic_guid** | **str** |  | [readonly] 
 **modified_date** | **datetime** |  | [readonly] 
-**modified_author** | **str, none_type** |  | [optional] 
-**viewpoint_guid** | **str, none_type** |  | [optional] 
-**comment** | **str** |  | [optional] 
-**reply_to_comment_guid** | **str, none_type** |  | [optional] 
-**date** | **datetime** |  | [optional] 
+**topic_guid** | **str** |  | [readonly] 
 **author** | **str, none_type** |  | [optional] 
+**date** | **datetime** |  | [optional] 
+**reply_to_comment_guid** | **str, none_type** |  | [optional] 
+**modified_author** | **str, none_type** |  | [optional] 
+**comment** | **str** |  | [optional] 
+**viewpoint_guid** | **str, none_type** |  | [optional] 
 **guid** | **str** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

@@ -31,6 +31,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_add_equipment_tags(self):
+        """Test case for add_equipment_tags
+
+        Add one or many tags to an equipment  # noqa: E501
+        """
+        pass
+
     def test_add_model_errors(self):
         """Test case for add_model_errors
 
@@ -710,6 +717,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_get_equipment_tags(self):
+        """Test case for get_equipment_tags
+
+        Retrieve all tags of an equipment  # noqa: E501
+        """
+        pass
+
     def test_get_equipments(self):
         """Test case for get_equipments
 
@@ -1106,6 +1120,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for remove_equipment_document
 
         Remove a document from an equipment  # noqa: E501
+        """
+        pass
+
+    def test_remove_equipment_tag(self):
+        """Test case for remove_equipment_tag
+
+        Remove a tag from an equipment  # noqa: E501
         """
         pass
 

@@ -144,12 +144,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 1 # int | A unique integer value identifying this project.
 topics_guid = "topics_guid_example" # str | 
 comment_request = CommentRequest(
-        modified_author="modified_author_example",
-        viewpoint_guid="viewpoint_guid_example",
-        comment="comment_example",
-        reply_to_comment_guid="reply_to_comment_guid_example",
-        date=dateutil_parser('1970-01-01T00:00:00.00Z'),
         author="author_example",
+        date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        reply_to_comment_guid="reply_to_comment_guid_example",
+        modified_author="modified_author_example",
+        comment="comment_example",
+        viewpoint_guid="viewpoint_guid_example",
         viewpoint_temp_id=1,
         guid="guid_example",
     ) # CommentRequest |  (optional)
@@ -362,6 +362,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**update_visa**](docs/CollaborationApi.md#update_visa) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id} | Update some fields of a visa
 *CollaborationApi* | [**update_visa_comment**](docs/CollaborationApi.md#update_visa_comment) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment/{id} | Update some fields of a comment
 *ModelApi* | [**add_equipment_image**](docs/ModelApi.md#add_equipment_image) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/image | Add a new image to the equipment
+*ModelApi* | [**add_equipment_tags**](docs/ModelApi.md#add_equipment_tags) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/tag | Add one or many tags to an equipment
 *ModelApi* | [**add_model_errors**](docs/ModelApi.md#add_model_errors) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/errors | Add errors to model
 *ModelApi* | [**add_zone_space**](docs/ModelApi.md#add_zone_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/add | Add a space to a zone
 *ModelApi* | [**bulk_delete_model_classifications**](docs/ModelApi.md#bulk_delete_model_classifications) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/list_destroy | Remove all classifications from model&#39;s elements
@@ -459,6 +460,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**get_equipment**](docs/ModelApi.md#get_equipment) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{id} | Retrieve one equipment of the model
 *ModelApi* | [**get_equipment_documents**](docs/ModelApi.md#get_equipment_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/document | Retrieve all documents of an equipment
 *ModelApi* | [**get_equipment_images**](docs/ModelApi.md#get_equipment_images) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/image | Retrieve all images attached to the equipment
+*ModelApi* | [**get_equipment_tags**](docs/ModelApi.md#get_equipment_tags) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/tag | Retrieve all tags of an equipment
 *ModelApi* | [**get_equipments**](docs/ModelApi.md#get_equipments) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment | Retrieve all equipments of the model
 *ModelApi* | [**get_label**](docs/ModelApi.md#get_label) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label/{id} | Retrieve one label of the model
 *ModelApi* | [**get_labels**](docs/ModelApi.md#get_labels) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/label | Retrieve all labels of the model
@@ -516,6 +518,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**remove_element_property_set_property_definition_unit**](docs/ModelApi.md#remove_element_property_set_property_definition_unit) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit/{id} | Remove a Unit from a Definition
 *ModelApi* | [**remove_elements_from_classification**](docs/ModelApi.md#remove_elements_from_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element/{uuid} | Remove the classification from all elements
 *ModelApi* | [**remove_equipment_document**](docs/ModelApi.md#remove_equipment_document) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/document/{id} | Remove a document from an equipment
+*ModelApi* | [**remove_equipment_tag**](docs/ModelApi.md#remove_equipment_tag) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/equipment/{equipment_pk}/tag/{id} | Remove a tag from an equipment
 *ModelApi* | [**reprocess_model**](docs/ModelApi.md#reprocess_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/reprocess | Reprocess Model file
 *ModelApi* | [**update_access_token**](docs/ModelApi.md#update_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token} | Update some fields of a token
 *ModelApi* | [**update_building**](docs/ModelApi.md#update_building) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{uuid} | Update some fields of a building
