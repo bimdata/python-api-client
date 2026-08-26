@@ -360,6 +360,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_download_document(self):
+        """Test case for download_document
+
+        Download a document  # noqa: E501
+        """
+        pass
+
     def test_get_classification(self):
         """Test case for get_classification
 

@@ -144,13 +144,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 1 # int | A unique integer value identifying this project.
 topics_guid = "topics_guid_example" # str | 
 comment_request = CommentRequest(
-        author="author_example",
+        viewpoint_guid="viewpoint_guid_example",
+        comment="comment_example",
+        viewpoint_temp_id=1,
         date=dateutil_parser('1970-01-01T00:00:00.00Z'),
         reply_to_comment_guid="reply_to_comment_guid_example",
         modified_author="modified_author_example",
-        comment="comment_example",
-        viewpoint_guid="viewpoint_guid_example",
-        viewpoint_temp_id=1,
+        author="author_example",
         guid="guid_example",
     ) # CommentRequest |  (optional)
 
@@ -285,6 +285,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**delete_visa_comment**](docs/CollaborationApi.md#delete_visa_comment) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment/{id} | Remove a comment
 *CollaborationApi* | [**deny_user_invitation**](docs/CollaborationApi.md#deny_user_invitation) | **POST** /user/invitations/{id}/deny | Deny an invitation
 *CollaborationApi* | [**deny_validation**](docs/CollaborationApi.md#deny_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}/deny | Deny a validation
+*CollaborationApi* | [**download_document**](docs/CollaborationApi.md#download_document) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{id}/download/{dl_token} | Download a document
 *CollaborationApi* | [**get_classification**](docs/CollaborationApi.md#get_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Retrieve a classification
 *CollaborationApi* | [**get_classifications**](docs/CollaborationApi.md#get_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification | Retrieve all classifications
 *CollaborationApi* | [**get_cloud**](docs/CollaborationApi.md#get_cloud) | **GET** /cloud/{id} | Retrieve one cloud
