@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.41.0 (2026-08-26)
+
+### Feature
+
+- Minor: Rework document download flow to be able to log (#1068)
+  ([`1d8e732`](https://github.com/bimdata/python-api-client/commit/1d8e7327c99af803b3066b646046f70da798dc72))
+
+* Rework document download flow to be able to log
+
+* Fix n+1 queries
+
+
 ## v10.40.0 (2026-07-24)
 
 ### Feature
