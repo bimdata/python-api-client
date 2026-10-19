@@ -1,6 +1,28 @@
 # CHANGELOG
 
 
+## v10.41.1 (2026-10-19)
+
+### Fix
+
+- Patch: Naming template fixes (#1104)
+  ([`06602a3`](https://github.com/bimdata/python-api-client/commit/06602a3e66927163360b0d001e7a706f28732d42))
+
+* do not check old versions of documents
+
+* use models to store naming parts and lists
+
+* remove useless transaction, clean conflict flag on new versions
+
+* max_length shouldnt be 0
+
+* rename parts template to part list
+
+* update forgotten test
+
+* add atomic to naming template routes to avoid potential concurrency issues
+
+
 ## v10.41.0 (2026-08-26)
 
 ### Feature
