@@ -164,8 +164,8 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
-    def test_create_naming_parts_template(self):
-        """Test case for create_naming_parts_template
+    def test_create_naming_constraint_part_list(self):
+        """Test case for create_naming_constraint_part_list
 
         Create a naming rule list  # noqa: E501
         """
@@ -290,8 +290,8 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_naming_parts_template(self):
-        """Test case for delete_naming_parts_template
+    def test_delete_naming_constraint_part_list(self):
+        """Test case for delete_naming_constraint_part_list
 
         Delete a naming rule list  # noqa: E501
         """
@@ -357,13 +357,6 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for deny_validation
 
         Deny a validation  # noqa: E501
-        """
-        pass
-
-    def test_download_document(self):
-        """Test case for download_document
-
-        Download a document  # noqa: E501
         """
         pass
 
@@ -514,24 +507,24 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
-    def test_get_naming_constraints(self):
-        """Test case for get_naming_constraints
-
-        Retrieve all naming constraints  # noqa: E501
-        """
-        pass
-
-    def test_get_naming_parts_template(self):
-        """Test case for get_naming_parts_template
+    def test_get_naming_constraint_part_list(self):
+        """Test case for get_naming_constraint_part_list
 
         Retrieve a naming rule list  # noqa: E501
         """
         pass
 
-    def test_get_naming_parts_templates(self):
-        """Test case for get_naming_parts_templates
+    def test_get_naming_constraint_part_lists(self):
+        """Test case for get_naming_constraint_part_lists
 
         Retrieve all naming rule lists  # noqa: E501
+        """
+        pass
+
+    def test_get_naming_constraints(self):
+        """Test case for get_naming_constraints
+
+        Retrieve all naming constraints  # noqa: E501
         """
         pass
 
@@ -843,8 +836,8 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
-    def test_update_naming_parts_template(self):
-        """Test case for update_naming_parts_template
+    def test_update_naming_constraint_part_list(self):
+        """Test case for update_naming_constraint_part_list
 
         Update some fields of a naming rule list  # noqa: E501
         """

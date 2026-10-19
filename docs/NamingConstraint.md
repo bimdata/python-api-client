@@ -6,7 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [readonly] 
 **name** | **str** | Name of the naming constraint | 
-**rule** | [**NamingRuleConfiguration**](NamingRuleConfiguration.md) |  | 
+**separator** | **str** | * &#x60;-&#x60; - - * &#x60;_&#x60; - _ * &#x60;.&#x60; - . | 
+**parts** | [**[NamingConstraintPart]**](NamingConstraintPart.md) |  | 
 **strict** | **bool** |  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field &#x60;naming_constraint_conflict&#x60;  | 
 **conflicting_documents** | [**[LightDocument]**](LightDocument.md) |  | [readonly] 
 **creator** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 

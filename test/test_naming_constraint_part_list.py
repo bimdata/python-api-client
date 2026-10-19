@@ -13,11 +13,13 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.naming_parts_template import NamingPartsTemplate
+from bimdata_api_client.model.light_document import LightDocument
+globals()['LightDocument'] = LightDocument
+from bimdata_api_client.model.naming_constraint_part_list import NamingConstraintPartList
 
 
-class TestNamingPartsTemplate(unittest.TestCase):
-    """NamingPartsTemplate unit test stubs"""
+class TestNamingConstraintPartList(unittest.TestCase):
+    """NamingConstraintPartList unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +27,10 @@ class TestNamingPartsTemplate(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testNamingPartsTemplate(self):
-        """Test NamingPartsTemplate"""
+    def testNamingConstraintPartList(self):
+        """Test NamingConstraintPartList"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = NamingPartsTemplate()  # noqa: E501
+        # model = NamingConstraintPartList()  # noqa: E501
         pass
 
 

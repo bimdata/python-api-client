@@ -63,9 +63,6 @@ class FeatureRequest(ModelNormal):
             'max_length': 127,
             'min_length': 1,
         },
-        ('viewer_url',): {
-            'max_length': 512,
-        },
     }
 
     @cached_property
@@ -90,7 +87,7 @@ class FeatureRequest(ModelNormal):
         """
         return {
             'name': (str,),  # noqa: E501
-            'viewer_url': (str, none_type,),  # noqa: E501
+            'viewer_url': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -147,7 +144,7 @@ class FeatureRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            viewer_url (str, none_type): Viewer's url to load instead of standard's one. [optional]  # noqa: E501
+            viewer_url (bool, date, datetime, dict, float, int, list, str, none_type): Viewer's url to load instead of standard's one. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,7 +230,7 @@ class FeatureRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            viewer_url (str, none_type): Viewer's url to load instead of standard's one. [optional]  # noqa: E501
+            viewer_url (bool, date, datetime, dict, float, int, list, str, none_type): Viewer's url to load instead of standard's one. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

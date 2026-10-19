@@ -92,7 +92,7 @@ class User(ModelNormal):
             'project_role': (int,),  # noqa: E501
             'provider': (str,),  # noqa: E501
             'sub': (str, none_type,),  # noqa: E501
-            'profile_picture': (str, none_type,),  # noqa: E501
+            'profile_picture': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -146,7 +146,7 @@ class User(ModelNormal):
             project_role (int):
             provider (str):
             sub (str, none_type): sub from Keycloak
-            profile_picture (str, none_type):
+            profile_picture (bool, date, datetime, dict, float, int, list, str, none_type):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

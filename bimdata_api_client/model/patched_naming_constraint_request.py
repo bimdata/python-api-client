@@ -31,8 +31,8 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from bimdata_api_client.model.naming_rule_configuration import NamingRuleConfiguration
-    globals()['NamingRuleConfiguration'] = NamingRuleConfiguration
+    from bimdata_api_client.model.naming_constraint_part_request import NamingConstraintPartRequest
+    globals()['NamingConstraintPartRequest'] = NamingConstraintPartRequest
 
 
 class PatchedNamingConstraintRequest(ModelNormal):
@@ -60,6 +60,11 @@ class PatchedNamingConstraintRequest(ModelNormal):
     """
 
     allowed_values = {
+        ('separator',): {
+            '-': "-",
+            '_': "_",
+            '.': ".",
+        },
     }
 
     validations = {
@@ -93,7 +98,8 @@ class PatchedNamingConstraintRequest(ModelNormal):
         lazy_import()
         return {
             'name': (str,),  # noqa: E501
-            'rule': (NamingRuleConfiguration,),  # noqa: E501
+            'separator': (str,),  # noqa: E501
+            'parts': ([NamingConstraintPartRequest],),  # noqa: E501
             'strict': (bool,),  # noqa: E501
         }
 
@@ -104,7 +110,8 @@ class PatchedNamingConstraintRequest(ModelNormal):
 
     attribute_map = {
         'name': 'name',  # noqa: E501
-        'rule': 'rule',  # noqa: E501
+        'separator': 'separator',  # noqa: E501
+        'parts': 'parts',  # noqa: E501
         'strict': 'strict',  # noqa: E501
     }
 
@@ -150,7 +157,8 @@ class PatchedNamingConstraintRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             name (str): Name of the naming constraint. [optional]  # noqa: E501
-            rule (NamingRuleConfiguration): [optional]  # noqa: E501
+            separator (str): * `-` - - * `_` - _ * `.` - .. [optional]  # noqa: E501
+            parts ([NamingConstraintPartRequest]): [optional]  # noqa: E501
             strict (bool):  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field `naming_constraint_conflict` . [optional]  # noqa: E501
         """
 
@@ -234,7 +242,8 @@ class PatchedNamingConstraintRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             name (str): Name of the naming constraint. [optional]  # noqa: E501
-            rule (NamingRuleConfiguration): [optional]  # noqa: E501
+            separator (str): * `-` - - * `_` - _ * `.` - .. [optional]  # noqa: E501
+            parts ([NamingConstraintPartRequest]): [optional]  # noqa: E501
             strict (bool):  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field `naming_constraint_conflict` . [optional]  # noqa: E501
         """
 

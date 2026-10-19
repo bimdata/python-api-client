@@ -31,8 +31,8 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from bimdata_api_client.model.naming_rule_configuration import NamingRuleConfiguration
-    globals()['NamingRuleConfiguration'] = NamingRuleConfiguration
+    from bimdata_api_client.model.naming_constraint_part_request import NamingConstraintPartRequest
+    globals()['NamingConstraintPartRequest'] = NamingConstraintPartRequest
 
 
 class NamingConstraintRequest(ModelNormal):
@@ -60,6 +60,11 @@ class NamingConstraintRequest(ModelNormal):
     """
 
     allowed_values = {
+        ('separator',): {
+            '-': "-",
+            '_': "_",
+            '.': ".",
+        },
     }
 
     validations = {
@@ -93,7 +98,8 @@ class NamingConstraintRequest(ModelNormal):
         lazy_import()
         return {
             'name': (str,),  # noqa: E501
-            'rule': (NamingRuleConfiguration,),  # noqa: E501
+            'separator': (str,),  # noqa: E501
+            'parts': ([NamingConstraintPartRequest],),  # noqa: E501
             'strict': (bool,),  # noqa: E501
         }
 
@@ -104,7 +110,8 @@ class NamingConstraintRequest(ModelNormal):
 
     attribute_map = {
         'name': 'name',  # noqa: E501
-        'rule': 'rule',  # noqa: E501
+        'separator': 'separator',  # noqa: E501
+        'parts': 'parts',  # noqa: E501
         'strict': 'strict',  # noqa: E501
     }
 
@@ -115,12 +122,13 @@ class NamingConstraintRequest(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, name, rule, strict, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, name, separator, parts, strict, *args, **kwargs):  # noqa: E501
         """NamingConstraintRequest - a model defined in OpenAPI
 
         Args:
             name (str): Name of the naming constraint
-            rule (NamingRuleConfiguration):
+            separator (str): * `-` - - * `_` - _ * `.` - .
+            parts ([NamingConstraintPartRequest]):
             strict (bool):  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field `naming_constraint_conflict` 
 
         Keyword Args:
@@ -182,7 +190,8 @@ class NamingConstraintRequest(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.name = name
-        self.rule = rule
+        self.separator = separator
+        self.parts = parts
         self.strict = strict
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
@@ -204,12 +213,13 @@ class NamingConstraintRequest(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, name, rule, strict, *args, **kwargs):  # noqa: E501
+    def __init__(self, name, separator, parts, strict, *args, **kwargs):  # noqa: E501
         """NamingConstraintRequest - a model defined in OpenAPI
 
         Args:
             name (str): Name of the naming constraint
-            rule (NamingRuleConfiguration):
+            separator (str): * `-` - - * `_` - _ * `.` - .
+            parts ([NamingConstraintPartRequest]):
             strict (bool):  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field `naming_constraint_conflict` 
 
         Keyword Args:
@@ -269,7 +279,8 @@ class NamingConstraintRequest(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.name = name
-        self.rule = rule
+        self.separator = separator
+        self.parts = parts
         self.strict = strict
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \

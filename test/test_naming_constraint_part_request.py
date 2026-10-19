@@ -13,11 +13,11 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.patched_naming_parts_template_request import PatchedNamingPartsTemplateRequest
+from bimdata_api_client.model.naming_constraint_part_request import NamingConstraintPartRequest
 
 
-class TestPatchedNamingPartsTemplateRequest(unittest.TestCase):
-    """PatchedNamingPartsTemplateRequest unit test stubs"""
+class TestNamingConstraintPartRequest(unittest.TestCase):
+    """NamingConstraintPartRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +25,10 @@ class TestPatchedNamingPartsTemplateRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testPatchedNamingPartsTemplateRequest(self):
-        """Test PatchedNamingPartsTemplateRequest"""
+    def testNamingConstraintPartRequest(self):
+        """Test NamingConstraintPartRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = PatchedNamingPartsTemplateRequest()  # noqa: E501
+        # model = NamingConstraintPartRequest()  # noqa: E501
         pass
 
 

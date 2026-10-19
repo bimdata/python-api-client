@@ -32,10 +32,10 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 def lazy_import():
     from bimdata_api_client.model.light_document import LightDocument
-    from bimdata_api_client.model.naming_rule_configuration import NamingRuleConfiguration
+    from bimdata_api_client.model.naming_constraint_part import NamingConstraintPart
     from bimdata_api_client.model.short_user import ShortUser
     globals()['LightDocument'] = LightDocument
-    globals()['NamingRuleConfiguration'] = NamingRuleConfiguration
+    globals()['NamingConstraintPart'] = NamingConstraintPart
     globals()['ShortUser'] = ShortUser
 
 
@@ -64,6 +64,11 @@ class NamingConstraint(ModelNormal):
     """
 
     allowed_values = {
+        ('separator',): {
+            '-': "-",
+            '_': "_",
+            '.': ".",
+        },
     }
 
     validations = {
@@ -97,7 +102,8 @@ class NamingConstraint(ModelNormal):
         return {
             'id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
-            'rule': (NamingRuleConfiguration,),  # noqa: E501
+            'separator': (str,),  # noqa: E501
+            'parts': ([NamingConstraintPart],),  # noqa: E501
             'strict': (bool,),  # noqa: E501
             'conflicting_documents': ([LightDocument],),  # noqa: E501
             'creator': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
@@ -111,7 +117,8 @@ class NamingConstraint(ModelNormal):
     attribute_map = {
         'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
-        'rule': 'rule',  # noqa: E501
+        'separator': 'separator',  # noqa: E501
+        'parts': 'parts',  # noqa: E501
         'strict': 'strict',  # noqa: E501
         'conflicting_documents': 'conflicting_documents',  # noqa: E501
         'creator': 'creator',  # noqa: E501
@@ -127,13 +134,14 @@ class NamingConstraint(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, name, rule, strict, conflicting_documents, creator, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, name, separator, parts, strict, conflicting_documents, creator, *args, **kwargs):  # noqa: E501
         """NamingConstraint - a model defined in OpenAPI
 
         Args:
             id (int):
             name (str): Name of the naming constraint
-            rule (NamingRuleConfiguration):
+            separator (str): * `-` - - * `_` - _ * `.` - .
+            parts ([NamingConstraintPart]):
             strict (bool):  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field `naming_constraint_conflict` 
             conflicting_documents ([LightDocument]):
             creator (bool, date, datetime, dict, float, int, list, str, none_type):
@@ -198,7 +206,8 @@ class NamingConstraint(ModelNormal):
 
         self.id = id
         self.name = name
-        self.rule = rule
+        self.separator = separator
+        self.parts = parts
         self.strict = strict
         self.conflicting_documents = conflicting_documents
         self.creator = creator
@@ -222,11 +231,12 @@ class NamingConstraint(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, name, rule, strict, *args, **kwargs):  # noqa: E501
+    def __init__(self, name, separator, parts, strict, *args, **kwargs):  # noqa: E501
         """NamingConstraint - a model defined in OpenAPI
 
             name (str): Name of the naming constraint
-            rule (NamingRuleConfiguration):
+            separator (str): * `-` - - * `_` - _ * `.` - .
+            parts ([NamingConstraintPart]):
             strict (bool):  When the constraint is strict, documents upload with invalid name and move in a conflict folder will be blocked. If the constraint is non scrict, documents will be flagged on field `naming_constraint_conflict` 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -285,7 +295,8 @@ class NamingConstraint(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.name = name
-        self.rule = rule
+        self.separator = separator
+        self.parts = parts
         self.strict = strict
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
