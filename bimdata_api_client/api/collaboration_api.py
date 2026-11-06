@@ -4847,6 +4847,8 @@ class CollaborationApi(object):
                 'all': [
                     'cloud_pk',
                     'project_pk',
+                    'date_after',
+                    'date_before',
                 ],
                 'required': [
                     'cloud_pk',
@@ -4869,14 +4871,22 @@ class CollaborationApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'date_after':
+                        (datetime,),
+                    'date_before':
+                        (datetime,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
                     'project_pk': 'project_pk',
+                    'date_after': 'date_after',
+                    'date_before': 'date_before',
                 },
                 'location_map': {
                     'cloud_pk': 'path',
                     'project_pk': 'path',
+                    'date_after': 'query',
+                    'date_before': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -10241,7 +10251,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'OBJ', 'GLTF', 'DWG', 'IFC', 'PHOTOSPHERE', 'DXF', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'IFC', 'POINT_CLOUD', 'OBJ', 'DXF', 'PHOTOSPHERE', 'DWG', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -14506,6 +14516,8 @@ class CollaborationApi(object):
             project_pk (int):
 
         Keyword Args:
+            date_after (datetime): Filter logs by date range using `date_after` and `date_before` (ISO 8601 datetimes, both bounds inclusive).. [optional]
+            date_before (datetime): Filter logs by date range using `date_after` and `date_before` (ISO 8601 datetimes, both bounds inclusive).. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

@@ -1821,13 +1821,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this project.
     write_folder_request = [
         WriteFolderRequest(
-            parent_id=1,
             name="name_example",
+            parent_id=1,
             default_permission=1,
             children=[
                 WriteFolder(
-                    parent_id=1,
                     name="name_example",
+                    parent_id=1,
                     default_permission=1,
                     children=None,
                 ),
@@ -1885,7 +1885,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'OBJ', 'GLTF', 'DWG', 'IFC', 'PHOTOSPHERE', 'DXF', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'IFC', 'POINT_CLOUD', 'OBJ', 'DXF', 'PHOTOSPHERE', 'DWG', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -7458,11 +7458,22 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = collaboration_api.CollaborationApi(api_client)
     cloud_pk = 1 # int | 
     project_pk = 1 # int | 
+    date_after = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Filter logs by date range using `date_after` and `date_before` (ISO 8601 datetimes, both bounds inclusive). (optional)
+    date_before = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Filter logs by date range using `date_after` and `date_before` (ISO 8601 datetimes, both bounds inclusive). (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Retrieve all logs of the project
         api_response = api_instance.get_logs(cloud_pk, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->get_logs: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Retrieve all logs of the project
+        api_response = api_instance.get_logs(cloud_pk, project_pk, date_after=date_after, date_before=date_before)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->get_logs: %s\n" % e)
@@ -7475,6 +7486,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **int**|  |
  **project_pk** | **int**|  |
+ **date_after** | **datetime**| Filter logs by date range using &#x60;date_after&#x60; and &#x60;date_before&#x60; (ISO 8601 datetimes, both bounds inclusive). | [optional]
+ **date_before** | **datetime**| Filter logs by date range using &#x60;date_after&#x60; and &#x60;date_before&#x60; (ISO 8601 datetimes, both bounds inclusive). | [optional]
 
 ### Return type
 
@@ -12494,7 +12507,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_document_text_request = PatchedDocumentTextRequest(
         text="text_example",
-        language="german",
+        language="english",
     ) # PatchedDocumentTextRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -12617,10 +12630,10 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this folder.
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_edit_folder_request = PatchedEditFolderRequest(
-        parent_id=1,
         name="name_example",
-        propagate=False,
+        parent_id=1,
         default_permission=1,
+        propagate=False,
     ) # PatchedEditFolderRequest |  (optional)
 
     # example passing only required values which don't have defaults set
