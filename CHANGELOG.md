@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v10.42.0 (2026-11-06)
+
+### Feature
+
+- Minor: Add the ability to filter logs by date (#1118)
+  ([`8f2d44d`](https://github.com/bimdata/python-api-client/commit/8f2d44df74e161c6c31c8e07327b783a09f9c457))
+
+* Add the ability to filter log by date
+
+* Improve logs
+
+
 ## v10.41.1 (2026-10-19)
 
 ### Fix
