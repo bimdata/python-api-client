@@ -1885,7 +1885,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'IFC', 'POINT_CLOUD', 'OBJ', 'DXF', 'PHOTOSPHERE', 'DWG', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'IFC', 'DWG', 'POINT_CLOUD', 'GLTF', 'OBJ', 'PHOTOSPHERE', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -12507,7 +12507,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_document_text_request = PatchedDocumentTextRequest(
         text="text_example",
-        language="english",
+        language="spanish",
     ) # PatchedDocumentTextRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -12630,10 +12630,10 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this folder.
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_edit_folder_request = PatchedEditFolderRequest(
+        propagate=False,
         name="name_example",
         parent_id=1,
         default_permission=1,
-        propagate=False,
     ) # PatchedEditFolderRequest |  (optional)
 
     # example passing only required values which don't have defaults set
