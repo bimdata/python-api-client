@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v10.42.1 (2026-11-19)
+
+### Fix
+
+- Patch: fix test & test new CI
+  ([`82698fb`](https://github.com/bimdata/python-api-client/commit/82698fb57e5fda84af49b20b5d52bfacbecb9103))
+
+
 ## v10.42.0 (2026-11-06)
 
 ### Feature
