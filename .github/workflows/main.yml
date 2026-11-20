@@ -2,15 +2,25 @@ name: Python API CLient
 
 on: push
 
+permissions:
+  contents: read
+
+# A new push cancels the previous run, except on release branches: it could stop a publish midway
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ !contains(fromJSON('["refs/heads/develop", "refs/heads/release", "refs/heads/master", "refs/heads/main"]'), github.ref) }}
+
 jobs:
   test:
-    runs-on: self-hosted
+    runs-on: self-hosted-common
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v7
         with:
           python-version: 3.13
+          cache: pip
+          cache-dependency-path: '*requirements.txt'
       - name: Install requirements
         run: pip install -r requirements.txt -r test-requirements.txt -r ci-requirements.txt
       # Open-api-generator is broken. To be updated when upgrading
@@ -23,21 +33,23 @@ jobs:
 
   # taken from https://python-semantic-release.readthedocs.io/en/latest/migrating_from_v7.html
   release:
-    runs-on: self-hosted
+    runs-on: self-hosted-common
+    # Push the release commit, tag and GitHub release
+    permissions:
+      contents: write
     needs: test
-    if: contains('
-      refs/heads/master
-      refs/heads/main'
-      , github.ref)
+    if: contains(fromJSON('["refs/heads/master", "refs/heads/main"]'), github.ref)
     concurrency: release
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v7
         with:
           python-version: 3.13
+          cache: pip
+          cache-dependency-path: '*requirements.txt'
       - name: Install ci requirements
         run: pip install -r ci-requirements.txt
       - name: Release
